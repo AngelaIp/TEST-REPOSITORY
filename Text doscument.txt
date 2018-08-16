@@ -2,16 +2,4 @@
 List of taska
 1. Taks 
 2. Taks 2
-Nooo, don`t do these tasks!
-Yeeeees
 
-
-Ok try now to download it, with all the changes
------------------------------------------------------------------!
-
-<<<<<<< HEAD
-
-Next row new!!!!!!!!!!!!!!!!!!!!!!!!!!!!****||||
-=======
-Now in this line...................... . .  .   .
->>>>>>> 0d2fb63cd1f3b641b830beba212b1ebfe1f409da
