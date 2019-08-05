@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="0267056DDA8A40E99200996704419F39" action="add">
+  <label xml:lang="en">View</label>
+  <name>com.aras.innovator.cui_default.mwmm_view_menu</name>
+ </Item>
+</AML>

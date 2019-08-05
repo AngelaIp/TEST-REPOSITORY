@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="C9E8EF2E8AAA4CE59D5CA7B32473C05D" action="add">
+  <label xml:lang="en">Tabs</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_view_menu" type="CommandBarMenu">0267056DDA8A40E99200996704419F39</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_tabs_state</name>
+ </Item>
+</AML>

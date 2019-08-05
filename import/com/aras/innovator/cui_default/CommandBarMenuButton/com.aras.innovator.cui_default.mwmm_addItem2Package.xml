@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="9811F7A4A6794183BA040457DD3A209E" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Add To Package Definition</label>
+  <on_click_handler keyed_name="cui_default_mwmm_addItem2Package" type="Method">45A3377E0112474F9F71DAB2CA619846</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_admin_menu" type="CommandBarMenu">7267B91F9B334F9FA1E9715B7DADD11C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_addItem2Package</name>
+ </Item>
+</AML>

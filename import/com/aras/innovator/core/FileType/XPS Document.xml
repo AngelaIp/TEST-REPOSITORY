@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="FileType" id="E082553A0B7545D6BD28DA02661F4B5B" action="add">
+  <description>Microsoft XPS Document</description>
+  <extension>xps</extension>
+  <mimetype>application/vnd.ms-xpsdocument</mimetype>
+  <name>XPS Document</name>
+ </Item>
+</AML>

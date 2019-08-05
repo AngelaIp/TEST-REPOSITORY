@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="ITPresentationConfiguration" id="21E99B9C0C7E4779825DB91984BC811D" action="add">
+  <client>js</client>
+  <related_id keyed_name="27742230F8244449ABF80F6E4AADA3E5" type="PresentationConfiguration">
+   <Item type="PresentationConfiguration" id="27742230F8244449ABF80F6E4AADA3E5" action="add">
+    <secondary_icon>../Images/CADOff.svg</secondary_icon>
+    <style>background-color: rgba(216, 99, 68, 0.9);</style>
+    <name />
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="CAD" type="ItemType" name="CAD">CCF205347C814DD1AF056875E0A880AC</source_id>
+ </Item>
+</AML>

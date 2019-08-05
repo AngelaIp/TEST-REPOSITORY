@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="55EAE66ADA9B42D39C830B5EA8D4B03A" action="add">
+  <label xml:lang="en">Rotate Page</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_viewer_menu" type="CommandBarMenu">7FBFDC60F098442099F97F1A2CB18761</parent_menu>
+  <name>com.aras.innovator.cui_default.twmm_viewer_rotate_page</name>
+ </Item>
+</AML>

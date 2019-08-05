@@ -1,0 +1,41 @@
+﻿<AML>
+ <Item type="Form" id="51FD4BA410BB4337957F72C9C240A1C0" action="add">
+  <category_form>0</category_form>
+  <height>259</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>784</width>
+  <name>PackageReferencedElement</name>
+  <Relationships>
+   <Item type="Body" id="89F8A763FC164C2FB8075F747416EB63" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="PackageReferencedElement" type="Form">51FD4BA410BB4337957F72C9C240A1C0</source_id>
+    <Relationships>
+     <Item type="Field" id="DAE32F8575B94159B8D50C1E7B16EB6D" action="add">
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <html_code><![CDATA[
+		<span id='ITEM_INFO_INTERNAL_SPAN'/>
+		<script>
+			populate_ITEM_INFO_INTERNAL_SPAN = function()
+			{
+				document.getElementById('ITEM_INFO_INTERNAL_SPAN').innerHTML = aras.uiGetItemInfoTable(document.itemType);
+			}
+			window.addEventListener('load', populate_ITEM_INFO_INTERNAL_SPAN);
+		</script>
+]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="89F8A763FC164C2FB8075F747416EB63" type="Body">89F8A763FC164C2FB8075F747416EB63</source_id>
+      <tab_stop>0</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>item_info</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

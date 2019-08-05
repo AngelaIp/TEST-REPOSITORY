@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="FileType" id="B04A8A01908E491B9FC69EC43310FED6" action="add">
+  <description>MP4 Movie</description>
+  <extension>mp4</extension>
+  <mimetype>video/mp4</mimetype>
+  <name>MP4 Movie</name>
+ </Item>
+</AML>

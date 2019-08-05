@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="A076D6D3722447E78E0DFC7E1176D31D" action="add">
+  <label xml:lang="en">Preferences</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_viewer_menu" type="CommandBarMenu">7FBFDC60F098442099F97F1A2CB18761</parent_menu>
+  <name>com.aras.innovator.cui_default.twmm_preferences</name>
+ </Item>
+</AML>

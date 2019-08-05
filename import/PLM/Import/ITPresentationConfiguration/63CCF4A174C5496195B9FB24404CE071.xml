@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="ITPresentationConfiguration" id="63CCF4A174C5496195B9FB24404CE071" action="add">
+  <client>js</client>
+  <related_id keyed_name="700FBB9F13D9444E97FCAC19CDD62C7B" type="PresentationConfiguration">
+   <Item type="PresentationConfiguration" id="700FBB9F13D9444E97FCAC19CDD62C7B" action="add">
+    <secondary_icon>../Images/SimpleMCOOff.svg</secondary_icon>
+    <style>background-color: rgba(31, 108, 66, 0.65);</style>
+    <name />
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="Simple MCO" type="ItemType" name="Simple MCO">2826F2403689438295EDBF60BEAE7C74</source_id>
+ </Item>
+</AML>

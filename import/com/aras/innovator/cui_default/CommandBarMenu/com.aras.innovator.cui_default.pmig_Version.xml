@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="0244ADA541194440AD3AF256706C5143" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.version" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmig_version_item" type="Method">6881B6AABCFA4621AAFD9B4A40BCE391</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Version</name>
+ </Item>
+</AML>

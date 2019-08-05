@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="53E0784A714546FF9A3C770FA2BD95F2" action="add">
+  <additional_data>{}</additional_data>
+  <image>../images/Help.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <on_click_handler keyed_name="cui_default_mwt_onHelpCommand" type="Method">5720CAD4A140436F851FB79ABD0BB4DA</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwt_help_context" type="Method">EE7346D6FFCA41F9BC1C10B4A630023D</on_init_handler>
+  <tooltip_template xml:lang="en">Help</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_main_toolbar_help_context</name>
+ </Item>
+</AML>

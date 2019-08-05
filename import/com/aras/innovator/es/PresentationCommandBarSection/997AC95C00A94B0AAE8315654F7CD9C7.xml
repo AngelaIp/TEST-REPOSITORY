@@ -1,0 +1,38 @@
+﻿<AML>
+ <Item type="PresentationCommandBarSection" id="997AC95C00A94B0AAE8315654F7CD9C7" action="add">
+  <related_id keyed_name="com.aras.innovator.mwt_es_toolbar" type="CommandBarSection">
+   <Item type="CommandBarSection" id="8CBAE6D4FE844405BD1E446DAE701AC2" action="add">
+    <classification>Data Model</classification>
+    <label xml:lang="en">ES Toolbar</label>
+    <location_name>MainWindowToolbar</location_name>
+    <name>com.aras.innovator.mwt_es_toolbar</name>
+    <Relationships>
+     <Item type="CommandBarSectionItem" id="AFA67B5AED7849008277E32FA22C642C" action="add">
+      <action>Skip</action>
+      <related_id keyed_name="com.aras.innovator.mwt_es_clear_criteria_button" type="CommandBarItem">E03A7DC3263442288F83DF3A6BAADE58</related_id>
+      <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+      <sort_order>1100</sort_order>
+      <source_id keyed_name="com.aras.innovator.mwt_es_toolbar" type="CommandBarSection">8CBAE6D4FE844405BD1E446DAE701AC2</source_id>
+     </Item>
+     <Item type="CommandBarSectionItem" id="F4206933505240AEBD94EB10E2DD7345" action="add">
+      <action>Skip</action>
+      <related_id keyed_name="com.aras.innovator.mwt_es_edit_textbox" type="CommandBarItem">6319A5C13E93446797E7FF6105722DB2</related_id>
+      <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+      <sort_order>1200</sort_order>
+      <source_id keyed_name="com.aras.innovator.mwt_es_toolbar" type="CommandBarSection">8CBAE6D4FE844405BD1E446DAE701AC2</source_id>
+     </Item>
+     <Item type="CommandBarSectionItem" id="F75AE7CDA3F9454E9F98944B2C6AD893" action="add">
+      <action>Add</action>
+      <related_id keyed_name="com.aras.innovator.mwt_es_search_button" type="CommandBarItem">04D67A2EE86A463087A402B031CAFC22</related_id>
+      <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+      <sort_order>1300</sort_order>
+      <source_id keyed_name="com.aras.innovator.mwt_es_toolbar" type="CommandBarSection">8CBAE6D4FE844405BD1E446DAE701AC2</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+  </related_id>
+  <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+  <sort_order>5248</sort_order>
+  <source_id keyed_name="Global" type="PresentationConfiguration">5A87757EBFB7430C847CF4DF5ACA6F4E</source_id>
+ </Item>
+</AML>

@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="28C89801C963486CB823F3EAF2DDFA53" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Download</label>
+  <on_click_handler keyed_name="cui_default_mwmm_onDownload" type="Method">7701B40D9FA8474A85849A6E5E5711AE</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_file_menu" type="CommandBarMenu">2B1F770C624449A3863818C8D4EF414F</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_download</name>
+ </Item>
+</AML>

@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="FileType" id="309F9A09D0014DBF851E950A5605AF1C" action="add">
+  <description>Dassault CATIA CATDrawing Drawing</description>
+  <extension>CATDrawing</extension>
+  <mimetype>application/catia</mimetype>
+  <name>CATIA Drawing</name>
+ </Item>
+</AML>

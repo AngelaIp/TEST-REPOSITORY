@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="85F38FD740B144F3908DC1EDFC546D27" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/UnlockItem.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <on_init_handler keyed_name="cui_reinit_mwt_inbasket_Unclaim" type="Method">E9B63A4FCF344C32A455D6981AD39DB9</on_init_handler>
+  <tooltip_template xml:lang="en">Unlock Activity</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_inbasket_toolbar_UnclaimActivity</name>
+ </Item>
+</AML>

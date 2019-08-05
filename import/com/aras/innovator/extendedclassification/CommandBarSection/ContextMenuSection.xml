@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="1050F018BCEA439C9EE85A2E4CFCB1A1" action="add">
+  <builder_method keyed_name="xPermContextMenuBuilder" type="Method">1873FCBC13114D0D9603DC157C9116AD</builder_method>
+  <classification>Method</classification>
+  <label xml:lang="en">View PropertyValue Permission</label>
+  <location_name>PopupMenuRelationshipGrid</location_name>
+  <name>ContextMenuSection</name>
+ </Item>
+</AML>

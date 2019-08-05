@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="8F346B23CA3B450DB8B4F7432B971C86" action="add">
+  <additional_data>{ "cui_resource_key": "common.delete" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onDeleteCommand" type="Method">C30383E2BD794488A63F924313C62BF3</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Delete</name>
+ </Item>
+</AML>

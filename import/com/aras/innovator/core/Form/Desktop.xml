@@ -1,0 +1,43 @@
+﻿<AML>
+ <Item type="Form" id="49F980AA93DF4823B3C1945329072795" action="add">
+  <category_form>0</category_form>
+  <description>Relationship Form has no Fields</description>
+  <height>309</height>
+  <permission_id keyed_name="7A039A562A4844F69067EDB7DBCA0BA0" type="Permission">7A039A562A4844F69067EDB7DBCA0BA0</permission_id>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>524</width>
+  <name>Desktop</name>
+  <Relationships>
+   <Item type="Body" id="C5148547987C4F1F89E1049D6CDFA03B" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>0</sort_order>
+    <source_id keyed_name="Desktop" type="Form">49F980AA93DF4823B3C1945329072795</source_id>
+    <Relationships>
+     <Item type="Field" id="1E3B5545BF4645F7B2939D5DC625EFCE" action="add">
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <html_code><![CDATA[
+		<span id='ITEM_INFO_INTERNAL_SPAN'/>
+		<script>
+			populate_ITEM_INFO_INTERNAL_SPAN = function()
+			{
+				document.getElementById('ITEM_INFO_INTERNAL_SPAN').innerHTML = aras.uiGetItemInfoTable(document.itemType);
+			}
+			window.addEventListener('load', populate_ITEM_INFO_INTERNAL_SPAN);
+		</script>
+]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="C5148547987C4F1F89E1049D6CDFA03B" type="Body">C5148547987C4F1F89E1049D6CDFA03B</source_id>
+      <tab_stop>0</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>item_info</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

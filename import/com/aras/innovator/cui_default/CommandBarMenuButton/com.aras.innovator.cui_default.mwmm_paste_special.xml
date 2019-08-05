@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="52B1E1AEDE974EA58917F0FA20AD3AF2" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Paste Special</label>
+  <on_click_handler keyed_name="cui_default_mwmm_onPaste_special" type="Method">98FD9E3828E2482B9D193E337B1672A0</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_edit_menu" type="CommandBarMenu">BB3421A77E45452DB21B7C53F162734C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_paste_special</name>
+ </Item>
+</AML>

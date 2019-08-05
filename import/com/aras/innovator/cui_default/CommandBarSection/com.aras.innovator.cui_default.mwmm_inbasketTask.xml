@@ -1,0 +1,33 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="D6240891797A40CD83B0EF5831E5FEB0" action="add">
+  <classification>Data Model</classification>
+  <location_name>MainWindowMainMenu</location_name>
+  <name>com.aras.innovator.cui_default.mwmm_inbasketTask</name>
+  <Relationships>
+   <Item type="CommandBarSectionItem" id="8992EE7F85824EC39F40DF29EFD40628" action="add">
+    <action>Replace</action>
+    <alternate keyed_name="com.aras.innovator.cui_default.mwmm_CompleteTask" type="CommandBarItem">D972402CA50B492FAACC4DF2EB5D3AB0</alternate>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwmm_edit" type="CommandBarItem">4B611BB6A58B4C33B4F3F2349A31F2D0</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwmm_inbasketTask" type="CommandBarSection">D6240891797A40CD83B0EF5831E5FEB0</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="1D4873C4AB744F91B2AD6D6D683F6434" action="add">
+    <action>Replace</action>
+    <alternate keyed_name="com.aras.innovator.cui_default.mwmm_ClaimTask" type="CommandBarItem">F0EAE4C4454D447D9FF5CBA72DAA1D4A</alternate>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwmm_lock" type="CommandBarItem">55E7556BEF874DC0BB5ACA063AA41FB0</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwmm_inbasketTask" type="CommandBarSection">D6240891797A40CD83B0EF5831E5FEB0</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="4BF875B509084ADCB9C221DDF4A030C4" action="add">
+    <action>Replace</action>
+    <alternate keyed_name="com.aras.innovator.cui_default.mwmm_UnclaimTask" type="CommandBarItem">177386CD76324BBBB8546C9BDBB21881</alternate>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwmm_unlock" type="CommandBarItem">7F69A2302AFE42FCB501CC4C1A2CB0C3</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwmm_inbasketTask" type="CommandBarSection">D6240891797A40CD83B0EF5831E5FEB0</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

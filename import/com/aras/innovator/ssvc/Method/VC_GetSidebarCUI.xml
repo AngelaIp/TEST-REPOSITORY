@@ -1,0 +1,280 @@
+﻿<AML>
+ <Item type="Method" id="7DE05476FF7F43F4A4089AD24CCA8787" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[if (!isSSVCEnabled) {
+	return null;
+}
+
+var self = this;
+var mainMenuId = '0E0EFF7565494EE294F01B7BBB1B8BA4';
+var items = self.newItem();
+var suffix = ''; // debug purpose
+var groupId = mainMenuId;
+var viewManager;
+var viewersData = [];
+
+require([
+	'SSVC/Scripts/Classes/SSVCViewManager',
+	'SSVC/Scripts/Classes/SSVCDataManager'],
+	function(SSVCViewManager, dataManager) {
+		var configId = item.selectSingleNode('config_id');
+		var itemId = item.selectSingleNode('id');
+		viewManager = new SSVCViewManager({aras: aras, dojo: dojo, dojoRequire: require});
+
+		var allFilesDropDownButton = createMenu({
+			name: 'allFilesDropDownButton' + suffix,
+			additionalData: '{ "cui_base_class": "sidebarAllFilesDropDownButton", "cui_icon_class": "sidebarButtonAllFilesDropDownIcon" }',
+		});
+		allFilesDropDownButton.setID(mainMenuId);
+		items.appendItem(allFilesDropDownButton);
+
+		var viewSettings = dataManager.getSsvcFormViewSettings();
+		var formTooltip = viewSettings.formTooltip;
+		var radioButtonMenuItem = createMenuCheckbox({
+			name: 'ssvc-form-RadioButtonMenuItem',
+			additionalData: '{ "cui_checked": true }',
+			parentMenu: mainMenuId,
+			groupId: groupId,
+			label: formTooltip || aras.getResource('', 'ssvc.form_tooltip'),
+			tooltipTemplate: '',
+			onClickHandlerId: '1354FAB3F5164CE2B6A5783A9CB5388C',
+			onClickHandlerName: 'cui_ShowForm_ButtonClick'
+		});
+		items.appendItem(radioButtonMenuItem);
+		var viewObjects = viewManager.getViewObjectsFromFiles({filesForViewing: dataManager.getFilesForViewing()});
+		viewersData = setOrderOfViewers(groupByViewer(viewObjects));
+
+		setButtonsForViewers({viewersData: viewersData});
+	});
+
+items.removeItem(items.getItemByIndex(0));
+return items;
+
+function createButton(args) {
+	var menuItem = self.newItem('CommandBarButton');
+	menuItem.setProperty('additional_data', args.additionalData);
+	menuItem.setProperty('iconClass', args.iconClass);
+	menuItem.setProperty('label', args.label);
+	menuItem.setProperty('name', args.name);
+	if (args.onClickHandlerName && args.onClickHandlerId) {
+		menuItem.setProperty('on_click_handler', args.onClickHandlerId);
+		menuItem.setPropertyAttribute('on_click_handler', 'keyed_name', args.onClickHandlerName);
+	}
+	menuItem.setProperty('tooltip_template', args.tooltipTemplate);
+	return menuItem;
+}
+
+function createMenu(args) {
+	var menu = self.newItem('CommandBarMenu');
+	menu.setProperty('additional_data', args.additionalData);
+	menu.setProperty('iconClass', args.iconClass);
+	menu.setProperty('label', args.label);
+	menu.setProperty('name', args.name);
+	if (args.onClickHandlerName && args.onClickHandlerId) {
+		menu.setProperty('on_click_handler', args.onClickHandlerId);
+		menu.setPropertyAttribute('on_click_handler', 'keyed_name', args.onClickHandlerName);
+	}
+	menu.setProperty('tooltip_template', args.tooltipTemplate);
+	return menu;
+}
+
+function createMenuCheckbox(args) {
+	var menuCheckbox = self.newItem('CommandBarMenuCheckbox');
+	menuCheckbox.setProperty('additional_data', args.additionalData);
+	menuCheckbox.setProperty('group_id', args.groupId);
+	menuCheckbox.setProperty('label', args.label);
+	menuCheckbox.setProperty('name', args.name);
+	if (args.onClickHandlerName && args.onClickHandlerId) {
+		menuCheckbox.setProperty('on_click_handler', args.onClickHandlerId);
+		menuCheckbox.setPropertyAttribute('on_click_handler', 'keyed_name', args.onClickHandlerName);
+	}
+	menuCheckbox.setProperty('parent_menu', args.parentMenu);
+	menuCheckbox.setProperty('tooltip_template', args.tooltipTemplate);
+	return menuCheckbox;
+}
+
+function groupByViewer(arr) {
+	function viewerComparer(viewer1, viewer2) {
+		var result;
+		if (viewer1.module === viewer2.module && viewer1.name === viewer2.name) {
+			result = true;
+		} else {
+			result = false;
+		}
+		return result;
+	}
+
+	var uniqueViewers = [];
+	var viewObjects = [].concat(arr);
+
+	viewObjects.forEach(function(viewObj) {
+		var isFound = false;
+		uniqueViewers.forEach(function(curUnique) {
+			if (viewerComparer(curUnique.viewer, viewObj.viewer)) {
+				isFound = true;
+				curUnique.data.push({params: viewObj.params});
+			}
+		});
+
+		if (!isFound) {
+			uniqueViewers.push({viewer: viewObj.viewer, data: [{params: viewObj.params}]});
+		}
+	});
+
+	return uniqueViewers;
+}
+
+function setButtonForSingleFile(args) {
+	var viewerData = args.viewerData;
+
+	var params = viewerData.data[0].params;
+	var iconClass = null;
+	var viewerName = viewerData.viewer.name;
+	switch (viewerName) {
+		case 'HOOPSViewer':
+			iconClass = 'sidebarButtonHoopsIcon';
+			break;
+		case 'ImageViewer':
+			iconClass = 'sidebarButtonImageIcon';
+			break;
+		case 'PDFViewer':
+			iconClass = 'sidebarButtonPdfIcon';
+			break;
+		case 'AdvancedImageViewer':
+			iconClass = 'sidebarButtonAdvancedImageIcon';
+			break;
+	}
+	var fileId = params.fileId;
+	var label = params.label;
+	var additionalData = '{ "cui_icon_class": "' + iconClass + '", "tabId": "' + fileId + '",  "viewerName": "' + viewerName + '"}';
+	var button = createButton({
+		name: 'button_' + fileId,
+		additionalData: additionalData,
+		label: label,
+		onClickHandlerId: '3BC58A186DBB4C9AB4F71A9772E74BCD',
+		onClickHandlerName: 'VC_SelectTab'
+	});
+
+	items.appendItem(button);
+}
+
+function setButtonForFiles(args) {
+	var viewerData = args.viewerData;
+	var iconClass = null;
+	var viewerName = '';
+	switch (viewerData.viewer.name) {
+		case 'HOOPSViewer':
+			iconClass = 'sidebarButtonHoopsIcon';
+			viewerName = aras.getResource('', 'ssvc.hoops_viewer');
+			break;
+		case 'ImageViewer':
+			iconClass = 'sidebarButtonImageIcon';
+			viewerName = aras.getResource('', 'ssvc.image_viewer');
+			break;
+		case 'PDFViewer':
+			iconClass = 'sidebarButtonPdfIcon';
+			viewerName = aras.getResource('', 'ssvc.pdf_viewer');
+			break;
+		case 'AdvancedImageViewer':
+			iconClass = 'sidebarButtonAdvancedImageIcon';
+			viewerName = aras.getResource('', 'ssvc.advanced_image_viewer');
+			break;
+	}
+	var label = viewerData.data.length + aras.getResource('', 'ssvc.files') + viewerName;
+	var filesDropDownMenu = createMenu({
+		name: aras.generateNewGUID(),
+		additionalData: '{"cui_icon_class": "' + iconClass + '"}',
+		label: label
+	});
+	var parentMenuId = aras.generateNewGUID();
+	filesDropDownMenu.setID(parentMenuId);
+	items.appendItem(filesDropDownMenu);
+
+	viewerData.data.forEach(function(data) {
+		var params = data.params;
+		var fileId = params.fileId;
+		var additionalData = '{ "tabId": "' + fileId + '", "viewerName": "' + viewerData.viewer.name + '"}';
+		var label = params.label;
+		var radioButtonMenuItem = createMenuCheckbox({
+			name: 'viewer_menuitem_' + fileId,
+			additionalData: additionalData,
+			parentMenu: parentMenuId,
+			label: label,
+			groupId: parentMenuId,
+			tooltipTemplate: '',
+			onClickHandlerId: '3BC58A186DBB4C9AB4F71A9772E74BCD',
+			onClickHandlerName: 'VC_SelectTab'
+		});
+		items.appendItem(radioButtonMenuItem);
+	});
+}
+
+function setButtonsForViewers(args) {
+	var viewersData = args.viewersData;
+
+	viewersData.forEach(function(viewerData) {
+		if (viewerData.data.length === 1) {
+			setButtonForSingleFile({viewerData: viewerData});
+		} else {
+			setButtonForFiles({viewerData: viewerData});
+		}
+
+		var viewerName = viewerData.viewer.name;
+		viewerData.data.forEach(function(data) {
+			var params = data.params;
+			var fileId = params.fileId;
+			var additionalData = '{ "tabId": "' + fileId + '", "viewerName": "' + viewerName + '"}';
+			var label = params.label;
+			var radioButtonMenuItem = createMenuCheckbox({
+				name: 'menuitem_' + fileId,
+				additionalData: additionalData,
+				parentMenu: mainMenuId,
+				label: label,
+				groupId: groupId,
+				tooltipTemplate: '',
+				onClickHandlerId: '3BC58A186DBB4C9AB4F71A9772E74BCD',
+				onClickHandlerName: 'VC_SelectTab'
+			});
+			items.appendItem(radioButtonMenuItem);
+		});
+	});
+}
+
+function setOrderOfViewers(uniqueViewers) {
+	var result = [];
+	for (var i = 0, count = uniqueViewers.length; i < count; i++) {
+		switch (uniqueViewers[i].viewer.name) {
+			case 'HOOPSViewer':
+				result.unshift(uniqueViewers[i]);
+				break;
+			case 'PDFViewer':
+				if (i === 0 || !findHOOPSViewer(result)) {
+					result.unshift(uniqueViewers[i]);
+				} else {
+					result.splice(1, 0, uniqueViewers[i]);
+				}
+				break;
+			case 'ImageViewer':
+				result.push(uniqueViewers[i]);
+				break;
+			case 'AdvancedImageViewer':
+				result.push(uniqueViewers[i]);
+				break;
+		}
+	}
+	return result;
+
+	function findHOOPSViewer(viewers) {
+		for (var i = 0, count = viewers.length; i < count; i++) {
+			if (viewers[i].viewer.name === 'HOOPSViewer') {
+				return true;
+			}
+		}
+		return false;
+	}
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>VC_GetSidebarCUI</name>
+ </Item>
+</AML>

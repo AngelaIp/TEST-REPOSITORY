@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="ES_Settings" id="B38F3DB4652A5C55D4E9E5C0602CEC48" action="add">
+  <empty_filter_value_label xml:lang="en">Empty</empty_filter_value_label>
+  <main_language>English</main_language>
+  <max_analyzed_chars>500000</max_analyzed_chars>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="World" type="Preference">507A16AA36F94513AD7EC1F948B5B48F</source_id>
+ </Item>
+</AML>

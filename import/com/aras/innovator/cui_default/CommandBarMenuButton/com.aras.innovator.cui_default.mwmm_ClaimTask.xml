@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="F0EAE4C4454D447D9FF5CBA72DAA1D4A" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <include_events>SelectInGrid</include_events>
+  <label xml:lang="en">Claim Task</label>
+  <on_click_handler keyed_name="cui_default_mwt_onLockCommand" type="Method">4C724106531A4BCA9CC2C608776FCF3B</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwmm_claim" type="Method">AB3432AF908643E5849F5E7BB8685BE1</on_init_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_edit_menu" type="CommandBarMenu">BB3421A77E45452DB21B7C53F162734C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_ClaimTask</name>
+ </Item>
+</AML>

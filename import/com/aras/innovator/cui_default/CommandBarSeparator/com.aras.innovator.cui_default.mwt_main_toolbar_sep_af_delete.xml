@@ -1,0 +1,5 @@
+﻿<AML>
+ <Item type="CommandBarSeparator" id="6C688B3C89914051B7086A76A86301CB" action="add">
+  <name>com.aras.innovator.cui_default.mwt_main_toolbar_sep_af_delete</name>
+ </Item>
+</AML>

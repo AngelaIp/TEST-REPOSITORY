@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="BFD474045FE44298A086080AA65DCD0C" action="add">
+  <label xml:lang="en">Reset Item Access</label>
+  <on_click_handler keyed_name="cui_default_mwmm_resetItemAccess" type="Method">7A78088EFBCB4B019F54395A178D747B</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_admin_menu" type="CommandBarMenu">7267B91F9B334F9FA1E9715B7DADD11C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_reset_itemAccess</name>
+ </Item>
+</AML>

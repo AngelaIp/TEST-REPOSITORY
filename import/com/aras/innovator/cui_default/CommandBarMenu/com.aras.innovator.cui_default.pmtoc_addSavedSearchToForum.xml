@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="0D91DB7258F944499A1DBA5617ACFA83" action="add">
+  <additional_data>{ "cui_resource_key": "ssvc.forum.add_to_forum_" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmtoc_searchToForum" type="Method">83D81CD014CC48F590039633D9D9A1D1</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmtoc_addSavedSearchToForum</name>
+ </Item>
+</AML>

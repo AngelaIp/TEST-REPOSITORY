@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="ITPresentationConfiguration" id="C865BE3A9114450C9F1A0614B41EE649" action="add">
+  <client>js</client>
+  <related_id keyed_name="550064B347CB47DF9DAEDFD79F1CA08B" type="PresentationConfiguration">
+   <Item type="PresentationConfiguration" id="550064B347CB47DF9DAEDFD79F1CA08B" action="add">
+    <secondary_icon>../Images/ECNOff.svg</secondary_icon>
+    <style>background-color: rgba(231, 142, 70, 0.9);</style>
+    <name />
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="Express ECO" type="ItemType" name="Express ECO">CBA93BEFFB4F499CAF122CB79E204983</source_id>
+ </Item>
+</AML>

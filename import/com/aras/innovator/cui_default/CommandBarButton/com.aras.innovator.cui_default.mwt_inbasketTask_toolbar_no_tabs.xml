@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="FC38F299A3C64B47848366BAAA8D80EB" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/HideTabs.svg</image>
+  <label xml:lang="en">- Tabs</label>
+  <tooltip_template xml:lang="en">Hide Tabs In Tab View</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_inbasketTask_toolbar_no_tabs</name>
+ </Item>
+</AML>

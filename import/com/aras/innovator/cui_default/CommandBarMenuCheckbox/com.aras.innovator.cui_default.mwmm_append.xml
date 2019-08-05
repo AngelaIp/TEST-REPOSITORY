@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarMenuCheckbox" id="D15140DFEC3549C387C8EE190019A82C" action="add">
+  <additional_data>{ "cui_checked": false }</additional_data>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <label xml:lang="en">Append results</label>
+  <on_click_handler keyed_name="cui_default_mwmm_append" type="Method">A608BD4ACEE844239F05D12888B9D755</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwmm_append" type="Method">B2E827DB751145E8822607A0DF5F9477</on_init_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_search_menu" type="CommandBarMenu">5527A7A5913845D8AEA10C7AD11C1214</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_append</name>
+ </Item>
+</AML>

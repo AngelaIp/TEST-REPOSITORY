@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenuSeparator" id="093596E0AB644403B7EB6F36A0F31C60" action="add">
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_tools_menu" type="CommandBarMenu">12252160BD844AB68B3BF3EDC7C148C6</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_sep_af_change_esignature</name>
+ </Item>
+</AML>

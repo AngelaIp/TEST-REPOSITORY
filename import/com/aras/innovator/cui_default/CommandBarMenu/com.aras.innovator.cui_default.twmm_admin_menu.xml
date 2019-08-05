@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="C0F48EBE314E4BFFA3EC2960A57E5249" action="add">
+  <label xml:lang="en">Admin</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_tools_menu" type="CommandBarMenu">5A9D1662308A437099AF0B67B737077A</parent_menu>
+  <name>com.aras.innovator.cui_default.twmm_admin_menu</name>
+ </Item>
+</AML>

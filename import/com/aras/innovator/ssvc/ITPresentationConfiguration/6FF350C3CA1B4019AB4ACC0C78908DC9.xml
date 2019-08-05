@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="ITPresentationConfiguration" id="6FF350C3CA1B4019AB4ACC0C78908DC9" action="add">
+  <client>js</client>
+  <related_id keyed_name="AEF33BA0A0E6491299273B88F74BE972" type="PresentationConfiguration">
+   <Item type="PresentationConfiguration" id="AEF33BA0A0E6491299273B88F74BE972" action="add">
+    <secondary_icon>../Images/ForumOff.svg</secondary_icon>
+    <style>background-color: rgba(161, 53, 56, 0.65);</style>
+    <name />
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="Forum" type="ItemType" name="Forum">2E25B49E218A45D28D0C7D3C0633710C</source_id>
+ </Item>
+</AML>

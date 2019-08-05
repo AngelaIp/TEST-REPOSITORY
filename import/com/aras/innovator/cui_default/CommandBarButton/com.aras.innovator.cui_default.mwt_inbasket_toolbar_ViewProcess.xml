@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="0BA5A9EEA71F4E45888478BB86BB5649" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/ViewWorkflow.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <on_click_handler keyed_name="cui_default_inbasket_viewProcess" type="Method">875228DF516F44D4B0023343F343A1C0</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwt_viewProcess" type="Method">5D3CCB9654B84A9AB6050B8AAB32EF06</on_init_handler>
+  <tooltip_template xml:lang="en">View the Workflow Process</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_inbasket_toolbar_ViewProcess</name>
+ </Item>
+</AML>

@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="FileType" id="69BA933F5ED1468CA6920432DEB55AA1" action="add">
+  <description>Microsoft Word DOCX Document</description>
+  <extension>docx</extension>
+  <mimetype>application/vnd.openxmlformats-officedocument.wordprocessingml.document</mimetype>
+  <name>Microsoft Word</name>
+ </Item>
+</AML>

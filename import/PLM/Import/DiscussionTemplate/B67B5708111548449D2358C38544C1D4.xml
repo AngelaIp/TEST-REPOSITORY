@@ -1,0 +1,37 @@
+﻿<AML>
+ <Item type="DiscussionTemplate" id="B67B5708111548449D2358C38544C1D4" action="add">
+  <file_selection_depth>2</file_selection_depth>
+  <item_selection_depth>2</item_selection_depth>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="Express ECO" type="ItemType" name="Express ECO">CBA93BEFFB4F499CAF122CB79E204983</source_id>
+  <visibility_supported>1</visibility_supported>
+  <Relationships>
+   <Item type="DiscussionTemplateView" id="734C0A4D32B444C48C77792F4D5B55F9" action="add">
+    <client>js</client>
+    <related_id keyed_name="45466D6EEE9A484FB99D6414A8A5181E" type="SSVCPresentationConfiguration">
+     <Item type="SSVCPresentationConfiguration" id="45466D6EEE9A484FB99D6414A8A5181E" action="add">
+      <discussion_panel_behavior>discPanelOff</discussion_panel_behavior>
+      <form_tooltip_template xml:lang="en">Form of ${ItemType:label} ${Item:keyed_name}</form_tooltip_template>
+      <sm_template keyed_name="F1E9620C1AB3408588708B68E18D51DE" type="SecureMessageViewTemplate">F1E9620C1AB3408588708B68E18D51DE</sm_template>
+      <name>45466D6EEE9A484FB99D6414A8A5181E</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="B67B5708111548449D2358C38544C1D4" type="DiscussionTemplate">B67B5708111548449D2358C38544C1D4</source_id>
+   </Item>
+   <Item type="FeedTemplate" id="C99A604502FC4165ACF1F5F2C7B577D4" action="add">
+    <feed_type>Board</feed_type>
+    <reference>this</reference>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="B67B5708111548449D2358C38544C1D4" type="DiscussionTemplate">B67B5708111548449D2358C38544C1D4</source_id>
+   </Item>
+   <Item type="FeedTemplate" id="AAD894433D7A48B3B2E66D07C4C3B967" action="add">
+    <feed_type>Discussion</feed_type>
+    <polysource_type_name>Part</polysource_type_name>
+    <reference>&lt;Item type="Express ECO" id="${id}" action="VC_GetAffectedControlItems"/&gt;</reference>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="B67B5708111548449D2358C38544C1D4" type="DiscussionTemplate">B67B5708111548449D2358C38544C1D4</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

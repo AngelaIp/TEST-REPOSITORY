@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="ITPresentationConfiguration" id="1C9326A4DFBB445481BC2358811F4A25" action="add">
+  <client>js</client>
+  <related_id keyed_name="C2F15E3517EF403FBF222BC254186906" type="PresentationConfiguration">
+   <Item type="PresentationConfiguration" id="C2F15E3517EF403FBF222BC254186906" action="add">
+    <secondary_icon>../Images/SimpleECOOff.svg</secondary_icon>
+    <style>background-color: rgba(31, 108, 66, 0.85);</style>
+    <name />
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="Simple ECO" type="ItemType" name="Simple ECO">05C2AC1EB54742FF95CBB12FE12F5EDB</source_id>
+ </Item>
+</AML>

@@ -1,0 +1,26 @@
+﻿<AML>
+ <Item type="Method" id="B8F93A032EE74341AC0B350905FBAC58" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[if (inArgs.isReinit) {
+	var topWindow = aras.getMostTopWindowWithAras(window);
+	var workerFrame = topWindow.work;
+	var claimFlg = false;
+	if (workerFrame && workerFrame.grid) {
+		var rowID = workerFrame.grid.getSelectedId();
+		if (rowID) {
+			var activityType = workerFrame.grid.getUserData(rowID, 'assignmentType');
+			if (activityType === 'workflow') {
+				var lockType = workerFrame.grid.getUserData(rowID, 'lockType');
+				var claimFlg = lockType == '0';
+			}
+		}
+	}
+
+	return {'cui_disabled': !claimFlg};
+}
+return {};
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_reinit_mwt_inbasket_Claim</name>
+ </Item>
+</AML>

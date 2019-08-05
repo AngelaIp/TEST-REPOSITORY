@@ -1,0 +1,37 @@
+﻿<AML>
+ <Item type="Method" id="722702817E174884A0154BC7EE61583A" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var args = parent.frameElement.dialogArguments;
+var item = args.documentItem;
+var targetWindow = args.parentWindow.parent;
+
+var nodes = document.getElementsByTagName('textarea');
+if (nodes.length) {
+	var textNode = nodes[0];
+	textNode.value = aras.getResource('../Modules/aras.innovator.QueryBuilder/', 'execution.processing');
+	item.setAttribute('action', 'qry_ExecuteQueryDefinition');
+	var deletedNodes = item.node.selectNodes('//Item[@action="delete"]');
+	for (var i = 0; i < deletedNodes.length; i++) {
+		var nodeToDelete = deletedNodes[i];
+		nodeToDelete.parentNode.removeChild(nodeToDelete);
+	}
+	targetWindow.ArasModules.soap(item.node.xml, {async: true})
+		.catch(function(obj) {
+			return obj.response;
+		}).then(function(result) {
+			var script = document.createElement('script');
+
+			script.onload = function() {
+				let xmlToFormat = typeof result === 'string' ? result : (result && result.xml);
+				textNode.value = formatXml(xmlToFormat);
+				document.head.removeChild(script);
+			};
+			script.src = '../vendors/xmlParser.js';
+			document.head.appendChild(script);
+		});
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>qry_OnExecuteResultFormLoad</name>
+ </Item>
+</AML>

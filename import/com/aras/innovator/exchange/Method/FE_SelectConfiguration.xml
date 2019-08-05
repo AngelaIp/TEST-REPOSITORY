@@ -1,0 +1,47 @@
+﻿<AML>
+ <Item type="Method" id="DB015B6546C9443188078CF808381C1B" action="add">
+  <comments>Select file paths from tree</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[if (!inArgs) {
+	return;
+}
+
+var params = top.aras.newObject();
+params.aras = inArgs.aras;
+params.title = inArgs.title;
+params.mainItemTypeName = inArgs.mainItemTypeName;
+params.selectNode = (inArgs.selectNode) ? inArgs.selectNode : undefined;
+params.itemtypeId = (inArgs.itemtypeId) ? inArgs.itemtypeId : undefined;
+params.configurationList = (inArgs.configurationList) ? inArgs.configurationList : undefined;
+params.filesIds = (inArgs.filesIds) ? inArgs.filesIds : undefined;
+var labels = top.aras.newArray
+(
+	top.aras.getResource('', 'fe.configuration'),
+	top.aras.getResource('', 'fe.select')
+);
+params.requestedPropertiesLabels = labels;
+params.requestedPropertiesColumnsWidth = top.aras.newArray('90', '10');
+params.requestedPropertiesColumnsAligns = top.aras.newArray('left', 'center');
+
+var form = top.aras.getItemByName('Form', 'FE_SelectFiles', 0);
+var width = top.aras.getItemProperty(form, 'width');
+var height = top.aras.getItemProperty(form, 'height');
+if (!width) {
+	width = 750;
+}
+if (!height) {
+	height = 500;
+}
+params.formId = top.aras.getItemProperty(form, 'id');
+
+var options = {
+	dialogWidth: width,
+	dialogHeight: height
+};
+
+return top.aras.modalDialogHelper.show('DefaultModal', window, params, options, 'ShowFormAsADialog.html');
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>FE_SelectConfiguration</name>
+ </Item>
+</AML>

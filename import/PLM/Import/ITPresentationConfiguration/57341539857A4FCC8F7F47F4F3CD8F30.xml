@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="ITPresentationConfiguration" id="57341539857A4FCC8F7F47F4F3CD8F30" action="add">
+  <client>js</client>
+  <related_id keyed_name="828AD30B9600417A8FCBBC412177FE86" type="PresentationConfiguration">
+   <Item type="PresentationConfiguration" id="828AD30B9600417A8FCBBC412177FE86" action="add">
+    <secondary_icon>../Images/ExpressDCOOff.svg</secondary_icon>
+    <style>background-color: rgba(231, 142, 70, 0.7);</style>
+    <name />
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="Express DCO" type="ItemType" name="Express DCO">B678FAF40F7246A7925FB5B116988915</source_id>
+ </Item>
+</AML>

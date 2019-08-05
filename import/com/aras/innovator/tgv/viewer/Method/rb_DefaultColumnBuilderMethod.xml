@@ -1,0 +1,300 @@
+﻿<AML>
+ <Item type="Method" id="AD1F071AA1B1437396D7ABCD67D10EA7" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[	//MethodTemplateName=CSharp:Aras.TreeGridView.BuilderMethod;
+
+	TreeCell treeCell = new TreeCell();
+	BuilderMethodResultItem resultItem = new BuilderMethodResultItem(treeCell);
+	if (args == null)
+	{
+		throw new ArgumentException("Arguments of BuilderMethod can't be null.");
+	}
+	string cellViewType = (args.ColumnMapping == null || string.IsNullOrEmpty(args.ColumnMapping.CellViewType))
+		? args.ColumnDefinition.CellViewType
+		: args.ColumnMapping.CellViewType;
+
+	string template = (args.ColumnMapping == null || string.IsNullOrEmpty(args.ColumnMapping.Template))
+		? args.ColumnDefinition.Template
+		: args.ColumnMapping.Template;
+
+	string dataTemplate = args.ColumnMapping != null && !string.IsNullOrEmpty(args.ColumnMapping.DataTemplate)
+		? args.ColumnMapping.DataTemplate
+		: args.ColumnDefinition.DataTemplate;
+	if (!string.IsNullOrEmpty(dataTemplate))
+	{
+		bool isRestricted;
+		treeCell.DataObject = ReplaceParameters(dataTemplate, args.TreeRowItems, out isRestricted, string.Empty);
+	}
+
+	if (!string.IsNullOrEmpty(template))
+	{
+		Dictionary<string, string> keyValueTemplate = JsonConvert.DeserializeObject<Dictionary<string, string>>(template);
+		if (string.IsNullOrEmpty(cellViewType))
+		{
+			cellViewType = "Text";
+		}
+		bool isAnyOfValuesRestricted;
+		switch (cellViewType.ToUpperInvariant())
+		{
+			case "TEXT":
+				treeCell.CellView = new Aras.TreeGridView.Model.CellView.BaseView();
+				break;
+			case "ITEM":
+				treeCell.CellView = new Aras.TreeGridView.Model.CellView.ItemView();
+				Aras.TreeGridView.Model.CellView.ItemView itemView = (Aras.TreeGridView.Model.CellView.ItemView)treeCell.CellView;
+				itemView.Id = ReplaceParametersFromDictionaryTemplate("item_id", keyValueTemplate, args.TreeRowItems, out isAnyOfValuesRestricted, string.Empty);
+				itemView.TypeName = ReplaceParametersFromDictionaryTemplate("item_type_name", keyValueTemplate, args.TreeRowItems, out isAnyOfValuesRestricted, string.Empty);
+				break;
+			case "COLOR":
+				treeCell.CellView = new Aras.TreeGridView.Model.CellView.ColorView();
+				break;
+			case "DECIMAL":
+				treeCell.CellView = new Aras.TreeGridView.Model.CellView.DecimalView();
+				break;
+			case "DATE":
+				treeCell.CellView = new Aras.TreeGridView.Model.CellView.DateView();
+				break;
+			default:
+				throw new NotSupportedException(string.Format(CultureInfo.InvariantCulture, GetUserMessage("rb_CellViewTypeNotSupported", args.Innovator, args.RequestState), cellViewType));
+		}
+		if (!keyValueTemplate.ContainsKey("icon"))
+		{
+			SetIconPathFromItemType(treeCell, args.TreeRowItems, args.ViewDefinition, args.ColumnDefinition, args.Innovator, args.RequestState);
+		}
+		else
+		{
+			treeCell.IconPath = ReplaceParametersFromDictionaryTemplate("icon", keyValueTemplate, args.TreeRowItems, out isAnyOfValuesRestricted, String.Empty);
+		}
+		string restrictedValue = GetUserMessage("rb_RestrictedProperty", args.Innovator, args.RequestState);
+		treeCell.Value = ReplaceParametersFromDictionaryTemplate("text_template", keyValueTemplate, args.TreeRowItems, out isAnyOfValuesRestricted, restrictedValue);
+		if (isAnyOfValuesRestricted)
+		{
+			treeCell.CellView = new Aras.TreeGridView.Model.CellView.BaseView();
+		}
+	}
+	else
+	{
+		SetIconPathFromItemType(treeCell, args.TreeRowItems, args.ViewDefinition, args.ColumnDefinition, args.Innovator, args.RequestState);
+	}
+
+	SetIconGlyphDirection(treeCell, args.TreeRowItems, args.ViewDefinition, args.ColumnDefinition, args.RequestState);
+
+	return new BuilderMethodResult(resultItem);
+}
+
+internal static void SetIconGlyphDirection(TreeCell treeCell, IList<TreeRowItem> rowItems, TreeGridViewDefinition viewDefinition, ColumnDefinition columnDefinition,
+	Aras.Server.Core.IContextState requestState)
+{
+	if (rowItems == null || rowItems.Count == 0)
+	{
+		return;
+	}
+
+	if (viewDefinition.ColumnDefinitions.Min(column => column.PositionOrder) != columnDefinition.PositionOrder)
+	{
+		return;
+	}
+
+	bool hasJoins = viewDefinition.TreeRowReferences.Any(rowReference =>
+		rowReference.ParentRefId == rowItems[0].TreeRowDefinition.RefId
+		&& rowReference.ReferenceType == ReferenceType.Join);
+
+	if (hasJoins)
+	{
+		return;
+	}
+
+	string isReferencingItemRefIdsKey = "isReferencingItemRefIds";
+	HashSet<string> isReferencingItemRefIds = requestState[isReferencingItemRefIdsKey] as HashSet<string>;
+	if (isReferencingItemRefIds == null)
+	{
+		Item qdItemSetIsReferencingRequest = viewDefinition.QueryDefinition.ItemModified.newItem(viewDefinition.QueryDefinition.ItemModified.getType());
+		qdItemSetIsReferencingRequest.loadAML("<AML>" + viewDefinition.QueryDefinition.ItemModified.node.OuterXml + "</AML>");
+		Item qdItemSetIsReferencing = qdItemSetIsReferencingRequest.apply("qry_SetIsReferencingItem");
+		Item queryReferenceItemsSetIsReferencing = qdItemSetIsReferencing.getRelationships("qry_QueryReference");
+		int queryReferenceItemsCount = queryReferenceItemsSetIsReferencing.getItemCount();
+		isReferencingItemRefIds = new HashSet<string>();
+		for (int i = 0; i < queryReferenceItemsCount; i++)
+		{
+			Item queryReference = queryReferenceItemsSetIsReferencing.getItemByIndex(i);
+			//We need to set it in data, not metadata. Because only in data we have QueryReferenceRefId
+			if (queryReference.getAttribute("is_referencing_item") == "1")
+			{
+				isReferencingItemRefIds.Add(queryReference.getProperty("ref_id"));
+			}
+		}
+		requestState.Add(isReferencingItemRefIdsKey, isReferencingItemRefIds);
+	}
+
+	if (isReferencingItemRefIds.Count == 0)
+	{
+		return;
+	}
+
+	string qbQueryReferencePath = rowItems[0].QueryItemResult.GetProperty("QB_query_reference_path");
+	if (string.IsNullOrEmpty(qbQueryReferencePath))
+	{
+		return;
+	}
+
+	string referenceRefId = qbQueryReferencePath.Split('/').LastOrDefault();
+	if (!string.IsNullOrEmpty(referenceRefId) && isReferencingItemRefIds.Contains(referenceRefId))
+	{
+		treeCell.IsReferencing = true;
+	}
+}
+
+internal static void SetIconPathFromItemType(TreeCell treeCell, IList<TreeRowItem> rowItems, TreeGridViewDefinition viewDefinition, ColumnDefinition columnDefinition, Innovator inn, Aras.Server.Core.IContextState requestState)
+{
+	if (rowItems == null || rowItems.Count == 0)
+	{
+		return;
+	}
+
+	if (viewDefinition.ColumnDefinitions.Min(column => column.PositionOrder) != columnDefinition.PositionOrder)
+	{
+		return;
+	}
+
+	bool hasJoins = viewDefinition.TreeRowReferences.Any(rowReference =>
+		rowReference.ParentRefId == rowItems[0].TreeRowDefinition.RefId
+		&& rowReference.ReferenceType == ReferenceType.Join);
+
+	if (hasJoins)
+	{
+		treeCell.IconPath = "../images/CombinedElement.svg";
+		return;
+	}
+
+	const string DefaultItemTypeIcon = "../images/DefaultItemType.svg";
+	const string DefaultRelationshipTypeIcon = "../images/RelationshipType.svg";
+
+	string queryItemRefId = rowItems[0].TreeRowDefinition.QueryItemRefId;
+	Item queryItem = viewDefinition.QueryDefinition.GetQueryItemFromDefinition(queryItemRefId);
+	string itemTypeId = queryItem.getProperty("item_type");
+	string foundIcon = (string)requestState[itemTypeId];
+	if (string.IsNullOrEmpty(foundIcon))
+	{
+		Item itemTypeRequest = inn.newItem("ItemType", "get");
+		itemTypeRequest.setID(itemTypeId);
+		itemTypeRequest.setAttribute("select", "open_icon, is_relationship");
+		Item itemType = itemTypeRequest.apply();
+		foundIcon = itemType.getProperty("open_icon");
+		if (string.IsNullOrEmpty(foundIcon))
+		{
+			bool isRelationship = itemType.getProperty("is_relationship") == "1";
+			if (isRelationship)
+			{
+				foundIcon = DefaultRelationshipTypeIcon;
+			}
+			else
+			{
+				foundIcon = DefaultItemTypeIcon;
+			}
+		}
+		requestState.Add(itemTypeId, foundIcon);
+	}
+	treeCell.IconPath = foundIcon;
+}
+
+private static string GetUserMessage(string name, Innovator innovator, Aras.Server.Core.IContextState requestState)
+{
+	string result = (string)requestState[name];
+	if (!string.IsNullOrEmpty(result))
+	{
+		return result;
+	}
+	Item userMessage = innovator.newItem("UserMessage", "get");
+	userMessage.setProperty("name", name);
+	userMessage = userMessage.apply();
+	result = userMessage.getProperty("text");
+	requestState.Add(name, result);
+	return result;
+}
+
+internal static string ReplaceParametersFromDictionaryTemplate(string key, Dictionary<string, string> keyValueTemplate, IList<TreeRowItem> rowItems,
+	out bool isAnyOfValuesRestricted, string restrictedValue)
+{
+	isAnyOfValuesRestricted = false;
+	string parameterTemplate = null;
+	if (keyValueTemplate.TryGetValue(key, out parameterTemplate))
+	{
+		return ReplaceParameters(parameterTemplate, rowItems, out isAnyOfValuesRestricted, restrictedValue);
+	}
+	return null;
+}
+
+//(/@\\w+)? means optional attribute name with prefixes, e.g.: /@attribute_name
+private const string AttributePrefix = "/@";
+private static readonly Regex PlaceholderPattern = new Regex("[\\{]([\\w ]*)[.]?([-\\w]*)(" + AttributePrefix + "[-\\w]+)?[\\}]");
+
+internal static string ReplaceParameters(string templateValue, IList<TreeRowItem> rowItems, out bool isAnyOfValuesRestricted, string restrictedValue)
+{
+	isAnyOfValuesRestricted = false;
+	string result = templateValue;
+	if (!string.IsNullOrEmpty(templateValue))
+	{
+		result = templateValue;
+
+		MatchCollection matches = PlaceholderPattern.Matches(templateValue);
+		foreach (Match match in matches)
+		{
+			string matchValue = match.Groups[0].Value;
+			string firstMatch = match.Groups[1].Value;
+			string secondMatch = match.Groups[2].Value;
+			string thirdMatch = match.Groups[3].Value;
+
+			string propertyName = null;
+			string attributeName = null;
+			TreeRowItem currentTreeRowItem = null;
+			if (rowItems != null)
+			{
+				if (string.IsNullOrEmpty(secondMatch))
+				{
+					currentTreeRowItem = rowItems[0];
+					propertyName = firstMatch;
+					attributeName = string.IsNullOrEmpty(thirdMatch) ? null : thirdMatch.Replace(AttributePrefix, String.Empty);
+				}
+				else
+				{
+					currentTreeRowItem = rowItems.FirstOrDefault(treeRowItem => string.Equals(firstMatch, treeRowItem.QueryItemResult.QueryAlias, StringComparison.OrdinalIgnoreCase));
+					propertyName = secondMatch;
+					attributeName = string.IsNullOrEmpty(thirdMatch) ? null : thirdMatch.Replace(AttributePrefix, String.Empty);
+				}
+			}
+			string value;
+			if (currentTreeRowItem != null)
+			{
+				bool isToGetProperty = false;
+				if (!string.IsNullOrEmpty(attributeName))
+				{
+					value = currentTreeRowItem.QueryItemResult.GetPropertyAttribute(propertyName, attributeName);
+				}
+				else
+				{
+					isToGetProperty = true;
+					value = currentTreeRowItem.QueryItemResult.GetProperty(propertyName);
+				}
+				if (string.IsNullOrEmpty(value) && (isToGetProperty || string.IsNullOrEmpty(currentTreeRowItem.QueryItemResult.GetProperty(propertyName))))
+				{
+					isAnyOfValuesRestricted = currentTreeRowItem.QueryItemResult.GetPropertyAttribute(propertyName, "is_null") == "0";
+					if (isAnyOfValuesRestricted)
+					{
+						value = restrictedValue;
+					}
+				}
+			}
+			else
+			{
+				value = string.Empty;
+			}
+			result = result.Replace(matchValue, value);
+		}
+	}
+
+	return result;
+	]]></method_code>
+  <method_type>C#</method_type>
+  <name>rb_DefaultColumnBuilderMethod</name>
+ </Item>
+</AML>

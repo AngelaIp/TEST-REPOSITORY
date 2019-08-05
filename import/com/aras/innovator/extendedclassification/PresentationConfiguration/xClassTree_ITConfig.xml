@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="PresentationConfiguration" id="7152E43BEA5542C186E6F5338AEE9B54" action="add">
+  <name>xClassTree_ITConfig</name>
+  <Relationships>
+   <Item type="PresentationCommandBarSection" id="E65D028CB00E42DC8FDE8B005C165F69" action="add">
+    <item_classification />
+    <related_id keyed_name="ContextMenuSection" type="CommandBarSection">1050F018BCEA439C9EE85A2E4CFCB1A1</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="xClassTree_ITConfig" type="PresentationConfiguration">7152E43BEA5542C186E6F5338AEE9B54</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

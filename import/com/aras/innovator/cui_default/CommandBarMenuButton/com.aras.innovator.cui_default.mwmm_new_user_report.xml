@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="4AE5117DBCCC4D5BB2EEB63F2C9D36E7" action="add">
+  <additional_data />
+  <label xml:lang="en">New Report</label>
+  <on_click_handler keyed_name="cui_default_mwmm_new_user_report" type="Method">9F1AD58FE4B34621B47B3F472335B0F6</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwmm_new_user_report" type="Method">0EAFD303B231401AB5025195F5314E08</on_init_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_reports_menu" type="CommandBarMenu">8A93A25DFFCA48629C0211C42EB72F30</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_new_user_report</name>
+ </Item>
+</AML>

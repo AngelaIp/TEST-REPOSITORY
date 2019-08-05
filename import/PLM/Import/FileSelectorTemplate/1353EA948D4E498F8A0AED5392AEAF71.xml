@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="FileSelectorTemplate" id="1353EA948D4E498F8A0AED5392AEAF71" action="add">
+  <filter>7869D76D50ED4BD4985BECB20B1102F7|992B142FCE6C4EF8B71417220CD7E92D|50AF497B7A114235979F882CEC8EFDF6|8A85DD9A6E0346F5AE423314E3650041</filter>
+  <reference>Simple ECO File(related_id)</reference>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="F057AD061CEA43DC844CFD6BF69BDE6E" type="FeedTemplate">F057AD061CEA43DC844CFD6BF69BDE6E</source_id>
+  <tooltip_template xml:lang="en">File ${File:filename} from ${ItemType:label} ${Item:keyed_name}</tooltip_template>
+ </Item>
+</AML>

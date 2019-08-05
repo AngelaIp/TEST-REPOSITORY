@@ -1,0 +1,107 @@
+﻿<AML>
+ <Item type="Method" id="B55285BB498E4C24B542E982EF5BBCC6" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// PE_RetrieveCADParts
+// Generic method to retrieve the Parts associated with a CAD models. Retrieves the CAD items based on the supplied query conditions, finds the most
+//  recent generation of each CAD item that is attached to a Part, finds the most recent generation of each Part, then populates the "part" property
+//  on each CAD item to be returned
+if (this.getType() != "CAD") return this;
+Innovator inn = this.getInnovator();
+
+this.setAttribute("select", "config_id, is_current, " + this.getAttribute("select",""));
+Item thisItem = this.apply("get");
+if (thisItem.getItemCount() < 1)
+{
+  return thisItem;
+}
+
+// finds the most recent generation of CAD which is existed in Part CAD
+StringBuilder sql = new StringBuilder();
+sql.AppendLine("SELECT (SELECT ID FROM [CAD] WHERE CONFIG_ID = cad_version_set.CONFIG_ID AND GENERATION = MAX(cad_version_set.GENERATION)) cad_id FROM [CAD] current_cad");
+sql.AppendLine("INNER JOIN [CAD] cad_version_set ON cad_version_set.CONFIG_ID = current_cad.CONFIG_ID AND cad_version_set.GENERATION <= current_cad.GENERATION");
+sql.AppendLine("INNER JOIN [PART_CAD] pcad ON pcad.RELATED_ID = cad_version_set.id");
+sql.AppendLine("WHERE current_cad.id = '" + this.getID() + "'");
+sql.AppendLine("GROUP BY cad_version_set.CONFIG_ID");
+
+Item recentCAD = inn.applySQL(sql.ToString());
+
+if(recentCAD.isError())
+{
+  return recentCAD;
+}
+
+// finds the most recent generation of Parts which are appeared in Part CAD which related to particular CAD
+sql = new StringBuilder();
+sql.AppendLine("SELECT (SELECT ID FROM [PART] p WHERE p.CONFIG_ID = part.CONFIG_ID and p.GENERATION = max(part.GENERATION)) part_id");
+sql.AppendLine("FROM [PART] part");
+sql.AppendLine("INNER JOIN [PART_CAD] pcad ON pcad.SOURCE_ID = part.id AND pcad.RELATED_ID = '" + recentCAD.getProperty("cad_id") + "'");
+sql.AppendLine("GROUP BY part.CONFIG_ID");
+
+Item recentParts = inn.applySQL(sql.ToString());
+
+if(recentParts.isError())
+{
+  return recentParts;
+}
+
+ArrayList partIds = new ArrayList();
+
+for(int itemIndex = 0; itemIndex < recentParts.getItemCount(); itemIndex++)
+{
+  partIds.Add(recentParts.getItemByIndex(itemIndex).getProperty("part_id"));
+}
+
+Item retrievedPartCADs = inn.newItem("Part CAD", "get");
+retrievedPartCADs.setAttribute("select", "source_id,related_id(id)");
+retrievedPartCADs.setProperty("source_id", string.Join(",", (string[])partIds.ToArray(typeof(string))));
+retrievedPartCADs.setPropertyAttribute("source_id", "condition", "in");
+retrievedPartCADs.setProperty("related_id", recentCAD.getProperty("cad_id"));
+
+return retrievedPartCADs.apply();
+
+
+/*
+
+// Retrieve the CAD item(s) based on the criteria provided
+this.setAttribute("select", "config_id, is_current, " + this.getAttribute("select",""));
+Item thisItem = this.apply("get");
+if (thisItem.getItemCount() < 1) return thisItem;
+
+String CADConfigID = thisItem.getProperty("config_id", "?");
+
+// Retrieve Part CAD relationships
+Item partCad = this.newItem("Part CAD", "get");
+partCad.setAttribute("select", "source_id(*),related_id(*)");
+Item cad = partCad.createRelatedItem("CAD", "get");
+cad.setAttribute("where", "[CAD].generation = (select max(c.generation) from [CAD] c inner join [PART_CAD] pc on pc.related_id = c.id where c.config_id = [CAD].config_id)");
+cad.setProperty("config_id", CADConfigID);
+cad.setPropertyAttribute("config_id", "condition", "eq");
+partCad = partCad.apply();
+if (partCad.getItemCount() < 1) return partCad;
+
+// Associate the CAD item and the Part 
+for (int i = 0; i < partCad.getItemCount(); i++)
+{
+	Item thisPartCad = partCad.getItemByIndex(i);
+	if (thisPartCad.getPropertyItem("related_id") != null && thisPartCad.getPropertyItem("source_id") != null)
+	{
+		string cadCfgId = thisPartCad.getPropertyItem("related_id").getProperty("config_id", "?");
+		Item cadItem = thisItem.getItemsByXPath(String.Format("//Item[config_id='{0}']", cadCfgId));
+
+		Item partItem = thisPartCad.getPropertyItem("source_id");
+				
+		if (cadItem.getItemCount() == 1 && partItem.getItemCount() == 1)
+		{
+			cadItem.setPropertyItem("part", partItem);
+			cadItem.setPropertyAttribute("part", "type", "Part");
+			cadItem.setPropertyAttribute("part", "keyed_name", partItem.getProperty("keyed_name",""));
+			cadItem.setPropertyAttribute("part", "current", (cadItem.getProperty("is_current", "") == "1" && partItem.getProperty("is_current", "") == "1" ) ? "1" : "0");
+		}
+	}
+}
+
+return thisItem;*/]]></method_code>
+  <method_type>C#</method_type>
+  <name>PE_RetrieveCADParts</name>
+ </Item>
+</AML>

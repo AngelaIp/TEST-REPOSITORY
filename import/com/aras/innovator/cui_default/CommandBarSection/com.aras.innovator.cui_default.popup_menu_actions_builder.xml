@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="76D2C1F47C314AEFA351A32B76B927D2" action="add">
+  <builder_method keyed_name="CuiMainWindowContextMenuActions" type="Method">674366FA99734CD79EC4768B86D6CB83</builder_method>
+  <classification>Method</classification>
+  <location_name>PopupMenuItemGrid</location_name>
+  <name>com.aras.innovator.cui_default.popup_menu_actions_builder</name>
+ </Item>
+</AML>

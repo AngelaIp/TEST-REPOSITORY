@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="F68B3581241A414E957745FEDC04013C" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Delete Saved Search...</label>
+  <on_click_handler keyed_name="cui_default_twmm_deleteSearch" type="Method">44E077A94A6C48D3ADE487D466453BB0</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_search_menu" type="CommandBarMenu">48636CC2CD104340AC60CFC588C08475</parent_menu>
+  <name>com.aras.innovator.cui_default.twmm_deleteSavedSearch</name>
+ </Item>
+</AML>

@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="FileSelectorTemplate" id="DDA89EF0F8FC4C7F9F3B72433B0E7155" action="add">
+  <filter>7869D76D50ED4BD4985BECB20B1102F7|992B142FCE6C4EF8B71417220CD7E92D|50AF497B7A114235979F882CEC8EFDF6|8A85DD9A6E0346F5AE423314E3650041</filter>
+  <reference>PR File(related_id)</reference>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="076F1515460A4D019354ECC7EDBAC6C4" type="FeedTemplate">076F1515460A4D019354ECC7EDBAC6C4</source_id>
+  <tooltip_template xml:lang="en">File ${File:filename} from ${ItemType:label} ${Item:keyed_name}</tooltip_template>
+ </Item>
+</AML>

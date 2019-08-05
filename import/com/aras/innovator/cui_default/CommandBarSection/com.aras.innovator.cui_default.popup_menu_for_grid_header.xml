@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="982898FBA02F4B7A92D15199CD531013" action="add">
+  <builder_method keyed_name="cui_GridHeaderPopupMenuCreate" type="Method">0EC4342457D24909BDC6FDF3CAA69790</builder_method>
+  <classification>Method</classification>
+  <description>PopupMenu for Grid Header</description>
+  <label xml:lang="en">PopupMenu for Grid Header</label>
+  <location_name>PopupMenuGridHeader</location_name>
+  <name>com.aras.innovator.cui_default.popup_menu_for_grid_header</name>
+ </Item>
+</AML>

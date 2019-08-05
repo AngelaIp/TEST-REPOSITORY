@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="E1AAA4419FFA4773B29A1F3DDA518EC8" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Purge</label>
+  <on_click_handler keyed_name="cui_default_mwmm_onPurge" type="Method">0AF14F6A40694EA487FBB1631E82F68C</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_edit_menu" type="CommandBarMenu">BB3421A77E45452DB21B7C53F162734C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_purge</name>
+ </Item>
+</AML>

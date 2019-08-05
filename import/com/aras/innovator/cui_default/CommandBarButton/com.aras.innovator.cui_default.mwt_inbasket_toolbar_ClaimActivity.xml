@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="0F25215428A846F3BE050A684D635748" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/LockItem.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <on_init_handler keyed_name="cui_reinit_mwt_inbasket_Claim" type="Method">B8F93A032EE74341AC0B350905FBAC58</on_init_handler>
+  <tooltip_template xml:lang="en">Lock Activity</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_inbasket_toolbar_ClaimActivity</name>
+ </Item>
+</AML>

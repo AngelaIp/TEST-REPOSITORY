@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenuSeparator" id="D37AB277399F4E5F97464D339E56F047" action="add">
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_file_menu" type="CommandBarMenu">2B1F770C624449A3863818C8D4EF414F</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_sep_af_print</name>
+ </Item>
+</AML>

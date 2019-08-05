@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="FADF25E82A124E7C9BDAFCFFBA8C223D" action="add">
+  <label xml:lang="en">Licenses</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_admin_menu" type="CommandBarMenu">7267B91F9B334F9FA1E9715B7DADD11C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_licenses_menu</name>
+ </Item>
+</AML>

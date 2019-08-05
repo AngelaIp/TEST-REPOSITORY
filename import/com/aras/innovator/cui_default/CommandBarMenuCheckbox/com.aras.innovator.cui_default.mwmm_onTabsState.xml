@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="CommandBarMenuCheckbox" id="4DC61DB35CCC4EF3816C2304BBFC26C8" action="add">
+  <additional_data>{ "cui_checked": false }</additional_data>
+  <group_id>e009e5c2552c44ddb786fed98a8da678</group_id>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <label xml:lang="en">On</label>
+  <on_click_handler keyed_name="cui_default_mwmm_onOnTabsState" type="Method">4846139F51F945C88F2927568A9AF6E6</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwmm_tabs_state" type="Method">9CA7793E92354A25AAB24D3F92854B78</on_init_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_tabs_state" type="CommandBarMenu">C9E8EF2E8AAA4CE59D5CA7B32473C05D</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_onTabsState</name>
+ </Item>
+</AML>

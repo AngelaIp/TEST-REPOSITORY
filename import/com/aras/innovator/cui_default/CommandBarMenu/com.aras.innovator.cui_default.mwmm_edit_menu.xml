@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="BB3421A77E45452DB21B7C53F162734C" action="add">
+  <label xml:lang="en">Edit</label>
+  <name>com.aras.innovator.cui_default.mwmm_edit_menu</name>
+ </Item>
+</AML>

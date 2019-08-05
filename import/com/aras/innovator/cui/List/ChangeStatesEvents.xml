@@ -1,0 +1,25 @@
+﻿<AML>
+ <Item type="List" id="ECCCE93A50B94900B45125958BB755B1" action="add">
+  <name>ChangeStatesEvents</name>
+  <Relationships>
+   <Item type="Value" id="D11C9392D8C14D2885F6E4D339300F25" action="add">
+    <label xml:lang="en">Select Item in TOC</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="ChangeStatesEvents" type="List">ECCCE93A50B94900B45125958BB755B1</source_id>
+    <value>SelectInToc</value>
+   </Item>
+   <Item type="Value" id="06B411D346914EFC89D2ACF44A8D3366" action="add">
+    <label xml:lang="en">Select Item in Grid </label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="ChangeStatesEvents" type="List">ECCCE93A50B94900B45125958BB755B1</source_id>
+    <value>SelectInGrid</value>
+   </Item>
+   <Item type="Value" id="935173F3C5194AB8AD1B7E967F079579" action="add">
+    <label xml:lang="en">Update TearOff Window State</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="ChangeStatesEvents" type="List">ECCCE93A50B94900B45125958BB755B1</source_id>
+    <value>UpdateTearOffWindowState</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,16 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="EFB17CE3A59A4690996CA5B81D8AC661" action="add">
+  <classification>Data Model</classification>
+  <location_name>MainWindowMainMenu</location_name>
+  <name>mp_MainMenu</name>
+  <Relationships>
+   <Item type="CommandBarSectionItem" id="A873EFD6A657439983D4836BA11C0CA5" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwmm_reset_LFS" type="CommandBarItem">FACEDAE0CB724677BDA0CBAE7D5CF44A</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="mp_MainMenu" type="CommandBarSection">EFB17CE3A59A4690996CA5B81D8AC661</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

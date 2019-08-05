@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="Method" id="0A97DF2EB39740C0B4487912FF3317C4" action="add">
+  <comments>Clear main Solr collection</comments>
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[// This method is obsolete and no longer used.
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>ES_ClearMainCollection</name>
+ </Item>
+</AML>

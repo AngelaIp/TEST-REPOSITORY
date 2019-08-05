@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="DAD6B3ADCD294E4FA83A9477AB8266C6" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.export2word" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_export2Word" type="Method">B5EE8019EBA140AAA1C4ECDD78D75415</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Export To Word</name>
+ </Item>
+</AML>

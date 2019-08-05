@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="History Action" id="D2AACE9A6E2549C98D0CF462CBA1F731" action="add">
+  <comment_text xml:lang="en">File name: '{filename}'</comment_text>
+  <is_internal>0</is_internal>
+  <label xml:lang="en">File View</label>
+  <name>FileView</name>
+ </Item>
+</AML>

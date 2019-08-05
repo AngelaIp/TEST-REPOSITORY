@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="4C55580A2E21491E840E855F6C2DD520" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.properties" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmig_properties" type="Method">C7ADE819235D426C9DB009FA962491FC</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Properties</name>
+ </Item>
+</AML>

@@ -1,0 +1,23 @@
+﻿<AML>
+ <Item type="Method" id="CA2FE613146C45AF8E4C176DEDC06487" action="add">
+  <comments>update the password if needed for the single sign-on setting</comments>
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA['attach this to the OnAfterAdd and OnAfterUpdate events for the USER itemtype
+'See myinnovator.com issue IR-006086.
+'MethodTemplateName=VBScriptMainUpgrade;
+Sub MethodMainSubroutine()
+  If Not CCO.Permissions.UserHasRootOrAdminIdentity() Then
+    Exit Sub
+  End If
+  Dim cfgpath As String = "/Innovator/ClientLogon"
+  Dim cfg As XmlElement = CType(CCO.Cache.GetCacheInfo("ApplicationXML").SelectSingleNode(cfgpath), XmlElement)
+  If IsNothing(cfg) OrElse cfg.GetAttribute("shared_secret") = "" Then
+    Exit Sub
+  End If
+
+  CCO.ApplyItem.ExecuteMethodByName(inDom, outDom, "Reset All Auth Passwords", True)
+End Sub]]></method_code>
+  <method_type>VB</method_type>
+  <name>UpdateUserForSSO</name>
+ </Item>
+</AML>

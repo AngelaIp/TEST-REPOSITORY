@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="0594C24A8BCD4E6E8DD8164E2DA57B38" action="add">
+  <additional_data>{ "cui_resource_key": "maintree.saved_search.run" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmtoc_runSavedSearch" type="Method">B637DAE2AAC34C71BE13A201810B89BE</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmtoc_runSavedSearch</name>
+ </Item>
+</AML>

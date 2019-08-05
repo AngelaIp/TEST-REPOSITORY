@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="E7038B4094F24BD99527D840D68F5560" action="add">
+  <additional_data>{ "cui_resource_key": "common.lock" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onLockCommand" type="Method">4C724106531A4BCA9CC2C608776FCF3B</on_click_handler>
+  <on_init_handler keyed_name="cui_InBasketTask_ItemGrid_Switch" type="Method">E785225D0937499590D134E8A9E43644</on_init_handler>
+  <name>com.aras.innovator.cui_default.pmig_Lock</name>
+ </Item>
+</AML>

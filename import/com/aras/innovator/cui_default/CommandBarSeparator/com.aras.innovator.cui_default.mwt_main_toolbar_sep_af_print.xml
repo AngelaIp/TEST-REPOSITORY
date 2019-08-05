@@ -1,0 +1,5 @@
+﻿<AML>
+ <Item type="CommandBarSeparator" id="CC234F1E2C1F489A920A7623BD6B5165" action="add">
+  <name>com.aras.innovator.cui_default.mwt_main_toolbar_sep_af_print</name>
+ </Item>
+</AML>

@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="DE1924056D4D4163BA42CFCBB95101AA" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Copy</label>
+  <on_click_handler keyed_name="cui_default_mwmm_copy2clipboard" type="Method">CB42F7D2B3104530A8DB7A39E85328B6</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_edit_menu" type="CommandBarMenu">BB3421A77E45452DB21B7C53F162734C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_copy2clipboard</name>
+ </Item>
+</AML>

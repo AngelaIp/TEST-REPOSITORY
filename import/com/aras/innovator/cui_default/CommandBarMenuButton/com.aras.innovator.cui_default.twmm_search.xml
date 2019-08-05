@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="2C5C491AD0844C4E907EAAF05C57D55F" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Run Search</label>
+  <on_click_handler keyed_name="cui_default_twmm_runSearch" type="Method">91BC292D112044CAAC45916F6A6A1792</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_search_menu" type="CommandBarMenu">48636CC2CD104340AC60CFC588C08475</parent_menu>
+  <name>com.aras.innovator.cui_default.twmm_search</name>
+ </Item>
+</AML>

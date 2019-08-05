@@ -1,0 +1,48 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="D28EE0AC5C52401C9E0CD2F6EA2A11D0" action="add">
+  <additional_data />
+  <classification>Data Model</classification>
+  <location_name>MainWindowToolbar</location_name>
+  <name>com.aras.innovator.cui_default.mwt_inbasketTask_toolbar</name>
+  <Relationships>
+   <Item type="CommandBarSectionItem" id="FC38F299A3C64B47848366BAAA8D80E0" action="add">
+    <action>Skip</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar_no_tabs" type="CommandBarItem">FC38F299A3C64B47848366BAAA8D80EB</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>616</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar" type="CommandBarSection">D28EE0AC5C52401C9E0CD2F6EA2A11D0</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="9A81BC99522E4103830AC4C4B2033B70" action="add">
+    <action>Skip</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar_sep_af_no_tabs" type="CommandBarItem">9A81BC99522E4103830AC4C4B2033B7B</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>624</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar" type="CommandBarSection">D28EE0AC5C52401C9E0CD2F6EA2A11D0</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="2704E39328674583BCBB1E2BB98FBF26" action="add">
+    <action>Replace</action>
+    <alternate keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar_lock" type="CommandBarItem">777A876B6F7F443D826012067630381D</alternate>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_lock" type="CommandBarItem">1992B00BEAB5479FADD6751B074DEDB2</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2016</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar" type="CommandBarSection">D28EE0AC5C52401C9E0CD2F6EA2A11D0</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="595966946E3D4FB5899C9E2110C96990" action="add">
+    <action>Replace</action>
+    <alternate keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar_unlock" type="CommandBarItem">6C15B31AA5254F379A3797053EB227E3</alternate>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_unlock" type="CommandBarItem">1EF72C8B7EDE49058238438FDCF3628B</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2144</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar" type="CommandBarSection">D28EE0AC5C52401C9E0CD2F6EA2A11D0</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="FA9C12F451F449BAA5FF36BFFD35DA6E" action="add">
+    <action>Replace</action>
+    <alternate keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar_edit" type="CommandBarItem">22FFCD92111C45059C481376DD876E9B</alternate>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_edit" type="CommandBarItem">7EFB7EF559FE4514AE56F76A476DB4A2</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2272</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasketTask_toolbar" type="CommandBarSection">D28EE0AC5C52401C9E0CD2F6EA2A11D0</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

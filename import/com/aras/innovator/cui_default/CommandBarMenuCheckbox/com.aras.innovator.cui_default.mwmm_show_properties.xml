@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuCheckbox" id="9A9AC2CB2E18408A955D298EB8B9A7A4" action="add">
+  <additional_data>{ "cui_checked": true }</additional_data>
+  <label xml:lang="en">Show Properties</label>
+  <on_click_handler keyed_name="cui_default_mwmm_showProperties" type="Method">59DE1EBBB87C4F399C49EFE67AAB19C2</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_view_menu" type="CommandBarMenu">0267056DDA8A40E99200996704419F39</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_show_properties</name>
+ </Item>
+</AML>

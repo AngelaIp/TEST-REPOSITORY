@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="FileType" id="E1E3242FAA884DBE85E103801D08AB01" action="add">
+  <description>EDM DVF</description>
+  <extension>dvf</extension>
+  <mimetype>drawing/x-dvf</mimetype>
+  <permission_id keyed_name="F9CF5B7BBB0D43BAA1D59C6E519E267A" type="Permission">F9CF5B7BBB0D43BAA1D59C6E519E267A</permission_id>
+  <name>EDM DVF</name>
+ </Item>
+</AML>

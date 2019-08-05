@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="FileType" id="4337FDFA797C4C5E82DEC5C6314C2A75" action="add">
+  <description>OpenDocument ODP Presentation</description>
+  <extension>odp</extension>
+  <mimetype>application/vnd.oasis.opendocument.presentation</mimetype>
+  <name>OpenDocument Presentation</name>
+ </Item>
+</AML>

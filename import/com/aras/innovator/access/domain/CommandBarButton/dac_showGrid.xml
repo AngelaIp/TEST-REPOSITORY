@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="8159F12B41604173A4BF8B170098F72A" action="add">
+  <image>../Images/DomainAccessControlDefinitionEditorOff.svg</image>
+  <on_click_handler keyed_name="dac_showGrid" type="Method">91A9D0C97493481AA98070323DA8E9EA</on_click_handler>
+  <on_init_handler keyed_name="dac_initSidebar" type="Method">984DA4541A1D4BC794D5614149FC3202</on_init_handler>
+  <tooltip_template xml:lang="en">Editor</tooltip_template>
+  <name>dac_showGrid</name>
+ </Item>
+</AML>

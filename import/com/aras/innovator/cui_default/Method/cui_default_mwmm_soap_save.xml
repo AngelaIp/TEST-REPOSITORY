@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="Method" id="3AA9EC274A984C3686B901272CA0C44D" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var menuItem = inArgs;
+var currChk = menuItem.getCheck();
+aras.setVariable('SaveRequest', currChk);
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_default_mwmm_soap_save</name>
+ </Item>
+</AML>

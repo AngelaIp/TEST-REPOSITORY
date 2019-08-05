@@ -1,0 +1,117 @@
+﻿<AML>
+ <Item type="Method" id="5FFA5D7D6FA147BEB8A05D86920B6132" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[	//CuiInBasketMainWindowMainMenuActions
+	Item menuItems = null;
+	string inbasketItemTypeId = this.getProperty("item_type_id");
+	string locationName = this.getProperty("location_name");
+	if (!string.IsNullOrEmpty(inbasketItemTypeId))
+	{
+		Item inBasketWithActions = this.newItem();
+		inBasketWithActions.loadAML("<AML><Item type=\"ItemType\" action=\"get\" select=\"name, id\"><name>InBasket Task</name>" +
+			"<Relationships><Item type=\"Morphae\" action=\"get\" select=\"related_id\" ><related_id><Item type=\"ItemType\" select=\"name,id\" action= \"get\">" +
+			"<Relationships><Item type=\"Item Action\" action=\"get\" select=\"related_id\" /></Relationships></Item></related_id></Item></Relationships></Item></AML>");
+		inBasketWithActions = inBasketWithActions.apply();
+		if (!inBasketWithActions.isError())
+		{
+			Item itemTypes = inBasketWithActions.getItemsByXPath(Item.XPathResult + "/Item[@type='ItemType']/Relationships/Item[@type='Morphae']/related_id/Item[@type='ItemType']");
+
+			if (itemTypes != null && itemTypes.getItemCount() > 0)
+			{
+				Item initHandler = GetMethodByConfigId("6D3C416E061C4DD186BE499924BF992C");
+				Item clickHandler = GetMethodByConfigId("90BB344C388D431BB692CBA3C2DB7443");
+
+				for (var i = 0; i < itemTypes.getItemCount(); i++)
+				{
+					Item currentItemType = itemTypes.getItemByIndex(i);
+					Item actions = currentItemType.getItemsByXPath("Relationships/Item[@type='Item Action']/related_id/Item");
+					if (actions != null && actions.getItemCount() > 0)
+					{
+						Item items = HandleMenuButtons(actions, initHandler, clickHandler, inbasketItemTypeId, currentItemType.getID(), locationName);
+						if (menuItems != null)
+						{
+							menuItems.appendItem(items);
+						}
+						else {
+							menuItems = items;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	return menuItems ?? this.getInnovator().newResult("");
+}
+
+private static Item HandleMenuButtons(Item actions, Item initHandler, Item clickHandler, string inbasketItemTypeId, string itemTypeId, string locationName)
+{
+	Item cuiItems = actions.newItem();
+
+	string initHandlerId = initHandler.getID();
+	string initHandlerName = initHandler.getProperty("name");
+	string clickHandlerId = clickHandler.getID();
+	string clickHandlerName = clickHandler.getProperty("name");
+	Item separator = cuiItems.newItem("CommandBarSeparator");
+	separator.setProperty("name", "cui_sep_" + itemTypeId);
+	separator.setProperty("additional_data", "{\"itemTypeId\": \"" + itemTypeId + "\" }");
+	separator.setProperty("on_init_handler", initHandlerId);
+	separator.setPropertyAttribute("on_init_handler", "keyed_name", initHandlerName);
+	separator.setPropertyAttribute("on_init_handler", "type", "Method");
+	separator.setProperty("include_events", "SelectInGrid");
+	separator.setID(itemTypeId);
+	if (locationName == "MainWindowMainMenu")
+	{
+		separator.setProperty("parent_menu", "48AD1BF9601D41BD8BF5CBCB811DA1F5");
+	}
+
+	cuiItems.appendItem(separator);
+
+	for (var i = 0; i < actions.getItemCount(); i++)
+	{
+		Item currentAction = actions.getItemByIndex(i);
+		Item menuButton = currentAction.newItem("CommandBarMenuButton");
+		string actionId = currentAction.getID();
+		string actionName = string.Format(CultureInfo.InvariantCulture, "action:{0}:{1}", actionId, inbasketItemTypeId);
+		menuButton.setProperty("name", actionName);
+		string label = currentAction.getProperty("label");
+		menuButton.setProperty("label", label ?? currentAction.getProperty("name"));
+		string canExecuteMethodName = currentAction.getPropertyAttribute("can_execute", "keyed_name");
+		string location = currentAction.getProperty("location");
+
+		if (locationName == "MainWindowMainMenu")
+		{
+			// '48AD1BF9601D41BD8BF5CBCB811DA1F5' - com.aras.innovator.cui_default.mwmm_actions_menu
+			menuButton.setProperty("parent_menu", "48AD1BF9601D41BD8BF5CBCB811DA1F5");
+		}
+		menuButton.setProperty("additional_data", "{\"itemTypeId\": \"" + itemTypeId + "\", \"canExecuteMethodName\": \"" + canExecuteMethodName + "\", \"location\": \"" + location + "\", \"cuiLocation\": \"" + locationName + "\"}");
+		menuButton.setProperty("on_init_handler", initHandlerId);
+		menuButton.setPropertyAttribute("on_init_handler", "keyed_name", initHandlerName);
+		menuButton.setPropertyAttribute("on_init_handler", "type", "Method");
+		menuButton.setProperty("on_click_handler", clickHandlerId);
+		menuButton.setPropertyAttribute("on_click_handler", "keyed_name", clickHandlerName);
+		menuButton.setPropertyAttribute("on_click_handler", "type", "Method");
+		menuButton.setProperty("include_events", "SelectInGrid");
+		menuButton.setProperty("action", "Add");
+		menuButton.setID(actionId);
+		menuButton.removeAttribute("isNew");
+		menuButton.removeAttribute("isTemp");
+		cuiItems.appendItem(menuButton);
+	}
+
+	// newItem() is creates empty node. It's should be deleted
+	cuiItems.removeItem(cuiItems.getItemByIndex(0));
+	return cuiItems;
+}
+
+private Item GetMethodByConfigId(string configId)
+{
+	Item method = this.newItem("Method", "get");
+	method.setAttribute("select", "id,name");
+	method.setProperty("config_id", configId);
+	return method.apply();
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>CuiInBasketMWMainMenuActions</name>
+ </Item>
+</AML>

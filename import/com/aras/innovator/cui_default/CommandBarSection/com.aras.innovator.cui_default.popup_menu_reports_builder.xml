@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="B55C1AFA8396417DAF4F320DAF1D5C65" action="add">
+  <builder_method keyed_name="CuiMainWindowContextMenuReports" type="Method">75233DE96E4A45E1AF4FE9C1F318B26C</builder_method>
+  <classification>Method</classification>
+  <location_name>PopupMenuItemGrid</location_name>
+  <name>com.aras.innovator.cui_default.popup_menu_reports_builder</name>
+ </Item>
+</AML>

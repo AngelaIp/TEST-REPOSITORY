@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="74B04362A4104926A9BA6F0D8CBDF46D" action="add">
+  <additional_data>{ "cui_resource_key": "mainmenu.new_report" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmtoc_newReport" type="Method">1E5C37414D514ECC88DA2C5641EBBFB4</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmtoc_createNewReport</name>
+ </Item>
+</AML>

@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="5467FCA5028E48D9AFBC9B51D384EFCC" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Delete</label>
+  <on_click_handler keyed_name="cui_default_mwt_onDeleteCommand" type="Method">C30383E2BD794488A63F924313C62BF3</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_edit_menu" type="CommandBarMenu">BB3421A77E45452DB21B7C53F162734C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_delete</name>
+ </Item>
+</AML>

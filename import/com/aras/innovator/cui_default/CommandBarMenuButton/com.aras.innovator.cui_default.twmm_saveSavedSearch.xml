@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="183FA840CA0F4803BD7A67C95B4573CA" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Save Search...</label>
+  <on_click_handler keyed_name="cui_default_twmm_saveSearch" type="Method">6ACEF1DE25A74E53BA993184549B5BA5</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_search_menu" type="CommandBarMenu">48636CC2CD104340AC60CFC588C08475</parent_menu>
+  <name>com.aras.innovator.cui_default.twmm_saveSavedSearch</name>
+ </Item>
+</AML>

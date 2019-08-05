@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="FileSelectorTemplate" id="6328F7F2B4E4410AA509FECE8DEE300A" action="add">
+  <filter>94BB5EBE9CE54D5A88F969ADE64EE440</filter>
+  <reference>view_file</reference>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="7EE1684FF3BD4B77AB8FF4C073C8801B" type="FeedTemplate">7EE1684FF3BD4B77AB8FF4C073C8801B</source_id>
+  <tooltip_template xml:lang="en">File ${File:filename} from ${ItemType:label} ${Item:keyed_name}</tooltip_template>
+ </Item>
+</AML>

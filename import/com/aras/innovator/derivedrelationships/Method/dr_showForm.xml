@@ -1,0 +1,22 @@
+﻿<AML>
+ <Item type="Method" id="00A3D5235C674630A10C68F32D098454" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[const sidebar = dijit.byId('sidebar');
+const relationshipIframe = document.getElementById(relationships.currTabID);
+const relationshipWin = relationshipIframe && relationshipIframe.contentWindow;
+const centerMiddleWidget = dijit.byId('centerMiddle');
+
+sidebar.switchSidebarButton(inArgs.control.id, '../images/ShowFormOn.svg', true);
+sidebar.switchSidebarButton('dr_showGrid', '../images/QueryDefinitionOff.svg' , false);
+document.getElementById('CenterBorderContainer').style.display = '';
+document.querySelector('.dr-grid-container').classList.add('dr-grid-container_hidden');
+centerMiddleWidget.resize();
+
+if (relationshipWin && relationshipWin.grid) {
+	relationshipWin.grid.grid_Experimental.update();
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>dr_showForm</name>
+ </Item>
+</AML>

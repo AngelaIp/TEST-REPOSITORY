@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="33ED6E789333434988FF93889E252804" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.export2excel" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_export2Excel" type="Method">6C8AFF52DEC6425686040CF1F6DC8D01</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Export To Excel</name>
+ </Item>
+</AML>

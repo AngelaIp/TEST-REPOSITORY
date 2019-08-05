@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="D2F9439ED7824CFDA0E11D2F40352EB8" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.promote" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onPromoteCommand" type="Method">06E75D0E4CBD44179FAA404B952EB17F</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Promote</name>
+ </Item>
+</AML>

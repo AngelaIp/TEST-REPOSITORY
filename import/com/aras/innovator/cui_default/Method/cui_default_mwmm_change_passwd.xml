@@ -1,0 +1,69 @@
+﻿<AML>
+ <Item type="Method" id="043E63D8EC2C4583AEE8398F0CD58165" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var userNd = aras.getLoggedUserItem();
+if (!userNd) {
+	return false;
+}
+userNd = userNd.cloneNode(true);
+userNd.setAttribute('action', 'get');
+userNd.setAttribute('select', 'id');
+aras.applyItem(userNd.xml);
+
+var data = {
+	title: aras.getResource('', 'common.change_pwd'),
+	oldMsg: aras.getResource('', 'common.old_pwd'),
+	newMsg1: aras.getResource('', 'common.new_pwd'),
+	newMsg2: aras.getResource('', 'common.confirm_pwd'),
+	errMsg1: aras.getResource('', 'common.old_pwd_wrong'),
+	errMsg2: aras.getResource('', 'common.check_pwd_confirmation'),
+	errMsg3: aras.getResource('', 'common.pwd_empty'),
+	'check_empty': true,
+	dialogWidth: 300,
+	dialogHeight: 180,
+	center: true,
+	aras: aras,
+	content: 'changeMD5Dialog.html',
+	validationCallback: function(oldPasswordHash, newPasswordHash) {
+		const requestData = (
+			'<old_password>' + oldPasswordHash + '</old_password>' +
+			'<new_password>' + newPasswordHash + '</new_password>'
+		);
+
+		const options = {
+			url: aras.getServerURL(),
+			method: 'ChangeUserPassword',
+			async: true
+		};
+
+		const handleError = function(errorRes) {
+			const item = aras.newIOMItem();
+			item.loadAML(errorRes.responseText);
+			return topWindow.ArasModules.Dialog.alert(item.getErrorString())
+				.then(function() {
+					return false;
+				});
+		};
+
+		return topWindow.ArasModules.soap(requestData, options)
+			.then(function() {
+				return true;
+			})
+			.catch(handleError);
+	}
+};
+var methNm = 'User_pwd_checkPolicy';
+var methNd = aras.getItem('Method', 'name="' + methNm + '"', '<name>' + methNm + '</name>', 0);
+var methCode = methNd ? aras.getItemProperty(methNd, 'method_code') : '';
+data['code_to_check_pwd_policy'] = methCode;
+
+var topWindow = aras.getMostTopWindowWithAras(window);
+topWindow.ArasModules.Dialog.show('iframe', data).promise.then(function(newPwd) {
+	if (newPwd) {
+		aras.login(aras.getLoginName(), newPwd, aras.getDatabase(), false, aras.getServerBaseURL(), '');
+	}
+});]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_default_mwmm_change_passwd</name>
+ </Item>
+</AML>

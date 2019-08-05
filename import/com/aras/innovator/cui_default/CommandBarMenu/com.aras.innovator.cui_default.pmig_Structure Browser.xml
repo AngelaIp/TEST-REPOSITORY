@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="56D31C035C524E2BA6845FC4D3C261B5" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.structure_browser" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmig_StructBrowser" type="Method">CC9C23302DE24CA99DC4736E8FC52E5C</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Structure Browser</name>
+ </Item>
+</AML>

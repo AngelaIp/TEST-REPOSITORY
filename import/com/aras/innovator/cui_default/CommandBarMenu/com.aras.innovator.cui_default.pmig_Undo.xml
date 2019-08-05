@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="BB34332971E64E4AB7F3FA8BD3FD45FA" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.undo" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onUndoCommand" type="Method">E58ADCAA92C9498A957141CBBE8867C1</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Undo</name>
+ </Item>
+</AML>

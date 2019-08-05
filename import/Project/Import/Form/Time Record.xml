@@ -1,0 +1,39 @@
+﻿<AML>
+ <Item type="Form" id="2FFDAAA804B348F78F5A69A7B66BE5B9" action="add">
+  <category_form>0</category_form>
+  <height>439</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>784</width>
+  <name>Time Record</name>
+  <Relationships>
+   <Item type="Body" id="DE538E819CAA4EFBA12179A8191425A6" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Time Record" type="Form">2FFDAAA804B348F78F5A69A7B66BE5B9</source_id>
+    <Relationships>
+     <Item type="Field" id="B0D317592910456E967E150DA871A345" action="add">
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <html_code><![CDATA[<span id="ITEM_INFO_INTERNAL_SPAN"/>
+<script>
+  populate_ITEM_INFO_INTERNAL_SPAN = function()
+  {
+    document.getElementById("ITEM_INFO_INTERNAL_SPAN").innerHTML = top.aras.uiDrawItemInfoTable(document.itemType,null,new Array(0));
+  }
+  window.addEventListener("load", populate_ITEM_INFO_INTERNAL_SPAN);
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="DE538E819CAA4EFBA12179A8191425A6" type="Body">DE538E819CAA4EFBA12179A8191425A6</source_id>
+      <tab_stop>0</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>item_info</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

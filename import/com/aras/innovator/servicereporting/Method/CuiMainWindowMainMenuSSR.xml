@@ -1,0 +1,99 @@
+﻿<AML>
+ <Item type="Method" id="058949C2A7464442A225B498AB4F32D3" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[	Item items = null;
+	string itemTypeId = this.getProperty("item_type_id");
+	if (!string.IsNullOrEmpty(itemTypeId))
+	{
+		//Sel-Service Reports
+		Item userReports = this.newItem("Method", "GetSelfServiceReports");
+		userReports.setProperty("base_item_type", itemTypeId);
+		userReports = userReports.apply();
+		if (!userReports.isError())
+		{
+			items = HandleMenuButtons(userReports, "userreport:{0}", "cui_after_userreports_sep", "ssr");
+		}
+	}
+
+	return items ?? this.getInnovator().newResult("");
+}
+
+private Item HandleMenuButtons(Item reports, string reportTemplate, string sepId, string type)
+{
+	int reportsCount = reports.getItemCount();
+	if (reportsCount > 0)
+	{
+		// "F4FD1A40EA0144898DB308DE45A3C5B5" - id of "cui_init_report_menu_button" client method
+		Item initHandler = GetMethodByConfigId("F4FD1A40EA0144898DB308DE45A3C5B5");
+		Item clickHandler = GetMethodByConfigId("6FF7BD1B2A7E4BA0B06F3ACCC6293B39");
+		string initHandlerId = initHandler.getID();
+		string initHandlerName = initHandler.getProperty("name");
+		string clickHandlerId = clickHandler.getID();
+		string clickHandlerName = clickHandler.getProperty("name");
+		string separatorType = type ?? "item";
+		Item cuiItems = reports.newItem();
+		for (var i = 0; i < reportsCount; i++)
+		{
+			Item currentReport = reports.getItemByIndex(i);
+			Item menuButton = currentReport.newItem("CommandBarMenuButton");
+			string reportId = currentReport.getID();
+			string reportName = string.Format(CultureInfo.InvariantCulture, reportTemplate, reportId);
+			menuButton.setProperty("name", reportName);
+			string label = currentReport.getProperty("label");
+			menuButton.setProperty("label", label ?? currentReport.getProperty("name"));
+			var reportType = type ?? currentReport.getProperty("type");
+			if (reportType == "itemtype")
+			{
+				separatorType = "itemtype";
+			}
+
+			// '8A93A25DFFCA48629C0211C42EB72F30' - com.aras.innovator.cui_default.mwmm_reports_menu
+			menuButton.setProperty("parent_menu", "8A93A25DFFCA48629C0211C42EB72F30");
+			menuButton.setProperty("additional_data", "{\"reportType\": \"" + reportType + "\" }");
+			menuButton.setProperty("on_init_handler", initHandlerId);
+			menuButton.setPropertyAttribute("on_init_handler", "keyed_name", initHandlerName);
+			menuButton.setProperty("on_click_handler", clickHandlerId);
+			menuButton.setPropertyAttribute("on_click_handler", "keyed_name", clickHandlerName);
+			menuButton.setPropertyAttribute("on_init_handler", "type", "Method");
+			menuButton.setPropertyAttribute("on_click_handler", "type", "Method");
+			menuButton.setProperty("include_events", "SelectInGrid");
+			menuButton.setProperty("sort_order", "0");
+			menuButton.setProperty("action", "Add");
+			menuButton.setID(reportId);
+			menuButton.removeAttribute("isNew");
+			menuButton.removeAttribute("isTemp");
+			cuiItems.appendItem(menuButton);
+		}
+
+		Item separator = reports.newItem("CommandBarSeparator");
+		separator.setProperty("name", sepId);
+		separator.setProperty("additional_data", "{\"separatorType\": \"" + separatorType + "\" }");
+		separator.setProperty("on_init_handler", initHandlerId);
+		separator.setPropertyAttribute("on_init_handler", "keyed_name", initHandlerName);
+		separator.setPropertyAttribute("on_init_handler", "type", "Method");
+		separator.setProperty("sort_order", "0");
+		separator.setProperty("include_events", "SelectInGrid");
+		//Id is required. Id of separator should be constant. Main Menu will be refreshed at each choice of item in TOC if separator id will be random generated GUID.
+		separator.setID(sepId);
+		separator.setProperty("parent_menu", "8A93A25DFFCA48629C0211C42EB72F30");
+		cuiItems.appendItem(separator);
+
+		// newItem() is creates empty node. It's should be deleted
+		cuiItems.removeItem(cuiItems.getItemByIndex(0));
+		return cuiItems;
+	}
+
+	return null;
+}
+
+private Item GetMethodByConfigId(string configId)
+{
+	Item method = this.newItem("Method", "get");
+	method.setAttribute("select", "id,name");
+	method.setProperty("config_id", configId);
+	return method.apply();
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>CuiMainWindowMainMenuSSR</name>
+ </Item>
+</AML>

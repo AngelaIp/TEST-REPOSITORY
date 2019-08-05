@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="C7DDE177530141CBAB8166D5B9F763EC" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Export To Word</label>
+  <on_click_handler keyed_name="cui_default_mwt_export2Word" type="Method">B5EE8019EBA140AAA1C4ECDD78D75415</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_file_menu" type="CommandBarMenu">2B1F770C624449A3863818C8D4EF414F</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_export2Word</name>
+ </Item>
+</AML>

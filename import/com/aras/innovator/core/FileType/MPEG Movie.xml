@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="FileType" id="9C6DFAFA8EA84DFDA174A3FB0408FEA5" action="add">
+  <description>MPEG Movie</description>
+  <extension>mpg,mpe,mpeg</extension>
+  <mimetype>video/mpeg</mimetype>
+  <permission_id keyed_name="312E7BBA49534D7FB1095E164201BBB1" type="Permission">312E7BBA49534D7FB1095E164201BBB1</permission_id>
+  <name>MPEG Movie</name>
+ </Item>
+</AML>

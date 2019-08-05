@@ -1,0 +1,23 @@
+﻿<AML>
+ <Item type="Method" id="E852C11F89424491B13E640F5229B1D0" action="add">
+  <comments>Check is Root Type set for Indexed Configuration</comments>
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[Innovator inn = this.getInnovator();
+Dictionary<string, string> propsValues = new Dictionary<string, string>();
+propsValues.Add("Name", this.getProperty("name"));
+propsValues.Add("RootType", this.getProperty("root_type"));
+string action = this.getAction();
+
+foreach(KeyValuePair<string, string> pkv in propsValues) {
+	if ((action.Equals("add") && pkv.Value == null) || (pkv.Value != null) && string.IsNullOrWhiteSpace(pkv.Value))
+	{
+		string userMessageName = string.Format(CultureInfo.CurrentCulture, "ES_{0}IsNotSetMessage", pkv.Key);
+		return inn.newError(string.Format(CultureInfo.InvariantCulture, CCO.ErrorLookup.Lookup(userMessageName)));
+	}
+}
+
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>ES_OnBeforeUpdateIndexedConfig</name>
+ </Item>
+</AML>

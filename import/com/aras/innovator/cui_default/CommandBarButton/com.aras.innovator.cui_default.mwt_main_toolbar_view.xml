@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="73475464CDF34506AFE37311949965CF" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/ViewItem.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <label xml:lang="en">View</label>
+  <on_click_handler keyed_name="cui_default_mwt_onViewCommand" type="Method">74217FBDC2554604A543BDEFA8A64ED5</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwt_view" type="Method">2116022F0D4544C6B5C4E60C7213417B</on_init_handler>
+  <tooltip_template xml:lang="en">View Item</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_main_toolbar_view</name>
+ </Item>
+</AML>

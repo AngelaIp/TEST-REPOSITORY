@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="FileType" id="CB309628E641458693707EDC8B8F2444" action="add">
+  <description>Microsoft Access MDB Database</description>
+  <extension>mdb</extension>
+  <mimetype>application/x-msaccess</mimetype>
+  <permission_id keyed_name="8E7E29C45F0546E99A5FBEAD515E63B4" type="Permission">8E7E29C45F0546E99A5FBEAD515E63B4</permission_id>
+  <name>Microsoft Access</name>
+ </Item>
+</AML>

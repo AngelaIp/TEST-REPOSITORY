@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="DBD4A0EBCDA94A448152C6722A51A094" action="add">
+  <builder_method keyed_name="CuiInBasketMWMainMenuActions" type="Method">5FFA5D7D6FA147BEB8A05D86920B6132</builder_method>
+  <classification>Method</classification>
+  <location_name>MainWindowMainMenu</location_name>
+  <name>com.aras.innovator.cui_default.mwmm_inbasketTask_actions</name>
+ </Item>
+</AML>

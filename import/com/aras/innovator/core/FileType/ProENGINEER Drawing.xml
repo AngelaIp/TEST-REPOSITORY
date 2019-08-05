@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="FileType" id="3090BC98433548D48F5DBE9974D9A98B" action="add">
+  <description>PTC Pro/ENGINEER DRW Drawing</description>
+  <extension>drw</extension>
+  <mimetype>drawing/x-prt</mimetype>
+  <name>Pro/ENGINEER Drawing</name>
+ </Item>
+</AML>

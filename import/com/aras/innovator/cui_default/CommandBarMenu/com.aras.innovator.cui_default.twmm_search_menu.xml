@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="48636CC2CD104340AC60CFC588C08475" action="add">
+  <label xml:lang="en">Search</label>
+  <name>com.aras.innovator.cui_default.twmm_search_menu</name>
+ </Item>
+</AML>

@@ -1,0 +1,66 @@
+﻿<AML>
+ <Item type="Method" id="4E68BCDCCE224BAFB9302F1D18DB2685" action="add">
+  <comments>Site Preference validation</comments>
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[Innovator innovator = this.getInnovator();
+
+Hashtable rowTypes = new Hashtable();
+rowTypes.Add("act", "Activity");
+rowTypes.Add("wbs", "wbs");
+rowTypes.Add("mil", "Milestone");
+string gridLayoutName = "PM_ProjectGridLayout";
+string colDescrName = "PM_ProjectColumnDescription";
+XmlNodeList glItems = this.node.SelectNodes("Relationships/Item[@type='" + gridLayoutName + "'][not(@action='delete')][not(is_system='1')]");
+
+for(int i=0;i<glItems.Count;i++)
+{
+  XmlNode glItem = glItems[i];
+  string pos = CCO.XML.GetItemProperty(glItem,"position");
+  XmlNodeList cdItems = glItem.SelectNodes("Relationships/Item[@type='" + colDescrName + "'][not(@action='delete')]");
+  if(cdItems.Count == 0) 
+  {
+  	string qry = 
+      "<Item type=\"" + colDescrName + "\" action=\"get\">" +
+        "<source_id>" + ((XmlElement)glItem).GetAttribute("id") + "</source_id>" +
+      "</Item>";
+  	XmlDocument qryAML = new XmlDocument();
+  	qryAML.LoadXml(qry);
+  	XmlDocument resAML = new XmlDocument();
+  	CCO.ApplyItem.ApplyItem(ref qryAML, ref resAML);
+  	if (resAML.DocumentElement.SelectSingleNode("Item") != null)
+      return innovator.newError("'" + gridLayoutName + "' item with position='" + pos + "' has no '" + colDescrName + "' items");
+  	else
+  	  continue; //it's mean that PM_ProjectColumnDescription already in database and additional checking 
+  }
+  Hashtable uniqs = new Hashtable();
+  
+  for(int j=0;j<cdItems.Count;j++)
+  {
+    XmlNode cdItem = cdItems[j];
+    string row_type = CCO.XML.GetItemProperty(cdItem,"row_type");
+    string data_source = CCO.XML.GetItemProperty(cdItem,"data_source");
+    if(row_type == null || row_type == "") return innovator.newError("'" + gridLayoutName + "' item with position='" + pos + "' has '" + colDescrName + "' item with empty ItemType");
+    if(data_source == null || data_source == "") return innovator.newError("'" + gridLayoutName + "' item with position='" + pos + "' has '" + colDescrName + "' item with empty Property");
+    if(!uniqs.ContainsKey(row_type)) uniqs[row_type] = 1;
+    else uniqs[row_type] = (int)uniqs[row_type] + 1;
+  }
+  
+  string msg = "";
+  IDictionaryEnumerator uniqs_enmrtr = uniqs.GetEnumerator();
+  while (uniqs_enmrtr.MoveNext())
+  {
+    if((int)uniqs_enmrtr.Value > 1)
+    {
+      msg +=  uniqs_enmrtr.Value + " " + colDescrName + "' items of " + rowTypes[uniqs_enmrtr.Key] + " row type, ";
+    }
+  }
+  if(msg != "")
+  {
+    return innovator.newError("'" + gridLayoutName + "' item with position='" + pos + "' has '" + msg + "but it should has only one instance of each type.");
+  }
+}
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>ValidateSitePreference</name>
+ </Item>
+</AML>

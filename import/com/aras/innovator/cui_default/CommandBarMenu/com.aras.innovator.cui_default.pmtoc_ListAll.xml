@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="3A189665257E416CA89A908248B6FB8C" action="add">
+  <additional_data>{ "cui_resource_key": "maintree.list_all" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmtoc_listAll" type="Method">8CC940DD0E91455890AF28DFC45B12DB</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmtoc_ListAll</name>
+ </Item>
+</AML>

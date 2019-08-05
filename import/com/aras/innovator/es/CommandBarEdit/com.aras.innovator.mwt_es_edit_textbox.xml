@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarEdit" id="6319A5C13E93446797E7FF6105722DB2" action="add">
+  <additional_data>{ "cui_placeholder": "Search Items &amp; Files...", "cui_class": "esSearchTextboxContainer" }</additional_data>
+  <on_keydown_handler keyed_name="ES_OnSearchTextChanged" type="Method">EE5858C2766343E78712B67904EF1B1D</on_keydown_handler>
+  <name>com.aras.innovator.mwt_es_edit_textbox</name>
+ </Item>
+</AML>

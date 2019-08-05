@@ -1,0 +1,159 @@
+﻿<AML>
+ <Item type="Method" id="A53C864F5C2642EB8EA58CC3061274AB" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[Innovator inn = this.getInnovator();
+
+// Deleting properties
+List<string> deletePropertiesIDs = new List<string>();
+List<string> deletePropertiesNames = new List<string>();
+List<string> restrictedPropsList = new List<string> {
+	"config_id", "is_current", "is_released",
+	"keyed_name", "modified_on", "modified_by_id",
+	"major_rev", "generation", "state",
+	"created_by_id", "created_on", "id"
+};
+Item deleteIndexPropertyItms = this.getItemsByXPath("Relationships/Item[@type='ES_IndexedProperty' and (@action='delete')]");
+
+int deletePropsCount = deleteIndexPropertyItms.getItemCount();
+if (deletePropsCount > 0) 
+{
+	for (int i = 0; i < deletePropsCount; i++)
+	{
+		Item deleteIndexPropertyItm = deleteIndexPropertyItms.getItemByIndex(i);
+		deletePropertiesIDs.Add(deleteIndexPropertyItm.getID());
+	}
+
+	Item existingIndexPropsDelete = this.newItem("ES_IndexedProperty", "get");
+	existingIndexPropsDelete.setAttribute("select", "property_name");
+	existingIndexPropsDelete.setProperty("source_id", this.getID());
+	Item existingIndexPropsDeleteOr = existingIndexPropsDelete.newOR();
+	foreach (string id in deletePropertiesIDs)
+	{
+		existingIndexPropsDeleteOr.setProperty("id", id);
+	}
+	existingIndexPropsDelete = existingIndexPropsDelete.apply();
+
+	if (!existingIndexPropsDelete.isError())
+	{
+		for (int i = 0, count = existingIndexPropsDelete.getItemCount(); i < count; i++)
+		{
+			Item existingIndexPropertyDelete = existingIndexPropsDelete.getItemByIndex(i);
+			deletePropertiesNames.Add(existingIndexPropertyDelete.getProperty("property_name", ""));
+		}
+
+		IEnumerable<string> foundRestrictedProperties = deletePropertiesNames.Intersect(restrictedPropsList);
+		if (foundRestrictedProperties.Count() > 0)
+		{
+			return inn.newError(string.Format(CultureInfo.CurrentCulture, "The following properties can't be deleted: {0}.", string.Join(", ", foundRestrictedProperties)));
+		}
+	}
+}
+
+// Updating properties
+List<string> incomingProperties = new List<string>();
+Item newIndexPropertyItms = this.getItemsByXPath("Relationships/Item[@type='ES_IndexedProperty' and not(@action='delete')]");
+for (int i = 0, count = newIndexPropertyItms.getItemCount(); i < count; i++)
+{
+	Item indexPropertyItm = newIndexPropertyItms.getItemByIndex(i);
+
+	//Replace property name with lower case
+	string value = indexPropertyItm.getProperty("property_name", "").ToLower(CultureInfo.CurrentCulture);
+	indexPropertyItm.setProperty("property_name", value);
+
+	incomingProperties.Add(value);
+}
+
+//If there are no incoming properties then there is nothing to validate
+if (incomingProperties.Count == 0)
+{
+	return this;
+}
+
+//Check for duplicates in incoming properties
+if (incomingProperties.Count != incomingProperties.Distinct().Count())
+{
+	List<string> duplicateIncomingProperties = incomingProperties.GroupBy(x => x)
+					.Where(x => x.Count() > 1)
+					.Select(x => x.Key)
+					.ToList();
+
+	return inn.newError(string.Format(CultureInfo.CurrentCulture, "The following duplicate properties can't be added: {0}.", string.Join(", ", duplicateIncomingProperties)));
+}
+
+//Check for duplicates in incoming and existing properties
+Item existingIndexPropertyItms = this.newItem("ES_IndexedProperty", "get");
+existingIndexPropertyItms.setAttribute("select", "property_name");
+existingIndexPropertyItms.setProperty("source_id", this.getID());
+Item existingIndexPropertyItmsOr = existingIndexPropertyItms.newOR();
+foreach (string propertyName in incomingProperties)
+{
+	existingIndexPropertyItmsOr.setProperty("property_name", propertyName);
+}
+existingIndexPropertyItms = existingIndexPropertyItms.apply();
+
+if (!existingIndexPropertyItms.isError())
+{
+	List<string> existingProperties = new List<string>();
+
+	int count = existingIndexPropertyItms.getItemCount();
+	for (int i = 0; i < count; i++)
+	{
+		Item existingIndexPropertyItm = existingIndexPropertyItms.getItemByIndex(i);
+		string name = existingIndexPropertyItm.getProperty("property_name", "");
+
+		Item incomingIndexPropertyItm = this.getItemsByXPath(
+			string.Format(CultureInfo.CurrentCulture, "Relationships/Item[@type='ES_IndexedProperty' and (@id='{0}') and not(@action='delete') and property_name='{1}']", existingIndexPropertyItm.getID(), name)
+		);
+
+		if (incomingIndexPropertyItm.getItemCount() == 0)
+		{
+			existingProperties.Add(name);
+		}
+	}
+
+	IEnumerable<string> duplicateProperties = incomingProperties.Intersect(existingProperties);
+	if (duplicateProperties.Count() > 0)
+	{
+		return inn.newError(string.Format(CultureInfo.CurrentCulture, "The following duplicate properties can't be added: {0}.", string.Join(", ", duplicateProperties)));
+	}
+}
+
+//Check for correctness of properties
+Item propertyItms = this.newItem("Property", "get");
+propertyItms.setAttribute("select", "name");
+propertyItms.setProperty("source_id", this.getProperty("indexed_type"));
+Item propertyItmsOr = propertyItms.newOR();
+foreach (string name in incomingProperties)
+{
+	propertyItmsOr.setProperty("name", name);
+}
+propertyItms = propertyItms.apply();
+
+if (!propertyItms.isError())
+{
+	int count = propertyItms.getItemCount();
+	if (count != incomingProperties.Count)
+	{
+		List<string> properties = new List<string>();
+		for (int i = 0; i < count; i++)
+		{
+			Item propertyItm = propertyItms.getItemByIndex(i);
+
+			string name = propertyItm.getProperty("name", "");
+			properties.Add(name);
+		}
+
+		IEnumerable<string> wrongProperties = incomingProperties.Except(properties);
+		return inn.newError(string.Format(CultureInfo.CurrentCulture, "The following properties can't be found: {0}.", string.Join(", ", wrongProperties)));
+	}
+}
+else
+{
+	return inn.newError(string.Format(CultureInfo.CurrentCulture, "The following properties can't be found: {0}.", string.Join(", ", incomingProperties)));
+}
+
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>ES_BeforeUpdateIndexedType</name>
+ </Item>
+</AML>

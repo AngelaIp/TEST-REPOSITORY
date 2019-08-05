@@ -1,0 +1,107 @@
+﻿<AML>
+ <Item type="Method" id="EB7D3CDCC19A4105B39310800097E26B" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[Innovator inn = this.getInnovator();
+string res = "", SSVCItemsId = "";
+Item item = this.newItem();
+item.loadAML(this.dom.InnerXml);
+string implType = item.getProperty("implementation_type");
+
+if (string.IsNullOrEmpty(implType))
+{
+	item.setAttribute("action", "get");
+	item.setAttribute("select", "id, implementation_type");
+	item = item.apply();
+	if (item.isError())
+	{
+		return inn.newError(item.getErrorString());
+	}
+}
+
+if (item.nodeList != null)
+{
+	foreach (XmlNode itm in item.nodeList)
+	{
+		res = HandleItem(CCO, itm, item, ref SSVCItemsId);
+		if (!string.IsNullOrEmpty(res))
+		{
+			return inn.newError(res);
+		}
+	}
+}
+else
+{
+	res = HandleItem(CCO, item.node, item, ref SSVCItemsId);
+	if (!string.IsNullOrEmpty(res))
+	{
+		return inn.newError(res);
+	}
+}
+
+if (!string.IsNullOrEmpty(SSVCItemsId))
+{
+	//Need to refresh SSVCItems view manualy
+	Item view = this.newItem("ItemType", "itemtype_onafter_polymorphic");
+	view.setID(SSVCItemsId);
+	view = view.apply();
+	if (view.isError())
+	{
+		return inn.newError(view.getErrorString());
+	}
+}
+
+return this;
+}
+
+private string HandleItem(Aras.Server.Core.CallContext CCO, XmlNode itm, Item item, ref string SSVCItemsId)
+{
+	string implType = CCO.XML.GetItemProperty(itm, "implementation_type");
+	if (implType != "polymorphic" && implType != "federated")
+	{
+		Item morphItem = item.newItem("Morphae", "get");
+		morphItem.setAttribute("select", "id, source_id, related_id");
+		morphItem.setProperty("related_id", CCO.XML.GetItemProperty(itm, "id"));
+		
+		if (!string.IsNullOrEmpty(SSVCItemsId))
+		{
+			morphItem.setProperty("source_id", SSVCItemsId);
+		}
+		else
+		{
+			Item ssvcItem = item.newItem("ItemType", "get");
+			ssvcItem.setProperty("name", "SSVCItems");
+			ssvcItem.setAttribute("select", "id");
+			morphItem.setPropertyItem("source_id", ssvcItem);
+		}
+		
+		morphItem = morphItem.apply();
+		if (morphItem.isError() && morphItem.getErrorCode() == "0")
+		{
+			return null;
+		}
+		
+		if (morphItem.isError())
+		{
+			return morphItem.getErrorString();
+		}
+		
+		var nodeMorphItem = morphItem.dom.SelectSingleNode("//Result");
+		if (string.IsNullOrEmpty(SSVCItemsId))
+		{
+			var ssvcItemsNode = nodeMorphItem.SelectSingleNode("//source_id/Item");
+			SSVCItemsId = CCO.XML.GetItemProperty(ssvcItemsNode, "id");
+		}
+		
+		morphItem.loadAML(nodeMorphItem.InnerXml);
+		morphItem.setAction("delete");
+		morphItem = morphItem.apply();
+		if (morphItem.isError())
+		{
+			return morphItem.getErrorString();
+		}
+	}
+	return null;]]></method_code>
+  <method_type>C#</method_type>
+  <name>VC_DeleteItemFromSSVCItems</name>
+ </Item>
+</AML>

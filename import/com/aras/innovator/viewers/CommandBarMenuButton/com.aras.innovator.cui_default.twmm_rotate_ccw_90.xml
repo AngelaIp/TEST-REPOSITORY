@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="AE9BFDAAB53E4B82B2C92499B2535075" action="add">
+  <image>../Images/Rotate90CCW.svg</image>
+  <label xml:lang="en">Counterclockwise 90</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_viewer_rotate_page" type="CommandBarMenu">55EAE66ADA9B42D39C830B5EA8D4B03A</parent_menu>
+  <name>com.aras.innovator.cui_default.twmm_rotate_ccw_90</name>
+ </Item>
+</AML>

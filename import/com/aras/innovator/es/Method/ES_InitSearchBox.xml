@@ -1,0 +1,61 @@
+﻿<AML>
+ <Item type="Method" id="C6C47B3E1B014426B53E6C59F59AADF8" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var infernoFlags = ArasModules.utils.infernoFlags;
+var searchboxClass = 'aras-toolbar__es-searchbox aras-es-searchbox';
+var searchboxInputClass = 'aras-es-searchbox__input';
+var searchboxResetClass = 'aras-es-searchbox__button aras-es-searchbox__button-reset aras-icon-close';
+var searchboxButtonClass = 'aras-es-searchbox__button aras-es-searchbox__button-search';
+Toolbar.formatters.esSearchBox = function(data) {
+	var item = data.item;
+	var resetButtonClickHandler = function(event) {
+		var inputElement = event.target.previousSibling;
+		inputElement.value = '';
+	};
+	var searchButtonClickHandler = function(event) {
+		var evt = new CustomEvent('aras-es-search-click', {bubbles: true});
+		event.target.dispatchEvent(evt);
+	};
+	var inputNode = Inferno.createVNode(infernoFlags.inputElement, 'input', searchboxInputClass, null, {
+		type: 'text',
+		placeholder: 'Search Items & Files..',
+		required: true,
+		id: 'aras-es-toolbar-input',
+		onInput: function(event) {
+			event.target.nextSibling.classList.toggle('aras-es-searchbox__button-hidden', this.value === '');
+		},
+		onkeydown: function(event) {
+			if (event.key === 'Enter') {
+				searchButtonClickHandler(event);
+			}
+			event.stopPropagation();
+		}
+	});
+	var resetButtonNode = Inferno.createVNode(infernoFlags.htmlElement, 'span', searchboxResetClass, null, {
+		onclick: resetButtonClickHandler
+	});
+	var baseUrl = window.location.href.replace(window.location.hash, '');
+	var useNode = Inferno.createVNode(infernoFlags.svgElement, 'use', null, null, {'xlink:href': baseUrl + '#svg-searchwhite'});
+	var iconNode = Inferno.createVNode(infernoFlags.svgElement, 'svg', null, useNode);
+	var searchButtonNode = Inferno.createVNode(infernoFlags.htmlElement, 'span', searchboxButtonClass, [iconNode], {
+		onclick: searchButtonClickHandler
+	});
+	return Inferno.createVNode(infernoFlags.htmlElement, 'span', searchboxClass, [
+			inputNode,
+			resetButtonNode,
+			searchButtonNode
+		], {
+			ref: data.itemRefCallback,
+			'data-id': item.id
+		});
+};
+
+return {
+	'cui_type': 'esSearchBox',
+	'right': true
+};
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>ES_InitSearchBox</name>
+ </Item>
+</AML>

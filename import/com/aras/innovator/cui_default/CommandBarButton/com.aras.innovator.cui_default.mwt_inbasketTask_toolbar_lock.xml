@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="777A876B6F7F443D826012067630381D" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/ClaimTask.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <label xml:lang="en">Claim</label>
+  <on_click_handler keyed_name="cui_default_mwt_onLockCommand" type="Method">4C724106531A4BCA9CC2C608776FCF3B</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwt_inbasket_lock" type="Method">D6125E8A1FB147A18C1BBEB44D4EBF6B</on_init_handler>
+  <tooltip_template xml:lang="en">Claim Task</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_inbasketTask_toolbar_lock</name>
+ </Item>
+</AML>

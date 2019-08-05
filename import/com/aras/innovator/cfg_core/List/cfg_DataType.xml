@@ -1,0 +1,25 @@
+﻿<AML>
+ <Item type="List" id="8600BD854DB64D1886E91FA244CD0F1D" action="add">
+  <name>cfg_DataType</name>
+  <Relationships>
+   <Item type="Value" id="A4A66B746CCE4BE885FEFDBEF7BBB4EB" action="add">
+    <label xml:lang="en">String</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cfg_DataType" type="List">8600BD854DB64D1886E91FA244CD0F1D</source_id>
+    <value>String</value>
+   </Item>
+   <Item type="Value" id="42CCAEC81B234515956F742C26CD74E6" action="add">
+    <label xml:lang="en">Integer</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="cfg_DataType" type="List">8600BD854DB64D1886E91FA244CD0F1D</source_id>
+    <value>Int</value>
+   </Item>
+   <Item type="Value" id="1A92CC68F4A4497598C6061F51A7D0EE" action="add">
+    <label xml:lang="en">DateTime</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="cfg_DataType" type="List">8600BD854DB64D1886E91FA244CD0F1D</source_id>
+    <value>Date</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

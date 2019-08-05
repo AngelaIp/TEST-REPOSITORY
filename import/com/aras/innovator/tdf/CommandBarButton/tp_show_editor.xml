@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="18349B59B3C8483C9EE7C0545FCDC318" action="add">
+  <additional_data>{}</additional_data>
+  <image>../images/TechDocEditorOff.svg</image>
+  <label xml:lang="en">Show Editor</label>
+  <on_click_handler keyed_name="tp_ShowEditor_ButtonClick" type="Method">A12F21EBA44747B1BBEE6E4C87343A29</on_click_handler>
+  <on_init_handler keyed_name="tp_ShowEditor_ButtonInit" type="Method">D61641D8140B4CB99CDFD3F29AA2B260</on_init_handler>
+  <tooltip_template xml:lang="en">Tech Doc Editor</tooltip_template>
+  <name>tp_show_editor</name>
+ </Item>
+</AML>

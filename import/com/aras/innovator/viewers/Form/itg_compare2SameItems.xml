@@ -1,0 +1,185 @@
+﻿<AML>
+ <Item type="Form" id="A43C4BCA708C4F54B042D2C78819682B" action="add">
+  <category_form>0</category_form>
+  <description>itg_compare2SameItems</description>
+  <height>300</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>800</width>
+  <name>itg_compare2SameItems</name>
+  <Relationships>
+   <Item type="Body" id="00E7B04FDA5347E6995DD556A28B8E02" action="add">
+    <sort_order>128</sort_order>
+    <source_id keyed_name="itg_compare2SameItems" type="Form">A43C4BCA708C4F54B042D2C78819682B</source_id>
+    <Relationships>
+     <Item type="Field" id="EED7D02CC99F4BC5A9657705B7AA654A" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<script>
+var topWin = aras.getMostTopWindowWithAras(window);
+var arguments = (parent.dialogArguments || topWin.dialogArguments || topWin.args || parent.args);
+</script>
+<script type="text/javascript" src="../javascript/include.aspx?classes=/dojo.js" data-dojo-config="isDebug: false, parseOnLoad: true, baseUrl:'../javascript/dojo'"></script>
+<style type="text/css">
+@import "../javascript/dojo/resources/dojo.css";
+@import "../javascript/dijit/themes/claro/claro.css";
+@import "../javascript/dojox/grid/resources/claroGrid.css";
+@import "../javascript/include.aspx?classes=common.css";
+@import "../styles/default.css";
+</style>
+<script type="text/javascript">
+document.title = arguments.title;
+var thisItem = arguments.thisItem;
+var arg = arguments;
+
+var grid = null;
+
+var itemTypeName = thisItem.getAttribute("type");
+var itemID = thisItem.getAttribute("id");
+
+var itemTypeLabel = "";
+var currItemType = null;
+var itemTypeID = "";
+var resDom;
+var visiblePropNds;
+
+onload = function () {
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	style = "width: " + w + "px; height:" + h + "px;";
+
+	clientControlsFactory.createControl("Aras.Client.Controls.Public.GridContainer", {style: style, id: "revision_grid"}, function(control) {
+		grid = control;
+		clientControlsFactory.on(grid, {
+			"gridDoubleClick": onDoubleClick,
+			"gridXmlLoaded": onXmlLoaded
+								});
+		document.gridTD = grid;
+		});
+
+	onPageLoad();
+	initGrid();
+}
+
+function onPageLoad() {
+	currItemType = aras.getItemTypeDictionary(itemTypeName);
+	if (!currItemType) {
+		aras.AlertError(aras.getResource("", "revisiondlg.failed_get_it", itemTypeName));
+	}
+
+	itemTypeLabel = aras.getItemProperty(currItemType.node, 'label') ? aras.getItemProperty(currItemType.node, 'label') : itemTypeName;
+	itemTypeID = aras.getItemProperty(currItemType.node, "id");
+	var xpath = "Relationships/Item[@type=\"Property\" and (not(is_hidden) or is_hidden=0 or name=\"generation\" or name=\"major_rev\" or name=\"comments\")]";
+	visiblePropNds = currItemType.node.selectNodes(xpath);
+	for (var i = 0; i < visiblePropNds.length; i++)	{
+			if(aras.getItemProperty(visiblePropNds[i],"name") === "generation") {
+						aras.setItemProperty(visiblePropNds[i],"sort_order","300");
+					}
+		}
+			
+	visiblePropNds = aras.sortProperties(visiblePropNds);
+
+	var currentItem = aras.getItemById(itemTypeName, itemID, 0);
+	if (currentItem) {
+		var config_id = aras.getItemProperty(currentItem, "config_id");
+		var aml = "<Item type='" + itemTypeName + "' action='get' orderBy='generation'>" +
+				"	<config_id>" + config_id + "<\/config_id>" +
+				"	<id condition='is not'>null<\/id>" +
+				"<\/Item>";
+
+		var res = aras.soapSend('ApplyItem', aml);
+		if (res.getFaultCode() != 0) {
+			aras.AlertError(res);
+		}
+		resDom = res.results;
+	}
+}
+
+function initGrid() {
+	var colWidths="24";
+	var colOrder="L";
+	for (var i = 0; i < visiblePropNds.length; i++)	{
+		var prop = visiblePropNds[i];
+		var name = aras.getItemProperty(prop, "name") + "_D";
+		var width = parseInt(aras.getItemProperty(prop, "column_width"));
+		if (isNaN(width) || width == 0) 
+			width = 100;
+		colOrder += ";" + name;
+		colWidths += ";" + width;
+	}	
+		
+	aras.uiPrepareDOM4XSLT(resDom, itemTypeID, "IT_", colWidths, colOrder);
+	var params = aras.newObject();
+	params["revisions"] = 1;
+	var grid_xml = aras.uiGenerateItemsGridXML(resDom, visiblePropNds, itemTypeID, params);
+	grid.InitXML(grid_xml);
+}
+
+function onXmlLoaded() {
+	grid.ShowInputRow(false);
+}
+
+function onDoubleClick(rowID) {
+	var itm = aras.getItemById(itemTypeName, rowID, 0);
+	if (itm) {
+		var docFile = new Item("Document File","get");
+		docFile.setProperty("source_id",rowID);
+		var relFile = new Item("File","get");
+		docFile.setRelatedItem(relFile);
+		docFile=docFile.apply();
+		for(var i=0; i<docFile.getItemCount(); i++)	{
+			var relFile2 = docFile.getItemByIndex(i).getRelatedItem();
+			var fileID = relFile2.getProperty("id");
+			var realFile = aras.getItemById("File", fileID);
+			var realFileURL = aras.getFileURLEx(realFile);
+
+			if (realFileURL == "") {
+				aras.AlertError(aras.getResource("", "item_methods_ex.failed_download_file_url_empty"));
+			}
+
+			var vIndx = realFileURL.indexOf("&vaultId");
+			if (vIndx >= 0) {
+				realFileURL = realFileURL.substring(0, vIndx);
+			}
+
+			aras.vault.downloadFile(realFileURL);
+
+			if (arg.callback) {
+				arg.callback({
+					url: realFileURL,
+					generation: aras.getItemProperty(itm,"generation"),
+					fileID: fileID
+				});
+				setTimeout(function () {
+					arg.dialog.onCancel();
+				}, 0);
+			}
+		}
+	} else {
+		aras.AlertError(aras.getResource("", "revisiondlg.failed_get_item_id", itemTypeLabel, rowID));
+	}
+}
+</script>
+<div id="gridTD" style="height: 100%; width: 100%; margin: 0px; padding: 0px; position:absolute; top:0; left: 0;"></div>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <positioning>absolute</positioning>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="00E7B04FDA5347E6995DD556A28B8E02" type="Body">00E7B04FDA5347E6995DD556A28B8E02</source_id>
+      <tab_stop>1</tab_stop>
+      <text_align>left</text_align>
+      <x>0</x>
+      <y>0</y>
+      <name>html0</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

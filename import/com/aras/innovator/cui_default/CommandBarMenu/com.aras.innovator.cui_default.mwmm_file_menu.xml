@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="2B1F770C624449A3863818C8D4EF414F" action="add">
+  <label xml:lang="en">File</label>
+  <name>com.aras.innovator.cui_default.mwmm_file_menu</name>
+ </Item>
+</AML>

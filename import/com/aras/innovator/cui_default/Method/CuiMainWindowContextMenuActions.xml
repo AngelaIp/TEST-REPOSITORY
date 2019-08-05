@@ -1,0 +1,98 @@
+﻿<AML>
+ <Item type="Method" id="674366FA99734CD79EC4768B86D6CB83" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[	Item menuItems = null;
+	//ItemType and Item actions
+	string itemTypeId = this.getProperty("item_type_id");
+	if (!string.IsNullOrEmpty(itemTypeId))
+	{
+		Item itemActions = this.newItem("Item Action", "get");
+		itemActions.setProperty("source_id", itemTypeId);
+		Item relActions = this.newItem("Action", "get");
+		relActions.setAttribute("select", "name,label,can_execute,location");
+		relActions.setProperty("type", "item");
+		itemActions.setRelatedItem(relActions);
+		itemActions = itemActions.apply();
+		if (!itemActions.isError())
+		{
+			Item initHandler = GetMethodByConfigId("FB1939D0E9F2402C95A427F7641750C0");
+			Item actions = itemActions.getItemsByXPath(Item.XPathResultItem + "/related_id/Item");
+			menuItems = HandleMenuButtons(actions, "action:{0}:{1}", itemTypeId, initHandler);
+		}
+	}
+
+	return menuItems;
+}
+
+private Item HandleMenuButtons(Item actions, string actionTemplate, string itemTypeId, Item initHandler)
+{
+	Item cuiItems = null;
+	Item clickHandler = GetMethodByConfigId("90BB344C388D431BB692CBA3C2DB7443");
+	int actionsCount = actions.getItemCount();
+	if (actionsCount > 0)
+	{
+		// First Item will be a CommandBarSeparator
+		cuiItems = actions.newItem("CommandBarSeparator");
+		cuiItems.setProperty("name", "cui_actions_sep");
+		//Id is required. Id of separator should be constant.
+		cuiItems.setID("cui_actions_sep");
+		string initHandlerId = initHandler.getID();
+		string initHandlerName = initHandler.getProperty("name");
+		string clickHandlerId = clickHandler.getID();
+		string clickHandlerName = clickHandler.getProperty("name");
+
+		for (var i = 0; i < actionsCount; i++)
+		{
+			Item currentAction = actions.getItemByIndex(i);
+			Item menu = currentAction.newItem("CommandBarMenu");
+			string actionId = currentAction.getID();
+			string reportName = string.Format(CultureInfo.InvariantCulture, actionTemplate, actionId, itemTypeId);
+			menu.setProperty("name", reportName);
+			menu.setProperty("label", currentAction.getProperty("label") ?? currentAction.getProperty("name"));
+
+			string canExecuteMethodName = currentAction.getPropertyAttribute("can_execute", "keyed_name");
+			string location = currentAction.getProperty("location");
+			menu.setProperty("additional_data", "{\"canExecuteMethodName\": \"" + canExecuteMethodName + "\", \"location\": \"" + location + "\"}");
+
+			// Need to add 'can_execute' method to Convert CAD To PDF Action, but it cann't be modified in SP.
+			// Convert CAD To PDF needs special init handler that allows to handle disabling/enbling of action depend on license
+			// Special logic for Convert CAD To PDF Action should be removed in major release.
+			if (actionId == "9F34709DE5284912A65D826624FBB9F7")
+			{
+				// '05B5615D49DD48DAB2927302CEFCD58E' - CadToPdfPopupMenuInitHandler
+				Item cadToPdfInitHandler = GetMethodByConfigId("05B5615D49DD48DAB2927302CEFCD58E");
+				menu.setProperty("on_init_handler", cadToPdfInitHandler.getID());
+				menu.setPropertyAttribute("on_init_handler", "keyed_name", cadToPdfInitHandler.getProperty("name"));
+			}
+			else
+			{
+				menu.setProperty("on_init_handler", initHandlerId);
+				menu.setPropertyAttribute("on_init_handler", "keyed_name", initHandlerName);
+			}
+
+			menu.setProperty("on_click_handler", clickHandlerId);
+			menu.setPropertyAttribute("on_click_handler", "keyed_name", clickHandlerName);
+			menu.setPropertyAttribute("on_click_handler", "type", "Method");
+			menu.setPropertyAttribute("on_init_handler", "type", "Method");
+
+			menu.setProperty("action", "Add");
+			menu.setID(actionId);
+			menu.removeAttribute("isNew");
+			menu.removeAttribute("isTemp");
+			cuiItems.appendItem(menu);
+		}
+	}
+
+	return cuiItems ?? actions.getInnovator().newResult("");
+}
+
+private Item GetMethodByConfigId(string configId)
+{
+	Item method = this.newItem("Method", "get");
+	method.setAttribute("select", "id,name");
+	method.setProperty("config_id", configId);
+	return method.apply();]]></method_code>
+  <method_type>C#</method_type>
+  <name>CuiMainWindowContextMenuActions</name>
+ </Item>
+</AML>

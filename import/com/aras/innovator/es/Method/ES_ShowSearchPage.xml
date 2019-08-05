@@ -1,0 +1,66 @@
+﻿<AML>
+ <Item type="Method" id="C557750C219F458EAD2B6EE670DFA8CA" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//Get search text
+var searchText = '';
+var topWindow = aras.getMostTopWindowWithAras(window);
+
+var toolbarApplet = topWindow.menu.activeToolbar;
+if (!isNullOrUndefined(toolbarApplet)) {
+	var textbox = document.getElementById('aras-es-toolbar-input');
+	if (!isNullOrUndefined(textbox)) {
+		//Get search text
+		searchText = textbox.value;
+	}
+}
+
+//Select "Search" in TOC
+var treeApplet = topWindow.tree.mainTreeApplet;
+var searchTreeItem = aras.MetadataCache.GetItem('ES_SearchPath');
+
+if (isNullOrUndefined(searchTreeItem)) {
+	treeApplet.data.forEach(function(value, key) {
+		if (value.name.slice(value.name.lastIndexOf('/') + 1) === 'ES_Search') {
+			searchTreeItem = key;
+			aras.MetadataCache.SetItem(aras.MetadataCache.CreateCacheKey('ES_SearchPath'), key);
+		}
+	});
+}
+
+if (isNullOrUndefined(searchTreeItem)) {
+	return;
+}
+
+treeApplet.expand(searchTreeItem, true);
+treeApplet.select(searchTreeItem);
+onGridClick(searchTreeItem);
+
+//Show search page
+var scriptsUrl = aras.getScriptsURL();
+topWindow.work.location = '{0}../Modules/aras.innovator.ES/Views/Main.html?q={1}'
+	.replace('{0}', scriptsUrl)
+	.replace('{1}', encodeURIComponent(searchText));
+
+/*----------------------------------------------------------------------------*/
+
+function isNullOrUndefined(obj) {
+	return ((typeof(obj) === 'undefined') || (obj === null));
+}
+
+function createInstance(className, rowId) {
+	return (className ? (new window.tree[className](rowId)) : null);
+}
+
+function onGridClick(itemKey) {
+	var clickTarget;
+	var item = treeApplet.data.get(itemKey);
+	clickTarget = createInstance(item.className, itemKey);
+	if (clickTarget) {
+		clickTarget.onClick();
+	}
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>ES_ShowSearchPage</name>
+ </Item>
+</AML>

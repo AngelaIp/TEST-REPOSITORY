@@ -1,0 +1,16 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="5B517BF33F87405D9A85A275081926DE" action="add">
+  <classification>Data Model</classification>
+  <location_name>PopupMenuItemGrid</location_name>
+  <name>mp_GridPopupMenu</name>
+  <Relationships>
+   <Item type="CommandBarSectionItem" id="BE800B38ADAD464B82475DA3F586F50D" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.pmig_Version" type="CommandBarItem">0244ADA541194440AD3AF256706C5143</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="mp_GridPopupMenu" type="CommandBarSection">5B517BF33F87405D9A85A275081926DE</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

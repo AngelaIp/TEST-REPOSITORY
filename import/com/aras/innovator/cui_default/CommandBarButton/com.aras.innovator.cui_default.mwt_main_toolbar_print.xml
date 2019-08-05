@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="2C4DCC0D79F542CAAF01827E9482B8EB" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/Print.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <on_click_handler keyed_name="cui_default_mwt_onPrintCommand" type="Method">C0EA0A07A9CD43CD9D312CAE1E0AD817</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwt_print" type="Method">71A7F823D7404A7BA06C079A519AC9A7</on_init_handler>
+  <tooltip_template xml:lang="en">Printable View</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_main_toolbar_print</name>
+ </Item>
+</AML>

@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="4EAC12CC9BE646BBA6B94B71146964AC" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.add2desktop" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmig_AddToDesktop" type="Method">205FA1B59DAA494E9C9B9F2859EE5C00</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Add to Desktop</name>
+ </Item>
+</AML>

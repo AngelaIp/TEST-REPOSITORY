@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="UserMessage" id="1A22D0DF423F4ACE8A6A047825248F5B" action="add">
+  <custom>0</custom>
+  <text xml:lang="en">Name is not set!</text>
+  <name>ES_NameIsNotSetMessage</name>
+ </Item>
+</AML>

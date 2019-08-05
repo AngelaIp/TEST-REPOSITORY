@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="D972402CA50B492FAACC4DF2EB5D3AB0" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <include_events>SelectInGrid</include_events>
+  <label xml:lang="en">Complete Task</label>
+  <on_click_handler keyed_name="cui_default_mwt_onEditCommand" type="Method">D047B0DF0E684358B69003412AC40AC3</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwmm_complete_task" type="Method">DD0D2811929440DB8345590C7751E4F0</on_init_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_edit_menu" type="CommandBarMenu">BB3421A77E45452DB21B7C53F162734C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_CompleteTask</name>
+ </Item>
+</AML>

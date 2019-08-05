@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="FileType" id="82410649061C4F6EA794506B79DDC5F8" action="add">
+  <description>Apple Quicktime MOV/QT Movie</description>
+  <extension>qt,mov</extension>
+  <mimetype>video/quicktime</mimetype>
+  <permission_id keyed_name="B0AF9788051F41E0A43B5C451FE6EF33" type="Permission">B0AF9788051F41E0A43B5C451FE6EF33</permission_id>
+  <name>QuickTime Movie</name>
+ </Item>
+</AML>

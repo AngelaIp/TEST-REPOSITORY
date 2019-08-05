@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarMenuCheckbox" id="9B585E7A58BE4905BF64C2F1D934E153" action="add">
+  <additional_data>{ "cui_checked": true }</additional_data>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <label xml:lang="en">Show Toolbar Text</label>
+  <on_click_handler keyed_name="cui_default_mwmm_show_text" type="Method">F9D3D09BBDCF428593BBED2890343D5D</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwmm_show_text" type="Method">D7447C7E05D34620848A7153A7890D10</on_init_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_tools_preferences" type="CommandBarMenu">2BC080C0CA3F4D3B80B32A4140E7F069</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_show_text</name>
+ </Item>
+</AML>

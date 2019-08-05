@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Action" id="69D14FF3497A45809A07C4096A3ECC53" action="add">
+  <item_query>&lt;Item type="{@type}" id="{@id}" levels= "1" action="get" /&gt;</item_query>
+  <label xml:lang="en">Compare Items...</label>
+  <location>client</location>
+  <method keyed_name="itg_openCompare2SameItemsForm" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>itg_openCompare2SameItemsForm</name>
+   </Item>
+  </method>
+  <target>none</target>
+  <type>item</type>
+  <name>itg_compare2Items</name>
+ </Item>
+</AML>

@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarMenuCheckbox" id="56AFE5D90A924C3ABB98E40AB9DB203F" action="add">
+  <additional_data />
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <label xml:lang="en">Save Requests</label>
+  <on_click_handler keyed_name="cui_default_mwmm_soap_save" type="Method">3AA9EC274A984C3686B901272CA0C44D</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwmm_soap_save" type="Method">A3EDD75D70BA4A27B6DE778AFC5C17A1</on_init_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_admin_menu" type="CommandBarMenu">7267B91F9B334F9FA1E9715B7DADD11C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_soap_save</name>
+ </Item>
+</AML>

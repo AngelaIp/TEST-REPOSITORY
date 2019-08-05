@@ -1,0 +1,25 @@
+﻿<AML>
+ <Item type="Method" id="5D3CCB9654B84A9AB6050B8AAB32EF06" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[if (inArgs.isReinit) {
+	var topWindow = aras.getMostTopWindowWithAras(window);
+	var workerFrame = topWindow.work;
+	var viewProc = false;
+	if (workerFrame && workerFrame.grid) {
+		var rowID = workerFrame.grid.getSelectedId();
+		if (rowID) {
+			var activityType = workerFrame.grid.getUserData(rowID, 'assignmentType');
+			if (activityType == 'workflow' || activityType == 'project') {
+				viewProc = true;
+			}
+		}
+	}
+
+	return {'cui_disabled': !viewProc};
+}
+return {};
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_reinit_mwt_viewProcess</name>
+ </Item>
+</AML>

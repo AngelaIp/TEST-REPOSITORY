@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="12252160BD844AB68B3BF3EDC7C148C6" action="add">
+  <label xml:lang="en">Tools</label>
+  <name>com.aras.innovator.cui_default.mwmm_tools_menu</name>
+ </Item>
+</AML>

@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="D9A6FB1069F04290A7491F2EEE5D1932" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.print" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onPrintCommand" type="Method">C0EA0A07A9CD43CD9D312CAE1E0AD817</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Print</name>
+ </Item>
+</AML>

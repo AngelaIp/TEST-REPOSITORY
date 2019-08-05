@@ -1,0 +1,57 @@
+﻿<AML>
+ <Item type="Method" id="010E7F19288449DCB73EFFE748CE807B" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[Innovator inn = this.getInnovator();
+Aras.Server.Core.InnovatorDatabase conn = CCO.Variables.InnDatabase;
+string userId = conn.QuoteValue(inn.getUserID());
+Aras.Server.Core.InnovatorDataSet result;
+
+string sqlSelectAllDesktopItems = string.Format("SELECT dsktp.[SOURCE_ID], itype.[INSTANCE_DATA] FROM {0} dsktp INNER JOIN {1} itype ON dsktp.[SOURCE_TYPE] = itype.[ID] WHERE dsktp.[RELATED_ID] = '{2}'", 
+	conn.GetTableName("DESKTOP"), conn.GetTableName("ITEMTYPE"), userId);
+
+result = conn.ExecuteSelect(sqlSelectAllDesktopItems);
+
+Dictionary<string,List<string>> itemTypeIds = new Dictionary<string,List<string>>();
+
+while (!result.Eof)
+{
+	string instanceData = result["instance_data"].ToString();
+	List<string> idList;
+
+	if (!itemTypeIds.TryGetValue(instanceData, out idList))
+	{
+		idList = new List<string>();
+		itemTypeIds[instanceData] = idList;
+	}
+
+	idList.Add(conn.QuoteValue(result["source_id"].ToString()));
+	result.MoveNext();
+}
+
+List<string> desktopItemIds = new List<string>();
+
+foreach (var pair in itemTypeIds)
+{
+	string sqlSelectCurrentItemsOnly = string.Format("SELECT tbl.[ID] FROM {0} tbl WHERE tbl.[IS_CURRENT] = 1 AND tbl.[ID] IN ('{1}')", conn.GetTableName(pair.Key), string.Join("','", pair.Value));
+	result = conn.ExecuteSelect(sqlSelectCurrentItemsOnly);
+	while (!result.Eof)
+	{
+		desktopItemIds.Add(result["id"].ToString());
+		result.MoveNext();
+	}
+}
+
+string desktopItemIdsString = desktopItemIds.Count > 0 ? string.Join(",",desktopItemIds) : "''";
+
+Item q = this.newItem("Desktop","get");
+q.setAttribute("levels", "0");
+q.setAttribute("select", "source_id, x_pos, y_pos,source_type");
+q.setProperty("related_id", inn.getUserID());
+q.setProperty("source_id", desktopItemIdsString);
+q.setPropertyCondition("source_id", "in");
+return q.apply();
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>GetDesktopItemsForCurrentUser</name>
+ </Item>
+</AML>

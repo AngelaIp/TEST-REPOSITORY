@@ -1,0 +1,29 @@
+﻿<AML>
+ <Item type="Method" id="1725DB431CDB4CBEBDFDB9BEFE1AFF8A" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//openCompare2SameItemsForm
+var formNd = aras.getItemByName('Form', 'itg_compare2SameItems', 0);
+
+if (formNd) {
+	var item = aras.getItemById(this.getType(), this.getID());
+	var param = {};
+	param.title = 'Item Versions';
+	param.formId = formNd.getAttribute('id');
+	param.aras = aras;
+	param.thisItem = item;
+	param.dialogWidth = 800;
+	param.dialogHeight = 250;
+
+	var wnd = aras.getMainWindow();
+	wnd = wnd.main || wnd;
+	param.content = 'ShowFormAsADialog.html';
+
+	wnd.ArasModules.Dialog.show('iframe', param).promise.then(function(result) {
+		window.result = result;
+	});
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>itg_openCompare2SameItemsForm</name>
+ </Item>
+</AML>

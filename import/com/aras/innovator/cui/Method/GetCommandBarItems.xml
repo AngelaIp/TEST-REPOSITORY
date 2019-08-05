@@ -1,0 +1,427 @@
+﻿<AML>
+ <Item type="Method" id="88B0511ABA774271A7E3CC57A811E350" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[	CommandBarHelper commandBarHelper = new CommandBarHelper(this);
+	const string CLIENT = "js";
+
+	string itemTypeID = this.getProperty("item_type_id");
+
+	string contextItemID = this.getProperty("item_id");
+
+	#region Presentation Configuration
+
+	ICollection<string> globalPresentationConfigurationIds = commandBarHelper.GetGlobalPresentationConfigurationIds(CLIENT);
+
+	ICollection<string> itemTypePresentationConfigurationIds = commandBarHelper.GetItemTypePresentationConfigurationIds(itemTypeID, CLIENT, CCO.DB.InnDatabase.QuoteValue);
+
+	ICollection<string> instancePresentationConfigurationId = commandBarHelper.GetInstancePresentationConfigurationIds(contextItemID, itemTypeID, CLIENT);
+
+
+	List<string> presentationConfigurationIds = globalPresentationConfigurationIds
+		.Union(itemTypePresentationConfigurationIds)
+		.ToList();
+	if (!presentationConfigurationIds.Any())
+	{
+		return this.getInnovator().newError("Presentation Configuration(s) not found");
+	}
+	#endregion Presentation Configuration
+
+	#region sections
+	// check super user (root) case when doing role filter
+
+	Item pcbses = this.newItem();
+	Item pcbsesForNotGlobal = this.newItem();
+	Item configForInstance = this.newItem();
+
+	string userId = this.getInnovator().getUserID();
+	string identitiesList = Aras.Server.Security.Permissions.GetIdentitiesList(CCO.DB.InnDatabase, userId);
+	Item configurationsWithRels = commandBarHelper.GetPresentationConfigurations(presentationConfigurationIds, this.getProperty("location_name"), identitiesList);
+	// Need split Global PresentationConfiguration and configurations that are created for item types. Sections from Global should be processed first.
+	for (int i = 0; i < configurationsWithRels.getItemCount(); i++)
+	{
+		Item currentConfig = configurationsWithRels.getItemByIndex(i);
+		string name = currentConfig.getProperty("name");
+		Item rels = currentConfig.getRelationships();
+		if (rels.getItemCount() > 0)
+		{
+			if (name.Equals("Global"))
+			{
+				pcbses.appendItem(rels);
+			}
+			else
+			{
+				pcbsesForNotGlobal.appendItem(rels);
+			}
+		}
+	}
+
+	if (instancePresentationConfigurationId.Any()) { 
+		Item instanceConfigurationWithRels = commandBarHelper.GetPresentationConfigurations(
+			instancePresentationConfigurationId, this.getProperty("location_name"), identitiesList);
+		for (int i = 0; i < instanceConfigurationWithRels.getItemCount(); i++)
+		{
+			Item currentConfig = instanceConfigurationWithRels.getItemByIndex(i);
+			Item rels = currentConfig.getRelationships();
+			if (rels.getItemCount() > 0)
+			{
+				configForInstance.appendItem(rels);
+			}
+		}
+	}
+
+	Item sections = this.newItem();
+	string itemClassificationParam = this.getProperty("item_classification");
+
+	if (pcbses.getItemCount() > 1)
+	{
+		pcbses.removeItem(pcbses.getItemByIndex(0));
+		CommandBarHelper.PrepareSections(sections, pcbses, itemClassificationParam);
+	}
+
+	if (pcbsesForNotGlobal.getItemCount() > 1)
+	{
+		pcbsesForNotGlobal.removeItem(pcbsesForNotGlobal.getItemByIndex(0));
+		CommandBarHelper.PrepareSections(sections, pcbsesForNotGlobal, itemClassificationParam);
+		pcbses.appendItem(pcbsesForNotGlobal);
+	}
+
+	if (configForInstance.getItemCount() > 1)
+	{
+		configForInstance.removeItem(configForInstance.getItemByIndex(0));
+		CommandBarHelper.PrepareSections(sections, configForInstance, itemClassificationParam);
+		pcbses.appendItem(configForInstance);
+	}
+
+	if (sections.getItemCount() < 2)
+	{
+		return this.getInnovator().newError("No items found");
+	}
+	sections.removeItem(sections.getItemByIndex(0));
+
+	sections = sections.getItemsByXPath("//Item[@type='CommandBarSection']");
+	for (var i = 0; i < sections.getItemCount(); ++i)
+	{
+		Item section = sections.getItemByIndex(i);
+		XmlNode node = pcbses.dom.SelectSingleNode("//Item[@id='" + section.getID() + "']/../../item_classification");
+		if (node != null)
+		{
+			section.setProperty("item_classification", node.InnerText);
+		}
+	}
+
+	#endregion sections
+
+	var commandItems = new List<Item>();
+	for (var i = 0; i < sections.getItemCount(); ++i)
+	{
+		commandBarHelper.LoadSectionItems(sections.getItemByIndex(i), commandItems, identitiesList, itemClassificationParam == "%all_grouped_by_classification%");
+	}
+
+	if (commandItems.Count == 0)
+	{
+		return this.getInnovator().newError("No items found");
+	}
+
+	Item rtn = this.newItem();
+
+	foreach(Item item in commandItems)
+	{
+		rtn.appendItem(item);
+	}
+
+	rtn.removeItem(rtn.getItemByIndex(0));
+	return rtn;
+}
+
+private class CommandBarHelper
+{
+	private Item requestItem = null;
+
+	public CommandBarHelper(Item requestItem)
+	{
+		this.requestItem = requestItem;
+	}
+
+	public static void PrepareSections(Item sections, Item pcbses, string itemClassificationParam)
+	{
+		for (var i = 0; i < pcbses.getItemCount(); ++i)
+		{
+			Item pcbs = pcbses.getItemByIndex(i);
+			string pcbsItemClassification = pcbs.getProperty("item_classification");
+			if (IsPseudoClassification(itemClassificationParam) || pcbsItemClassification == itemClassificationParam
+				// can take default if no specific exists
+				|| string.IsNullOrEmpty(pcbsItemClassification) && pcbses.dom.SelectNodes(string.Format(CultureInfo.InvariantCulture, "//Item[@type='PresentationCommandBarSection']/item_classification[text()='{0}']", itemClassificationParam)).Count == 0)
+			{
+				sections.appendItem(pcbs);
+			}
+		}
+	}
+
+	public static bool IsPseudoClassification(string itemClassificationParam)
+	{
+		return itemClassificationParam == "%all_grouped_by_location%" || itemClassificationParam == "%all_grouped_by_classification%";
+	}
+
+	public ICollection<string> GetItemTypePresentationConfigurationIds(string itemTypeId, string client, Func<string, string> quoteValueFunc)
+	{
+		if (!string.IsNullOrEmpty(itemTypeId))
+		{
+			Item presentationConfigurations = this.requestItem.getInnovator().applyAML(string.Format(CultureInfo.InvariantCulture, @"
+				<AML>
+					<Item type=""PresentationConfiguration"" select=""id,modified_on"" action=""get"" where=""PresentationConfiguration.id in (select related_id from ITPresentationConfiguration where source_id = '{0}' and client='{1}')"">
+					</Item>
+				</AML>", System.Security.SecurityElement.Escape(quoteValueFunc(itemTypeId)), System.Security.SecurityElement.Escape(quoteValueFunc(client))));
+
+			XmlNodeList nodes = presentationConfigurations.dom.SelectNodes("//id/text()");
+			return GetNodeValues(nodes);
+		}
+		return new List<string>();
+	}
+
+	public ICollection<string> GetGlobalPresentationConfigurationIds(string client)
+	{
+		Item globalConfigs = this.requestItem.getInnovator().applyAML(string.Format(CultureInfo.InvariantCulture, @"
+		<AML>
+			<Item type=""GlobalPresentationConfig"" action=""get"" select=""presentation_id,modified_on"">
+				<client>{0}</client>
+				<presentation_id>
+					<Item type=""PresentationConfiguration"" action=""get"" select=""id,modified_on""/>
+				</presentation_id>
+			</Item>
+		</AML>", System.Security.SecurityElement.Escape(client)));
+
+		XmlNodeList nodes = globalConfigs.dom.SelectNodes("//presentation_id/Item/id/text()");
+		return GetNodeValues(nodes);
+	}
+
+	public ICollection<string> GetInstancePresentationConfigurationIds(string itemId, string itemTypeId, string client)
+	{
+		Item globalConfigs = this.requestItem.getInnovator().applyAML(string.Format(CultureInfo.InvariantCulture, @"
+		<AML>
+			<Item type=""ItemPresentationConfiguration"" action=""get"" select=""id,presentation_config_id(id)"">
+				<item_id>{1}</item_id>
+				<item_type_id>{2}</item_type_id>
+				<client_type>{0}</client_type>
+				<presentation_config_id>
+					<Item type=""PresentationConfiguration"" action=""get"" select=""id""/>
+				</presentation_config_id>
+			</Item>
+		</AML>", System.Security.SecurityElement.Escape(client), System.Security.SecurityElement.Escape(itemId), System.Security.SecurityElement.Escape(itemTypeId)));
+
+		XmlNodeList nodes = globalConfigs.dom.SelectNodes("//presentation_config_id/Item/id/text()");
+		return GetNodeValues(nodes);
+	}
+
+	public Item GetPresentationConfigurations(IEnumerable<string> presentationConfigurationIds, string locationName, string identitiesList)
+	{
+		string userIdentitiesClause = GetUserIdentitiesClause(identitiesList);
+		string aml = string.Format(CultureInfo.InvariantCulture, @"
+		<AML>
+			<Item type=""PresentationConfiguration"" idlist=""{0}"" action=""get"" select=""id,name"">
+				<Relationships>
+					<Item type=""PresentationCommandBarSection"" action=""get"" select=""related_id,modified_on,item_classification"" orderBy=""sort_order"">
+						{1}
+						<related_id>
+							<Item type=""CommandBarSection"" action=""get"" select=""additional_data,builder_method,classification,label,location_name,name,item_classification,section,keyed_name"">
+								<location_name>{2}</location_name>
+								<builder_method>
+									<Item type=""Method"" action=""get"" select=""name,method_type""/>
+								</builder_method>
+							</Item>
+						</related_id>
+					</Item>
+				</Relationships>
+			</Item>
+		</AML>", GetCommaSeparatedValues(presentationConfigurationIds), userIdentitiesClause, System.Security.SecurityElement.Escape(locationName));
+
+		Item result = this.requestItem.getInnovator().applyAML(aml);
+
+		var nodes = result.dom.SelectNodes("./*[local-name()='Envelope']/*[local-name()='Body']/Result/Item/Relationships/Item/related_id/Item/*[@is_null='1']");
+		foreach (XmlNode nullNode in nodes)
+		{
+			nullNode.ParentNode.RemoveChild(nullNode);
+		}
+
+		return result;
+	}
+
+	private string GetUserIdentitiesClause(string identitiesList)
+	{
+		string userId = this.requestItem.getInnovator().getUserID();
+		string userIdentitiesClause = userId == "AD30A6D8D3B642F5A2AFED1A4B02BEFA"
+			? ""
+			: string.Format(CultureInfo.InvariantCulture, "<role condition=\"in\">{0}</role>", identitiesList);
+		return userIdentitiesClause;
+	}
+
+	private static string GetCommaSeparatedValues(IEnumerable<string> nodes)
+	{
+		return string.Join(",", nodes.Select(node => "'" + node + "'"));
+	}
+
+	private static ICollection<string> GetNodeValues(XmlNodeList nodes)
+	{
+		return nodes.Cast<XmlNode>().Select(node => node.Value).ToList();
+	}
+
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists")]
+	public void LoadSectionItems(Item section, List<Item> items, string identitiesList, bool separateClassifications)
+	{
+		Item commandItems = null;
+		if (section == null)
+		{
+			throw new ArgumentNullException("section");
+		}
+		if (items == null)
+		{
+			throw new ArgumentNullException("items");
+		}
+		if (section.getProperty("classification").ToUpperInvariant() == "METHOD")
+		{
+			Item method = section.getItemsByXPath("./builder_method/Item[@type='Method']");
+			if (method.getProperty("method_type") == "C#")
+			{
+				IEnumerable<XmlNode> parameters = requestItem.dom.SelectSingleNode("//Item").ChildNodes.Cast<XmlNode>().Where(el => el.NodeType == XmlNodeType.Element);
+				var sb = new StringBuilder();
+				foreach (XmlElement param in parameters) {
+					sb.AppendFormat("<{0}>{1}</{0}>", System.Security.SecurityElement.Escape(param.Name), System.Security.SecurityElement.Escape(param.InnerText));
+				}
+				commandItems = section.getInnovator().applyAML(string.Format(CultureInfo.InvariantCulture, @"
+					<AML>
+						<Item type=""Method"" action=""{0}"">
+						{1}
+						</Item>
+					</AML>", System.Security.SecurityElement.Escape(method.getProperty("name")), sb));
+			}
+			else
+			{
+				commandItems = section; // client builder method will be processed on client
+			}
+		}
+		else
+		{
+			commandItems = section.getInnovator().applyAML(string.Format(CultureInfo.InvariantCulture, @"
+			<AML>
+			<Item type=""CommandBarSectionItem"" action=""get"" orderBy=""sort_order"">
+			<source_id>{0}</source_id>
+			{1}
+			<related_id>
+			<Item type=""CommandBarItem"" action=""get""  select=""additional_data,image,include_events,label,on_click_handler,on_init_handler,on_keydown_handler,tooltip_template,name,section,sort_order,item_classification,parent_menu,action,itemtype,shortcut,group_id""/>
+			</related_id>
+			</Item>
+			</AML>", System.Security.SecurityElement.Escape(section.getID()), GetUserIdentitiesClause(identitiesList)));
+
+			var nodes = commandItems.dom.SelectNodes("./*[local-name()='Envelope']/*[local-name()='Body']/Result/Item/related_id/Item/*[@is_null='1']");
+			foreach(XmlNode nullNode in nodes)
+			{
+				nullNode.ParentNode.RemoveChild(nullNode);
+			}
+		}
+
+		for (var i = 0; i < commandItems.getItemCount(); ++i)
+		{
+			Item commandItem = commandItems.getItemByIndex(i);
+			bool isCommandBarSectionItem = commandItem.getAttribute("type") == "CommandBarSectionItem";
+			string action = isCommandBarSectionItem ? commandItem.getProperty("action") : "Add";
+			Item control;
+			control = isCommandBarSectionItem ? commandItem.getPropertyItem("related_id") : commandItem;
+			string itemSortOrder = isCommandBarSectionItem ? commandItem.getProperty("sort_order") : "";
+			if (control != null)
+			{
+				SetSectionDataToItem(control, section, itemSortOrder);
+			}
+
+			int index;
+			string controlClassification = control.getProperty("item_classification");
+			switch (action)
+			{
+				case "Add":
+					index = -1;
+					int lastMatchingClassificationIndex = -1;
+					int sortOrder = Convert.ToInt32(control.getProperty("sort_order") ?? int.MaxValue.ToString(CultureInfo.InvariantCulture), CultureInfo.InvariantCulture);
+					for (var k = 0; k < items.Count; ++k) {
+						if (separateClassifications && controlClassification != items[k].getProperty("item_classification"))
+						{
+							continue;
+						}
+						lastMatchingClassificationIndex = k;
+						if (Convert.ToInt32(items[k].getProperty("sort_order"), CultureInfo.InvariantCulture) > sortOrder)
+						{
+							index = k;
+							break;
+						}
+					}
+
+					if (index > -1)
+					{
+						items.Insert(index, control);
+					} else
+					{
+						if (lastMatchingClassificationIndex > -1 && lastMatchingClassificationIndex < items.Count - 1)
+						{
+							items.Insert(lastMatchingClassificationIndex + 1, control);
+						}
+						else
+						{
+							items.Add(control);
+						}
+					}
+					break;
+				case "Remove":
+					DoRemoveAction(items, separateClassifications, control.getID(), controlClassification);
+					break;
+				case "Replace":
+					string controlId = control.getID();
+					int position = items.FindIndex(item => item.getID() == controlId);
+					if (position != -1)
+					{
+						string alternateId = commandItem.getProperty("alternate");
+						if (string.IsNullOrEmpty(alternateId))
+						{
+							DoRemoveAction(items, separateClassifications, controlId, controlClassification);
+							break;
+						}
+
+						Item alternateItem = control.newItem("CommandBarItem", "get");
+						alternateItem.setID(alternateId);
+						alternateItem = alternateItem.apply();
+						if (alternateItem.isError())
+						{
+							DoRemoveAction(items, separateClassifications, controlId, controlClassification);
+							break;
+						}
+
+						alternateItem = alternateItem.getItemByIndex(0);
+						SetSectionDataToItem(alternateItem, section, itemSortOrder);
+						items[position] = alternateItem;
+					}
+					break;
+				case "ClearAll":
+					string itemId = control.getID();
+					int pos = items.FindIndex(item => item.getID() == itemId);
+					items.RemoveRange(0, pos);
+					break;
+				default: break;
+			}
+		}
+	}
+
+	private static void DoRemoveAction(List<Item> items, bool separateClassifications, string controlId, string controlClassification)
+	{
+		items.RemoveAll(item => item.getID() == controlId && (!separateClassifications || controlClassification == item.getProperty("item_classification")));
+	}
+
+	private static void SetSectionDataToItem(Item item, Item section, string sortOrder)
+	{
+		if (!string.IsNullOrEmpty(sortOrder))
+		{
+			item.setProperty("sort_order", sortOrder);
+		}
+		item.setProperty("section", section.getID());
+		item.setPropertyAttribute("section", "keyed_name", section.getProperty("keyed_name"));
+		item.setProperty("item_classification", section.getProperty("item_classification"));
+	}]]></method_code>
+  <method_type>C#</method_type>
+  <name>GetCommandBarItems</name>
+ </Item>
+</AML>

@@ -1,0 +1,302 @@
+﻿<AML>
+ <Item type="Method" id="AA41612C00A6462895B5954E5A85BCA2" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[		Innovator innovator = this.getInnovator();
+
+		Item viewDefinitionItem = this.getPropertyItem("tgvd_item");
+		var viewDefinition = new Aras.TreeGridView.Model.TreeGridViewDefinition(viewDefinitionItem);
+		return GetTreeGridData(viewDefinition, innovator, CCO, new ResourceManager(CCO.ErrorLookup));
+	}
+
+	internal Item GetTreeGridData(Aras.TreeGridView.Model.TreeGridViewDefinition viewDefinition, Innovator innovator, Aras.Server.Core.CallContext callContext, IResourceManager resourceManager)
+	{
+		Item result = innovator.newItem("ResultItem");
+		if (this.getProperty("include_headers") == "1")
+		{
+			List<HeaderColumnJson> headerResult = TreeGridHeaderTransformer.GetResult(viewDefinition);
+			string headerData = Newtonsoft.Json.JsonConvert.SerializeObject(headerResult);
+			result.setProperty("header_data", headerData);
+		}
+
+		string fetch = this.getProperty("fetch");
+		Aras.TreeGridView.Model.GenerateViewArguments args = new Aras.TreeGridView.Model.GenerateViewArguments()
+		{
+			Innovator = innovator,
+			CallContext = callContext,
+			CurrentFetch = string.IsNullOrEmpty(fetch) ? default(int?) : Convert.ToInt32(fetch, CultureInfo.InvariantCulture)
+		};
+		if (args.CurrentFetch < 0)
+		{
+			args.CurrentFetch = TreeGridRowsTransformer.UnlimitedFetch;
+		}
+
+		string startConditionJson = this.getProperty("startCondition");
+		if (!string.IsNullOrEmpty(startConditionJson))
+		{
+			args.StartCondition = ParseStartConditionJson(startConditionJson);
+		}
+
+		string qbParametersValueByNameJson = this.getProperty("qb_parameters_value_by_name");
+		if (!string.IsNullOrEmpty(qbParametersValueByNameJson))
+		{
+			args.QbParametersValueByName = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(qbParametersValueByNameJson);
+		}
+
+		string rowId = this.getProperty("row_id");
+		if (!string.IsNullOrEmpty(rowId))
+		{
+			string rowContextData = this.getProperty("row_context_data");
+			if (string.IsNullOrEmpty(rowContextData))
+			{
+				throw new ArgumentException("row_context_data");
+			}
+			args.RowId = rowId;
+			args.RowContextData = Newtonsoft.Json.JsonConvert.DeserializeObject<Aras.TreeGridView.Model.RowContextData>(rowContextData);
+		}
+		string showMoreOffsetInfo = this.getProperty("show_more_offset_info");
+		if (!string.IsNullOrEmpty(showMoreOffsetInfo))
+		{
+			args.ShowMoreOffsetInfo = Newtonsoft.Json.JsonConvert.DeserializeObject<Aras.TreeGridView.Model.ShowMoreOffsetInfo>(showMoreOffsetInfo);
+		}
+
+		int levelsToExpand = Convert.ToInt32(this.getProperty("levels_to_expand", "-1"), CultureInfo.InvariantCulture);
+		args.LevelsToExpand = levelsToExpand;
+		viewDefinition.GenerateView(args);
+		int? fetchCount = args.CurrentFetch;
+
+		string showMoreLabel = resourceManager.GetResource("rb_ShowMore");
+
+		List<GridRowJson> gridRows = TreeGridRowsTransformer.GetRows(viewDefinition, null, args.RowId, fetchCount, fetchCount, showMoreLabel, levelsToExpand);
+		string rows = Newtonsoft.Json.JsonConvert.SerializeObject(gridRows);
+		result.setProperty("grid_rows", rows);
+		return result;
+	}
+
+	internal static Dictionary<string, string[]> ParseStartConditionJson(string startConditionJson)
+	{
+		var result = new Dictionary<string, string[]>();
+		Dictionary<string, Object> startConditions =
+			Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, Object>>(startConditionJson);
+		foreach (KeyValuePair<string, object> startCondition in startConditions)
+		{
+			var jArrayConvertedValue = startCondition.Value as Newtonsoft.Json.Linq.JArray;
+			if (jArrayConvertedValue != null)
+			{
+				List<string> list = new List<string>();
+				foreach (Newtonsoft.Json.Linq.JValue jValue in jArrayConvertedValue)
+				{
+					list.Add(jValue.ToString());
+				}
+					
+				result[startCondition.Key] = list.ToArray();
+			}
+			else
+			{
+				result[startCondition.Key] = new[] {startCondition.Value as string};
+			}
+		}
+
+		return result;
+	}
+}
+
+/// <summary>
+/// The first letters are in lower case because they are used in JavaScript (not only in C#)
+/// </summary>
+public class GridRowJson
+{
+	public ICollection<GridCellJson> cells { get; private set; }
+	public string iconPath { get; set; }
+	public Aras.TreeGridView.Model.ShowMoreOffsetInfo offsetInfo { get; set; }
+	public Aras.TreeGridView.Model.RowContextData rowContextData { get; set; }
+	public string rowId { get; set; }
+	public bool isReferencingItem { get; set; }
+	public bool hasChildren { get; set; }
+	public IEnumerable<GridRowJson> childRows { get; set;}
+
+	public GridRowJson()
+	{
+		cells = new List<GridCellJson>();
+		childRows = new List<GridRowJson>();
+	}
+}
+
+/// <summary>
+/// The first letters are in lower case because they are used in JavaScript (not only in C#)
+/// </summary>
+public class GridCellJson
+{
+	public string value { get; set; }
+	public string link { get; set; }
+	public string viewType { get; set; }
+	public string dataObject { get; set; }
+}
+
+static class TreeGridRowsTransformer
+{
+	public const int UnlimitedFetch = -2;
+	public static List<GridRowJson> GetRows(Aras.TreeGridView.Model.TreeGridViewDefinition viewDefinition, Aras.TreeGridView.Model.TreeRow parentRow, string parentRowId, int? fetch, int? fetchConst, string showMoreLabel, int levelsToExpand)
+	{
+		IEnumerable<Aras.TreeGridView.Model.TreeRow> treeRows = viewDefinition.TreeRows.Where(
+			row => (row.ParentRow == parentRow && string.IsNullOrEmpty(parentRowId))
+			//parentRowId is passed only not from a function GetRows. Note that we cannot pass parentRow always. Because,
+			//on expand we have rowId, but haven't a row for the row which we expand. We have only its descendant rows.
+			//we cannot compare always by parentRowId instead of comparing Objects because we can have the same parent row ids
+			//in different branches, so, we can have duplicated nodes.
+			|| (parentRow == null && row.ParentRow != null && parentRowId == row.ParentRow.Id));
+
+		List<GridRowJson> gridRows = new List<GridRowJson>();
+		foreach (Aras.TreeGridView.Model.TreeRow treeRow in treeRows)
+		{
+			if (fetch == null || fetch > 0 || fetch == UnlimitedFetch)
+			{
+				GridRowJson gridRow = CreateRow(treeRow, viewDefinition.TreeRows.Any(row => row.ParentRow != null && row.ParentRow == treeRow), false, null);
+				if (levelsToExpand > 1)
+				{
+					gridRow.childRows = GetRows(viewDefinition, treeRow, null, fetchConst, fetchConst, showMoreLabel, levelsToExpand - 1);
+				}
+				gridRows.Add(gridRow);
+
+				if (fetch != null && fetch != UnlimitedFetch)
+				{
+					fetch--;
+				}
+			}
+			else
+			{
+				GridRowJson gridRow = CreateRow(treeRow, false, true, showMoreLabel);
+				gridRows.Add(gridRow);
+				break;
+			}
+		}
+		return gridRows;
+	}
+
+	private static GridRowJson CreateRow(Aras.TreeGridView.Model.TreeRow treeRow, bool hasChilds, bool isShowMoreRow, string showMoreLabel)
+	{
+		GridRowJson row = new GridRowJson();
+		Aras.TreeGridView.Model.TreeCell firstCell = treeRow.Cells[treeRow.Cells.Keys.First()].BuilderMethodResultItem.TreeCell;
+		row.iconPath = isShowMoreRow ? "" : firstCell.IconPath;
+
+		if (isShowMoreRow)
+		{
+			row.offsetInfo = treeRow.ShowMoreOffsetInfo;
+		}
+		else
+		{
+			row.rowContextData = treeRow.ContextData;
+			row.rowId = treeRow.Id;
+			row.isReferencingItem = firstCell.IsReferencing;
+		}
+
+		bool isFirstTdTag = true;
+		foreach (KeyValuePair<Aras.TreeGridView.Model.ColumnDefinition, Aras.TreeGridView.BuilderMethodResult> cellKeyValuePair in treeRow.Cells)
+		{
+			GridCellJson cellJson = CreateCell(cellKeyValuePair.Value, isShowMoreRow, isFirstTdTag, showMoreLabel);
+			row.cells.Add(cellJson);
+			isFirstTdTag = false;
+		}
+
+		row.hasChildren = hasChilds;
+		return row;
+	}
+
+	internal static GridCellJson CreateCell(Aras.TreeGridView.BuilderMethodResult builderMethodResult, bool isShowMoreRow, bool isFirstTdTag, string showMoreLabel)
+	{
+		GridCellJson cellJson = new GridCellJson();
+		
+
+		if (isShowMoreRow)
+		{
+			if (isFirstTdTag)
+			{
+				cellJson.link = "show_more";
+				cellJson.value = showMoreLabel;
+			}
+		}
+		else
+		{
+			Aras.TreeGridView.Model.CellView.ItemView itemView = builderMethodResult.BuilderMethodResultItem.TreeCell.CellView as Aras.TreeGridView.Model.CellView.ItemView;
+			cellJson.dataObject = builderMethodResult.BuilderMethodResultItem.TreeCell.DataObject;
+			if (itemView != null)
+			{
+				cellJson.link = (Escape(itemView.TypeName) ?? String.Empty) + "','" + (Escape(itemView.Id) ?? String.Empty) + "'";
+			}
+			else if (builderMethodResult.BuilderMethodResultItem.TreeCell.CellView is Aras.TreeGridView.Model.CellView.DateView)
+			{
+				cellJson.viewType = "date";
+			}
+			else if (builderMethodResult.BuilderMethodResultItem.TreeCell.CellView is Aras.TreeGridView.Model.CellView.DecimalView)
+			{
+				cellJson.viewType = "decimal";
+			}
+			else if (builderMethodResult.BuilderMethodResultItem.TreeCell.CellView is Aras.TreeGridView.Model.CellView.ColorView)
+			{
+				cellJson.viewType = "color";
+			}
+			cellJson.value = builderMethodResult.BuilderMethodResultItem.TreeCell.Value;
+		}
+		return cellJson;
+	}
+
+	private static string Escape(string data)
+	{
+		return System.Security.SecurityElement.Escape(data);
+	}
+}
+
+
+public interface IResourceManager
+{
+	string GetResource(string key);
+	string GetResource(string key, params object[] parameters);
+}
+
+class ResourceManager : IResourceManager
+{
+	private readonly Aras.Server.Core.ErrorLookup _errorLookup;
+
+	public ResourceManager(Aras.Server.Core.ErrorLookup errorLookup)
+	{
+		_errorLookup = errorLookup;
+	}
+
+	public string GetResource(string key)
+	{
+		return _errorLookup.Lookup(key);
+	}
+
+	public string GetResource(string key, params object[] parameters)
+	{
+		return _errorLookup.Lookup(key, parameters);
+	}
+}
+
+/// <summary>
+/// The first letters are in lower case because they are used in JavaScript (not only in C#)
+/// </summary>
+public class HeaderColumnJson
+{
+	public string label { get; set; }
+	public int width { get; set; }
+}
+
+static class TreeGridHeaderTransformer
+{
+	public static List<HeaderColumnJson> GetResult(Aras.TreeGridView.Model.TreeGridViewDefinition viewDefinition)
+	{
+		List<HeaderColumnJson> headerColumns = new List<HeaderColumnJson>();
+		foreach (Aras.TreeGridView.Model.ColumnDefinition columnDefinition in viewDefinition.ColumnDefinitions)
+		{
+			headerColumns.Add(new HeaderColumnJson
+			{
+				label = columnDefinition.Header,
+				width = columnDefinition.Width
+			});
+		}
+		return headerColumns;
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>rb_GetTreeGridData</name>
+ </Item>
+</AML>

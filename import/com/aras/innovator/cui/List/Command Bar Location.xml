@@ -1,0 +1,121 @@
+﻿<AML>
+ <Item type="List" id="1F708AFF33F246739353549430167F6F" action="add">
+  <name>Command Bar Location</name>
+  <Relationships>
+   <Item type="Value" id="F83577FC7C864930A3A3E63F32EA8C1A" action="add">
+    <label xml:lang="en">Item Window Sidebar</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>ItemWindowSidebar</value>
+   </Item>
+   <Item type="Value" id="09664B28A55042D6B0AB3E536B4D8632" action="add">
+    <label xml:lang="en">Custom</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>Custom</value>
+   </Item>
+   <Item type="Value" id="2C782027E0434BD2A93980EE29282497" action="add">
+    <label xml:lang="en">Popup Menu for Relationship Grid</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>PopupMenuRelationshipGrid</value>
+   </Item>
+   <Item type="Value" id="54C499955B7D4EE9AF35CDEFD97C565D" action="add">
+    <label xml:lang="en">Popup Menu for Item Grid</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>PopupMenuItemGrid</value>
+   </Item>
+   <Item type="Value" id="14025AF4443D423EA1F66E835B7159E7" action="add">
+    <label xml:lang="en">Popup Menu for Grid Header</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>PopupMenuGridHeader</value>
+   </Item>
+   <Item type="Value" id="4CA6C06ED7BE47DF890A225986133DFF" action="add">
+    <label xml:lang="en">Popup Menu for Main Window TOC</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>PopupMenuMainWindowTOC</value>
+   </Item>
+   <Item type="Value" id="DAEA2F1A40864920A819B8F4231AE3CD" action="add">
+    <label xml:lang="en">Main Window Main Menu</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>MainWindowMainMenu</value>
+   </Item>
+   <Item type="Value" id="819EC7193A79423296637C58CB0C3C85" action="add">
+    <label xml:lang="en">Tearoff Window Main Menu</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>TearoffWindowMainMenu</value>
+   </Item>
+   <Item type="Value" id="223CE79B737A4AC3AC5E843018D7165A" action="add">
+    <label xml:lang="en">Main Window Toolbar</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>MainWindowToolbar</value>
+   </Item>
+   <Item type="Value" id="BC94A4238D2F450A8B4DC2B0AA85670F" action="add">
+    <label xml:lang="en">Tearoff Window Toolbar</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>TearoffWindowToolbar</value>
+   </Item>
+   <Item type="Value" id="CCC4DC22A7664EA4AD18B754F9E328C9" action="add">
+    <label xml:lang="en">Class Structure Dialog Toolbar</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>ClassStructureDialogToolbar</value>
+   </Item>
+   <Item type="Value" id="996A8BDF9DAC4D02B100FDEE6371460D" action="add">
+    <label xml:lang="en">Main Window Shortcuts</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>MainWindowShortcuts</value>
+   </Item>
+   <Item type="Value" id="0E8EA92440C148FE864CC8E50FFB4FF4" action="add">
+    <label xml:lang="en">Item Window Shortcuts</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>ItemWindowShortcuts</value>
+   </Item>
+   <Item type="Value" id="4613850BE3AE4FD2AAC3D42555ED1ADB" action="add">
+    <label xml:lang="en">Item Window Relationships Shortcuts</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>ItemWindowRelationshipsShortcuts</value>
+   </Item>
+   <Item type="Value" id="B911BF148F2C40609FE6213426D46E60" action="add">
+    <label xml:lang="en">Dialog Shortcuts</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>DialogShortcuts</value>
+   </Item>
+   <Item type="Value" id="7FA3F50F75A541078ECE9E4BE0B82E33" action="add">
+    <label xml:lang="en">TGV Toolbar</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>TGV_Toolbar</value>
+   </Item>
+   <Item type="Value" id="E996A6FFB15446CA89FCE72BAF2503D6" action="add">
+    <label xml:lang="en">Custom Grid Toolbar</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>CustomGridToolbar</value>
+   </Item>
+   <Item type="Value" id="22D738036CA44966ACFFC28E42A88F1C" action="add">
+    <label xml:lang="en">TGV Context Menu</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>TGV_ContextMenu</value>
+   </Item>
+   <Item type="Value" id="2D492EA2783147A0BC3871C5BFDA3EDF" action="add">
+    <label xml:lang="en">MP Grid Context Menu</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="Command Bar Location" type="List">1F708AFF33F246739353549430167F6F</source_id>
+    <value>MP_ContextMenu</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="Method" id="0DC9BE1758AB4369AB8B9D095EA7B956" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>ES_BeforeDeleteIndexedType</name>
+ </Item>
+</AML>

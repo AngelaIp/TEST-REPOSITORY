@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="AB84A0C3910E4778B8AB064D4CE141E5" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Show Clipboard</label>
+  <on_click_handler keyed_name="cui_default_mwmm_show_clipboard" type="Method">7F81575A55464A9DB44DF86358E115D2</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_edit_menu" type="CommandBarMenu">BB3421A77E45452DB21B7C53F162734C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_show_clipboard</name>
+ </Item>
+</AML>

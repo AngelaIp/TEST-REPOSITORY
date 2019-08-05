@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="ITPresentationConfiguration" id="32BB827EAC3047ADAD660B1752A31C07" action="add">
+  <client>js</client>
+  <related_id keyed_name="D71DFFF991104F749892D5C816E1F5A2" type="PresentationConfiguration">
+   <Item type="PresentationConfiguration" id="D71DFFF991104F749892D5C816E1F5A2" action="add">
+    <secondary_icon>../Images/ECROff.svg</secondary_icon>
+    <style>background-color: rgba(0, 114, 198, 0.75);</style>
+    <name />
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="ECR" type="ItemType" name="ECR">2D4799413792453DA08C1EDE6AA22A76</source_id>
+ </Item>
+</AML>

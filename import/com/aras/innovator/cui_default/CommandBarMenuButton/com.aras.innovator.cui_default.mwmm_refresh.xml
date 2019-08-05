@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="FF71AAE17C4A414DB506B0F887EC843D" action="add">
+  <label xml:lang="en">Refresh</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_tools_menu" type="CommandBarMenu">12252160BD844AB68B3BF3EDC7C148C6</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_refresh</name>
+ </Item>
+</AML>

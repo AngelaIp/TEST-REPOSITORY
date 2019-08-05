@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="FileType" id="2A4C8C82CB5E4EEF9493A83E23FFBDEE" action="add">
+  <description>Dassault CATIA CGR Model</description>
+  <extension>cgr</extension>
+  <mimetype>application/catia</mimetype>
+  <name>CATIA CGR Model</name>
+ </Item>
+</AML>

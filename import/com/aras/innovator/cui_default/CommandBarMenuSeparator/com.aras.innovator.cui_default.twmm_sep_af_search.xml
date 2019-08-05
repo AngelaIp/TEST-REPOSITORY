@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenuSeparator" id="BFBDD1F5BFDA44AE9079DDA6BAA12AE6" action="add">
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_search_menu" type="CommandBarMenu">48636CC2CD104340AC60CFC588C08475</parent_menu>
+  <name>com.aras.innovator.cui_default.twmm_sep_af_search</name>
+ </Item>
+</AML>

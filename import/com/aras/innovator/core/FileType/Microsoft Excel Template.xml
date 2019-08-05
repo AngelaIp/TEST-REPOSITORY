@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="FileType" id="B87F6D2512444692A481194CFD6B1C3E" action="add">
+  <description>Microsoft Excel XLTX Template</description>
+  <extension>xltx</extension>
+  <mimetype>application/vnd.openxmlformats-officedocument.spreadsheetml.template</mimetype>
+  <name>Microsoft Excel Template</name>
+ </Item>
+</AML>

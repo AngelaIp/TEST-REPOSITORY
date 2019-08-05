@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="7FBFDC60F098442099F97F1A2CB18761" action="add">
+  <additional_data>{ "cui_class": "not_displayed itg_viewer_menu" }</additional_data>
+  <label xml:lang="en">Viewer</label>
+  <on_init_handler keyed_name="cui_default_viewerMenuInit" type="Method">108036C70B4B411B8E4A67867DFE0279</on_init_handler>
+  <name>com.aras.innovator.cui_default.twmm_viewer_menu</name>
+ </Item>
+</AML>

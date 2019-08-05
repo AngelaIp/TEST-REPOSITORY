@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="5C37D6D8527A4ABDA4C58408FCB2D650" action="add">
+  <additional_data>{ "cui_resource_key": "maintree.saved_search.remove_from_toc" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmtoc_showingOnTOC" type="Method">905E86D6F260401695379E688D4A1ACE</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmtoc_changeSavedSearchShowingOnTOC</name>
+ </Item>
+</AML>

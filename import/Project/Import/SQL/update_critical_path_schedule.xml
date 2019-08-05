@@ -1,0 +1,399 @@
+﻿<AML>
+ <Item type="SQL" id="A443CADD591C4D4AB3985851D7262250" action="add">
+  <execution_count>3</execution_count>
+  <execution_flag>immediate</execution_flag>
+  <old_name>update_critical_path_schedule</old_name>
+  <sqlserver_body><![CDATA[/*Purpose: computes project schedules using the Critical Path Method.*/
+CREATE PROCEDURE [Update_critical_path_schedule](@PROJECT_ID CHAR(32),
+                                                           @TZ_NAME    NVARCHAR(50) = NULL)
+AS
+  BEGIN
+      DECLARE @WBS_ID CHAR(32)
+      DECLARE @PROJECT_START_DAY INT
+      DECLARE @PROJECT_DURATION INT
+      DECLARE @SCHEDULING_TYPE VARCHAR(64)
+      DECLARE @ACTIVITIES TABLE
+        (
+           ID  CHAR(32) COLLATE database_default PRIMARY KEY,
+           E_S INT,
+           E_F INT,
+           L_S INT,
+           L_F INT
+        )
+      DECLARE @FORWARDP AS INT
+      DECLARE @PROJECT_START_SCHED DATETIME
+      DECLARE @PROJECT_DUE_SCHED DATETIME
+
+      SELECT @WBS_ID = WBS_ID,
+             @SCHEDULING_TYPE = scheduling_type
+      FROM   [PROJECT]
+      WHERE  id = @PROJECT_ID
+
+      IF @SCHEDULING_TYPE = 'Forward'
+        SET @FORWARDP = 1
+      ELSE IF @SCHEDULING_TYPE = 'Backward'
+        SET @FORWARDP = 0
+      ELSE
+        BEGIN
+            RAISERROR ( 'project.id=%s scheduling_type=%s must be Forward or Backward',16,1,@PROJECT_ID,@SCHEDULING_TYPE )
+
+            RETURN @@ERROR
+        END
+
+      INSERT @ACTIVITIES
+      SELECT *
+      FROM   Select_critical_path_schedule(@WBS_ID)
+
+      SELECT @PROJECT_START_DAY = Min(E_S),
+             @PROJECT_DURATION = ( Max(E_F) - Min(E_S) )
+      FROM   @ACTIVITIES
+
+      IF @FORWARDP = 1
+        BEGIN
+            UPDATE [PROJECT]
+            SET    DATE_START_SCHED = DATE_START_TARGET,
+                   DATE_DUE_SCHED = [innovator].Select_sched_date (DATE_DUE_TARGET, (SELECT value
+                                                                                     FROM   [innovator].[Business_dateadd](DATE_START_TARGET, @PROJECT_DURATION - 1, @TZ_NAME)), (SELECT value
+                                                                                                                                                                                  FROM   [innovator].[Business_dateadd](DATE_START_TARGET, @PROJECT_DURATION - 1, @TZ_NAME)), 1)
+            WHERE  ID = @PROJECT_ID
+        END
+      ELSE
+        BEGIN
+            UPDATE [PROJECT]
+            SET    DATE_START_SCHED = INNOVATOR.Select_sched_date ((SELECT value
+                                                                    FROM   [innovator].[Business_dateadd](DATE_DUE_TARGET, -@PROJECT_DURATION + 1, @TZ_NAME)), (SELECT value
+                                                                                                                                                                FROM   [innovator].[Business_dateadd](DATE_DUE_TARGET, -@PROJECT_DURATION + 1, @TZ_NAME)), DATE_START_TARGET, 1),
+                   DATE_DUE_SCHED = DATE_DUE_TARGET
+            WHERE  ID = @PROJECT_ID
+        END
+
+      SELECT @PROJECT_START_SCHED = DATE_START_SCHED,
+             @PROJECT_DUE_SCHED = DATE_DUE_SCHED
+      FROM   [PROJECT]
+      WHERE  ID = @PROJECT_ID
+
+      UPDATE [ACTIVITY2]
+      SET
+      -- update 'start' early/late dates
+      DATE_ES = (SELECT value
+                 FROM   [innovator].[Business_dateadd] (@PROJECT_START_SCHED, CP.E_S - @PROJECT_START_DAY - ( CASE
+                                                                                                                WHEN ACTIVITY2.EXPECTED_DURATION = 0 THEN 1
+                                                                                                                ELSE 0
+                                                                                                              END ), @TZ_NAME)),
+      DATE_LS = (SELECT value
+                 FROM   [innovator].[Business_dateadd] (@PROJECT_DUE_SCHED, CP.L_S - @PROJECT_DURATION + 1 - ( CASE
+                                                                                                                 WHEN ACTIVITY2.EXPECTED_DURATION = 0 THEN 1
+                                                                                                                 ELSE 0
+                                                                                                               END ), @TZ_NAME)),
+      -- update 'finish' early/late dates based on rule: finish=start+duration
+      DATE_EF = (SELECT value
+                 FROM   [innovator].[Business_dateadd] ((SELECT value
+                                                         FROM   [innovator].[Business_dateadd] (@PROJECT_START_SCHED, CP.E_S - @PROJECT_START_DAY - ( CASE
+                                                                                                                                                        WHEN ACTIVITY2.EXPECTED_DURATION = 0 THEN 1
+                                                                                                                                                        ELSE 0
+                                                                                                                                                      END ), @TZ_NAME)), ( CASE
+                                                                                                                                                                             WHEN ACTIVITY2.EXPECTED_DURATION = 0 THEN 0
+                                                                                                                                                                             ELSE ACTIVITY2.EXPECTED_DURATION - 1
+                                                                                                                                                                           END ), @TZ_NAME)),
+      DATE_LF = (SELECT value
+                 FROM   [innovator].[Business_dateadd] ((SELECT value
+                                                         FROM   [innovator].[Business_dateadd] (@PROJECT_DUE_SCHED, CP.L_S - @PROJECT_DURATION + 1 - ( CASE
+                                                                                                                                                         WHEN ACTIVITY2.EXPECTED_DURATION = 0 THEN 1
+                                                                                                                                                         ELSE 0
+                                                                                                                                                       END ), @TZ_NAME)), ( CASE
+                                                                                                                                                                              WHEN ACTIVITY2.EXPECTED_DURATION = 0 THEN 0
+                                                                                                                                                                              ELSE ACTIVITY2.EXPECTED_DURATION - 1
+                                                                                                                                                                            END ), @TZ_NAME)),
+      IS_CRITICAL = CASE
+                      WHEN CP.E_S = CP.L_S THEN '1'
+                      ELSE '0'
+                    END
+      FROM   @ACTIVITIES CP
+      WHERE  [ACTIVITY2].ID = CP.ID
+
+      /*==================== Update for Constraint Date ------------------------*/
+      DECLARE @ACTIVITIES_P TABLE
+        (
+           ID CHAR(32) COLLATE database_default PRIMARY KEY,
+           S  DATETIME,
+           F  DATETIME
+        )
+      DECLARE @FLAG INT
+
+      IF @SCHEDULING_TYPE = 'Forward' -- Forward scheduling
+        SET @FLAG = 0
+      ELSE
+        SET @FLAG = 1 -- Backward scheduling
+      -- +++ need to set @@rowcount > 0
+      DECLARE @tmp TABLE
+        (
+           tmp INT
+        )
+      -- --- need to set @@rowcount > 0
+      DECLARE @PREDECESSORS TABLE
+        (
+           ID         CHAR(32) COLLATE database_default PRIMARY KEY,
+           RELATED_ID CHAR(32) COLLATE database_default,
+           SOURCE_ID  CHAR(32) COLLATE database_default,
+           UNIQUE (source_id, related_id),
+           UNIQUE (related_id, source_id)
+        )
+      DECLARE @ACTIVITIES_IN_WORK TABLE
+        (
+           ID   CHAR(32) COLLATE database_default,
+           FLAG BIT,
+           UNIQUE (ID, FLAG)
+        )
+
+      INSERT INTO @PREDECESSORS
+      SELECT id,
+             RELATED_ID,
+             SOURCE_ID
+      FROM   innovator.PREDECESSOR
+      WHERE  RELATED_ID IN (SELECT ID
+                            FROM   @ACTIVITIES)
+              OR SOURCE_ID IN (SELECT ID
+                               FROM   @ACTIVITIES)
+
+      IF @FLAG = 0
+        BEGIN --  Forward scheduling, set planned dates ASAP ( As Soon As Possible )
+            INSERT @tmp
+            SELECT @FLAG; -- to set @@ROWCOUNT > 0
+            INSERT INTO @ACTIVITIES_IN_WORK
+            SELECT id,
+                   1
+            FROM   innovator.ACTIVITY2
+            WHERE  id IN (SELECT id
+                          FROM   @ACTIVITIES)
+                   AND id NOT IN (SELECT source_id
+                                  FROM   @PREDECESSORS)
+
+            WHILE @@ROWCOUNT > 0
+              BEGIN
+                  INSERT INTO @ACTIVITIES_IN_WORK
+                  SELECT id,
+                         0
+                  FROM   innovator.ACTIVITY2
+                  WHERE  id IN (SELECT id
+                                FROM   @ACTIVITIES
+                                INTERSECT
+                                (SELECT source_id
+                                 FROM   @PREDECESSORS
+                                 WHERE  RELATED_ID IN (SELECT id
+                                                       FROM   @ACTIVITIES_IN_WORK
+                                                       WHERE  FLAG = 1)))
+
+                  INSERT @ACTIVITIES_P
+                         (id,
+                          s,
+                          f)
+                  SELECT A.ID                                                                             id,
+                         [innovator].Select_sched_date2 (
+                         /* early date. 1st argument */
+                         A.DATE_ES,
+                         /* prop date. 2nd argument */
+                         Isnull ((SELECT max ( CASE
+                                             WHEN p.precedence_type = 'Finish to Start' THEN ([innovator].[Business_dateadd_Scalar](PL.F, p.lead_lag + ( CASE
+                                                                                                                                                           WHEN this.expected_duration = 0 THEN 0
+                                                                                                                                                           ELSE 1
+                                                                                                                                                         END ), @TZ_NAME))
+                                             WHEN p.precedence_type = 'Start to Start' THEN ([innovator].[Business_dateadd_Scalar](PL.S, p.lead_lag - ( CASE
+                                                                                                                                                          WHEN this.expected_duration = 0 THEN 1
+                                                                                                                                                          ELSE 0
+                                                                                                                                                        END ), @TZ_NAME))
+                                             WHEN p.precedence_type = 'Finish to Finish' THEN ([innovator].[Business_dateadd_Scalar](PL.F, -this.expected_duration + p.lead_lag + ( CASE
+                                                                                                                                                                                      WHEN this.expected_duration = 0 THEN 0
+                                                                                                                                                                                      ELSE 1
+                                                                                                                                                                                    END ), @TZ_NAME))
+                                             WHEN p.precedence_type = 'Start to Finish' THEN ([innovator].[Business_dateadd_Scalar](PL.S, -this.expected_duration + p.lead_lag - ( CASE
+                                                                                                                                                                                     WHEN this.expected_duration = 0 THEN 1
+                                                                                                                                                                                     ELSE 0
+                                                                                                                                                                                   END ), @TZ_NAME))
+                                           END )
+                                  FROM   @ACTIVITIES_P PL,
+                                         [PREDECESSOR] P,
+                                         [ACTIVITY2] THIS
+                                  WHERE  P.SOURCE_ID = A.ID
+                                         AND P.RELATED_ID = PL.ID
+                                         AND A.ID = THIS.ID), A.DATE_ES),
+                         /* cur date. 3rd argument */
+                         A.DATE_START_SCHED,
+                         /* target date. 4th argument */
+                         A.DATE_START_TARGET,
+                         /* late date. 5th argument */
+                         A.DATE_LS,
+                         /* flag. 6th argument */
+                         @FLAG)                                                                           start,
+                         [innovator].[Business_dateadd_Scalar] (INNOVATOR.Select_sched_date2 (
+                                                         /* early date. 1st argument */
+                                                         A.DATE_ES,
+                                                         /* prop date. 2nd argument */
+                                                         Isnull ((SELECT Max (CASE
+                                                                                WHEN p.precedence_type = 'Finish to Start' THEN [innovator].[Business_dateadd_Scalar](PL.F, p.lead_lag + ( CASE
+                                                                                                                                                                                      WHEN this.expected_duration = 0 THEN 0
+                                                                                                                                                                                      ELSE 1
+                                                                                                                                                                                    END ), @TZ_NAME)
+                                                                                WHEN p.precedence_type = 'Start to Start' THEN [innovator].[Business_dateadd_Scalar](PL.S, p.lead_lag - ( CASE
+                                                                                                                                                                                     WHEN this.expected_duration = 0 THEN 1
+                                                                                                                                                                                     ELSE 0
+                                                                                                                                                                                   END ), @TZ_NAME)
+                                                                                WHEN p.precedence_type = 'Finish to Finish' THEN [innovator].[Business_dateadd_Scalar](PL.F, -this.expected_duration + p.lead_lag + ( CASE
+                                                                                                                                                                                                                 WHEN this.expected_duration = 0 THEN 0
+                                                                                                                                                                                                                 ELSE 1
+                                                                                                                                                                                                               END ), @TZ_NAME)
+                                                                                WHEN p.precedence_type = 'Start to Finish' THEN [innovator].[Business_dateadd_Scalar](PL.S, -this.expected_duration + p.lead_lag - ( CASE
+                                                                                                                                                                                                                WHEN this.expected_duration = 0 THEN 1
+                                                                                                                                                                                                                ELSE 0
+                                                                                                                                                                                                              END ), @TZ_NAME)
+                                                                              END)
+                                                                  FROM   @ACTIVITIES_P PL,
+                                                                         [PREDECESSOR] P,
+                                                                         [ACTIVITY2] THIS
+                                                                  WHERE  P.SOURCE_ID = A.ID
+                                                                         AND P.RELATED_ID = PL.ID
+                                                                         AND A.ID = THIS.ID), A.DATE_ES),
+                                                         /* cur date. 3rd argument */
+                                                         A.DATE_START_SCHED,
+                                                         /* target date. 4th argument */
+                                                         A.DATE_START_TARGET,
+                                                         /* late date. 5th argument */
+                                                         A.DATE_LS,
+                                                         /* flag. 6th argument */
+                                                         @FLAG), A.EXPECTED_DURATION - ( CASE
+                                                                                           WHEN A.EXPECTED_DURATION = 0 THEN 0
+                                                                                           ELSE 1
+                                                                                         END ), @TZ_NAME) finish
+                  FROM   [ACTIVITY2] A
+                  WHERE  A.ID IN (SELECT ID
+                                  FROM   @ACTIVITIES_IN_WORK
+                                  WHERE  FLAG = 1)
+                         AND A.ID NOT IN (SELECT ID
+                                          FROM   @ACTIVITIES_P)
+
+                  DELETE FROM @ACTIVITIES_IN_WORK
+                  WHERE  FLAG = 1
+
+                  UPDATE @ACTIVITIES_IN_WORK
+                  SET    FLAG = 1
+              END /* WHILE @@ROWCOUNT > 0 */
+        END
+      ELSE
+        BEGIN --  Backward scheduling, set planned dates ALAP ( As Late As Possible )
+            INSERT @tmp
+            SELECT @FLAG; -- to set @@ROWCOUNT > 0
+            WHILE @@ROWCOUNT > 0
+              BEGIN
+                  INSERT @ACTIVITIES_P
+                         (id,
+                          s,
+                          f)
+                  SELECT A.ID                                                                              id,
+                         [innovator].[Business_dateadd_Scalar] (INNOVATOR.Select_sched_date2 (
+                                                         /* early date. 1st argument */
+                                                         A.DATE_EF,
+                                                         /* prop date. 2nd argument */
+                                                         Isnull ((SELECT Min (CASE
+                                                                                WHEN p.precedence_type = 'Finish to Start' THEN [innovator].[Business_dateadd_Scalar](PL.S, -p.lead_lag - ( CASE
+                                                                                                                                                                                       WHEN S.expected_duration = 0 THEN 0
+                                                                                                                                                                                       ELSE 1
+                                                                                                                                                                                     END ), @TZ_NAME)
+                                                                                WHEN p.precedence_type = 'Start to Start' THEN [innovator].[Business_dateadd_Scalar](PL.S, -p.lead_lag + this.expected_duration - ( CASE
+                                                                                                                                                                                                               WHEN S.expected_duration = 0 THEN 1
+                                                                                                                                                                                                               ELSE 1
+                                                                                                                                                                                                             END ), @TZ_NAME)
+                                                                                WHEN p.precedence_type = 'Finish to Finish' THEN [innovator].[Business_dateadd_Scalar](PL.F, -p.lead_lag - ( CASE
+                                                                                                                                                                                        WHEN S.expected_duration = 0 THEN 0
+                                                                                                                                                                                        ELSE 0
+                                                                                                                                                                                      END ), @TZ_NAME)
+                                                                                WHEN p.precedence_type = 'Start to Finish' THEN [innovator].[Business_dateadd_Scalar](PL.F, -p.lead_lag + this.expected_duration - ( CASE
+                                                                                                                                                                                                                WHEN S.expected_duration = 0 THEN 0
+                                                                                                                                                                                                                ELSE 0
+                                                                                                                                                                                                              END ), @TZ_NAME)
+                                                                              END)
+                                                                  FROM   @ACTIVITIES_P PL,
+                                                                         [PREDECESSOR] P,
+                                                                         [ACTIVITY2] THIS,
+                                                                         [ACTIVITY2] S
+                                                                  WHERE  P.RELATED_ID = A.ID
+                                                                         AND P.SOURCE_ID = PL.ID
+                                                                         AND A.ID = THIS.ID
+                                                                         AND S.ID = PL.ID), A.DATE_LF),
+                                                         /* cur date. 3rd argument */
+                                                         A.DATE_DUE_SCHED,
+                                                         /* target date. 4th argument */
+                                                         A.DATE_DUE_TARGET,
+                                                         /* late date. 5th argument */
+                                                         A.DATE_LF,
+                                                         /* flag. 6th argument */
+                                                         @FLAG), -A.EXPECTED_DURATION + ( CASE
+                                                                                            WHEN A.EXPECTED_DURATION = 0 THEN 0
+                                                                                            ELSE 1
+                                                                                          END ), @TZ_NAME) start,
+                         INNOVATOR.Select_sched_date2 (
+                         /* early date. 1st argument */
+                         A.DATE_EF,
+                         /* prop date. 2nd argument */
+                         Isnull ((SELECT Min (CASE
+                                                WHEN p.precedence_type = 'Finish to Start' THEN [innovator].[Business_dateadd_Scalar](PL.S, -p.lead_lag - ( CASE
+                                                                                                                                                       WHEN S.expected_duration = 0 THEN 0
+                                                                                                                                                       ELSE 1
+                                                                                                                                                     END ), @TZ_NAME)
+                                                WHEN p.precedence_type = 'Start to Start' THEN [innovator].[Business_dateadd_Scalar](PL.S, -p.lead_lag + this.expected_duration - ( CASE
+                                                                                                                                                                               WHEN S.expected_duration = 0 THEN 1
+                                                                                                                                                                               ELSE 1
+                                                                                                                                                                             END ), @TZ_NAME)
+                                                WHEN p.precedence_type = 'Finish to Finish' THEN [innovator].[Business_dateadd_Scalar](PL.F, -p.lead_lag - ( CASE
+                                                                                                                                                        WHEN S.expected_duration = 0 THEN 0
+                                                                                                                                                        ELSE 0
+                                                                                                                                                      END ), @TZ_NAME)
+                                                WHEN p.precedence_type = 'Start to Finish' THEN [innovator].[Business_dateadd_Scalar](PL.F, -p.lead_lag + this.expected_duration - ( CASE
+                                                                                                                                                                                WHEN S.expected_duration = 0 THEN 0
+                                                                                                                                                                                ELSE 0
+                                                                                                                                                                              END ), @TZ_NAME)
+                                              END)
+                                  FROM   @ACTIVITIES_P PL,
+                                         [PREDECESSOR] P,
+                                         [ACTIVITY2] THIS,
+                                         [ACTIVITY2] S
+                                  WHERE  P.RELATED_ID = A.ID
+                                         AND P.SOURCE_ID = PL.ID
+                                         AND A.ID = THIS.ID
+                                         AND S.ID = PL.ID), A.DATE_LF),
+                         /* cur date. 3rd argument */
+                         A.DATE_DUE_SCHED,
+                         /* target date. 4th argument */
+                         A.DATE_DUE_TARGET,
+                         /* late date. 5th argument */
+                         A.DATE_LF,
+                         /* flag. 6th argument */
+                         @FLAG)                                                                            finish
+                  FROM   [ACTIVITY2] A
+                  WHERE  A.ID IN (SELECT ID
+                                  FROM   @ACTIVITIES)
+                         AND A.ID NOT IN (SELECT ID
+                                          FROM   @ACTIVITIES_P)
+                         AND (SELECT Count(*)
+                              FROM   [PREDECESSOR]
+                              WHERE  RELATED_ID = A.ID) = (SELECT Count(*)
+                                                           FROM   [PREDECESSOR]
+                                                           WHERE  RELATED_ID = A.ID
+                                                                  AND SOURCE_ID IN (SELECT ID
+                                                                                    FROM   @ACTIVITIES_P))
+              END /* WHILE @@ROWCOUNT > 0 */
+        END
+
+      --SELECT * FROM @ACTIVITIES_P
+      UPDATE [ACTIVITY2]
+      SET    DATE_START_SCHED = PL.S,
+             DATE_DUE_SCHED = PL.F
+      FROM   @ACTIVITIES_P PL
+      WHERE  [ACTIVITY2].ID = PL.ID
+
+      SELECT 'SUCCESS' AS result_text
+  END ]]></sqlserver_body>
+  <stale>0</stale>
+  <transform_first>0</transform_first>
+  <type>procedure</type>
+  <name>update_critical_path_schedule</name>
+ </Item>
+</AML>

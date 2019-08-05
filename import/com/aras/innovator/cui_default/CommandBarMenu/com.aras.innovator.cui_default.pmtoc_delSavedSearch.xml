@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="132FE0CAF1254F758B43C1CF41818E9B" action="add">
+  <additional_data>{ "cui_resource_key": "maintree.saved_search.delete" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmtoc_delSavedSearch" type="Method">F7C4707C74C04F29A29C4485E3E1BFA4</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmtoc_delSavedSearch</name>
+ </Item>
+</AML>

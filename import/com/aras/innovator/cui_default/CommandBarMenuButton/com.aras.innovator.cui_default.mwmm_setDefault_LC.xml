@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="2027435AAD8C44B78F1D82CDB0373ED3" action="add">
+  <label xml:lang="en">Set Default Life Cycle</label>
+  <on_click_handler keyed_name="cui_default_mwmm_setDefault_LC" type="Method">A2F90CB28A12487FA276A3DADB3D72D0</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_admin_menu" type="CommandBarMenu">7267B91F9B334F9FA1E9715B7DADD11C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_setDefault_LC</name>
+ </Item>
+</AML>

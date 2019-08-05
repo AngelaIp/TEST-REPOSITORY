@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="7F69A2302AFE42FCB501CC4C1A2CB0C3" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Unlock</label>
+  <on_click_handler keyed_name="cui_default_mwt_onUnlockCommand" type="Method">5F5AA75A870E4347B58475686D2016BE</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_edit_menu" type="CommandBarMenu">BB3421A77E45452DB21B7C53F162734C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_unlock</name>
+ </Item>
+</AML>

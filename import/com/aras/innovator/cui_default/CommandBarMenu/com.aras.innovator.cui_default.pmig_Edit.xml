@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="34F79C01E27B4F14815EE2340F9C0C6C" action="add">
+  <additional_data>{ "cui_resource_key": "common.edit" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onEditCommand" type="Method">D047B0DF0E684358B69003412AC40AC3</on_click_handler>
+  <on_init_handler keyed_name="cui_InBasketTask_ItemGrid_Switch" type="Method">E785225D0937499590D134E8A9E43644</on_init_handler>
+  <name>com.aras.innovator.cui_default.pmig_Edit</name>
+ </Item>
+</AML>

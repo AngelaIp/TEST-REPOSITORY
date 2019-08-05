@@ -1,0 +1,122 @@
+﻿<AML>
+ <Item type="ItemType" id="1B3A68711AFE49AFB72121C592E27498" action="add">
+  <allow_private_permission>1</allow_private_permission>
+  <auto_search>0</auto_search>
+  <close_icon>../images/Program.svg</close_icon>
+  <enforce_discovery>1</enforce_discovery>
+  <help_url xml:lang="en">mergedProjects/ProgramManagement/Program.htm</help_url>
+  <hide_where_used>0</hide_where_used>
+  <implementation_type>table</implementation_type>
+  <instance_data>PROGRAM</instance_data>
+  <is_dependent>0</is_dependent>
+  <is_relationship>0</is_relationship>
+  <is_versionable>0</is_versionable>
+  <label xml:lang="en">Program</label>
+  <label_plural xml:lang="en">Programs</label_plural>
+  <large_icon>../images/Program.svg</large_icon>
+  <open_icon>../images/Program.svg</open_icon>
+  <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+  <show_parameters_tab>1</show_parameters_tab>
+  <structure_view>tabs on</structure_view>
+  <unlock_on_logout>0</unlock_on_logout>
+  <use_src_access>0</use_src_access>
+  <name>Program</name>
+  <Relationships>
+   <Item type="Property" id="86EC8D85E4C14D30964E6BB3899FA2C5" action="add">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="Customer" type="ItemType" name="Customer">E4847F4A706B4285A395C0228A867E0F</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Customer</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="Program" type="ItemType" name="Program">1B3A68711AFE49AFB72121C592E27498</source_id>
+    <track_history>0</track_history>
+    <name>customer</name>
+   </Item>
+   <Item type="Property" id="477FBA88329946069A52A0D276C3B233" action="add">
+    <column_alignment>left</column_alignment>
+    <data_type>text</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Description</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Program" type="ItemType" name="Program">1B3A68711AFE49AFB72121C592E27498</source_id>
+    <track_history>0</track_history>
+    <name>description</name>
+   </Item>
+   <Item type="Property" id="09F271451D1E4FEA8AE12913A71596F2" action="add">
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <keyed_name_order>1</keyed_name_order>
+    <label xml:lang="en">Name</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Program" type="ItemType" name="Program">1B3A68711AFE49AFB72121C592E27498</source_id>
+    <stored_length>30</stored_length>
+    <track_history>0</track_history>
+    <name>name</name>
+   </Item>
+   <Item type="View" id="BFDDFCF75D7C42339BB908E42CF0B130" action="add">
+    <client>js</client>
+    <related_id keyed_name="Program" type="Form">5E93287DD73D4E138C101CA2F2363EA9</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <show_ssvc>0</show_ssvc>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Program" type="ItemType" name="Program">1B3A68711AFE49AFB72121C592E27498</source_id>
+    <type>default</type>
+   </Item>
+   <Item type="ItemType Life Cycle" id="3E0E550DCFAC4C05A0E670E1FC7ADC46" action="add">
+    <related_id keyed_name="Default" type="Life Cycle Map">2F3B75E17C4E4F2D9599579A965BFA64</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Program" type="ItemType" name="Program">1B3A68711AFE49AFB72121C592E27498</source_id>
+   </Item>
+   <Item type="TOC Access" id="91B05F95DD9D462FB7BAD225447774E3" action="add">
+    <related_id keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Program" type="ItemType" name="Program">1B3A68711AFE49AFB72121C592E27498</source_id>
+    <category>Portfolio</category>
+   </Item>
+   <Item type="Can Add" id="9761EF3423BE450D92861EF00F7FE5AA" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="Project Management" type="Identity">5E12CD824411477AA56D9F539FA295EB</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Program" type="ItemType" name="Program">1B3A68711AFE49AFB72121C592E27498</source_id>
+   </Item>
+   <Item type="Allowed Permission" id="30D6F1FC79864D06B565DC91E225B94E" action="add">
+    <is_default>1</is_default>
+    <related_id keyed_name="Project" type="Permission">1E63D742A5794F8DB995A5298A202C4C</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Program" type="ItemType" name="Program">1B3A68711AFE49AFB72121C592E27498</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

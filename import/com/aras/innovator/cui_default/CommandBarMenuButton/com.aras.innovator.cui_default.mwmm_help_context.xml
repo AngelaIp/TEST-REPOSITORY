@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="EB758D9F11684EC98E7C091E4973DC19" action="add">
+  <label xml:lang="en">Just Ask Innovator</label>
+  <on_click_handler keyed_name="cui_default_mwt_onHelpCommand" type="Method">5720CAD4A140436F851FB79ABD0BB4DA</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_help_menu" type="CommandBarMenu">12FDA122A2DF4E68ACF1945BAB29A571</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_help_context</name>
+ </Item>
+</AML>

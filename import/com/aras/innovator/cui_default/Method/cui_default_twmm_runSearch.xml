@@ -1,0 +1,23 @@
+﻿<AML>
+ <Item type="Method" id="91BC292D112044CAAC45916F6A6A1792" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var topWindow = aras.getMostTopWindowWithAras(window);
+
+var runSearch = function() {
+	var relTabbar = topWindow.relationships ? topWindow.relationships.relTabbar : null;
+	var selectedTabId = relTabbar ? relTabbar.GetSelectedTab() : null;
+	var selectedTabWnd = selectedTabId ? relTabbar._getTab(selectedTabId).domNode.lastChild.contentWindow : null;
+
+	if (selectedTabWnd && selectedTabWnd.searchContainer) {
+		selectedTabWnd.searchContainer.runSearch();
+	}
+};
+
+if (topWindow.tearOffMenuController) {
+	topWindow.tearOffMenuController.safeInvokeCommand(runSearch);
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_default_twmm_runSearch</name>
+ </Item>
+</AML>

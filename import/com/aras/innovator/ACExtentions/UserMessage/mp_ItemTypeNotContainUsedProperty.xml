@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="UserMessage" id="4E8DF33B9D4C409D958DF7E8B823FFE4" action="add">
+  <custom>0</custom>
+  <text xml:lang="en">Can't validate MAC Policy. The "{0}" doesn't contain property "{1}" that is used by MAC Policy condition.</text>
+  <name>mp_ItemTypeNotContainUsedProperty</name>
+ </Item>
+</AML>

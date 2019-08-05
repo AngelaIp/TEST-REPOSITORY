@@ -1,0 +1,30 @@
+﻿<AML>
+ <Item type="DiscussionTemplate" id="B8F389A5DCC441C7AACB56D22B2DA31E" action="add">
+  <file_selection_depth>-1</file_selection_depth>
+  <item_selection_depth>-1</item_selection_depth>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="CAD" type="ItemType" name="CAD">CCF205347C814DD1AF056875E0A880AC</source_id>
+  <visibility_supported>1</visibility_supported>
+  <Relationships>
+   <Item type="DiscussionTemplateView" id="024757767C6B4FD29D0F585EFB71DC71" action="add">
+    <client>js</client>
+    <related_id keyed_name="AD3D158EC3B341179D49B20ACE5E04DD" type="SSVCPresentationConfiguration">
+     <Item type="SSVCPresentationConfiguration" id="AD3D158EC3B341179D49B20ACE5E04DD" action="add">
+      <discussion_panel_behavior>discPanelOff</discussion_panel_behavior>
+      <form_tooltip_template xml:lang="en">Form of ${ItemType:label} ${Item:keyed_name}</form_tooltip_template>
+      <sm_template keyed_name="F1E9620C1AB3408588708B68E18D51DE" type="SecureMessageViewTemplate">F1E9620C1AB3408588708B68E18D51DE</sm_template>
+      <name>AD3D158EC3B341179D49B20ACE5E04DD</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="B8F389A5DCC441C7AACB56D22B2DA31E" type="DiscussionTemplate">B8F389A5DCC441C7AACB56D22B2DA31E</source_id>
+   </Item>
+   <Item type="FeedTemplate" id="7EE1684FF3BD4B77AB8FF4C073C8801B" action="add">
+    <feed_type>Board</feed_type>
+    <reference>this</reference>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="B8F389A5DCC441C7AACB56D22B2DA31E" type="DiscussionTemplate">B8F389A5DCC441C7AACB56D22B2DA31E</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

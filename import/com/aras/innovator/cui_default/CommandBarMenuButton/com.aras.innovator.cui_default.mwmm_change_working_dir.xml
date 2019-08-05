@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="ACDB1DE99EFE4E38B27D49DE11332AAE" action="add">
+  <label xml:lang="en">Change Working Directory...</label>
+  <on_click_handler keyed_name="cui_default_mwmm_changeWorkDir" type="Method">6CACF323935F4289A7DE7546FE41DD74</on_click_handler>
+  <on_init_handler keyed_name="cui_changeWorkingDir_onInit" type="Method">52F3DDD9DB1A452EB121EE6ADF1DA216</on_init_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_tools_preferences" type="CommandBarMenu">2BC080C0CA3F4D3B80B32A4140E7F069</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_change_working_dir</name>
+ </Item>
+</AML>

@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="12FDA122A2DF4E68ACF1945BAB29A571" action="add">
+  <label xml:lang="en">Help</label>
+  <name>com.aras.innovator.cui_default.mwmm_help_menu</name>
+ </Item>
+</AML>

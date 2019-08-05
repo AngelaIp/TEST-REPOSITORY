@@ -1,0 +1,43 @@
+﻿<AML>
+ <Item type="Method" id="EE5858C2766343E78712B67904EF1B1D" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var topWindow = aras.getMostTopWindowWithAras(window);
+var toolbarApplet = topWindow.main.menu.activeToolbar;
+var textbox = toolbarApplet.getItem('com.aras.innovator.mwt_es_edit_textbox');
+var searchBtn = toolbarApplet.getItem('com.aras.innovator.mwt_es_clear_criteria_button');
+if (!isNullOrUndefined(textbox) && !isNullOrUndefined(searchBtn)) {
+	var inputDomElem = document.getElementById(textbox['_saltTbi_Experimental'] + textbox.getId());
+
+	if (inputDomElem.onkeydown === null) {
+		inputDomElem.onkeydown = onKeyDownEventHandler;
+	}
+}
+
+/*----------------------------------------------------------------------------*/
+
+function onKeyDownEventHandler(ev) {
+	if (ev.keyCode === 13) {
+		aras.evalMethod('ES_ShowSearchPage');
+	} else {
+		if (this.value.length === 0) {
+			//if the 'clear_criteria_button' button is displayed then hide it, otherwise do nothing
+			if (searchBtn['_item_Experimental'].style === '') {
+				toolbarApplet.hideItem('com.aras.innovator.mwt_es_clear_criteria_button');
+			}
+		} else {
+			//if the 'clear_criteria_button' button is hidden then show it, otherwise do nothing
+			if (searchBtn['_item_Experimental'].style !== '') {
+				toolbarApplet.showItem('com.aras.innovator.mwt_es_clear_criteria_button');
+			}
+		}
+	}
+}
+
+function isNullOrUndefined(obj) {
+	return ((typeof(obj) === 'undefined') || (obj === null));
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>ES_OnSearchTextChanged</name>
+ </Item>
+</AML>

@@ -1,0 +1,11 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="161A4FBCB04C4C348192C72C9AB0A2E5" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/UpdateActivity.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <on_click_handler keyed_name="cui_default_inbasket_onVote" type="Method">D63815EA72874687B9990626F53DE276</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwt_inbasket_vote" type="Method">20A70495595743A780F370487E7F3288</on_init_handler>
+  <tooltip_template xml:lang="en">Update the Activity</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_inbasket_toolbar_Vote</name>
+ </Item>
+</AML>

@@ -1,0 +1,35 @@
+﻿<AML>
+ <Item type="Method" id="6D3C416E061C4DD186BE499924BF992C" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var hidden = true;
+var canExecute = true;
+if (inArgs.isReinit && inArgs.control && inArgs.control.additionalData) {
+	var additionalData = JSON.parse(inArgs.control.additionalData);
+	var topWnd = aras.getMostTopWindowWithAras();
+	if (topWnd.main && topWnd.main.work && topWnd.main.work.grid) {
+		var workFrame = topWnd.main.work;
+		var itemIds = workFrame.grid.getSelectedItemIds();
+		if (itemIds.length === 1 && workFrame.currQryItem) {
+			var currentQueryItemResult = workFrame.currQryItem.getResult();
+			var itemInGrid = currentQueryItemResult.selectSingleNode('Item[@id="' + itemIds[0] + '"]');
+			var itemTypeNode = itemInGrid.selectSingleNode('itemtype');
+			if (itemTypeNode && itemTypeNode.text) {
+				var typeId = itemTypeNode.text;
+				hidden = additionalData.itemTypeId !== typeId;
+			}
+		}
+	}
+
+	canExecute = aras.canInvokeActionImpl(additionalData.canExecuteMethodName, additionalData.location);
+	// If CUI Location is not 'MainWindowMainMenu', visibility should be calculated based on canInvokeAction results.
+	if (additionalData.cuiLocation != 'MainWindowMainMenu') {
+		hidden = !canExecute;
+	}
+}
+
+return {'cui_invisible': hidden, 'cui_disabled': !canExecute};
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_init_inbasket_action_menu</name>
+ </Item>
+</AML>

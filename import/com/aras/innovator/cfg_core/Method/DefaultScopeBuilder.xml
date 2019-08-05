@@ -1,0 +1,126 @@
+﻿<AML>
+ <Item type="Method" id="63C8B193F48E4424A4E05DF16794040F" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[//MethodTemplateName=CSharp:Aras.Server.Core.Configurator;
+		private List<string> dependensIds { get; set; }
+		public override Scope BuildScope()
+		{
+			dependensIds = new List<string>();
+
+			Innovator innovator = new Innovator(this.IomConnection);
+			string scopeReaderAml = "<Item type=\"cfg_Scope\" action=\"get\" select=\"label\" id=\"" + System.Security.SecurityElement.Escape(ScopeItem.getID()) + "\">" +
+                                        "<Relationships>" +
+                                        "  <Item type=\"cfg_ScopeVariable\" action=\"get\" select=\"related_id\">" +
+                                        "    <related_id>" +
+                                        "     <Item type=\"cfg_Variable\" action=\"get\" select=\"label,data_type,enum_id\">" +
+                                        "      <enum_id>" +
+                                        "      <Item type=\"cfg_Enum\" action=\"get\" select=\"data_type,label\">" +
+                                        "        <Relationships>" +
+                                        "        <Item type=\"cfg_NamedConstant\" action=\"get\" select=\"label,int_value,date_value,string_value\"></Item>" +
+                                        "        </Relationships>" +
+                                        "        </Item>" +
+                                        "      </enum_id>" +
+                                        "      </Item>" +
+                                        "    </related_id>" +
+                                        "  </Item>" +
+                                        "  <Item type=\"cfg_ScopeRule\" action=\"get\" select=\"related_id\">" +
+                                        "  <related_id>" +
+                                        "    <Item type=\"cfg_Rule\" action=\"get\" select=\"label,definition\"></Item>" +
+                                        "    </related_id>" +
+                                        "  </Item>" +
+                                        "  </Relationships>" +
+                                        "</Item>";
+			Item requestItem = innovator.newItem();
+			requestItem.loadAML(scopeReaderAml);
+			requestItem = requestItem.apply();
+			if (requestItem.isError())
+			{
+			    throw new InnovatorServerException(requestItem.getErrorString());
+			}
+
+			Scope builtScope = new Scope { Id = requestItem.getID(), Name = requestItem.getProperty("label") };
+
+			Item scopeVariableItems = requestItem.getRelationships("cfg_ScopeVariable");
+			for(int i = 0, scopeVariableItemsCount = scopeVariableItems.getItemCount(); i < scopeVariableItemsCount; i++)
+			{
+				Item scopeVariableItem = scopeVariableItems.getItemByIndex(i);
+
+				Item variableItem = scopeVariableItem.getRelatedItem();
+				DataType variableDataType;
+				System.Enum.TryParse(variableItem.getProperty("data_type"), out variableDataType);
+				Variable variable = new Variable (variableDataType) { Id = variableItem.getID(), Name = variableItem.getProperty("label")};
+				builtScope.VariableList.Add(variable);
+
+				Item enumItem = variableItem.getPropertyItem("enum_id");
+				DataType enumDataType;
+				System.Enum.TryParse(enumItem.getProperty("data_type"), out enumDataType);
+				Aras.Server.Core.Configurator.Enum variableEnum  = new Aras.Server.Core.Configurator.Enum (enumDataType) { Id = enumItem.getID(), Name = enumItem.getProperty("label") };
+
+				Item ncItems = enumItem.getRelationships("cfg_NamedConstant");
+				for(int j = 0, ncItemsCount = ncItems.getItemCount(); j < ncItemsCount; j++)
+				{
+					Item ncItem = ncItems.getItemByIndex(j);
+					if (enumDataType == DataType.String)
+					{
+						variableEnum.AddNamedConstant(ncItem.getID(), ncItem.getProperty("label"), ncItem.getProperty("string_value"));
+					}
+					else if (enumDataType == DataType.Int)
+					{
+						int value;
+						int.TryParse(ncItem.getProperty("int_value"), out value);
+						variableEnum.AddNamedConstant(ncItem.getID(), ncItem.getProperty("label"), value);
+					}
+					else if (enumDataType == DataType.DateTime)
+					{
+						DateTime value;
+						DateTime.TryParse(ncItem.getProperty("date_value"), out value);
+						variableEnum.AddNamedConstant(ncItem.getID(), ncItem.getProperty("label"), value);
+					}
+					dependensIds.Add(variableEnum.NamedConstantList.Last().Id);
+				}
+				variable.Enum = variableEnum;
+
+				dependensIds.Add(variable.Id);
+				dependensIds.Add(variable.Enum.Id);
+			}
+
+			Item scopeRuleItems = requestItem.getRelationships("cfg_ScopeRule");
+			for(int i = 0, scopeRuleItemsCount = scopeRuleItems.getItemCount(); i < scopeRuleItemsCount; i++)
+			{
+				Item scopeRuleItem = scopeRuleItems.getItemByIndex(i);
+				Item ruleItem = scopeRuleItem.getRelatedItem();
+				string ruleDefinition = ruleItem.getProperty("definition");
+				XmlDocument ruleDefinitionXml = XML.CreateNewXMLDocument();
+				ruleDefinitionXml.PreserveWhitespace = false;
+				if (!string.IsNullOrEmpty(ruleDefinition))
+				{
+					ruleDefinitionXml.LoadXml(ruleDefinition);
+				}
+				Aras.Server.Core.Configurator.Rule rule = new Aras.Server.Core.Configurator.Rule { Id = ruleItem.getID(), Name = ruleItem.getProperty("label"), Definition = ExpressionConverter.Instance.FromXml(ruleDefinitionXml.DocumentElement) };
+
+				builtScope.RuleList.Add(rule);
+				dependensIds.Add(rule.Id);
+			}
+			return builtScope;
+		}
+
+	    public override ArrayList GetCustomKey()
+		{
+			return new ArrayList {
+				ScopeItem.getID(),
+			};
+		}
+
+		public override string[] GetGuidsItemDependsOn()
+		{
+			return dependensIds.ToArray();
+		}
+
+		public override List<string> GetItemTypeNamesItemDependsOn()
+		{
+			return new List<string> {};
+		}]]></method_code>
+  <method_type>C#</method_type>
+  <name>DefaultScopeBuilder</name>
+ </Item>
+</AML>

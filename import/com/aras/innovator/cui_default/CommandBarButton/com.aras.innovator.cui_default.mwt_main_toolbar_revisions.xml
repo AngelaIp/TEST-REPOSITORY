@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="A333670A43EB40F4AAA9876D4A5CC821" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/ViewRevisions.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <label xml:lang="en">All Revs</label>
+  <on_click_handler keyed_name="cui_default_mwt_onRevisions" type="Method">2577332C38044A48AB2B5D6852F79DE7</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwt_revisions" type="Method">5F89703A22D54C5183CAFF0A9079F441</on_init_handler>
+  <tooltip_template xml:lang="en">View Revisions for Item</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_main_toolbar_revisions</name>
+ </Item>
+</AML>

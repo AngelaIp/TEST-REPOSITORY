@@ -1,0 +1,68 @@
+﻿<AML>
+ <Item type="Method" id="6B1F751A3030479FBA27FFDB12D86F2E" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[	Innovator inn = this.getInnovator();
+	return Validate(inn, CCO.ErrorLookup);
+}
+
+internal Item Validate(Innovator innovator, Aras.Server.Core.ErrorLookup errorLookup) 
+{
+	var thisItem = this.newItem("dr_RelationshipFamily", "get");
+	thisItem.setID(this.getID());
+	thisItem.setAttribute("idlist", this.getAttribute("idlist"));
+	thisItem.setAttribute("select", "id, query_definition_id");
+	thisItem = thisItem.apply();
+
+	var derivedRelatioshipFamily = innovator.newItem("dr_RelationshipFamily", "get");
+	derivedRelatioshipFamily.setID(thisItem.getID());
+	derivedRelatioshipFamily.setAttribute("select", "id, query_definition_id");
+	derivedRelatioshipFamily = derivedRelatioshipFamily.apply();
+	if (derivedRelatioshipFamily.isError())
+	{
+		return derivedRelatioshipFamily;
+	}
+	var queryDefinitionId = derivedRelatioshipFamily.getProperty("query_definition_id");
+	var queryDefinitionItem = innovator.newItem();
+	var queryAml = @"<AML>
+<Item action='get' id='{0}' select='id' type='qry_QueryDefinition'>
+<Relationships>
+	<Item type='qry_QueryItem' action='get' select='filter_xml'>
+		<or>
+			<filter_xml condition='like'>%&lt;property name=""QB_query_reference_path"" /&gt;%</filter_xml>
+			<filter_xml condition='like'>%&lt;property name=""QB_query_reference_ref_id"" /&gt;%</filter_xml>
+			<filter_xml condition='like'>%&lt;count&gt;%</filter_xml>
+		</or>
+	</Item>
+	<Item type='qry_QueryReference' action='get' select='filter_xml'>
+		<or>
+			<filter_xml condition='like'>%&lt;property name=""QB_query_reference_path"" /&gt;%</filter_xml>
+			<filter_xml condition='like'>%&lt;property name=""QB_query_reference_ref_id"" /&gt;%</filter_xml>
+			<filter_xml condition='like'>%&lt;count&gt;%</filter_xml>
+		</or>
+	</Item>
+</Relationships>
+</Item>
+</AML>";
+	queryDefinitionItem.loadAML(
+		string.Format(CultureInfo.InvariantCulture, queryAml, System.Security.SecurityElement.Escape(queryDefinitionId)));
+	queryDefinitionItem = queryDefinitionItem.apply();
+	if (queryDefinitionItem.isError())
+	{
+		return queryDefinitionItem;
+	}
+
+	var qryItemWithInvalidCondition = queryDefinitionItem.getItemsByXPath("//Relationships/Item[@type=\"qry_QueryItem\"]");
+	var qryReferenceWithInvalidCondition = queryDefinitionItem.getItemsByXPath("//Relationships/Item[@type=\"qry_QueryReference\"]");
+
+	if (qryItemWithInvalidCondition.getItemCount() > 0 || qryReferenceWithInvalidCondition.getItemCount() > 0)
+	{
+		string message = string.Format(
+			CultureInfo.InvariantCulture,
+			errorLookup.Lookup("dr_InvalidConditionInQueryDefinition"));
+		return innovator.newError(message);
+	}
+	return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>dr_ValidateConditionInQD</name>
+ </Item>
+</AML>

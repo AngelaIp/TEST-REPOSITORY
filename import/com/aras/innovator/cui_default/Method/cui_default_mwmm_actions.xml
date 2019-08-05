@@ -1,0 +1,48 @@
+﻿<AML>
+ <Item type="Method" id="90BB344C388D431BB692CBA3C2DB7443" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var topWindow = aras.getMostTopWindowWithAras(window);
+var workerFrame = topWindow.work;
+var itemID = workerFrame.grid ? workerFrame.grid.getSelectedId() : '';
+var itemIDs = workerFrame.grid ? workerFrame.grid.getSelectedItemIds() : [];
+var itemTypeName = workerFrame.itemTypeName || '';
+var cmdID = inArgs.item ? inArgs.item.id : inArgs.commandId;
+var emptyID = '                                ';
+
+cmdID = cmdID.replace(topWindow.menu.menuApplet.get('default_package_name_prefix'), '');
+
+var cmdHandlerName = 'on' + (cmdID.substr(0, 1).toUpperCase() + cmdID.substr(1)) + 'Command';
+var cmdHandler = workerFrame[cmdHandlerName] || topWindow.menu[cmdHandlerName];
+if (cmdHandler) {
+	cmdHandler(cmdID);
+	return;
+}
+
+var actID = cmdID.split(':');
+var itID = actID[2];
+actID = actID[1];
+
+var selectProp = 'name,method(name,method_type,method_code),type,target,location,body,on_complete(name,method_type,method_code),item_query';
+var action = topWindow.aras.getItemFromServer('Action', actID, selectProp);
+if (action) {
+	var actType = action.getProperty('type');
+
+	if (itemIDs.length === 0 || 'generic' === actType || actType === 'itemtype') {
+		if (itID === emptyID) {
+			topWindow.aras.invokeAction(action.node, undefined, '');
+		} else {
+			topWindow.aras.invokeAction(action.node, itID, '');
+		}
+	} else {
+		var count = itemIDs.length;
+		for (var i = 0; i < count; i++) {
+			var itemID = itemIDs[i];
+			topWindow.aras.invokeAction(action.node, itID, itemID);
+		}
+	}
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_default_mwmm_actions</name>
+ </Item>
+</AML>

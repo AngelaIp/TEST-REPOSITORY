@@ -1,0 +1,216 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="7A66359CAEE24DDDB428C9AF99E45090" action="add">
+  <additional_data />
+  <classification>Data Model</classification>
+  <location_name>MainWindowToolbar</location_name>
+  <name>com.aras.innovator.cui_default.mwt_inbasket_toolbar</name>
+  <Relationships>
+   <Item type="CommandBarSectionItem" id="3D12F8C6DA544EE4A27027D14ACFA300" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_refresh" type="CommandBarItem">3D12F8C6DA544EE4A27027D14ACFA301</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>288</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="85C6789E8F2143C1A18BD00445EEA031" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_sep_af_UnclaimActivity" type="CommandBarItem">85C6789E8F2143C1A18BD00445EEA030</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>456</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="8BFC3E4631F848C5B1426D0CC7F405E0" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_ViewAttached" type="CommandBarItem">8BFC3E4631F848C5B1426D0CC7F405EB</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="B645122BC25F426597E2B5A415DD2AB0" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_EditAttached" type="CommandBarItem">B645122BC25F426597E2B5A415DD2ABC</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>520</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="0BA5A9EEA71F4E45888478BB86BB5640" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_ViewProcess" type="CommandBarItem">0BA5A9EEA71F4E45888478BB86BB5649</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>528</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="659239170E21453B8ACE0B71917A4730" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_sep_af_ViewProcess" type="CommandBarItem">659239170E21453B8ACE0B71917A4737</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>536</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="161A4FBCB04C4C348192C72C9AB0A2E0" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_Vote" type="CommandBarItem">161A4FBCB04C4C348192C72C9AB0A2E5</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>544</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="2473D1BD790C42138245B7653F4D1070" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_sep_af_Vote" type="CommandBarItem">2473D1BD790C42138245B7653F4D107E</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>552</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="CA6DC9A4371F4280AB5CFADD50EA5430" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_Print" type="CommandBarItem">CA6DC9A4371F4280AB5CFADD50EA543F</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>560</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="B3BACE7BE0E848208B03E22E1FC43D20" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_sep_af_Print" type="CommandBarItem">B3BACE7BE0E848208B03E22E1FC43D2E</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>568</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="72F0645E601845638165DD692D7DC10A" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_new" type="CommandBarItem">5D8BD509914244229219E91094DACFB1</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>1344</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="F308DB4864514961BDA384918BC6AC9A" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_view" type="CommandBarItem">73475464CDF34506AFE37311949965CF</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>1472</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="508E72770636479B8056E9C3541830B7" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_edit" type="CommandBarItem">7EFB7EF559FE4514AE56F76A476DB4A2</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>1600</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="E1570093F1A34F27A37169C0F266D117" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_save" type="CommandBarItem">C5506015E6624632B7E6643FD0890BEB</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>1728</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="16E0224FFF3F4043ACC488691D391435" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_saveAs" type="CommandBarItem">D39591F23C584E77B41B6FB7245B2F5F</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>1856</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="85475775283F40FF8800A3C93C9B5112" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_delete" type="CommandBarItem">35A0ABA759C24702A4E15EDA60291543</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>1984</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="D2D63C0676104576A2EE5D140CBF3506" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_sep_af_delete" type="CommandBarItem">6C688B3C89914051B7086A76A86301CB</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2112</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="630E5DF42430478DB7ECB8FC0100C665" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_print" type="CommandBarItem">2C4DCC0D79F542CAAF01827E9482B8EB</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2240</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="5D1153D98FA1489E97DE061D37B983C4" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_sep_af_print" type="CommandBarItem">CC234F1E2C1F489A920A7623BD6B5165</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2368</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="148C0DD0EBE74F7787DE01F36191E014" action="add">
+    <action>Replace</action>
+    <alternate keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_ClaimActivity" type="CommandBarItem">0F25215428A846F3BE050A684D635748</alternate>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_lock" type="CommandBarItem">1992B00BEAB5479FADD6751B074DEDB2</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2496</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="4902A74B846749A79DF931B92713AE85" action="add">
+    <action>Replace</action>
+    <alternate keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_UnclaimActivity" type="CommandBarItem">85F38FD740B144F3908DC1EDFC546D27</alternate>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_unlock" type="CommandBarItem">1EF72C8B7EDE49058238438FDCF3628B</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2624</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="DBD6F7DE7B73473B94D68683AC948E9D" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_undo" type="CommandBarItem">DAEBD04C5309442CB55062D2C96B091E</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2752</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="9B7EF5564E0D4A11910BB37665A0BC58" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_sep_af_undo" type="CommandBarItem">1B98E75D29E14030BF8D53CAF03F5774</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>2880</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="D54B3B871909497E8B2E143A3B793F97" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_promote" type="CommandBarItem">C8871ADB0C67428E9EF4D1ABED75968D</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>3008</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="BA9BD0DE62A54194BED7C801ED2491C4" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_revisions" type="CommandBarItem">A333670A43EB40F4AAA9876D4A5CC821</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>3136</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="45DE0E5A90A9417AA0778A1F3F343E86" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_sep_af_revisions" type="CommandBarItem">20432A23698740C1ACB3F765A5AC0449</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>3264</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="62A549335B7645049ADBFB594EA704F6" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_help_context" type="CommandBarItem">53E0784A714546FF9A3C770FA2BD95F2</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>3392</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="82CDF4EB024345DC92730D4D8033ACE0" action="add">
+    <action>Remove</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_sep_af_help_context" type="CommandBarItem">F42EEFBCB99C4E728658A96A7921885A</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>3520</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="18F2CCDC281649CC8C267B0936408872" action="add">
+    <action>Skip</action>
+    <alternate keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar_Logout" type="CommandBarItem">3DF2B4201FF345B681D2A79F4C34FFDB</alternate>
+    <related_id keyed_name="com.aras.innovator.cui_default.mwt_main_toolbar_Logout" type="CommandBarItem">3B6EAD877D3B4FABB156BA6D321C52C1</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>3648</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.mwt_inbasket_toolbar" type="CommandBarSection">7A66359CAEE24DDDB428C9AF99E45090</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="CD1142BD3F954162AF4E720E44DA24BC" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.revisions" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onRevisions" type="Method">2577332C38044A48AB2B5D6852F79DE7</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Revisions</name>
+ </Item>
+</AML>

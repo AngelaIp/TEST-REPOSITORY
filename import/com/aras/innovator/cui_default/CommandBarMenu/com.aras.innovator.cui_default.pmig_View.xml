@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="83C93103439243ADB2A8472FC743EB1B" action="add">
+  <additional_data>{ "cui_resource_key": "common.view" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onViewCommand" type="Method">74217FBDC2554604A543BDEFA8A64ED5</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_View</name>
+ </Item>
+</AML>

@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="F96EBC3B58A1435198B590D50E4554F0" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.purge" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwmm_onPurge" type="Method">0AF14F6A40694EA487FBB1631E82F68C</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Purge</name>
+ </Item>
+</AML>

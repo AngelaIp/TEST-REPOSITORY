@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="ITPresentationConfiguration" id="67FD0B2707C046839684C30591D90084" action="add">
+  <client>js</client>
+  <related_id keyed_name="F2BAFC3F368B4EDE968406BFDB6597AC" type="PresentationConfiguration">
+   <Item type="PresentationConfiguration" id="F2BAFC3F368B4EDE968406BFDB6597AC" action="add">
+    <secondary_icon>../Images/PartOff.svg</secondary_icon>
+    <style>background-color: rgba(137, 89, 171, 0.65);</style>
+    <name />
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="Part" type="ItemType" name="Part">4F1AC04A2B484F3ABA4E20DB63808A88</source_id>
+ </Item>
+</AML>

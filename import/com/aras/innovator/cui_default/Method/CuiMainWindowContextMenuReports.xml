@@ -1,0 +1,87 @@
+﻿<AML>
+ <Item type="Method" id="75233DE96E4A45E1AF4FE9C1F318B26C" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[	Item menuItems = null;
+
+	//ItemType and Item reports
+	string itemTypeId = this.getProperty("item_type_id");
+	if (!string.IsNullOrEmpty(itemTypeId))
+	{
+		Item items;
+		Item itemReports = this.newItem("Item Report", "get");
+		itemReports.setProperty("source_id", itemTypeId);
+		Item relReports = this.newItem("Report", "get");
+		relReports.setAttribute("select", "name,label");
+		relReports.setProperty("type", "item");
+		itemReports.setRelatedItem(relReports);
+		itemReports = itemReports.apply();
+		if (!itemReports.isError())
+		{
+			Item reports = itemReports.getItemsByXPath(Item.XPathResultItem + "/related_id/Item");
+			Item clickHandler = GetMethodByConfigId("6FF7BD1B2A7E4BA0B06F3ACCC6293B39");
+			items = HandleMenuButtons(reports, clickHandler, "report:{0}:{1}", itemTypeId);
+			if (items != null)
+			{
+				menuItems = AddSeparator();
+				menuItems.appendItem(items);
+			}
+		}
+	}
+
+	return menuItems ?? this.getInnovator().newResult("");
+}
+
+private Item AddSeparator()
+{
+	Item separator = this.newItem("CommandBarSeparator");
+	separator.setProperty("name", "cui_reports_sep");
+	//Id is required. Id of separator should be constant.
+	separator.setID("cui_reports_sep");
+	return separator;
+}
+
+private static Item HandleMenuButtons(Item reports, Item clickHandler, string reportTemplate, string itemTypeId)
+{
+	string clickHandlerId = clickHandler.getID();
+	string clickHandlerName = clickHandler.getProperty("name");
+	int reportsCount = reports.getItemCount();
+	if (reportsCount > 0)
+	{
+		Item cuiItems = reports.newItem();
+		for (var i = 0; i < reportsCount; i++)
+		{
+			Item currentReport = reports.getItemByIndex(i);
+			Item menu = currentReport.newItem("CommandBarMenu");
+			string reportId = currentReport.getID();
+			string reportName = string.Format(CultureInfo.InvariantCulture, reportTemplate, reportId, itemTypeId);
+			menu.setProperty("name", reportName);
+			menu.setProperty("label", currentReport.getProperty("label") ?? currentReport.getProperty("name"));
+			menu.setProperty("on_click_handler", clickHandlerId);
+			menu.setPropertyAttribute("on_click_handler", "keyed_name", clickHandlerName);
+			menu.setPropertyAttribute("on_click_handler", "type", "Method");
+
+			menu.setProperty("action", "Add");
+			menu.setID(reportId);
+			menu.removeAttribute("isNew");
+			menu.removeAttribute("isTemp");
+			cuiItems.appendItem(menu);
+		}
+
+		// newItem() is creates empty node. It's should be deleted
+		cuiItems.removeItem(cuiItems.getItemByIndex(0));
+		return cuiItems;
+	}
+
+	return null;
+}
+
+private Item GetMethodByConfigId(string configId)
+{
+	Item method = this.newItem("Method", "get");
+	method.setAttribute("select", "id,name");
+	method.setProperty("config_id", configId);
+	return method.apply();]]></method_code>
+  <method_type>C#</method_type>
+  <name>CuiMainWindowContextMenuReports</name>
+ </Item>
+</AML>

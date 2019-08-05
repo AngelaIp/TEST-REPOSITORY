@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="ITPresentationConfiguration" id="505B3C985635465DBDA0A115329B1E37" action="add">
+  <client>js</client>
+  <related_id keyed_name="D96BEA09D42C43DCB7D8FD25DCE6F668" type="PresentationConfiguration">
+   <Item type="PresentationConfiguration" id="D96BEA09D42C43DCB7D8FD25DCE6F668" action="add">
+    <secondary_icon>../Images/ECNOff.svg</secondary_icon>
+    <style>background-color: rgba(0, 114, 198, 0.9);</style>
+    <name />
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="ECN" type="ItemType" name="ECN">85F86794FACF42599F07019F7BEA1D46</source_id>
+ </Item>
+</AML>

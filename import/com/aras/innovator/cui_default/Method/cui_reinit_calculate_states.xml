@@ -1,0 +1,160 @@
+﻿<AML>
+ <Item type="Method" id="75945EAB48344F0EB9106EAB141C8294" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var eventType = inArgs.eventType;
+var eventState = {};
+var topWindow = aras.getMostTopWindowWithAras(window);
+var workerFrame = topWindow.work;
+var grid = workerFrame.grid;
+if (grid && eventType != 'SelectInToc') {
+	var itemTypeName;
+	var itemIds = grid.getSelectedItemIds();
+	var itemIdsCount = itemIds.length;
+	var itemId = grid['getSelectedId_Experimental']();
+	var itemNd = null;
+	if (workerFrame.currQryItem) {
+		var queryItem = workerFrame.currQryItem.getResult();
+		var itemNd = queryItem.selectSingleNode('Item[@id="' + itemId + '"]') || aras.getFromCache(itemId);
+	}
+
+	var userID = aras.getUserID();
+	var lockedBy = aras.getItemProperty(itemNd, 'locked_by_id');
+	var isTemp = aras.isTempEx(itemNd) ? true : false;
+	var isDirty = aras.isDirtyEx(itemNd) ? true : false;
+	var discoverOnlyFlg = itemNd && itemNd.getAttribute('discover_only') == '1';
+	var editFlg = (isTemp || lockedBy == userID) && !discoverOnlyFlg;
+	var saveFlg = editFlg && aras.getFromCache(itemId) !== null;
+	var viewFlg = lockedBy != userID && itemIdsCount == 1 && !discoverOnlyFlg;
+	var purgeFlg = isTemp || lockedBy === '';
+	var canBeLockedFlg = aras.uiItemCanBeLockedByUser(itemNd, workerFrame.isRelationshipIT, workerFrame['use_src_accessIT']);
+
+	// Special logic for Inbasket Task
+	if (workerFrame.itemTypeName == 'InBasket Task') {
+		canBeLockedFlg = canBeLockedFlg && (aras.getItemProperty(itemNd, 'my_assignment') === '1');
+		itemTypeName = aras.getItemTypeName(aras.getItemProperty(itemNd, 'itemtype'));
+		if (itemTypeName === 'Workflow Task') {
+			canBeLockedFlg = canBeLockedFlg && (aras.getItemProperty(itemNd, 'status').toLowerCase() === 'active');
+		}
+	}
+
+	var unlockFlg = itemNd && (lockedBy == userID || (!isTemp && lockedBy !== '' && aras.isAdminUser()));
+	var canAddFlg = workerFrame['can_addFlg'];
+	var copyFlg = itemIdsCount == 1 && !isTemp && canAddFlg;
+	var undoFlg = !isTemp && isDirty;
+	var add2desktopFlg = !isTemp;
+
+	var copy2clipboardFlg = aras.getItemProperty(workerFrame.currItemType, 'is_relationship') == '1' &&
+		aras.getItemProperty(workerFrame.currItemType, 'is_dependent') != '1' &&
+		!isFunctionDisabled(workerFrame.itemTypeName, 'Copy');
+	var pasteFlg = !aras.clipboard.isEmpty() && (isTemp || lockedBy == userID) &&
+		!isFunctionDisabled(workerFrame.itemTypeName, 'Paste');
+	var pasteSpecialFlg = !aras.clipboard.isEmpty() && (isTemp || lockedBy == userID) &&
+		!isFunctionDisabled(workerFrame.itemTypeName, 'Paste Special');
+	var showClipboardFlg = !aras.clipboard.isEmpty();
+	var addItem2PackageFlg = (itemId === '' || isTemp) ? false : true;
+
+	if (itemIdsCount > 1) {
+		var idsArray = [];
+		var itemNds;
+		var tmpItemNd;
+		var i;
+
+		for (i = 0; i < itemIdsCount; i++) {
+			idsArray.push('@id=\'' + itemIds[i] + '\'');
+		}
+
+		itemNds = queryItem.selectNodes('Item[' + idsArray.join(' or ') + ']');
+		for (i = 0; i < itemNds.length; i++) {
+			tmpItemNd = itemNds[i];
+			itemId = aras.getItemProperty(tmpItemNd, 'id');
+
+			if (!tmpItemNd) {
+				break;
+			}
+
+			lockedBy = aras.getItemProperty(tmpItemNd, 'locked_by_id');
+			isTemp = aras.isTempEx(tmpItemNd);
+			isDirty = aras.isDirtyEx(tmpItemNd);
+
+			editFlg = editFlg && (isTemp || lockedBy == userID);
+			saveFlg = saveFlg && editFlg && aras.getFromCache(itemId);
+			purgeFlg = purgeFlg && (isTemp || lockedBy === '');
+			canBeLockedFlg = canBeLockedFlg && aras.uiItemCanBeLockedByUser(tmpItemNd, workerFrame.isRelationshipIT, workerFrame['use_src_accessIT']);
+
+			// Special logic for Inbasket Task
+			if (workerFrame.itemTypeName == 'InBasket Task') {
+				canBeLockedFlg = canBeLockedFlg && (aras.getItemProperty(tmpItemNd, 'my_assignment') === '1') && !isFunctionDisabled(itemTypeName, 'Lock');
+				if (itemTypeName === 'Workflow Task') {
+					canBeLockedFlg = canBeLockedFlg && (aras.getItemProperty(tmpItemNd, 'status').toLowerCase() === 'active');
+				}
+			}
+
+			undoFlg = undoFlg && !isTemp && isDirty;
+
+			unlockFlg = unlockFlg && (lockedBy == userID || (!isTemp && lockedBy !== '' && aras.isAdminUser()));
+			add2desktopFlg = add2desktopFlg & !isTemp;
+			pasteFlg = pasteFlg && !aras.clipboard.isEmpty() && (isTemp || lockedBy == userID);
+			pasteSpecialFlg = pasteSpecialFlg && !aras.clipboard.isEmpty() && (isTemp || lockedBy == userID);
+			addItem2PackageFlg = (itemId === '' || isTemp) ? false : true;
+		}
+
+		if (pasteFlg) {
+			pasteFlg = aras.isLCNCompatibleWithIT(workerFrame.itemTypeID);
+		}
+	}
+
+	eventState = {
+		isDiscoverOnly: discoverOnlyFlg,
+		isEdit: editFlg,
+		isSave: saveFlg,
+		isView: viewFlg,
+		isPurge: purgeFlg,
+		canBeLocked: canBeLockedFlg,
+		isLocked: lockedBy,
+		isUnlock: unlockFlg,
+		isCanAdd: canAddFlg,
+		isCopy: copyFlg,
+		isUndo: undoFlg,
+		isAdd2desktop: add2desktopFlg,
+		isCopy2clipboard: copy2clipboardFlg,
+		isPaste: pasteFlg,
+		isPasteSpecial: pasteSpecialFlg,
+		isShowClipboard: showClipboardFlg,
+		isAddItem2Package: addItem2PackageFlg,
+		isTemp: isTemp
+	};
+} else {
+	var canAdd = false;
+	if (topWindow.itemType) {
+		var isDependentIT = (topWindow.itemType.getProperty('is_dependent') == '1');
+		var itemTypeId = topWindow.itemType.getID();
+		canAdd = !isDependentIT && aras.getPermissions('can_add', itemTypeId);
+	}
+	eventState = {
+		isDiscoverOnly: false,
+		isEdit: false,
+		isSave: false,
+		isView: false,
+		isPurge: false,
+		canBeLocked: false,
+		isLocked: false,
+		isUnlock: false,
+		isCanAdd: canAdd,
+		isCopy: false,
+		isUndo: false,
+		isAdd2desktop: false,
+		isCopy2clipboard: false,
+		isPaste: false,
+		isPasteSpecial: false,
+		isShowClipboard: false,
+		isAddItem2Package: false,
+		isTemp: false
+	};
+}
+
+return eventState;
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_reinit_calculate_states</name>
+ </Item>
+</AML>

@@ -1,0 +1,39 @@
+﻿<AML>
+ <Item type="Form" id="EB60D7AA66024CC9A8902B8E1D9B96EE" action="add">
+  <category_form>0</category_form>
+  <height>259</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>784</width>
+  <name>CAD Part</name>
+  <Relationships>
+   <Item type="Body" id="718B77DDE2C44AE886A82CFE9044A89E" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="CAD Part" type="Form">EB60D7AA66024CC9A8902B8E1D9B96EE</source_id>
+    <Relationships>
+     <Item type="Field" id="38E32C7CE3DD4DBABD7A28C251747FBA" action="add">
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <html_code><![CDATA[<span id='ITEM_INFO_INTERNAL_SPAN'/>
+<script>
+  populate_ITEM_INFO_INTERNAL_SPAN = function()
+  {
+    document.getElementById('ITEM_INFO_INTERNAL_SPAN').innerHTML = top.aras.uiGetItemInfoTable(document.itemType);
+  }
+  window.addEventListener('load', populate_ITEM_INFO_INTERNAL_SPAN);
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="718B77DDE2C44AE886A82CFE9044A89E" type="Body">718B77DDE2C44AE886A82CFE9044A89E</source_id>
+      <tab_stop>0</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>item_info</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

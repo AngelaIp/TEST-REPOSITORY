@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenuCheckbox" id="5DB2AEB143FA44E0A2735BE023210E93" action="add">
+  <additional_data />
+  <label xml:lang="en">Save Requests</label>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_admin_menu" type="CommandBarMenu">C0F48EBE314E4BFFA3EC2960A57E5249</parent_menu>
+  <name>com.aras.innovator.cui_default.twmm_soap_save</name>
+ </Item>
+</AML>

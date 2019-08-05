@@ -1,0 +1,27 @@
+﻿<AML>
+ <Item type="Method" id="108036C70B4B411B8E4A67867DFE0279" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[document.addEventListener('onSelectSidebarTab', function(e) {
+	var viewerMenuId = 'com.aras.innovator.cui_default.twmm_viewer_menu';
+	var viewerMenu = dijit.byId(viewerMenuId);
+	if (!viewerMenu) {
+		return;
+	}
+	switch (e.selectedTabType) {
+		case 'HOOPSViewer':
+		case 'PDFViewer':
+		case 'ImageViewer':
+		case 'AdvancedImageViewer':
+			dijit.byId(viewerMenuId).domNode.classList.remove('not_displayed');
+			break;
+
+		default:
+			dijit.byId(viewerMenuId).domNode.classList.add('not_displayed');
+			break;
+	}
+});
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_default_viewerMenuInit</name>
+ </Item>
+</AML>

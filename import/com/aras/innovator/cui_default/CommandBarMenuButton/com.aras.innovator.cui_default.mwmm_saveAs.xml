@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="FE2BA8ECE1AB4BD390B722E30099C083" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Save As</label>
+  <on_click_handler keyed_name="cui_default_mwt_onSaveAsCommand" type="Method">2F93F26BB1C4473F97F40281F4AD63CC</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_file_menu" type="CommandBarMenu">2B1F770C624449A3863818C8D4EF414F</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_saveAs</name>
+ </Item>
+</AML>

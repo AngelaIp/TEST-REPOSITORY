@@ -1,0 +1,146 @@
+﻿<AML>
+ <Item type="Method" id="B438C9A71B684C76B9EA8BDA094953D7" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[	Item menuItems = null;
+	// "30977B697C514ED1A56ED3492EB8971D" - id of "cui_init_action_menu_button" client method
+	Item initHandler = GetMethodByConfigId("30977B697C514ED1A56ED3492EB8971D");
+	Item clickHandler = GetMethodByConfigId("90BB344C388D431BB692CBA3C2DB7443");
+	Item genericActions = this.newItem("Action", "get");
+	genericActions.setAttribute("select", "name,label,can_execute,location");
+	genericActions.setProperty("type", "generic");
+	genericActions = genericActions.apply();
+	if (!genericActions.isError())
+	{
+		string actionTemplate = "action:{0}:                                ";
+		menuItems = HandleMenuButtons(genericActions, actionTemplate, string.Empty, "generic", initHandler, clickHandler);
+	}
+
+	//ItemType and Item actions
+	string itemTypeId = this.getProperty("item_type_id");
+	if (!string.IsNullOrEmpty(itemTypeId))
+	{
+		Item itemActions = this.newItem("Item Action", "get");
+		itemActions.setProperty("source_id", itemTypeId);
+		Item relActions = this.newItem("Action", "get");
+		relActions.setAttribute("select", "name,label,type,can_execute,location");
+		Item logicOr = relActions.newOR();
+		logicOr.setProperty("type", "itemtype");
+		logicOr.setProperty("type", "item");
+		itemActions.setRelatedItem(relActions);
+		itemActions = itemActions.apply();
+		if (!itemActions.isError())
+		{
+			Item actions = itemActions.getItemsByXPath(Item.XPathResultItem + "/related_id/Item");
+			if (actions.getItemCount() > 0)
+			{
+				AddSeparator(menuItems, "cui_after_genericactions_sep", "generic", initHandler);
+				Item items = HandleMenuButtons(actions, "action:{0}:{1}", itemTypeId, null, initHandler, clickHandler);
+				if (items != null)
+				{
+
+					if (menuItems != null)
+					{
+						menuItems.appendItem(items);
+					}
+					else {
+						menuItems = items;
+					}
+				}
+			}
+		}
+	}
+
+	return menuItems ?? this.getInnovator().newResult("");
+}
+
+private void AddSeparator(Item cuiItems, string sepId, string separatorType, Item initHandler)
+{
+	string initHandlerId = initHandler.getID();
+	string initHandlerName = initHandler.getProperty("name");
+	Item separator = cuiItems.newItem("CommandBarSeparator");
+	separator.setProperty("name", sepId);
+	separator.setProperty("additional_data", "{\"separatorType\": \"" + separatorType + "\" }");
+	separator.setProperty("on_init_handler", initHandlerId);
+	separator.setPropertyAttribute("on_init_handler", "keyed_name", initHandlerName);
+	separator.setPropertyAttribute("on_init_handler", "type", "Method");
+	separator.setProperty("include_events", "SelectInGrid");
+	_sortOrder += 128;
+	separator.setProperty("sort_order", _sortOrder.ToString(CultureInfo.InvariantCulture));
+	//Id is required. Id of separator should be constant. Main Menu will be refreshed at each choice of item in TOC if separator id will be random generated GUID.
+	separator.setID(sepId);
+	separator.setProperty("parent_menu", "48AD1BF9601D41BD8BF5CBCB811DA1F5");
+	cuiItems.appendItem(separator);
+}
+
+private int _sortOrder = 0;
+
+private Item HandleMenuButtons(Item actions, string actionTemplate, string itemTypeId, string type, Item initHandler, Item clickHandler)
+{
+	Item cuiItems = actions.newItem();
+	string initHandlerId = initHandler.getID();
+	string clickHandlerId = clickHandler.getID();
+	string initHandlerName = initHandler.getProperty("name");
+	string clickHandlerName = clickHandler.getProperty("name");
+	for (var i = 0; i < actions.getItemCount(); i++)
+	{
+		Item currentAction = actions.getItemByIndex(i);
+		Item menuButton = currentAction.newItem("CommandBarMenuButton");
+		string actionId = currentAction.getID();
+		string actionName = string.Format(CultureInfo.InvariantCulture, actionTemplate, actionId, itemTypeId);
+		menuButton.setProperty("name", actionName);
+		string label = currentAction.getProperty("label");
+		menuButton.setProperty("label", label ?? currentAction.getProperty("name"));
+		string actionType = type ?? currentAction.getProperty("type");
+		string canExecuteMethodName = currentAction.getPropertyAttribute("can_execute", "keyed_name");
+		string location = currentAction.getProperty("location");
+
+		// '48AD1BF9601D41BD8BF5CBCB811DA1F5' - com.aras.innovator.cui_default.mwmm_actions_menu
+		menuButton.setProperty("parent_menu", "48AD1BF9601D41BD8BF5CBCB811DA1F5");
+		menuButton.setProperty("additional_data", "{\"actionType\": \"" + actionType + "\", \"canExecuteMethodName\": \"" + canExecuteMethodName + "\", \"location\": \"" + location + "\"}");
+
+		// Need to add 'can_execute' method to Convert CAD To PDF Action, but it cann't be modified in SP.
+		// Convert CAD To PDF needs special init handler that allows to handle disabling/enbling of action depend on license
+		// Special logic for Convert CAD To PDF Action should be removed in major release.
+		if (actionId == "9F34709DE5284912A65D826624FBB9F7")
+		{
+			// '2BBAC312DCCB481CB0B16E651A73EE1E' - ConvertCadToPdfInitHandler
+			Item cadToPdfInitHandler = GetMethodByConfigId("2BBAC312DCCB481CB0B16E651A73EE1E");
+			menuButton.setProperty("on_init_handler", cadToPdfInitHandler.getID());
+			menuButton.setPropertyAttribute("on_init_handler", "keyed_name", cadToPdfInitHandler.getProperty("name"));
+		}
+		else
+		{
+			menuButton.setProperty("on_init_handler", initHandlerId);
+			menuButton.setPropertyAttribute("on_init_handler", "keyed_name", initHandlerName);
+		}
+
+		
+		menuButton.setProperty("on_click_handler", clickHandlerId);
+		menuButton.setPropertyAttribute("on_click_handler", "keyed_name", clickHandlerName);
+		menuButton.setPropertyAttribute("on_init_handler", "type", "Method");
+		menuButton.setPropertyAttribute("on_click_handler", "type", "Method");
+		menuButton.setProperty("include_events", "SelectInGrid");
+		menuButton.setProperty("action", "Add");
+		_sortOrder += 128;
+		menuButton.setProperty("sort_order", _sortOrder.ToString(CultureInfo.InvariantCulture));
+		menuButton.setID(actionId);
+		menuButton.removeAttribute("isNew");
+		menuButton.removeAttribute("isTemp");
+		cuiItems.appendItem(menuButton);
+	}
+
+	// newItem() is creates empty node. It's should be deleted
+	cuiItems.removeItem(cuiItems.getItemByIndex(0));
+	return cuiItems;
+}
+
+private Item GetMethodByConfigId(string configId)
+{
+	Item method = this.newItem("Method", "get");
+	method.setAttribute("select", "id,name");
+	method.setProperty("config_id", configId);
+	return method.apply();]]></method_code>
+  <method_type>C#</method_type>
+  <name>CuiMainWindowMainMenuActions</name>
+ </Item>
+</AML>

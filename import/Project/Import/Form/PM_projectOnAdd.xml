@@ -1,0 +1,388 @@
+﻿<AML>
+ <Item type="Form" id="1CF50C86BD1141A9863451B7634B2F04" action="add">
+  <category_form>0</category_form>
+  <description>This form priority MUST be greater than Project Form priority.</description>
+  <height>149</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>784</width>
+  <name>PM_projectOnAdd</name>
+  <Relationships>
+   <Item type="Body" id="2A0A9404985D437D92A5E2ADF27F7B89" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="PM_projectOnAdd" type="Form">1CF50C86BD1141A9863451B7634B2F04</source_id>
+    <Relationships>
+     <Item type="Field" id="F2A604BAD42A4889A07BCE28CAA5FF83" action="add">
+      <border_width>0</border_width>
+      <display_length>114</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>date</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>right</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="date_due_target" type="Property">4A6B461C10604DF5A93A48B1192157FB</propertytype_id>
+      <sort_order>1152</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_index>5376</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>540</x>
+      <y>50</y>
+      <name>date_due_target</name>
+      <Relationships>
+       <Item type="Field Event" id="A0C13E22C7D94CADBD0280477D028BA1" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="PM_projectOnAdd_onDateChanged" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>PM_projectOnAdd_onDateChanged</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="date_due_target" type="Field">F2A604BAD42A4889A07BCE28CAA5FF83</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="CB7A850CC0BC437CA3B8CADA84060A89" action="add">
+      <border_width>0</border_width>
+      <display_length>114</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>date</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>right</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="date_start_target" type="Property">255377F0C7E044B9A28FAA34A0775017</propertytype_id>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_index>5504</tab_index>
+      <tab_stop>1</tab_stop>
+      <text_align>left</text_align>
+      <x>540</x>
+      <y>10</y>
+      <name>date_start_target</name>
+      <Relationships>
+       <Item type="Field Event" id="DFA196958106482ABB84C4F9427C53C6" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="PM_projectOnAdd_onDateChanged" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>PM_projectOnAdd_onDateChanged</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="date_start_target" type="Field">CB7A850CC0BC437CA3B8CADA84060A89</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="94CB1043F074452B9241C14194B571E6" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<span id="ITEM_INFO_INTERNAL_SPAN"/>
+<script>
+  populate_ITEM_INFO_INTERNAL_SPAN = function()
+  {
+    document.getElementById("ITEM_INFO_INTERNAL_SPAN").innerHTML = top.aras.uiDrawItemInfoTable(document.itemType,null,new Array(0));
+  }
+  window.addEventListener("load", populate_ITEM_INFO_INTERNAL_SPAN);
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>right</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1408</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>item_info</name>
+     </Item>
+     <Item type="Field" id="CD29B8801F7240F584C8E9DFD9440D80" action="add">
+      <border_width>0</border_width>
+      <display_length>114</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>right</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="name" type="Property">BDED853F8AD644689210C0688F3BD271</propertytype_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_index>1</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>290</x>
+      <y>10</y>
+      <name>name</name>
+     </Item>
+     <Item type="Field" id="7C1E7FBF075D43209253BD479508DB9D" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Name:</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1536</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>10</x>
+      <y>110</y>
+      <name>name_duplicated_label</name>
+     </Item>
+     <Item type="Field" id="0039578DF32E4D82804E4E25BC7284E7" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<span name="name_duplicated_value_inner_span"/>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>2176</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>50</x>
+      <y>110</y>
+      <name>name_duplicated_value</name>
+     </Item>
+     <Item type="Field" id="68ECC6BFA4CC45D2BC5A8AAD28CB9AAC" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Name:</label>
+      <label_position>right</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>180</x>
+      <y>10</y>
+      <name>name_label</name>
+     </Item>
+     <Item type="Field" id="9855BBF7717543FB871D2C1C1F36F82E" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Project Template:</label>
+      <label_position>right</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>180</x>
+      <y>90</y>
+      <name>project_template_label</name>
+     </Item>
+     <Item type="Field" id="47C1ED04C43A405A9A3730B9A3D8D05E" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[
+	  <div id="div_select_projectTemplate" class="sys_f_div_select">
+		  <select id="projectTemplate" class="sys_f_select" onchange="top.aras.updateDomSelectLabel(event.target);">
+			<script language="JavaScript">
+			var templateNames = parent.dialogArguments ? parent.dialogArguments.names : null;
+			if (templateNames)
+			for (var i=0; i<templateNames.length; i++)
+			{
+			  document.write("<option value='"+templateNames[i]+"'>"+templateNames[i]+"</option>");
+			}
+			</script>
+		  </select>
+		  <span id="selected_option_projectTemplate" class="sys_f_span_select"></span>
+	  </div>
+]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>right</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>2048</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>290</x>
+      <y>90</y>
+      <name>projectTemplateSelect</name>
+     </Item>
+     <Item type="Field" id="1263F6D04D1F49A181F56AC6F559BFC7" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>right</label_position>
+      <list_no_blank>1</list_no_blank>
+      <propertytype_id keyed_name="scheduling_type" type="Property">190DB92A3CE9421CA694F7FD3C186A52</propertytype_id>
+      <sort_order>1280</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_index>19</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>540</x>
+      <y>90</y>
+      <name>scheduling_type</name>
+     </Item>
+     <Item type="Field" id="26F8F8BCD6E74D159C0D3849B8BBE2B4" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Scheduling Type:</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>440</x>
+      <y>90</y>
+      <name>scheduling_type_label</name>
+     </Item>
+     <Item type="Field" id="D80E02285AB3460EAB46C407FE32AE1F" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Target Finish:</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>440</x>
+      <y>50</y>
+      <name>target_finish_label</name>
+     </Item>
+     <Item type="Field" id="F2E401A3C42D4A9BB58027231DB07517" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Target Start:</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>440</x>
+      <y>10</y>
+      <name>target_start_label</name>
+     </Item>
+     <Item type="Field" id="2719AF5B6F4A4E0085A837AEA1DE0CBC" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<span>
+	<input type="radio" class="arasCheckboxOrRadio" id="useTemplate_yes" name="use_template" value="useTemplate_yes" checked="checked" />
+	<label>Yes</label>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="arasCheckboxOrRadio" id="useTemplate_no" name="use_template" value="useTemplate_no" onpropertychange="if (event.propertyName=='checked') document.getElementById('projectTemplate').disabled = this.checked;" />
+	<label>No</label>
+</span>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>right</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1664</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>290</x>
+      <y>47</y>
+      <name>template_yes_no_span</name>
+     </Item>
+     <Item type="Field" id="C58CE7ABD4E8493BA113375CF0A2AE14" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Use Template:</label>
+      <label_position>right</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="2A0A9404985D437D92A5E2ADF27F7B89" type="Body">2A0A9404985D437D92A5E2ADF27F7B89</source_id>
+      <tab_stop>1</tab_stop>
+      <x>180</x>
+      <y>50</y>
+      <name>use_template_label</name>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="Form Event" id="A273DF83963B45ADA08983AA48F22611" action="add">
+    <form_event>onload</form_event>
+    <related_id keyed_name="PM_projectOnAdd_onLoad" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>PM_projectOnAdd_onLoad</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="PM_projectOnAdd" type="Form">1CF50C86BD1141A9863451B7634B2F04</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

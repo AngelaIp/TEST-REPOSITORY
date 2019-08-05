@@ -1,0 +1,29 @@
+﻿<AML>
+ <Item type="SearchMode" id="95A2002E5AD84B9D8B2FA50B742C5973" action="add">
+  <is_active>0</is_active>
+  <label xml:lang="en">Hide Search Criteria</label>
+  <search_handler>function NoUI(searchContainer) {
+	this.supportXClassSearch = true;
+	// Call base SearchMode constructor
+	SearchMode.prototype.constructor.call(this, searchContainer, aras);
+}
+
+NoUI.prototype = new SearchMode();
+NoUI.prototype.onStartSearchMode = function NoUISearchMode_onStartSearchMode(sContainer) {
+	// Call base onStartSearchMode method.
+	SearchMode.prototype.onStartSearchMode.call(this, sContainer);
+
+	if (this.toolbar &amp;&amp; this.toolbar.IsButtonVisible('add_criteria')) {
+		this.toolbar.HideItem('add_criteria');
+	}
+
+	if (this.grid) {
+		this.grid.ShowInputRow(false);
+	}
+
+	this.searchContainer.setStyleAttribute('display', 'none');
+};
+</search_handler>
+  <name>NoUI</name>
+ </Item>
+</AML>

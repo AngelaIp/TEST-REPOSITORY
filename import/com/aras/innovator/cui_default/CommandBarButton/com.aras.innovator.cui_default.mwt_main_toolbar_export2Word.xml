@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="48F8FC2C371F417092FA2CDDBB6EAB72" action="add">
+  <additional_data>{ "cui_disabled": "true" }</additional_data>
+  <image>../images/ExportToWord.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <label xml:lang="en">Export To Word</label>
+  <on_click_handler keyed_name="cui_default_mwt_export2Word" type="Method">B5EE8019EBA140AAA1C4ECDD78D75415</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwt_export2Word" type="Method">68F04FE414714554BEBCB6625D7086FC</on_init_handler>
+  <tooltip_template xml:lang="en">Export To Word</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_main_toolbar_export2Word</name>
+ </Item>
+</AML>

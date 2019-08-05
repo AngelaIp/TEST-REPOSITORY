@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="63C841C272064C2CBF34FA087B519191" action="add">
+  <label xml:lang="en">Delete User Preferences...</label>
+  <on_click_handler keyed_name="cui_default_mwmm_deleteUserPref" type="Method">63D071DA01A2437A980984C10CBDD435</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_tools_preferences" type="CommandBarMenu">2BC080C0CA3F4D3B80B32A4140E7F069</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_delete_user_preferences</name>
+ </Item>
+</AML>

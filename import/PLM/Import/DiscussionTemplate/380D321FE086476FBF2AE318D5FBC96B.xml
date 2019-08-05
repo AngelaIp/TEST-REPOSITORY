@@ -1,0 +1,48 @@
+﻿<AML>
+ <Item type="DiscussionTemplate" id="380D321FE086476FBF2AE318D5FBC96B" action="add">
+  <file_selection_depth>1</file_selection_depth>
+  <item_selection_depth>1</item_selection_depth>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="Part" type="ItemType" name="Part">4F1AC04A2B484F3ABA4E20DB63808A88</source_id>
+  <visibility_supported>1</visibility_supported>
+  <Relationships>
+   <Item type="DiscussionTemplateView" id="7FC569BEF3C34E0E81D888D8E68B14B0" action="add">
+    <client>js</client>
+    <related_id keyed_name="F6AF0D642C0D4EA7B08F192A443A9432" type="SSVCPresentationConfiguration">
+     <Item type="SSVCPresentationConfiguration" id="F6AF0D642C0D4EA7B08F192A443A9432" action="add">
+      <discussion_panel_behavior>discPanelOff</discussion_panel_behavior>
+      <form_tooltip_template xml:lang="en">Form of ${ItemType:label} ${Item:keyed_name}</form_tooltip_template>
+      <sm_template keyed_name="F1E9620C1AB3408588708B68E18D51DE" type="SecureMessageViewTemplate">F1E9620C1AB3408588708B68E18D51DE</sm_template>
+      <name>F6AF0D642C0D4EA7B08F192A443A9432</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="380D321FE086476FBF2AE318D5FBC96B" type="DiscussionTemplate">380D321FE086476FBF2AE318D5FBC96B</source_id>
+   </Item>
+   <Item type="FeedTemplate" id="72E655A6DCD5499D8B5547230A6E6D83" action="add">
+    <feed_type>Board</feed_type>
+    <reference>this</reference>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="380D321FE086476FBF2AE318D5FBC96B" type="DiscussionTemplate">380D321FE086476FBF2AE318D5FBC96B</source_id>
+   </Item>
+   <Item type="FeedTemplate" id="7D4B86FC634E47F98B63F63F2BA06CEE" action="add">
+    <feed_type>Discussion</feed_type>
+    <reference>Part CAD(related_id)</reference>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="380D321FE086476FBF2AE318D5FBC96B" type="DiscussionTemplate">380D321FE086476FBF2AE318D5FBC96B</source_id>
+   </Item>
+   <Item type="FeedTemplate" id="43C7020B4B8D4ADBB2664F1AE96CDA5A" action="add">
+    <feed_type>Discussion</feed_type>
+    <reference>Part Document(related_id)</reference>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="380D321FE086476FBF2AE318D5FBC96B" type="DiscussionTemplate">380D321FE086476FBF2AE318D5FBC96B</source_id>
+   </Item>
+   <Item type="FeedTemplate" id="74D0D922D30D480C86D3CA488DC54D41" action="add">
+    <feed_type>Discussion</feed_type>
+    <reference>Part BOM(related_id)</reference>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="380D321FE086476FBF2AE318D5FBC96B" type="DiscussionTemplate">380D321FE086476FBF2AE318D5FBC96B</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

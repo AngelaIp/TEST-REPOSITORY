@@ -1,0 +1,82 @@
+﻿<AML>
+ <Item type="Method" id="32534C81A6B4465FBEC83A059B23ABC5" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[			var dataAccessLayer = new DataAccessLayer(this.getInnovator());
+			var businessLogic = new BusinessLogic(dataAccessLayer);
+			string itemId = this.getProperty("itemId");
+			string itemTypeName = this.getProperty("itemTypeName");
+
+			return businessLogic.GetFilesForViewingByItem(itemTypeName, itemId);
+		}
+
+		public class BusinessLogic
+		{
+			private readonly IDataAccessLayer _dataAccessLayer;
+
+			public BusinessLogic(IDataAccessLayer dataAccessLayer)
+			{
+				_dataAccessLayer = dataAccessLayer;
+			}
+
+			public Item GetFilesForViewingByItem(string itemTypeName, string itemId)
+			{
+				Item itemsForViewing = _dataAccessLayer.GetItemsForAggregation(itemTypeName, itemId);
+				Item filesForViewing = _dataAccessLayer.GetFilesForViewing(itemsForViewing, itemTypeName);
+
+				return filesForViewing;
+			}
+		}
+
+		public interface IDataAccessLayer
+		{
+			Item GetItemsForAggregation(string itemTypeName, string itemId);
+			Item GetFilesForViewing(Item items, string itemTypeName);
+		}
+
+		public class DataAccessLayer : IDataAccessLayer
+		{
+			private readonly Innovator _innovator;
+
+			internal DataAccessLayer(Innovator innovator)
+			{
+				this._innovator = innovator;
+			}
+
+			public Item GetItemsForAggregation(string itemTypeName, string itemId)
+			{
+				Item itemsForAggregations = this._innovator.newItem("Method", "VC_GetItemsForAggregation");
+				Item rel = this._innovator.newItem(itemTypeName, "get");
+				rel.setAttribute("id", itemId);
+				itemsForAggregations.addRelationship(rel);
+				return itemsForAggregations.apply();
+			}
+
+			public Item GetFilesForViewing(Item items, string itemTypeName)
+			{
+				if (items == null || items.isError())
+				{
+					return items;
+				}
+
+				Item filesForViewingRequest = _innovator.newItem(itemTypeName, "VC_GetFilesForViewing");
+				foreach (Item item in EnumerateCollectionItem(items))
+				{
+					filesForViewingRequest.addRelationship(item);
+				}
+				Item filesForViewing = filesForViewingRequest.apply();
+
+				return filesForViewing;
+			}
+
+
+			private static IEnumerable<Item> EnumerateCollectionItem(Item collectionItem)
+			{
+				for (var i = 0; i < collectionItem.getItemCount(); i++)
+				{
+					yield return collectionItem.getItemByIndex(i);
+				}
+			}]]></method_code>
+  <method_type>C#</method_type>
+  <name>VC_GetFilesForViewingForItem</name>
+ </Item>
+</AML>

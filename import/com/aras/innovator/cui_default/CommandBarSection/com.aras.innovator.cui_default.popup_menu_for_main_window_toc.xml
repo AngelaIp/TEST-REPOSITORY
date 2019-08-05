@@ -1,0 +1,59 @@
+﻿<AML>
+ <Item type="CommandBarSection" id="DB72DF34BB6E415B8BA5E177FC9DCA42" action="add">
+  <classification>Data Model</classification>
+  <label xml:lang="en">Popup Menu for Main Window TOC</label>
+  <location_name>PopupMenuMainWindowTOC</location_name>
+  <name>com.aras.innovator.cui_default.popup_menu_for_main_window_toc</name>
+  <Relationships>
+   <Item type="CommandBarSectionItem" id="4C12EC51499346F59C25159EFDED01F0" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.pmtoc_createNewInstance" type="CommandBarItem">6CD9F919C3104AA19866D8A68583BE17</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>32</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.popup_menu_for_main_window_toc" type="CommandBarSection">DB72DF34BB6E415B8BA5E177FC9DCA42</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="F7E9D08714A6431DB96FB0474B345E00" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.pmtoc_ListAll" type="CommandBarItem">3A189665257E416CA89A908248B6FB8C</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>64</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.popup_menu_for_main_window_toc" type="CommandBarSection">DB72DF34BB6E415B8BA5E177FC9DCA42</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="9C7D965924694FAF9A94B98880BB06F1" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.pmtoc_runSavedSearch" type="CommandBarItem">0594C24A8BCD4E6E8DD8164E2DA57B38</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>96</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.popup_menu_for_main_window_toc" type="CommandBarSection">DB72DF34BB6E415B8BA5E177FC9DCA42</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="DD30CC9D85334B36A796594A6FB6E291" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.pmtoc_changeSavedSearchShowingOnTOC" type="CommandBarItem">5C37D6D8527A4ABDA4C58408FCB2D650</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.popup_menu_for_main_window_toc" type="CommandBarSection">DB72DF34BB6E415B8BA5E177FC9DCA42</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="1676CC7E94464A9096DE093A8078FD30" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.pmtoc_delSavedSearch" type="CommandBarItem">132FE0CAF1254F758B43C1CF41818E9B</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.popup_menu_for_main_window_toc" type="CommandBarSection">DB72DF34BB6E415B8BA5E177FC9DCA42</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="FE8E314B3EBE483FB80CE48C8E45D1B1" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.pmtoc_addSavedSearchToForum" type="CommandBarItem">0D91DB7258F944499A1DBA5617ACFA83</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>192</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.popup_menu_for_main_window_toc" type="CommandBarSection">DB72DF34BB6E415B8BA5E177FC9DCA42</source_id>
+   </Item>
+   <Item type="CommandBarSectionItem" id="CD4CCC93C0AF4ADE83A8C1C7AD47DB40" action="add">
+    <action>Add</action>
+    <related_id keyed_name="com.aras.innovator.cui_default.pmtoc_createNewReport" type="CommandBarItem">74B04362A4104926A9BA6F0D8CBDF46D</related_id>
+    <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+    <sort_order>224</sort_order>
+    <source_id keyed_name="com.aras.innovator.cui_default.popup_menu_for_main_window_toc" type="CommandBarSection">DB72DF34BB6E415B8BA5E177FC9DCA42</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

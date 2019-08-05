@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="FACEDAE0CB724677BDA0CBAE7D5CF44A" action="add">
+  <label xml:lang="en">Reset Life Cycle State</label>
+  <on_click_handler keyed_name="cui_default_mwmm_reset_LFS" type="Method">3F718EBE2D2945688893106C734E8C77</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_admin_menu" type="CommandBarMenu">7267B91F9B334F9FA1E9715B7DADD11C</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_reset_LFS</name>
+ </Item>
+</AML>

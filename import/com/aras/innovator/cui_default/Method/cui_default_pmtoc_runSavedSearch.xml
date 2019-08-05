@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="Method" id="B637DAE2AAC34C71BE13A201810B89BE" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var topWindow = aras.getMostTopWindowWithAras(window);
+var treeFrame = topWindow.tree;
+if (treeFrame && treeFrame.SavedSearchInToc) {
+	var ssInToc = new treeFrame.SavedSearchInToc(inArgs.rowId);
+	ssInToc.runSavedSearch();
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>cui_default_pmtoc_runSavedSearch</name>
+ </Item>
+</AML>

@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="FileType" id="030BB21FEC82425CBCB57D2AAF34BBD0" action="add">
+  <description>Microsoft Word DOTX Template</description>
+  <extension>dotx</extension>
+  <mimetype>application/vnd.openxmlformats-officedocument.wordprocessingml.template</mimetype>
+  <name>Microsoft Word Template</name>
+ </Item>
+</AML>

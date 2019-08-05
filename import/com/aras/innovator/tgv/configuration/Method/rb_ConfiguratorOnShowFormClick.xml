@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="Method" id="ED2D5000856C4B0BA17B5EB7BD944DEB" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[require(['dijit/registry'], function(registry) {
+	var sidebar = registry.byId('sidebar');
+	sidebar.switchSidebarButton(inArgs.control.id, '../Images/ShowFormOn.svg', true);
+	sidebar.switchSidebarButton('rb_TreeGridConfiguratorShowEditor', '../images/TreeGridViewOff.svg' , false);
+	window.configuratorView.showForm();
+});
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>rb_ConfiguratorOnShowFormClick</name>
+ </Item>
+</AML>

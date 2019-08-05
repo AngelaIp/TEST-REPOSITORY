@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="7587E9CBC2B0491BB2298C4413836CBB" action="add">
+  <additional_data>{ "cui_resource_key": "itemsgrid.cntxt_menu.save_as" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onSaveAsCommand" type="Method">2F93F26BB1C4473F97F40281F4AD63CC</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_Save As</name>
+ </Item>
+</AML>

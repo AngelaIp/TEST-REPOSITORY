@@ -1,0 +1,164 @@
+﻿<AML>
+ <Item type="Method" id="5D2DDD530AA84B67BA3D2E89F5E1D915" action="add">
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[//MethodTemplateName=ConflictDetectionLocalRuleCSharp.version:1;
+public class $(clsname) : LocalConflictDetectionRule
+{
+	Aras.Server.Core.CallContext CCO;
+
+	public $(clsname)(IServerConnection serverConnection, String name)
+		: base(serverConnection, name)
+	{
+		this.CCO = ((Aras.Server.Core.IOMConnection)serverConnection).CCO;
+	}
+
+	Dictionary<String, String> itemTypeDict = new Dictionary<string, string>();
+
+	public override IList<ConflictDetectionResult> Execute(Item configuration)
+	{
+		List<ConflictDetectionResult> ConflictList = new List<ConflictDetectionResult>();
+		
+		Item itemsWithEdit = configuration.getItemsByXPath("//Item[@action='edit']");
+		
+		for (int itemIndex = 0; itemIndex < itemsWithEdit.getItemCount(); itemIndex++)
+		{
+			Item itemForCheck = itemsWithEdit.getItemByIndex(itemIndex);
+			ConflictList.Add(this.CreateConflict(itemForCheck, "Action \"edit\" isn't supported in checkin configuration and was ignored during check for conflicts."));
+		}
+		
+		Item itemsWithAdd = configuration.getItemsByXPath("//Item[@action='add']");
+
+		for (int itemIndex = 0; itemIndex < itemsWithAdd.getItemCount(); itemIndex++)
+		{
+			Item itemForCheck = itemsWithAdd.getItemByIndex(itemIndex);
+
+			if (!hasPermission(itemForCheck, PermissionType.Add))
+			{
+				ConflictDetectionResult conflictResult = this.CreateConflict(itemForCheck, "User has no permissions to 'add' item specified.");
+				ConflictList.Add(conflictResult);
+			}
+		}
+		
+		Item itemsWithDelete = configuration.getItemsByXPath("//Item[@action='delete']");
+
+		for (int itemIndex = 0; itemIndex < itemsWithDelete.getItemCount(); itemIndex++)
+		{
+			Item itemForCheck = itemsWithDelete.getItemByIndex(itemIndex);
+
+			if (!hasPermission(itemForCheck, PermissionType.Delete))
+			{
+				ConflictDetectionResult conflictResult = this.CreateConflict(itemForCheck, "User has no permissions to 'delete' item specified.");
+				ConflictList.Add(conflictResult);
+			}
+		}
+
+		Item itemsWithUpdateOrVersion = configuration.getItemsByXPath("//Item[@action='update' or @action='version']");
+
+		for (int itemIndex = 0; itemIndex < itemsWithUpdateOrVersion.getItemCount(); itemIndex++)
+		{
+			Item itemForCheck = itemsWithUpdateOrVersion.getItemByIndex(itemIndex);
+			
+			if (!hasPermission(itemForCheck, PermissionType.Get))
+			{
+				ConflictDetectionResult conflictResult = this.CreateConflict(itemForCheck, "User can't 'get' item or item can't be found.");
+				ConflictList.Add(conflictResult);
+			} 
+			else if (!hasPermission(itemForCheck, PermissionType.Update))
+			{
+				ConflictDetectionResult conflictResult = this.CreateConflict(itemForCheck, "User has no permissions to 'update' item specified.");
+				ConflictList.Add(conflictResult);
+			}
+		}
+
+		return ConflictList;
+	}
+	
+	private bool hasPermission(Item item, PermissionType type)
+	{
+		/*message format:
+		<Item type="..." typeId="..." id="..." access_type="..." />
+		id - required
+		type, typeId - optional for "can_add"
+		access_type = can_get[|can_change_access[|can_update[|can_delete]]]*/
+		if (!NodeIsItem(item))
+		{
+			throw new ArgumentException("hasPermission method: Incorrect item node. Should be singe Item node.");
+		}
+		string id = item.getID();
+		if (String.IsNullOrEmpty(id))
+			throw new ArgumentException("hasPermission method: Context Item should contain \"id\" value.");
+
+		Item request = item.newItem();
+		string itemType = item.getType();
+		if (String.IsNullOrEmpty(itemType))
+		{
+			string typeId = item.getAttribute("typeId");
+			if (String.IsNullOrEmpty(typeId))
+				throw new ArgumentException("hasPermission method: Context Item should contain \"type\" or \"typeId\" values.");
+			else
+			{
+				request.setAttribute("typeId", typeId);
+			}
+		}
+		else
+		{
+			request.setAttribute("type", itemType);
+		}
+		request.setAttribute("id", item.getID());
+		
+		XmlDocument outDom = new XmlDocument();
+		switch(type)
+		{
+			case PermissionType.Add:
+				request.setAttribute("access_type", "can_add");
+				break;
+			case PermissionType.Delete:
+				request.setAttribute("access_type", "can_delete");
+				break;
+			case PermissionType.Update:
+				request.setAttribute("access_type", "can_update");
+				break;
+			default:
+				//can_get
+				request.setAttribute("access_type", "can_get");
+				break;
+		}
+		item.getInnovator().getConnection().CallAction("getpermissionsforclient", request.dom, outDom);
+		string result = outDom.SelectSingleNode("//Result").InnerText;
+		if (Convert.ToInt16(result) == 0)
+			return false;
+		else return true;
+	}
+	
+	private bool NodeIsItem(Item item)
+	{
+		if (item.dom == null) return false;
+		if (item.node == null || item.node.LocalName != "Item")
+			return false;
+		return true;
+	}
+	
+	private enum PermissionType
+	{
+		/// <summary>
+		/// defines can_add permission type
+		/// </summary>
+		Add,
+		/// <summary>
+		/// defines can_update permission type
+		/// </summary>
+		Update,
+		/// <summary>
+		/// defines can_delete permission type
+		/// </summary>
+		Delete,
+		/// <summary>
+		/// defines can_get permission type
+		/// </summary>
+		Get
+	}
+}]]></method_code>
+  <method_type>C#</method_type>
+  <name>ConflictDetection_NO_PERMISSION</name>
+ </Item>
+</AML>

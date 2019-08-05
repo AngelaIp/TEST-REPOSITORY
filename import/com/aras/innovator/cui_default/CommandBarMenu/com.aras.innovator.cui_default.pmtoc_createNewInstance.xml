@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="6CD9F919C3104AA19866D8A68583BE17" action="add">
+  <additional_data>{ "cui_resource_key": "maintree.new" }</additional_data>
+  <on_click_handler keyed_name="cui_default_pmtoc_newInstance" type="Method">3EA9FA2C3D934B3196E04CDD71453137</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmtoc_createNewInstance</name>
+ </Item>
+</AML>

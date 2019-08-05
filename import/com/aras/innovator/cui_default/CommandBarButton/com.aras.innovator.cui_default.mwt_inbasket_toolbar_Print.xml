@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="CA6DC9A4371F4280AB5CFADD50EA543F" action="add">
+  <image>../images/Print.svg</image>
+  <include_events>SelectInToc,SelectInGrid</include_events>
+  <on_click_handler keyed_name="cui_default_inbasket_onPrint" type="Method">2425DAB236654398AD985E38BE07D2B4</on_click_handler>
+  <on_init_handler keyed_name="cui_reinit_mwt_inbasket_print" type="Method">AC2314E8C40B4C2A9865C8CB25B14C2B</on_init_handler>
+  <tooltip_template xml:lang="en">Printable View</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_inbasket_toolbar_Print</name>
+ </Item>
+</AML>

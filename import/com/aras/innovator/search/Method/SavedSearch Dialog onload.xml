@@ -1,0 +1,114 @@
+﻿<AML>
+ <Item type="Method" id="E33B512BE43244F4B91E31D3E78946DC" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var itm = document.item;
+if (!itm) {
+	return;
+}
+
+document.body.onkeypress = bodyOnKeyPresshandler;
+document.getElementsByName('save_saved_search_button')[0].onclick = handler;
+
+var labelFld = document.querySelector('input[name=label]');
+labelFld.value = aras.getNodeTranslationElement(itm, 'label', aras.getSessionContextLanguageCode());
+labelFld.onkeypress = onKeyPressHandler;
+labelFld.focus();
+
+var sharedWithField = document.getElementById('4B81D7BCA01B4E0F8DFE05B8D72A788Bspan');
+var idOfIsAliasIdentityForTheUser = '';
+
+var sharedWithFieldInputElement = field4B81D7BCA01B4E0F8DFE05B8D72A788BComponent;
+sharedWithFieldInputElement.setValue('');
+
+var userNd = aras.getLoggedUserItem();
+var tempOwnedById = aras.getItemProperty(itm, 'owned_by_id');
+var keyNameOwnedById =  aras.getKeyedName(tempOwnedById);
+var ownedbyid = '';
+var identityNd = userNd.selectSingleNode('Relationships/Item[@type=\'Alias\']/related_id/Item[@type=\'Identity\']');
+if (identityNd) {
+	if (labelFld.value !== '' && tempOwnedById !== identityNd.getAttribute('id')) {
+		ownedbyid = tempOwnedById;
+		sharedWithFieldInputElement.setValue(keyNameOwnedById);
+	}
+	idOfIsAliasIdentityForTheUser = identityNd.getAttribute('id');
+	aras.setItemProperty(itm, 'managed_by_id', idOfIsAliasIdentityForTheUser);
+	aras.setItemProperty(itm, 'owned_by_id',  ownedbyid);
+}
+sharedWithField.style.visibility  = aras.isAdminUser() ? 'visible' : 'hidden';
+// If Location != Main Grid, then Show on TOC must be = 0.
+var showOnTocChbx = document.getElementsByTagName('input')['show_on_toc'];
+if ('Main Grid' != aras.getItemProperty(itm, 'location')) {
+	showOnTocChbx.checked = false;
+	showOnTocChbx.disabled = true;
+} else {
+	showOnTocChbx.disabled = false;
+}
+
+function handler() {
+	var itname = aras.getItemProperty(itm, 'itname');
+	var location = aras.getItemProperty(itm, 'location');
+	var identicalSavedSearch = null;
+	var canBeSaved = true;
+	var identicalSavedSearchAlreadyExist = false;
+	var savedSearches = aras.getSavedSearches(itname, location);
+
+	var label = document.querySelector('input[name=label]').value;
+
+	for (i = 0; i < savedSearches.length; i++) {
+		if (aras.getItemProperty(savedSearches[i], 'label') == label &&
+		aras.getItemProperty(savedSearches[i], 'itname') == itname &&
+		aras.getItemProperty(savedSearches[i], 'location') == location &&
+		aras.getItemProperty(savedSearches[i], 'owned_by_id') == aras.getItemProperty(itm, 'owned_by_id')) {
+			if (aras.getItemProperty(savedSearches[i], 'managed_by_id') != idOfIsAliasIdentityForTheUser) {
+				canBeSaved = false;
+				break;
+			} else {
+				identicalSavedSearch = savedSearches[i];
+				identicalSavedSearchAlreadyExist = true;
+				break;
+			}
+		}
+	}
+
+	var closeWindow = true;
+	if (!aras.getItemProperty(itm, 'owned_by_id')) {
+		aras.setItemProperty(itm, 'owned_by_id', identityNd.getAttribute('id'));// set default owned_by_id
+	}
+	if (!canBeSaved) {
+		alert(aras.getResource('', 'search.saved_search_cannot_be_overwritten', label, itname));
+		closeWindow = false;
+	} else if (identicalSavedSearchAlreadyExist) {
+		var overwrite = aras.confirm(aras.getResource('', 'search.saved_search_already_exists', label, itname));
+		if (overwrite) {
+			itm.setAttribute('id', aras.getItemProperty(identicalSavedSearch, 'id'));
+			itm.setAttribute('action', 'edit');
+		} else {
+			closeWindow = false;
+		}
+	}
+
+	if (closeWindow) {
+		parent.returnValue = itm;
+		parent.close();
+	}
+}
+
+function bodyOnKeyPresshandler(ev) {
+	if (!ev) {ev = window.event || event;}
+	if (ev.keyCode == 27) {
+		parent.returnValue = null;
+		parent.close();
+	}
+}
+
+function onKeyPressHandler(ev) {
+	if (!ev) {ev = window.event || event;}
+	if (ev.keyCode == 13) {
+		handler();
+	}
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>SavedSearch Dialog onload</name>
+ </Item>
+</AML>

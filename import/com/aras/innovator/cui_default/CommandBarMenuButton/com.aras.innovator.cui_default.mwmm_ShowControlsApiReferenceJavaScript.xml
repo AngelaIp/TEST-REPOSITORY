@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="72BABBCC7C3C42058CBD10D0C2B11AD5" action="add">
+  <label xml:lang="en">API Reference (JavaScript)</label>
+  <on_click_handler keyed_name="cui_default_mwmm_controlsApiJS" type="Method">47163192C019450CA9116CEF59C43389</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_help_menu" type="CommandBarMenu">12FDA122A2DF4E68ACF1945BAB29A571</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_ShowControlsApiReferenceJavaScript</name>
+ </Item>
+</AML>

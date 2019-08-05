@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="0C0A78EC6CDA4869A9FE2DB88E2D032E" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">New</label>
+  <on_click_handler keyed_name="cui_default_mwt_onNewCommand" type="Method">B892922796984AD980F33D6664F3012B</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_file_menu" type="CommandBarMenu">2B1F770C624449A3863818C8D4EF414F</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_new</name>
+ </Item>
+</AML>

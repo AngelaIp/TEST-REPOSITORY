@@ -1,0 +1,73 @@
+﻿<AML>
+ <Item type="Method" id="1873FCBC13114D0D9603DC157C9116AD" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var classPerm = aras.evalItemMethod('xPermissionWorker', null, {action: 'getExistingPermission',
+permType: 'classification',
+xClassItemTypeId: aras.getItemProperty(relationships.item.selectSingleNode('Relationships/Item[@id="' + inArgs.rowID + '"]/related_id/Item'), 'id')});
+var propPerm = aras.evalItemMethod('xPermissionWorker', null, {action: 'getExistingPermission',
+permType: 'propertyValue',
+xClassItemTypeId: aras.getItemProperty(relationships.item.selectSingleNode('Relationships/Item[@id="' + inArgs.rowID + '"]/related_id/Item'), 'id')});
+
+function getLabel(key) {
+	return aras.getResource('../Modules/aras.innovator.ExtendedClassification/', 'xPermissionContextMenu.' + key);
+}
+
+function createSeparator() {
+	var sep = new Item('CommandBarSeparator');
+	sep.setProperty('action', 'Add');
+	sep.removeAttribute('isNew');
+	sep.removeAttribute('isTemp');
+	return sep;
+}
+
+function createMenu(name, label, handlerId, handlerName, additionalData) {
+	var menu = new Item('CommandBarMenu');
+	menu.setProperty('name', name);
+	menu.setProperty('label', label);
+	menu.setProperty('on_click_handler', handlerId);
+	menu.setPropertyAttribute('on_click_handler', 'keyed_name', handlerName);
+	menu.setPropertyAttribute('on_click_handler', 'type', 'Method');
+	menu.setProperty('action', 'Add');
+	menu.setProperty('additional_data', additionalData);
+	menu.removeAttribute('isNew');
+	menu.removeAttribute('isTemp');
+	return menu;
+}
+
+var cuiItems = new Item();
+cuiItems.appendItem(createSeparator());
+
+const additionalData = thisItem.getProperty('locked_by_id') !== undefined ? '{"cui_disabled": false}' : '{"cui_disabled": true}';
+
+if (!propPerm || propPerm.getAttribute('action') === 'delete') {
+	cuiItems.appendItem(createMenu('value_create', getLabel('value_create'), '2D31613600904B61BE6B491089FE61E5',
+		'createXPropValuePermission', additionalData));
+	cuiItems.appendItem(createMenu('value_pick', getLabel('value_pick'), '1E508F242CB5477C8CEE4AC32928E0E4',
+		'pickXPropValuePermission', additionalData));
+} else {
+	cuiItems.appendItem(createMenu('value_view', getLabel('value_view'), 'DDC103C320B74E5098C133C9A017C498',
+		'viewXPropValuePermission', '{"cui_disabled": false}'));
+	cuiItems.appendItem(createMenu('value_pick_replace', getLabel('value_pick_replace'), '1E508F242CB5477C8CEE4AC32928E0E4',
+		'pickXPropValuePermission', additionalData));
+}
+
+cuiItems.appendItem(createSeparator());
+
+if (!classPerm || classPerm.getAttribute('action') === 'delete') {
+	cuiItems.appendItem(createMenu('class_create', getLabel('clasification_create'), '0C85CACEDCBB4747A2F483B2C4437AD2',
+		'createXClassificationPermission', additionalData));
+	cuiItems.appendItem(createMenu('class_pick', getLabel('clasification_pick'), 'A8D5740C5688427B8CAA57D8D9D0C11D',
+		'pickXClassificationPermission', additionalData));
+} else {
+	cuiItems.appendItem(createMenu('class_view', getLabel('clasification_view'), '1766FAF9EC624FC8AACF41D55E2CC84F',
+		'viewXClassificationPermission', '{"cui_disabled": false}'));
+	cuiItems.appendItem(createMenu('class_pick_replace',
+	getLabel('clasification_pick_replace'), 'A8D5740C5688427B8CAA57D8D9D0C11D',
+		'pickXClassificationPermission', additionalData));
+}
+
+return cuiItems;]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>xPermContextMenuBuilder</name>
+ </Item>
+</AML>

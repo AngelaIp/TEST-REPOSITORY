@@ -1,0 +1,9 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="CC60007C50064B87BA5B7B070CA594A2" action="add">
+  <additional_data>{ "cui_disabled": true }</additional_data>
+  <label xml:lang="en">Printable View</label>
+  <on_click_handler keyed_name="cui_default_mwt_onPrintCommand" type="Method">C0EA0A07A9CD43CD9D312CAE1E0AD817</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.mwmm_file_menu" type="CommandBarMenu">2B1F770C624449A3863818C8D4EF414F</parent_menu>
+  <name>com.aras.innovator.cui_default.mwmm_print</name>
+ </Item>
+</AML>

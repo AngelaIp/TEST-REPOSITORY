@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="CommandBarMenu" id="31A091586A814DAA945113E4A3635E15" action="add">
+  <additional_data>{ "cui_resource_key": "common.new" }</additional_data>
+  <on_click_handler keyed_name="cui_default_mwt_onNewCommand" type="Method">B892922796984AD980F33D6664F3012B</on_click_handler>
+  <name>com.aras.innovator.cui_default.pmig_New</name>
+ </Item>
+</AML>
