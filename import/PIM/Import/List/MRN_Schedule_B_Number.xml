@@ -1,0 +1,113 @@
+﻿<AML>
+ <Item type="List" id="823551E9BE844C3E8DFFACF7DE0C1F4F" action="add">
+  <description>Export Classification Code</description>
+  <name>MRN_Schedule_B_Number</name>
+  <Relationships>
+   <Item type="Filter Value" id="9DE9A3F94F704A25A3BF25807AA38908" action="add">
+    <filter>853510</filter>
+    <label xml:lang="en">Fuses over 2300V</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8535100020</value>
+   </Item>
+   <Item type="Filter Value" id="B98A31C8A1A64E7BAC26A1413DCBDEF6" action="add">
+    <filter>853510</filter>
+    <label xml:lang="en">Fuses between 1000V and 2300V</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8535100040</value>
+   </Item>
+   <Item type="Filter Value" id="D927D319D4E544DC9C094FF9A005FB5F" action="add">
+    <filter>853530</filter>
+    <label xml:lang="en">Isolating switches over 1000V</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8535300080</value>
+   </Item>
+   <Item type="Filter Value" id="5B42C54A514542A7AC541281FBDFBAD6" action="add">
+    <filter>853540</filter>
+    <label xml:lang="en">Surge Suppressors over 1000V</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8535400000</value>
+   </Item>
+   <Item type="Filter Value" id="27A3457E373E40638A10576D9769DEA5" action="add">
+    <filter>853590</filter>
+    <label xml:lang="en">Fuseholders and Heat Sinks for a voltage exceeding 1,000 V</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8535908040</value>
+   </Item>
+   <Item type="Filter Value" id="643FF0B3CAD14BF8BAEC190F80C1B71F" action="add">
+    <filter>853590</filter>
+    <label xml:lang="en">PDB for a voltage exceeding 1,000 V</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8535908020</value>
+   </Item>
+   <Item type="Filter Value" id="C343C471FBB64BF3A6727EB86E795E71" action="add">
+    <filter>853610</filter>
+    <label xml:lang="en">Glass Fuses under 1000V</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8536100020</value>
+   </Item>
+   <Item type="Filter Value" id="03FB83CDB4634F4D8EDAFEAF7BA7DF52" action="add">
+    <filter>853610</filter>
+    <label xml:lang="en">Non-Glass Fuses under 1000V</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8536100040</value>
+   </Item>
+   <Item type="Filter Value" id="DD69950F6E1748A58EDB8A4CE9C7FCF7" action="add">
+    <filter>853630</filter>
+    <label xml:lang="en">Surge Suppressors under 1000V</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8536300000</value>
+   </Item>
+   <Item type="Filter Value" id="D811996096714D8FA7349BE174F45520" action="add">
+    <filter>853650</filter>
+    <label xml:lang="en">Rotary switches under 1000V</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8536509025</value>
+   </Item>
+   <Item type="Filter Value" id="2ECE0C2FD13F45079F694B93B6149B45" action="add">
+    <filter>853650</filter>
+    <label xml:lang="en">Other switches under 1000V</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8536509065</value>
+   </Item>
+   <Item type="Filter Value" id="9BE771A0C8DA44C58140CCF04355985C" action="add">
+    <filter>853690</filter>
+    <label xml:lang="en">Fuseholders for a voltage less than 1,000 V</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8536908085</value>
+   </Item>
+   <Item type="Filter Value" id="87ECB52B074245789FAA9DF02FF5B7D1" action="add">
+    <filter>853690</filter>
+    <label xml:lang="en">Terminals/splices under 1000V</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8536904000</value>
+   </Item>
+   <Item type="Filter Value" id="2BDC7CA4CBEA4194A9539CEAC160C819" action="add">
+    <filter>853890</filter>
+    <label xml:lang="en">Switch Accessories</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8538907060</value>
+   </Item>
+   <Item type="Filter Value" id="0A73DEC7A7374E3CA1706D9A3517D6EC" action="add">
+    <filter>853890</filter>
+    <label xml:lang="en">Fuse Accessories</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_Schedule_B_Number" type="List">823551E9BE844C3E8DFFACF7DE0C1F4F</source_id>
+    <value>8538907080</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

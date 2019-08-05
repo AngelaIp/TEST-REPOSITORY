@@ -1,0 +1,1587 @@
+﻿<AML>
+ <Item type="List" id="7F614E4DC0824F10963DD05175C52CA5" action="add">
+  <description>Product Type</description>
+  <name>MRN_Product_Type</name>
+  <Relationships>
+   <Item type="Filter Value" id="2DA4E8939FAE44A8AAFBEBA87452DB29" action="add">
+    <filter>Low Voltage IEC Fuses</filter>
+    <label xml:lang="en">IEC Cylindrical Fuse-Links</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Cylindrical Fuse-Links</value>
+   </Item>
+   <Item type="Filter Value" id="0BB8241F053B4CFDA6980B6451FE9BBE" action="add">
+    <filter>Low Voltage IEC Fuses</filter>
+    <label xml:lang="en">DIN LV Fuse-Links D0</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN LV Fuse-Links D0</value>
+   </Item>
+   <Item type="Filter Value" id="B5D5F52813D945FE8CFD3419C8653DFC" action="add">
+    <filter>Low Voltage IEC Fuses</filter>
+    <label xml:lang="en">DIN LV Fuse-Links D</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN LV Fuse-Links D</value>
+   </Item>
+   <Item type="Filter Value" id="86BB7D15B716484DAEEEF52CB013060F" action="add">
+    <filter>Low Voltage IEC Fuses</filter>
+    <label xml:lang="en">BS Fuse-Links</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>BS Fuse-Links</value>
+   </Item>
+   <Item type="Filter Value" id="A0BA5FAED15A41F5B7EFD64582BD8C1A" action="add">
+    <filter>Low Voltage IEC Fuses</filter>
+    <label xml:lang="en">IEC NH Fuse-Links</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC NH Fuse-Links</value>
+   </Item>
+   <Item type="Filter Value" id="570F498E75704CBB87BE2068BCA78E43" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Midget Fuses</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Midget Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="6CBDA67EC04B4647BF663B1BAA269AA3" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Class CC</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class CC</value>
+   </Item>
+   <Item type="Filter Value" id="819FAF253384482DA1475B7CDBC3E4B6" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Class RK1</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class RK1</value>
+   </Item>
+   <Item type="Filter Value" id="ABD55DD7A849448796ECAB16F9CA2904" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Class RK5</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class RK5</value>
+   </Item>
+   <Item type="Filter Value" id="2F79BDF53E5B4850B57829F35C947B58" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Class J</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class J</value>
+   </Item>
+   <Item type="Filter Value" id="3C26FABAF33249DBAA67221A46F68446" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Class L</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class L</value>
+   </Item>
+   <Item type="Filter Value" id="01346A219B314CF9A8447C92821C37FD" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Class K5</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class K5</value>
+   </Item>
+   <Item type="Filter Value" id="BF5333931FF64B409D469F12C4EBA67F" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Class T</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class T</value>
+   </Item>
+   <Item type="Filter Value" id="EB7CB730BFC24C26A43E5389A196B928" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Class G</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class G</value>
+   </Item>
+   <Item type="Filter Value" id="56EB4EC791F34E08BD3C5FE078088DC1" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Class H</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class H</value>
+   </Item>
+   <Item type="Filter Value" id="6A8BCC0F4B73418C982591DF48C06D01" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Renewable Fuses</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Renewable Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="25FFB2D028F7409887A7C84ACE83F14D" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">HRC Fuses</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>HRC Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="75CC2AB1693B44989EF966193C59D257" action="add">
+    <filter>Low Voltage UL/CSA Fuses</filter>
+    <label xml:lang="en">Plug Fuses</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Plug Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="94FB37D96263453C887968F901FDF185" action="add">
+    <filter>High Voltage IEC Fuses</filter>
+    <label xml:lang="en">DIN HV Back-up Fuses for Transformers</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN HV Back-up Fuses for Transformers</value>
+   </Item>
+   <Item type="Filter Value" id="89E89145B9944EEAA94D4C469782CD2E" action="add">
+    <filter>High Voltage IEC Fuses</filter>
+    <label xml:lang="en">DIN HV General Purpose Fuses for transformers</label>
+    <sort_order>2500</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN HV General Purpose Fuses for transformers</value>
+   </Item>
+   <Item type="Filter Value" id="C0824A6C239B4C6B9932E83137525CB1" action="add">
+    <filter>High Voltage IEC Fuses</filter>
+    <label xml:lang="en">NF/UTE HV Back-up Fuses for Transformers</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>NF/UTE HV Back-up Fuses for Transformers</value>
+   </Item>
+   <Item type="Filter Value" id="89EA1DC5FD9C4343BC28C5F0EED7F664" action="add">
+    <filter>High Voltage IEC Fuses</filter>
+    <label xml:lang="en">DIN HV Back-up Fuses for Motors</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN HV Back-up Fuses for Motors</value>
+   </Item>
+   <Item type="Filter Value" id="BEFF2DE98B424C2CBE5960E986B900E2" action="add">
+    <filter>High Voltage IEC Fuses</filter>
+    <label xml:lang="en">IEC HV fuses for public lighting</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC HV fuses for public lighting</value>
+   </Item>
+   <Item type="Filter Value" id="51B8DBCAC0ED4CD0856A3D86F7F17DBC" action="add">
+    <filter>High Voltage IEC Fuses</filter>
+    <label xml:lang="en">IEC HV fuses for potential transformers</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC HV fuses for potential transformers</value>
+   </Item>
+   <Item type="Filter Value" id="AC50C9AFEF1249BA97A961CC3E1E8D61" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">General Purpose Ferrule Mount Fuses for Transformer Protection</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>General Purpose Ferrule Mount Fuses for Transformer Protection</value>
+   </Item>
+   <Item type="Filter Value" id="216A758895354CB2AD29136A60C34379" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">General Purpose Bolt-On Fuses for Transformer Protection</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>General Purpose Bolt-On Fuses for Transformer Protection</value>
+   </Item>
+   <Item type="Filter Value" id="17D36A6D2FDB44D6BF033C6B477D3855" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">General Purpose Clip-Lock Fuses for Transformer Protection</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>General Purpose Clip-Lock Fuses for Transformer Protection</value>
+   </Item>
+   <Item type="Filter Value" id="419915D06CD04342B2A36D9F501F107E" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">Back-Up R-Rated Bolt-On Fuses for Motor Protection</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Back-Up R-Rated Bolt-On Fuses for Motor Protection</value>
+   </Item>
+   <Item type="Filter Value" id="DC3CA107A2FC4A4FA962B67C4335BC15" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">Back-Up R-Rated Ferrule Mount Fuses for Motor Protection</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Back-Up R-Rated Ferrule Mount Fuses for Motor Protection</value>
+   </Item>
+   <Item type="Filter Value" id="4EA98AC6D47944BA937945501539C0B9" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">Back-Up R-Rated DIN Style Fuses for Motor Protection</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Back-Up R-Rated DIN Style Fuses for Motor Protection</value>
+   </Item>
+   <Item type="Filter Value" id="572EF05A84D641D3B26B28130CAC42E3" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">Potential Transformer Protection Fuses</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Potential Transformer Protection Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="E6C0B83933634863BACD2C40DC8EA0DA" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">Capacitor Protection Fuses</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Capacitor Protection Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="C4D9F90A2EC4485BAAB752283520C2AE" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">Distribution Transformer Protection</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Distribution Transformer Protection</value>
+   </Item>
+   <Item type="Filter Value" id="85620F1BFED54E6F8203BCFE13A75031" action="add">
+    <filter>Medium Voltage IEEE Fuses</filter>
+    <label xml:lang="en">Intelligent Fuse Technology</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Intelligent Fuse Technology</value>
+   </Item>
+   <Item type="Filter Value" id="A7D02F52D7A940AAB95F6EE6313EE80F" action="add">
+    <filter>Semiconductor Protection Fuses</filter>
+    <label xml:lang="en">Square Body High-Speed Fuse-Links AC Protection</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Square Body High-Speed Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Filter Value" id="D96069D4191D44388DD3C840C35D76FF" action="add">
+    <filter>Semiconductor Protection Fuses</filter>
+    <label xml:lang="en">Round Body High-Speed Fuse-Links AC Protection</label>
+    <sort_order>4480</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Round Body High-Speed Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Filter Value" id="0D3969F913034EA2B24BC9CD339B4401" action="add">
+    <filter>Semiconductor Protection Fuses</filter>
+    <label xml:lang="en">IEC High-Speed Cylindrical Fuse-Links AC Protection</label>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC High-Speed Cylindrical Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Filter Value" id="43403DE8E6C5494DAD9F8643B0AC7BCD" action="add">
+    <filter>Semiconductor Protection Fuses</filter>
+    <label xml:lang="en">IEC High-Speed D &amp; D0 Fuse-Links AC-DC Protection</label>
+    <sort_order>4700</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC High-Speed D &amp; D0 Fuse-Links AC-DC Protection</value>
+   </Item>
+   <Item type="Filter Value" id="58D6653253B24FB6A0A46698BB493274" action="add">
+    <filter>Semiconductor Protection Fuses</filter>
+    <label xml:lang="en">NH square Body High-Speed Fuse-Links AC Protection</label>
+    <sort_order>4736</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>NH square Body High-Speed Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Filter Value" id="11B78E2674B54395BB0B2275D4014FD5" action="add">
+    <filter>Semiconductor Protection Fuses</filter>
+    <label xml:lang="en">British Standard High-Speed Fuse-Links AC Protection</label>
+    <sort_order>4864</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>British Standard High-Speed Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Filter Value" id="076C66BA05B5490B94F294C877015E2C" action="add">
+    <filter>Semiconductor Protection Fuses</filter>
+    <label xml:lang="en">High performance square body fuse-links AC protection</label>
+    <sort_order>4992</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>High performance square body fuse-links AC protection</value>
+   </Item>
+   <Item type="Filter Value" id="2EF8A592C0CD49F2933E04DA48CF1B74" action="add">
+    <filter>Semiconductor Protection Fuses</filter>
+    <label xml:lang="en">IEC High-Speed Cylindrical Fuse-Links DC Protection</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC High-Speed Cylindrical Fuse-Links DC Protection</value>
+   </Item>
+   <Item type="Filter Value" id="B71829085C72464F9909049DC826AECB" action="add">
+    <filter>Semiconductor Protection Fuses</filter>
+    <label xml:lang="en">Square Body High-Speed Fuse-Links DC Protection</label>
+    <sort_order>5248</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Square Body High-Speed Fuse-Links DC Protection</value>
+   </Item>
+   <Item type="Filter Value" id="A57C65D1F8A0424C88FFCA10B6F51968" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">5x20mm</label>
+    <sort_order>5376</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5x20mm</value>
+   </Item>
+   <Item type="Filter Value" id="6E5073340F4843C2B0E3EEC11FC82124" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">6x32mm, 1/4" X 1-1/4"</label>
+    <sort_order>5504</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6x32mm, 1/4" X 1-1/4"</value>
+   </Item>
+   <Item type="Filter Value" id="022931C6015A4F9287C2D8FF03343C29" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">5x20mm Semiconductor Protection Fuses</label>
+    <sort_order>5632</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5x20mm Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="3B448B3FDA134221BCF4876001A2067D" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">6x32mm Semiconductor Protection Fuses</label>
+    <sort_order>5760</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6x32mm Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="AC2D3BCD27F74AF3B7B27D9442B20E4C" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">6x46mm Semiconductor Protection Fuses</label>
+    <sort_order>5888</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6x46mm Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="F072E7E702E646D0ABE17D35AAF177AA" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">4.5x14.5mm</label>
+    <sort_order>6016</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>4.5x14.5mm</value>
+   </Item>
+   <Item type="Filter Value" id="FCAF057CD0B6439E9D61C515E775AF84" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">5x25mm Semiconductor Protection Fuses</label>
+    <sort_order>6144</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5x25mm Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="6915473802AE4D2FB62A998C5A647F94" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">1/4 X 1-1/4 with Integral Cap</label>
+    <sort_order>6272</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>1/4 X 1-1/4 with Integral Cap</value>
+   </Item>
+   <Item type="Filter Value" id="E1DA010513A7456FBB0E4745035EA9B8" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">1/4 X 1</label>
+    <sort_order>6400</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>1/4 X 1</value>
+   </Item>
+   <Item type="Filter Value" id="47A4DD1FD6C74F168791B3708F739145" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">Automotive Fuse</label>
+    <sort_order>6528</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Automotive Fuse</value>
+   </Item>
+   <Item type="Filter Value" id="6C333469679D443E9E6B8793363BFEC9" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">Radial Micro Fuse</label>
+    <sort_order>6656</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Radial Micro Fuse</value>
+   </Item>
+   <Item type="Filter Value" id="AD21EB751DF441538219D07D08D133CF" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">3.6  X 10mm</label>
+    <sort_order>6784</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>3.6  X 10mm</value>
+   </Item>
+   <Item type="Filter Value" id="9CCFBEF403324D6C8B10293A384ADDC7" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">4.5 x 14.5mm electronic fuses</label>
+    <sort_order>6912</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>4.5 x 14.5mm electronic fuses</value>
+   </Item>
+   <Item type="Filter Value" id="4D52FD1FF4FE4FD7AF362723AB059F0F" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">5 x 20mm electronic fuses</label>
+    <sort_order>7040</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5 x 20mm electronic fuses</value>
+   </Item>
+   <Item type="Filter Value" id="70B76DC051314204AF29F209F202B258" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">5 X 30mm</label>
+    <sort_order>7168</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5 X 30mm</value>
+   </Item>
+   <Item type="Filter Value" id="2BD2894B27F94FCF86B2F2938A8AD78A" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">5 X 25mm</label>
+    <sort_order>7296</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5 X 25mm</value>
+   </Item>
+   <Item type="Filter Value" id="2D72086B3A0948A9A796578C6CEA6537" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">6 X 30mm</label>
+    <sort_order>7424</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6 X 30mm</value>
+   </Item>
+   <Item type="Filter Value" id="68B067C2C80A4F798A9BBAECB5F73D33" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">6.3 X 15.9mm</label>
+    <sort_order>7552</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6.3 X 15.9mm</value>
+   </Item>
+   <Item type="Filter Value" id="78C94CBB0DA442D991D0DD729E83CD79" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">6.3 X 22.2mm</label>
+    <sort_order>7680</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6.3 X 22.2mm</value>
+   </Item>
+   <Item type="Filter Value" id="4AD64F999CD14B7BA37854D8476A54D1" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">6.3 X 32mm</label>
+    <sort_order>7808</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6.3 X 32mm</value>
+   </Item>
+   <Item type="Filter Value" id="0810052D78354A00ADFE4B14A979EB1B" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">6X32mm</label>
+    <sort_order>7936</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6X32mm</value>
+   </Item>
+   <Item type="Filter Value" id="1F8DC24BF3564A008FD2F37922C8231D" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">Automotive Blade Fuses</label>
+    <sort_order>8064</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Automotive Blade Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="6490536DD2C54A429D4924CBC88A737F" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">Clips for Electronic Fuses</label>
+    <sort_order>8192</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Clips for Electronic Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="0B7C2F0B128545DEA0C75BCF6A6F5E48" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">European Car Bakelite Fuses</label>
+    <sort_order>8320</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>European Car Bakelite Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="C182DC202ACF46AFAFB1D3F167DF0E18" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">Forklift Truck Fuses ANE</label>
+    <sort_order>8448</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Forklift Truck Fuses ANE</value>
+   </Item>
+   <Item type="Filter Value" id="72FC6A009553496B8FC4ADA4858D6A29" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">Fuse Blocks</label>
+    <sort_order>8576</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fuse Blocks</value>
+   </Item>
+   <Item type="Filter Value" id="4F5885F4FC434015B367CB01CA4A0030" action="add">
+    <filter>Miniature Fuses</filter>
+    <label xml:lang="en">10.3 X 38.1mm</label>
+    <sort_order>8704</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>10.3 X 38.1mm</value>
+   </Item>
+   <Item type="Filter Value" id="43E11595529F41CD9899656B3AD33AF2" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">Battery Module Fuses</label>
+    <sort_order>8940</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Battery Module Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="51DBED915A854EAFA9C26282D065D0F5" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">Battery Pack Fuses</label>
+    <sort_order>8950</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Battery Pack Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="4FBD32F05B204A179D668A2072001BAA" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">Cable Protector</label>
+    <sort_order>8960</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Cable Protector</value>
+   </Item>
+   <Item type="Filter Value" id="DB2D43656FE94E749296828CC341700A" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">Capacitor Fuses</label>
+    <sort_order>9000</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Capacitor Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="6108177FEBA245D5A22C09F246316CB0" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">DC Fuses</label>
+    <sort_order>9088</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DC Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="D843431C830B4C2F914F418277C9D735" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">European fuse-links for special applications</label>
+    <sort_order>9100</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>European fuse-links for special applications</value>
+   </Item>
+   <Item type="Filter Value" id="E4DF08B77EDB4FE086B624E74FF38781" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">Forklift Truck Fuses</label>
+    <sort_order>9216</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Forklift Truck Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="C2CEAE727FF14F9984EB4F0F3A717E22" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">MOV Protection Fuses</label>
+    <sort_order>9250</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>MOV Protection Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="207E2EA0C93B42A59233B4837E4D9625" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">Photovoltaic Fuses</label>
+    <sort_order>9300</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Photovoltaic Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="F7F8834C75C44C6790DD4F8B24534E47" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">Telecommunications Fuses</label>
+    <sort_order>9344</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Telecommunications Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="F1CCC1959602475B8CC7269F7E50A446" action="add">
+    <filter>Special Purpose Fuses</filter>
+    <label xml:lang="en">Welder Protectors</label>
+    <sort_order>9472</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Welder Protectors</value>
+   </Item>
+   <Item type="Filter Value" id="44053ECC56F94D8AB81724610C42853F" action="add">
+    <filter>Electronic Fuses</filter>
+    <label xml:lang="en">Fuse Kits</label>
+    <sort_order>9984</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fuse Kits</value>
+   </Item>
+   <Item type="Filter Value" id="6ED1562A6E5D4A24AB58E9BB5AED5C2A" action="add">
+    <filter>Electronic Fuses</filter>
+    <label xml:lang="en">Panel Mount Holders</label>
+    <sort_order>10112</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Panel Mount Holders</value>
+   </Item>
+   <Item type="Filter Value" id="EC171F2E361D4D46B6E4A698F70B8790" action="add">
+    <filter>Electronic Fuses</filter>
+    <label xml:lang="en">Radial Lead Micro Fuse</label>
+    <sort_order>10240</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Radial Lead Micro Fuse</value>
+   </Item>
+   <Item type="Filter Value" id="BC5858FF51BF4E29B83B98EF850CDEB6" action="add">
+    <filter>Electronic Fuses</filter>
+    <label xml:lang="en">Surface Mount Fuses</label>
+    <sort_order>10368</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Surface Mount Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="FA7DABEF0C1247118A1366620D082EAE" action="add">
+    <filter>Electronic Fuses</filter>
+    <label xml:lang="en">PCB Chip Fuses</label>
+    <sort_order>10496</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>PCB Chip Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="2C6A312B35004895BFC75026336A1004" action="add">
+    <filter>Resettable Fuses</filter>
+    <label xml:lang="en">PPTC</label>
+    <sort_order>10624</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>PPTC</value>
+   </Item>
+   <Item type="Filter Value" id="31AB82F7BD9F42E884CD1E0782DC7AAB" action="add">
+    <filter>Fuse Holders</filter>
+    <label xml:lang="en">IEC Cylindrical Fuse Holders</label>
+    <sort_order>10752</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Cylindrical Fuse Holders</value>
+   </Item>
+   <Item type="Filter Value" id="B63637ACB3024B50905C95D9AC836538" action="add">
+    <filter>Fuse Holders</filter>
+    <label xml:lang="en">UL/CSA Fuse Holders</label>
+    <sort_order>10880</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL/CSA Fuse Holders</value>
+   </Item>
+   <Item type="Filter Value" id="4225C5FE695443D1BFA824BD8D8DD014" action="add">
+    <filter>Fuse Holders</filter>
+    <label xml:lang="en">IEC+UL/CSA Fuse Holders</label>
+    <sort_order>10900</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC+UL/CSA Fuse Holders</value>
+   </Item>
+   <Item type="Filter Value" id="57F18235452F4F6DB81DCFE9FD242760" action="add">
+    <filter>Fuse Bases</filter>
+    <label xml:lang="en">UL/CSA Fuse Bases</label>
+    <sort_order>11008</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL/CSA Fuse Bases</value>
+   </Item>
+   <Item type="Filter Value" id="F9ED5DE5F1284E0081AF205FDF468330" action="add">
+    <filter>Fuse Bases</filter>
+    <label xml:lang="en">IEC NH Fuse Bases</label>
+    <sort_order>11136</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC NH Fuse Bases</value>
+   </Item>
+   <Item type="Filter Value" id="19D1EBEB94DD4849A8D9E3326ED20E9F" action="add">
+    <filter>Fuse Bases</filter>
+    <label xml:lang="en">IEC D0 &amp; D Fuse Bases</label>
+    <sort_order>11264</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC D0 &amp; D Fuse Bases</value>
+   </Item>
+   <Item type="Filter Value" id="564CDAFF3A2542E5BB93790871FE5254" action="add">
+    <filter>Fuse Bases</filter>
+    <label xml:lang="en">Fuse Bases for Photovoltaic NH Fuses</label>
+    <sort_order>11300</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fuse Bases for Photovoltaic NH Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="F79DCC0900854820B3CA220B8D4A8E05" action="add">
+    <filter>Fuse Bases</filter>
+    <label xml:lang="en">IEC HV Fuse Supports</label>
+    <sort_order>11392</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC HV Fuse Supports</value>
+   </Item>
+   <Item type="Filter Value" id="C7FE908B7C3546AEA3BAA686694FAFCA" action="add">
+    <filter>Fuse Bases</filter>
+    <label xml:lang="en">IEEE MV Fuse Supports</label>
+    <sort_order>11520</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEEE MV Fuse Supports</value>
+   </Item>
+   <Item type="Filter Value" id="70346EB452BB4FEAA259E52B587F8E7E" action="add">
+    <filter>Fuse Bases</filter>
+    <label xml:lang="en">Semiconductor &amp; Special Purpose Fuse Bases &amp; Accessories</label>
+    <sort_order>11648</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Semiconductor &amp; Special Purpose Fuse Bases &amp; Accessories</value>
+   </Item>
+   <Item type="Filter Value" id="E8014DB6DB804371AE2B7B601083C30E" action="add">
+    <filter>Fuse Bases</filter>
+    <label xml:lang="en">Miniature Fuse Bases &amp; Holders</label>
+    <sort_order>11776</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Miniature Fuse Bases &amp; Holders</value>
+   </Item>
+   <Item type="Filter Value" id="1437FFEBF0BF4D44B52848313D2DD490" action="add">
+    <filter>Fuse Bases</filter>
+    <label xml:lang="en">Fuse Clips</label>
+    <sort_order>11904</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fuse Clips</value>
+   </Item>
+   <Item type="Filter Value" id="80579BE477BF4B7BA4A9982479FFB40F" action="add">
+    <filter>Bus Bar Systems</filter>
+    <label xml:lang="en">Components for 60mm Systems</label>
+    <sort_order>12032</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Components for 60mm Systems</value>
+   </Item>
+   <Item type="Filter Value" id="90EC5882C8584E48BFA70868102DDD81" action="add">
+    <filter>Bus Bar Systems</filter>
+    <label xml:lang="en">Components for 100mm systems</label>
+    <sort_order>12160</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Components for 100mm systems</value>
+   </Item>
+   <Item type="Filter Value" id="D3B0FE9B13014A47AB580824E33093FA" action="add">
+    <filter>Bus Bar Systems</filter>
+    <label xml:lang="en">Components for 185mm systems</label>
+    <sort_order>12288</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Components for 185mm systems</value>
+   </Item>
+   <Item type="Filter Value" id="724FBFD1DAF64595BCF1C4A55AE526F9" action="add">
+    <filter>Fuse Rails</filter>
+    <label xml:lang="en">IEC NH Fuse Rails</label>
+    <sort_order>12416</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC NH Fuse Rails</value>
+   </Item>
+   <Item type="Filter Value" id="07E449C555FF406EBB6BFB9E37687626" action="add">
+    <filter>Surge Protection Components</filter>
+    <label xml:lang="en">Thermally Protected MOV (TPMOV®)</label>
+    <sort_order>13312</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Thermally Protected MOV (TPMOV®)</value>
+   </Item>
+   <Item type="Filter Value" id="9172DEE9AE8C4484B8B16767A2E8DDF5" action="add">
+    <filter>UL/CSA Switches</filter>
+    <label xml:lang="en">UL 508</label>
+    <sort_order>13440</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL 508</value>
+   </Item>
+   <Item type="Filter Value" id="B1D515AC6C2340888CB6AEED5EC5E27C" action="add">
+    <filter>UL/CSA Switches</filter>
+    <label xml:lang="en">UL 98 Non Fusible</label>
+    <sort_order>13568</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL 98 Non Fusible</value>
+   </Item>
+   <Item type="Filter Value" id="B39FA769C4B44C019C7A077C79CE4447" action="add">
+    <filter>UL/CSA Switches</filter>
+    <label xml:lang="en">UL 98 Fusible</label>
+    <sort_order>13696</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL 98 Fusible</value>
+   </Item>
+   <Item type="Filter Value" id="35D2A96EEEFA4DB08ED3A9B133380E14" action="add">
+    <filter>UL/CSA Switches</filter>
+    <label xml:lang="en">UL PV Rated</label>
+    <sort_order>13824</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL PV Rated</value>
+   </Item>
+   <Item type="Filter Value" id="386DD4567567416D84219BDC03F30C19" action="add">
+    <filter>UL/CSA Switches</filter>
+    <label xml:lang="en">Enclosed Disconnect Switches</label>
+    <sort_order>13952</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Enclosed Disconnect Switches</value>
+   </Item>
+   <Item type="Filter Value" id="FE9290FA25F24E5991D0BB5DB0D7787E" action="add">
+    <filter>UL/CSA Switches</filter>
+    <label xml:lang="en">Fusible Shunt Trip Disconnect</label>
+    <sort_order>14080</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fusible Shunt Trip Disconnect</value>
+   </Item>
+   <Item type="Filter Value" id="DAD8665BB7244218A7FB27C40967CDFC" action="add">
+    <filter>UL/CSA Switches</filter>
+    <label xml:lang="en">Fused Coordination Panelboard</label>
+    <sort_order>14208</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fused Coordination Panelboard</value>
+   </Item>
+   <Item type="Filter Value" id="65AB1C2784DE459E970AB0104A94F5C1" action="add">
+    <filter>UL/CSA Switches</filter>
+    <label xml:lang="en">SPD Surge Switch</label>
+    <sort_order>14336</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>SPD Surge Switch</value>
+   </Item>
+   <Item type="Filter Value" id="3A273F63B6484D8A987FC7A9DA5473B5" action="add">
+    <filter>IEC Switches</filter>
+    <label xml:lang="en">IEC Fusible</label>
+    <sort_order>14464</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Fusible</value>
+   </Item>
+   <Item type="Filter Value" id="89A3841B6DED471991FE94649E57B0CC" action="add">
+    <filter>IEC Switches</filter>
+    <label xml:lang="en">IEC Non-Fusible</label>
+    <sort_order>14592</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Non-Fusible</value>
+   </Item>
+   <Item type="Filter Value" id="3FB44626607E4261BEDA32B42328262F" action="add">
+    <filter>IEC Switches</filter>
+    <label xml:lang="en">IEC Non-Fused &lt;125A</label>
+    <sort_order>14720</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Non-Fused &lt;125A</value>
+   </Item>
+   <Item type="Filter Value" id="86C86099DE244FF1A021FC2C3AA157E7" action="add">
+    <filter>IEC Switches</filter>
+    <label xml:lang="en">IEC PV Rated</label>
+    <sort_order>14848</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC PV Rated</value>
+   </Item>
+   <Item type="Filter Value" id="346E6F72A7CF464B9D6FA195DF23E51B" action="add">
+    <filter>IEC Fuse Switch Disconnectors</filter>
+    <label xml:lang="en">D0 Fuse Combination Units</label>
+    <sort_order>14976</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>D0 Fuse Combination Units</value>
+   </Item>
+   <Item type="Filter Value" id="90A1457F7E284C3BB6E0A668C3954D1D" action="add">
+    <filter>IEC Fuse Switch Disconnectors</filter>
+    <label xml:lang="en">NH Fuse Switch Disconnector</label>
+    <sort_order>15104</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>NH Fuse Switch Disconnector</value>
+   </Item>
+   <Item type="Filter Value" id="8BC219908B3741ADAC238F8AC200B042" action="add">
+    <filter>IEC Fuse Switch Disconnectors</filter>
+    <label xml:lang="en">NH Vertical Fuse Switch Disconnector</label>
+    <sort_order>15232</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>NH Vertical Fuse Switch Disconnector</value>
+   </Item>
+   <Item type="Filter Value" id="25DAD379D6F84D018339C48CA2701B95" action="add">
+    <filter>Power Distribution Blocks</filter>
+    <label xml:lang="en">Finger-Safe (IP20) Power Distribution Blocks</label>
+    <sort_order>15360</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Finger-Safe (IP20) Power Distribution Blocks</value>
+   </Item>
+   <Item type="Filter Value" id="C8D4A6D1182548CEB0B673ACE98A4FC2" action="add">
+    <filter>Power Distribution Blocks</filter>
+    <label xml:lang="en">Open-Style Power Distribution Blocks</label>
+    <sort_order>15488</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Open-Style Power Distribution Blocks</value>
+   </Item>
+   <Item type="Value" id="FBAE6B6521FD4361BA687E7BC8899547" action="add">
+    <label xml:lang="en">IEC Cylindrical Fuse-Links</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Cylindrical Fuse-Links</value>
+   </Item>
+   <Item type="Value" id="28CF9A94AC6A4C0985FF550F499ED524" action="add">
+    <label xml:lang="en">DIN LV Fuse-Links D0</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN LV Fuse-Links D0</value>
+   </Item>
+   <Item type="Value" id="F2E54CC803E844F295D3090B5BEE55AC" action="add">
+    <label xml:lang="en">DIN LV Fuse-Links D</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN LV Fuse-Links D</value>
+   </Item>
+   <Item type="Value" id="2BA11D110D59418EBF8BDA118F261B2B" action="add">
+    <label xml:lang="en">BS Fuse-Links</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>BS Fuse-Links</value>
+   </Item>
+   <Item type="Value" id="47362D94EF634AC79546CF8F3BBB38FC" action="add">
+    <label xml:lang="en">IEC NH Fuse-Links</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC NH Fuse-Links</value>
+   </Item>
+   <Item type="Value" id="3A702903D0FE4085B8C61702F3E0C683" action="add">
+    <label xml:lang="en">Midget Fuses</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Midget Fuses</value>
+   </Item>
+   <Item type="Value" id="02E79D35E56044FCAC210FB3BAA1220C" action="add">
+    <label xml:lang="en">Class CC</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class CC</value>
+   </Item>
+   <Item type="Value" id="A76A5E77297B4C4391A7A72CBC664E7F" action="add">
+    <label xml:lang="en">Class RK1</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class RK1</value>
+   </Item>
+   <Item type="Value" id="4789360D8627448A9F0DDEF43E30E31B" action="add">
+    <label xml:lang="en">Class RK5</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class RK5</value>
+   </Item>
+   <Item type="Value" id="9F28486110F04AF6A5F8D7F310B20550" action="add">
+    <label xml:lang="en">Class J</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class J</value>
+   </Item>
+   <Item type="Value" id="DD129D9C24DA45628A52CAF90B4A1FE4" action="add">
+    <label xml:lang="en">Class L</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class L</value>
+   </Item>
+   <Item type="Value" id="EE575A4558354DC0AA61260A09699CD2" action="add">
+    <label xml:lang="en">Class K5</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class K5</value>
+   </Item>
+   <Item type="Value" id="C23794BD7D2B4C6180122E27B09EB115" action="add">
+    <label xml:lang="en">Class T</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class T</value>
+   </Item>
+   <Item type="Value" id="0A0EDFB03E6A443094CAE0EC3EECAABD" action="add">
+    <label xml:lang="en">Class G</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class G</value>
+   </Item>
+   <Item type="Value" id="EB197C99C5E645E9BCE29BBF7667C109" action="add">
+    <label xml:lang="en">Class H</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Class H</value>
+   </Item>
+   <Item type="Value" id="93F15480483C40CAB122F02C38484A57" action="add">
+    <label xml:lang="en">Renewable Fuses</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Renewable Fuses</value>
+   </Item>
+   <Item type="Value" id="8AF0B23BC4704A7FBA4FDC3D4FE8750D" action="add">
+    <label xml:lang="en">HRC Fuses</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>HRC Fuses</value>
+   </Item>
+   <Item type="Value" id="38AECFA33C6D4618AD0FE466C1C8997F" action="add">
+    <label xml:lang="en">Plug Fuses</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Plug Fuses</value>
+   </Item>
+   <Item type="Value" id="876F5719343C4C929A86CAF44B24DF05" action="add">
+    <label xml:lang="en">DIN HV Back-up Fuses for Transformers</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN HV Back-up Fuses for Transformers</value>
+   </Item>
+   <Item type="Value" id="9570F23116E44C16A75926FB12F48666" action="add">
+    <label xml:lang="en">NF/UTE HV Back-up Fuses for Transformers</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>NF/UTE HV Back-up Fuses for Transformers</value>
+   </Item>
+   <Item type="Value" id="2F88EA4EEEB447AAA64E4938E26DDBCF" action="add">
+    <label xml:lang="en">DIN HV Back-up Fuses for Motors</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN HV Back-up Fuses for Motors</value>
+   </Item>
+   <Item type="Value" id="D445C2A26A2D4D4BB2D49E62A32E6A26" action="add">
+    <label xml:lang="en">IEC HV fuses for public lighting</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC HV fuses for public lighting</value>
+   </Item>
+   <Item type="Value" id="20738CC5041D4DF7B12C927EF81348F3" action="add">
+    <label xml:lang="en">IEC HV fuses for potential transformers</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC HV fuses for potential transformers</value>
+   </Item>
+   <Item type="Value" id="ABE5FC7FE45344A5948A8B19E0C8E06B" action="add">
+    <label xml:lang="en">General Purpose Ferrule Mount Fuses for Transformer Protection</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>General Purpose Ferrule Mount Fuses for Transformer Protection</value>
+   </Item>
+   <Item type="Value" id="934E1962D35A48849E1DBCB0FB26D660" action="add">
+    <label xml:lang="en">General Purpose Bolt-On Fuses for Transformer Protection</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>General Purpose Bolt-On Fuses for Transformer Protection</value>
+   </Item>
+   <Item type="Value" id="B417DE5A9EC24334895F772D10833C02" action="add">
+    <label xml:lang="en">General Purpose Clip-Lock Fuses for Transformer Protection</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>General Purpose Clip-Lock Fuses for Transformer Protection</value>
+   </Item>
+   <Item type="Value" id="37E6DFF807EB4BB097D0C6D0B783685A" action="add">
+    <label xml:lang="en">Back-Up R-Rated Bolt-On Fuses for Motor Protection</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Back-Up R-Rated Bolt-On Fuses for Motor Protection</value>
+   </Item>
+   <Item type="Value" id="E080EC6669BE4A289AB3A895B28F23F6" action="add">
+    <label xml:lang="en">Back-Up R-Rated Ferrule Mount Fuses for Motor Protection</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Back-Up R-Rated Ferrule Mount Fuses for Motor Protection</value>
+   </Item>
+   <Item type="Value" id="8C5730560D4A4CC0A1DD373568A6F216" action="add">
+    <label xml:lang="en">Back-Up R-Rated DIN Style Fuses for Motor Protection</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Back-Up R-Rated DIN Style Fuses for Motor Protection</value>
+   </Item>
+   <Item type="Value" id="01BA5565C13C432EAC8E01B1C68CD90E" action="add">
+    <label xml:lang="en">Potential Transformer Protection Fuses</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Potential Transformer Protection Fuses</value>
+   </Item>
+   <Item type="Value" id="F8A3C8CEE4724EE59EF8330E6A3705EC" action="add">
+    <label xml:lang="en">Capacitor Protection Fuses</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Capacitor Protection Fuses</value>
+   </Item>
+   <Item type="Value" id="0CBA905A58DD4A72AEB1AB8A12E1423C" action="add">
+    <label xml:lang="en">Distribution Transformer Protection</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Distribution Transformer Protection</value>
+   </Item>
+   <Item type="Value" id="F82D9A8909024BFB82285DB2BDC6A3CA" action="add">
+    <label xml:lang="en">Intelligent Fuse Technology</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Intelligent Fuse Technology</value>
+   </Item>
+   <Item type="Value" id="08ED1A34D1274380BDE3BEDF7BECDBA2" action="add">
+    <label xml:lang="en">Square Body High-Speed Fuse-Links AC Protection</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Square Body High-Speed Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Value" id="1FD79B83AAD4463AB94D66ED6ADE212B" action="add">
+    <label xml:lang="en">Round Body High-Speed Fuse-Links AC Protection</label>
+    <sort_order>4480</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Round Body High-Speed Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Value" id="E8F725DBEDCB4653BDC9509F5157762E" action="add">
+    <label xml:lang="en">IEC High-Speed Cylindrical Fuse-Links AC Protection</label>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC High-Speed Cylindrical Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Value" id="7433DF37B4874497B3B1FD9DB6BF297D" action="add">
+    <label xml:lang="en">NH square Body High-Speed Fuse-Links AC Protection</label>
+    <sort_order>4736</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>NH square Body High-Speed Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Value" id="95C14C1F4DBA4F8084B0BDB846B9D452" action="add">
+    <label xml:lang="en">British Standard High-Speed Fuse-Links AC Protection</label>
+    <sort_order>4864</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>British Standard High-Speed Fuse-Links AC Protection</value>
+   </Item>
+   <Item type="Value" id="C0B123F44AA3435F80A061753FAC5F39" action="add">
+    <label xml:lang="en">High performance square body fuse-links AC protection</label>
+    <sort_order>4992</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>High performance square body fuse-links AC protection</value>
+   </Item>
+   <Item type="Value" id="7E11D51DC589486498071A23A512D99D" action="add">
+    <label xml:lang="en">IEC High-Speed Cylindrical Fuse-Links DC Protection</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC High-Speed Cylindrical Fuse-Links DC Protection</value>
+   </Item>
+   <Item type="Value" id="0D73A25C19A04A9BB4F3898EEA9078B8" action="add">
+    <label xml:lang="en">Square Body High-Speed Fuse-Links DC Protection</label>
+    <sort_order>5248</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Square Body High-Speed Fuse-Links DC Protection</value>
+   </Item>
+   <Item type="Value" id="FF5D5DB6DED1437CB4BAD89E3874195A" action="add">
+    <label xml:lang="en">5x20mm</label>
+    <sort_order>5376</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5x20mm</value>
+   </Item>
+   <Item type="Value" id="CE371E2BFBA54625BD8D6616FE11C700" action="add">
+    <label xml:lang="en">6x32mm, 1/4in X 1-1/4in</label>
+    <sort_order>5504</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6x32mm, 1/4in X 1-1/4in</value>
+   </Item>
+   <Item type="Value" id="D2BEFC10A7DD4E5DB4A87275DBB5586C" action="add">
+    <label xml:lang="en">5x20mm Semiconductor Protection Fuses</label>
+    <sort_order>5632</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5x20mm Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Value" id="103E2D651F1743189EC940A228DCF03E" action="add">
+    <label xml:lang="en">6x32mm Semiconductor Protection Fuses</label>
+    <sort_order>5760</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6x32mm Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Value" id="CD9F218DC27E455F9F2B4D741A6B9A32" action="add">
+    <label xml:lang="en">6x46mm Semiconductor Protection Fuses</label>
+    <sort_order>5888</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6x46mm Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Value" id="075854A22C344C9881DC84788BF013A5" action="add">
+    <label xml:lang="en">4.5x14.5mm</label>
+    <sort_order>6016</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>4.5x14.5mm</value>
+   </Item>
+   <Item type="Value" id="2117731362C64FB99C01E24D61AA8CCC" action="add">
+    <label xml:lang="en">5x25mm Semiconductor Protection Fuses</label>
+    <sort_order>6144</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5x25mm Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Value" id="01D34CB38412458FA64B0AABEC969C28" action="add">
+    <label xml:lang="en">1/4 X 1-1/4 with Integral Cap</label>
+    <sort_order>6272</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>1/4 X 1-1/4 with Integral Cap</value>
+   </Item>
+   <Item type="Value" id="CD8475DD2C1F4923A03C180D6DAA715F" action="add">
+    <label xml:lang="en">1/4 X 1</label>
+    <sort_order>6400</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>1/4 X 1</value>
+   </Item>
+   <Item type="Value" id="4B53C7E32C774076A6A5EAC7C6F24D0C" action="add">
+    <label xml:lang="en">Automotive Fuse</label>
+    <sort_order>6528</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Automotive Fuse</value>
+   </Item>
+   <Item type="Value" id="0FD0E7C374A04FC4A5FBD8C40E246816" action="add">
+    <label xml:lang="en">Radial Micro Fuse</label>
+    <sort_order>6656</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Radial Micro Fuse</value>
+   </Item>
+   <Item type="Value" id="333985E362254AB28F7801D233177F53" action="add">
+    <label xml:lang="en">3.6  X 10mm</label>
+    <sort_order>6784</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>3.6  X 10mm</value>
+   </Item>
+   <Item type="Value" id="9DECAE80E3494A3C92E5A9BE62A0F190" action="add">
+    <label xml:lang="en">4.5 x 14.5mm electronic fuses</label>
+    <sort_order>6912</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>4.5 x 14.5mm electronic fuses</value>
+   </Item>
+   <Item type="Value" id="5B729D23542340D7893E8B5315BA1A08" action="add">
+    <label xml:lang="en">5 x 20mm electronic fuses</label>
+    <sort_order>7040</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5 x 20mm electronic fuses</value>
+   </Item>
+   <Item type="Value" id="76D2E55E18074272895CA42AF8C14FE5" action="add">
+    <label xml:lang="en">5 X 30mm</label>
+    <sort_order>7168</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5 X 30mm</value>
+   </Item>
+   <Item type="Value" id="93025199B5594A6F93A19478742C9633" action="add">
+    <label xml:lang="en">5 X 25mm</label>
+    <sort_order>7296</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>5 X 25mm</value>
+   </Item>
+   <Item type="Value" id="51527A77A91544529CCB623B4DB3B4E4" action="add">
+    <label xml:lang="en">6 X 30mm</label>
+    <sort_order>7424</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6 X 30mm</value>
+   </Item>
+   <Item type="Value" id="CD4A7765FC07474D9FE9944AC0E96701" action="add">
+    <label xml:lang="en">6.3 X 15.9mm</label>
+    <sort_order>7552</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6.3 X 15.9mm</value>
+   </Item>
+   <Item type="Value" id="A70854D24583407AB64E6F6B1AC8193F" action="add">
+    <label xml:lang="en">6.3 X 22.2mm</label>
+    <sort_order>7680</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6.3 X 22.2mm</value>
+   </Item>
+   <Item type="Value" id="5FE546E47AB44AEEBA824AD12E80D57D" action="add">
+    <label xml:lang="en">6.3 X 32mm</label>
+    <sort_order>7808</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6.3 X 32mm</value>
+   </Item>
+   <Item type="Value" id="0EE54DCFA595413595B4103CCFD3F27E" action="add">
+    <label xml:lang="en">6X32mm</label>
+    <sort_order>7936</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>6X32mm</value>
+   </Item>
+   <Item type="Value" id="3C3225C3AA134D5BB0DD69ABA841C0A4" action="add">
+    <label xml:lang="en">Automotive Blade Fuses</label>
+    <sort_order>8064</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Automotive Blade Fuses</value>
+   </Item>
+   <Item type="Value" id="0C70771B5533463D8D00BCBE4341A2E8" action="add">
+    <label xml:lang="en">Clips for Electronic Fuses</label>
+    <sort_order>8192</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Clips for Electronic Fuses</value>
+   </Item>
+   <Item type="Value" id="0E406A1245F746FDB4069B5CD73BDEA0" action="add">
+    <label xml:lang="en">European Car Bakelite Fuses</label>
+    <sort_order>8320</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>European Car Bakelite Fuses</value>
+   </Item>
+   <Item type="Value" id="587B1AC7356A4169ACD22167EE3B132E" action="add">
+    <label xml:lang="en">Forklift Truck Fuses ANE</label>
+    <sort_order>8448</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Forklift Truck Fuses ANE</value>
+   </Item>
+   <Item type="Value" id="792D88606201459696502E27F51195D3" action="add">
+    <label xml:lang="en">Fuse Blocks</label>
+    <sort_order>8576</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fuse Blocks</value>
+   </Item>
+   <Item type="Value" id="F9C3696A82A444F7AA3EA14A28577658" action="add">
+    <label xml:lang="en">10.3 X 38.1mm</label>
+    <sort_order>8704</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>10.3 X 38.1mm</value>
+   </Item>
+   <Item type="Value" id="0E76873432574DBDA06AE9496FC5EDF2" action="add">
+    <label xml:lang="en">Photovoltaic Fuses</label>
+    <sort_order>8832</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Photovoltaic Fuses</value>
+   </Item>
+   <Item type="Value" id="193E2B67059545A2AE01ADC5B147CCFB" action="add">
+    <label xml:lang="en">Cable Protector</label>
+    <sort_order>8960</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Cable Protector</value>
+   </Item>
+   <Item type="Value" id="3971CCBD743C434FB5DFD2F5238CF148" action="add">
+    <label xml:lang="en">DC Fuses</label>
+    <sort_order>9088</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DC Fuses</value>
+   </Item>
+   <Item type="Value" id="EF58AEDD2B004E85A4ED3F43622426C0" action="add">
+    <label xml:lang="en">Forklift Truck Fuses</label>
+    <sort_order>9216</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Forklift Truck Fuses</value>
+   </Item>
+   <Item type="Value" id="EC0F86294D474B91BF8894B7EE905343" action="add">
+    <label xml:lang="en">Telecommunications Fuses</label>
+    <sort_order>9344</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Telecommunications Fuses</value>
+   </Item>
+   <Item type="Value" id="947892DE4806447483F83A622308982F" action="add">
+    <label xml:lang="en">Welder Protectors</label>
+    <sort_order>9472</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Welder Protectors</value>
+   </Item>
+   <Item type="Value" id="0CACBB4F14504ED1AA53D7FC760D6BBE" action="add">
+    <label xml:lang="en">Capacitor Fuses</label>
+    <sort_order>9600</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Capacitor Fuses</value>
+   </Item>
+   <Item type="Value" id="0D81660215C04E4194ED7AAF5D165415" action="add">
+    <label xml:lang="en">MOV Protection Fuses</label>
+    <sort_order>9728</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>MOV Protection Fuses</value>
+   </Item>
+   <Item type="Value" id="400A204A85624A96979F64797B7592A3" action="add">
+    <label xml:lang="en">European fuse-links for special applications</label>
+    <sort_order>9856</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>European fuse-links for special applications</value>
+   </Item>
+   <Item type="Value" id="988752436E764B8C83A3EC27D9EE1D3E" action="add">
+    <label xml:lang="en">Fuse Kits</label>
+    <sort_order>9984</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fuse Kits</value>
+   </Item>
+   <Item type="Value" id="D60735C4FCF041F8981740749EA375E3" action="add">
+    <label xml:lang="en">Panel Mount Holders</label>
+    <sort_order>10112</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Panel Mount Holders</value>
+   </Item>
+   <Item type="Value" id="17AB79937CB04E4ABFF60B571F1556AE" action="add">
+    <label xml:lang="en">Radial Lead Micro Fuse</label>
+    <sort_order>10240</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Radial Lead Micro Fuse</value>
+   </Item>
+   <Item type="Value" id="37F3EB0043814892B78CA218747AF7BC" action="add">
+    <label xml:lang="en">Surface Mount Fuses</label>
+    <sort_order>10368</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Surface Mount Fuses</value>
+   </Item>
+   <Item type="Value" id="8D9A653469C84BEBBF333CF1C4245CD1" action="add">
+    <label xml:lang="en">PCB Chip Fuses</label>
+    <sort_order>10496</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>PCB Chip Fuses</value>
+   </Item>
+   <Item type="Value" id="D1B1DAAB5EEC4110AF6F2517CB419A72" action="add">
+    <label xml:lang="en">PPTC</label>
+    <sort_order>10624</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>PPTC</value>
+   </Item>
+   <Item type="Value" id="30991AA3324245EAAF254EF1675015E5" action="add">
+    <label xml:lang="en">IEC Cylindrical Fuse Holders</label>
+    <sort_order>10752</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Cylindrical Fuse Holders</value>
+   </Item>
+   <Item type="Value" id="6AA1035111604708A65B8EE5B61BB83D" action="add">
+    <label xml:lang="en">UL/CSA Fuse Holders</label>
+    <sort_order>10880</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL/CSA Fuse Holders</value>
+   </Item>
+   <Item type="Value" id="7321DB6693FB48DCB15AF17761BAB8F4" action="add">
+    <label xml:lang="en">UL/CSA Fuse Bases</label>
+    <sort_order>11008</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL/CSA Fuse Bases</value>
+   </Item>
+   <Item type="Value" id="8188819B72B3490A8EF1E41F2F0978FB" action="add">
+    <label xml:lang="en">IEC NH Fuse Bases</label>
+    <sort_order>11136</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC NH Fuse Bases</value>
+   </Item>
+   <Item type="Value" id="D644DC7987034377BC3AEF08CA8F616B" action="add">
+    <label xml:lang="en">IEC D0 &amp; D Fuse Bases</label>
+    <sort_order>11264</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC D0 &amp; D Fuse Bases</value>
+   </Item>
+   <Item type="Value" id="F28DE62FB37A418E9AE4024F5C0FAB37" action="add">
+    <label xml:lang="en">IEC HV Fuse Supports</label>
+    <sort_order>11392</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC HV Fuse Supports</value>
+   </Item>
+   <Item type="Value" id="D8FCEEE1B9EF43CAA5292C5FE8614E70" action="add">
+    <label xml:lang="en">IEEE MV Fuse Supports</label>
+    <sort_order>11520</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEEE MV Fuse Supports</value>
+   </Item>
+   <Item type="Value" id="A6778A0A4E9A4E8DB8D9BFA1D1ED75BE" action="add">
+    <label xml:lang="en">Semiconductor &amp; Special Purpose Fuse Bases &amp; Accessories</label>
+    <sort_order>11648</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Semiconductor &amp; Special Purpose Fuse Bases &amp; Accessories</value>
+   </Item>
+   <Item type="Value" id="3B0E28F199F84300B28FA008448492B0" action="add">
+    <label xml:lang="en">Miniature Fuse Bases &amp; Holders</label>
+    <sort_order>11776</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Miniature Fuse Bases &amp; Holders</value>
+   </Item>
+   <Item type="Value" id="38B212BC0584418D9EDA711FCE77CC91" action="add">
+    <label xml:lang="en">Fuse Clips</label>
+    <sort_order>11904</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fuse Clips</value>
+   </Item>
+   <Item type="Value" id="89BE2DCF1BB34788B5909B5EECBC3D35" action="add">
+    <label xml:lang="en">Components for 60mm Systems</label>
+    <sort_order>12032</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Components for 60mm Systems</value>
+   </Item>
+   <Item type="Value" id="66DEA3F97A024BA4AAD110E7BEF5B1CA" action="add">
+    <label xml:lang="en">Components for 100mm systems</label>
+    <sort_order>12160</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Components for 100mm systems</value>
+   </Item>
+   <Item type="Value" id="1056C169C1864CF6926631192E928FDB" action="add">
+    <label xml:lang="en">Components for 185mm systems</label>
+    <sort_order>12288</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Components for 185mm systems</value>
+   </Item>
+   <Item type="Value" id="BCC419E47068474FA3FAA7CB600BC086" action="add">
+    <label xml:lang="en">IEC NH Fuse Rails</label>
+    <sort_order>12416</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC NH Fuse Rails</value>
+   </Item>
+   <Item type="Value" id="5F7B2E7E573742BF8E3FD420792C2694" action="add">
+    <label xml:lang="en">UL DIN-Rail</label>
+    <sort_order>12544</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL DIN-Rail</value>
+   </Item>
+   <Item type="Value" id="91B0D992E7214E8182C0F3E63A1FA7E6" action="add">
+    <label xml:lang="en">Type 1 &amp; 2</label>
+    <sort_order>12672</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Type 1 &amp; 2</value>
+   </Item>
+   <Item type="Value" id="83A59B3016A54A6E9090FF03D76DC08F" action="add">
+    <label xml:lang="en">In-Line Type 4</label>
+    <sort_order>12700</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>In-Line Type 4</value>
+   </Item>
+   <Item type="Value" id="9730137F1F484103AC6257168EAE42DC" action="add">
+    <label xml:lang="en">DIN-Rail IEC Type 1 / Class I</label>
+    <sort_order>12800</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN-Rail IEC Type 1 / Class I</value>
+   </Item>
+   <Item type="Value" id="7B618A2DAF864216A0931A1D193E601B" action="add">
+    <label xml:lang="en">DIN-Rail IEC Type 1+2 / Class I+II</label>
+    <sort_order>12928</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN-Rail IEC Type 1+2 / Class I+II</value>
+   </Item>
+   <Item type="Value" id="1DC68619EBA84E31874455EF5D6D7BEA" action="add">
+    <label xml:lang="en">DIN-Rail IEC Type 2 / Class II</label>
+    <sort_order>13056</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN-Rail IEC Type 2 / Class II</value>
+   </Item>
+   <Item type="Value" id="F993C8BA2324415AA3487ED440AE24F8" action="add">
+    <label xml:lang="en">DIN-Rail IEC Type 2+3 / Class II+III</label>
+    <sort_order>13184</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>DIN-Rail IEC Type 2+3 / Class II+III</value>
+   </Item>
+   <Item type="Value" id="B88F190F79BE4BFCA938EA3484A8C4A1" action="add">
+    <label xml:lang="en">Thermally Protected MOV (TPMOV®)</label>
+    <sort_order>13312</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Thermally Protected MOV (TPMOV®)</value>
+   </Item>
+   <Item type="Value" id="FD16BD06DF234304910AC62A45C44DDB" action="add">
+    <label xml:lang="en">UL 508</label>
+    <sort_order>13440</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL 508</value>
+   </Item>
+   <Item type="Value" id="9371B1F93FB642EC82A9FE16BFE9A0EB" action="add">
+    <label xml:lang="en">UL 98 Non Fusible</label>
+    <sort_order>13568</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL 98 Non Fusible</value>
+   </Item>
+   <Item type="Value" id="30A838E94E8A4809AFC04CE92D1661FE" action="add">
+    <label xml:lang="en">UL 98 Fusible</label>
+    <sort_order>13696</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL 98 Fusible</value>
+   </Item>
+   <Item type="Value" id="CE5028E62E4644D8925C522FC4A45C9B" action="add">
+    <label xml:lang="en">UL PV Rated</label>
+    <sort_order>13824</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>UL PV Rated</value>
+   </Item>
+   <Item type="Value" id="0CE149B081B040CD9B9C1FF7B9739907" action="add">
+    <label xml:lang="en">Enclosed Disconnect Switches</label>
+    <sort_order>13952</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Enclosed Disconnect Switches</value>
+   </Item>
+   <Item type="Value" id="38FE8F6B6E5B4D888BE1E5AFA942C29A" action="add">
+    <label xml:lang="en">Fusible Shunt Trip Disconnect</label>
+    <sort_order>14080</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fusible Shunt Trip Disconnect</value>
+   </Item>
+   <Item type="Value" id="612DC9D9E07E40C6BE1E2A8BCD484D38" action="add">
+    <label xml:lang="en">Fused Coordination Panelboard</label>
+    <sort_order>14208</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Fused Coordination Panelboard</value>
+   </Item>
+   <Item type="Value" id="C66212F6F7804C5B826AA29784CBD2DD" action="add">
+    <label xml:lang="en">SPD Surge Switch</label>
+    <sort_order>14336</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>SPD Surge Switch</value>
+   </Item>
+   <Item type="Value" id="0A3C5B6DCCE34117AE8065F52B5C190C" action="add">
+    <label xml:lang="en">IEC Fusible</label>
+    <sort_order>14464</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Fusible</value>
+   </Item>
+   <Item type="Value" id="B8F591AD3A2B4E6AA7F43837DE747B78" action="add">
+    <label xml:lang="en">IEC Non-Fusible</label>
+    <sort_order>14592</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Non-Fusible</value>
+   </Item>
+   <Item type="Value" id="511D721A4CED4F7E9070B2160F62CF64" action="add">
+    <label xml:lang="en">IEC Non-Fused &lt;125A</label>
+    <sort_order>14720</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC Non-Fused &lt;125A</value>
+   </Item>
+   <Item type="Value" id="0CB62141DE3C4845A0CE05487BCB2D1D" action="add">
+    <label xml:lang="en">IEC PV Rated</label>
+    <sort_order>14848</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>IEC PV Rated</value>
+   </Item>
+   <Item type="Value" id="3584325536424996B4116BADA1748918" action="add">
+    <label xml:lang="en">D0 Fuse Combination Units</label>
+    <sort_order>14976</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>D0 Fuse Combination Units</value>
+   </Item>
+   <Item type="Value" id="2A92EAFAF06B4FBD9F8A93F52A881B0E" action="add">
+    <label xml:lang="en">NH Fuse Switch Disconnector</label>
+    <sort_order>15104</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>NH Fuse Switch Disconnector</value>
+   </Item>
+   <Item type="Value" id="EEC0CFB2CBA94B4F8431E87C4F76A30B" action="add">
+    <label xml:lang="en">NH Vertical Fuse Switch Disconnector</label>
+    <sort_order>15232</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>NH Vertical Fuse Switch Disconnector</value>
+   </Item>
+   <Item type="Value" id="591D26FC5FC546DAB8FCE2831E8C2EEE" action="add">
+    <label xml:lang="en">Finger-Safe (IP20) Power Distribution Blocks</label>
+    <sort_order>15360</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Finger-Safe (IP20) Power Distribution Blocks</value>
+   </Item>
+   <Item type="Value" id="5EBCF02368BD46159E38020AE0621AA6" action="add">
+    <label xml:lang="en">Open-Style Power Distribution Blocks</label>
+    <sort_order>15488</sort_order>
+    <source_id keyed_name="MRN_Product_Type" type="List">7F614E4DC0824F10963DD05175C52CA5</source_id>
+    <value>Open-Style Power Distribution Blocks</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

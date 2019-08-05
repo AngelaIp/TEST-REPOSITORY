@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="964C9F40B3FB43009D886365A2F766F7" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <last_login_date>2016-05-21T15:02:57</last_login_date>
+  <login_name>mrn_marcom_nb_testUser</login_name>
+  <logon_enabled>0</logon_enabled>
+  <owned_by_id keyed_name="mrn_marcom_nb_test testUser" type="Identity">2CC688D950094246824044A07B698652</owned_by_id>
+  <pwd_is_set_on>2017-01-10T11:42:23</pwd_is_set_on>
+  <working_directory>c:\temp</working_directory>
+  <first_name>mrn_marcom_nb_test</first_name>
+  <last_name>testUser</last_name>
+  <Relationships>
+   <Item type="Alias" id="39EBA091CE124202A6AD3E44153754F1" action="add">
+    <from_date>2017-01-12T09:29:05</from_date>
+    <related_id keyed_name="mrn_marcom_nb_test testUser" type="Identity">2CC688D950094246824044A07B698652</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="mrn_marcom_nb_test testUser" type="User">964C9F40B3FB43009D886365A2F766F7</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

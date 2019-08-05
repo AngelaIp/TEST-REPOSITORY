@@ -1,0 +1,26 @@
+﻿<AML>
+ <Item type="List" id="ACEF3747902C4300806A39C99EBE82A0" action="add">
+  <description>Ingredient Brand</description>
+  <name>MRN_Ingredient_Brand</name>
+  <Relationships>
+   <Item type="Value" id="891BF48B7A0F41A7876F9E020DA0E3EE" action="add">
+    <label xml:lang="en">SmartSpot®</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Ingredient_Brand" type="List">ACEF3747902C4300806A39C99EBE82A0</source_id>
+    <value>SmartSpot®</value>
+   </Item>
+   <Item type="Value" id="E162BA87DF4D4375A75406693C96E21C" action="add">
+    <label xml:lang="en">TPMOV®</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Ingredient_Brand" type="List">ACEF3747902C4300806A39C99EBE82A0</source_id>
+    <value>TPMOV®</value>
+   </Item>
+   <Item type="Value" id="CFEE353F26C94AA494BC3433251A2D00" action="add">
+    <label xml:lang="en">Unassigned</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Ingredient_Brand" type="List">ACEF3747902C4300806A39C99EBE82A0</source_id>
+    <value>Unassigned</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

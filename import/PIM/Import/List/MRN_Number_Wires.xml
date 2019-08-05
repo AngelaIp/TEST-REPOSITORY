@@ -1,0 +1,56 @@
+﻿<AML>
+ <Item type="List" id="F4596C5FDD2C4BA9B80488EAA2A96A34" action="add">
+  <description>Number of wires</description>
+  <name>MRN_Number_Wires</name>
+  <Relationships>
+   <Item type="Value" id="B29AEACB78B143B79A6F6A4EEBDC9B09" action="add">
+    <label xml:lang="en">1 Pair</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Number_Wires" type="List">F4596C5FDD2C4BA9B80488EAA2A96A34</source_id>
+    <value>1 Pair</value>
+   </Item>
+   <Item type="Value" id="689FB66EDC0048ED81F21D0ACB574B28" action="add">
+    <label xml:lang="en">1 Pair + GND</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Number_Wires" type="List">F4596C5FDD2C4BA9B80488EAA2A96A34</source_id>
+    <value>1 Pair + GND</value>
+   </Item>
+   <Item type="Value" id="F47CAAD3448742129955A84AB541795A" action="add">
+    <label xml:lang="en">2 Pairs + GND</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Number_Wires" type="List">F4596C5FDD2C4BA9B80488EAA2A96A34</source_id>
+    <value>2 Pairs + GND</value>
+   </Item>
+   <Item type="Value" id="0002E88CA3E2446990B24BB83DF81FBA" action="add">
+    <label xml:lang="en">2 Wires</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Number_Wires" type="List">F4596C5FDD2C4BA9B80488EAA2A96A34</source_id>
+    <value>2 Wires</value>
+   </Item>
+   <Item type="Value" id="359F2A0A7D1A4AFBBC7D6BF6EC477A7B" action="add">
+    <label xml:lang="en">3 Wires</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Number_Wires" type="List">F4596C5FDD2C4BA9B80488EAA2A96A34</source_id>
+    <value>3 Wires</value>
+   </Item>
+   <Item type="Value" id="66A6A94F4C4F4F4392013EA063EB6590" action="add">
+    <label xml:lang="en">4 Pairs</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Number_Wires" type="List">F4596C5FDD2C4BA9B80488EAA2A96A34</source_id>
+    <value>4 Pairs</value>
+   </Item>
+   <Item type="Value" id="61914F62AED0430CA6C2FE816B9A8AFC" action="add">
+    <label xml:lang="en">4 Wires</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Number_Wires" type="List">F4596C5FDD2C4BA9B80488EAA2A96A34</source_id>
+    <value>4 Wires</value>
+   </Item>
+   <Item type="Value" id="1641C1E38967401F8985BA47C98985B1" action="add">
+    <label xml:lang="en">5 Wires</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Number_Wires" type="List">F4596C5FDD2C4BA9B80488EAA2A96A34</source_id>
+    <value>5 Wires</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,86 @@
+﻿<AML>
+ <Item type="List" id="BCA49455AED7409AB10E27329BDC99AE" action="add">
+  <description>Countries with web sites</description>
+  <name>MRN_Website_Countries</name>
+  <Relationships>
+   <Item type="Value" id="9697B5CD16464DF28EE80926C19FAB34" action="add">
+    <label xml:lang="en">Brazil</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>Brazil</value>
+   </Item>
+   <Item type="Value" id="90AE5B52FD2D4160A19CCFA006B55817" action="add">
+    <label xml:lang="en">Canada</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>Canada</value>
+   </Item>
+   <Item type="Value" id="C3602D726CE5498EA525A1DA891C4DCD" action="add">
+    <label xml:lang="en">China</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>China</value>
+   </Item>
+   <Item type="Value" id="B6153B9DCA2647F49D370403CB97E2D7" action="add">
+    <label xml:lang="en">France</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>France</value>
+   </Item>
+   <Item type="Value" id="52345AE6107245DF9538BCC90AA989E8" action="add">
+    <label xml:lang="en">Germany</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>Germany</value>
+   </Item>
+   <Item type="Value" id="EA3CA2498ACA4B8587C88BEFD89F18B3" action="add">
+    <label xml:lang="en">India</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>India</value>
+   </Item>
+   <Item type="Value" id="69A49FAB28784116AEAD45676201AA22" action="add">
+    <label xml:lang="en">Italy</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>Italy</value>
+   </Item>
+   <Item type="Value" id="D6F6460E739D4E3C978B6E200501B8AC" action="add">
+    <label xml:lang="en">Japan</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>Japan</value>
+   </Item>
+   <Item type="Value" id="F6690515D589424E88DE2EE6E84E197C" action="add">
+    <label xml:lang="en">Portugal</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>Portugal</value>
+   </Item>
+   <Item type="Value" id="B19953278CFD421D8A6C62296AD59780" action="add">
+    <label xml:lang="en">Russia</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>Russia</value>
+   </Item>
+   <Item type="Value" id="CB8CE9FE371A49E192CF376D2A6566F5" action="add">
+    <label xml:lang="en">Spain</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>Spain</value>
+   </Item>
+   <Item type="Value" id="E61373837F364DA1AA30D854A6848089" action="add">
+    <label xml:lang="en">United Kingdom</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>United Kingdom</value>
+   </Item>
+   <Item type="Value" id="0A7185E86DDD4BC1AEB10FAA00D24A65" action="add">
+    <label xml:lang="en">USA</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Website_Countries" type="List">BCA49455AED7409AB10E27329BDC99AE</source_id>
+    <value>USA</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

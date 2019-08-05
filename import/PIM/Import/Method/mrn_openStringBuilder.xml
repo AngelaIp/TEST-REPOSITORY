@@ -1,0 +1,81 @@
+﻿<AML>
+ <Item type="Method" id="1E4534B3C36242F888B99A8784DA6140" action="add">
+  <comments>Open the new form to build the string value</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// alert(this.name);
+var formName;
+var formTitle;
+if (this.name.startsWith("mrn_utilization"))
+    {
+        formName = "MRN_Item_Utilization";
+        formTitle = "Build Utilization Category";
+    }
+    else
+   if (this.name.startsWith("mrn_dc_min"))
+        {
+            formName = "MRN_Item_Breaking";
+            formTitle = "Build DC Min. Breaking Capacity";
+        }
+    else
+   if (this.name.startsWith("mrn_rated"))
+        {
+            formName = "MRN_Item_Breaking";
+            formTitle = "Build Rated Breaking Capacity DC";
+        }
+    else
+       if (this.name.startsWith("mrn_dc_total"))
+            {
+                formName = "MRN_Item_I2T";
+                formTitle = "Build DC Total clearing I2t";
+            }
+            else
+            formName = "";
+        
+    var ctx = document.thisItem;
+    var q = ctx.newItem("Form", "get");
+    q.setAttribute("select", "id,width,height");
+    q.setProperty("name", formName);  //your form name goes here
+    var r = q.apply();
+    
+    var height = r.getProperty("height", "500");
+    var width = r.getProperty("width", "500");
+    
+    
+    var topWnd = aras.getMostTopWindowWithAras(window);
+    var params = {
+            title: formTitle, //enter title for top of dialog box
+            formId: r.getItemByIndex(0).getID(), //enter form id
+            aras: top.aras,
+            dialogWidth: width,
+            dialogHeight: height,
+            resizable: true,
+            isEditMode: true,
+            content: 'ShowFormAsADialog.html',
+            handleFormLoad: true,
+    };
+    var options = {
+      dialogWidth: width,
+      dialogHeight: height
+    };
+
+    var callback = function(res)
+    {
+        // alert(res);
+        //change field on parent form 
+        // var category = res["mrn_utilization_category"];
+        // window.handleItemChange("mrn_utilization_category", res);
+        var category = res[this.name];
+        window.handleItemChange(this.name, res);
+        return;
+    // 06/25/2019 to fix IR-079457 [Mersen_US Upgrade]Internal error while chosen fields on sidebar
+    }.bind(this);
+    // end of fix IR-079457
+    
+    var wnd = top.aras.getMainWindow();
+    wnd = wnd === top ? wnd.main : top;
+    (wnd.main || wnd).ArasModules.Dialog.show("iframe", params).promise.then(callback);
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_openStringBuilder</name>
+ </Item>
+</AML>

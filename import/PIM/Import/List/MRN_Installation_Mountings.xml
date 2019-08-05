@@ -1,0 +1,189 @@
+﻿<AML>
+ <Item type="List" id="27E14395A75B4D3795E888291080C042" action="add">
+  <description>Installation mountings
+</description>
+  <name>MRN_Installation_Mountings</name>
+  <Relationships>
+   <Item type="Value" id="3B78EAD57E044913BBBBFCED9FEE2994" action="add">
+    <label xml:lang="en">Bolted</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bolted</value>
+   </Item>
+   <Item type="Value" id="2C0E73185EBA4C6B8F16D52F032BA273" action="add">
+    <label xml:lang="en">Bottom Fitting/panel</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bottom Fitting/panel</value>
+   </Item>
+   <Item type="Value" id="1AB20D97492C43068B998A82FA128D37" action="add">
+    <label xml:lang="en">Bracket</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bracket</value>
+   </Item>
+   <Item type="Value" id="4977F867A660495BBDB2856CF8FE5CFD" action="add">
+    <label xml:lang="en">Bus Bar Installation</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bus Bar Installation</value>
+   </Item>
+   <Item type="Value" id="FC7C1894C4914A74A6DC552391AFCA5A" action="add">
+    <label xml:lang="en">Bus bar system 100 mm</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bus bar system 100 mm</value>
+   </Item>
+   <Item type="Value" id="852EDD350259413A91273243802D2D7B" action="add">
+    <label xml:lang="en">Bus bar system 100 mm and 185 mm</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bus bar system 100 mm and 185 mm</value>
+   </Item>
+   <Item type="Value" id="30237D5EE96942E3843C86B94AB4AB26" action="add">
+    <label xml:lang="en">Bus bar system 185 mm</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bus bar system 185 mm</value>
+   </Item>
+   <Item type="Value" id="6914F1940DD242B2893B712428A1C2E8" action="add">
+    <label xml:lang="en">Bus bar system 40 mm</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bus bar system 40 mm</value>
+   </Item>
+   <Item type="Value" id="FC888D502C6649579CACFDE7FDEBDE47" action="add">
+    <label xml:lang="en">Bus bar system 40 mm (clamping bar)</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bus bar system 40 mm (clamping bar)</value>
+   </Item>
+   <Item type="Value" id="FF5992E5B10E49A5889D6A00BBDD8E19" action="add">
+    <label xml:lang="en">Bus bar system 40 mm and 60 mm</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bus bar system 40 mm and 60 mm</value>
+   </Item>
+   <Item type="Value" id="91FB45913A1D460EB469456B1FCE3FB7" action="add">
+    <label xml:lang="en">Bus bar system 60 mm</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bus bar system 60 mm</value>
+   </Item>
+   <Item type="Value" id="97FD204524E841BBB8EDFF70E419A50D" action="add">
+    <label xml:lang="en">Bus bar system 60 mm (snap on)</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Bus bar system 60 mm (snap on)</value>
+   </Item>
+   <Item type="Value" id="733A2DEA55144B0A876646B2F03349F2" action="add">
+    <label xml:lang="en">Clip</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Clip</value>
+   </Item>
+   <Item type="Value" id="9F9558DC5DB546FCBDBF21FD5D964789" action="add">
+    <label xml:lang="en">DIN Rail</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>DIN Rail</value>
+   </Item>
+   <Item type="Value" id="4601F93CC5C546ECA331AA9CEE23C9A8" action="add">
+    <label xml:lang="en">DIN rail acc. EN 60715</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>DIN rail acc. EN 60715</value>
+   </Item>
+   <Item type="Value" id="B53575614F05405DB428CAC5D74106C2" action="add">
+    <label xml:lang="en">DIN rail acc. EN 60716</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>DIN rail acc. EN 60716</value>
+   </Item>
+   <Item type="Value" id="C763A518C8264D7592C8529F5152BB49" action="add">
+    <label xml:lang="en">DIN rail acc. EN 60717</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>DIN rail acc. EN 60717</value>
+   </Item>
+   <Item type="Value" id="D56869FC64F64CFDA520FB43AAAF1558" action="add">
+    <label xml:lang="en">DIN rail acc. EN 60718</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>DIN rail acc. EN 60718</value>
+   </Item>
+   <Item type="Value" id="0B93E33073E74E5D86B66C361A207F39" action="add">
+    <label xml:lang="en">DIN rail acc. EN 60719</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>DIN rail acc. EN 60719</value>
+   </Item>
+   <Item type="Value" id="14F7C419DFB64AF08FC54FDFAEBB0D45" action="add">
+    <label xml:lang="en">Direct Screw Mount</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Direct Screw Mount</value>
+   </Item>
+   <Item type="Value" id="0F46ADFB287A4050BF2CF06B5EAF4065" action="add">
+    <label xml:lang="en">In-Line</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>In-Line</value>
+   </Item>
+   <Item type="Value" id="0465C41295E64657B9B24520A1512742" action="add">
+    <label xml:lang="en">Panel Mount</label>
+    <sort_order>220</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Panel Mount</value>
+   </Item>
+   <Item type="Value" id="63C78D06B69340D7BADF7BD692A90969" action="add">
+    <label xml:lang="en">Panel or Wall Mount</label>
+    <sort_order>230</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Panel or Wall Mount</value>
+   </Item>
+   <Item type="Value" id="B1ECD8B4089C4EBABE24BA664736B293" action="add">
+    <label xml:lang="en">PCB Mount</label>
+    <sort_order>240</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>PCB Mount</value>
+   </Item>
+   <Item type="Value" id="748520CAB32544BE9BC9A4EBC031874B" action="add">
+    <label xml:lang="en">Press Pack</label>
+    <sort_order>250</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Press Pack</value>
+   </Item>
+   <Item type="Value" id="38B661DCA0564FEFB0DA20EE34BD51E9" action="add">
+    <label xml:lang="en">Screw</label>
+    <sort_order>260</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Screw</value>
+   </Item>
+   <Item type="Value" id="650116CD0B7E48B982B4BF8CD1C8F8AF" action="add">
+    <label xml:lang="en">Screw Mount or DIN Rail</label>
+    <sort_order>270</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Screw Mount or DIN Rail</value>
+   </Item>
+   <Item type="Value" id="B3EACB0D599A4003834FFBD6AE39A0D4" action="add">
+    <label xml:lang="en">Screws  (PZ2)</label>
+    <sort_order>280</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Screws  (PZ2)</value>
+   </Item>
+   <Item type="Value" id="0537455E23F14E3A86E5553667DC4A41" action="add">
+    <label xml:lang="en">STD 3/4-14 Nipple</label>
+    <sort_order>290</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>STD 3/4-14 Nipple</value>
+   </Item>
+   <Item type="Value" id="D95169AB17C743B181CBA7389B5E57E5" action="add">
+    <label xml:lang="en">Wall Mount</label>
+    <sort_order>300</sort_order>
+    <source_id keyed_name="MRN_Installation_Mountings" type="List">27E14395A75B4D3795E888291080C042</source_id>
+    <value>Wall Mount</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

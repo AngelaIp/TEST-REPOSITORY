@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="4653FB4B958140BDBD69FEA966387CAD" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Denis.PELLISSON@mersen.com</email>
+  <login_name>DP</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Denis PELLISSON" type="Identity">B782A4F438734E4AAFE39D6CDDCCC493</owned_by_id>
+  <first_name>Denis</first_name>
+  <last_name>PELLISSON</last_name>
+  <Relationships>
+   <Item type="Alias" id="55780BE920B84B9DB4C4A546B1FA02A9" action="add">
+    <from_date>2018-07-30T12:22:47</from_date>
+    <related_id keyed_name="Denis PELLISSON" type="Identity">B782A4F438734E4AAFE39D6CDDCCC493</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Denis PELLISSON" type="User">4653FB4B958140BDBD69FEA966387CAD</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

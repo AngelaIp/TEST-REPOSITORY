@@ -1,0 +1,136 @@
+﻿<AML>
+ <Item type="Method" id="649A7EB02F85421AA6B08E29C251DD42" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Called From: mrn_rerunExport Action on mrn_ExportLog item
+// Purpose:     Exports the extract file and all the digital asset files from the ExportLog 
+// Feb 2017     Kamran Aftab    Developed for Mersen
+  
+//Debugger
+//  if(System.Diagnostics.Debugger.Launch()) 
+//   //System.Diagnostics.Debugger.Break();
+
+DateTime startTime = DateTime.Now;
+ 
+ 
+// Innovator Item instance for making innovator item calls
+Item contextItem = this;
+
+// Initialize
+Innovator inn = contextItem.getInnovator();
+String returnMessage = "";
+
+ // Get the export profile item for this exportLog item
+string exportProfileId = this.getProperty("source_id");
+if (String.IsNullOrEmpty(exportProfileId))
+    throw new Exception("Unable to find the source Export Profile for this Export Log");
+Item exportProfileItem = inn.newItem("MRN_ExportProfile", "get");
+exportProfileItem.setProperty("id", exportProfileId);
+exportProfileItem = exportProfileItem.apply();
+if (exportProfileItem.isError())
+    throw new Exception("Unable to load the source Export Profile for this Export Log");
+
+// Get the output path
+string extractionPath = this.getProperty("mrn_export_full_path");
+if (String.IsNullOrEmpty(extractionPath))
+    throw new Exception("Export path is empty. Perhaps an older ExportLog.");
+
+// Export the extract file
+Item extractFileItem = this.getPropertyItem("mrn_extract_file");
+if (extractFileItem == null)
+    throw new Exception("Extract file not found");
+if(extractFileItem.checkout(extractionPath).isError())
+    throw new Exception("Unable to export the extract file");
+
+// Cycle the relationships
+ this.fetchRelationships("MRN_ExportedFileItem");
+ Item relationships = this.getRelationships("MRN_ExportedFileItem");
+ int exported = 0;
+for (int ii = 0; ii < relationships.getItemCount(); ii++) 
+{
+    Item relationshipItem = relationships.getItemByIndex(ii);
+    string relativePath = Path.GetDirectoryName(relationshipItem.getProperty("mrn_export_path"));
+    string outputPath = System.IO.Path.Combine(extractionPath, relativePath);
+    
+    Item fileItem = relationshipItem.getPropertyItem("mrn_file");
+    
+    if (fileItem == null)
+        continue;
+        
+    // Item fileItem = inn.newItem("File", "get");
+    // fileItem.setProperty("id", fileId);
+    // fileItem = fileItem.apply();
+    
+    if(fileItem.checkout(outputPath).isError())
+        continue;
+    exported++;
+}
+
+DateTime endTime = DateTime.Now;
+
+TimeSpan duration = endTime- startTime;
+
+returnMessage = exported + " digital asset files exported out of " + relationships.getItemCount() + " in " + duration.ToString(@"hh\:mm\:ss") +".";      
+return inn.newResult(returnMessage);
+
+
+
+// //   RequestState.Add("rerun", "0");
+
+// // Get the id of this export log
+// string exportLogId = this.getID();
+
+// string body = "<rerun>1</rerun>";
+// body += "<thisExportLogId>" + exportLogId + "</thisExportLogId>";
+// Innovator inn = this.getInnovator();
+
+//  return  inn.applyMethod("mrn_GenerateItemExport",body);
+ 
+ 
+
+ 
+// // Class for a File attached to a Digital Asset
+// public class MRN_File
+// {
+//     Item item;
+//     string name;
+//     string exportPath;
+
+//     Innovator inn;
+    
+//     public MRN_File(Innovator innovator, Item itm, bool internalf, bool priority, string description, string purpose, string path)
+//     {
+//         inn = innovator;
+        
+//         item = itm;
+//         name = itm.getProperty("keyed_name","");
+//         if (name == "")
+//             return;
+//         internalFile = internalf;
+//         singleDefaultFile = priority;
+//         mimeDescription = description;
+//         mimePurpose = purpose;
+//         exportPath = path;
+//         //fullFileName = exportPath + @"\" + name;
+
+//     }
+    
+  
+//     // Exports this file, given the path
+//     public void export(string path, string exportLogId)
+//     {
+//         if (item == null)
+//             return;
+//         item.checkout(path);
+//     }
+    
+
+    
+    
+
+
+
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_rerunExport</name>
+ </Item>
+</AML>

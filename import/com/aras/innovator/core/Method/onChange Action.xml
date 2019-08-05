@@ -7,10 +7,15 @@ var value = '';
 var srcElement = window.event ? window.event.srcElement : event.srcElement ? event.srcElement : event.target;
 if (srcElement && srcElement !== document) {
 	name = srcElement.name;
-	if (srcElement.value) {
+    // IR-055699 Type-ahead specific code converting
+    /*if (srcElement.value) {
 		value = srcElement.value.toLowerCase();
+	}*/
+	var control = getFieldComponentByName(name);
+	if (control.getValue()) {
+		value = control.getValue().toLowerCase();
 	}
-
+    // End of fix IR-055699
 }
 
 var pLocation = aras.getItemProperty(document.item, 'location');

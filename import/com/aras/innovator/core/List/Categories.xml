@@ -245,11 +245,41 @@
     <source_id keyed_name="Categories" type="List">EAB29654E2CD4D30B376957788198B40</source_id>
     <value>Technical Documentation</value>
    </Item>
+   <Item type="Value" id="13AC1CD636094A288BA9416EE6A1D4F4" action="add">
+    <label xml:lang="en">Product Information Mgmt.</label>
+    <sort_order>2308</sort_order>
+    <source_id keyed_name="Categories" type="List">EAB29654E2CD4D30B376957788198B40</source_id>
+    <value>Product Information Mgmt.</value>
+   </Item>
    <Item type="Value" id="0336D1D53C974E99B8325FB85E87449A" action="add">
     <label xml:lang="en">Enterprise Search</label>
     <sort_order>2500</sort_order>
     <source_id keyed_name="Categories" type="List">EAB29654E2CD4D30B376957788198B40</source_id>
     <value>Administration/Enterprise Search</value>
+   </Item>
+   <Item type="Value" id="40F7AC269D0F4E7D8511231CDC70424C" action="add">
+    <label xml:lang="en">Mersen Helpdesk</label>
+    <sort_order>2500</sort_order>
+    <source_id keyed_name="Categories" type="List">EAB29654E2CD4D30B376957788198B40</source_id>
+    <value>Mersen Helpdesk</value>
+   </Item>
+   <Item type="Value" id="F5EF5A0634514801B6C100BD33307C20" action="add">
+    <label xml:lang="en">Mersen Helpdesk</label>
+    <sort_order>2500</sort_order>
+    <source_id keyed_name="Categories" type="List">EAB29654E2CD4D30B376957788198B40</source_id>
+    <value>hd</value>
+   </Item>
+   <Item type="Value" id="C7AEC099A6D6467996F7088EFBAAD2B9" action="add">
+    <label xml:lang="en">Users</label>
+    <sort_order>2510</sort_order>
+    <source_id keyed_name="Categories" type="List">EAB29654E2CD4D30B376957788198B40</source_id>
+    <value>hd/Users</value>
+   </Item>
+   <Item type="Value" id="122284A826B6472C9FCB0A1C70D7E44B" action="add">
+    <label xml:lang="en">Identities</label>
+    <sort_order>2520</sort_order>
+    <source_id keyed_name="Categories" type="List">EAB29654E2CD4D30B376957788198B40</source_id>
+    <value>hd/Identities</value>
    </Item>
    <Item type="Value" id="0E8F2BB2F4264532926626B6FBB40A8B" action="add">
     <label xml:lang="en">Watermarking</label>

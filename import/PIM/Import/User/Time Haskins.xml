@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="562D17D8329A48168CEF1EFE793FAD3B" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>tim.haskins@us.mersen.com</email>
+  <login_name>thaskins</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Time Haskins" type="Identity">8372A4745D2E4BDEB9DBC9550ED6F1A5</owned_by_id>
+  <first_name>Time</first_name>
+  <last_name>Haskins</last_name>
+  <Relationships>
+   <Item type="Alias" id="A79E39740F8042949C7A592F54F5F597" action="add">
+    <from_date>2016-08-19T08:03:00</from_date>
+    <related_id keyed_name="Time Haskins" type="Identity">8372A4745D2E4BDEB9DBC9550ED6F1A5</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Time Haskins" type="User">562D17D8329A48168CEF1EFE793FAD3B</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -25,6 +25,11 @@
     <sort_order>128</sort_order>
     <source_id keyed_name="World" type="Preference">507A16AA36F94513AD7EC1F948B5B48F</source_id>
    </Item>
+   <Item type="MSO_Preferences" id="B7284AD3F5C542B1980B8F6683C8B265" action="add">
+    <related_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_Poly">4BF26B53A815455DB1FBC8BAF0D9DFBB</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="World" type="Preference">507A16AA36F94513AD7EC1F948B5B48F</source_id>
+   </Item>
    <Item type="PE_MainPreferences" id="39CBA45B90734D86977CDE2D112B34EB" action="add">
     <change_type_cad_document>ECR</change_type_cad_document>
     <change_type_document>ECR</change_type_document>

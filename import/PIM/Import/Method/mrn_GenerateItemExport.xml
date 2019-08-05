@@ -1,0 +1,4040 @@
+﻿<AML>
+ <Item type="Method" id="2A63BF5FB9ED4D96A1C38100E48B9CD6" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Called From: MRN_ExportProfile Action 
+// Purpose:     Exports the attributes and attachments of all the products, based on the supplied criteria
+// Oct 2016     Kamran Aftab    Developed for Mersen (based on POC code developed by Mike Gavlack)
+
+
+//Debugger
+//  if(System.Diagnostics.Debugger.Launch()) 
+//   //System.Diagnostics.Debugger.Break();
+// bool logging = true;
+//LogFile logFileInstance = new LogFile(logging);
+
+
+
+DateTime startTime = DateTime.Now;
+
+// Innovator Item instance for making innovator item calls
+Item contextItem = this;
+
+// Initialize
+Innovator inn = contextItem.getInnovator();
+
+
+// Check the type of context item
+string type = contextItem.getType();
+// If not run from allowed types, exit
+if (type != "MRN_ExportProfile" && type != "MRN_ExportLog" & type != "Method")
+    return inn.newResult("Method can only be run from an Export Profile or an Export Log");
+
+// If run from method, get the rerun value
+bool rerun = false;
+//Moses update 20180823 - Call the method from a scheduler method
+//If there is a type variable passed, it should be MRN_ExportLog which means it was run from the Scheduler
+if (type == "Method")
+{
+    rerun = contextItem.getProperty("rerun") == "1" ? true : false;
+    if (contextItem.getProperty("type") == "MRN_ExportLog")
+        type = "MRN_ExportLog";
+}
+    
+// Figure out where the program was invoked from, the MRN_ExportProfile or MRN_ExportLog
+// assign the export profile ID accordingly
+string mode = "";
+string exportProfileId = "";
+if (type == "MRN_ExportProfile")
+{
+    mode = "FULL";
+    exportProfileId = contextItem.getID();
+}
+else if (type == "MRN_ExportLog")
+{
+    mode = "UPDATE";
+	exportProfileId = contextItem.getProperty("source_id");
+}
+else if (type == "Method" && rerun)
+{
+    mode = "RERUN";
+    string exportLogID = contextItem.getProperty("thisExportLogId");
+    Item exportLogItem = contextItem.newItem("MRN_ExportLog", "get");
+    exportLogItem.setID(exportLogID);
+    exportLogItem = exportLogItem.apply();
+    exportProfileId = exportLogItem.getProperty("source_id");
+}
+//Moses update to accept a call from the Scheduler
+else if (type == "Method" && contextItem.getID() != "")
+{
+    mode = "FULL";
+    exportProfileId = contextItem.getID();
+}
+ else
+    throw new Exception("Method \"mrn_GenerateItemExport\" called from an unknown location - " + contextItem.getID());  
+
+
+// Build languages definition
+Languages languagesDefinition = new Languages(inn);
+
+// Build the ListProperties list for the MRN Items
+MrnItemDefinition mrnItemDefinition = new MrnItemDefinition(inn);
+
+
+// Build the ExportProfile instance. This instance represents the profile export and is 
+// accessed wherever the properties are needed
+ExportProfile exportProfileInstance = new ExportProfile(inn, exportProfileId, languagesDefinition);
+
+// Build the MRNProperties list
+MRNProperty mrnPropertyInstance = new MRNProperty(inn);
+
+// Build the attribute maps that are in the template item
+AttributeMap attributeInstance = new AttributeMap(exportProfileInstance, mrnPropertyInstance);
+List<string> propsToExport = attributeInstance.PropertiesToExport;
+
+//  Create new export log
+ExportLog exportLog = new ExportLog(inn, exportProfileInstance);
+
+// Build the Output instance, write the root for XML, write header for Excel/CSV
+Output outputInstance = new Output(inn, exportProfileInstance, attributeInstance, mrnPropertyInstance, mrnItemDefinition, languagesDefinition, exportLog);
+
+// Get the items using the stored AML query filtered against those provided in the textbox
+// . ===>>>> These are all the items that may be exported
+Item exports = getFilteredItems(inn, exportProfileInstance.AmlQuery, exportProfileInstance.ItemsToExport);
+
+if (exports == null)
+    return inn.newResult("No items to export");
+int iCount = exports.getItemCount();
+if (iCount == 0)
+    throw new Exception("No items to export");
+
+// Cycle all the items in the export    *** The Main Loop ****
+int eCount = 0; // count of items exported
+int sCount = 0; // count of items skipped due to error
+int fCount = 0; // count of failed file exports
+
+string skippedMessage = "";
+string fileExporErrorMessage = "";
+
+for (int i = 0; i < iCount; i++) 
+{
+	Item itm = exports.getItemByIndex(i);
+	
+	// If the item is not an MRN_Item (not found in the  system), export its name
+    string itemType = itm.getAttribute("type","");
+    if (itemType != "MRN_Item")
+    {
+        outputInstance.writeUnknownItemData(itemType);
+        continue;
+	}
+	
+    string skip = "0";
+    
+    // Build the ExportItem object, together with its parent msl and frame
+   
+    ExportItem exportItem = new ExportItem(itm, propsToExport, exportProfileInstance.ExportFullPath, inn, mrnItemDefinition);
+    
+    if (exportItem == null)
+        continue;
+        
+    // If the item does not have a parent MSL, drop it from the export
+    MrnItem parentMSL = exportItem.MrnItem.getParentMSL();
+    if (parentMSL == null)
+        continue;
+    
+    // If the item does not have a parent Frame, drop it from the export
+    MrnItem parentFrame = exportItem.MrnItem.getParentFrame();
+    if (parentFrame == null)
+        continue;
+
+	// If confidential export not indicated, check to see if parent msl is "confidential"
+	if (!exportProfileInstance.ExportConfidential)
+	{
+        string confidential = parentMSL.getConfidential(); //parentMSLItem.getProperty("mrn_confidential","");
+        if (confidential == "1")
+            continue;
+	}
+        
+    // If this is run from the export log, find out if the item needs to be skipped
+	if (mode == "UPDATE")
+	{
+	    
+	    // Get the export log item from this export log that corresponds to this export item (MRN_Item)
+	    ExportLogItem expLogItem = new ExportLogItem(this.getID(),exportItem.MrnItem.getConfigID(), inn);
+
+        if (expLogItem == null)
+		    throw new Exception("Error creating Export Log ");
+		
+        skip = expLogItem.getSkipFlag(exportItem);
+	}
+	
+    // Get the keywords for the parentmsl
+    if (exportProfileInstance.ExportTemplate.ExtractKeywordsFlag)
+        parentMSL.buildKeywords();
+        
+	// If not to be skipped, get the attribute value and append to the output
+	if (skip == "0")
+	{
+	    try {
+	        
+            //Get the property values and add to the export and xmlwriter
+            outputInstance.CurExport = exportItem;
+            outputInstance.writeItemData();
+            eCount ++;
+	    }
+	    catch (DigitalAssetFileExportException ex )
+	    {
+	        fileExporErrorMessage += ex.Message;
+	        fCount ++;
+	    }
+	    catch (Exception ex)
+	    {
+	        skippedMessage += "<br>Skipped item - " +  ex.Message;
+	        sCount++;
+	        skip = "1";
+	    }
+	}
+	
+	// Set up the attributes for export item in the log
+	ExportLogItem exportLogItem = new ExportLogItem(exportItem.Item, exportLog.getID(), skip, inn);
+}
+//    End of cycling all parts //////
+
+// Write the output to files and close it
+outputInstance.close();
+
+//Update the exportLog properties
+exportLog.update();
+
+//System.Media.SystemSounds.Beep.Play();
+
+// Build the output message
+string itemCount = "\n" + eCount + " item";
+if (eCount != 1)
+    itemCount = itemCount + "s";
+itemCount = itemCount + " exported";
+
+DateTime endTime = DateTime.Now;
+
+TimeSpan duration = endTime- startTime;
+
+
+string message = exportProfileInstance.MessageString + itemCount + " in " + duration.ToString(@"hh\:mm\:ss") +".";
+
+if (fCount > 0)
+{     
+    message += "<br><br>For " + fCount + " items(s) all files did not export due to errors:<br>";
+    message += fileExporErrorMessage + "<br><br>";
+}
+
+if (sCount > 0)
+{
+    message +=  "<br><br>" + sCount + " item(s) skipped due to errors:<br>";
+    message += skippedMessage;
+}
+
+// this.setProperty("mrn_comments", duration.ToString(@"hh\:mm\:ss"));
+// this.apply();
+
+// if (eCount == 0)
+//     message = "Nothing to export!";
+    
+return inn.newResult(message);
+}
+
+//////////////////////////////////////////
+// Returns filtered items to be exported
+public Item  getFilteredItems(Innovator inn, string amlQuery, string itemsToExport)
+{
+
+    Item allItems;
+    int allItemsCount;
+    Item filteredItems;
+    
+    try 
+    {
+        // Run Export AML Query
+	    allItems = inn.newItem();
+	    allItems.loadAML(amlQuery);
+	    allItems = allItems.apply();
+	    allItemsCount = allItems.getItemCount();
+	    if (allItemsCount == 0)
+		    return null;
+    }
+    catch (Exception ex) 
+    {
+	    throw new Exception("Error getting product items. " + ex.Message);
+    }
+    // If the filter text empty, return all items
+    if (itemsToExport == "")
+        return allItems;
+        
+    // Convert the text to a list of item numbers
+    List<string> itemsToExportList = itemsToExport.Trim().Split('\n').ToList();
+    
+    filteredItems = this.newItem();
+    // Cycle all the items in the textbox and add them to the list to export
+    foreach (string itemNumber in itemsToExportList)
+    {
+        Item exportItem = allItems.getItemsByXPath("//Item[@type='MRN_Item'] [keyed_name='" + itemNumber + "']");
+        
+        // If the item is not found, keep it in the list, set the type as the name of the item, later to be used
+        if (exportItem.node == null)
+        {
+            Item itm = inn.newItem(itemNumber);
+            filteredItems.appendItem(itm);
+            continue;
+        }
+        
+        if (exportItem == null || exportItem.node == null)
+            continue;
+            
+        filteredItems.appendItem(exportItem);
+    }
+    
+    // Declaring the item adds an emtpy item at the start, account for it, and then remove it
+    int itemsCount = filteredItems.getItemCount();
+    if (itemsCount < 2)
+		    throw new Exception("No items to export");
+    else
+        filteredItems.removeItem(filteredItems.getItemByIndex(0));
+		    
+	return filteredItems;
+}
+
+    
+// A class to represent list type properties
+public class ListProperty
+{
+    string name;
+    string value;
+    string label;
+    string itemId;
+
+    public ListProperty(string n, string v, string l, string i)
+    {
+        name = n;
+        value = v;
+        label = l;
+        itemId = i;
+    }
+    public string getName(){ return name;}
+    public string getValue(){ return value;}
+    public string getLabel(){ return label;}
+//****Uncommented - Moses   ***** 
+    // // Returns the ID of the list that is associated with the given property for the given itemtype
+    // //  public static string getSourceListID(string itemType, string propertyName, ExportProfile exportProfileInstance)
+    // //  {
+    // //      Innovator inn = exportProfileInstance.Item.getInnovator();
+    // //      string listID = "";
+    
+    // //      string AML = "<AML><Item type='ItemType' select = 'name' action = 'get'><name>" + itemType + "</name>" +
+    // //                  "<Relationships><Item type='Property' select='data_type, data_source' action='get'>" +
+    // //                  "<name>" + propertyName + "</name>" + 
+				// //  	"<OR><data_type>list</data_type><data_type>filter list</data_type></OR>"+
+    // //                  "</Item></Relationships></Item></AML>";
+    
+    // //      Item resultItem;
+
+    // //      try 
+    // //      {
+    // //          resultItem = inn.applyAML(AML);
+    // //          if (resultItem.isError()) 
+		  ////      return listID;
+    // //      }
+
+    // //      catch (Exception ex) 
+    // //      {
+	   ////     throw new Exception("Error getting property item. " + ex.Message);
+    // //      }
+        
+        
+        
+    // //      // Get the element of the property node
+    // //  	XmlNodeList nodes = resultItem.node.GetElementsByTagName("data_type");
+    // //  	int count = nodes.Count;
+    // //  	if (count < 1)
+    // //  	    return listID;
+    	
+    // //  	XmlNode node = nodes[0];
+    // //  	string propertyType = node.InnerXml;
+    	    
+    // //  	if (propertyType != "list" && propertyType != "filter list" )
+    // //  	    return listID;
+    	
+    // //  	// GEt the element of data source
+    // //  	nodes = resultItem.node.GetElementsByTagName("data_source");
+    // //  	count = nodes.Count;
+    // //  	if (count < 1)
+    // //  	    return listID;
+    	
+    // //  	node = nodes[0];
+    // //  	//listName = node.Attributes["keyed_name"].Value;
+    // //  	listID = node.InnerXml ?? "";
+
+    // //  	return listID;
+    // //  }
+//****end Uncommented - Moses  ****
+}
+
+
+// Class for holding MRN_Item definition 
+public class MrnItemDefinition
+{
+	List<string> _multiLingualProperties;  // Properties defined as of type "Multilingual String"
+	List<ListProperty> _listProperties = new List<ListProperty>();  // Properties that reference a list
+	Innovator inn;
+	
+	// Constructor
+	public MrnItemDefinition(Innovator innovator)
+	{
+	    inn = innovator;
+	    
+		BuildListProperties();
+		BuildMultiLinguaPropertiesList();
+	}
+	
+	// Builds properties that of type "List" or "Filter List"
+	public void BuildListProperties()
+	{
+	    
+        string AML = "<AML>" + 
+                        "<Item type='ItemType' select = 'name' action = 'get'>" +
+                            "<name>MRN_Item</name>" + 
+                            "<Relationships>" + 
+                                "<Item type='Property' select='data_type, data_source' action='get'>" +
+                                  "<OR>" + 
+                                    "<data_type>list</data_type>" + 
+                                    "<data_type>filter_list</data_type>" +
+                                  "</OR>" +
+                                "</Item>" +
+                            "</Relationships>" +
+                        "</Item>" +
+                    "</AML>";
+    
+        Item resultItem;
+
+        try 
+        {
+            resultItem = inn.applyAML(AML);
+            if (resultItem.isError()) 
+		        return;
+        }
+
+        catch (Exception ex) 
+        {
+	        throw new Exception("Error getting property item. " + ex.Message);
+        }
+        
+        // Cycle all the properties and get the type
+        string propertyItemPath = "Relationships/Item[@type='Property']";
+        Item propertyItems = resultItem.getItemsByXPath(propertyItemPath);
+        int itemCount = propertyItems.getItemCount();
+        if (itemCount < 1)
+            return;
+    	for (int ii = 0; ii < itemCount; ii++) 
+    	{
+            Item item = propertyItems.getItemByIndex(ii);
+    		if (item == null)
+    		    continue;
+            string propertyName = item.getPropertyAttribute("id", "keyed_name");
+            string propertyType = item.getProperty("data_type");
+            string propertySource = item.getProperty("data_source");
+    
+    		if (String.IsNullOrEmpty(propertyName) || String.IsNullOrEmpty(propertyType)  || (propertyType != "list" && propertyType != "filter list"))
+    	        continue;
+    	        
+    	    Dictionary<string, string> listProperties =  getListProperties(propertySource, propertyType);
+    	    _listProperties.AddRange(listProperties.Select(entry => new ListProperty(propertyName, entry.Key, entry.Value,propertySource)));
+    	}
+	}
+
+    // Returns all values and labels for the given list 
+    public Dictionary<string, string> getListProperties(string listID, string type)
+    {
+        Dictionary<string, string> listProperties = new Dictionary<string, string>();
+ 
+        if (listID == "" || (type != "list" && type != "filter list"))
+            return listProperties;
+            
+        // Get the list item
+        Item list = inn.newItem("List","get");
+        list.setProperty("id",listID);
+        //list.setAttribute("keyed_name", listName);
+        list = list.apply();
+        if(type == "list")
+            list.fetchRelationships("value");
+        else if (type == "filter list")
+            list.fetchRelationships("filter value");
+        else
+            return listProperties;
+            
+        Item relationships;
+        try 
+        {    
+            relationships = list.getRelationships();
+        }
+        catch (Exception ex) 
+        {
+    	    throw new Exception("Error getting list values (" + listID + "). " + ex.Message);
+        }
+    
+    
+        int count = relationships.getItemCount();
+        
+        for (int i=0; i<count; i++)
+        {
+            Item valueRelationship = relationships.getItemByIndex(i);
+            string value = valueRelationship.getProperty("value");
+            string label = valueRelationship.getProperty("label");
+            
+            if (value == null)
+                value = "";
+            if (label == null)
+                label = "";
+                
+            // if value already exists, skip it
+            if(listProperties.ContainsKey(value))
+                continue;
+            listProperties.Add(value, label);
+        }
+        
+        return listProperties;
+    }	
+	// Builds a list of all multilingual properties for the MRN Item
+	public void BuildMultiLinguaPropertiesList()
+	{
+		_multiLingualProperties = new List<string>();
+
+		Item mrnItem = inn.newItem("ItemType", "get");
+		mrnItem.setProperty("Name", "MRN_Item");
+		try
+		{
+			mrnItem = mrnItem.apply();
+		}
+		catch (Exception ex)
+		{
+			throw new Exception("Error getting MRN_Item multilingual properties. " + ex.Message);
+		}
+		if (mrnItem.getItemCount() > 1)
+			throw new Exception("Error getting MRN_Item multilingual properties - more than one MRN_Items found");
+
+		// Get multilingual properties
+		Item properties = inn.newItem("Property", "get");
+		properties.setProperty("data_type", "ml_string");
+		properties.setProperty("source_id", mrnItem.getItemByIndex(0).getID());
+		try
+		{
+			properties = properties.apply();
+		}
+		catch (Exception ex)
+		{
+			throw new Exception("Error getting MRN_Item multilingual properties. " + ex.Message);
+		}
+
+		// Add the properties to the list
+		int count = properties.getItemCount();
+		for (int ii = 0; ii < count; ii++)
+			_multiLingualProperties.Add(properties.getItemByIndex(ii).getProperty("name", ""));
+	}
+
+	public bool IsMultiLingualProperty(string propertyName)
+	{
+		if (_multiLingualProperties.Contains(propertyName))
+			return true;
+		return false;
+	}
+
+	public List<ListProperty> GetListProperties() { return _listProperties; }
+	public List<string> GetMultiLingualProperties() { return _multiLingualProperties; }
+}
+
+// Class for an MRN_Item instance
+public class MrnItem
+{
+    Item item;
+    MrnItem parentMSL;
+    MrnItem parentFrame;
+    
+    string configID;
+    string generation;
+    string confidential;
+    string state;
+    string unPublished;
+    List<DigitalAsset> digitalAssets;
+    string etimClass;
+    List<Keyword> keywords;
+    string level;
+
+	Dictionary<string, string> properties;
+    Innovator inn;
+
+    // Constructors
+    public MrnItem(Item itm, List<string> propsToExport, string exportPath, Innovator innovator)
+    {
+        if (itm.getID() == "")
+            throw new Exception("Error creating MRN_Item: Null item passed");
+        
+        inn = innovator;
+        
+        // Get all the required property values for this MRN Item
+        Item fullItem = itm.newItem("MRN_Item", "get");
+        fullItem.setID(itm.getID());
+        fullItem.setAttribute("select", String.Join(",", propsToExport.ToArray()));
+        fullItem = fullItem.apply();
+        
+        // Add the property values  to a dictionary
+        properties = new Dictionary<string, string>();
+	
+	
+        foreach (string prop in propsToExport)
+        {
+		    if (!properties.ContainsKey(prop))
+		        properties.Add(prop, fullItem.getProperty(prop, ""));
+        }
+		
+        item = itm;
+        configID = item.getProperty("config_id","");
+        generation = item.getProperty("generation","");
+        confidential = item.getProperty("mrn_confidential","");
+        state = item.getProperty("state","");
+        unPublished = state == "Published" ? "0" : "1";
+        etimClass = item.getProperty("mrn_etim_class","");
+        level = item.getProperty("classification","");
+        
+        // Get DigitalAssets attachments
+        Item relationships = item.getRelationships("MRN_Item_Document");
+        digitalAssets = new List<DigitalAsset>();
+        
+        int count = relationships.getItemCount();
+        for (int i=0; i<count; i++) 
+        {
+            Item doc_relationship = relationships.getItemByIndex(i);
+            Item doc_itm =doc_relationship.getRelatedItem();
+            digitalAssets.Add(new DigitalAsset(inn, doc_itm, level, exportPath));
+        }
+        
+    }
+    
+    // Build a list of keyword relationships
+    public void buildKeywords()
+    {
+		Item relationships = item.newItem("MRN_Keyword", "get");
+		relationships.setProperty("source_id", item.getID());
+		relationships = relationships.apply();
+		
+        keywords = new List<Keyword>();
+        
+        int count = relationships.getItemCount();
+        for (int i=0; i<count; i++) {
+            Item keyword_relationship = relationships.getItemByIndex(i);
+            //Item keyword_itm =keyword_relationship.getRelatedItem();
+            keywords.Add(new Keyword(keyword_relationship));
+        }
+        
+    }
+
+    public void buildParentMSL(List<string> propsToExport, string exportPath, Innovator inn)
+    {
+	    Item itm = item.getPropertyItem("mrn_parent_msl");
+	    if (itm == null)
+	        return;
+        parentMSL = new MrnItem(itm, propsToExport, exportPath, inn);
+        etimClass = parentMSL.getEtimClass();
+    }
+   public void buildParentFrame(List<string> propsToExport, string exportPath, Innovator inn)
+    {
+	    Item itm = item.getPropertyItem("mrn_frame");
+	    if (itm == null)
+	        return;
+        parentFrame = new MrnItem(itm, propsToExport, exportPath, inn);
+    }    
+    public string getPropertyValue(string propertyName)
+    {
+		if (propertyName =="")
+            throw new Exception("Empty property name passed to MrnItem.getPropertyValue()");
+		
+		string val;
+		if (properties.TryGetValue(propertyName, out val)){
+			return val;
+		}
+		else{
+			throw new Exception("Error getting item.");
+		}
+    }
+    
+    public string   getConfidential()   { return confidential; }
+    public string   getUnpublished()    { return unPublished; }
+    public string   getState()          { return state; }
+    public string   getConfigID()       { return configID; }
+    public string   getGeneration()     { return generation; }
+    public Item     getItem()           { return item; }
+    public MrnItem  getParentMSL()      { return parentMSL; }
+    public MrnItem  getParentFrame()    { return parentFrame; }
+    public string   getEtimClass()      { return etimClass; }
+    public List<DigitalAsset>   getDigitalAssets()  { return digitalAssets; }
+    public List<Keyword>        getKeywords()       { return keywords;}
+
+}
+
+// Class for Digital Asset
+public class DigitalAsset
+{
+    List<FileItem> files;
+    Item item;
+    string name;
+    List<Tuple<string,string,bool>> fileSequenceMap;  // <language, sequence, singledefault>
+    
+    // Constructor from item tag
+    public DigitalAsset(Innovator inn, Item itm, string level, string exportPath)
+    {
+        item = itm;
+        name = itm.getProperty("name","");
+        
+        Item docRelationships = item.newItem("Document File", "get");
+        docRelationships.setProperty("source_id", item.getID());
+        docRelationships.setAttribute("orderBy", "created_on DESC");
+        docRelationships = docRelationships.apply();
+
+        int count = docRelationships.getItemCount();
+        files = new List<FileItem>();
+        fileSequenceMap = new List<Tuple<string,string,bool>> ();
+        
+        for (int j=0; j<count; j++) 
+        {
+            Item file_relationship = docRelationships.getItemByIndex(j);
+            FileItem file = new FileItem(inn, file_relationship, exportPath);
+            files.Add(new FileItem(inn, file_relationship, exportPath));
+            
+            // // If file is "inernal", do not add it to the map
+            // if (file.InternalFile)
+            //     continue;
+                
+            fileSequenceMap.Add(Tuple.Create(file.Language, file.Sequence, file.SingleDefault));
+        }
+    }
+    
+    // Checks to see if there is a file for every language passed in for the given sequence 
+    public bool eqivalentFileExistsforEachSelectedLang(string fileSequence, List<string>selectedLanguages)
+    {
+        foreach(string langCode in selectedLanguages)
+        {
+            if (!langSequenceMatched(langCode, fileSequence))
+                return false;
+        }
+        return true;
+    }
+    
+    
+    // Checks the fileSequenceMap for the given langauge code and sequence
+    private bool langSequenceMatched(string langCode, string sequence)
+    {
+        foreach (Tuple<string,string,bool> row in fileSequenceMap)
+        {
+            if (row.Item1 == langCode && row.Item2 == sequence)
+                return true;
+        }
+        
+        return false;
+    }
+    
+    // Checks to see if a file equivalent to the single default exists in all given languages
+    public bool fileEquivalentToSingleDefaultExists(List<string> languageCodes)
+    {
+        // Find the sequence number of the single default file
+        string singleDefaultSequence = findSingleDefaultSequence();
+        
+        // If no single default found, return false
+        if(String.IsNullOrEmpty(singleDefaultSequence))
+            return false;
+        
+        // Find a file with the same sequence as the single default sequence
+        return eqivalentFileExistsforEachSelectedLang(singleDefaultSequence, languageCodes);
+    }
+    
+    // Checks to see if the given seqeunce is same as that of the single default
+    public bool fileSequenceSameAsSingleDefault(string sequence)
+    {
+        // Find the sequence number of the single default file
+        if (sequence == findSingleDefaultSequence())
+            return true;
+        
+        return false;
+    }
+    
+    // Returns the sequence of single default file
+    private string findSingleDefaultSequence()
+    {
+        foreach (Tuple<string,string,bool> row in fileSequenceMap) // <language, sequence, singledefault>
+        {
+            if (row.Item3)
+                return row.Item2;
+        }
+        
+        return null;
+    }
+    
+    public string Name      { get { return name; }}
+    public List<FileItem> Files { get {return files; }}
+    public List<Tuple<string,string,bool>> FileSequenceMap   { get { return fileSequenceMap; }}
+}
+
+// Class for Keyword Management
+public class Keyword
+{
+    Item item;
+
+    public Keyword(Item itm)
+    {
+        if (itm == null)
+            return;
+            
+        item = itm;
+    }
+    
+    public Item getItem() { return item; }
+}
+
+// Class for a File attached to a Digital Asset
+public class FileItem
+{
+    Item item;
+    string name;
+    string exportPath;
+    bool internalFile;
+    bool singleDefaultFile;
+    string mimeDescription;
+    string mimePurpose;
+    string mimeType;
+    string lang = "";
+    Innovator inn;
+    string sequence;
+    bool extract = true;
+    
+    // Constructor to get build the item from the given Document-File relationship item
+    public FileItem (Innovator innovator, Item documentFile, string path)
+    {
+        inn = innovator;
+        exportPath = path;
+        
+        // Find the document with given name
+        string AMLQuery =   "<AML><Item  type=\"Document File\" action=\"get\" select=\"id, related_id, mrn_mime_description, mrn_mime_purpose, mrn_language, mrn_single_default,mrn_internal,sort_order\">" +
+                                "<id>" + documentFile.getID() + "</id>" +
+                                "<related_id><Item type=\"File\" action=\"get\" select=\"mimetype, filename, created_on \"></Item></related_id>" +
+                                "<mrn_language><Item type=\"Language\" action = \"get\" select=\"code\"></Item></mrn_language>" +
+                            "</Item></AML>";
+       
+        Item docItem = inn.newItem();
+	    docItem.loadAML(AMLQuery);
+	    docItem = docItem.apply();
+	    int itmCount = docItem.getItemCount();
+	  
+	    // If item not found, return null
+	    if (itmCount < 1)
+	        return;
+        
+        build(docItem);
+    }
+    
+    // Constructor to get a single file from the given Document (name) - (this is used for the Logo file only)
+    public FileItem (Innovator innovator, string docName)
+    {
+        inn = innovator;
+        
+        // Find the document with given name
+        string AMLQuery = "<AML><Item type=\"Document\" action=\"get\" select=\"id\">" + 
+                            "<item_number>" + docName + "</item_number>" +
+                               "<Relationships>" + 
+                                  "<Item  type=\"Document File\" action=\"get\" select=\"id, related_id, mrn_mime_description, mrn_mime_purpose, mrn_language \">" +
+                                   "<mrn_single_default>1</mrn_single_default>" +
+                                    "<related_id><Item type=\"File\" action=\"get\" select=\"mimetype, filename\"></Item></related_id>" +
+                                    "<mrn_language><Item type=\"Language\" action = \"get\" select=\"code\"></Item></mrn_language>" +
+                            "</Item></Relationships></Item></AML>";
+        
+	    Item itm = inn.newItem();
+	    itm.loadAML(AMLQuery);
+	    itm = itm.apply();
+	    int itmCount = itm.getItemCount();
+	  
+	    // If document not found, return null
+	    if (itmCount < 1)
+	        return;
+	   
+	   // Get file items
+	   Item relationships = itm.getRelationships("Document File");
+	   
+	   if (relationships.getItemCount() < 0)
+	    return;
+	    
+	   build(relationships.getItemByIndex(0));
+    }
+    
+    private void build(Item docItem)
+    {http://localhost/Mersen_11SP6/Client/X-salt=2_11.0.0.6357-X/images/SaveUnlockClose.svg
+        item = docItem.getRelatedItem();
+        name = item.getProperty("filename","");
+        mimeType = item.getProperty("mimetype","");
+        internalFile = docItem.getProperty("mrn_internal") == "1";
+        singleDefaultFile = docItem.getProperty("mrn_single_default") == "1";
+        mimeDescription = docItem.getProperty("mrn_mime_description",""); 
+        mimePurpose = docItem.getProperty("mrn_mime_purpose","");
+        Item languagePropertyItem = docItem.getPropertyItem("mrn_language"); 
+        sequence = docItem.getProperty("sort_order","");
+        if (languagePropertyItem != null)
+            lang = languagePropertyItem.getProperty("code","");
+    }
+    
+    // Exports this file, given the path
+    public void export(string path, string relativePath, string exportLogId, List<string>exportedIds)
+    {
+        if (item == null)
+            return;
+        
+        if(item.checkout(path).isError())
+            throw new Exception("Unable to export file: " + item.getProperty("filename"));
+        
+        MRN_ExportedFileItem mrnExportFile = new MRN_ExportedFileItem(exportLogId, item, path, inn, exportedIds, relativePath);
+        exportedIds.Add(item.getID());
+  
+    }
+    
+    // Exports the digital asset file
+    public string exportFile(string exportLogId, ExportProfile exportProfile, List<string> exportedIds)
+    {   
+            
+        // If file already exists in the output folder, do not export it again
+        string folderDescription;
+        exportProfile.MrnLists.MimeDescriptionList.ValueLabelDictonary.TryGetValue(mimeDescription, out folderDescription);
+        if (folderDescription == null)
+            folderDescription = mimeDescription;
+        folderDescription = Regex.Replace(folderDescription,@"[\/\\()#&?,.: ]","_");
+
+        string folderPurpose;
+        exportProfile.MrnLists.MimePurposeList.ValueLabelDictonary.TryGetValue(mimePurpose, out folderPurpose);
+        if (folderPurpose == null)
+            folderPurpose = mimePurpose;
+        folderPurpose = Regex.Replace(folderPurpose,@"[\/\\()#&?,.: ]","_");
+        
+        //string fullFileName = exportPath + "\\" + file.getProperty("filename","");
+        
+        string relativePath = folderDescription;
+        relativePath = System.IO.Path.Combine(relativePath, folderPurpose);
+        relativePath = System.IO.Path.Combine(relativePath, item.getProperty("filename",""));
+        string fullPath = System.IO.Path.Combine(exportPath, folderDescription);
+        fullPath = System.IO.Path.Combine(fullPath, folderPurpose);
+        
+        
+        string fullFileName = System.IO.Path.Combine(fullPath, item.getProperty("filename","")); 
+        MRN_ExportedFileItem mrnExportFile;
+        
+        if (File.Exists(fullFileName))
+        {
+            DateTime dt = File.GetLastWriteTime(fullFileName);
+            string dtFileStr = item.getProperty("created_on","");
+            DateTime dtExisting = DateTime.Parse(dtFileStr);
+            
+            // If date of the digitla asset is not later than the existing file, skip it
+            int result = DateTime.Compare(dt,dtExisting);
+            if (result > 0)
+            {
+                mrnExportFile = new MRN_ExportedFileItem(exportLogId, item, fullPath, inn, exportedIds, relativePath);
+                return relativePath;
+            }
+        }
+
+        // Export the file
+        export(fullPath, relativePath, exportLogId, exportedIds);
+        
+        return relativePath;
+    }
+    
+    
+    public Item Item                { get { return item; }}
+    //public string FullFileName { get {return fullFileName; }}
+    public string Name              { get {return name; }}
+    public string MimeDescription   { get { return mimeDescription; } }
+    public string MimePurpose       { get { return mimePurpose; } }
+    public string MimeType          { get { return mimeType; }}
+    public string Language          { get { return lang; }}
+    public string Sequence          { get { return sequence; }}
+    public bool   Extract           { set {extract = value; } get { return extract; }}
+    public bool   InternalFile      { get { return internalFile; }}
+    public bool   SingleDefault     { get { return singleDefaultFile; }}
+}
+
+// Class for attribute maps
+public class AttributeMap
+{
+    string propertyName;
+    string exportName;
+    string defaultValue;
+    List<EtimClass> etimClassList;  
+    List<AttributeMap> attributeMaps;
+    Item item;
+	List<string> mrnItem_propertiesToExport;
+	string etimUnitCode = "";
+    Dictionary<string,string> etimUnitCodeMappings;
+    string outputUnit;
+    MRNProperty mrnProperty;
+    string valueType = "value";
+    bool extracted = false;
+    
+    // Constructor to create single instance used everywhere
+    public AttributeMap(ExportProfile exportProfileInstance, MRNProperty mrnPropertyInstance)
+	{
+		buildAttributeMaps(exportProfileInstance, mrnPropertyInstance);
+	}
+    
+    // Constructor to build individual maps
+    private AttributeMap(){}
+    
+    public void buildAttributeMaps(ExportProfile exportProfileInstance, MRNProperty mrnPropertyInstance)
+    {
+        Item expProfileItem = exportProfileInstance.Item;
+        Item template = exportProfileInstance.ExportTemplate.Item;
+        
+        // Figure out where the program was invoked from, the MRN_ExportProfile or MRN_ExportLog
+        // assign the export profile ID accordingly
+        string exportProfileID = "";
+        string thisExportLogID = "";
+        if (expProfileItem.getType()== "MRN_ExportProfile")
+            exportProfileID = expProfileItem.getID();
+        else
+        {
+	        exportProfileID = expProfileItem.getProperty("source_id");
+	        thisExportLogID= expProfileItem.getID();
+        }
+
+        etimUnitCodeMappings = exportProfileInstance.listToDictionary("MRN_ETIM_Unit_Code_Mapping","list", ExportProfile.Format.Label2Value);
+
+        
+        // Get the export profile item
+        Item exportProfile = expProfileItem.newItem("MRN_ExportProfile", "get");
+        exportProfile.setID(exportProfileID);
+        exportProfile = exportProfile.apply();
+
+        String attrMapPath = "Relationships/Item[@type='MRN_ExportAttributeMap']";
+        Item attrMaps = template.getItemsByXPath(attrMapPath);
+        int count = attrMaps.getItemCount();
+
+	    attributeMaps = new List<AttributeMap>();
+		mrnItem_propertiesToExport = new List<string>();
+	    for (int iph = 0; iph < count; iph++) 
+	    {
+		    Item itm = attrMaps.getItemByIndex(iph);
+		    if (itm == null)
+			    continue;
+			
+			AttributeMap attributeMap = new AttributeMap();
+			attributeMap.item = itm;
+		    attributeMap.propertyName = itm.getProperty("mrn_plm_property_selector","");
+		    Item mrnPropertyItem = itm.getPropertyItem("mrn_property_item");
+		    
+//Broken Code Identified - Moses 9/26/17
+//Comment Code out - don't kill the export if mrnPropertyItem == null because this is a default value item added
+		  //  if (mrnPropertyItem == null)
+		  //  {
+		  //      throw new Exception("No MRN Property found for Attribute Map: " + attributeMap.propertyName + 
+		  //        ". Perhaps an older Template.");
+		  //  }
+//End Comment - Moses
+		    
+		    // Find the MRNProperty for this property, if null returned, it's a non-mrn_item property
+		    //MRNProperty returnedMrnProperty = mrnPropertyInstance.findFromPropertyName(attributeMap.propertyName);
+		    MRNProperty returnedMrnProperty = mrnPropertyInstance.findFromItem(mrnPropertyItem);
+		    if(returnedMrnProperty != null)
+		    {
+		        attributeMap.MrnProperty = returnedMrnProperty;
+		        
+		        if (returnedMrnProperty.ExtractLabel)
+		            attributeMap.valueType = "label";
+		      
+		        // Get the UOM Property for the given property, if non exists, continue the loop
+        	    MRNUoMProperty uomProperty =  attributeMap.MrnProperty.UomProperty;
+        	    
+        	    if (uomProperty != null)
+        	    {
+        	        // Assign output unit
+                    if (exportProfileInstance.ExportTemplate.UnitSystem == "US")
+    	                attributeMap.outputUnit = uomProperty.USUnit;
+    	            else
+    	                attributeMap.outputUnit = uomProperty.SIUnit;
+        	 
+        	        if (uomProperty.Property != null)
+        	        { 
+            	        // Add the UOM Property to the properties to be exported
+            	        string uomPropertyName =  uomProperty.Property.Name;
+            	        if (uomPropertyName != "" && !mrnItem_propertiesToExport.Contains(uomPropertyName))
+            	            mrnItem_propertiesToExport.Add(uomPropertyName);
+        	        }
+        	    }
+		    }
+		    
+		    // If the export does not include Confidential, skip the Export Map asoociated with Confidential
+			if (!exportProfileInstance.ExportConfidential && attributeMap.propertyName == "mrn_confidential")
+			    continue;
+			    
+			    
+		    attributeMap.exportName = itm.getProperty("mrn_export_name","");
+        	//attributeMap.uomPropertyName = itm.getProperty("mrn_uom_property","");
+
+
+            //systemGenerated = (itm.getProperty("mrn_system_generated","") == "1") ? true : false; 
+            attributeMap.defaultValue = itm.getProperty("mrn_default_value","");
+            
+            // If this is an ETIM export, assing ETIM related properties
+            if (exportProfileInstance.ExportTemplate.Etim)
+            {
+                if (attributeMap.MrnProperty != null)
+                {
+                    attributeMap.etimClassList = attributeMap.MrnProperty.getEtimClassList(attributeMap.propertyName);
+ 
+                    // Find etimUnitCode for the given etimUnit, from the mapping table
+                    if (attributeMap.MrnProperty.UomProperty != null && attributeMap.MrnProperty.UomProperty.EtimUnit != null)
+                    {
+                        // Get the ETIM Code Unit for the given property
+                        attributeMap.etimUnitCode = getEtimCodeForUnit(attributeMap.MrnProperty.UomProperty.EtimUnit);
+            
+                        // Assign output unit
+                        attributeMap.outputUnit = attributeMap.MrnProperty.UomProperty.EtimUnit;
+                    }
+                }
+            }
+
+            // Add the attribute map to the list of maps
+        	attributeMaps.Add(attributeMap);
+        	
+        	// Add the property to the properties to export list
+        	if (attributeMap.propertyName != "" && !mrnItem_propertiesToExport.Contains(attributeMap.propertyName))
+        	    mrnItem_propertiesToExport.Add(attributeMap.propertyName);
+
+	    }
+    }
+	
+	public EtimClass getEtimClass(string etimClass)
+	{
+	    if (etimClassList == null)
+	        return null;
+	   
+        for (int ii = 0; ii < etimClassList.Count; ii++)
+            if (etimClassList[ii].hasClass(etimClass))
+                return etimClassList[ii];
+	    return null;
+	}
+	
+	 string getEtimCodeForUnit(string key)
+    {
+        string value = getDictionaryValue(etimUnitCodeMappings, key);
+        
+        if (value == null)
+            value = key;
+        return value;
+    }
+    
+    string getDictionaryValue(Dictionary<string,string> dictionary, string key)
+    {
+        string value;
+         
+        if (dictionary.TryGetValue(key, out value))
+            return value;
+        else
+            throw new Exception("Could not find a matching value for key: ." + key);
+    }
+    
+    public List<AttributeMap>   AttributeMaps { get { return attributeMaps; }}
+	public List<string>         PropertiesToExport { get { return mrnItem_propertiesToExport; }}
+    public string               PropertyName { get { return propertyName; }}
+    public Item                 Item { get { return item; }}
+
+    public string DefaultValue          { get {return defaultValue; } }
+    public string EtimUnitCode          { get {return etimUnitCode; } }
+    public string OutputUnit            { get { return outputUnit;  } }
+    public string ValueType             { get { return valueType;   } }
+    public string ExportName            { get { return exportName;  } }
+    public MRNProperty  MrnProperty     { set {mrnProperty = value; } get { return mrnProperty; }}
+    public bool Extracted               { set { extracted = value; } get { return extracted; } } 
+}
+
+// Class to hold an EtIM Class structure
+public class EtimClass
+{
+    string classCode;
+    string featureCode;
+    string valueType;
+    List<string> conditions;
+    Item applicableProperty;
+ 
+      // constructor
+    public EtimClass(string code, string feature, string type, string condition, Item property)
+    {
+        classCode = code;
+        featureCode = feature;
+        valueType = type;
+        
+        if (condition != "")
+            conditions = condition.Split('|').ToList();
+        
+        applicableProperty = property;
+    }
+
+    public EtimClass(string code)
+    {
+        List<string> values = code.Split('|').ToList();
+        classCode = values[0];
+        featureCode = values[1];
+        valueType = values[2];
+    }
+    
+    public bool hasClass(string classValue)
+    {
+        return (classValue == classCode);
+    }
+    
+    public bool hasConditionalValue(string value)
+    {
+        return conditions.Contains(value);
+    }
+    
+    public string ClassCode     { get {return classCode;    }}
+    public string FeatureCode   { get {return featureCode;  }}
+    public string ValueType     { get {return valueType;    }}
+    public Item ApplicableProperty      { get {return applicableProperty; }}
+}
+
+// Class to encasputlate Attribute Export Template
+public class ExportTemplate
+{
+    Item item;
+    string name;
+    string productXMLTag;
+    string rootXMLTag;
+    string unitSystem;
+    string filesExportOption;
+    string styleSheet;
+    string exportFormat;
+    string langsSelected;
+    
+    bool    etim;
+    bool    extractKeywordsFlag;
+    bool    extractMSLGUIDFlag;
+    bool    extractProductGUIDFlag;
+    //List<string> langCodesSelected; // Languages selected in the template
+    List<string> fileDescriptionsSelected = new List<string>();
+    List<string> filePurposesSelected = new List<string>();
+    List<string> langCodesSelected = new List<string>();
+    
+    Item customer;
+    
+    // Constructor
+    public ExportTemplate(Innovator inn, string itemID, Languages languagesDefinition)
+    {
+        string AML = "<AML><Item type = 'MRN_ExportTemplate' action = 'get'>" +
+                        "<id>" + itemID + "</id>" +
+                        "<mrn_customer><Item type=\"Customer\" action=\"get\" select=\"name, contact_name, mrn_account_owner\">" +
+                            "<mrn_account_owner><Item type=\"MRN_AccountOwner\" action=\"get\"></Item></mrn_account_owner>" +
+                         "</Item></mrn_customer>" +
+                         "<mrn_style_sheet_item><Item type=\"mrn_stylesheet\" action=\"get\" select=\"mrn_code\"></Item></mrn_style_sheet_item>" +
+                            "<Relationships>" +
+            				    "<Item type='MRN_ExportAttributeMap' action='get'>" +
+            				        "<Relationships>" +
+        				                "<Item type='MRN_ExportAttirbuteValueMap' action='get'/>" +
+        					        "</Relationships>" + 
+        				        "</Item>" +
+        			        "</Relationships>" +
+                        "</Item></AML>";
+        Item itm;
+        try {
+            itm = inn.applyAML(AML);
+            if (itm.isError()) 
+        		throw new Exception(itm.getErrorString() + "id = " + itemID);
+        }
+        catch (Exception ex) {
+        	throw new Exception("Error getting template item. " + ex.Message);
+        }
+    		    
+        item = itm;
+        
+        build();
+        setLangs(languagesDefinition);
+    }   
+    
+    private void build()
+    {
+         // Get properties from the template item
+        name = item.getProperty("mrn_template_name","");
+        productXMLTag = item.getProperty("mrn_export_item_name");
+        rootXMLTag = item.getProperty("mrn_export_root_name","DEFAULT_ROOT");
+        Item stylesheetItem = item.getPropertyItem("mrn_style_sheet_item");
+        if (stylesheetItem != null)
+            styleSheet = stylesheetItem.getProperty("mrn_code");
+        else
+            styleSheet = item.getProperty("mrn_style_sheet","");
+        unitSystem = item.getProperty("mrn_export_unit_system");
+        filesExportOption = item.getProperty("mrn_files_export_option");
+        etim = item.getProperty("mrn_etim","") == "1" ? true : false;
+        extractKeywordsFlag = item.getProperty("mrn_extract_keywords","") == "1" ? true : false;
+        extractMSLGUIDFlag = item.getProperty("mrn_msl_guid","") == "1" ? true : false;
+        extractProductGUIDFlag = item.getProperty("mrn_product_guid","") == "1" ? true : false;
+        
+        exportFormat = etim ? "XML": item.getProperty("mrn_export_format");
+        
+        customer = item.getPropertyItem("mrn_customer");
+        langsSelected = item.getProperty("mrn_languages");
+        
+        
+        string fileDescriptions = item.getProperty("mrn_file_descriptions");
+        if (fileDescriptions != null)
+            fileDescriptionsSelected = fileDescriptions.Split(',').ToList();
+        string filePurposes = item.getProperty("mrn_file_purposes");
+        if (filePurposes != null)
+            filePurposesSelected = filePurposes.Split(',').ToList();
+    }
+    
+    private void setLangs(Languages languagesDefinition)
+    {
+        // Get the language codes for the selected languages
+        string templateLangsSelected = item.getProperty("mrn_languages");
+        if (!String.IsNullOrEmpty(templateLangsSelected))
+        {
+            List<string> languagesSelected = templateLangsSelected.Split(',').ToList();
+            for (int ii = 0; ii < languagesSelected.Count; ii++)
+            {
+                string langCode = languagesDefinition.getCode(languagesSelected[ii]);
+                langCodesSelected.Add(langCode);
+            } 
+        }
+        
+        // If no languages selected, select english
+        if (langCodesSelected.Count == 0)
+            langCodesSelected.Add(languagesDefinition.getCode("English"));
+    }
+    
+    public Item     Item                { get { return item; }}
+    public Item     Customer            { get { return customer; }}
+    public string   Name                { get { return name; }}
+    public string   ProductXMLTag       { get { return productXMLTag; }}
+    public string   RootXMLTag          { get { return rootXMLTag; }}
+    public string   StyleSheet          { get { return styleSheet; }}
+    public string   FilesExportOption   { get { return filesExportOption; }}
+    public string   ExportFormat        { get { return exportFormat; }}
+    public string   UnitSystem          { get { return unitSystem; }}
+    public string   LangsSelected       { get { return langsSelected; }}
+    public bool     Etim                { get { return etim;} }
+    public bool     ExtractKeywordsFlag { get { return extractKeywordsFlag; }}
+    public bool     ExtractMSLGUIDFlag { get { return extractMSLGUIDFlag; }}
+    public bool     ExtractProductGUIDFlag { get { return extractProductGUIDFlag; }}
+    public List<string> FileDescriptionsSelected    { get { return fileDescriptionsSelected; } }
+    public List<string> FilePurposesSelected        { get { return filePurposesSelected; } }
+    public List<string> LangCodesSelected           { get { return langCodesSelected; }}
+}
+
+
+// Singleton class to encapsulate ExportProfile item
+public class ExportProfile
+{
+    string id;
+    Item item;
+    string name;
+    string exportFullPath;
+    string exportFileName;              // Full file name, with path
+    string exportFileShortName;         // Only the file name
+    string separator;
+    bool exportConfidential;
+    bool exportUnpublished;
+    string comments;
+    string msgString = "Export file was created successfully.";
+    List<string> fileDescriptionsSelected = new List<string>();
+    List<string> filePurposesSelected = new List<string>();
+    MRNLists  mrnLists;
+    Innovator inn;
+    ExportTemplate exportTemplate;
+    
+    
+    public enum Format
+    {
+	    Label2Value,
+    	Value2Label
+    };
+    
+    // Constructor
+    public ExportProfile(Innovator innovator, string exportProfileId, Languages languagesDefinition)
+    {
+        id = exportProfileId;
+        inn = innovator;
+        
+        // Get the export profile item
+        item = inn.newItem("MRN_ExportProfile", "get");
+        item.setID(id);
+        item = item.apply();
+        
+        // Get the export directory and the export profile name
+        exportFullPath = item.getProperty("mrn_export_full_path");
+        name = item.getProperty("mrn_profile_name","");
+        
+        // Get confidential and published flag
+        string confidentialFlag = item.getProperty("mrn_export_confidential","");
+        exportConfidential = confidentialFlag == "1";
+
+        string unpublishedFlag = item.getProperty("mrn_export_unpublished","");
+        exportUnpublished = unpublishedFlag == "1";
+
+	    // Retrieve the template item and assign to this
+	    exportTemplate = new ExportTemplate(inn, item.getProperty("mrn_export_template"), languagesDefinition);
+        comments = item.getProperty("mrn_comments","");
+    
+        // Build string for unique filename
+        DateTime now = DateTime.Now;
+        string nowStr = now.ToString("_ddMMyyyy_HHmm_ss_ffff");
+        string ext = "";
+        separator = "";
+        
+        // Get the export format to determine the file extension
+        //exportFormat = etim ? "XML": templateItem.getProperty("mrn_export_format");
+        switch (ExportTemplate.ExportFormat)
+        {
+	    case "CSV":
+    		separator = ",";
+    		ext =".csv";
+    		break;
+    	case "Excel":
+    		separator = "\t";
+    		ext =".xlsx";
+    		break;
+    	default:
+    		separator = ",";
+    		ext =".xml";
+    		break;
+        }
+        
+        // Create export directory/folder
+        try
+        {
+            System.IO.Directory.CreateDirectory(exportFullPath);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Error creating output folder: " + exportFullPath + 
+            "<br>" + "Error message: "  + ex.Message);
+        }
+                
+        // Build export filename
+        exportFileShortName = name + "_" + exportTemplate.Name + nowStr  + ext;
+        exportFileName = exportFullPath + @"\"  + exportFileShortName;
+        
+        // Build the MRNProperties List
+        mrnLists = new MRNLists(inn);
+    }
+
+    // Method to determine if the the type of Digital Asset one of the types slected
+    public bool valueIsInList(List<string>stringList, string value)
+    {
+        // Replace passed in string's spaced with underscores
+        //typeToTest = typeToTest.Replace(' ', '_');
+        foreach(string thisType in stringList )
+            if (value == thisType)
+                return true;
+        return false;
+    }
+
+    
+    // Returns all values and labels for the given list 
+    public Dictionary<string, string> listToDictionary(string listName, string listType, Format format)
+    {
+        Dictionary<string, string> listProperties = new Dictionary<string, string>();
+
+        if (listName == "" || (listType != "list" && listType != "filter list"))
+            return listProperties;
+            
+        // Get the list item
+        Item list = inn.newItem("List","get");
+        list.setProperty("name",listName);
+        //list.setAttribute("keyed_name", listName);
+        list = list.apply();
+        if(listType == "list")
+            list.fetchRelationships("value");
+        else if (listType == "filter list")
+            list.fetchRelationships("filter value");
+        else
+            return listProperties;
+            
+        Item relationships;
+        try 
+        {    
+            relationships = list.getRelationships();
+        }
+        catch (Exception ex) 
+        {
+    	    throw new Exception("Error getting list values (" + listName + "). " + ex.Message);
+        }
+    
+        int count = relationships.getItemCount();
+        
+        for (int i=0; i<count; i++)
+        {
+            Item valueRelationship = relationships.getItemByIndex(i);
+            string value = valueRelationship.getProperty("value");
+            string label = valueRelationship.getProperty("label");
+            
+            if (value == null)
+                value = "";
+            if (label == null)
+                label = "";
+            
+            string key = "";
+            string mapping = "";
+            
+            if (format == Format.Label2Value)
+            {
+                key = label;
+                mapping = value;
+            }
+            else if (format == Format.Value2Label)
+            {
+                key = value;
+                mapping = label;
+            }
+            else
+                continue;
+            
+            // if mapping already exists, skip it
+            if(listProperties.ContainsKey(key))
+                continue;
+            listProperties.Add(key, mapping);
+        }
+        
+        return listProperties;
+    }	
+
+    public Item     Item                    { get { return item;}}
+    public bool     ExportConfidential      { get { return exportConfidential;} }    
+    public string   ExportFileName          { get {return exportFileName; }}
+    public string   ExportFileShortName     { get { return exportFileShortName; }}
+    public string   Separator               { get { return separator; }}
+    public string   Comments                { get { return comments; }}
+    public string   Customer                { get { return item.getProperty("mrn_customer");}}
+    public string   MessageString           { get { return msgString; }}
+    public string   ServerRootDirectory     { get { return item.getProperty("mrn_server_root_directory"); }}
+    public string   ExportFullPath          { get { return exportFullPath; }}
+    public string   ExportFolder            { get { return item.getProperty("mrn_export_directory"); }}
+    public string   Id                      { get { return id; } } 
+    public string   AmlQuery                { get { return item.getProperty("mrn_aml_query");}} 
+    public string   ItemsToExport           { get { return item.getProperty("mrn_items_to_export", "").Trim();}} 
+    public MRNLists MrnLists                { get { return mrnLists; } }
+    public ExportTemplate ExportTemplate    { get { return exportTemplate; }}
+}
+
+// Class to represent an ExportItem (an item returned from the AML query for items to be exported)
+public class ExportItem
+{
+    MrnItem mrnItem;
+
+    // Constructor
+    public ExportItem(Item itm, List<string> propsToExport, string exportPath, Innovator inn, MrnItemDefinition mrnItemDefinition)
+    {
+        if (itm == null)
+            return;
+
+        MrnItem mrn = new MrnItem(itm, propsToExport, exportPath, inn);
+        mrnItem = mrn;
+        mrnItem.buildParentMSL(propsToExport, exportPath, inn);
+        mrnItem.buildParentFrame(propsToExport, exportPath, inn);
+    }
+    
+    // Method to get the property value (label in case of a list type property)
+    public string getPropertyValue(string propertyName, string valueOrLabel, MrnItemDefinition mrnItemDefinition)
+    {
+        XmlNodeList nodes;
+        XmlNode node;
+        int count = 0;
+        string type = "";
+        string result = "";
+        List<ListProperty> listProperties = mrnItemDefinition.GetListProperties();
+    
+        // Get the element of the property node
+	    nodes = this.MrnItem.getItem().node.GetElementsByTagName(propertyName);
+	    count = nodes.Count;
+	    if (count < 1)
+	        return result;
+	
+	    // Get the first element by the property name
+	    node = nodes[0];
+	
+	    // Get the type XML attribute, if it's null, it's a property not an XML attribute
+	    if (node.Attributes != null && node.Attributes["type"] == null)
+	    {
+	        result += node.InnerText;
+	    
+	        if (valueOrLabel != "label") return result;
+	        
+	   //     // Get the ID of the List for the given property
+		  //  sourceListID = ListProperty.getSourceListID("MRN_Item", propertyName, exportProfile);
+		  //  if (sourceListID == "") 
+		  //      return result;
+	    
+		    // Cycle all the values in the list
+		    foreach (ListProperty listProperty in listProperties)
+	        {
+                string name = listProperty.getName();
+    	        string value = listProperty.getValue();
+    	        string label = listProperty.getLabel();
+    	        
+    	        if ((propertyName != name) || (result != value))
+    	            continue;
+    	        
+    	        result = label;
+    	        break;
+	        }
+	        
+	        return result;
+	    }
+
+    	    
+    	type = node.Attributes["type"].Value;
+    	
+        // If type is Identity or MRN_Item get the keyed_name, else innerxml
+        if(type == "Identity" || type == "MRN_Item")
+            result += node.Attributes["keyed_name"].Value;
+        else
+    	    result += node.InnerText;
+    	    
+        return result;
+    }
+    
+    // Method to get the property value with language code
+    public string getMultilingualPropertyValue(string propertyName, string langCode)
+    {
+        int count = 0;
+        string result = "";
+        
+        // Get the elements with the language attribute
+        string langAttributeName = "xml:lang";
+        string multiPropertyName = "i18n:" + propertyName;
+        
+        // Get all the nodes that have this multilingual property name
+        XmlNodeList nodes = this.MrnItem.getItem().node.GetElementsByTagName(multiPropertyName);
+        count = nodes.Count;
+        if (count > 0)
+        {
+            // Get the attributes from each of the nodes, and look for the one with the matching language code
+            for (int jj = 0; jj < count; jj++)
+            {
+                XmlAttributeCollection  attributes = nodes[jj].Attributes;
+               
+                int aCount = attributes.Count;
+               
+                // Cycle all the attributes
+                for (int kk = 0; kk < aCount; kk++)
+                {
+                    XmlAttribute attribute = attributes[kk];
+                    
+                    // If the attribute name or language code don't match, move on to the next one
+                    if (!(attribute.Name == langAttributeName && attribute.Value == langCode))
+                        continue;
+                
+                    // Get the property value
+                    string propertyValue = nodes[jj].InnerText;
+                    result += propertyValue;
+                    
+                    break;
+                }
+            }
+        }
+        
+    	return result;
+    }
+
+    // // Method to get the fake ML property value with language code
+    // public string getFakeMultilingualPropertyValue(string propertyName, string langCode)
+    // {
+    //     int count = 0;
+    //     string result = "";
+        
+    //     // Get the elements with the language attribute
+    //     string langAttributeName = "xml:lang";
+    //     string multiPropertyName = "i18n:" + propertyName;
+        
+    //     // Get all the nodes that have this multilingual property name
+    //     XmlNodeList nodes = this.MrnItem.getItem().node.GetElementsByTagName(multiPropertyName);
+    //     count = nodes.Count;
+    //     if (count > 0)
+    //     {
+    //         // Get the attributes from each of the nodes, and look for the one with the matching language code
+    //         for (int jj = 0; jj < count; jj++)
+    //         {
+    //             XmlAttributeCollection  attributes = nodes[jj].Attributes;
+               
+    //             int aCount = attributes.Count;
+               
+    //             // Cycle all the attributes
+    //             for (int kk = 0; kk < aCount; kk++)
+    //             {
+    //                 XmlAttribute attribute = attributes[kk];
+                    
+    //                 // If the attribute name or language code don't match, move on to the next one
+    //                 if (!(attribute.Name == langAttributeName && attribute.Value == langCode))
+    //                     continue;
+                
+    //                 // Get the property value
+    //                 string propertyValue = nodes[jj].InnerText;
+    //                 result += propertyValue;
+                    
+    //                 break;
+    //             }
+    //         }
+    //     }
+        
+    // 	return result;
+    // }    
+    public MrnItem  MrnItem { get { return mrnItem; }}
+    public Item     Item    { get { return mrnItem.getItem(); }}
+
+}
+
+// Class to encapsulate ExportLog item
+public class ExportLog
+{
+    Item item;
+    string ID;
+    ExportProfile exportProfile;
+    
+    Innovator inn;
+	
+    // Constructor
+    public ExportLog(Innovator innovator, ExportProfile exportProfileInstance)
+    {
+        inn = innovator;
+        exportProfile = exportProfileInstance;
+        
+        item = inn.newItem("MRN_ExportLog", "add");
+        item.setProperty("source_id",exportProfile.Id);
+        item = item.apply();
+        ID = item.getID();
+    }
+    
+    // Method to set properties to the Export Log
+    public void update()
+    {
+        // Import the file extracted
+        Item fileItem = inn.newItem("File", "add");
+        fileItem.setProperty("filename", exportProfile.ExportFileShortName);
+        fileItem.attachPhysicalFile(exportProfile.ExportFileName);
+        fileItem = fileItem.apply();
+        
+        // Set the properties of the Export Log
+        item = inn.newItem("MRN_ExportLog", "edit");
+        item.setAttribute("where","[MRN_ExportLog].id='" + ID + "'");
+        item.setProperty("mrn_export_file_path", exportProfile.ExportFileName);
+        item.setProperty("mrn_customer", exportProfile.Customer);
+        item.setProperty("mrn_comments",exportProfile.Comments);
+        item.setProperty("mrn_extract_file", fileItem.getID());
+        item.setProperty("mrn_server_root_directory", exportProfile.ServerRootDirectory);
+        item.setProperty("mrn_export_directory", exportProfile.ExportFolder);
+        item.setProperty("mrn_export_full_path", exportProfile.ExportFullPath);
+        item = item.apply();	 
+    }
+    
+    public string getID() { return ID; }
+}
+
+// Class to encapsulate Export Log Item
+public class ExportLogItem
+{
+    Item item;
+
+    // Constructor
+    public ExportLogItem(string sourceID, string configID, Innovator inn)
+    {
+		item = inn.newItem("MRN_ExportLogItem","get");
+		item.setProperty("source_id",sourceID);
+		item.setProperty("mrn_item_config_id", configID);
+		item.setAttribute("select","mrn_item_config_id,mrn_msl_config_id,mrn_frame_config_id,mrn_item_generation,mrn_msl_generation,mrn_frame_generation");
+		item = item.apply();
+		if (item.isError())
+		    item = null;
+    }
+    
+    // Constructor
+    public ExportLogItem(Item exportItem, string sourceID, string skip, Innovator inn)
+    {
+        Item newExportLogItem = inn.newItem("MRN_ExportLogItem","add");
+	    newExportLogItem.setProperty("source_id",sourceID);
+	    newExportLogItem.setProperty("mrn_item_type",exportItem.getType());
+	    newExportLogItem.setProperty("item_id",exportItem.getID());
+	    newExportLogItem.setProperty("mrn_item_keyed_name",exportItem.getProperty("keyed_name",""));
+	
+	    newExportLogItem.setProperty("mrn_item_config_id",exportItem.getProperty("config_id",""));
+	    newExportLogItem.setProperty("mrn_msl_config_id", exportItem.getPropertyItem("mrn_parent_msl").getProperty("config_id"));
+	    newExportLogItem.setProperty("mrn_frame_config_id",exportItem.getPropertyItem("mrn_frame").getProperty("config_id"));
+	    newExportLogItem.setProperty("mrn_item_generation",exportItem.getProperty("generation",""));
+	    newExportLogItem.setProperty("mrn_msl_generation",exportItem.getPropertyItem("mrn_parent_msl").getProperty("generation"));
+	    newExportLogItem.setProperty("mrn_frame_generation",exportItem.getPropertyItem("mrn_frame").getProperty("generation"));
+
+        newExportLogItem.setProperty("mrn_skipped_flag",skip);
+	    newExportLogItem = newExportLogItem.apply();
+    }
+    
+    // Method to figure out if the item needs to be skipped (if anything changed since this ExportLog was created)
+    public string getSkipFlag(ExportItem exportItem)
+    {
+        // If a log was not found for this exportItem, set don't skip it
+        if (item == null)
+            return "0";
+            
+        string skip = "1";
+        
+        string itemConfigID = item.getProperty("mrn_item_config_id","");
+	    string mslConfigID = item.getProperty("mrn_msl_config_id","");
+	    string frameConfigID = item.getProperty("mrn_frame_config_id","");
+	    
+	    string itemGeneration = item.getProperty("mrn_item_generation");
+	    string mslGeneration = item.getProperty("mrn_msl_generation");
+	    string frameGeneration = item.getProperty("mrn_frame_generation");
+	    
+	    if (itemConfigID != exportItem.MrnItem.getConfigID())
+	        skip = "0";
+	    if (mslConfigID != exportItem.MrnItem.getParentMSL().getConfigID())
+	        skip = "0";
+	    if (frameConfigID != exportItem.MrnItem.getParentFrame().getConfigID())
+	        skip = "0";
+	    if (itemGeneration != exportItem.MrnItem.getGeneration())
+	        skip = "0";
+	    if (mslGeneration != exportItem.MrnItem.getParentMSL().getGeneration())
+	        skip = "0";
+	    if (frameGeneration != exportItem.MrnItem.getParentFrame().getGeneration())
+	        skip = "0";
+		return skip;
+    }
+    
+    public Item Item { get { return item; } } 
+}
+
+
+// Class to encapsulate MRN_ExportFile relationship item
+public class MRN_ExportedFileItem
+{
+    // Constructor to create a new MRN_ExportFile item
+    public MRN_ExportedFileItem(string sourceId, Item fileItem, string exportPath, Innovator inn, List<string> exportedIds, string relativePath)
+    {
+        
+        // Check to see if a duplicate of this item already exists
+        if (exportedIds.Contains(fileItem.getID()))
+            return;
+        
+        Item item = inn.newItem("MRN_ExportedFileItem","add");
+        item.setProperty("source_id",sourceId);
+		item.setProperty("mrn_file_id",fileItem.getID());
+		item.setProperty("mrn_file_name", fileItem.getProperty("filename",""));
+		item.setProperty("mrn_file_size", fileItem.getProperty("file_size",""));
+		item.setProperty("mrn_export_path", relativePath);
+		item.setPropertyItem("mrn_file", fileItem);
+		item = item.apply();
+		
+		exportedIds.Add(fileItem.getID());
+    }
+}
+
+// Singleton class that encapsulates the functionality for generating the output
+public class Output
+{
+    string type;
+    XmlWriter xmlWriter;
+    StringBuilder exportText;
+    string separator;
+    string productXmlTag;
+    string rootXmlTag;
+    StringBuilder stringBuilder;
+    XmlWriterSettings settings;
+    ExcelFile excFile;
+    string fileNamesSeparator = ";";
+    ExportItem curExport;
+    bool etimExport = false;
+    Dictionary<string,string> valueToEtimMappings;
+    // Dictionary<string,string> etimToEngMappings;
+    Dictionary<string,string> etimPackingUnitCodes;
+    UnitConversion unitConversionInstanace;
+    
+    ExportProfile exportProfile;
+    AttributeMap attributeMap;
+    MRNProperty mrnProperty;
+    MrnItemDefinition mrnItemDef;
+    Languages langsDef;
+ 	//List<string> langCodesSelected; // Languages selected in the template
+ 	ExportLog exportLogItem;
+ 	List<string> exportedFileIds = new List<string>(); // List of Ids of files that have been exported, to avoid duplicates in export log
+
+ 	//Dictionary<string,string> digitalAssetTypes;        // Label to normalized label of the list
+ 	Dictionary<string,string> digitalAssetTypesList;    // The Value to Label form of list
+ 	Innovator inn;
+ 	
+    // Method to create the output streams and to write the XML root element
+    public Output(Innovator innovator, ExportProfile exportProfileInstance, AttributeMap attributeInstance, MRNProperty mrnPropertyInstance, MrnItemDefinition mrnItemDefinition, Languages languagesDefinition, ExportLog exportLog)
+    {
+        exportProfile = exportProfileInstance;
+        attributeMap = attributeInstance;
+        mrnProperty = mrnPropertyInstance;
+        mrnItemDef = mrnItemDefinition;
+        langsDef = languagesDefinition;
+        etimExport = exportProfile.ExportTemplate.Etim;
+        exportLogItem = exportLog;
+        inn = innovator;
+        
+        // // Get the language codes for the selected languages
+        // langCodesSelected = new List<string>();
+        // string templateLangsSelected = exportProfile.ExportTemplate.LangsSelected;
+        // if (!String.IsNullOrEmpty(templateLangsSelected))
+        // {
+        //     List<string> languagesSelected = templateLangsSelected.Split(',').ToList();
+        //     for (int ii = 0; ii < languagesSelected.Count; ii++)
+        //     {
+        //         string langCode = langsDef.getCode(languagesSelected[ii]);
+        //         langCodesSelected.Add(langCode);
+        //     } 
+        // }
+        
+        // // If no languages selected, select english
+        // if (langCodesSelected.Count == 0)
+        //     langCodesSelected.Add(langsDef.getCode("English"));
+        
+        // Build dictionary of digital asset types, based on MIME-Descriptions list
+        BuildDigitalAssetTypes();
+               
+        // If etim export, read lists of etim codes
+        if (etimExport)
+        {
+            valueToEtimMappings = exportProfileInstance.listToDictionary("MRN_Value_ETIM_Mapping","list", ExportProfile.Format.Label2Value);
+            //etimToEngMappings = exportProfileInstance.listToDictionary("MRN_ETIM_EN_Mappping","list", ExportProfile.Format.Label2Value);
+            etimPackingUnitCodes = exportProfileInstance.listToDictionary("MRN_ETIM_Qty_Packing_Unit_Codes","list", ExportProfile.Format.Label2Value);
+        }
+        
+        // Get the export type and set the output for the type
+        type = exportProfile.ExportTemplate.ExportFormat;
+        if (type == "XML")
+        {
+            // Prepare the xml writer (for XML output)
+            stringBuilder = new StringBuilder();
+            settings = new XmlWriterSettings { Indent = true };
+            try{
+                xmlWriter = XmlWriter.Create(stringBuilder, settings);
+            }
+            catch (Exception ex) {
+	            throw new Exception("Error creating XML stream. " + ex.Message);
+            }
+        }
+        else if (type =="CSV")
+        {
+            // Create stream for export text (non-XML)
+            exportText = new StringBuilder();
+        }
+        else if (type == "Excel")
+        {
+            excFile = new ExcelFile(exportProfile.ExportFileName);
+        }
+        
+        // Add the header to the export output
+        if (type == "XML")
+            writeXMLHeader();
+        else
+            writeExcelHeader();
+        
+        unitConversionInstanace = new UnitConversion();
+        unitConversionInstanace.buildList(inn);
+
+    }
+    
+    // // Returns all values and labels for the given list 
+    // Dictionary<string, string> getListValues(string listName, string type)
+    // {
+    //     Dictionary<string, string> listProperties = new Dictionary<string, string>();
+    //     Innovator inn = exportProfile.getItem().getInnovator();
+        
+    //     if (listName == "" || (type != "list" && type != "filter list"))
+    //         return listProperties;
+            
+    //     // Get the list item
+    //     Item list = inn.newItem("List","get");
+    //     list.setProperty("name",listName);
+    //     //list.setAttribute("keyed_name", listName);
+    //     list = list.apply();
+    //     if(type == "list")
+    //         list.fetchRelationships("value");
+    //     else if (type == "filter list")
+    //         list.fetchRelationships("filter value");
+    //     else
+    //         return listProperties;
+            
+    //     Item relationships;
+    //     try 
+    //     {    
+    //         relationships = list.getRelationships();
+    //     }
+    //     catch (Exception ex) 
+    //     {
+    // 	    throw new Exception("Error getting list values (" + listName + "). " + ex.Message);
+    //     }
+    
+    
+    //     int count = relationships.getItemCount();
+        
+    //     for (int i=0; i<count; i++)
+    //     {
+    //         Item valueRelationship = relationships.getItemByIndex(i);
+    //         string value = valueRelationship.getProperty("value");
+    //         string label = valueRelationship.getProperty("label");
+            
+    //         if (value == null)
+    //             value = "";
+    //         if (label == null)
+    //             label = "";
+                
+    //         // if value already exists, skip it
+    //         if(listProperties.ContainsKey(value))
+    //             continue;
+    //         listProperties.Add(label, value);
+    //     }
+        
+    //     return listProperties;
+    // }	
+    
+        // Returns all values and labels for the given list 
+    private void BuildDigitalAssetTypes()
+    {
+ 	    digitalAssetTypesList = new Dictionary<string, string>();
+
+        string listName = "MRN_MIME_Descriptions";
+        
+        // Get the list item
+        Item list = inn.newItem("List","get");
+        list.setProperty("name",listName);
+        //list.setAttribute("keyed_name", listName);
+        list = list.apply();
+        list.fetchRelationships("value");
+            
+        Item relationships;
+        try 
+        {    
+            relationships = list.getRelationships();
+        }
+        catch (Exception ex) 
+        {
+    	    throw new Exception("Error getting list values (" + listName + "). " + ex.Message);
+        }
+    
+        // 
+        for (int i=0; i < relationships.getItemCount(); i++)
+        {
+            Item valueRelationship = relationships.getItemByIndex(i);
+            string label = valueRelationship.getProperty("label");
+            string value = valueRelationship.getProperty("value");
+            
+            // if (value == null)
+            //     value = "";
+            if (label == null)
+                label = "";
+                
+            // if value already exists, skip it
+            if(digitalAssetTypesList.ContainsKey(value))
+                continue;
+ 
+            digitalAssetTypesList.Add(value, label);
+        }
+    }	
+    
+    // Method to create the header for the Excel file
+    private void writeExcelHeader()
+	{
+        // Get the attibute maps
+        List<AttributeMap> attributeMaps = attributeMap.AttributeMaps;
+        Property myLabel;
+        // Get the separator from the ExportPrtofile
+        separator = exportProfile.Separator;
+        MRNProperty mrnPropertyInstance = new MRNProperty(inn);
+        string value = "";
+        // Check to see if the attributemaps is null
+        if (attributeMaps == null)
+            throw new Exception("Unable to find attribute maps!");	
+    
+	    // Cycle the attirbutes and add to the output
+	    foreach(AttributeMap attrMap in attributeMaps)
+        {
+		    if (attrMap == null)
+			    continue;
+			
+			string propertyName = attrMap.PropertyName;
+					    
+			MRNProperty returnedMrnProperty = mrnPropertyInstance.findFromPropertyName(propertyName);
+
+			// If confidential is not selected, skip confidentail Attribute map
+			//if (!exportProfileInstance.ExportConfidential && propertyName == "mrn_confidential")
+            //    continue;
+
+    //Moses update 20180823 to extract GUID for MSL and Product Family
+        // Add column for MSL GUID
+        if (exportProfile.ExportTemplate.ExtractMSLGUIDFlag && propertyName == "mrn_multilingual_name_msl")
+                addOutputValue("MSL_GUID");
+        // Add column for Product GUID
+        if (exportProfile.ExportTemplate.ExtractProductGUIDFlag && propertyName == "mrn_product_family")
+                addOutputValue("FAMILY_GUID");
+    //Moses End Update
+
+//New coded added to skip this step if it is a non-mrn_item - Moses 9/26/2017
+			if (propertyName == "")
+			    {
+			        addOutputValue(attrMap.ExportName);
+			    }
+			else
+			{
+//New code End - Moses 9/26/2017                
+    			// Find out if this is a multilingual  or MRNLanguage property, both need extra headers
+                // //System.Diagnostics.Debugger.Break();
+                if (mrnItemDef.IsMultiLingualProperty(propertyName) || attrMap.MrnProperty.IsFakeML)
+                {
+                    // Get all languages, and add a column for each
+                    foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+                    {
+                        string headerTitle = attrMap.ExportName + "_" + langCode.ToUpper();
+                        addOutputValue(headerTitle);
+                    }
+                }
+                else
+    		        {
+    	//New Code to get the Label value for List items - Moses 11/17/2017	            
+    		            if (returnedMrnProperty.ExtractLabel)
+                        {
+                            // string sql = "";
+                            // Get all languages, and add a column for each
+                                foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+                                {
+                                    // if (langCode == "en")
+                                    //     sql = "Select label, label FROM [innovator].[PROPERTY] where [NAME] = '" + propertyName + "'";
+                                    // else
+                                    //     sql = "Select label, label" + langCode + " FROM [innovator].[PROPERTY] where [NAME] = '" + propertyName + "'";
+                                    // Item newLabel = inn.applySQL(sql);
+                                    // string newValue = newLabel.getProperty("label" + langCode);
+                                    // if (newValue == null)
+                                    //     {
+                                    //     newValue = newLabel.getProperty("label");
+                                    //     addOutputValue(newValue);
+                                    //     }
+                                    // else
+                                    //     addOutputValue(newValue);
+                            //code Update - Moses 3/26/2018
+                                        addOutputValue(attrMap.ExportName + "_" + langCode);
+                                    // if (returnedMrnProperty.IsGroup)
+                                    //     addOutputValue(attrMap.ExportName + "_" + langCode);
+                                    // else
+                                    //     addOutputValue(returnedMrnProperty.Label + "_" + langCode);
+                                }
+                        }
+                        else
+                        {
+                            //addOutputValue(returnedMrnProperty.Label); - Cannot use returnedMrnProperty.Label becuase of Grouped Properties
+                            addOutputValue(attrMap.ExportName);
+                            //code Update End - Moses 3/26/2018
+                        }
+                    }
+			}   //***New code End - Moses 11/17/2017
+			
+            // Add the UOM column
+            if (attrMap.MrnProperty != null && attrMap.MrnProperty.UomProperty != null) 
+            {
+    		    //string uomProperty = attrMap.MrnProperty.UomProperty.Property.Name;
+    	    	//string uomSIUnit = attrMap.SIUnit;
+    		    //if (uomProperty != "" || uomSIUnit != "")
+    	            addOutputValue(attrMap.ExportName + "_UOM");
+            }
+    	}
+    	
+    	// Add File column titles to the output
+    	foreach (string typeSelected in exportProfile.ExportTemplate.FileDescriptionsSelected)
+    	{
+    	    if (typeSelected == "")
+    	        continue;
+            addOutputValue("Full Paths (" + digitalAssetTypesList[typeSelected] + ")");
+            addOutputValue("Filenames (" + digitalAssetTypesList[typeSelected]  + ")");
+        }
+        
+        // Add columns for keywords
+        if (exportProfile.ExportTemplate.ExtractKeywordsFlag)
+        {
+            foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+            {
+                addOutputValue("KEYWORDS_" + langCode.ToUpper());
+            }
+        }
+
+    	// Add a line after the header
+    	if(type == "CSV")
+    	    exportText.AppendLine();
+    	else if (type == "Excel")   
+    	   excFile.incrementRow();
+    	   
+    	return;
+    }
+    
+    // Method to create the header for the XML output
+    private void writeXMLHeader()
+	{
+
+        productXmlTag = exportProfile.ExportTemplate.ProductXMLTag;
+        rootXmlTag = exportProfile.ExportTemplate.RootXMLTag;
+        xmlWriter.WriteStartElement(rootXmlTag);
+        
+        // write the timestamp, this is needed by the IDW and BMEcat stnadards
+        WriteXMLBlock("timestamp", String.Format("{0:s}",DateTime.Now));  //2014-10-20T16:22:01.000
+        //New Code Update for language extract to XML - Moses 11/8/2017
+		// Add Language Tags
+			foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+            {
+                WriteXMLBlock("LANGUAGE_CODE", langCode.ToUpper());
+            }
+        //End New Code for Language Extract - Moses 11/8/2017
+
+        //Write buyer information, this is needed by the BMEcat standard
+        Item buyerItem = exportProfile.ExportTemplate.Customer;
+        if (buyerItem != null)
+        {
+            // Add buyer tags
+            xmlWriter.WriteStartElement("BUYER");
+                //WriteXMLBlock("BUYER_ID", buyerItem.getProperty("name",""));
+                WriteXMLBlock("BUYER_NAME", buyerItem.getProperty("name",""));
+            xmlWriter.WriteEndElement();
+        
+            //Write supplier information, this is needed by the BMEcat standard
+            Item accountOwner = buyerItem.getPropertyItem("mrn_account_owner");
+            if (accountOwner != null)
+            {
+                xmlWriter.WriteStartElement("SUPPLIER");
+                    WriteXMLBlock("SUPPLIER_ID",accountOwner.getProperty("mrn_duns_id",""), "type", "duns");
+                    WriteXMLBlock("SUPPLIER_NAME",accountOwner.getProperty("mrn_supplier",""));
+                    xmlWriter.WriteStartElement("ADDRESS");
+                        xmlWriter.WriteAttributeString("type", "supplier");
+                        WriteXMLBlock("CONTACT",accountOwner.getProperty("mrn_contact",""));
+                        WriteXMLBlock("STREET",accountOwner.getProperty("mrn_street",""));
+                        WriteXMLBlock("ZIP",accountOwner.getProperty("mrn_zip",""));
+                        WriteXMLBlock("CITY",accountOwner.getProperty("mrn_city",""));
+                        WriteXMLBlock("COUNTRY",accountOwner.getProperty("mrn_country",""));
+                        WriteXMLBlock("EMAIL",accountOwner.getProperty("mrn_email",""));
+                        WriteXMLBlock("URL",accountOwner.getProperty("mrn_url",""));
+                    xmlWriter.WriteEndElement(); 
+                
+                
+                    // If it's not an ETIM export, we're done here
+                    if (!exportProfile.ExportTemplate.Etim)
+                    {
+                        xmlWriter.WriteEndElement();   // End tag </SUPPLIER>
+                        return;
+                    }
+                    
+            
+                    // Get the name of the logo file
+                    Item logoFileVariable = inn.newItem("Variable", "get");
+                    logoFileVariable.setProperty("name", "MRNLogoFileID");
+                    logoFileVariable = logoFileVariable.apply();
+                    if (logoFileVariable.isError())
+                    {
+                        xmlWriter.WriteEndElement();   // End tag </SUPPLIER>
+                        return;
+                    }
+
+                    // Write logo information
+                    FileItem logoFile = new FileItem(inn, logoFileVariable.getProperty("value"));
+                    if (logoFile == null)
+                    {
+                        xmlWriter.WriteEndElement();   // End tag </SUPPLIER>
+                        return;
+                    }
+                    
+                    // Export the file
+                    string exportPath = exportProfile.ExportFullPath;
+                    exportPath = System.IO.Path.Combine(exportPath, "logo");
+                    
+                    logoFile.export(exportPath, "\\logo", exportLogItem.getID(), exportedFileIds);
+               
+                    // Write XML output
+                    xmlWriter.WriteStartElement("MIME_INFO");
+                        xmlWriter.WriteStartElement("MIME");
+                            WriteXMLBlock("MIME_TYPE",logoFile.MimeType);
+                            WriteXMLBlock("MIME_SOURCE", "logo\\" + logoFile.Name);
+                            WriteXMLBlock("MIME_DESCR",logoFile.MimeDescription);
+                            WriteXMLBlock("MIME_ALT","Mersen Logo");
+                            WriteXMLBlock("MIME_PURPOSE",logoFile.MimePurpose);
+                        xmlWriter.WriteEndElement();  
+                    xmlWriter.WriteEndElement(); 
+                xmlWriter.WriteEndElement();   // End tag </SUPPLIER>
+            }
+        }
+
+
+    }   
+    
+    // Method to write xml element
+    private void WriteXMLBlock(string elementTag, string elementValue, string attributeName = "", string attributeValue = "")
+    {
+
+    // if (String.IsNullOrEmpty(elementValue))
+        //     return;
+        xmlWriter.WriteStartElement(elementTag);
+        if (attributeName != "" && attributeValue != "")
+            xmlWriter.WriteAttributeString(attributeName,attributeValue);
+            xmlWriter.WriteString(elementValue);
+        xmlWriter.WriteEndElement(); 
+
+    
+    
+}
+    
+    // Method to write item data (including relationship items) to the output streams
+    public void writeItemData()
+	{
+    string mslName = "";
+
+     if (curExport == null)
+            return;
+        
+        // Get the list of attributes maps to cycle for values
+        List<AttributeMap> propMaps = attributeMap.AttributeMaps;
+        
+        // Reset all the maps to not extracted
+         // Cycle all the attribute maps, write the output for each map
+        foreach (AttributeMap propMap in propMaps)
+            {
+                propMap.Extracted = false;
+            //Moses update 20180823 to extract GUID for MSL and Product Family
+            //get the MSL name first for GUID extracts
+    		    if (propMap.PropertyName == "mrn_multilingual_name_msl")
+	    	    {
+                    if (exportProfile.ExportTemplate.ExtractProductGUIDFlag)
+                    {
+		                mslName = curExport.getPropertyValue(propMap.PropertyName, propMap.ValueType, mrnItemDef);
+        		    }
+                }
+            }
+ 
+        // Write the start element for this product
+        if (type == "XML")
+            xmlWriter.WriteStartElement(productXmlTag);
+
+
+        // Cycle all the attribute maps, write the output for each map
+        foreach (AttributeMap propMap in propMaps)
+        {
+		    if (propMap.Item == null)
+			    continue;
+            
+            // If map has already been extracted for this item, skip it (this is when there are multiple maps for an MRNProperty - range type property)
+            if (propMap.Extracted)
+                continue;
+                
+            writeProductValues(propMap, mslName);
+            
+            propMap.Extracted = true;
+            
+        }
+    
+        // Write digital asset filenames to ouptut
+        writeDigitalAssetsOutput();
+        
+        // Write keywords to output
+        if (exportProfile.ExportTemplate.ExtractKeywordsFlag)
+            writeKeywordValues();
+        
+    	// Close this element
+        if (type == "XML")
+        {
+            xmlWriter.WriteEndElement();
+        }
+        else if (type == "CSV")
+        {
+            //exportText.Length--;
+            exportText.AppendLine();
+        }
+        else if (type == "Excel")
+            excFile.incrementRow();
+            
+        return;
+
+	}
+	
+    // Method to write item data (including relationship items) to the output streams
+    public void writeUnknownItemData(string partNumber)
+    {
+
+        // Don't write if XML
+        if (type == "XML")
+            return;
+    
+        addOutputValue(partNumber);
+   
+    	// Close this row
+        if (type == "CSV")
+        {
+            exportText.AppendLine();
+        }
+        else if (type == "Excel")
+            excFile.incrementRow();
+            
+        return;
+	}	
+	
+	//Adds the product property and uom values to output. This is where the actual values are added to the output
+	private void writeProductValues(AttributeMap propMap, string mslName)
+	{
+	    string value = ""; 
+	    string newValue = ""; 
+	    string listValues = ""; 
+	    string sql = "";
+        int listValueCount = 0;
+	    propMap.Extracted = true;
+	    
+	    // Get property map seletor value
+		string plmPropSel = propMap.PropertyName;
+		
+		// Get property export name
+	    string exportProperty = propMap.ExportName;
+	    exportProperty = exportProperty.Trim();
+		
+		// If it's a non MRN_Item property (user entered), write it and return
+		if (propMap.MrnProperty == null)
+		{
+		    addOutputValue(propMap.DefaultValue, exportProperty);
+		    return;
+		}
+		
+		// This would be the EtimClass that matches between the ExportItem and the AttributeMap
+		EtimClass etimClass = null; 
+		
+		// If this is an etim export, and the property is non-etim, skip it
+		if (exportProfile.ExportTemplate.Etim)
+		{
+		    // Get the etim class of the MRNProperty, feature codes depend on this
+		    etimClass = propMap.getEtimClass(curExport.MrnItem.getParentMSL().getEtimClass());
+		    
+		    // If the property is not etim default, etimClass cannot be null
+		    if (propMap.MrnProperty.EtimDefault != "1")
+		        if (etimClass == null)
+		            return;
+		}
+
+        //Moses update 20180823 - new code for the GUID extracts
+	    // Add column for MSL GUID
+	    string extractID = "";
+	    string origMSLID = "";
+	    string familyID = "";
+        if (exportProfile.ExportTemplate.ExtractMSLGUIDFlag && plmPropSel == "mrn_multilingual_name_msl")
+                {
+                    sql = "select mrn_parent_msl as extractMSLID, mrn_product_family as family from [innovator].[MRN_ITEM] where mrn_multilingual_name_msl = '" + curExport.getPropertyValue(plmPropSel, propMap.ValueType, mrnItemDef) + "' and is_current = 1";
+                    try
+                    {
+                        var GUID = inn.applySQL(sql);
+                        extractID = GUID.getItemByIndex(0).getProperty("extractmslid");
+                        familyID = GUID.getItemByIndex(0).getProperty("family");
+                        
+                        sql = "select [aras:uniqueness_helper] as mslid, [ID] as uniqueid from  [innovator].[MRN_ITEM] where mrn_parent_msl = '" + extractID + "' and modified_on in (SELECT min(modified_on) FROM [innovator].[MRN_ITEM] where mrn_parent_msl = '" + extractID + "')";
+                        GUID = inn.applySQL(sql);
+                        origMSLID = GUID.getItemByIndex(0).getProperty("mslid");
+                        if (origMSLID == null || origMSLID == "")
+                            origMSLID = GUID.getItemByIndex(0).getProperty("uniqueid");
+                        
+                        addOutputValue(origMSLID, "MSL_GUID");
+                    }
+            	    catch (Exception e)
+            	    {
+            	        throw new Exception(e.Message + "SQL: " + sql);
+            	    }
+                }
+        // Add column for Product GUID
+        extractID = "";
+        if (exportProfile.ExportTemplate.ExtractProductGUIDFlag && plmPropSel == "mrn_product_family")
+                {
+                    sql = "select mrn_product_family as family from [innovator].[MRN_ITEM] where mrn_multilingual_name_msl = '" + mslName + "' and is_current = 1";
+                    try
+                    {
+                        var GUID = inn.applySQL(sql);
+                        familyID = GUID.getItemByIndex(0).getProperty("family");
+                    sql = "select value.id as extractProdID from innovator.list, innovator.VALUE where list.keyed_name = 'MRN_Product_Family' and list.id = value.source_id and value = '" + familyID + "'";
+                        GUID = inn.applySQL(sql);
+                        extractID = GUID.getItemByIndex(0).getProperty("extractprodid");
+                        addOutputValue(extractID, "FAMILY_GUID");
+                    }
+            	    catch (Exception e)
+            	    {
+            	        throw new Exception(e.Message + "SQL: " + sql);
+            	    }
+                    
+                }
+		//End Moses update 20180823
+		
+        // Check to see if this is one of the multilingual properties
+        if (mrnItemDef.IsMultiLingualProperty(plmPropSel))
+        {
+            // Get property value for each language
+            foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+            {
+                // If it's a multilingual type property, get the value from the XML
+                value = curExport.getMultilingualPropertyValue(plmPropSel, langCode);
+                
+                // If the value is empty, see if there's a default value, otherwise use the English value
+                if (value == "")
+                {
+                    if (propMap.DefaultValue != "")
+	                    value = propMap.DefaultValue;
+	                else
+	                    value = curExport.getMultilingualPropertyValue(plmPropSel, "en");
+                }
+	                
+                // Write to output
+                addOutputValue(value, exportProperty + "_"  + langCode.ToUpper(), etimClass);
+            }
+            
+            return;
+        }
+        
+        // Check to see if this is one of the fake multilingual properties
+        if (propMap.MrnProperty.IsFakeML)
+        {
+
+            foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+            {
+                string propertyName = plmPropSel;
+                
+                if (langCode != "en")
+                    propertyName = propertyName + "_" + langCode;
+                    
+                value = curExport.getPropertyValue(propertyName, propMap.ValueType, mrnItemDef);
+              
+                if (value == "")
+                    value = curExport.getPropertyValue(plmPropSel, propMap.ValueType, mrnItemDef);
+                    
+            //     // Get the last three characters from the property name
+            //     string lastThree = plmPropSel.Substring(plmPropSel.Length-3);
+            
+            //     // If the first character is not an underscore, it must be the english property
+            //     int pos = lastThree.IndexOf("_");
+            //     if (pos == -1)
+            //     langCode = "en";
+            // else
+            //     langCode = lastThree.Substring(1);
+                
+            // }
+            //     // If it's a fake multilingual type property, get the value from the XML
+            //     value = curExport.getPropertyValue(plmPropSel, propMap.ValueType, mrnItemDef);
+                
+            //     // If the value is empty, see if there's a default value, otherwise use the English value
+            //     if (value == "")
+            //     {
+            //         if (propMap.DefaultValue != "")
+	           //         value = propMap.DefaultValue;
+	           //     else
+	           //         value = curExport.getFakeMultilingualPropertyValue(plmPropSel, "en");
+            //     }
+	                
+                // Write to output
+                addOutputValue(value, exportProperty + "_"  + langCode.ToUpper(), etimClass);
+            }
+            
+            return;
+        }
+        
+        // Get the property value
+        value = curExport.getPropertyValue(plmPropSel, propMap.ValueType, mrnItemDef);
+        
+
+	    if (value == "" & propMap.DefaultValue != "")
+	        value = propMap.DefaultValue;
+
+	    // If the property is "Confidential", change value 
+	    if (plmPropSel == "mrn_confidential")
+	        value = value == "1" ? "Confidential" : "";   
+	   
+
+        // If this is a range type property (two properties for one)
+        string minValue = "0";
+        string maxValue = "0";
+        if (propMap.MrnProperty.EtimRangeProperty)
+        {
+            Property minProperty = propMap.MrnProperty.PropertiesList[0];
+            minValue = curExport.getPropertyValue(minProperty.Name, propMap.ValueType, mrnItemDef);
+            Property maxProperty = propMap.MrnProperty.PropertiesList[1];
+            maxValue = curExport.getPropertyValue(maxProperty.Name, propMap.ValueType, mrnItemDef);
+        }
+        
+	    // If there's no MRNProperty for this property, or no MRNUOMProperty, add the value to the output without conversion skip the rest (user added properties)
+	    if (propMap.MrnProperty == null || propMap.MrnProperty.UomProperty == null)
+	    {
+	        if (propMap.MrnProperty.EtimRangeProperty)
+	            writeRangeValues(propMap, minValue, maxValue, etimClass);
+	        else
+	//New Code update to get List Values in Selected Language - Moses 11/21/2017
+	             if (propMap.MrnProperty.ExtractLabel)
+                    {
+                        string labelSource = "";
+                        string labelDataSource = "";
+                            if (value == "" || value == null )
+                                foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+                                    addOutputValue(value, exportProperty, etimClass);
+                            else
+                            {
+                                Item propItem = propMap.MrnProperty.Item.getPropertyItem("mrn_item_property");
+                                if (propItem == null)
+                                    //Item with a Grouped Properties list (Connector Type (PDB))
+                                    foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+                                        addOutputValue(value, exportProperty + "_" + langCode.ToUpper(), etimClass);
+                                else
+                                {
+                                labelSource = propItem.getProperty("name");
+                                sql = "select l.name From [innovator].[LIST] l, [innovator].[PROPERTY] p " +
+                                    "Where l.id = p.data_source and p.name = '" + labelSource + "'";
+                                Item newLabel = inn.applySQL(sql);
+                                if (newLabel == null)
+                                    addOutputValue("", exportProperty, etimClass);
+                                else
+                                {
+                                    labelDataSource = newLabel.getProperty("name");
+                                    // Get all languages, and add a column for each
+                                    foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+                                    {
+                                //moses update 20180723 - new property added to MRN_Property 
+                                //to check if multiple values are extracted
+                                        if (propMap.MrnProperty.IsMultiValue)
+                                            {
+                                                listValues = "";
+                                                listValueCount = 0;
+                                                List<string> multiValueList = value.Trim().Split(',').ToList();
+                                                foreach (string listValue in multiValueList)
+                                                {
+                                                newValue = addOutputByLang(langCode, newLabel, etimClass, exportProperty, labelDataSource, listValue);
+                                                if (type == "Excel")
+                                                    if (listValueCount == 0)
+                                                        listValues = newValue;
+                                                    else
+                                                        listValues = listValues + ", " + newValue;
+                                                else if (type == "CSV")
+                                                    if (listValueCount == 0)
+                                                        listValues = newValue;
+                                                    else
+                                                        listValues = listValues + "; " + newValue;
+                                                else
+                                                    addOutputValue(newValue, exportProperty + "_"  + langCode.ToUpper(), etimClass);
+                                                    listValueCount ++;
+                                                }
+                                                if (type == "Excel" || type == "CSV")
+                                                    addOutputValue(listValues, exportProperty + "_"  + langCode.ToUpper(), etimClass);
+                                            }
+                                        else
+                                            {
+                                                newValue = addOutputByLang(langCode, newLabel, etimClass, exportProperty, labelDataSource, value);
+                                                addOutputValue(newValue, exportProperty + "_"  + langCode.ToUpper(), etimClass);
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+
+                    }
+                 else
+                    addOutputValue(value, exportProperty, etimClass);
+    	//End New Code update to get List Values in Selected Language - Moses 11/21/2017
+
+                return;
+	    }
+	    
+        // Get the export property uom name
+        string uomProperty = "";
+        if (propMap.MrnProperty.UomProperty.Property != null)
+        {
+            uomProperty = propMap.MrnProperty.UomProperty.Property.Name;
+        }
+        
+ 		string outputUnit = propMap.OutputUnit;
+	    // If uom property is empty and no output unit, skip the uom business   <===========  case 1
+	    if (uomProperty == "" && (outputUnit == null || outputUnit == ""))
+	    {
+	        if (propMap.MrnProperty.EtimRangeProperty)
+	            writeRangeValues(propMap, minValue, maxValue, etimClass);
+	        else
+	            addOutputValue(value, exportProperty, etimClass);
+	        return;
+	    }
+
+	    // If uom property is empty, skip the conversion, the property was not saved with a unit, it has a single unit   <===========  case 2
+	    string uomValue = "";
+	    if (uomProperty == "")
+	    {
+	        if (value != "")
+	           uomValue = outputUnit;
+	        if (propMap.MrnProperty.EtimRangeProperty)
+	            writeRangeValues(propMap, minValue, maxValue, etimClass);
+	        else
+	            addOutputValue(value, exportProperty, etimClass);
+	        	
+	        //****2 lines added - Moses 9/1/2017
+	        uomProperty = exportProperty + "_UOM";
+	        addOutputValue(uomValue, uomProperty);
+	        //**** End update - Moses 9/1/2017
+            return;
+	    }
+
+	    // Get the MrnItem that has the uom value
+		MrnItem uomPropertyItem;
+		if (propMap.MrnProperty.Level == "Level 5 - Frame")
+		    uomPropertyItem = curExport.MrnItem.getParentFrame();
+		else if (propMap.MrnProperty.Level == "Level 4 - MSL")
+		    uomPropertyItem = curExport.MrnItem.getParentMSL();
+		else
+		    uomPropertyItem = curExport.MrnItem;
+		
+		// Get the value of the uom property
+	    uomValue = uomPropertyItem.getPropertyValue(uomProperty);
+
+    	// Calculate the value for the output unit
+    	if (value != "" && uomValue != "" && outputUnit != null &&  outputUnit != "")
+    	{
+    	   // Get the multiplier
+    	    double multiplier = 1;
+    	    try {
+    	        multiplier = unitConversionInstanace.getMultiplier(uomValue,outputUnit); 
+    	    }
+    	    
+    	    catch (Exception e)
+    	    {
+    	        throw new NoMultiplierException(curExport.MrnItem.getItem().getProperty("mrn_name_number") +": Error getting unit multiplier, " +  
+    	                    e.Message + "<br>for property: " + propMap.MrnProperty.Label);
+    	    }
+//moses 20190208 - Set the number of decimals to round to for UoM conversion
+    	    int roundDec = 2;
+    	    if (outputUnit == "kg")
+    	        roundDec = 4;
+    	        else if (outputUnit == "lb")
+    	        roundDec = 3;
+    	        else if (outputUnit == "in")
+    	        roundDec = 2;
+    	        else if (outputUnit == "mm")
+    	        roundDec = 1;
+
+    	    value = Math.Round((Double.Parse(value) * multiplier), roundDec).ToString();
+    	    minValue = Math.Round((Double.Parse(minValue) * multiplier), roundDec).ToString();
+    	    maxValue = Math.Round((Double.Parse(maxValue) * multiplier), roundDec).ToString();
+    	   // value = (Double.Parse(value) * multiplier).ToString();
+    	   // minValue = (Double.Parse(minValue) * multiplier).ToString();
+    	   // maxValue = (Double.Parse(maxValue) * multiplier).ToString();
+    	    uomValue = outputUnit;
+//moses 20190208 - End Update
+
+    	}
+    	
+	    // Case 3 and 4
+	
+		// Write property value
+		if (propMap.MrnProperty.EtimRangeProperty)
+	            writeRangeValues(propMap, minValue, maxValue, etimClass, uomValue);
+	   else
+		    addOutputValue(value, exportProperty, etimClass, propMap.EtimUnitCode, uomValue);
+		
+		// If the value is empty, send an empty uomValue
+		if (value == "")
+		    uomValue = "";
+		    
+		// If etimexport, non-default property, no unit to print, default property, get unit code
+		if (exportProfile.ExportTemplate.Etim)
+		{ 
+		    if (etimClass != null)
+		        return;
+		   else 
+		    uomValue = getEtimPackingUnitCode(uomValue);
+		}
+        
+        // Write Unit value
+        uomProperty = exportProperty + "_UOM";
+        addOutputValue(uomValue, uomProperty);
+
+	}
+	
+//moses 20180723 - new function to add the outputValue
+    private string addOutputByLang(string langCode, Item newLabel, EtimClass etimClass, string exportProperty, string labelDataSource, string value)
+    {
+        string sql = "";
+        string newValue = "";
+        if (langCode == "en")
+            sql = "Select v.label FROM [innovator].[LIST] l, [innovator].[VALUE] v " +
+                "where v.source_id = l.config_id and l.name = '" + labelDataSource + 
+                "' and v.label = '" + value + "'";
+        else
+            sql = "Select v.label, label" + langCode + 
+                " FROM [innovator].[LIST] l, [innovator].[VALUE] v " +
+                "where v.source_id = l.config_id and l.name = '" + labelDataSource + 
+                "' and v.label = '" + value + "'";
+        newLabel = inn.applySQL(sql);
+        if (newLabel == null)
+            return "";
+        else
+        {
+    //This is where the error is
+            if (langCode == "en")
+                try
+                {
+                    newValue = newLabel.getProperty("v.label");
+                }
+                catch (Exception e)
+                {
+                    newValue = "Bad LabelEN - " + value;
+                }
+            else
+                try
+                {
+                    newValue = newLabel.getProperty("label" + langCode);
+                }
+                catch (Exception e)
+                {
+                    newValue = "Bad Label" + langCode + " - " + value;
+                }
+    //error end
+            if (newValue == null || newValue == "")
+                {
+                    newValue = newLabel.getProperty("label");
+                    try
+                    {
+                        return newValue;
+                    }
+                    catch (Exception e)
+        	        {
+                    throw new Exception("Error 1 " + newValue + "<br>" + sql);
+        	        }
+                }
+            else
+                try
+                {
+                    return newValue;
+                }
+                catch (Exception e)
+    	        {
+                    throw new Exception("Error 2 " + newValue + "<br>" + sql);
+    	        }
+        }
+    }	
+//moses 20180723 End New Function	
+	
+    // Writes the range type properties
+    private void writeRangeValues(AttributeMap propMap, string minValue, string maxValue, EtimClass etimClass, string uomValue = "")
+    {
+        string minPropertyName = propMap.ExportName;
+        string maxPropertyName = "";
+        
+        // Find the other Attribute Map (property map that has the same mrnproperty)
+        // Get the list of attributes maps to cycle for values
+        List<AttributeMap> propMaps = attributeMap.AttributeMaps;
+        
+        // Cycle all the attribute maps to find the one matching for this mrnProperty
+        foreach (AttributeMap secondPropMap in propMaps)
+        {
+            if (propMap.MrnProperty == secondPropMap.MrnProperty)
+            {
+                secondPropMap.Extracted = true;
+                maxPropertyName = secondPropMap.ExportName;
+            }
+        }
+        
+		// If this is an etim export, and the property is non-etim, skip it
+		if (exportProfile.ExportTemplate.Etim)
+		{
+		    // If the property is not etim default, check the etim class of the item against the etim classes of the property
+		    if (propMap.MrnProperty.EtimDefault != "1")
+		    {
+		        etimClass = propMap.getEtimClass(curExport.MrnItem.getParentMSL().getEtimClass());
+		        
+		        if (etimClass == null)
+		            return;
+		    }
+		}
+        // Write Range values to output
+        addOutputValue(minValue, maxValue, minPropertyName, maxPropertyName, etimClass, propMap.EtimUnitCode, uomValue);
+        
+        
+        
+       
+    }
+    
+
+    
+	// Adds the Digital Asset filenames to output
+	private void writeDigitalAssetsOutput()
+	{
+	    // Get a list of all digital assets at all levels of the product
+        List<DigitalAsset> exportedDigitalAssets = new List<DigitalAsset>();
+        int daCnt = 0;
+    //Update for ETIM Digital Asset Selection   - Moses 11/09/17
+        // if (etimExport)
+            // {
+        //     exportedDigitalAssets.AddRange(curExport.MrnItem.getDigitalAssets());
+        //     foreach (DigitalAsset da in exportedDigitalAssets)
+    	   //     {
+    	   //         daCnt = daCnt + 1;
+    	   //     }
+    	   // if (daCnt == 0)
+    	   //     {
+        //         exportedDigitalAssets.AddRange(curExport.MrnItem.getParentFrame().getDigitalAssets());
+        //         foreach (DigitalAsset da in exportedDigitalAssets)
+        // 	        {
+        // 	            daCnt = daCnt + 1;
+        // 	        }
+        // 	    if (daCnt == 0)
+        // 	        {
+        //             exportedDigitalAssets.AddRange(curExport.MrnItem.getParentMSL().getDigitalAssets());
+        //             foreach (DigitalAsset da in exportedDigitalAssets)
+        //     	        {
+        //     	            daCnt = daCnt + 1;
+        //     	        }
+        	            
+        // 	        }
+    	            
+    	   //     }
+            exportedDigitalAssets.AddRange(curExport.MrnItem.getDigitalAssets());
+            exportedDigitalAssets.AddRange(curExport.MrnItem.getParentFrame().getDigitalAssets());
+            exportedDigitalAssets.AddRange(curExport.MrnItem.getParentMSL().getDigitalAssets());
+    	    
+        //     }
+        // else
+        //     {
+        //     exportedDigitalAssets.AddRange(curExport.MrnItem.getParentMSL().getDigitalAssets());
+        //     exportedDigitalAssets.AddRange(curExport.MrnItem.getParentFrame().getDigitalAssets());
+        //     exportedDigitalAssets.AddRange(curExport.MrnItem.getDigitalAssets());
+        //     }
+    //End Update for ETIM Digital Asset Selection   - Moses 11/09/17
+        
+        
+        // Create two dictionaries. One to hold the concatenated full paths of all the files of that type (for Excel or CSV output), and the other to hold just the concatenated filenames. Key is the type (mime description), value is the concatenated filenames
+        Dictionary<string, string> daFullFileNames = new Dictionary<string, string>();
+        Dictionary<string, string> daShortFileNames = new Dictionary<string, string>();
+
+        foreach(string daType in exportProfile.ExportTemplate.FileDescriptionsSelected )
+        {
+            daFullFileNames.Add(daType, "");
+            daShortFileNames.Add(daType, "");  
+        }
+        
+        // Write the digital assets for each of the levels and fill the dictionaries with filepaths and filenames
+        writeDigitalAssetsForList(exportedDigitalAssets, daFullFileNames, daShortFileNames);
+
+        
+      	// Build and write the Excel and CSV Output
+    	if (type != "XML")
+    	{
+        	// For each type of Digital Asset, find the matching ones in the ditialAssets and write to the Excel file
+            //Array daTypes = Enum.GetValues(typeof(DigitalAsset.Types));
+            
+            // Cycle each type of digital asset in selected types
+            foreach( string daType in exportProfile.ExportTemplate.FileDescriptionsSelected )
+            {
+                // Find the filenames value in the filenames Dictionary
+                string fileNames = daFullFileNames[daType];
+                if (type == "CSV")
+                    exportText.Append(fileNames);
+                else if (type == "Excel")
+                    excFile.append(fileNames);
+        	    
+        	    // Completed all DAs of the given type, move over to the next column
+        	    if(type == "CSV")
+                    exportText.Append(separator);
+                    
+                // Find the filenames value in the filenames Dictionary
+                fileNames = daShortFileNames[daType];
+                if (type == "CSV")
+                    exportText.Append(fileNames);
+                else if (type == "Excel")
+                    excFile.append(fileNames);
+        	    
+        	    // Completed all DAs of the given type, move over to the next column
+        	    if(type == "CSV")
+                    exportText.Append(separator);
+            }
+    	}     
+  
+	}
+	
+	// Exports the files associated with the digital assets and adds the filenames to the lists
+    void writeDigitalAssetsForList(List<DigitalAsset> daList, Dictionary<string, string> daFullFileNames, Dictionary<string, string> daShortFileNames)
+    {
+        string errorList = "";
+        int daCnt = 0;
+        // Cycle all the digital assets attached to the heirarchy
+    	foreach (DigitalAsset da in daList)
+    	{
+    	    // Get the files from the digital asset
+    	    List<FileItem> files = da.Files;
+    	    
+    	    // Cycle each file, export it, determine if it should not be extracted, filtering through all the scenarios
+            foreach (FileItem file in files)
+            {
+                string fileSequence = file.Sequence;
+                string fileLanguage = file.Language;
+                bool fileLangIsSelected = exportProfile.valueIsInList(exportProfile.ExportTemplate.LangCodesSelected,file.Language);
+                
+                // If the file is marked internal, don't export
+                if (file.InternalFile)
+                    continue;
+      
+                // If the file description is not in the selected descriptions in the template, ignore it    
+                if (!exportProfile.valueIsInList(exportProfile.ExportTemplate.FileDescriptionsSelected,file.MimeDescription))
+                    continue;
+                
+                // If the file purpose is not in the selected purposes in the template, ignore it
+                if (!exportProfile.valueIsInList(exportProfile.ExportTemplate.FilePurposesSelected,file.MimePurpose))
+                    continue;
+                
+                // If single default option is selected, determine if the file should not be extracted
+                if (exportProfile.ExportTemplate.FilesExportOption == "Single Default")
+                {
+                    // If the file is a single default
+                    if (file.SingleDefault)
+                    {
+                        // If language is ! of selected langauges
+                        if (!fileLangIsSelected)
+                        {
+                            // If a file in equivalent to single default exists in each of the selected languages, ignore this file
+                            if (da.fileEquivalentToSingleDefaultExists(exportProfile.ExportTemplate.LangCodesSelected))
+                                continue;
+                        }
+                    }
+                    // If file is ! a single default 
+                    else
+                    {
+                        // If the file's language is not selected, ignore it
+                        if (!fileLangIsSelected)
+                            continue;
+                            
+                        // if file sequence is not same as the single default file, ignore it
+                        if (!da.fileSequenceSameAsSingleDefault(fileSequence))
+                            continue;
+                    }
+                }
+                
+                // If the language is not among those selected, and is not english or empty, ignore it
+                if (!fileLangIsSelected && fileLanguage != "en" && fileLanguage != "")
+                    continue;
+                
+                // If the language is not selected or it is english, look for equivalent files
+                if (!fileLangIsSelected && fileLanguage != "")
+                {
+                    if (!fileLangIsSelected || fileLanguage == "en")
+                    {
+                        if (da.eqivalentFileExistsforEachSelectedLang(fileSequence, exportProfile.ExportTemplate.LangCodesSelected))
+                            continue;
+                    }
+                }
+                
+                // Export the file associated to the DA and create the MRN_ExportedFile item in the ExportLog
+                string exportedPath = "";
+        
+                try 
+                {
+        //Update for exporting ETIM Digital Asset Selection   - Moses 11/14/17
+                    if (daCnt == 0 || file.Item.getProperty("mimetype","") != "image/jpeg")
+                        exportedPath = file.exportFile(exportLogItem.getID(),exportProfile, exportedFileIds);
+                }
+                //if (exportedPath == "")
+                 //   continue;
+                catch (Exception e)
+    	        {
+    	            errorList += "Error exporting file: " + file.Name + " with error message: " + e.Message + "<br>";
+    	            continue;
+    	        }
+          
+                // Write the xml output
+                if (type == "XML")
+                {
+        //Update for ETIM Digital Asset Selection   - Moses 11/09/17
+                    if (etimExport)
+                    {
+                        if (file.Item.getProperty("mimetype","") == "image/jpeg")
+                        {
+                                
+                            if (daCnt == 0)
+                            {
+                                writeDigitalAssetXMLoutput(file.Item.getProperty("mimetype",""), exportedPath, da.Name, file.MimeDescription, file.MimePurpose, file.Language);
+                                daCnt = daCnt + 1;
+                            }
+                        }
+                        else
+                        {
+                        writeDigitalAssetXMLoutput(file.Item.getProperty("mimetype",""), exportedPath, da.Name, file.MimeDescription, file.MimePurpose, file.Language);
+                        }
+                    }
+                    else
+                    {
+                    writeDigitalAssetXMLoutput(file.Item.getProperty("mimetype",""), exportedPath, da.Name, file.MimeDescription, file.MimePurpose, file.Language);
+                    }
+        //End Update for ETIM Digital Asset Selection   - Moses 11/09/17
+                }
+                else
+                {
+                    // For the DA Type, append the name of the file to the filenames value
+                    string oldValue = daFullFileNames[file.MimeDescription];
+                    string newValue = oldValue;
+                    if (newValue != "")
+                        newValue = newValue + fileNamesSeparator;
+                    newValue = newValue + exportedPath;
+                    daFullFileNames[file.MimeDescription] = newValue;
+                    
+                    oldValue = daShortFileNames[file.MimeDescription];
+                    newValue = oldValue;
+                    if (newValue != "")
+                        newValue = newValue + fileNamesSeparator;
+                    newValue = newValue + file.Name;
+                    daShortFileNames[file.MimeDescription] = newValue;
+                }
+            }
+    	}
+    	
+    	if (errorList != "")
+    	{
+    	    throw new DigitalAssetFileExportException(errorList);
+    	}
+	}
+	
+	// Writes the XML output for Digital Assets
+	private void writeDigitalAssetXMLoutput(string mimeType, string fileName, string daName, string description, string purpose, string fileLang)
+	{
+        xmlWriter.WriteStartElement("MIME_INFO");
+            xmlWriter.WriteStartElement("MIME");
+                WriteXMLBlock("MIME_TYPE",mimeType);
+        //Update for XML Digital Asset Source Language   - Moses 12/13/18
+                if (fileLang != "")
+                    WriteXMLBlock("MIME_SOURCE_" + fileLang.ToUpper(), fileName);
+                else
+                    WriteXMLBlock("MIME_SOURCE", fileName);
+        //End Update for XML Digital Asset Source Language   - Moses 12/13/18
+                WriteXMLBlock("MIME_ALT", daName);
+                WriteXMLBlock("MIME_DESCR",description);
+                WriteXMLBlock("MIME_PURPOSE", purpose);
+            xmlWriter.WriteEndElement();  
+        xmlWriter.WriteEndElement();  
+	}
+	
+	// Write digitalAsset output for the 
+	
+	// Adds the keyword values to the output
+	private void writeKeywordValues()
+	{
+	    // Get the keywords from the MSL
+        List<Keyword> mslKeywords = curExport.MrnItem.getParentMSL().getKeywords();
+        
+        // Cycle each language
+        foreach (string langCode in exportProfile.ExportTemplate.LangCodesSelected)
+        {
+            string totalValue = "";
+            foreach (Keyword keyword in mslKeywords)
+            {
+                string value = keyword.getItem().getProperty("mrn_"+langCode,"");
+                    
+                // If xml, write each value to the output 
+                if (type == "XML")   
+                {    
+                    if (value != "")
+                        addOutputValue(value,"KEYWORD_" + langCode.ToUpper());
+                }
+                else  // If Excel, add the values and then write once
+                {
+                    if (value != "")
+                    {
+                        if (totalValue != "")
+                            totalValue += ";";
+                        totalValue += value;
+                    }
+                }
+            }
+            
+            // Write to ouput (even if it's empty, so that the separater gets added)
+            if (type != "XML")
+                addOutputValue(totalValue);
+        }
+ 
+	}
+
+	// Method to write the output to the files and close out the streams
+	public void close()
+	{
+	    string fileName = exportProfile.ExportFileName;
+	    
+	    if(type == "XML")
+	    {
+    	        xmlWriter.WriteEndElement();
+                xmlWriter.Flush();
+                xmlWriter.Close();
+
+                string xmlString = stringBuilder.ToString();
+            
+                string styleSheet = exportProfile.ExportTemplate.StyleSheet;
+            
+            	if (styleSheet != "" && styleSheet != null)
+            	{
+            		Item xmlTransform = inn.newItem();
+            		xmlTransform.loadAML(xmlString);
+            		xmlString = xmlTransform.applyStylesheet(styleSheet,"text");
+            	}
+            	XmlDocument doc = new XmlDocument();
+        	    doc.LoadXml(xmlString);
+        	    
+        	    try{
+        	        xmlWriter = XmlWriter.Create(fileName, settings);
+        	    }
+        	    catch (Exception ex) {
+    	            throw new Exception("Error creating XML file. " + ex.Message);
+                }
+        	    doc.Save(xmlWriter);
+        	    xmlWriter.Flush();
+                xmlWriter.Close();
+	    }
+        else if (type == "CSV")
+        {
+            try
+            {
+            	using (StreamWriter outfile = new StreamWriter(fileName))
+            	{
+                        outfile.Write(exportText.ToString());
+                        outfile.Close();
+            	}
+            }
+            catch (Exception ex) 
+            {
+	            throw new Exception("Error creating CSV file. " + ex.Message);
+            }
+	    }
+	    else
+	    {
+    	    if (excFile != null)
+    	        excFile.close();
+	    }
+	}
+	
+	// Overeloaded method to add value to output stream
+	private void addOutputValue(string value, string propertyName = "", EtimClass etimClass = null, string etimUnitCode = "", string uomValue = "")
+	{
+	    // If the export type is ETIM, replace the value with the ETIM code, if found
+	    if (type == "XML")
+	    {
+	        // If this is an ETIM export, different output
+            if (etimExport)
+            {   
+                // If this are no ETIM classes assigned to this property (such as in Default properties?)
+                if (etimClass == null)
+                {
+                    xmlWriter.WriteStartElement(propertyName);
+                        xmlWriter.WriteString(value);
+                }
+                else
+                {   
+                    
+                    // if the value is empty, and it's not logical, return without writing
+                    if (value =="" && etimClass.ValueType != "L")
+                        return;
+                    
+                    string fValue = "";
+                    
+                    // Output depends on the type of value A/N/L
+                    if (etimClass.ValueType == "N")
+                        fValue = value;                             // If the property type is Numerical, output the value as is
+                    else if (etimClass.ValueType == "A")
+                        fValue = getEtimCodeForValue(value);        // If the property type is Alpha, get the ETIM Code for the value
+                    else if (etimClass.ValueType == "L")            // If the property type is Logical, convert to true/false
+                    {
+                        fValue = (value == "0" || value == "") ? "false" : "true";
+                    }
+                    else if (etimClass.ValueType == "C")            // If value type is Conditional, check the condition 
+                    {
+                        fValue = (etimClass.hasConditionalValue(value)) ? "true" : "false";
+                    }
+                    else
+                        fValue = value;
+                    
+                    // Wrie the XML output
+                    xmlWriter.WriteStartElement("FEATURE");
+                    WriteXMLBlock("FNAME", etimClass.FeatureCode);//, "PIM_name", propertyName);
+                    WriteXMLBlock("FVALUE", fValue);//, "PIM_value", value);
+                        
+                    // If the value code is "Other", write the actual value
+                    if (etimClass.ValueType == "A" && fValue == "EV000154")
+                        WriteXMLBlock("FVALUE_DETAILS", value);
+         
+                    // If there's an etim unit code, write that
+                    if (etimClass.ValueType != "L" && etimUnitCode != "")
+                        WriteXMLBlock("FUNIT", etimUnitCode);//, "PIM_unit", uomValue);
+                }
+                
+                xmlWriter.WriteEndElement();    
+            }
+            else
+            {
+                // If value is empty skip it, if it's not an ETIM extract only
+	            if (value == "")
+	                return;
+                WriteXMLBlock(propertyName, value);
+            }
+                
+
+	    }
+	    else if (type == "CSV")
+	    {
+	        // If there's a doublequote in the text, add a doublequote to it
+            value = value.Replace("\"", "\"\"");
+            
+            // Add doublequotes around the value, this takes care of any commas in the value
+            value = "\"" + value + "\"";
+             
+            exportText.Append(value);
+            exportText.Append(separator);
+	    }
+	    else if (type == "Excel")
+            excFile.append(value);
+	    
+	}
+
+	// Overeloaded method to add value to output stream for range type properties
+	private void addOutputValue(string minValue, string maxValue, string minPropertyName, string maxPropertyName, EtimClass etimClass = null, string etimUnitCode = "", string uomValue = "")
+	{
+	    // If it's not XML and ETIM, return
+	    if (type != "XML")
+	        return;
+	  
+        // If this are no ETIM classes assigned to this property (such as in Default properties?)
+        if (etimClass == null || !etimExport)
+        {
+            xmlWriter.WriteStartElement(minPropertyName);
+                xmlWriter.WriteString(minValue);
+            xmlWriter.WriteEndElement(); 
+             
+            xmlWriter.WriteStartElement(maxPropertyName);
+                xmlWriter.WriteString(maxValue);
+            xmlWriter.WriteEndElement(); 
+            
+            return;
+        }
+        
+        // if the value is empty, and it's not logical, return without writing
+        if ((minValue =="" || maxValue == "") && etimClass.ValueType != "L")
+            return;
+        
+        string fValueMin = "";
+        string fValueMax = "";
+        
+        // Output depends on the type of value A/N/L
+        if (etimClass.ValueType == "N")
+        {
+            fValueMin = minValue;                             // If the property type is Numerical, output the value as is
+            fValueMax = maxValue;  
+        }
+        else if (etimClass.ValueType == "A")
+        {
+            fValueMin = getEtimCodeForValue(minValue);        // If the property type is Alpha, get the ETIM Code for the value
+            fValueMax = getEtimCodeForValue(maxValue);
+        }
+        else
+        {
+            fValueMin = minValue;
+            fValueMax = maxValue;
+        }
+        
+        // Wrie the XML output
+        xmlWriter.WriteStartElement("FEATURE");
+        WriteXMLBlock("FNAME", etimClass.FeatureCode);//, "PIM_name", propertyName);
+        WriteXMLBlock("FVALUE", fValueMin);//, "PIM_value", value);
+        WriteXMLBlock("FVALUE", fValueMax);//, "PIM_value", value);  
+        
+        // If the value code is "Other", write the actual value
+        if (etimClass.ValueType == "A" && fValueMin == "EV000154")
+            WriteXMLBlock("FVALUE_DETAILS", minValue);
+
+        if (etimClass.ValueType == "A" && fValueMax == "EV000154")
+            WriteXMLBlock("FVALUE_DETAILS", maxValue);
+            
+        // If there's an etim unit code, write that
+        if (etimClass.ValueType != "L" && etimUnitCode != "")
+            WriteXMLBlock("FUNIT", etimUnitCode);//, "PIM_unit", uomValue);
+   
+        xmlWriter.WriteEndElement();    
+	    
+	}
+	
+	private string getEtimCodeForValue(string key)
+    {
+        string value = getDictionaryValue(valueToEtimMappings, key);
+        
+        if (value == null)
+            value = "EV000154";  // ETIM Code for "Other"
+        return value;
+    }
+    
+    private string getEtimPackingUnitCode(string key)
+    {
+        string value = getDictionaryValue(etimPackingUnitCodes, key);
+        
+        if (value == null)
+            value = key;
+        return value;
+    }
+    
+    // string getEnValueForEtimCode(string key)
+    // {
+    //     return getDictionaryValue(etimToEngMappings, key);
+    // }
+    
+    // string getEtimCodeForUnit(string key)
+    // {
+    //     return getDictionaryValue(unitToEtimMappings, key);
+    // }
+    
+    private string getDictionaryValue(Dictionary<string,string> dictionary, string key)
+    {
+        string value;
+         
+        dictionary.TryGetValue(key, out value);
+        
+        return value;
+    }
+    
+    public ExportItem CurExport { set {curExport = value; }}
+}
+
+// Class to build Excel File
+public class ExcelFile
+{
+    SpreadsheetDocument spreadsheetDocument;
+    OpenXMLSpreadsheet.SheetData sheetData;
+	uint rowId;
+    
+    public ExcelFile(string path)
+    {
+        try
+        {
+            spreadsheetDocument = SpreadsheetDocument.Create(path, SpreadsheetDocumentType.Workbook);
+        }
+        catch (Exception ex) 
+        {
+	            throw new Exception("Error creating Excel file. " + ex.Message);
+        }
+        
+        // Add a WorkbookPart to the document.
+        WorkbookPart workbookpart = spreadsheetDocument.AddWorkbookPart();
+        workbookpart.Workbook = new OpenXMLSpreadsheet.Workbook();
+        
+        // Add a WorksheetPart to the WorkbookPart.
+        WorksheetPart worksheetPart = workbookpart.AddNewPart<WorksheetPart>();
+        worksheetPart.Worksheet = new OpenXMLSpreadsheet.Worksheet(new OpenXMLSpreadsheet.SheetData());
+
+        // Add Sheets to the Workbook.
+        OpenXMLSpreadsheet.Sheets sheets = spreadsheetDocument.WorkbookPart.Workbook.AppendChild<OpenXMLSpreadsheet.Sheets>(new OpenXMLSpreadsheet.Sheets());
+        
+        // Append a new worksheet and associate it with the workbook.
+        OpenXMLSpreadsheet.Sheet sheet = new OpenXMLSpreadsheet.Sheet() 
+        { 
+            Id = spreadsheetDocument.WorkbookPart.GetIdOfPart(worksheetPart), 
+            SheetId = 1, 
+            Name = "export_data" 
+        };
+        sheets.Append(sheet);
+
+	    rowId = 1;
+
+        OpenXMLSpreadsheet.Worksheet currentWorkSheet = spreadsheetDocument.WorkbookPart.WorksheetParts.First().Worksheet;
+		sheetData = (OpenXMLSpreadsheet.SheetData)currentWorkSheet.Where(x => x.LocalName == "sheetData").First();
+        
+    }
+    ~ExcelFile()
+    {
+        //close();
+    }
+    public void close()
+    {
+        if(spreadsheetDocument != null)
+        {
+            //workbookpart.Workbook.Save();
+            spreadsheetDocument.Close();
+        }
+    }
+    public void append(string text)
+    {
+        OpenXMLSpreadsheet.Row row = GetRow(sheetData, rowId, true);
+		OpenXMLSpreadsheet.Cell cell = new OpenXMLSpreadsheet.Cell();
+		cell.DataType = OpenXMLSpreadsheet.CellValues.String;
+        cell.CellValue = new OpenXMLSpreadsheet.CellValue(text);
+            
+        row.Append(cell);
+    }
+    
+    public void incrementRow()
+    {
+        rowId++;
+    }
+ 
+	
+	// Not used, but is a useful method to keep
+    private string GetColumnName(uint columnId)
+	{
+		if (columnId < 1)
+		{
+			throw new Exception("The column # can't be less then 1.");
+		}
+		columnId--;
+		if (columnId >= 0 && columnId < 26)
+			return ((char)('A' + columnId)).ToString();
+		else if (columnId > 25)
+			return GetColumnName(columnId / 26) + GetColumnName(columnId % 26 + 1);
+		else
+			throw new Exception("Invalid Column #" + (columnId + 1).ToString());
+	}
+
+	
+    internal OpenXMLSpreadsheet.Row GetRow(OpenXMLSpreadsheet.SheetData worksheet, uint rowIndex, bool autoCreate)
+	{
+		if (rowIndex < 1)
+		{
+			throw new Exception("The row # can't be less then 1.");
+		}
+
+		OpenXMLSpreadsheet.Row foundRow = worksheet.Elements<OpenXMLSpreadsheet.Row>().Where(r => r.RowIndex == rowIndex).FirstOrDefault();
+
+		if (foundRow == null && autoCreate)
+		{
+			foundRow = new DocumentFormat.OpenXml.Spreadsheet.Row();
+			foundRow.RowIndex = rowIndex;
+			worksheet.AppendChild(foundRow);
+		}
+		return foundRow;
+	}
+}
+
+// Class to manage database languages. Language codes from here are added to multilingual property titles and to MRN_Keyword titles.
+// The codes are also used to build property names for MRN_Keyword item (MRN_Keyword item definition  should use the standard language codes in property names )
+public class Languages
+{
+    Dictionary <string,string> languages = new Dictionary<string,string>();
+    
+	private List<string> _languageCodes;  // Language codes found in the database (used by the multilingual properties)
+	// Constructor to build the members
+	public Languages(Innovator inn)
+	{
+		// Build lanugageCodes list
+		_languageCodes = new List<string>();
+
+		Item items = inn.newItem("Language", "get");
+		try
+		{
+			items = items.apply();
+		}
+		catch (Exception ex)
+		{
+			throw new Exception("Error getting Languages. " + ex.Message);
+		}
+
+		// Add the codes to the list
+		int count = items.getItemCount();
+
+		for (int ii = 0; ii < count; ii++)
+		{
+		    string code = items.getItemByIndex(ii).getProperty("code");
+		    string name = items.getItemByIndex(ii).getProperty("name");
+		    
+			_languageCodes.Add(items.getItemByIndex(ii).getProperty("code"));
+			languages.Add(name,code);
+		}
+
+	}
+
+	public List<string> getLanguageCodes() { return _languageCodes; }
+	public bool IsLangCode(string test)
+	{
+		return _languageCodes.Contains(test);
+	}
+	
+	public string getCode(string name)
+	{
+	    string code;
+	    
+	    try{
+	         code = languages[name];   
+	    }
+	    
+	    catch (KeyNotFoundException)
+        {
+            throw new Exception("Language code not found for: " + name);
+        }
+        
+        return code;
+	}
+}
+////    End of class Languages  /////
+
+// Class to provide unit conversions
+public class UnitConversion
+{
+    string fromUnit;
+    string toUnit;
+    double multiplier;
+    List <UnitConversion> unitConversionsList = new List <UnitConversion>();
+    string listName = "MRN_Unit_Multipliers";
+    
+    public UnitConversion() {}
+    
+    private UnitConversion(string from, string to, double m)
+    {
+        fromUnit = from;
+        toUnit = to;
+        multiplier = m;
+    }
+    
+    public void buildList(Innovator inn)
+    {
+
+        Item allItems;
+        int allItemsCount;
+        string delim = "-->";
+        
+        // Get the list values
+        string AMLQuery = "<AML><Item type=\"List\" action=\"get\">" + 
+                            "<name>" + listName + "</name>" +
+                            "<Relationships>" + 
+                                "<Item type=\"Value\" action=\"get\" select=\"label, value\"></Item>" +
+                            "</Relationships></Item></AML>";
+
+        // Run Export AML Query
+        
+	    allItems = inn.newItem();
+	    allItems.loadAML(AMLQuery);
+	    allItems = allItems.apply();
+	    allItemsCount = allItems.getItemCount();
+        Item item = allItems.getItemByIndex(0);
+            
+        Item relationships = item.getRelationships("Value");
+        for (int ii = 0; ii < relationships.getItemCount(); ii++) 
+        {
+            Item valueItem = relationships.getItemByIndex(ii);
+            string label = valueItem.getProperty("label","");
+            string value = valueItem.getProperty("value","");
+            int index = label.IndexOf(delim);
+            if (index == -1)
+                throw new Exception ("Malformed label in list: " + listName);
+            string unitFrom = label.Substring(0,index-1).Trim();
+            string unitTo = label.Substring(index + 4).Trim();
+            double multiplier = 1;
+            try 
+            {
+                multiplier = Convert.ToDouble(value);
+            }
+            catch (Exception)
+            {
+                throw new Exception("Unable to convert the Value of \"" + value + "\" to double in List \"" + listName + "\"");
+            }
+            if (multiplier == 1)
+                continue;
+            UnitConversion unitconversion = new UnitConversion(unitFrom, unitTo, multiplier);
+            unitConversionsList.Add(unitconversion);
+        }
+    }
+    
+    // Returns the unit multiplier fromUnit x multiplier = toUnit
+    public double getMultiplier(string fromUnit, string toUnit)
+    {
+        if (fromUnit == toUnit)
+            return 1;
+            
+        foreach (UnitConversion uc in unitConversionsList)
+        {
+            if (uc.fromUnit == fromUnit && uc.toUnit == toUnit)
+                return uc.multiplier;
+        }
+        
+        throw new Exception("No conversion found from From-Unit: \"" + fromUnit + "\"  to  To-Unit:\"" + toUnit + "\"  in List \"" + listName + "\"");
+    }
+    
+}
+    
+// // Class to hold MRN Property item
+// Class to hold MRN Property item
+public class MRNProperty{
+    
+    Item item;
+    MRNUoMProperty uom = null;
+    List<Property> propertiesList;
+    string level;
+    bool isGroup;
+    string label = "";
+    string etimDefault = "";
+    //string etimClasses = "";
+    List<MRNProperty> mrnPropertiesList;
+    bool extractLabel;
+//update moses 20180723 - added new property mrn_is_multi_value
+    bool isMultiValue;
+    List<EtimClass> etimClassList;
+    bool isFakeML = false;
+    List<string> fakeMultilingualProperties;
+    bool etimRangeProperty;
+    Innovator inn;
+    
+    // Constructor to create the single instance used everywhere
+    public MRNProperty(Innovator innovator)
+	{
+	    inn = innovator;
+		buildList();
+	}
+    
+    // Constructor to create individual MRNProperty items
+    private MRNProperty(Item itm, List<string> fakeMLPropertiesList)
+    {
+        item = itm;
+        propertiesList = new List<Property>();
+        
+        Item mrnUomPropertyItem = item.getPropertyItem("mrn_uom_property");
+        if (mrnUomPropertyItem != null)
+            uom = new MRNUoMProperty(mrnUomPropertyItem);
+        
+        level = item.getProperty("mrn_level","");
+        label = item.getProperty("mrn_label","").Trim();
+        etimDefault = item.getProperty("mrn_etim","");
+        extractLabel = (item.getProperty("mrn_extract_labels","") == "1") ? true : false;
+        isGroup = (item.getProperty("mrn_is_group","") == "1") ? true : false;
+        isFakeML = (item.getProperty("mrn_fake_ml_property","") == "1") ? true : false;
+        etimRangeProperty = item.getProperty("mrn_etim_range_property") == "1" ? true : false;
+//update moses 20180723 - added new property mrn_is_multi_value
+        isMultiValue = (item.getProperty("mrn_is_multi_value","") == "1") ? true : false;
+        
+        if (isGroup)
+        {
+            // Find all the properties
+            Item relationships = item.getRelationships("MRN_Property_Property");
+            for (int ii = 0; ii < relationships.getItemCount(); ii++) 
+            {
+                Item relationshipItem = relationships.getItemByIndex(ii);
+                Item propertyItem = relationshipItem.getRelatedItem();
+                if (propertyItem == null)
+                    throw new Exception("Propery Item is null for MRN Propery Item:" + label);
+                Property property = new Property(propertyItem);
+                propertiesList.Add(property);
+                
+            }
+        }
+        else if (etimRangeProperty)
+        {
+            Item propertyItem = item.getPropertyItem("mrn_range_property_min");
+            if (propertyItem == null)
+                    throw new Exception("Min. Value Propery Item is null for MRN_Propery: " + label);
+            Property property = new Property(propertyItem);
+            propertiesList.Add(property);
+            propertyItem = item.getPropertyItem("mrn_range_property_max");
+            if (propertyItem == null)
+                    throw new Exception("Max. Value Propery Item is null for MRN_Propery: " + label);
+            property = new Property(propertyItem);
+            propertiesList.Add(property);
+        }
+        else
+        {
+            Item propertyItem = item.getPropertyItem("mrn_item_property");
+            if(propertyItem == null)
+              throw new Exception("MRN Property \"" + label +  "\" does not have an associated MRN Item Property ");
+            Property property = new Property(propertyItem);
+            propertiesList.Add(property);
+            if (isFakeML)
+                fakeMLPropertiesList.Add(property.Name);
+        }
+        
+        // Find all the etim classes
+        Item etimRelationships = item.getRelationships("MRN_Property_ETIM_Class");
+        etimClassList = new List<EtimClass>();
+        for (int ii = 0; ii < etimRelationships.getItemCount(); ii++) 
+        {
+            Item relationshipItem = etimRelationships.getItemByIndex(ii);
+            string classCode = relationshipItem.getProperty("mrn_class_code","");
+            string featureCode = relationshipItem.getProperty("mrn_feature_code","");
+            string valueType = relationshipItem.getProperty("mrn_type","");
+            string condition = relationshipItem.getProperty("mrn_condition","");
+            Item property = relationshipItem.getPropertyItem("mrn_property");
+            etimClassList.Add(new EtimClass(classCode, featureCode, valueType, condition, property));
+        }
+    }
+    
+    // Method to build a list of MRNProperties
+    public void buildList()
+    {
+        fakeMultilingualProperties = new List<string>();
+
+        // Get all the MRN_Property items
+        //moses 20180723 - add new property mrn_is_multi_value to aml select statement
+        
+        string AMLquery = "<Item type=\"MRN_Property\"  select=\"mrn_item_property, mrn_uom_property, mrn_is_group, mrn_etim_range_property,  mrn_range_property_min, mrn_range_property_max,mrn_label, mrn_level, mrn_families, mrn_form_element, classification, mrn_etim, mrn_extract_labels, mrn_is_multi_value, mrn_fake_ml_property \" action=\"get\" orderBy=\"mrn_label\">" +
+                        "<classification condition= \"is null\"></classification>" +
+                        "<mrn_item_property>" + 
+                          "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                        "</mrn_item_property>" +
+                        "<mrn_range_property_min>" + 
+                             "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                        "</mrn_range_property_min>" +
+                        "<mrn_range_property_max>" + 
+                          "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                        "</mrn_range_property_max>" +
+                        "<mrn_uom_property>" + 
+                          "<Item type=\"MRN_Property\" select=\"mrn_label, name, mrn_item_property, mrn_si_unit, mrn_us_unit, mrn_etim_unit\" action=\"get\">" +
+                            "<mrn_item_property>" + 
+                             "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" +
+                            "</mrn_item_property>" +
+                          "</Item>" +
+                        "</mrn_uom_property>" + 
+                        "<Relationships>";
+        AMLquery += "<Item type=\"MRN_Property_Property\" select=\"related_id\" action=\"get\"></Item>";
+        AMLquery += "<Item type=\"MRN_Property_ETIM_Class\" select=\"mrn_class_code,mrn_feature_code,mrn_type,mrn_condition, mrn_property\" action=\"get\">" + 
+                        "<mrn_property><Item type=\"Property\" select=\"name\" action=\"get\"></Item></mrn_property>" + 
+                    "</Item>";
+        AMLquery += "</Relationships></Item>";
+
+                    
+        Item resultItems = inn.newItem();
+        resultItems.loadAML(AMLquery);
+        resultItems = resultItems.apply();
+        
+        // Build list of MRN_Property items from the results returned
+        mrnPropertiesList = new List<MRNProperty>();
+        for (var i=0;i < resultItems.getItemCount(); i++) 
+        {
+            Item resultItem = resultItems.getItemByIndex(i);
+        
+            // Create the MRNProperty item
+            MRNProperty mrnProperty = new MRNProperty(resultItem, fakeMultilingualProperties);
+            mrnPropertiesList.Add(mrnProperty);
+        }
+        
+        return;
+    }
+
+    // Returns the MRNProperty associated with the given property name
+    public MRNProperty findFromPropertyName(string propertyName)
+    {
+        for (int ii = 0; ii < mrnPropertiesList.Count; ii++)
+        {
+            for (int jj = 0; jj < mrnPropertiesList[ii].propertiesList.Count; jj++)
+            {
+                if (mrnPropertiesList[ii].propertiesList[jj].Name == propertyName)
+                    return mrnPropertiesList[ii];
+            }
+        }
+        
+        return null;
+    }
+
+    // Returns the MRNProperty associated with the given MRN_Property Item
+    public MRNProperty findFromItem(Item mrnPropertyItem)
+    {
+        if (mrnPropertyItem == null)
+            return null;
+
+        string mrnPropertyItemID = mrnPropertyItem.getID();
+        
+        for (int ii = 0; ii < mrnPropertiesList.Count; ii++)
+        {
+            if (mrnPropertiesList[ii].Item.getID() == mrnPropertyItemID)
+                return mrnPropertiesList[ii];
+        }
+        
+        return null;
+    }
+    
+    // Returns etimclasses that have the given property associated with them
+    public List<EtimClass> getEtimClassList(string propertyName)
+    {
+        List<EtimClass> list = new List<EtimClass>();
+        
+        // Cycle the etimclasslist and return the ones that match the property name
+        foreach (EtimClass etimClass in etimClassList)
+        {
+            Item property = etimClass.ApplicableProperty;
+            
+            // If there is no property associated, then it applies to all
+            if (property == null)
+            {
+                list.Add(etimClass);
+                continue;
+            }
+                
+            string pName = property.getProperty("name");
+            
+            if (pName == propertyName)
+                list.Add(etimClass);
+        }
+        
+        return list;
+    }
+    
+    
+    
+    public MRNUoMProperty UomProperty { get {return uom;}}
+    public string Level { get { return level; }}
+    public List<Property> PropertiesList { get {return propertiesList; }}
+    public string EtimDefault { get {return etimDefault; } }
+    public bool ExtractLabel { get { return extractLabel;} }
+    public bool IsGroup { get { return isGroup;} }
+    public List<MRNProperty> MRNPropertiesList { get { return mrnPropertiesList; } }
+    public List<EtimClass> EtimClassList { get { return etimClassList; }}
+    public bool IsFakeML { get { return isFakeML; }}
+    public bool EtimRangeProperty { get { return etimRangeProperty; }}
+    public Item Item { get { return item; } } 
+    public string Label { get { return label; } } 
+    public bool IsMultiValue { get { return isMultiValue; }}
+}
+
+// Class to hold MRNUOMProperty Item
+public class MRNUoMProperty
+{
+    Item item;
+    Property property = null;
+    string siUnit = "";
+    string usUnit = "";
+    string value = "";
+    const string US_LOCALE = "en-US";
+    string etimUnit = "";
+    //string name;
+    
+    // Constructor
+    public MRNUoMProperty(Item itm)
+    {
+        
+        item = itm;
+        
+        siUnit = item.getProperty("mrn_si_unit");
+        usUnit = item.getProperty("mrn_us_unit");;
+        etimUnit = item.getProperty("mrn_etim_unit");
+        // unitMultiplier = System.Convert.ToDecimal(item.getProperty("mrn_unit_multiplier"));
+        Item propertyItem = item.getPropertyItem("mrn_item_property");
+        if (propertyItem != null)
+            property = new Property(propertyItem);
+        //etimCode = item.getProperty("mrn_etim_code","");
+        //etimConversion = item.getProperty("mrn_etim_conversion","");
+    }
+    
+    // Function to return the uom property value
+    public string getNewValue(string locale)
+    {
+        if(locale == US_LOCALE)
+            return usUnit;
+        else
+            return siUnit;
+    }
+    
+    public string SIUnit    {get {return siUnit;}}
+    public string USUnit    {get {return usUnit;}}
+    public string Value     {get {return value; }}
+    public Property Property {get {return property; }}
+    public string EtimUnit { get { return etimUnit; }}
+    //public string PropertyName { get { return name; }}
+}
+
+// Class to hold Property Items
+public class Property
+{
+    Item item;
+    string name;
+    string label;
+    
+    public Property(Item itm)
+    {
+        item = itm;
+        name = item.getProperty("name","");
+        label = item.getProperty("label","");
+    }
+    
+    public string Name  { get{return name;} }
+    public string Label { get{return label;} }
+    
+}
+
+
+// Class to hold various lists
+public class MRNLists
+{
+    MRNListItem mimeDescriptionList;
+    MRNListItem mimePurposeList;
+    
+    public MRNLists(Innovator inn)
+    {
+        mimeDescriptionList = new MRNListItem("MRN_MIME_Descriptions", inn);
+        mimePurposeList = new MRNListItem("MRN_MIME_Purpose", inn);
+    }
+    
+    public MRNListItem MimeDescriptionList { get { return mimeDescriptionList; }}
+    public MRNListItem MimePurposeList { get { return mimePurposeList; }}
+}
+
+// Class to mmmic a simple list
+public class MRNListItem
+{   //string name;
+    Dictionary<string, string> valueLabelDictionary = new Dictionary<string, string>();
+    
+    // Constructor
+    public MRNListItem(string listName, Innovator inn)
+    {
+        // Get the list from list name
+        
+        // Build the AMLQuery
+        string AMLQuery = "<AML><Item type=\"List\" action=\"get\">" + 
+                            "<name>" + listName + "</name>" +
+                            "<Relationships>" + 
+                                "<Item type=\"Value\" action=\"get\" select=\"label, value\"></Item>" +
+                            "</Relationships></Item></AML>";
+
+        // Run Export AML Query
+	    Item allItems = inn.newItem();
+	    allItems.loadAML(AMLQuery);
+	    allItems = allItems.apply();
+	    int allItemsCount = allItems.getItemCount();
+	    
+        Item item = allItems.getItemByIndex(0);
+            
+        Item relationships = item.getRelationships("Value");
+        for (int ii = 0; ii < relationships.getItemCount(); ii++) 
+        {
+            Item valueItem = relationships.getItemByIndex(ii);
+            string label = valueItem.getProperty("label","");
+            string value = valueItem.getProperty("value","");
+            valueLabelDictionary.Add(value,label);
+        }
+    }
+    
+    // Returns lists
+    public Dictionary<string,string> ValueLabelDictonary { get { return valueLabelDictionary; }}
+}
+
+
+// Exception thrown when no matching multiplier found for units conversion
+public class NoMultiplierException: Exception
+{
+   public NoMultiplierException(string message): base(message)
+   {
+   }
+}
+
+// Exception thrown when there's an error with file export
+public class DigitalAssetFileExportException: Exception
+{
+   public DigitalAssetFileExportException(string message): base(message)
+   {
+   }
+}
+
+// }
+// Class to manage a log file. 
+// Need to add functinality to this
+public class LogFile
+{
+    bool logIt;
+    
+    // Constructor to build the members
+    public LogFile(bool logging) 
+    {                
+        logIt = logging;
+    }
+    
+    // Build the log file
+    public void build(string name)
+    {
+        
+    }
+
+    ////    End of class LogFile  /////]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_GenerateItemExport</name>
+ </Item>
+</AML>

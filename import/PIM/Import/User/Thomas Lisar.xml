@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="19F18CD7F289412CBA55EB76D4EEE148" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>thomas.lisar@us.mersen.com</email>
+  <login_name>tlisar</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="tlisar" type="Identity">966FEA52E0584C7581CAC0F0B5412924</owned_by_id>
+  <first_name>Thomas</first_name>
+  <last_name>Lisar</last_name>
+  <Relationships>
+   <Item type="Alias" id="37CB0940397C4CB68C4D3DE2DDB8BBA7" action="add">
+    <from_date>2017-10-24T08:21:31</from_date>
+    <related_id keyed_name="tlisar" type="Identity">966FEA52E0584C7581CAC0F0B5412924</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Thomas Lisar" type="User">19F18CD7F289412CBA55EB76D4EEE148</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

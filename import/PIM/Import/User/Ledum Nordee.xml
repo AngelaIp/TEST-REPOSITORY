@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="249B9E9D2D2E459B83D7AFA516E3B08B" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>ledum.nordee@us.mersen.com</email>
+  <last_login_date>2016-06-21T15:13:32</last_login_date>
+  <login_name>lnordee</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id>F9874E3BACC1478F806B180184DD3C12</owned_by_id>
+  <working_directory>C:\temp\Aras</working_directory>
+  <first_name>Ledum</first_name>
+  <last_name>Nordee</last_name>
+  <Relationships>
+   <Item type="Alias" id="328B40A9A7884C77A9E38EBF43DD53AF" action="add">
+    <from_date>2016-04-19T15:40:42</from_date>
+    <related_id keyed_name="Ledum Nordee" type="Identity">E8F92B7EE64F4395BEB834DBF953B08A</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Ledum Nordee" type="User">249B9E9D2D2E459B83D7AFA516E3B08B</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

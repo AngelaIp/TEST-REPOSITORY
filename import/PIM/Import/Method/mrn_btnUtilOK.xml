@@ -1,0 +1,28 @@
+﻿<AML>
+ <Item type="Method" id="C9B6EC6555A54571B93FC058FAE73A31" action="add">
+  <comments>Return the string to the main form</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// The field on form MRN_Item_Utilization is called "mrn_utilization_category". We are getting that value to return.
+// The field on form MRN_Item_Breaking is called "MRN_OUTPUT". We are getting that value to return.
+// The field on form MRN_Item_I2T is called "MRN_OUTPUT". We are getting that value to return.
+
+var strCategory;
+
+if(document.all.MRN_OUTPUT != null)
+    strCategory = document.all.MRN_OUTPUT.value;
+if(document.all.mrn_utilization_category != null)
+    strCategory = document.all.mrn_utilization_category.value;
+    
+result = top.aras.newObject();
+result.strCategory = strCategory;
+//top.aras.AlertSuccess(result.strCategory);
+// top.aras.AlertSuccess(strCategory);
+parent.returnValue = result;
+
+parent.dialogArguments.dialog.close(strCategory);
+// window.close();
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_btnUtilOK</name>
+ </Item>
+</AML>

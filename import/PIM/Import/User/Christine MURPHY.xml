@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="User" id="E7208E4483314C56961DB1A5062063D3" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Christine.MURPHY@mersen.com</email>
+  <last_login_date>2019-05-13T10:52:57</last_login_date>
+  <login_name>CMU</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Christine MURPHY" type="Identity">B2BF468F36B9437BAF6B070B32F25332</owned_by_id>
+  <first_name>Christine</first_name>
+  <last_name>MURPHY</last_name>
+  <Relationships>
+   <Item type="Alias" id="ADCDFA873F92401EAA9B77474651C8EB" action="add">
+    <from_date>2018-07-30T12:29:23</from_date>
+    <related_id keyed_name="Christine MURPHY" type="Identity">B2BF468F36B9437BAF6B070B32F25332</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Christine MURPHY" type="User">E7208E4483314C56961DB1A5062063D3</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

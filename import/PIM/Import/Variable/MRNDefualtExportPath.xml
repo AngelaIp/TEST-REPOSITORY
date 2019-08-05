@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="Variable" id="78131E2BE8A24C9091C716DDFE31C9D5" action="add">
+  <value>\\arasprdapp1\arasextracts\</value>
+  <name>MRNDefualtExportPath</name>
+ </Item>
+</AML>

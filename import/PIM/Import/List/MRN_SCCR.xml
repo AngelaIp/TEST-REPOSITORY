@@ -1,0 +1,32 @@
+﻿<AML>
+ <Item type="List" id="6AF5048B80684939A58EC91A7F88AEE5" action="add">
+  <description>Short circuit current rating (SCCR)</description>
+  <name>MRN_SCCR</name>
+  <Relationships>
+   <Item type="Value" id="B335C4F55407423795837193783E4D56" action="add">
+    <label xml:lang="en">10kA</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_SCCR" type="List">6AF5048B80684939A58EC91A7F88AEE5</source_id>
+    <value>10kA</value>
+   </Item>
+   <Item type="Value" id="06A22F3309C24D9C82640391636E1402" action="add">
+    <label xml:lang="en">50kA</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_SCCR" type="List">6AF5048B80684939A58EC91A7F88AEE5</source_id>
+    <value>50kA</value>
+   </Item>
+   <Item type="Value" id="BB26FBC3A4874D13B5A2BFF5B24D9379" action="add">
+    <label xml:lang="en">100kA</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_SCCR" type="List">6AF5048B80684939A58EC91A7F88AEE5</source_id>
+    <value>100kA</value>
+   </Item>
+   <Item type="Value" id="98FC299A7FDE4393AB0DB4A9BCABFB04" action="add">
+    <label xml:lang="en">200kA</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_SCCR" type="List">6AF5048B80684939A58EC91A7F88AEE5</source_id>
+    <value>200kA</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

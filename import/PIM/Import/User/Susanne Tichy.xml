@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="DA5974A265A1472F8308F4B3852BC0D1" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>susanne.tichy@us.mersen.com</email>
+  <last_login_date>2016-04-22T10:13:14</last_login_date>
+  <login_name>sutichy</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Susanne Tichy" type="Identity">B295F66940624CA78BAFA9C1D0FB62ED</owned_by_id>
+  <working_directory>K:\Tichy Susanne\Mersen_2\Aras Innovator</working_directory>
+  <first_name>Susanne</first_name>
+  <last_name>Tichy</last_name>
+  <Relationships>
+   <Item type="Alias" id="68B7E657B5954D5A813442FECF21366D" action="add">
+    <from_date>2016-04-14T11:32:58</from_date>
+    <related_id keyed_name="Susanne Tichy" type="Identity">B295F66940624CA78BAFA9C1D0FB62ED</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Susanne Tichy" type="User">DA5974A265A1472F8308F4B3852BC0D1</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,63 @@
+﻿<AML>
+ <Item type="Method" id="D0AD434F80324CB8B4CD6D8BFCE2071A" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//
+// Name:            mrn_setDirectory
+// Description:     Sets the default folder names from variable MRNDefaultExportPath
+// Called by:       Forms: OnLoad and OnFocus/OnBlur Form_MRN_ExportProfile
+//                         OnFocus/OnBlur Form_MRN_ExportLog
+// Developed:       May 2016         Kamran Aftab    for Mersen
+//======================================================================
+//debugger;
+
+var inn = document.thisItem.getInnovator();
+
+// Get the server name
+//var http = location.protocol;
+//var slashes = http.concat("//");
+//var host = window.location.hostname;
+
+var type = document.thisItem.getType();
+
+// Set the root folder field, if empty
+var rootPath = document.thisItem.getProperty("mrn_server_root_directory","");
+
+// If called from the export folder field, change the root to the variable value
+if (this.name === "mrn_export_directory" || rootPath === "")
+{
+    // Get the variable
+    var rootPathVariable = inn.newItem("Variable", "get");
+    rootPathVariable.setProperty("name", "MRNDefualtExportPath");
+    rootPathVariable = rootPathVariable.apply();
+    if (!rootPathVariable.isError())
+	{
+        rootPath = rootPathVariable.getProperty("value");
+        document.thisItem.setProperty("mrn_server_root_directory", rootPath);
+        window.handleItemChange("mrn_server_root_directory", rootPath);
+	}
+}
+
+// Set the export folder field for ExportProfile only, if empty
+var currentValue = document.thisItem.getProperty("mrn_export_directory","");
+if (currentValue === "" && type === "MRN_ExportProfile")
+{
+    var myUserID = inn.getUserID();
+    var user = inn.newItem("User", "get");
+    user.setID(myUserID);
+    user = user.apply();
+    var me = user.getProperty("keyed_name");
+    
+    document.thisItem.setProperty("mrn_export_directory",  me + "\\");
+    window.handleItemChange("mrn_export_directory",  me + "\\");
+//     // hard coded default value: \\arasdevapp1\arasextracts
+ }
+
+// Set the full path field
+var fullPath = document.thisItem.getProperty("mrn_server_root_directory") + 
+                document.thisItem.getProperty("mrn_export_directory");
+document.thisItem.setProperty("mrn_export_full_path", fullPath);    
+window.handleItemChange("mrn_export_full_path", fullPath);]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_setDirectory</name>
+ </Item>
+</AML>

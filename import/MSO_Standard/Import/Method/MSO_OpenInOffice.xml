@@ -1,0 +1,195 @@
+﻿<AML>
+ <Item type="Method" id="853E6D9813F24ADCBC14A61D4C7A0BFB" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[if (aras.Browser.isFf() && aras.Browser.getMajorVersionNumber() === 38){
+    aras.AlertError("Open in Office is not supported with FireFox version 38");
+    return;
+}
+
+var classification = this.getProperty("classification");
+if (!classification) {
+    aras.AlertError("Type property is not set.");
+    return;
+}
+
+var methodParams = "<classification>" + classification + "</classification>\
+                    <linkProperty>native_file_link</linkProperty>";
+
+var innovator = aras.newIOMInnovator();
+var reference = innovator.applyMethod("MSO_CommonSettings_GetReference", methodParams);
+
+if (reference.getItemCount() !== 1 || reference.isError()) {
+    aras.AlertError("Type should be filled and related to OC types.");
+    return;
+}
+
+var refTypeID = reference.getProperty("reference_item_type"),
+    refTypeName = reference.getPropertyAttribute("reference_item_type", "keyed_name"),
+    refPropertyName = reference.getPropertyAttribute("reference_property", "keyed_name");
+
+if (!refPropertyName) {
+    aras.AlertError("MSO_Reference for native file is empty.");
+    return;
+}
+
+var authoringTool = this.getProperty("authoring_tool");
+var filter;
+
+if (authoringTool == "Microsoft Word"){
+    filter = "Word";
+}
+else if (authoringTool == "Microsoft Excel"){
+    filter = "Excel";
+}
+else if (authoringTool == "Microsoft PowerPoint") {
+     filter = "PowerPoint";
+}
+else {
+    aras.AlertError("'Authoring Tool' property is not set or not supported");
+    return;
+}
+
+var filterValue = this.newItem("Filter Value", "get");
+filterValue.setAttribute("select", "label");
+filterValue.setProperty("filter", filter);
+
+var filterList = this.newItem("List", "get");
+filterList.setProperty("keyed_name", "MSO_DefaultFileFormat");
+filterList.addRelationship(filterValue);
+
+var list = filterList.apply();
+var labels = list.getRelationships();
+
+var extensions = [];
+var count = labels.getItemCount();
+
+for (var i = 0; i < count; i++) {
+    var item = labels.getItemByIndex(i);
+    var label = item.getProperty("label", "");
+    
+    var start = label.lastIndexOf('(');
+    var end = label.lastIndexOf(')');
+    if (start === -1 || start > end) {
+        continue;
+    }
+    
+    var extention = label.substring(start + 2, end);
+    extensions.push(extention);
+}
+
+function isFileNameValid(fileName) {
+    var isValid = false;
+    for (var j = 0; j < extensions.length; j++) {
+        if (fileName.slice(-extensions[j].length) == extensions[j]) {
+            isValid = true;
+            break;
+        }
+    }
+    
+    return isValid;
+}
+
+var type = this.getType();
+var fileId;
+
+if (refTypeName === type) {
+    var itemProperty = this.getPropertyItem(refPropertyName);
+    if (itemProperty) {
+        var id = itemProperty.getId();
+        var file = aras.IomInnovator.getItemById("File", id);
+        var filename = file.getProperty("filename", "");
+        if (isFileNameValid(filename)) {
+             fileId = id;
+        }
+    }
+}
+else {
+    var properties = inDom.selectNodes("Relationships/Item/" + refPropertyName);
+    var validProperty;
+    
+    for (var i = 0; i < properties.length; i++) {
+        var property = properties[i];
+        var keyedName = property.getAttributeNode("keyed_name");
+        if (!keyedName || !keyedName.text) {
+            continue;
+        }
+        
+        if (isFileNameValid(keyedName.text)) {
+            validProperty = property;
+            break;
+        }
+    }
+    
+    if (validProperty) {
+        var itemProperty = validProperty.selectSingleNode("Item");
+        if (itemProperty) {
+            fileId = itemProperty.getAttribute("id");
+        }
+        else {
+            fileId = validProperty.text;
+        }
+    }
+}
+
+if (!fileId) {
+    aras.AlertError("No attached file was found.");
+    return;
+}
+
+var fileItem = aras.IomInnovator.getItemById("File", fileId);
+var saveToUrl =  fileItem.getProperty("checkedout_path"),
+	fileName  =  fileItem.getProperty("keyed_name"),
+	isCurrent = fileItem.getProperty("is_current"),
+	modifiedOn  = fileItem.getProperty("modified_on"),
+	configId  = this.getProperty("config_id"),
+	version = this.getProperty("generation");
+
+var url = window.location.href;
+url = url.substring(0, url.indexOf("Client")); 
+    
+var fileUrl = aras.IomInnovator.getFileUrl(fileId, aras.Enums.UrlType.SecurityToken);
+aras.vault.SetLocalFileName(fileName);
+
+var userName = aras.getLoginName();
+var accessToken = aras.OAuthClient.getToken();
+var dbName = aras.getDatabase();
+
+var browserCode = aras.Browser.getBrowserCode();
+
+var content = "{";	
+content += "\"UserName\":\"" + userName + "\",";
+content += "\"AccessToken\":\"" + accessToken + "\",";
+content += "\"DbName\":\"" + dbName + "\",";
+content += "\"Url\":\"" + url + "\",";
+
+content += "\"Id\":\"" + inDom.getAttribute("id") + "\",";
+content += "\"DocType\":\"" + type + "\",";
+content += "\"ConfigId\":\"" + configId + "\",";
+content += "\"ModifiedOn\":\"" + modifiedOn + "\",";
+content += "\"IsCurrent\":\"" + isCurrent + "\",";
+content += "\"FileName\":\"" + fileName + "\",";
+content += "\"Version\":\"" + version + "\",";
+content += "\"FileId\":\"" + fileId + "\",";
+content += "\"FileUrl\":\"" + fileUrl+"\"";
+
+// content += "browserCode:" + browserCode + ";";
+content += "}";
+
+
+var contextfileName =  fileName.substr(0, fileName.lastIndexOf('.'))+ ".ocopencontext";
+  var blob = new Blob([content], {type : 'application/text'});
+  if (window.navigator.msSaveOrOpenBlob) {
+    window.navigator.msSaveOrOpenBlob(blob, contextfileName);
+   } else {
+    var link = document.createElement('a');
+    link.style.display = 'none';
+    link.href = URL.createObjectURL(blob);
+    link.download = contextfileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+   }]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>MSO_OpenInOffice</name>
+ </Item>
+</AML>

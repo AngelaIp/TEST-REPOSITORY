@@ -1,0 +1,166 @@
+﻿<AML>
+ <Item type="Method" id="63EACA04088B4292B2E5792EB2C34E9E" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var newArasDocumentRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+newArasDocumentRibbonCommand.setProperty("command_id", "new_aras_document");
+newArasDocumentRibbonCommand.setProperty("command_name", "New Aras Document");
+newArasDocumentRibbonCommand.setProperty("visible", "1");
+
+var openRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+openRibbonCommand.setProperty("command_id", "open");
+openRibbonCommand.setProperty("command_name", "Open");
+openRibbonCommand.setProperty("visible", "1");
+
+var openFromLinkedItemRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+openFromLinkedItemRibbonCommand.setProperty("command_id", "open_from_linked_item");
+openFromLinkedItemRibbonCommand.setProperty("command_name", "Open From Linked Items");
+openFromLinkedItemRibbonCommand.setProperty("visible", "1");
+
+var saveToArasRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+saveToArasRibbonCommand.setProperty("command_id", "save_to_aras");
+saveToArasRibbonCommand.setProperty("command_name", "Save to Aras");
+saveToArasRibbonCommand.setProperty("visible", "1");
+
+var saveAndCloseRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+saveAndCloseRibbonCommand.setProperty("command_id", "save_and_close");
+saveAndCloseRibbonCommand.setProperty("command_name", "Save and Close");
+saveAndCloseRibbonCommand.setProperty("visible", "1");
+
+var saveAsToArasRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+saveAsToArasRibbonCommand.setProperty("command_id", "save_as_to_aras");
+saveAsToArasRibbonCommand.setProperty("command_name", "Save As to Aras");
+saveAsToArasRibbonCommand.setProperty("visible", "1");
+
+var numberRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+numberRibbonCommand.setProperty("command_id", "number");
+numberRibbonCommand.setProperty("command_name", "Number");
+numberRibbonCommand.setProperty("visible", "1");
+
+var typeRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+typeRibbonCommand.setProperty("command_id", "type");
+typeRibbonCommand.setProperty("command_name", "Type");
+typeRibbonCommand.setProperty("visible", "1");
+
+var propertiesRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+propertiesRibbonCommand.setProperty("command_id", "properties");
+propertiesRibbonCommand.setProperty("command_name", "Properties");
+propertiesRibbonCommand.setProperty("visible", "1");
+
+var revisionRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+revisionRibbonCommand.setProperty("command_id", "revision");
+revisionRibbonCommand.setProperty("command_name", "Revision");
+revisionRibbonCommand.setProperty("visible", "1");
+
+var templateRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+templateRibbonCommand.setProperty("command_id", "template");
+templateRibbonCommand.setProperty("command_name", "Template");
+templateRibbonCommand.setProperty("visible", "1");
+
+var addOrRemoveLinksRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+addOrRemoveLinksRibbonCommand.setProperty("command_id", "add_or_remove_links");
+addOrRemoveLinksRibbonCommand.setProperty("command_name", "Add or Remove Links");
+addOrRemoveLinksRibbonCommand.setProperty("visible", "1");
+
+var stateRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+stateRibbonCommand.setProperty("command_id", "state");
+stateRibbonCommand.setProperty("command_name", "State");
+stateRibbonCommand.setProperty("visible", "1");
+
+var refreshRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+refreshRibbonCommand.setProperty("command_id", "refresh");
+refreshRibbonCommand.setProperty("command_name", "Refresh");
+refreshRibbonCommand.setProperty("visible", "1");
+
+var versionRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+versionRibbonCommand.setProperty("command_id", "version");
+versionRibbonCommand.setProperty("command_name", "Version");
+versionRibbonCommand.setProperty("visible", "1");
+
+var getLatestRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+getLatestRibbonCommand.setProperty("command_id", "get_latest");
+getLatestRibbonCommand.setProperty("command_name", "Get Latest");
+getLatestRibbonCommand.setProperty("visible", "1");
+
+var versionsRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+versionsRibbonCommand.setProperty("command_id", "versions");
+versionsRibbonCommand.setProperty("command_name", "Versions");
+versionsRibbonCommand.setProperty("visible", "1");
+
+var lockedByRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+lockedByRibbonCommand.setProperty("command_id", "locked_by");
+lockedByRibbonCommand.setProperty("command_name", "Locked By");
+lockedByRibbonCommand.setProperty("visible", "1");
+
+var lockRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+lockRibbonCommand.setProperty("command_id", "lock");
+lockRibbonCommand.setProperty("command_name", "Lock");
+lockRibbonCommand.setProperty("visible", "1");
+
+var unlockRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+unlockRibbonCommand.setProperty("command_id", "unlock");
+unlockRibbonCommand.setProperty("command_name", "Unlock");
+unlockRibbonCommand.setProperty("visible", "1");
+
+var detachRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+detachRibbonCommand.setProperty("command_id", "detach");
+detachRibbonCommand.setProperty("command_name", "Detach");
+detachRibbonCommand.setProperty("visible", "1");
+
+var discussionRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+discussionRibbonCommand.setProperty("command_id", "discussion");
+discussionRibbonCommand.setProperty("command_name", "Discussion");
+discussionRibbonCommand.setProperty("visible", "1");
+
+
+var preferencesRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+preferencesRibbonCommand.setProperty("command_id", "preferences");
+preferencesRibbonCommand.setProperty("command_name", "Preferences");
+preferencesRibbonCommand.setProperty("visible", "1");
+
+var helpRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+helpRibbonCommand.setProperty("command_id", "help");
+helpRibbonCommand.setProperty("command_name", "Help");
+helpRibbonCommand.setProperty("visible", "1");
+
+var aboutMySessionRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+aboutMySessionRibbonCommand.setProperty("command_id", "about_my_session");
+aboutMySessionRibbonCommand.setProperty("command_name", "About my session");
+aboutMySessionRibbonCommand.setProperty("visible", "1");
+
+var aboutRibbonCommand = this.newItem("MSO_RibbonCommand", "add");
+aboutRibbonCommand.setProperty("command_id", "about");
+aboutRibbonCommand.setProperty("command_name", "About");
+aboutRibbonCommand.setProperty("visible", "1");
+
+this.addRelationship(newArasDocumentRibbonCommand);
+this.addRelationship(openRibbonCommand);
+this.addRelationship(openFromLinkedItemRibbonCommand);
+this.addRelationship(saveToArasRibbonCommand);
+this.addRelationship(saveAndCloseRibbonCommand);
+this.addRelationship(saveAsToArasRibbonCommand);
+this.addRelationship(numberRibbonCommand);
+this.addRelationship(typeRibbonCommand);
+this.addRelationship(propertiesRibbonCommand);
+this.addRelationship(revisionRibbonCommand);
+this.addRelationship(templateRibbonCommand);
+this.addRelationship(addOrRemoveLinksRibbonCommand);
+this.addRelationship(stateRibbonCommand);
+this.addRelationship(refreshRibbonCommand);
+this.addRelationship(versionRibbonCommand);
+this.addRelationship(getLatestRibbonCommand);
+this.addRelationship(versionsRibbonCommand);
+this.addRelationship(lockedByRibbonCommand);
+this.addRelationship(lockRibbonCommand);
+this.addRelationship(unlockRibbonCommand);
+this.addRelationship(detachRibbonCommand);
+this.addRelationship(discussionRibbonCommand);
+this.addRelationship(preferencesRibbonCommand);
+this.addRelationship(helpRibbonCommand);
+this.addRelationship(aboutMySessionRibbonCommand);
+this.addRelationship(aboutRibbonCommand);
+
+return this;]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>MSO_OnAfterNewCommonSettings</name>
+ </Item>
+</AML>

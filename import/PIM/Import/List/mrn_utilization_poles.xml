@@ -1,0 +1,50 @@
+﻿<AML>
+ <Item type="List" id="13D40709208C4FA58A99472DDCB7FCB1" action="add">
+  <description>Utilization number of poles</description>
+  <name>mrn_utilization_poles</name>
+  <Relationships>
+   <Item type="Value" id="E9A3C54FBEC748CA9CD6046912D3C9EF" action="add">
+    <label xml:lang="en">; 2 poles in series</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="mrn_utilization_poles" type="List">13D40709208C4FA58A99472DDCB7FCB1</source_id>
+    <value>; 2 poles in series</value>
+   </Item>
+   <Item type="Value" id="52E9B9D1A9D04C899CBF9FFCB88913CF" action="add">
+    <label xml:lang="en">; 3 poles in series</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="mrn_utilization_poles" type="List">13D40709208C4FA58A99472DDCB7FCB1</source_id>
+    <value>; 3 poles in series</value>
+   </Item>
+   <Item type="Value" id="0BA5CB1261504C849FE7AF4875E11FA2" action="add">
+    <label xml:lang="en">; 4 poles in series</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="mrn_utilization_poles" type="List">13D40709208C4FA58A99472DDCB7FCB1</source_id>
+    <value>; 4 poles in series</value>
+   </Item>
+   <Item type="Value" id="E1F5E59A11C54C7A878F2F933395552E" action="add">
+    <label xml:lang="en">; 5 poles in series</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="mrn_utilization_poles" type="List">13D40709208C4FA58A99472DDCB7FCB1</source_id>
+    <value>; 5 poles in series</value>
+   </Item>
+   <Item type="Value" id="2EA0E258577346A19914D549B509A357" action="add">
+    <label xml:lang="en">; 6 poles in series</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="mrn_utilization_poles" type="List">13D40709208C4FA58A99472DDCB7FCB1</source_id>
+    <value>; 6 poles in series</value>
+   </Item>
+   <Item type="Value" id="176B78BE41464150943E7F45EE49451D" action="add">
+    <label xml:lang="en">; 7 poles in series</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="mrn_utilization_poles" type="List">13D40709208C4FA58A99472DDCB7FCB1</source_id>
+    <value>; 7 poles in series</value>
+   </Item>
+   <Item type="Value" id="2AB4AC16D3F04298A63C40F524208720" action="add">
+    <label xml:lang="en">; 8 poles in series</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="mrn_utilization_poles" type="List">13D40709208C4FA58A99472DDCB7FCB1</source_id>
+    <value>; 8 poles in series</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

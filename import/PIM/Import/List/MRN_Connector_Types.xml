@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="List" id="4075D792D30E44DB9AD0282AF83A2AED" action="add">
+  <name>MRN_Connector_Types</name>
+  <Relationships>
+   <Item type="Value" id="947CD4A7C7124D66AEE6BC9F83CA9508" action="add">
+    <label xml:lang="en">Box</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Connector_Types" type="List">4075D792D30E44DB9AD0282AF83A2AED</source_id>
+    <value>Box</value>
+   </Item>
+   <Item type="Value" id="6E9D1593B65C4E6FBD6D3D2F4798323D" action="add">
+    <label xml:lang="en">Stud</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Connector_Types" type="List">4075D792D30E44DB9AD0282AF83A2AED</source_id>
+    <value>Stud</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

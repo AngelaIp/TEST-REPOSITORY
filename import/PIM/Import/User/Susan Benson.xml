@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="A0B6486FBBBC4BBAAB7607358FE0877C" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>susan.benson@us.mersen.com</email>
+  <last_login_date>2017-01-16T09:17:42</last_login_date>
+  <login_name>sbenson</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Susan Benson" type="Identity">629AC087F63948FD9F03F0DBB103B82F</owned_by_id>
+  <working_directory>C:\temp\aras</working_directory>
+  <first_name>Susan</first_name>
+  <last_name>Benson</last_name>
+  <Relationships>
+   <Item type="Alias" id="1270D3CECA8C4A8F8572AA13C452AD49" action="add">
+    <from_date>2017-01-12T06:18:17</from_date>
+    <related_id keyed_name="Susan Benson" type="Identity">629AC087F63948FD9F03F0DBB103B82F</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Susan Benson" type="User">A0B6486FBBBC4BBAAB7607358FE0877C</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

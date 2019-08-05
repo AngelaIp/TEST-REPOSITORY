@@ -1,0 +1,266 @@
+﻿<AML>
+ <Item type="List" id="E962CF1D7D7940909CA84722D7C1D631" action="add">
+  <description>Terminal Types</description>
+  <name>MRN_Terminal_Types</name>
+  <Relationships>
+   <Item type="Value" id="AC2966438F3E4E25B55728F7C307D5B6" action="add">
+    <label xml:lang="en">Blade</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Blade</value>
+   </Item>
+   <Item type="Value" id="897D896407684BE6B4B211860AA608C5" action="add">
+    <label xml:lang="en">Blade To Blade</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Blade To Blade</value>
+   </Item>
+   <Item type="Value" id="1B2BD052DFDA4C58A48083E227BCBAE8" action="add">
+    <label xml:lang="en">Blade To Cable</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Blade To Cable</value>
+   </Item>
+   <Item type="Value" id="74D04B55F6C14CBD857361AC0643F4AF" action="add">
+    <label xml:lang="en">Blade To Offset Bus</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Blade To Offset Bus</value>
+   </Item>
+   <Item type="Value" id="860DBBA838DD44FE92BC4366C2CDBD29" action="add">
+    <label xml:lang="en">Bolted</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Bolted</value>
+   </Item>
+   <Item type="Value" id="AD104C5A655048359C9D89E759E3A3A0" action="add">
+    <label xml:lang="en">Box</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Box</value>
+   </Item>
+   <Item type="Value" id="9A5BC13D68EF41E68853CC71CF977F9F" action="add">
+    <label xml:lang="en">Cable To Cable</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Cable To Cable</value>
+   </Item>
+   <Item type="Value" id="56069F3FDB4B43A580B816A125DD113C" action="add">
+    <label xml:lang="en">Cable To Offset Bus</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Cable To Offset Bus</value>
+   </Item>
+   <Item type="Value" id="97DC22DF4F89449D88734265B825933E" action="add">
+    <label xml:lang="en">Clip</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Clip</value>
+   </Item>
+   <Item type="Value" id="8BF73F8A6F2242B4B0B6D92517649C62" action="add">
+    <label xml:lang="en">Copper Box</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Copper Box</value>
+   </Item>
+   <Item type="Value" id="E1F2116ED2D240D68A895851C886845A" action="add">
+    <label xml:lang="en">DIN Type Blades</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>DIN Type Blades</value>
+   </Item>
+   <Item type="Value" id="C9D876E608C7464B8E75180017A94F4B" action="add">
+    <label xml:lang="en">Double Hole Mount</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Double Hole Mount</value>
+   </Item>
+   <Item type="Value" id="7F9B41180E8E4D5E8199832B78323425" action="add">
+    <label xml:lang="en">End Contact with Threaded Holes</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>End Contact with Threaded Holes</value>
+   </Item>
+   <Item type="Value" id="B092D038FBA243DAB370AB3103FDFC19" action="add">
+    <label xml:lang="en">End Contact with Threaded Holes to L Blade</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>End Contact with Threaded Holes to L Blade</value>
+   </Item>
+   <Item type="Value" id="F77A8122FCB44796B5C1DAD24616AC1F" action="add">
+    <label xml:lang="en">End Contact with Threaded Holes to Plate</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>End Contact with Threaded Holes to Plate</value>
+   </Item>
+   <Item type="Value" id="D8CE41F77DB14EC69D63E05B40B71BC4" action="add">
+    <label xml:lang="en">Female Stud To Female Tube</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Female Stud To Female Tube</value>
+   </Item>
+   <Item type="Value" id="8222B65067174AAF98F8F2C26FCB0698" action="add">
+    <label xml:lang="en">Female Stud To L Bracket</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Female Stud To L Bracket</value>
+   </Item>
+   <Item type="Value" id="EFFF46D472334BCD845C3606F24FF7B9" action="add">
+    <label xml:lang="en">Female To Female Stud</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Female To Female Stud</value>
+   </Item>
+   <Item type="Value" id="4E0819A589CB43EFA83B693B16CB37B2" action="add">
+    <label xml:lang="en">Female To Female Tube</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Female To Female Tube</value>
+   </Item>
+   <Item type="Value" id="C395F153D4624D8881ED18C7E9B3DC07" action="add">
+    <label xml:lang="en">Ferrule</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Ferrule</value>
+   </Item>
+   <Item type="Value" id="108729D3937E474EB8A6F5CF27F7EB63" action="add">
+    <label xml:lang="en">Cylindrical</label>
+    <sort_order>215</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Cylindrical</value>
+   </Item>
+   <Item type="Value" id="DB2FC768D0C54331AAF0B0555EA2C74D" action="add">
+    <label xml:lang="en">Flat-Type Tap</label>
+    <sort_order>220</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Flat-Type Tap</value>
+   </Item>
+   <Item type="Value" id="99E90AA9CE70409D95283D79E2323E82" action="add">
+    <label xml:lang="en">Hockey Puck, Bolt-In</label>
+    <sort_order>230</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Hockey Puck, Bolt-In</value>
+   </Item>
+   <Item type="Value" id="97A6C886488F4E1192AA052765F619CE" action="add">
+    <label xml:lang="en">L Bracket To L Bracket</label>
+    <sort_order>240</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>L Bracket To L Bracket</value>
+   </Item>
+   <Item type="Value" id="CF844E03CFDA4E8A98C4FEF88EBCE4A3" action="add">
+    <label xml:lang="en">L Brackets</label>
+    <sort_order>250</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>L Brackets</value>
+   </Item>
+   <Item type="Value" id="1B9C967EB577480CA4CC4234375D92C6" action="add">
+    <label xml:lang="en">Male Stud To L Bracket</label>
+    <sort_order>260</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Male Stud To L Bracket</value>
+   </Item>
+   <Item type="Value" id="84755D71CE794203B29B651397C0C0DF" action="add">
+    <label xml:lang="en">Male To Female Stud</label>
+    <sort_order>270</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Male To Female Stud</value>
+   </Item>
+   <Item type="Value" id="2B4E8FBAE7F94B56A5F70A7D8D6728EF" action="add">
+    <label xml:lang="en">Open Slot Blades</label>
+    <sort_order>280</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Open Slot Blades</value>
+   </Item>
+   <Item type="Value" id="24C2730BCA56436580BEF7C24FA58BD9" action="add">
+    <label xml:lang="en">PCB Mount</label>
+    <sort_order>290</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>PCB Mount</value>
+   </Item>
+   <Item type="Value" id="276EA13629044AC0960BDF32C8E2ABEF" action="add">
+    <label xml:lang="en">Plain Blades</label>
+    <sort_order>300</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Plain Blades</value>
+   </Item>
+   <Item type="Value" id="7420FB63B6744F2A95DBFB1050FA0743" action="add">
+    <label xml:lang="en">Plates with Metric Threaded Holes</label>
+    <sort_order>310</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Plates with Metric Threaded Holes</value>
+   </Item>
+   <Item type="Value" id="765374690FE14A97924D12D528ED5765" action="add">
+    <label xml:lang="en">Press Pack</label>
+    <sort_order>320</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Press Pack</value>
+   </Item>
+   <Item type="Value" id="B00A9F69DEDF41FCBC9B3A04D2B84BF3" action="add">
+    <label xml:lang="en">Pressure Plate</label>
+    <sort_order>330</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Pressure Plate</value>
+   </Item>
+   <Item type="Value" id="95B4C07C28AA4D29893C1A2C5329AF31" action="add">
+    <label xml:lang="en">Rod To Blade</label>
+    <sort_order>340</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Rod To Blade</value>
+   </Item>
+   <Item type="Value" id="3AC4A1FEE3774429ACB5D30286A88454" action="add">
+    <label xml:lang="en">Rod To Cable</label>
+    <sort_order>350</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Rod To Cable</value>
+   </Item>
+   <Item type="Value" id="4A0EF17BA2D04D549DB67F18411F49A9" action="add">
+    <label xml:lang="en">Screw</label>
+    <sort_order>360</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Screw</value>
+   </Item>
+   <Item type="Value" id="0EC2045C3A6D4361853A3CBE3AF0617F" action="add">
+    <label xml:lang="en">Screw +/- (PZ2)</label>
+    <sort_order>370</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Screw +/- (PZ2)</value>
+   </Item>
+   <Item type="Value" id="7781E6D4AB4C416194006D5B23F3E504" action="add">
+    <label xml:lang="en">Screw-in</label>
+    <sort_order>380</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Screw-in</value>
+   </Item>
+   <Item type="Value" id="F397DF5490824F88BEC8B36DF5E39F04" action="add">
+    <label xml:lang="en">Slot Mount</label>
+    <sort_order>390</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Slot Mount</value>
+   </Item>
+   <Item type="Value" id="0C1F159370B04C50B3607F071CB0078B" action="add">
+    <label xml:lang="en">Slotted Blades</label>
+    <sort_order>400</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Slotted Blades</value>
+   </Item>
+   <Item type="Value" id="8097D8415AB14A4BAE6BC9F9C974092D" action="add">
+    <label xml:lang="en">Soldered connection</label>
+    <sort_order>410</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Soldered connection</value>
+   </Item>
+   <Item type="Value" id="EF4FF5D142B242B8B7FC7422DAC26C7C" action="add">
+    <label xml:lang="en">Stud</label>
+    <sort_order>420</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Stud</value>
+   </Item>
+   <Item type="Value" id="6F2AB648E21745068585D6E8D79BD4A0" action="add">
+    <label xml:lang="en">Surface Screw Mount</label>
+    <sort_order>430</sort_order>
+    <source_id keyed_name="MRN_Terminal_Types" type="List">E962CF1D7D7940909CA84722D7C1D631</source_id>
+    <value>Surface Screw Mount</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,18 @@
+﻿<AML>
+ <Item type="MRN_Property" id="3DC3DB8A680B41CBAE1382529B030A8A" action="add">
+  <mrn_copy>0</mrn_copy>
+  <mrn_etim>0</mrn_etim>
+  <mrn_etim_range_property>0</mrn_etim_range_property>
+  <mrn_export_attribute>1</mrn_export_attribute>
+  <mrn_extract_labels>0</mrn_extract_labels>
+  <mrn_fake_ml_property>0</mrn_fake_ml_property>
+  <mrn_families>Surge Protection</mrn_families>
+  <mrn_form_element>GROUP_ISCCR</mrn_form_element>
+  <mrn_is_group>0</mrn_is_group>
+  <mrn_is_multi_value>0</mrn_is_multi_value>
+  <mrn_item_property keyed_name="mrn_short_circuit_wstand_isccr" type="Property">43DF7F4B001D465CA8CBCC04C4348698</mrn_item_property>
+  <mrn_level>Level 4 - MSL</mrn_level>
+  <mrn_uom_property keyed_name="UOM - Isccr" type="MRN_Property">906603CEE6E14D518BA451DB688AB91F</mrn_uom_property>
+  <mrn_label>Short Circuit Withstand (Isccr)</mrn_label>
+ </Item>
+</AML>

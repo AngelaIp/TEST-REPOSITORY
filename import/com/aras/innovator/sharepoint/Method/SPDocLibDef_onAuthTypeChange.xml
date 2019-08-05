@@ -3,11 +3,14 @@
   <comments>Handles changes in UI to enable/disable fields for dedicated user</comments>
   <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
   <method_code><![CDATA[var isEditMode = document.isEditMode;
-var authList = this;
+// IR-055699 Type-ahead specific code converting
+//var authList = this;
+var authList = getFieldComponentByName(this.name);
 var userField = document.forms.MainDataForm.elements['sp_user'];
 var passField = document.forms.MainDataForm.elements['sp_password'];
 var domainField = document.forms.MainDataForm.elements['sp_domain'];
-if (authList.options[authList.selectedIndex].value == 'WindowsAuthenticationOnly') {
+//if (authList.options[authList.selectedIndex].value == 'WindowsAuthenticationOnly') {
+if (authList.getValue() == 'WindowsAuthenticationOnly') { // End of fix IR-055699
 	userField.disabled = true;
 	passField.disabled = true;
 	domainField.disabled = true;

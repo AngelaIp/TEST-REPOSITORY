@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="A3FE840D48C34FD49125F7D5AC8EE3FB" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>jchris.bertrand@mersen.com</email>
+  <last_login_date>2019-05-18T12:22:01</last_login_date>
+  <login_name>jbertran</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Jean-Chris Bertrand" type="Identity">0DA0569524554A2486766FFC6E3F8C1B</owned_by_id>
+  <working_directory>C:\Users\jbertran\Documents\_Aras\Aras Temp</working_directory>
+  <first_name>Jean-Chris</first_name>
+  <last_name>Bertrand</last_name>
+  <Relationships>
+   <Item type="Alias" id="5D8F9F65445948F393C6CE6E5605A8BB" action="add">
+    <from_date>2016-04-14T11:32:58</from_date>
+    <related_id keyed_name="Jean-Chris Bertrand" type="Identity">0DA0569524554A2486766FFC6E3F8C1B</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Jean-Chris Bertrand" type="User">A3FE840D48C34FD49125F7D5AC8EE3FB</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

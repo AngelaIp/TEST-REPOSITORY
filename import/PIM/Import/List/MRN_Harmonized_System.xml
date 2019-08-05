@@ -1,0 +1,62 @@
+﻿<AML>
+ <Item type="List" id="B3BAEC46898B44389D4EA7117E2E0C68" action="add">
+  <description>Harmonized System (HS)</description>
+  <name>MRN_Harmonized_System</name>
+  <Relationships>
+   <Item type="Value" id="EA54A6249E83439896B7DA40E1457371" action="add">
+    <label xml:lang="en">Fuses over 1000 Volts</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Harmonized_System" type="List">B3BAEC46898B44389D4EA7117E2E0C68</source_id>
+    <value>853510</value>
+   </Item>
+   <Item type="Value" id="D3DB5A411B1B4C30A4A473BF2D0E49C8" action="add">
+    <label xml:lang="en">Switches for a voltage exceeding 1,000 V</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Harmonized_System" type="List">B3BAEC46898B44389D4EA7117E2E0C68</source_id>
+    <value>853530</value>
+   </Item>
+   <Item type="Value" id="10C73041507A442B8C24EBF0773799E6" action="add">
+    <label xml:lang="en">Surge Suppressors over 1000V</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Harmonized_System" type="List">B3BAEC46898B44389D4EA7117E2E0C68</source_id>
+    <value>853540</value>
+   </Item>
+   <Item type="Value" id="F716C0D314294AA285E9E1FFC383FA98" action="add">
+    <label xml:lang="en">Other electrical apparatus for a voltage exceeding 1,000 V</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Harmonized_System" type="List">B3BAEC46898B44389D4EA7117E2E0C68</source_id>
+    <value>853590</value>
+   </Item>
+   <Item type="Value" id="3447FD3E10AE4ADD805FB98C487301AD" action="add">
+    <label xml:lang="en">Fuses for a voltage less than 1,000 V</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Harmonized_System" type="List">B3BAEC46898B44389D4EA7117E2E0C68</source_id>
+    <value>853610</value>
+   </Item>
+   <Item type="Value" id="00913FC70A1744E396F1B6A37D475BD2" action="add">
+    <label xml:lang="en">Surge suppressors for a voltage less than 1,000 V</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Harmonized_System" type="List">B3BAEC46898B44389D4EA7117E2E0C68</source_id>
+    <value>853630</value>
+   </Item>
+   <Item type="Value" id="F14024AB72724ED198111C810FB98B10" action="add">
+    <label xml:lang="en">Switches for a voltage less than 1,000 V</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Harmonized_System" type="List">B3BAEC46898B44389D4EA7117E2E0C68</source_id>
+    <value>853650</value>
+   </Item>
+   <Item type="Value" id="08A6257FB987400C83CBD244DB20DA04" action="add">
+    <label xml:lang="en">Other electrical apparatus for a voltage less than 1,000 V</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Harmonized_System" type="List">B3BAEC46898B44389D4EA7117E2E0C68</source_id>
+    <value>853690</value>
+   </Item>
+   <Item type="Value" id="9E72BF994F154A26BB1A0C0341C2EF88" action="add">
+    <label xml:lang="en">Accessories for Fuses &amp; Switches</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Harmonized_System" type="List">B3BAEC46898B44389D4EA7117E2E0C68</source_id>
+    <value>853890</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

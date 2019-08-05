@@ -1,9 +1,0 @@
-﻿<AML>
- <Item type="FileSelectorTemplate" id="BF385FAA78DC47309FF55DFCCC4EAA88" action="add">
-  <filter>7869D76D50ED4BD4985BECB20B1102F7|992B142FCE6C4EF8B71417220CD7E92D|50AF497B7A114235979F882CEC8EFDF6|8A85DD9A6E0346F5AE423314E3650041</filter>
-  <reference>Document File(related_id)</reference>
-  <sort_order>128</sort_order>
-  <source_id keyed_name="46A8DB10D0D648578A13E6E80599ABB8" type="FeedTemplate">46A8DB10D0D648578A13E6E80599ABB8</source_id>
-  <tooltip_template xml:lang="en">File ${File:filename} from ${ItemType:label} ${Item:keyed_name}</tooltip_template>
- </Item>
-</AML>

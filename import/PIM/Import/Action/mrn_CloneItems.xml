@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Action" id="20D66A44B5E84145AC1632D60B9DC79F" action="add">
+  <item_query>&lt;Item type="{@type}" id="{@id}" levels= "1" action="get" /&gt;</item_query>
+  <label xml:lang="en">Clone Item(s)</label>
+  <location>client</location>
+  <method keyed_name="mrn_cloneItem" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>mrn_cloneItem</name>
+   </Item>
+  </method>
+  <target>none</target>
+  <type>item</type>
+  <name>mrn_CloneItems</name>
+ </Item>
+</AML>

@@ -1,0 +1,176 @@
+﻿<AML>
+ <Item type="List" id="6BC2647141864C0FA5E3E46C9309BC34" action="add">
+  <description>Country of origin</description>
+  <name>MRN_Country_of_Origin</name>
+  <Relationships>
+   <Item type="Value" id="E0898909F3F841CE8F8B4DDF5FC86C59" action="add">
+    <label xml:lang="en">Austria</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>AT</value>
+   </Item>
+   <Item type="Value" id="E4B7997E27864333814EBCCA34DF61FA" action="add">
+    <label xml:lang="en">Brazil</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>BR</value>
+   </Item>
+   <Item type="Value" id="8D2B77147D1749378CDF787E675F2F82" action="add">
+    <label xml:lang="en">Bulgaria</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>BG</value>
+   </Item>
+   <Item type="Value" id="3049D2F730FD494FB59680F71581291E" action="add">
+    <label xml:lang="en">Canada</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>CA</value>
+   </Item>
+   <Item type="Value" id="FFFEF69B425B4A9EA0E206ADCD0230F1" action="add">
+    <label xml:lang="en">China</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>CN</value>
+   </Item>
+   <Item type="Value" id="4F652A0DDC6943EDA46350DC4E5E2F31" action="add">
+    <label xml:lang="en">Czech Republic</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>CZ</value>
+   </Item>
+   <Item type="Value" id="7C35815926554538AC4918A8D055D222" action="add">
+    <label xml:lang="en">Finland</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>FI</value>
+   </Item>
+   <Item type="Value" id="4C2AA3AEA7E44F2AB7E04F2775D62646" action="add">
+    <label xml:lang="en">France</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>FR</value>
+   </Item>
+   <Item type="Value" id="E9F0A3BBDBF94A139636F0D68C4766B0" action="add">
+    <label xml:lang="en">Germany</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>DE</value>
+   </Item>
+   <Item type="Value" id="A530A86B5F784203A90EE4D7A87EC054" action="add">
+    <label xml:lang="en">Hungary</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>HU</value>
+   </Item>
+   <Item type="Value" id="8AF4E5FE66694A3480D8683B1498FD42" action="add">
+    <label xml:lang="en">India</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>IN</value>
+   </Item>
+   <Item type="Value" id="22E0B8A574F04A8FBDC266E67CE609E3" action="add">
+    <label xml:lang="en">Italy</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>IT</value>
+   </Item>
+   <Item type="Value" id="184D1F3427F5437080502980E6F71CA8" action="add">
+    <label xml:lang="en">Japan</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>JP</value>
+   </Item>
+   <Item type="Value" id="2BC6132F3D5A4C3293E4340CBDF81827" action="add">
+    <label xml:lang="en">Mexico</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>MX</value>
+   </Item>
+   <Item type="Value" id="6FD378D26202403D98847C808D45DC27" action="add">
+    <label xml:lang="en">Montenegro</label>
+    <sort_order>145</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>ME</value>
+   </Item>
+   <Item type="Value" id="C67E2A5B3FBB437B96DBA75E38862E5B" action="add">
+    <label xml:lang="en">Norway</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>NO</value>
+   </Item>
+   <Item type="Value" id="687C31922193406DBE3718CE7709CB6A" action="add">
+    <label xml:lang="en">Poland</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>PL</value>
+   </Item>
+   <Item type="Value" id="A3E9AFDE12A24933AADA31B2F6B989FF" action="add">
+    <label xml:lang="en">Serbia</label>
+    <sort_order>165</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>RS</value>
+   </Item>
+   <Item type="Value" id="60A14190EF13477BA9E87B00FE1BC17F" action="add">
+    <label xml:lang="en">Slovakia</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>SK</value>
+   </Item>
+   <Item type="Value" id="BF251E1B61DE4BAE95EF8B560C548A7C" action="add">
+    <label xml:lang="en">Slovenia</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>SI</value>
+   </Item>
+   <Item type="Value" id="D0D9BD5F32A24742931713D536520C5E" action="add">
+    <label xml:lang="en">Spain</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>ES</value>
+   </Item>
+   <Item type="Value" id="7F6FA543FBA941ECB455F167C01209EA" action="add">
+    <label xml:lang="en">Sweden</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>SE</value>
+   </Item>
+   <Item type="Value" id="3ADD8F7A911847A28392BD8D5936FEF0" action="add">
+    <label xml:lang="en">Switzerland</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>CH</value>
+   </Item>
+   <Item type="Value" id="647EC5D19DAC407DA7F004D7C4F0F540" action="add">
+    <label xml:lang="en">Taiwan</label>
+    <sort_order>220</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>TW</value>
+   </Item>
+   <Item type="Value" id="050B50F6E32346D3882A0CB68A887EA7" action="add">
+    <label xml:lang="en">Tunisia</label>
+    <sort_order>230</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>TN</value>
+   </Item>
+   <Item type="Value" id="EF93051C40F443A9A135C7C4653D4316" action="add">
+    <label xml:lang="en">United Kingdom</label>
+    <sort_order>250</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>GB</value>
+   </Item>
+   <Item type="Value" id="76175D249E554C31B016DE4E19BB5383" action="add">
+    <label xml:lang="en">USA</label>
+    <sort_order>260</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>US</value>
+   </Item>
+   <Item type="Value" id="42993115990F44F0B9ADD5CD3B79D177" action="add">
+    <label xml:lang="en">Unassigned</label>
+    <sort_order>270</sort_order>
+    <source_id keyed_name="MRN_Country_of_Origin" type="List">6BC2647141864C0FA5E3E46C9309BC34</source_id>
+    <value>Unassigned</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

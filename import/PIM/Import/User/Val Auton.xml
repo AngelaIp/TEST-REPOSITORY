@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="2C103A7276394EE1B61E270167199084" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>val.auton@us.mersen.com</email>
+  <last_login_date>2019-03-22T08:48:15</last_login_date>
+  <login_name>vauton</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Val Auton" type="Identity">D0CF389728604345830DAF4AA0F10414</owned_by_id>
+  <working_directory>C:\temp\aras</working_directory>
+  <first_name>Val</first_name>
+  <last_name>Auton</last_name>
+  <Relationships>
+   <Item type="Alias" id="3EB530FC9BBA46C0984D8A6A422147DB" action="add">
+    <from_date>2017-10-27T09:38:29</from_date>
+    <related_id keyed_name="Val Auton" type="Identity">D0CF389728604345830DAF4AA0F10414</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Val Auton" type="User">2C103A7276394EE1B61E270167199084</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

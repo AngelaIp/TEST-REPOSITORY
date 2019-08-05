@@ -111,6 +111,12 @@
       <sort_order>128</sort_order>
       <source_id keyed_name="Alias" type="ItemType" name="Alias">4E355E04444B4676AE723B43DECA37DC</source_id>
      </Item>
+     <Item type="Can Add" id="D468E39AAFF649DE8A2D4A1227B62233" action="add">
+      <can_add>1</can_add>
+      <related_id keyed_name="mrn_it_helpdesk" type="Identity">B6818FDF769C4F34A16ACD927AC0D9EA</related_id>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="Alias" type="ItemType" name="Alias">4E355E04444B4676AE723B43DECA37DC</source_id>
+     </Item>
      <Item type="Allowed Permission" id="B60CD9CA77B74735A16434B76EDE4099" action="add">
       <is_default>1</is_default>
       <related_id keyed_name="Alias" type="Permission">AC6057F0CF4745FCBCB88909E1C6810F</related_id>

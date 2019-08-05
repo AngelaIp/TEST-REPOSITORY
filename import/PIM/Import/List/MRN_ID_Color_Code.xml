@@ -1,0 +1,163 @@
+﻿<AML>
+ <Item type="List" id="CF0E157A6015441ABFD873F5C51B867F" action="add">
+  <name>MRN_ID_Color_Code</name>
+  <Relationships>
+   <Item type="Value" id="3F905C9463264F168C55949A194AF744" action="add">
+    <label xml:lang="en">Amber</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Amber</value>
+   </Item>
+   <Item type="Value" id="6EC4B5235A8849368F67851A42DB386C" action="add">
+    <label xml:lang="en">Anthracite</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Anthracite</value>
+   </Item>
+   <Item type="Value" id="9EF5A5ECC9624B3FB9E7B3BB979BA00A" action="add">
+    <label xml:lang="en">Beige</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Beige</value>
+   </Item>
+   <Item type="Value" id="029DB945B15140B39A667CB55B46B661" action="add">
+    <label xml:lang="en">Black</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Black</value>
+   </Item>
+   <Item type="Value" id="CFDB367A5C9C43F1B2AD2B316C66A94C" action="add">
+    <label xml:lang="en">Blue</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Blue</value>
+   </Item>
+   <Item type="Value" id="323FA2A8FBC047C28117757725A1A390" action="add">
+    <label xml:lang="en">Brass</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Brass</value>
+   </Item>
+   <Item type="Value" id="C21B9BB0A54A4026866826EAF02B282C" action="add">
+    <label xml:lang="en">Bronze</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Bronze</value>
+   </Item>
+   <Item type="Value" id="22BCF2F905554B90B825223B49707E75" action="add">
+    <label xml:lang="en">Brown</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Brown</value>
+   </Item>
+   <Item type="Value" id="E1E4FDD0BEE3460AA098587D89733531" action="add">
+    <label xml:lang="en">Clear</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Clear</value>
+   </Item>
+   <Item type="Value" id="29DBD3FBB7A94D9B87DE1DC354506B63" action="add">
+    <label xml:lang="en">Copper</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Copper</value>
+   </Item>
+   <Item type="Value" id="D704D0EBE0EB40B2B6A800FC0C740C97" action="add">
+    <label xml:lang="en">Cyan (blue-green)</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Cyan (blue-green)</value>
+   </Item>
+   <Item type="Value" id="118FF98BCC9943EBB5F5B581F723D691" action="add">
+    <label xml:lang="en">Gold</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Gold</value>
+   </Item>
+   <Item type="Value" id="CAEFE448CB8E42B7A72B6B847BA9C81B" action="add">
+    <label xml:lang="en">Green</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Green</value>
+   </Item>
+   <Item type="Value" id="B0603C8CA3CF43CCB666B39BEEE4D58C" action="add">
+    <label xml:lang="en">Grey</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Grey</value>
+   </Item>
+   <Item type="Value" id="1858041A833C4F548F9E211098FC707C" action="add">
+    <label xml:lang="en">Natural colour</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Natural colour</value>
+   </Item>
+   <Item type="Value" id="7B122014F9304CFBA5CF90CCA53D366C" action="add">
+    <label xml:lang="en">Nickel</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Nickel</value>
+   </Item>
+   <Item type="Value" id="05F329C9E6B448B38978C2CDF28DBA9F" action="add">
+    <label xml:lang="en">None</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>None</value>
+   </Item>
+   <Item type="Value" id="083D8858E9F84A728773855C9F8A6816" action="add">
+    <label xml:lang="en">Orange</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Orange</value>
+   </Item>
+   <Item type="Value" id="54B50557FD1D479AB034CDBD9BFCF660" action="add">
+    <label xml:lang="en">Other</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Other</value>
+   </Item>
+   <Item type="Value" id="C828BFEBF92F4753A9EB8230D1759181" action="add">
+    <label xml:lang="en">Pink</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Pink</value>
+   </Item>
+   <Item type="Value" id="4FF853F506D9487696007A6BD8852952" action="add">
+    <label xml:lang="en">Platinum</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Platinum</value>
+   </Item>
+   <Item type="Value" id="1D291B96ED3243C9A6C9F9E31BE2C159" action="add">
+    <label xml:lang="en">Red</label>
+    <sort_order>230</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Red</value>
+   </Item>
+   <Item type="Value" id="AA4FA5AE233D4800969B1205F993CCB0" action="add">
+    <label xml:lang="en">Silver</label>
+    <sort_order>240</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Silver</value>
+   </Item>
+   <Item type="Value" id="67D70E78861647FA89A52010A96C3DAA" action="add">
+    <label xml:lang="en">Violet</label>
+    <sort_order>250</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Violet</value>
+   </Item>
+   <Item type="Value" id="02E2ED71BF2243E4AD12E7DBCAEA4DCD" action="add">
+    <label xml:lang="en">White</label>
+    <sort_order>260</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>White</value>
+   </Item>
+   <Item type="Value" id="E00864B5B6324C43A22597CF8CA25722" action="add">
+    <label xml:lang="en">Yellow</label>
+    <sort_order>270</sort_order>
+    <source_id keyed_name="MRN_ID_Color_Code" type="List">CF0E157A6015441ABFD873F5C51B867F</source_id>
+    <value>Yellow</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,883 @@
+﻿<AML>
+ <Item type="List" id="DCC8C27CBF1B4C16B11E58EE451FF6BC" action="add">
+  <description>ETIM Classification</description>
+  <name>MRN_ETIM_Class</name>
+  <Relationships>
+   <Item type="Filter Value" id="843DDBC5381F4DB1BBCA98DB53359795" action="add">
+    <filter>A01</filter>
+    <label xml:lang="en">Low Voltage HRC fuse base</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000067</value>
+   </Item>
+   <Item type="Filter Value" id="6641809191BC4077A65BCA37F7A2C91A" action="add">
+    <filter>A02</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="D46B2F4104C24700A381F3C390A9A98A" action="add">
+    <filter>A03</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="76FF042F5B26401A813749C39DBA92F8" action="add">
+    <filter>A04</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="78EFDBFEC52D460D89742017B0521AB4" action="add">
+    <filter>A05</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="634152086D1340E38215252110B7DB8D" action="add">
+    <filter>A06</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="D5E588FBEC14454D8C9E84B5AF5C7AB3" action="add">
+    <filter>A07</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="409052A4596B484193AEC3E09C257D55" action="add">
+    <filter>A08</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="970DA83A01474822A832761C7796872F" action="add">
+    <filter>A09</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="4B115EE5F62048DE915ECEF5253E64B6" action="add">
+    <filter>A10</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="E4E9962E3ECA42FC961E3547577609DD" action="add">
+    <filter>A11</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="33105C39AE3045F3953379ED1DE7C857" action="add">
+    <filter>A12</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="5CEA334988DF4834B747F4143ED0FB50" action="add">
+    <filter>A13</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="94A1EA655FC04B9DA5585BC0F02B6F68" action="add">
+    <filter>A14</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="84E39830F4A84A31A31B5D1B49D397FF" action="add">
+    <filter>A15</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="451850DD89D342BFBC9A5F421B1E7490" action="add">
+    <filter>A16</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="DB9F1B904524466885B1A06C12BB5782" action="add">
+    <filter>A17</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="451711257C384612A71719C8F140FB9D" action="add">
+    <filter>A18</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="53C61D4317D54981A9EAFC06F6282C67" action="add">
+    <filter>A19</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="FDCCC591FAED4A5D82F5A33F3E075D86" action="add">
+    <filter>A23</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="71529C60CA334E6C90AC407A495D8A1F" action="add">
+    <filter>A24</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="20E0F6B7DD3B4BEDA160917CA84F51E9" action="add">
+    <filter>A25</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="A7F4D22CCD6B4CC984337845277871A8" action="add">
+    <filter>A26</filter>
+    <label xml:lang="en">D-system fuse link</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000099</value>
+   </Item>
+   <Item type="Filter Value" id="B32AA7A7C879423CA96B6F1DAD91235B" action="add">
+    <filter>A27</filter>
+    <label xml:lang="en">D0-system fuse link</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC001642</value>
+   </Item>
+   <Item type="Filter Value" id="5914DF547C6B4FDA8CDA06405B8B5C2A" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D0-system adapter sleeve</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000278</value>
+   </Item>
+   <Item type="Filter Value" id="91FB2AC5B37A441CA0E6C3DA145AD0F7" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D0-system fuse base</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC001644</value>
+   </Item>
+   <Item type="Filter Value" id="BB674F9C27044FE78FD48C68F8D3D65C" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D0-system protective cover</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC001638</value>
+   </Item>
+   <Item type="Filter Value" id="8887C32711504366AAFAF50D00DE63FF" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D0-system screw adapter</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC002482</value>
+   </Item>
+   <Item type="Filter Value" id="2310EFBD0BB64F829A839742289E0C72" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D0-system screw cap</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC001643</value>
+   </Item>
+   <Item type="Filter Value" id="210A0C6AFFDF4787BF9817982197F2D9" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D0-system switch disconnector</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000277</value>
+   </Item>
+   <Item type="Filter Value" id="1D494CCA1D3C46A28982F04C85E1AAE7" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D-system fuse base</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000094</value>
+   </Item>
+   <Item type="Filter Value" id="C4DE071BAD29430EAD76B8F0870430D0" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D-system protective cover</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000241</value>
+   </Item>
+   <Item type="Filter Value" id="E6EC50EDEE6A4781B213CF1754DD332E" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D-system ring adapter</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000279</value>
+   </Item>
+   <Item type="Filter Value" id="C6CEABC5450043A2998656450C45DFD2" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D-system screw adapter</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000085</value>
+   </Item>
+   <Item type="Filter Value" id="1DAC5683D7644B148B24FA2389F5AD07" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">D-system screw cap</label>
+    <sort_order>4480</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000093</value>
+   </Item>
+   <Item type="Filter Value" id="BC513D4B36CC43169E6A67603EB1D32A" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D0-system adapter sleeve</label>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000278</value>
+   </Item>
+   <Item type="Filter Value" id="BEC508440BAF41928054D7628134AEB2" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D0-system fuse base</label>
+    <sort_order>4736</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC001644</value>
+   </Item>
+   <Item type="Filter Value" id="566D8E1CFCF54170A3CABF41A1D2D6E3" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D0-system protective cover</label>
+    <sort_order>4864</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC001638</value>
+   </Item>
+   <Item type="Filter Value" id="34DA85FDB2064E20B1CAA98EA175E3DD" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D0-system screw adapter</label>
+    <sort_order>4992</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC002482</value>
+   </Item>
+   <Item type="Filter Value" id="FD04955007CA4734B01F755323555C37" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D0-system screw cap</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC001643</value>
+   </Item>
+   <Item type="Filter Value" id="56DA17AAEB3747A18CC3619FFF2A0676" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D0-system switch disconnector</label>
+    <sort_order>5248</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000277</value>
+   </Item>
+   <Item type="Filter Value" id="1D333C996769400BA77B20BA3A884CB1" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D-system fuse base</label>
+    <sort_order>5376</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000094</value>
+   </Item>
+   <Item type="Filter Value" id="4C90AEDA5B964EB8AA4E9951EB498226" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D-system protective cover</label>
+    <sort_order>5504</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000241</value>
+   </Item>
+   <Item type="Filter Value" id="E079F8085C2A4836B4D940F9D1D19B81" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D-system ring adapter</label>
+    <sort_order>5632</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000279</value>
+   </Item>
+   <Item type="Filter Value" id="FD8D731CE63F4452A49CB9261B4C8CF8" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D-system screw adapter</label>
+    <sort_order>5760</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000085</value>
+   </Item>
+   <Item type="Filter Value" id="555C28DB872D4D2EB7A31ABC6DD502F1" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">D-system screw cap</label>
+    <sort_order>5888</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000093</value>
+   </Item>
+   <Item type="Filter Value" id="6EA5A5132A2F4F9587C19E4D13581C64" action="add">
+    <filter>A31</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>6144</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="D4AD393D2528493AB608963F7BC05B1E" action="add">
+    <filter>A32</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>6272</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="06A3F431A889439198165019D62C746B" action="add">
+    <filter>A33</filter>
+    <label xml:lang="en">Low Voltage HRC fuse base</label>
+    <sort_order>6400</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000067</value>
+   </Item>
+   <Item type="Filter Value" id="5E88F616F69349048E1B4FE5F676BC73" action="add">
+    <filter>A34</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>6528</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="C50753F9473546998AE7646FFCA97B3B" action="add">
+    <filter>A35</filter>
+    <label xml:lang="en">Accessories for low-voltage switch technology</label>
+    <sort_order>6656</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC002498</value>
+   </Item>
+   <Item type="Filter Value" id="47CBD6860DE24EA5832E4C32F75A2EA2" action="add">
+    <filter>A30</filter>
+    <label xml:lang="en">Fuse switch disconnector</label>
+    <sort_order>6784</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC001040</value>
+   </Item>
+   <Item type="Filter Value" id="CB76BE74578B4235ADC2B17A8FE2292E" action="add">
+    <filter>A35</filter>
+    <label xml:lang="en">Off-load switch</label>
+    <sort_order>6912</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC001105</value>
+   </Item>
+   <Item type="Filter Value" id="F52B892AC26748A7818BDC37F0AC952A" action="add">
+    <filter>A35</filter>
+    <label xml:lang="en">Switch disconnector</label>
+    <sort_order>7040</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000216</value>
+   </Item>
+   <Item type="Filter Value" id="D89AE016C93B4D15BCF5DDC7A6D398C7" action="add">
+    <filter>A38</filter>
+    <label xml:lang="en">Cylindrical fuse</label>
+    <sort_order>7168</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC002704</value>
+   </Item>
+   <Item type="Filter Value" id="FAC0ED62CFB4452298D45DE49EBED5BF" action="add">
+    <filter>A39</filter>
+    <label xml:lang="en">Cylindrical fuse</label>
+    <sort_order>7296</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC002704</value>
+   </Item>
+   <Item type="Filter Value" id="969B4F4713FB4DB09D95CC571265CE9E" action="add">
+    <filter>A40</filter>
+    <label xml:lang="en">Holder for cylindrical fuse</label>
+    <sort_order>7424</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC002705</value>
+   </Item>
+   <Item type="Filter Value" id="5675E9B184DC4A1398EE0C25FA8A4654" action="add">
+    <filter>A41</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>7552</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="15012FBB13744F30B7A1EF3249204890" action="add">
+    <filter>A42</filter>
+    <label xml:lang="en">Low Voltage HRC fuse base</label>
+    <sort_order>7680</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000067</value>
+   </Item>
+   <Item type="Filter Value" id="F3A5765A569F475D99B9B4B91F6D5343" action="add">
+    <filter>A43</filter>
+    <label xml:lang="en">Low Voltage HRC fuse base</label>
+    <sort_order>7808</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000067</value>
+   </Item>
+   <Item type="Filter Value" id="A64255686BEE47FFBE5BA5105DA1B93E" action="add">
+    <filter>A44</filter>
+    <label xml:lang="en">Low Voltage HRC fuse base</label>
+    <sort_order>7936</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000067</value>
+   </Item>
+   <Item type="Filter Value" id="35D4FA9E80684918A4E0BDF908DC11A8" action="add">
+    <filter>A49</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>8064</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="DB6C4F91EC334CBB979844701D24E641" action="add">
+    <filter>A51</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>8192</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="54A42EA7BC2247558AC58CF2874EC4DA" action="add">
+    <filter>A52</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>8320</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="2DA7B1C07A904499A145CF7D393B7FF3" action="add">
+    <filter>A55</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>8576</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="B61B971BB6834DAAB2FC5F58765B2C0A" action="add">
+    <filter>A56</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>8704</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="AA82581B38764AB5AEAEF7608D81C0BC" action="add">
+    <filter>A57</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>8832</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="3C264787301540869121309D214B8694" action="add">
+    <filter>A58</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>8960</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="5BC553C08FB4427FBE505E8EE17A816F" action="add">
+    <filter>A63</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>9088</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="E2846DA657454FA1A30DC3BE53011874" action="add">
+    <filter>A64</filter>
+    <label xml:lang="en">Miniature fuse holder</label>
+    <sort_order>9216</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000036</value>
+   </Item>
+   <Item type="Filter Value" id="58E3F7EE382845039E97F595DD751C3B" action="add">
+    <filter>A65</filter>
+    <label xml:lang="en">Miniature fuse</label>
+    <sort_order>9344</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000035</value>
+   </Item>
+   <Item type="Filter Value" id="8BB9CBE3AEE646D2BF7F6E36D64B7351" action="add">
+    <filter>A68</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>9472</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="8D77B7FFEC3E4B1D9F191B89CEDC5AE8" action="add">
+    <filter>A69</filter>
+    <label xml:lang="en">Holder for cylindrical fuse</label>
+    <sort_order>9600</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC002705</value>
+   </Item>
+   <Item type="Filter Value" id="2C2CB45563E94959A89A6D8FA8DB8CE6" action="add">
+    <filter>A70</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>9728</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="CB582ACCF60C424992D258597829C99D" action="add">
+    <filter>A71</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>9856</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="BED85DEC537C49DC83C81E340F0BDC00" action="add">
+    <filter>A73</filter>
+    <label xml:lang="en">Feed-through terminal block</label>
+    <sort_order>9984</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000897</value>
+   </Item>
+   <Item type="Filter Value" id="6986D46E2C0C487EB8E776B26BEC2A36" action="add">
+    <filter>A75</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>10112</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="BC6828A67D7F42FCBCFC96AB6CE829D8" action="add">
+    <filter>A78</filter>
+    <label xml:lang="en">Low Voltage HRC fuse base</label>
+    <sort_order>10240</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000067</value>
+   </Item>
+   <Item type="Filter Value" id="D0D446B272B24F82A606B5DBEB944407" action="add">
+    <filter>A79</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>10368</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="F17ED744166543EA85531083F9CB00DC" action="add">
+    <filter>A82</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>10496</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="3CE586591A9B4E889F5B34E3084A5089" action="add">
+    <filter>A84</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>10624</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="DE3473238D70449CACE0FFF82F95031D" action="add">
+    <filter>A85</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>10752</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="300E69C92004422583B7DFBBC9449FAC" action="add">
+    <filter>B07</filter>
+    <label xml:lang="en">Surge protection device for power supply systems</label>
+    <sort_order>10880</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000941</value>
+   </Item>
+   <Item type="Filter Value" id="E2DE07C4023E4AA38DADAA0D61EC37C2" action="add">
+    <filter>A90</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>11008</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+   <Item type="Filter Value" id="B06942188A6347A89610E93F3AF03CA5" action="add">
+    <filter>A96</filter>
+    <label xml:lang="en">Surge protection device for power supply systems</label>
+    <sort_order>11136</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000941</value>
+   </Item>
+   <Item type="Filter Value" id="8278974380B2467EA10B495C8BAB554E" action="add">
+    <filter>A98</filter>
+    <label xml:lang="en">Surge protection device for power supply systems</label>
+    <sort_order>11392</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000941</value>
+   </Item>
+   <Item type="Filter Value" id="13A208938C3743178B8DEC5057D47E62" action="add">
+    <filter>A00</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>11520</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="892159940DE3424D8C6C116850742A2C" action="add">
+    <filter>A20</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>11648</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="5551609460DC46D59E1596202969940D" action="add">
+    <filter>A21</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>11776</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="A730A3684DAE46C585DFAC0625C51FA9" action="add">
+    <filter>A22</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>11904</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="D13B58C575384DB5A222ED0EEEC449A5" action="add">
+    <filter>A36</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12032</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="EDFA6F9E0193436E95D15072089F0338" action="add">
+    <filter>A37</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12160</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="7B50CB529C6349A1B118046103DDB846" action="add">
+    <filter>A45</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12288</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="598310B42C2D418DBF95A54FADB664BE" action="add">
+    <filter>A46</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12416</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="0D2C0201B12E4451A8EC5F373AE5C122" action="add">
+    <filter>A47</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12544</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="9B365B72D77147F78E543A027EFEDE43" action="add">
+    <filter>A48</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12672</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="627D35C9B8D84BB19496D6181D53938F" action="add">
+    <filter>A50</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12800</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="FD71F450A3DC4B54B30A351ECE4E90D5" action="add">
+    <filter>A53</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12928</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="2D71E615DB6E495EAD914070C0682B4F" action="add">
+    <filter>A59</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13056</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="1B4541BBBD4244C985149D4A849DE01C" action="add">
+    <filter>A60</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13184</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="5F69D0D0C3554AC69657A224112AEB7B" action="add">
+    <filter>A61</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13312</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="08CB5CE479C54DC4A9841668E02E544F" action="add">
+    <filter>A62</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13440</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="1C5805006490499BB2FDB6AEADA5C182" action="add">
+    <filter>A66</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13568</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="09F7AEFA232241CBAE968920F379934F" action="add">
+    <filter>A67</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13696</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="F082D0702F644B9DB1B878E182C01DE0" action="add">
+    <filter>A72</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13824</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="56F6B50753DC4353A7AAAA189AE1AAA3" action="add">
+    <filter>A74</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13952</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="FDA40A3E8A754D1695BB3E9EE07B36C4" action="add">
+    <filter>A76</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14080</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="A77762612A01440292F8D49958151FEB" action="add">
+    <filter>A77</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14208</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="BC4BCC37EBDB4FFF8AA5BCE6895B3160" action="add">
+    <filter>A80</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14336</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="89C8401922A94AF3AC8E9C0EE913F7A6" action="add">
+    <filter>A81</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14464</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="1DAB79E736C84E2EBB764D7B802D0A0D" action="add">
+    <filter>A83</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14592</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="F46F881931C443EDB4094F2EB9B9DB18" action="add">
+    <filter>A86</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14720</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="8D9B68A720FB40EFAEA853987367FEAA" action="add">
+    <filter>A87</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14848</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="49C6EEECCFA3429A8A14F24721A71D32" action="add">
+    <filter>A88</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14976</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="72D9671B1D204E2DB7BD5EF7C3A51D38" action="add">
+    <filter>A91</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15104</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="313F3662B77D4E3195450D2CDB5507D1" action="add">
+    <filter>A92</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15232</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="2CCFF04C11194729A9A3618E5654756C" action="add">
+    <filter>A93</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15360</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="EF39B5D1AFB04B49A59127D3677AE03C" action="add">
+    <filter>A94</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15488</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="F8E7B738F84B46E1846B4D267A7E542E" action="add">
+    <filter>A95</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15616</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="C2378EE184814642AA61C076745C9B9D" action="add">
+    <filter>A99</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15744</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="C7CA75DFF555478EA57B5B2CFD2DB066" action="add">
+    <filter>B00</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15872</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="E131A547180B4728BAD672909721C782" action="add">
+    <filter>B01</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16000</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="8E67821365B643C2A812260D208D18E7" action="add">
+    <filter>B02</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16128</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="8A6ED2B22A114073BCC4E05AE64F72EC" action="add">
+    <filter>B03</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16256</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000000</value>
+   </Item>
+   <Item type="Filter Value" id="B386442299A143AB9160E2A006236101" action="add">
+    <filter>B21</filter>
+    <label xml:lang="en">Low Voltage HRC fuse</label>
+    <sort_order>16384</sort_order>
+    <source_id keyed_name="MRN_ETIM_Class" type="List">DCC8C27CBF1B4C16B11E58EE451FF6BC</source_id>
+    <value>EC000055</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

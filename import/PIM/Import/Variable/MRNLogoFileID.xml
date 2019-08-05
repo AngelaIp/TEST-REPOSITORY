@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="Variable" id="3563F02D5F4444B4AC9F6E8D7F81358F" action="add">
+  <default_value>M-Logo</default_value>
+  <name>MRNLogoFileID</name>
+ </Item>
+</AML>

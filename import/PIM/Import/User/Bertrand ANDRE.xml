@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="User" id="BA7F24372322409597C33829A346ECE4" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Bertrand.ANDRE@mersen.com</email>
+  <last_login_date>2019-03-21T05:36:50</last_login_date>
+  <login_name>bandre</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Bertrand ANDRE" type="Identity">C1DC9C15EBDD4AE6A9E9CD5B17AAEBE1</owned_by_id>
+  <first_name>Bertrand</first_name>
+  <last_name>ANDRE</last_name>
+  <Relationships>
+   <Item type="Alias" id="CB65CB45C14A433EBEF9CB0C067D151D" action="add">
+    <from_date>2018-07-30T12:28:08</from_date>
+    <related_id keyed_name="Bertrand ANDRE" type="Identity">C1DC9C15EBDD4AE6A9E9CD5B17AAEBE1</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Bertrand ANDRE" type="User">BA7F24372322409597C33829A346ECE4</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

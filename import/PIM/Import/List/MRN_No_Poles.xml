@@ -1,0 +1,86 @@
+﻿<AML>
+ <Item type="List" id="8C389E05FD164DA691A2AE545BE46864" action="add">
+  <description>Number of poles</description>
+  <name>MRN_No_Poles</name>
+  <Relationships>
+   <Item type="Value" id="E397DE54FAF9476D81AE770582A8D927" action="add">
+    <label xml:lang="en">1-Pole</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>1-Pole</value>
+   </Item>
+   <Item type="Value" id="7F7FECD239D5461BAD9C7DC1D1036367" action="add">
+    <label xml:lang="en">1-Pole+N</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>1-Pole+N</value>
+   </Item>
+   <Item type="Value" id="DD3900B8E2AB4B3692457467DBA67242" action="add">
+    <label xml:lang="en">2 x 3-Pole</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>2 x 3-Pole</value>
+   </Item>
+   <Item type="Value" id="9C68F4B1C5D047C295939EFF19E52069" action="add">
+    <label xml:lang="en">2-Pole</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>2-Pole</value>
+   </Item>
+   <Item type="Value" id="1097CD27D2A24B7E8112B9DFDDBE7B70" action="add">
+    <label xml:lang="en">2-Pole+N</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>2-Pole+N</value>
+   </Item>
+   <Item type="Value" id="A9E45B2BA48D48B6895705CCDA481090" action="add">
+    <label xml:lang="en">3-Pole</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>3-Pole</value>
+   </Item>
+   <Item type="Value" id="1BAA32AFDF85400B86BAB76C789F1858" action="add">
+    <label xml:lang="en">3-Pole+N</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>3-Pole+N</value>
+   </Item>
+   <Item type="Value" id="68C0323C38F14B46A832968ACF8E8AB9" action="add">
+    <label xml:lang="en">4-Pole</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>4-Pole</value>
+   </Item>
+   <Item type="Value" id="D81A21E0E25442138BFBBA6C7954B38E" action="add">
+    <label xml:lang="en">5-Pole</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>5-Pole</value>
+   </Item>
+   <Item type="Value" id="4632E2289F9B47BFB12DA0DAC904A927" action="add">
+    <label xml:lang="en">6-Pole</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>6-Pole</value>
+   </Item>
+   <Item type="Value" id="4CBE6909CE7A4CCBBCF2F83BF1676A06" action="add">
+    <label xml:lang="en">8-Pole</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>8-Pole</value>
+   </Item>
+   <Item type="Value" id="407EDC93416A43CDBE884DB8342FC4BD" action="add">
+    <label xml:lang="en">Adder</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>Adder</value>
+   </Item>
+   <Item type="Value" id="DE0D6043505B4605A60A32C656C8E759" action="add">
+    <label xml:lang="en">N</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_No_Poles" type="List">8C389E05FD164DA691A2AE545BE46864</source_id>
+    <value>N</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

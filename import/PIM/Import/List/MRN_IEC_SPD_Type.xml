@@ -1,0 +1,67 @@
+﻿<AML>
+ <Item type="List" id="F786907531344C129D603911489F6EC5" action="add">
+  <name>MRN_IEC_SPD_Type</name>
+  <Relationships>
+   <Item type="Value" id="F31CC4C4008E480D93C76ADB35F24883" action="add">
+    <label xml:lang="en">Type 1 / Class I</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 1 / Class I</value>
+   </Item>
+   <Item type="Value" id="9770C7D938F149D98B6EF51A40EFAB8D" action="add">
+    <label xml:lang="en">Type 1+2 &amp; Type 2 to IEC</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 1+2 &amp; Type 2 to IEC</value>
+   </Item>
+   <Item type="Value" id="440292C0EA964C92A8B30283B5C615F1" action="add">
+    <label xml:lang="en">Type 1+2 / Class I+II</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 1+2 / Class I+II</value>
+   </Item>
+   <Item type="Value" id="A6FB18B8BA7047D99854D34E58FAEE81" action="add">
+    <label xml:lang="en">Type 1+2 IEC 61643-31, Type 1+2 EN 50539-11</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 1+2 IEC 61643-31, Type 1+2 EN 50539-11</value>
+   </Item>
+   <Item type="Value" id="6D76F0271D5644A0A48FA2AB185524A7" action="add">
+    <label xml:lang="en">Type 2 / Class II</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 2 / Class II</value>
+   </Item>
+   <Item type="Value" id="0A204839FDE0451B93A2DD6F1600B0E4" action="add">
+    <label xml:lang="en">Type 2 EN 50539-11; Type 2 UL 1449 </label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 2 EN 50539-11; Type 2 UL 1449 </value>
+   </Item>
+   <Item type="Value" id="4AF3DCB74F274358BD8DB88D7FC2D202" action="add">
+    <label xml:lang="en">Type 2 IEC 61643-31; Type 2 EN 50539-11</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 2 IEC 61643-31; Type 2 EN 50539-11</value>
+   </Item>
+   <Item type="Value" id="42143BAA50774F0B94D55D77EE208540" action="add">
+    <label xml:lang="en">Type 2 IEC 61643-31; Type 2 EN 50539-11; Type 2 UL 1449</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 2 IEC 61643-31; Type 2 EN 50539-11; Type 2 UL 1449</value>
+   </Item>
+   <Item type="Value" id="099F377B0047440FB3F43D434F16CCB4" action="add">
+    <label xml:lang="en">Type 2+3</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 2+3</value>
+   </Item>
+   <Item type="Value" id="2887F97EA2DC4F2DA89A76BB595AE446" action="add">
+    <label xml:lang="en">Type 2+3 / Class II+III</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_IEC_SPD_Type" type="List">F786907531344C129D603911489F6EC5</source_id>
+    <value>Type 2+3 / Class II+III</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -34,13 +34,13 @@ if (!height) {
 }
 params.formId = top.aras.getItemProperty(form, 'id');
 
-var options = {
-	dialogWidth: width,
-	dialogHeight: height
-};
+//6/26/2019 to fix IR-079488 [Mersen_US Upgrade] %defaultModal% replacement in the methods
+params.dialogWidth = width;
+params.dialogHeight = height;
+params.content = 'ShowFormAsADialog.html';
+var topWnd = aras.getMostTopWindowWithAras(window);
 
-return top.aras.modalDialogHelper.show('DefaultModal', window, params, options, 'ShowFormAsADialog.html');
-]]></method_code>
+return (topWnd.main || topWnd).ArasModules.Dialog.show('iframe', params).promise;]]></method_code>
   <method_type>JavaScript</method_type>
   <name>FE_SelectConfiguration</name>
  </Item>

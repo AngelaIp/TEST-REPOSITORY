@@ -1,0 +1,13 @@
+﻿<AML>
+ <Item type="List" id="AA23398AAEEF4E6B8B4AD72F104E23E0" action="add">
+  <name>MRN_Export_Item_Types</name>
+  <Relationships>
+   <Item type="Value" id="445DB1AFB5D2463A910F64D181C37A85" action="add">
+    <label xml:lang="en">Product Item</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Export_Item_Types" type="List">AA23398AAEEF4E6B8B4AD72F104E23E0</source_id>
+    <value>Product Item</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

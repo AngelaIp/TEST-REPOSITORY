@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="List" id="31FAF8DA52E3423C9F4DF465C7BF15D0" action="add">
+  <description>Resistance Units</description>
+  <name>MRN_Resistance_Units</name>
+  <Relationships>
+   <Item type="Value" id="C5DB6B00821E46EF83AFDD07FC5016B8" action="add">
+    <label xml:lang="en">Ohm</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Resistance_Units" type="List">31FAF8DA52E3423C9F4DF465C7BF15D0</source_id>
+    <value>Ohm</value>
+   </Item>
+   <Item type="Value" id="742F5A7340EF46B196812E82CBA3911D" action="add">
+    <label xml:lang="en">mOhm</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Resistance_Units" type="List">31FAF8DA52E3423C9F4DF465C7BF15D0</source_id>
+    <value>mOhm</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="FACD483D3F654CC99F6FB7A1650C2637" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>jason.hsu@us.mersen.com</email>
+  <last_login_date>2018-05-24T10:30:12</last_login_date>
+  <login_name>jhsu</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id>9B11C627CD794B1A911CC44F616D32A7</owned_by_id>
+  <working_directory>U:\_sm.pub\FCP Quotes\2017\10-12 Mathworks</working_directory>
+  <first_name>jason</first_name>
+  <last_name>Hsu</last_name>
+  <Relationships>
+   <Item type="Alias" id="97FF2171CC3448D8850E6E4C3F27604C" action="add">
+    <from_date>2016-04-19T15:40:50</from_date>
+    <related_id keyed_name="jason Hsu" type="Identity">CF3C6B183D664320937ECBC1980A418E</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="jason Hsu" type="User">FACD483D3F654CC99F6FB7A1650C2637</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

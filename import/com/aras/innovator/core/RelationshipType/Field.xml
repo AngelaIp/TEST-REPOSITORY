@@ -28,7 +28,6 @@
     <label_plural xml:lang="en">Fields</label_plural>
     <large_icon>../images/Properties.svg</large_icon>
     <open_icon>../images/Properties.svg</open_icon>
-    <permission_id keyed_name="2F3872148EB543D69AE5C6C47063C5FD" type="Permission">2F3872148EB543D69AE5C6C47063C5FD</permission_id>
     <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
     <show_parameters_tab>1</show_parameters_tab>
     <structure_view>tabs on</structure_view>

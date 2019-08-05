@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="EC09ADB40CBE4C47B4B03E7221A76D22" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>lew.silecky@us.mersen.com</email>
+  <login_name>lsilecky</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id>F7FB8230BE344F83A4EE3100B4470F59</owned_by_id>
+  <first_name>Lew</first_name>
+  <last_name>Silecky</last_name>
+  <Relationships>
+   <Item type="Alias" id="A6395F150AA34CE6BD80E2446C2266EE" action="add">
+    <from_date>2016-04-19T15:40:51</from_date>
+    <related_id keyed_name="Lew Silecky" type="Identity">2EE7532488A64141AF5AC3A01076FFFD</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Lew Silecky" type="User">EC09ADB40CBE4C47B4B03E7221A76D22</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

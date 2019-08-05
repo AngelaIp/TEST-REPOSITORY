@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Action" id="7C889A21FE9A4C2F8B42208831F01A48" action="add">
+  <item_query>&lt;Item type="{@type}" id="{@id}" levels= "1" action="get" /&gt;</item_query>
+  <label xml:lang="en">Sort</label>
+  <location>client</location>
+  <method keyed_name="mrn_sortListItems" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>mrn_sortListItems</name>
+   </Item>
+  </method>
+  <target>none</target>
+  <type>item</type>
+  <name>mrn_sortListItems</name>
+ </Item>
+</AML>

@@ -1,0 +1,26 @@
+﻿<AML>
+ <Item type="List" id="96193658CD2F4861B666CC9EDBB87AD1" action="add">
+  <description>Ampere Units</description>
+  <name>MRN_Ampere_Units</name>
+  <Relationships>
+   <Item type="Value" id="2FE25B3A52064193A0842F68D5F71066" action="add">
+    <label xml:lang="en">kA</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Ampere_Units" type="List">96193658CD2F4861B666CC9EDBB87AD1</source_id>
+    <value>kA</value>
+   </Item>
+   <Item type="Value" id="E11F456E905E47F8BAD7DE718040D5B9" action="add">
+    <label xml:lang="en">A</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Ampere_Units" type="List">96193658CD2F4861B666CC9EDBB87AD1</source_id>
+    <value>A</value>
+   </Item>
+   <Item type="Value" id="63DA6A57DF52420D8369FC084D9E6FB2" action="add">
+    <label xml:lang="en">mA</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Ampere_Units" type="List">96193658CD2F4861B666CC9EDBB87AD1</source_id>
+    <value>mA</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

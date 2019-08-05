@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="List" id="32D293CB492746428E2364D1F73B8EF9" action="add">
+  <name>MRN_Export_Types</name>
+  <Relationships>
+   <Item type="Value" id="AD21975D7C074514AD1AF4DE4F0E8478" action="add">
+    <label xml:lang="en">Product Item Level</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Export_Types" type="List">32D293CB492746428E2364D1F73B8EF9</source_id>
+    <value>Product Item Level</value>
+   </Item>
+   <Item type="Value" id="0AC64C8376BB4D07B0BB218CBF2903C3" action="add">
+    <label xml:lang="en">Other (Manual Config)</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Export_Types" type="List">32D293CB492746428E2364D1F73B8EF9</source_id>
+    <value>Other</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

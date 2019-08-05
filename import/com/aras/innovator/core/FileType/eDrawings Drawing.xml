@@ -1,8 +1,0 @@
-﻿<AML>
- <Item type="FileType" id="E0A48BA40E094D5CA0F2AFCEB38C1BAA" action="add">
-  <description>SolidWorks eDrawings EDRW Drawing</description>
-  <extension>edrw</extension>
-  <mimetype>application/octet-stream</mimetype>
-  <name>eDrawings Drawing</name>
- </Item>
-</AML>

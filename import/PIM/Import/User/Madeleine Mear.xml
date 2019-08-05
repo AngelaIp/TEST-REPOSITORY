@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="23AA4D89428F409FA7D59C6A0806A093" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>madeleine.mear@mersen.com</email>
+  <last_login_date>2019-05-16T11:46:58</last_login_date>
+  <login_name>mmea</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Madeleine Mear" type="Identity">8863D37F276845B5A3296B3C32ECF646</owned_by_id>
+  <working_directory>C:\Users\mmea\Downloads</working_directory>
+  <first_name>Madeleine</first_name>
+  <last_name>Mear</last_name>
+  <Relationships>
+   <Item type="Alias" id="37108FBBBACB4AFCBD74F7FAC7D88F7A" action="add">
+    <from_date>2016-04-14T11:32:58</from_date>
+    <related_id keyed_name="Madeleine Mear" type="Identity">8863D37F276845B5A3296B3C32ECF646</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Madeleine Mear" type="User">23AA4D89428F409FA7D59C6A0806A093</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

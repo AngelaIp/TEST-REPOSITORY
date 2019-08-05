@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="3C948CA698994D2A9A1F26D36E72F3CE" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>dawn.buck@mersen.com</email>
+  <login_name>dbuck</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Dawn Buck" type="Identity">D4E3968AE8B949C4AD51A1986FE07F12</owned_by_id>
+  <first_name>Dawn</first_name>
+  <last_name>Buck</last_name>
+  <Relationships>
+   <Item type="Alias" id="91E02C0AAAA040A7BFFF11612CC30C35" action="add">
+    <from_date>2016-08-19T07:59:19</from_date>
+    <related_id keyed_name="Dawn Buck" type="Identity">D4E3968AE8B949C4AD51A1986FE07F12</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Dawn Buck" type="User">3C948CA698994D2A9A1F26D36E72F3CE</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

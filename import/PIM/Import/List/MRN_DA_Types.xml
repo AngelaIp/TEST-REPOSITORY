@@ -1,0 +1,62 @@
+﻿<AML>
+ <Item type="List" id="1E8785C2A2794F9E823FEF4F97C45E96" action="add">
+  <description>Digital Asset Types</description>
+  <name>MRN_DA_Types</name>
+  <Relationships>
+   <Item type="Value" id="93A58497CFA7417DAED94F18F71E075E" action="add">
+    <label xml:lang="en">CAD Model</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_DA_Types" type="List">1E8785C2A2794F9E823FEF4F97C45E96</source_id>
+    <value>CAD_Model</value>
+   </Item>
+   <Item type="Value" id="A78082D674F6428682E75013C9D60EAC" action="add">
+    <label xml:lang="en">Compliance Form</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_DA_Types" type="List">1E8785C2A2794F9E823FEF4F97C45E96</source_id>
+    <value>Compliance_Form</value>
+   </Item>
+   <Item type="Value" id="D22595AE13924BF1A4C94E3CD66AC21C" action="add">
+    <label xml:lang="en">Curve</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_DA_Types" type="List">1E8785C2A2794F9E823FEF4F97C45E96</source_id>
+    <value>Curve</value>
+   </Item>
+   <Item type="Value" id="58C06E42F164471D9355345DA7BF2C5A" action="add">
+    <label xml:lang="en">Datasheet</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_DA_Types" type="List">1E8785C2A2794F9E823FEF4F97C45E96</source_id>
+    <value>Datasheet</value>
+   </Item>
+   <Item type="Value" id="8A75220A49AC4FED8924FC19879D72E6" action="add">
+    <label xml:lang="en">Document</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_DA_Types" type="List">1E8785C2A2794F9E823FEF4F97C45E96</source_id>
+    <value>Document</value>
+   </Item>
+   <Item type="Value" id="2E464169B7884A6DA4B622E477FA8731" action="add">
+    <label xml:lang="en">Drawing</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_DA_Types" type="List">1E8785C2A2794F9E823FEF4F97C45E96</source_id>
+    <value>Drawing</value>
+   </Item>
+   <Item type="Value" id="22F7630019684C7C852EECDC75B00974" action="add">
+    <label xml:lang="en">Logo</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_DA_Types" type="List">1E8785C2A2794F9E823FEF4F97C45E96</source_id>
+    <value>Logo</value>
+   </Item>
+   <Item type="Value" id="D378BC21E15441FDA0D6C4BE05049283" action="add">
+    <label xml:lang="en">Photo</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_DA_Types" type="List">1E8785C2A2794F9E823FEF4F97C45E96</source_id>
+    <value>Photo</value>
+   </Item>
+   <Item type="Value" id="8708CAD042BD4D75B06255CC773EB477" action="add">
+    <label xml:lang="en">Other</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_DA_Types" type="List">1E8785C2A2794F9E823FEF4F97C45E96</source_id>
+    <value>Other</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

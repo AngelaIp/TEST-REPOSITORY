@@ -1,0 +1,73 @@
+﻿<AML>
+ <Item type="List" id="88A85208ABF24C71A1CE39099AF82BA9" action="add">
+  <description>Switchability Values</description>
+  <name>MRN_Switchability</name>
+  <Relationships>
+   <Item type="Value" id="3836712DA13D48AEA8735D06FBF99D36" action="add">
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value />
+   </Item>
+   <Item type="Value" id="E066750B27B440EE883EEBA6CC2259F8" action="add">
+    <label xml:lang="en">1 x triple pole</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>1 x triple pole</value>
+   </Item>
+   <Item type="Value" id="1D6B0E7C71C141C989BB8AC8AB1E49EC" action="add">
+    <label xml:lang="en">1 x triple pole, 3 x single pole</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>1 x triple pole, 3 x single pole</value>
+   </Item>
+   <Item type="Value" id="9CE10212BDE849C895E59BA3A2650FAE" action="add">
+    <label xml:lang="en">1-,2-,3-,4-pole switching</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>1-,2-,3-,4-pole switching</value>
+   </Item>
+   <Item type="Value" id="9385C3BF4C8B4085B97861831518C956" action="add">
+    <label xml:lang="en">1-,2-,4-pole switching</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>1-,2-,4-pole switching</value>
+   </Item>
+   <Item type="Value" id="394D4286CBB74FD8A319F5DDF0903EE1" action="add">
+    <label xml:lang="en">1-,3-pole switching</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>1-,3-pole switching</value>
+   </Item>
+   <Item type="Value" id="51C29CD17E29407A8A2C0E5FF6C1735E" action="add">
+    <label xml:lang="en">2x1 x triple pole, 2x3 x single pole</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>2x1 x triple pole, 2x3 x single pole</value>
+   </Item>
+   <Item type="Value" id="32B0B13758D8453ABB0BDD320ABEF4EF" action="add">
+    <label xml:lang="en">3 x single pole</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>3 x single pole</value>
+   </Item>
+   <Item type="Value" id="75CAA25A0772439EBE9598EC5D477E55" action="add">
+    <label xml:lang="en">3-,4-pole switching</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>3-,4-pole switching</value>
+   </Item>
+   <Item type="Value" id="778AD8915D8D40BB8EFEEC6166D7AA63" action="add">
+    <label xml:lang="en">4 poles switching</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>4 poles switching</value>
+   </Item>
+   <Item type="Value" id="19C19EFFCB444823B47AAD8E1D578FC8" action="add">
+    <label xml:lang="en">Triple pole switching</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Switchability" type="List">88A85208ABF24C71A1CE39099AF82BA9</source_id>
+    <value>Triple pole switching</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

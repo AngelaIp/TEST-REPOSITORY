@@ -1,0 +1,182 @@
+﻿<AML>
+ <Item type="List" id="E4586AE1A1914BC1B8DA06098DBDFD1E" action="add">
+  <description>ETIM MIME Descriptions Codes </description>
+  <name>MRN_MIME_Descriptions</name>
+  <Relationships>
+   <Item type="Value" id="EDE84A2909F44C1684C938A9D658FAB9" action="add">
+    <label xml:lang="en">2D Dimensioned drawing (.pdf .dxf)</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD12</value>
+   </Item>
+   <Item type="Value" id="14A0B8D91E88402BA77C6390CB894F12" action="add">
+    <label xml:lang="en">3D Drawing / BIM object (.cad  .dwg  .step  .stp)</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD37</value>
+   </Item>
+   <Item type="Value" id="4236E0A3ACDF444A88D99D463DD090E3" action="add">
+    <label xml:lang="en">Ambient Product picture(Application or proctucts+accessories) </label>
+    <sort_order>25</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD20</value>
+   </Item>
+   <Item type="Value" id="183A7CA72E91483FBA1A62280F3D362E" action="add">
+    <label xml:lang="en">Application Guideline (AN)</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD32</value>
+   </Item>
+   <Item type="Value" id="6830AF113FAD42E58ECDC720085A49C8" action="add">
+    <label xml:lang="en">Brochure_FactSheet_Flyer_LineCard_TSheet_TTopic_WPaper</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD41</value>
+   </Item>
+   <Item type="Value" id="B19787D2F1C84D4C8BE9B9B865081158" action="add">
+    <label xml:lang="en">Certificate/Compliance form (COM)</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD09</value>
+   </Item>
+   <Item type="Value" id="E4082D64B90F4F52B14E283F5788743F" action="add">
+    <label xml:lang="en">Chart_Table_Instruction Sheet (CHT-INS)</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD14</value>
+   </Item>
+   <Item type="Value" id="20A04473DA6D4D90A3203FD1BCC5F139" action="add">
+    <label xml:lang="en">Declaration CoC (Certificate of Conformity for CPR) (COM)</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD50</value>
+   </Item>
+   <Item type="Value" id="40E2B45398EA4EF8919E316FF52EBB15" action="add">
+    <label xml:lang="en">Declaration DOC CE (Declaration of conformity CE) (COM)</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD52</value>
+   </Item>
+   <Item type="Value" id="B5C0FFB880FF4C70870FAC1592658023" action="add">
+    <label xml:lang="en">Declaration EPD (Environmental Product Declaration) (COM)</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD54</value>
+   </Item>
+   <Item type="Value" id="90E3EDEBCD2C4A3EA6B6A840BFB1AEF4" action="add">
+    <label xml:lang="en">Declaration for preferential origin status</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD35</value>
+   </Item>
+   <Item type="Value" id="42EF61921446472D9EA33A0609898536" action="add">
+    <label xml:lang="en">Declaration RoHS (COM)</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD49</value>
+   </Item>
+   <Item type="Value" id="11D716425012402993B59FE5E64CDF4A" action="add">
+    <label xml:lang="en">Environment label</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD13</value>
+   </Item>
+   <Item type="Value" id="E4E2337418E54FCF80A9EFE80A76AA9E" action="add">
+    <label xml:lang="en">Logo (1) (Standards-Compliance-Norms)</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD17</value>
+   </Item>
+   <Item type="Value" id="F3EEC9D842CB4891BAD85D9DBEECFD0E" action="add">
+    <label xml:lang="en">Logo (4c) (Company-Product)</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD18</value>
+   </Item>
+   <Item type="Value" id="D1DF5CBE11064D5B883E257B8EA56A83" action="add">
+    <label xml:lang="en">Management, operation and maintenance document (INS)</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD38</value>
+   </Item>
+   <Item type="Value" id="19C80240023B42FD94AF0576F21F6C28" action="add">
+    <label xml:lang="en">Mounting instruction (INS)</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD21</value>
+   </Item>
+   <Item type="Value" id="E81472A7756A4171AF896A8029EFDC16" action="add">
+    <label xml:lang="en">Others</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD99</value>
+   </Item>
+   <Item type="Value" id="F03EE7AA313E409CAD1CA8887AA13F18" action="add">
+    <label xml:lang="en">Performance-Data_Curve</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>PDC</value>
+   </Item>
+   <Item type="Value" id="07A383C74D9C425C80F79B10A4B5FFB6" action="add">
+    <label xml:lang="en">Pictogram/Icon</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD48</value>
+   </Item>
+   <Item type="Value" id="401D7975E1C14072A7197B59D4F23A3C" action="add">
+    <label xml:lang="en">Product data sheet (DS)</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD22</value>
+   </Item>
+   <Item type="Value" id="659D8D4DB9E84444BF960B30005630D8" action="add">
+    <label xml:lang="en">Product picture back view</label>
+    <sort_order>220</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD23</value>
+   </Item>
+   <Item type="Value" id="8FC7443B70354FDBA8C65A44E995D4AF" action="add">
+    <label xml:lang="en">Product picture front view</label>
+    <sort_order>230</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD26</value>
+   </Item>
+   <Item type="Value" id="71EED18288AB4A84B096BDC213963752" action="add">
+    <label xml:lang="en">Product picture sloping</label>
+    <sort_order>240</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD27</value>
+   </Item>
+   <Item type="Value" id="38A2140E82FE43EC85E2E99E622BCE8A" action="add">
+    <label xml:lang="en">Products (group of) picture</label>
+    <sort_order>250</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD01</value>
+   </Item>
+   <Item type="Value" id="6369C921869D407C994CF9F555675A90" action="add">
+    <label xml:lang="en">Safety data sheet</label>
+    <sort_order>260</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD03</value>
+   </Item>
+   <Item type="Value" id="C0E54E85BFF44A45BC413DE36D8AD1C2" action="add">
+    <label xml:lang="en">Test approval</label>
+    <sort_order>270</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD33</value>
+   </Item>
+   <Item type="Value" id="987714EDDD874A2A9CF8E6BF54460FA4" action="add">
+    <label xml:lang="en">Warranty (WR)</label>
+    <sort_order>280</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD56</value>
+   </Item>
+   <Item type="Value" id="0722BD1CC6B143768D9FD15ACA525976" action="add">
+    <label xml:lang="en">Wiring diagram (INS)</label>
+    <sort_order>290</sort_order>
+    <source_id keyed_name="MRN_MIME_Descriptions" type="List">E4586AE1A1914BC1B8DA06098DBDFD1E</source_id>
+    <value>MD34</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

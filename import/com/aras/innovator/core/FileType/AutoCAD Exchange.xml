@@ -1,8 +1,0 @@
-﻿<AML>
- <Item type="FileType" id="CA866D12F1F44A87A2D2C0EB9C488D08" action="add">
-  <description>Autodesk AutoCAD DXF Exchange</description>
-  <extension>dxf</extension>
-  <mimetype>application/dxf</mimetype>
-  <name>AutoCAD Exchange</name>
- </Item>
-</AML>

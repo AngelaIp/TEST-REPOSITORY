@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="0E7F25598EE44D46AEBFDA73A4190CC4" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>kim.walters@mersen.com</email>
+  <last_login_date>2019-04-10T15:19:28</last_login_date>
+  <login_name>kwalters</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Kim Walters" type="Identity">6790221172414D22AB06F617CDD0FA77</owned_by_id>
+  <working_directory>C:\Users\kwalters\Desktop</working_directory>
+  <first_name>Kim</first_name>
+  <last_name>Walters</last_name>
+  <Relationships>
+   <Item type="Alias" id="2EC6113F077748639C84FD4406907774" action="add">
+    <from_date>2016-04-14T11:32:58</from_date>
+    <related_id keyed_name="Kim Walters" type="Identity">6790221172414D22AB06F617CDD0FA77</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Kim Walters" type="User">0E7F25598EE44D46AEBFDA73A4190CC4</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

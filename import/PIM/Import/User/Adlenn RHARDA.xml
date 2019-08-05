@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="User" id="6BCDE55DA4A14077B1CEE22F897B7256" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Adlenn.RHARDA@mersen.com</email>
+  <last_login_date>2019-03-21T05:37:05</last_login_date>
+  <login_name>arharda</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Adlenn RHARDA" type="Identity">A644E0780FA24045B2CF8D47CFB518CD</owned_by_id>
+  <first_name>Adlenn</first_name>
+  <last_name>RHARDA</last_name>
+  <Relationships>
+   <Item type="Alias" id="BBB1FA5013D94D72BB9E955EB8B60A73" action="add">
+    <from_date>2018-07-30T12:24:05</from_date>
+    <related_id keyed_name="Adlenn RHARDA" type="Identity">A644E0780FA24045B2CF8D47CFB518CD</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Adlenn RHARDA" type="User">6BCDE55DA4A14077B1CEE22F897B7256</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

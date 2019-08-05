@@ -20,8 +20,13 @@ if (!window.handleItemChange) {
 }
 // +++ check if basic functionality is available
 
+
+// IR-055699 Type-ahead specific code converting
+//var propVal = el.value;
+var control = getFieldComponentByName(el.name);
+var propVal = control.getValue();
 var propNm  = el.name;
-var propVal = el.value;
+// End of fix IR-055699
 
 function getExclusionsSet(propNm) {
 	var set1 = {'select_query': 1, 'select_method': 1};

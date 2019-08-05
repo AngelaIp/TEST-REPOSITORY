@@ -1,0 +1,443 @@
+﻿<AML>
+ <Item type="Form" id="F402AF2C7BE34263B823D37292396F0C" action="add">
+  <category_form>0</category_form>
+  <description>String Builder Form</description>
+  <height>500</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>MRN_Item_I2T</name>
+  <Relationships>
+   <Item type="Body" id="AB9EC5BB7AAA4C11A15809A1F730FEAA" action="add">
+    <bg_color>#ffe4b5</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Item_I2T" type="Form">F402AF2C7BE34263B823D37292396F0C</source_id>
+    <Relationships>
+     <Item type="Field" id="3F06DD2E2A7B4B06959368DBE8F84368" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>button</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Cancel</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>642</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_stop>1</tab_stop>
+      <x>339</x>
+      <y>316</y>
+      <name>btnCancel</name>
+      <Relationships>
+       <Item type="Field Event" id="D01A6B67EEA24755BF914D2B4F8CB145" action="add">
+        <field_event>onclick</field_event>
+        <related_id keyed_name="mrn_closeDialog" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_closeDialog</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="btnCancel" type="Field">3F06DD2E2A7B4B06959368DBE8F84368</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="57332C3F5693482BA61CB9DD2DBE4FF3" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>button</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">OK</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>514</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_stop>1</tab_stop>
+      <x>218</x>
+      <y>315</y>
+      <name>btnOK</name>
+      <Relationships>
+       <Item type="Field Event" id="0B599E85455F407F9A85AED5EC899BD1" action="add">
+        <field_event>onclick</field_event>
+        <related_id keyed_name="mrn_btnUtilOK" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_btnUtilOK</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="btnOK" type="Field">57332C3F5693482BA61CB9DD2DBE4FF3</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="0D23515ACEC941FC8ABCA31CD503A8A8" action="add">
+      <border_width>0</border_width>
+      <display_length>25</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>130</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_stop>0</tab_stop>
+      <x>340</x>
+      <y>60</y>
+      <name>CONST1</name>
+     </Item>
+     <Item type="Field" id="3B9391CF1F7F457C822C09F371064592" action="add">
+      <border_width>0</border_width>
+      <display_length>50</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>258</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_stop>0</tab_stop>
+      <x>310</x>
+      <y>145</y>
+      <name>CONST2</name>
+     </Item>
+     <Item type="Field" id="9D055C17FDEE422290670494E0110812" action="add">
+      <border_width>0</border_width>
+      <display_length>25</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>898</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_stop>0</tab_stop>
+      <x>330</x>
+      <y>235</y>
+      <name>CONST3</name>
+     </Item>
+     <Item type="Field" id="5E9CF9E3C8024D89AAB58DD23A783027" action="add">
+      <border_width>0</border_width>
+      <display_length>100</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Ampere Units: </label>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>2</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_index>8</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>182</x>
+      <y>282</y>
+      <name>MRN_Ampere_Units</name>
+      <Relationships>
+       <Item type="Field Event" id="4F76812BFB7B41069399042EA8BDF016" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_break_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_break_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="MRN_Ampere_Units" type="Field">5E9CF9E3C8024D89AAB58DD23A783027</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="94BF9983C39B41998011D2192D1E56AC" action="add">
+      <border_width>0</border_width>
+      <display_length>100</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">I2t Units</label>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>770</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_index>2</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>217</x>
+      <y>31</y>
+      <name>MRN_I2t_Units</name>
+      <Relationships>
+       <Item type="Field Event" id="44339DB37ACA461F8E0B03D35095D082" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_break_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_break_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="MRN_I2t_Units" type="Field">94BF9983C39B41998011D2192D1E56AC</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="DE60F6C1A71F4EFF9AE4F70145CE78FE" action="add">
+      <border_width>0</border_width>
+      <display_length>200</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Final Output</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>386</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_stop>0</tab_stop>
+      <x>431</x>
+      <y>102</y>
+      <name>MRN_OUTPUT</name>
+     </Item>
+     <Item type="Field" id="C66A1A04AAC64D60A33451CAAE70B27B" action="add">
+      <border_width>0</border_width>
+      <display_length>100</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Time Units: </label>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>8</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_index>6</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>210</y>
+      <name>MRN_Time_Units</name>
+      <Relationships>
+       <Item type="Field Event" id="2678125372014638821D3D58710891F1" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_break_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_break_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="MRN_Time_Units" type="Field">C66A1A04AAC64D60A33451CAAE70B27B</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="DF8852EAD59040AE91FCC09238723C15" action="add">
+      <border_width>0</border_width>
+      <display_length>100</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Voltage Units: </label>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>5</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_index>4</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>186</x>
+      <y>117</y>
+      <name>MRN_Voltage_Units</name>
+      <Relationships>
+       <Item type="Field Event" id="495CC80FF2784FE48FA037046F57BC72" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_break_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_break_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="MRN_Voltage_Units" type="Field">DF8852EAD59040AE91FCC09238723C15</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="03345DFC52224717B728A18EE45A6A13" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Value 1: </label>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_index>1</tab_index>
+      <tab_stop>1</tab_stop>
+      <text_align>left</text_align>
+      <x>205</x>
+      <y>9</y>
+      <name>VALUE1</name>
+      <Relationships>
+       <Item type="Field Event" id="97199610D307494CA03C23A4D3478579" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_break_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_break_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="VALUE1" type="Field">03345DFC52224717B728A18EE45A6A13</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="B2DDDEEC0B77489E85DC3ECFD92CBFEE" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Value 2: </label>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>4</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_index>3</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>200</x>
+      <y>85</y>
+      <name>VALUE2</name>
+      <Relationships>
+       <Item type="Field Event" id="2E546D25315346E79D98B69218F66201" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_break_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_break_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="VALUE2" type="Field">B2DDDEEC0B77489E85DC3ECFD92CBFEE</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="89CE62C1895E43EABF9639ED5C1525F4" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Value 3: </label>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>7</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_index>5</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>195</x>
+      <y>175</y>
+      <name>VALUE3</name>
+      <Relationships>
+       <Item type="Field Event" id="1D1071E8489E4670A83102CFADCB69A4" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_break_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_break_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="VALUE3" type="Field">89CE62C1895E43EABF9639ED5C1525F4</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="F05CD98EE9FB47E3BAB95576672CA17D" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Value 4: </label>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1026</sort_order>
+      <source_id keyed_name="AB9EC5BB7AAA4C11A15809A1F730FEAA" type="Body">AB9EC5BB7AAA4C11A15809A1F730FEAA</source_id>
+      <tab_index>7</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>196</x>
+      <y>256</y>
+      <name>VALUE4</name>
+      <Relationships>
+       <Item type="Field Event" id="6CDC15A218B9402BAE1349A0E228AA48" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_break_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_break_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="VALUE4" type="Field">F05CD98EE9FB47E3BAB95576672CA17D</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="Form Event" id="59C9BFA9F5934548A330A648B524C3C1" action="add">
+    <form_event>onload</form_event>
+    <related_id keyed_name="mrn_loadBreakingForm" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>mrn_loadBreakingForm</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Item_I2T" type="Form">F402AF2C7BE34263B823D37292396F0C</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

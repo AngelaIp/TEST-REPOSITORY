@@ -1,9 +1,0 @@
-﻿<AML>
- <Item type="FileType" id="CD8A4F2F9666436FA3F3A1384229366E" action="add">
-  <description>AVI Movie</description>
-  <extension>avi</extension>
-  <mimetype>video/x-msvideo</mimetype>
-  <permission_id keyed_name="834AC38BC03C4A928B8685E0014A241F" type="Permission">834AC38BC03C4A928B8685E0014A241F</permission_id>
-  <name>AVI Movie</name>
- </Item>
-</AML>

@@ -1,0 +1,33 @@
+﻿<AML>
+ <Item type="MRN_Property" id="80E2530BDFF242109291E9EE7133932F" action="add">
+  <mrn_copy>0</mrn_copy>
+  <mrn_etim>0</mrn_etim>
+  <mrn_etim_range_property>0</mrn_etim_range_property>
+  <mrn_export_attribute>1</mrn_export_attribute>
+  <mrn_extract_labels>0</mrn_extract_labels>
+  <mrn_fake_ml_property>0</mrn_fake_ml_property>
+  <mrn_families>Fuses</mrn_families>
+  <mrn_form_element>GROUP_DCMIN</mrn_form_element>
+  <mrn_is_group>1</mrn_is_group>
+  <mrn_is_multi_value>0</mrn_is_multi_value>
+  <mrn_level>Level 6 - Product</mrn_level>
+  <mrn_label>DC Min. Breaking Capacity (MBC)</mrn_label>
+  <Relationships>
+   <Item type="MRN_Property_Property" id="7DC6AC4C699A4844B4CFED8CD81D668A" action="add">
+    <related_id keyed_name="mrn_dc_min_break_capacity_1" type="Property">38888648ED0D4F95940ADBBC42BC78F3</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="DC Min. Breaking Capacity (MBC)" type="MRN_Property">80E2530BDFF242109291E9EE7133932F</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="59FD25DE0445476BA8D8446A5A951F5C" action="add">
+    <related_id keyed_name="mrn_dc_min_break_capacity_2" type="Property">BE759850A70443DD929E63BEE3E009D4</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="DC Min. Breaking Capacity (MBC)" type="MRN_Property">80E2530BDFF242109291E9EE7133932F</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="218AAA757FF64E349160AA8B7CE4D43D" action="add">
+    <related_id keyed_name="mrn_dc_min_break_capacity_3" type="Property">A4AEB26EEF064715AC1C28862FC30478</related_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="DC Min. Breaking Capacity (MBC)" type="MRN_Property">80E2530BDFF242109291E9EE7133932F</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

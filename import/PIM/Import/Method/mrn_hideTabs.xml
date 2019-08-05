@@ -1,0 +1,74 @@
+﻿<AML>
+ <Item type="Method" id="357F1B3BF64E474AB0F43172A702458C" action="add">
+  <comments />
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Name: mrn_hideTabs
+// Called From: mrn_item_Product, mrn_item_Frame, mrn_uom_property Forms - OnLoad; 
+// Purpose:     Hides the "Keywords" & "Multilingual Properties" tabs
+// ???          Bob Ellis - original
+// 3/23/2016     Kamran Aftab    Modified for Mersen
+
+
+var classification = document.thisItem.getProperty("classification","");
+
+top.hideTab = function() {
+
+if (!parent.relationships || !parent.relationships.relTabbarReady || parent.relationships.relTabbar.GetTabOrder("|") === "" ) {
+    setTimeout("top.hideTab();", 30);
+    return;
+    }
+
+    showtab=false;
+ 
+
+     //Get the tabid if tab is viewable and store it in a hidden property
+     //if tabid not available (tab is hidden) then use stored property value
+    var tabbar = parent.relationships.relTabbar;
+    var tabid1 = "";
+    var tabid2 = "";
+    
+    if (classification == "MRN_UOM_Property")
+    {
+        tabid1 = tabbar.GetTabId("Grouped Properties");
+        tabid2 = tabbar.GetTabId("ETIM Classes");
+        top.windowStateObject.setHidden();
+        top.windowStateObject.updateButtons();
+        document.getElementById("MainDataForm").classification.disabled=true;
+    }
+    else
+    {
+        tabid1 = tabbar.GetTabId("Keywords");
+        tabid2 = tabbar.GetTabId("Multilingual Properties");
+    }
+
+    // alert("tabdid1: " + tabid1);
+    // alert("tabdid2: " + tabid2);
+
+    if (tabid1 !== "" && tabid1 !== null)
+    {
+        window.handleItemChange("_tabidhidden", tabid1);
+        tabbar.setTabEnabled(tabid1, showtab);
+        tabbar.setTabVisible(tabid1, showtab);
+    }
+    if (tabid2 !== "" && tabid2 !== null)
+    {
+        window.handleItemChange("_tabidhidden", tabid2);
+        tabbar.setTabEnabled(tabid2, showtab);
+        tabbar.setTabVisible(tabid2, showtab);
+    }
+ 
+    return;
+};
+
+//Call top function created above
+setTimeout("top.hideTab();", 30);  // Wait for 30 milliseconds, so that the tabs are ready(loaded) before the function is called.
+//top.hideTab();
+
+
+return;
+
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_hideTabs</name>
+ </Item>
+</AML>

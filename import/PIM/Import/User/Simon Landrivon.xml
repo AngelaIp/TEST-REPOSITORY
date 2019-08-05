@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="5B4B4B25A1454BB6B7118050E30E0FE0" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>simon.landrivon@mersen.com</email>
+  <login_name>slandriv</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Simon Landrivon" type="Identity">A7F9A6961EE14EC6943F41C110B7FEF0</owned_by_id>
+  <first_name>Simon</first_name>
+  <last_name>Landrivon</last_name>
+  <Relationships>
+   <Item type="Alias" id="6770D4EFCAC5409C96EA75CB51355AD6" action="add">
+    <from_date>2016-04-14T11:32:58</from_date>
+    <related_id keyed_name="Simon Landrivon" type="Identity">A7F9A6961EE14EC6943F41C110B7FEF0</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Simon Landrivon" type="User">5B4B4B25A1454BB6B7118050E30E0FE0</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

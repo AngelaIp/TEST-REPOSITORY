@@ -1,0 +1,44 @@
+﻿<AML>
+ <Item type="List" id="D4FF3767EB0B419CB27AE2E991AA6FE1" action="add">
+  <description>IP rating (degree of protection)</description>
+  <name>MRN_IP_Ratings</name>
+  <Relationships>
+   <Item type="Value" id="B790DD9F1E6842CBAD1D1B3E9F4D7745" action="add">
+    <label xml:lang="en">IP20</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_IP_Ratings" type="List">D4FF3767EB0B419CB27AE2E991AA6FE1</source_id>
+    <value>IP20</value>
+   </Item>
+   <Item type="Value" id="BAB3A57968A546A9B52CE2C668976E61" action="add">
+    <label xml:lang="en">IP30</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_IP_Ratings" type="List">D4FF3767EB0B419CB27AE2E991AA6FE1</source_id>
+    <value>IP30</value>
+   </Item>
+   <Item type="Value" id="7552293074E04A14B7F9F9709F13D963" action="add">
+    <label xml:lang="en">IP54</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_IP_Ratings" type="List">D4FF3767EB0B419CB27AE2E991AA6FE1</source_id>
+    <value>IP54</value>
+   </Item>
+   <Item type="Value" id="E7F5567A2A1743BD80A04690C04FA158" action="add">
+    <label xml:lang="en">IP55</label>
+    <sort_order>300</sort_order>
+    <source_id keyed_name="MRN_IP_Ratings" type="List">D4FF3767EB0B419CB27AE2E991AA6FE1</source_id>
+    <value>IP55</value>
+   </Item>
+   <Item type="Value" id="8019E11142AB46EAAA9007243A1BDCD9" action="add">
+    <label xml:lang="en">IP65</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_IP_Ratings" type="List">D4FF3767EB0B419CB27AE2E991AA6FE1</source_id>
+    <value>IP65</value>
+   </Item>
+   <Item type="Value" id="7C2FFF08A615415EAE6D4B5F1E8BF666" action="add">
+    <label xml:lang="en">IP547</label>
+    <sort_order>400</sort_order>
+    <source_id keyed_name="MRN_IP_Ratings" type="List">D4FF3767EB0B419CB27AE2E991AA6FE1</source_id>
+    <value>IP547</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

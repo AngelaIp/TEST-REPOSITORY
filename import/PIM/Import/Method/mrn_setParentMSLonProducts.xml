@@ -1,0 +1,77 @@
+﻿<AML>
+ <Item type="Method" id="CAAB9954606A4F08BDC9FA5117C743DC" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Name: mrn_setParentMSLonProducts
+// Called From: MRN_Item_Product Form - MSL Field - onChange
+// Purpose: Copies the mrn_parent_msl from the Frame item to all the Product items that reference that Frame
+// 03/24/2016   Kamran Aftab Developed for Mersen
+
+//debugger
+
+// Initialize
+var inn = document.thisItem.getInnovator();
+
+// Get the id of the frame
+// Find the frame item associated with this field
+var refItemName = document.thisItem.getProperty("mrn_name_number");
+if(refItemName=="")
+    return this;
+var aml = "<AML><Item type=  \"MRN_Item\"  action=\"get\"" +
+            " where=\"[MRN_Item].mrn_name_number='" + refItemName + "'\"" + "></Item></AML>";
+
+var refItem = inn.applyAML(aml);
+var isErr = refItem.isError();
+if (isErr)
+    return this;
+    
+// If a non-frame is picked, return
+var refItemType = refItem.getProperty("classification","");
+if (refItemType != "Level 5 - Frame")
+    return;
+    
+    
+// Find all Product Items that have this frame as mrn_Frame
+aml = "<AML><Item type=  \"MRN_Item\"  action=\"get\"" +
+            " where=\"[MRN_Item].classification='Level 6 - Product' AND [MRN_Item].mrn_frame ='" + refItem.getId() + "'\"" + "></Item></AML>";
+//Alert("aml=" + aml);
+
+var products = inn.applyAML(aml);
+var isErr = products.isError();
+if (isErr)
+    return this;            
+
+// var products = this.newItem("MRN_Item", "get");
+// products.setProperty("classification", "Level 6 - Product");
+// products.setProperty("mrn_frame", this.getID());
+// products = products.apply();
+
+// Get the MSL Id
+var mslItem = inn.newItem("MRN_Item", "get");
+mslItem.setProperty("mrn_name_number",getFieldComponentByName(srcElement.name).getValue());
+var mslId;
+
+if (getFieldComponentByName(srcElement.name).getValue() !="")
+{
+    mslItem = mslItem.apply();
+    var isErr = mslItem.isError();
+    if (isErr)
+        return this; 
+    mslId = mslItem.getId();
+}
+else
+    mslId = "";
+    
+// Cycle all the products and change parent msl
+for (var ii = 0; ii < products.getItemCount(); ii++)
+{
+    var product = products.getItemByIndex(ii);
+    product.setAttribute("action", "edit");
+    product.setProperty("mrn_parent_msl",mslId);
+    product = product.apply();
+}
+
+return products;]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_setParentMSLonProducts</name>
+ </Item>
+</AML>

@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="1626F93AB4954F20A441F2469903ABE8" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>barry.kirkorian@mersen.com</email>
+  <last_login_date>2017-03-26T16:44:47</last_login_date>
+  <login_name>bkirkori</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Barry Kirkorian" type="Identity">46713EA5C7544721935C788DA7058036</owned_by_id>
+  <working_directory>C:\TEMP\aras</working_directory>
+  <first_name>Barry</first_name>
+  <last_name>Kirkorian</last_name>
+  <Relationships>
+   <Item type="Alias" id="AEBA7666A2454F7887BDF19541844C36" action="add">
+    <from_date>2016-04-14T11:32:58</from_date>
+    <related_id keyed_name="Barry Kirkorian" type="Identity">46713EA5C7544721935C788DA7058036</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Barry Kirkorian" type="User">1626F93AB4954F20A441F2469903ABE8</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

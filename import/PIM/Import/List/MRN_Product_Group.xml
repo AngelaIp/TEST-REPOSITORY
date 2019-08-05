@@ -1,0 +1,418 @@
+﻿<AML>
+ <Item type="List" id="723F858362E74CC3ABBDCF5F4C46314A" action="add">
+  <description>Product Group
+Must maintain Value and Filter Value Tabs</description>
+  <name>MRN_Product_Group</name>
+  <Relationships>
+   <Item type="Filter Value" id="E7953C3369A74B3982D46D4D6C7215BE" action="add">
+    <filter>Fuse Bases Fuse Holders Fuse Systems</filter>
+    <label xml:lang="en">Bus Bar Systems</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Bus Bar Systems</value>
+   </Item>
+   <Item type="Filter Value" id="6A2EDDC72AEE459DB5905D1BA9C2DE14" action="add">
+    <filter>Fuse Bases Fuse Holders Fuse Systems</filter>
+    <label xml:lang="en">Fuse Bases</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Fuse Bases</value>
+   </Item>
+   <Item type="Filter Value" id="7D6E79BF53E34D6FB7735B9928558B37" action="add">
+    <filter>Fuse Bases Fuse Holders Fuse Systems</filter>
+    <label xml:lang="en">Fuse Holders</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Fuse Holders</value>
+   </Item>
+   <Item type="Filter Value" id="6C6EC855A6194D93A51DD82E16E237E4" action="add">
+    <filter>Fuse Bases Fuse Holders Fuse Systems</filter>
+    <label xml:lang="en">Fuse Rails</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Fuse Rails</value>
+   </Item>
+   <Item type="Filter Value" id="4396A90D704249719E1476CC99FDF804" action="add">
+    <filter>Fuses</filter>
+    <label xml:lang="en">Electronic Fuses</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Electronic Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="750410FB0C21413BAA0D344591CDCE3C" action="add">
+    <filter>Fuses</filter>
+    <label xml:lang="en">High Voltage IEC Fuses</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>High Voltage IEC Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="2C38B893E3524932A0B3BE510184CC4A" action="add">
+    <filter>Fuses</filter>
+    <label xml:lang="en">Low Voltage IEC Fuses</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Low Voltage IEC Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="4E7F68CDA14E4308A6B893B67778342C" action="add">
+    <filter>Fuses</filter>
+    <label xml:lang="en">Low Voltage UL/CSA Fuses</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Low Voltage UL/CSA Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="0140869C04764D83B14C97DEDA54DD25" action="add">
+    <filter>Fuses</filter>
+    <label xml:lang="en">Medium Voltage IEEE Fuses</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Medium Voltage IEEE Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="E687BF1EF6C643E9B84CDD66200B1F8E" action="add">
+    <filter>Fuses</filter>
+    <label xml:lang="en">Miniature Fuses</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Miniature Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="0B0570AF681E4BF5845478674A407210" action="add">
+    <filter>Fuses</filter>
+    <label xml:lang="en">Resettable Fuses</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Resettable Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="412B9F3D77124A22BE69B3CD2D4075E8" action="add">
+    <filter>Fuses</filter>
+    <label xml:lang="en">Semiconductor Protection Fuses</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="61560C84A0C04DA3ABF363433BEC670B" action="add">
+    <filter>Fuses</filter>
+    <label xml:lang="en">Special Purpose Fuses</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Special Purpose Fuses</value>
+   </Item>
+   <Item type="Filter Value" id="0A281A5A9B0B460699D3C3AF3700747A" action="add">
+    <filter>IEC Fuse Switch Disconnectors</filter>
+    <label xml:lang="en">IEC Fuse Switch Disconnectors</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>IEC Fuse Switch Disconnectors</value>
+   </Item>
+   <Item type="Filter Value" id="ACD7255C47C54C47AA7566F3F5E04A4B" action="add">
+    <filter>Low-Voltage Switches</filter>
+    <label xml:lang="en">IEC Switches</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>IEC Switches</value>
+   </Item>
+   <Item type="Filter Value" id="AB775B4947C546259EC4CEB6BF18F717" action="add">
+    <filter>Low-Voltage Switches</filter>
+    <label xml:lang="en">UL/CSA Switches</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>UL/CSA Switches</value>
+   </Item>
+   <Item type="Filter Value" id="E85FE309B2D0489BBC3EE0180AED3D96" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">DC Photovoltaic SPD - DIN-RAIL IEC/UL CSA</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>DC Photovoltaic SPD - DIN-RAIL IEC/UL CSA</value>
+   </Item>
+   <Item type="Filter Value" id="B1C89B576670467D85E482393C4B80C3" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Power Line SPD - NEMA UL CSA TYPE 1</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - NEMA UL CSA TYPE 1</value>
+   </Item>
+   <Item type="Filter Value" id="0831F3E1347642E5A553FE0F8B22EA52" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Power Line SPD - DIN-RAIL UL CSA TYPE 1</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL UL CSA TYPE 1</value>
+   </Item>
+   <Item type="Filter Value" id="C3D6DEE28EB54A4FABAD3E0852C506B2" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 1</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL IEC TYPE 1</value>
+   </Item>
+   <Item type="Filter Value" id="DD49695019D34AAEABDA7F1E027C9591" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 1+2</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL IEC TYPE 1+2</value>
+   </Item>
+   <Item type="Filter Value" id="5AEAA0E5B3DF406BAE193C62DFFA8798" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 2/UL CSA</label>
+    <sort_order>220</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL IEC TYPE 2/UL CSA</value>
+   </Item>
+   <Item type="Filter Value" id="51E54BE2020E4392816DC95B681E012C" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 2+3/UL CSA</label>
+    <sort_order>230</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL IEC TYPE 2+3/UL CSA</value>
+   </Item>
+   <Item type="Filter Value" id="A1E3DFE09E1544129BCCB26CBAAFCA7F" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">LED Lighting SPD - IEC TYPE 2+3</label>
+    <sort_order>240</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>LED Lighting SPD - IEC TYPE 2+3</value>
+   </Item>
+   <Item type="Filter Value" id="B0B63525D4FD489E99E370C0C2E5EBD9" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Surge Protection Components for OEM Designers</label>
+    <sort_order>250</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Surge Protection Components for OEM Designers</value>
+   </Item>
+   <Item type="Filter Value" id="F1C79D8CBD124A389313B85989B9AFF3" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Power Frequency Overvoltage Protection Devices</label>
+    <sort_order>260</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Frequency Overvoltage Protection Devices</value>
+   </Item>
+   <Item type="Filter Value" id="ACDE3E3F0F544038947BBE481152566A" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Signal Line SPD</label>
+    <sort_order>270</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Signal Line SPD</value>
+   </Item>
+   <Item type="Filter Value" id="2FA82F775B1F4873ABDB81C4FF565CD5" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Lightning Protection Air Terminals (ESE)</label>
+    <sort_order>280</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Lightning Protection Air Terminals (ESE)</value>
+   </Item>
+   <Item type="Filter Value" id="71CE82FCB29949F0BE33F0005D44168F" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Insulation Monitoring Devices</label>
+    <sort_order>290</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Insulation Monitoring Devices</value>
+   </Item>
+   <Item type="Filter Value" id="82D2480B04234C11BA56AE1D0DF83F09" action="add">
+    <filter>Surge Protection</filter>
+    <label xml:lang="en">Grounding System Monitor</label>
+    <sort_order>300</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Grounding System Monitor</value>
+   </Item>
+   <Item type="Filter Value" id="06859A268AC9490C83F6267DD468082C" action="add">
+    <filter>Wiring Management</filter>
+    <label xml:lang="en">Power Distribution Blocks</label>
+    <sort_order>500</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Distribution Blocks</value>
+   </Item>
+   <Item type="Value" id="D2C852F632E941E7BD0918C0B4E602F2" action="add">
+    <label xml:lang="en">Bus Bar Systems</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Bus Bar Systems</value>
+   </Item>
+   <Item type="Value" id="091E3EE6AF0F4E3CA043C9DD9155042A" action="add">
+    <label xml:lang="en">Electronic Fuses</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Electronic Fuses</value>
+   </Item>
+   <Item type="Value" id="0BE186DBC2AD4773ADB1F48568D1FE0F" action="add">
+    <label xml:lang="en">Fuse Bases</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Fuse Bases</value>
+   </Item>
+   <Item type="Value" id="B5CE611F241146169B2CAC37454046F9" action="add">
+    <label xml:lang="en">Fuse Holders</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Fuse Holders</value>
+   </Item>
+   <Item type="Value" id="94504949B26F4E0B84E7A2A0075EA543" action="add">
+    <label xml:lang="en">Fuse Rails</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Fuse Rails</value>
+   </Item>
+   <Item type="Value" id="CA19C0A7B9EF47AD8C7DB66C90632FC3" action="add">
+    <label xml:lang="en">High Voltage IEC Fuses</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>High Voltage IEC Fuses</value>
+   </Item>
+   <Item type="Value" id="4E47461B425C4CABB25A281D0BA72D29" action="add">
+    <label xml:lang="en">IEC Fuse Switch Disconnectors</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>IEC Fuse Switch Disconnectors</value>
+   </Item>
+   <Item type="Value" id="047F9A4049E246229C422013E831A90B" action="add">
+    <label xml:lang="en">IEC Switches</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>IEC Switches</value>
+   </Item>
+   <Item type="Value" id="A7B845B73EB94BADB7851327E35D869B" action="add">
+    <label xml:lang="en">Low Voltage IEC Fuses</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Low Voltage IEC Fuses</value>
+   </Item>
+   <Item type="Value" id="7D9DCAE060574EF290FDA415A373ED0B" action="add">
+    <label xml:lang="en">Low Voltage UL/CSA Fuses</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Low Voltage UL/CSA Fuses</value>
+   </Item>
+   <Item type="Value" id="07022DC2187746F8BEB45C4150AB9BFD" action="add">
+    <label xml:lang="en">Medium Voltage IEEE Fuses</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Medium Voltage IEEE Fuses</value>
+   </Item>
+   <Item type="Value" id="F48293B580594FCF8E2A1C54BBA46F87" action="add">
+    <label xml:lang="en">Miniature Fuses</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Miniature Fuses</value>
+   </Item>
+   <Item type="Value" id="1CC9AD6605C84516ABD836C9297DF319" action="add">
+    <label xml:lang="en">Power Distribution Blocks</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Distribution Blocks</value>
+   </Item>
+   <Item type="Value" id="19E650D583674D2981D3DE331A1A010C" action="add">
+    <label xml:lang="en">Resettable Fuses</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Resettable Fuses</value>
+   </Item>
+   <Item type="Value" id="56493A3528194D119E41FE0FCC68BA63" action="add">
+    <label xml:lang="en">Semiconductor Protection Fuses</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Semiconductor Protection Fuses</value>
+   </Item>
+   <Item type="Value" id="0E79837324AD4B8DAB27F725F735D288" action="add">
+    <label xml:lang="en">Special Purpose Fuses</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Special Purpose Fuses</value>
+   </Item>
+   <Item type="Value" id="04EEA310AD824591A04D99FB7625BD50" action="add">
+    <label xml:lang="en">UL/CSA Switches</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>UL/CSA Switches</value>
+   </Item>
+   <Item type="Value" id="1C07DDAF74084B529655F54090C36C65" action="add">
+    <label xml:lang="en">DC Photovoltaic SPD - DIN-RAIL IEC/UL CSA</label>
+    <sort_order>328</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>DC Photovoltaic SPD - DIN-RAIL IEC/UL CSA</value>
+   </Item>
+   <Item type="Value" id="7C52A34DED534877A08829C912C467D9" action="add">
+    <label xml:lang="en">Power Line SPD - NEMA UL CSA TYPE 1</label>
+    <sort_order>456</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - NEMA UL CSA TYPE 1</value>
+   </Item>
+   <Item type="Value" id="9D94B5312CA24C4A9DC60D7C9D8BDEE4" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL UL CSA TYPE 1</label>
+    <sort_order>584</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL UL CSA TYPE 1</value>
+   </Item>
+   <Item type="Value" id="8F2F05D5034D4F589C479A17FE3AF81E" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 1</label>
+    <sort_order>712</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL IEC TYPE 1</value>
+   </Item>
+   <Item type="Value" id="8287641D3DCA47AF816F8029D1149D20" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 1+2</label>
+    <sort_order>840</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL IEC TYPE 1+2</value>
+   </Item>
+   <Item type="Value" id="B18536043EA048FFB46B35C04A8E3177" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 2/UL CSA</label>
+    <sort_order>968</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL IEC TYPE 2/UL CSA</value>
+   </Item>
+   <Item type="Value" id="81FD1CD9C01E4DB784316DE3E8A9AD4B" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 2+3/UL CSA</label>
+    <sort_order>1096</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Line SPD - DIN-RAIL IEC TYPE 2+3/UL CSA</value>
+   </Item>
+   <Item type="Value" id="B006CA7774B244D9A7670EA44ACC6547" action="add">
+    <label xml:lang="en">LED Lighting SPD - IEC TYPE 2+3</label>
+    <sort_order>1224</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>LED Lighting SPD - IEC TYPE 2+3</value>
+   </Item>
+   <Item type="Value" id="D4C2DEE902664875B59D4BD38D6F1D2D" action="add">
+    <label xml:lang="en">Surge Protection Components for OEM Designers</label>
+    <sort_order>1352</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Surge Protection Components for OEM Designers</value>
+   </Item>
+   <Item type="Value" id="D2FB1354B8DB4A2891809265B4B43888" action="add">
+    <label xml:lang="en">Power Frequency Overvoltage Protection Devices</label>
+    <sort_order>1480</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Frequency Overvoltage Protection Devices</value>
+   </Item>
+   <Item type="Value" id="60665DCB710C46A8A7A7ECFF751E8567" action="add">
+    <label xml:lang="en">Signal Line SPD</label>
+    <sort_order>1608</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Signal Line SPD</value>
+   </Item>
+   <Item type="Value" id="F2824CD5D3EA495DA293C344DDCF6E44" action="add">
+    <label xml:lang="en">Lightning Protection Air Terminals (ESE)</label>
+    <sort_order>1736</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Lightning Protection Air Terminals (ESE)</value>
+   </Item>
+   <Item type="Value" id="ADE3F9890FB64D96B6A7751679D05B6D" action="add">
+    <label xml:lang="en">Insulation Monitoring Devices</label>
+    <sort_order>1864</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Insulation Monitoring Devices</value>
+   </Item>
+   <Item type="Value" id="0E012E28252D4076ADE8CC8CC2E5505A" action="add">
+    <label xml:lang="en">Grounding System Monitor</label>
+    <sort_order>1992</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Grounding System Monitor</value>
+   </Item>
+   <Item type="Value" id="1AE1E4935FDC4B5EA7BC576682161BA7" action="add">
+    <label xml:lang="en">Power Distribution Blocks</label>
+    <sort_order>2120</sort_order>
+    <source_id keyed_name="MRN_Product_Group" type="List">723F858362E74CC3ABBDCF5F4C46314A</source_id>
+    <value>Power Distribution Blocks</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

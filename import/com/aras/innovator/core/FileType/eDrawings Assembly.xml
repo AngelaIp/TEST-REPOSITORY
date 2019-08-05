@@ -1,8 +1,0 @@
-﻿<AML>
- <Item type="FileType" id="9F6C41E27CE64CE092217690F59E1E47" action="add">
-  <description>SolidWorks eDrawings EASM Assembly</description>
-  <extension>easm</extension>
-  <mimetype>application/octet-stream</mimetype>
-  <name>eDrawings Assembly</name>
- </Item>
-</AML>

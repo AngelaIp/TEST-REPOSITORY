@@ -1,0 +1,26 @@
+﻿<AML>
+ <Item type="List" id="F554C493702F4177A4736F8C8224D63D" action="add">
+  <description>Wire Ranges</description>
+  <name>MRN_Wire_Ranges</name>
+  <Relationships>
+   <Item type="Value" id="45EEE5C2F9834679BE71332A02EC9F50" action="add">
+    <label xml:lang="en">#4-#14</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Wire_Ranges" type="List">F554C493702F4177A4736F8C8224D63D</source_id>
+    <value>#4-#14</value>
+   </Item>
+   <Item type="Value" id="44FB3234E3E04F5FA595AA8B64090024" action="add">
+    <label xml:lang="en">1/4-20 x 5/8</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Wire_Ranges" type="List">F554C493702F4177A4736F8C8224D63D</source_id>
+    <value>1/4-20 x 5/8</value>
+   </Item>
+   <Item type="Value" id="EF90DE04285A4C7B96CC071C7BF25ECC" action="add">
+    <label xml:lang="en">2/0-#14</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Wire_Ranges" type="List">F554C493702F4177A4736F8C8224D63D</source_id>
+    <value>2/0-#14</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

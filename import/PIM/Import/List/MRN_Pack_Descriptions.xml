@@ -1,0 +1,68 @@
+﻿<AML>
+ <Item type="List" id="7AE5B718438745699B368765665577C8" action="add">
+  <description>Pack description</description>
+  <name>MRN_Pack_Descriptions</name>
+  <Relationships>
+   <Item type="Value" id="7BFF472B01D8485A965211467BD4BFB7" action="add">
+    <label xml:lang="en">Envelope</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Envelope</value>
+   </Item>
+   <Item type="Value" id="6CB79072085C4791B7B25DFF9DCA8F01" action="add">
+    <label xml:lang="en">Placon</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Placon</value>
+   </Item>
+   <Item type="Value" id="3B483199803E4CF393DD3DE09E26F789" action="add">
+    <label xml:lang="en">Plastic Bag</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Plastic Bag</value>
+   </Item>
+   <Item type="Value" id="CA487C81E496484686B9F41FCA8A1D0B" action="add">
+    <label xml:lang="en">Tape and Reel</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Tape and Reel</value>
+   </Item>
+   <Item type="Value" id="6DCC2CD0D1B8418F885947FAED6A8D04" action="add">
+    <label xml:lang="en">Ammo</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Ammo</value>
+   </Item>
+   <Item type="Value" id="727ADA9574FE4C92A2D03AB6E6192D76" action="add">
+    <label xml:lang="en">Blister</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Blister</value>
+   </Item>
+   <Item type="Value" id="7262A6EED07347889E2FB038D2F50970" action="add">
+    <label xml:lang="en">Box</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Box</value>
+   </Item>
+   <Item type="Value" id="40B208A5DF874429BBB7269FD10A6858" action="add">
+    <label xml:lang="en">Case</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Case</value>
+   </Item>
+   <Item type="Value" id="48C7942F6C09474A8E4FF85F83999212" action="add">
+    <label xml:lang="en">Carton</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Carton</value>
+   </Item>
+   <Item type="Value" id="6B69566362DD4998858926D3F270E2AA" action="add">
+    <label xml:lang="en">Palett</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Pack_Descriptions" type="List">7AE5B718438745699B368765665577C8</source_id>
+    <value>Palett</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

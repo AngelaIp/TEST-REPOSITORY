@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="3096428482D945E9A5A16F42134148C3" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>yichi.au@us.mersen.com</email>
+  <last_login_date>2018-01-15T12:32:55</last_login_date>
+  <login_name>yau</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="yau" type="Identity">B7CB794269A4440C83F21299725D4817</owned_by_id>
+  <working_directory>U:\yau\ARAS</working_directory>
+  <first_name>yichi</first_name>
+  <last_name>au</last_name>
+  <Relationships>
+   <Item type="Alias" id="C41C371931D548CFA6E7DD99C686186A" action="add">
+    <from_date>2018-01-10T14:18:10</from_date>
+    <related_id keyed_name="yau" type="Identity">B7CB794269A4440C83F21299725D4817</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="yichi au" type="User">3096428482D945E9A5A16F42134148C3</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

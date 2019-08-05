@@ -30,7 +30,6 @@
     <label_plural xml:lang="en">Life Cycle States</label_plural>
     <large_icon>../images/LifeCycleState.svg</large_icon>
     <open_icon>../images/LifeCycleState.svg</open_icon>
-    <permission_id keyed_name="91C1F80AFBD64275B28351733724472C" type="Permission">91C1F80AFBD64275B28351733724472C</permission_id>
     <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
     <show_parameters_tab>1</show_parameters_tab>
     <structure_view>tabs on</structure_view>

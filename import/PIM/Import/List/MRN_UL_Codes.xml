@@ -1,0 +1,104 @@
+﻿<AML>
+ <Item type="List" id="E2FA8F15C27B449DA6441053D8ABDF8C" action="add">
+  <description>UL category codes</description>
+  <name>MRN_UL_Codes</name>
+  <Relationships>
+   <Item type="Value" id="3F6D6221DF9B46F5BAA28462E79CA59C" action="add">
+    <label xml:lang="en">CYMT</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>CYMT</value>
+   </Item>
+   <Item type="Value" id="2BAAB4779AB24D07B0BF95CC8C9F842C" action="add">
+    <label xml:lang="en">IZLT</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>IZLT</value>
+   </Item>
+   <Item type="Value" id="7C2002EA6D2144EB90CAAB4B38FB8E88" action="add">
+    <label xml:lang="en">IZLT2</label>
+    <sort_order>300</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>IZLT2</value>
+   </Item>
+   <Item type="Value" id="83F8E98266D74135BF2A39C28BB7067A" action="add">
+    <label xml:lang="en">JDDZ</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>JDDZ</value>
+   </Item>
+   <Item type="Value" id="2E53BF99968F4C4B860719B2F1A8B797" action="add">
+    <label xml:lang="en">JDRX</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>JDRX</value>
+   </Item>
+   <Item type="Value" id="0055404967154580A38C7622A998D4D3" action="add">
+    <label xml:lang="en">JDVS</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>JDVS</value>
+   </Item>
+   <Item type="Value" id="884DBCC0584E48AAB1BDE9A6C088ECF1" action="add">
+    <label xml:lang="en">JDYX</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>JDYX</value>
+   </Item>
+   <Item type="Value" id="6A75FE1A4F4D4ED8B6B5B66E62131385" action="add">
+    <label xml:lang="en">JEEG</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>JEEG</value>
+   </Item>
+   <Item type="Value" id="907D56C34AD0440C884986B60D7E033C" action="add">
+    <label xml:lang="en">JFGA</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>JFGA</value>
+   </Item>
+   <Item type="Value" id="84D2520DF8E9402B93CF7638992A879F" action="add">
+    <label xml:lang="en">JFHR2</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>JFHR2</value>
+   </Item>
+   <Item type="Value" id="68E9567EE921480D9172B6DDD6CEE0B2" action="add">
+    <label xml:lang="en">MSSS2</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>MSSS2</value>
+   </Item>
+   <Item type="Value" id="97413A9E1799496B982A6B40758D1E0E" action="add">
+    <label xml:lang="en">NMTR</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>NMTR</value>
+   </Item>
+   <Item type="Value" id="21A4840F013E4ED480C08DD1477565D3" action="add">
+    <label xml:lang="en">QPQS</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>QPQS</value>
+   </Item>
+   <Item type="Value" id="800493FB33964445AF669A222806B513" action="add">
+    <label xml:lang="en">VZCA</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>VZCA</value>
+   </Item>
+   <Item type="Value" id="8B7F72CFCDC043A9A166F9539095136B" action="add">
+    <label xml:lang="en">VZCA2</label>
+    <sort_order>1800</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>VZCA2</value>
+   </Item>
+   <Item type="Value" id="4A6A49BF85E34494B6CDDA8BB23CA2BE" action="add">
+    <label xml:lang="en">XCFR2</label>
+    <sort_order>1900</sort_order>
+    <source_id keyed_name="MRN_UL_Codes" type="List">E2FA8F15C27B449DA6441053D8ABDF8C</source_id>
+    <value>XCFR2</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

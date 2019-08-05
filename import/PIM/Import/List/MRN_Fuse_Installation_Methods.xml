@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="List" id="80D0006BADAF4B14852A26882D754FDE" action="add">
+  <description>How the fuse is secured in the holder</description>
+  <name>MRN_Fuse_Installation_Methods</name>
+  <Relationships>
+   <Item type="Value" id="3ABD9F47FF394228BA7B85815985D167" action="add">
+    <label xml:lang="en">Clip-in</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Fuse_Installation_Methods" type="List">80D0006BADAF4B14852A26882D754FDE</source_id>
+    <value>Clip-in</value>
+   </Item>
+   <Item type="Value" id="AF0D8FD2181248D6A53408A34B40CF28" action="add">
+    <label xml:lang="en">Bolt-in</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Fuse_Installation_Methods" type="List">80D0006BADAF4B14852A26882D754FDE</source_id>
+    <value>Bolt-in</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

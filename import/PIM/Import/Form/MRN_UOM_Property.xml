@@ -1,0 +1,223 @@
+﻿<AML>
+ <Item type="Form" id="2D94859DA5514FD098DC6EF36D153777" action="add">
+  <category_form>0</category_form>
+  <height>60</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>500</width>
+  <name>MRN_UOM_Property</name>
+  <Relationships>
+   <Item type="Body" id="159E9129F7074D27903183AE9B76A4A8" action="add">
+    <bg_color>#b4d2d2</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_UOM_Property" type="Form">2D94859DA5514FD098DC6EF36D153777</source_id>
+    <Relationships>
+     <Item type="Field" id="BD107CD0C67F4016841534350EFF0372" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>class structure</field_type>
+      <font_color>#696969</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Classification</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>2304</sort_order>
+      <source_id keyed_name="159E9129F7074D27903183AE9B76A4A8" type="Body">159E9129F7074D27903183AE9B76A4A8</source_id>
+      <tab_index>128</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>0</x>
+      <y>100</y>
+      <name>classification</name>
+     </Item>
+     <Item type="Field" id="F567FCE28ECE4C4298D52B53AD6D688D" action="add">
+      <border_width>1</border_width>
+      <css>{$this field rule} fieldset
+{
+  height: 60px;
+  width: 60px;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>groupbox</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Default Units</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>3456</sort_order>
+      <source_id keyed_name="159E9129F7074D27903183AE9B76A4A8" type="Body">159E9129F7074D27903183AE9B76A4A8</source_id>
+      <tab_stop>1</tab_stop>
+      <x>155</x>
+      <y>110</y>
+      <name>groupbox_units</name>
+     </Item>
+     <Item type="Field" id="89C43A47580A49ADAFE257F385368439" action="add">
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <html_code><![CDATA[<span id='ITEM_INFO_INTERNAL_SPAN'/>
+<script>
+  populate_ITEM_INFO_INTERNAL_SPAN = function()
+  {
+    document.getElementById('ITEM_INFO_INTERNAL_SPAN').innerHTML = aras.uiGetItemInfoTable(document.itemType);
+  }
+  window.addEventListener('load', populate_ITEM_INFO_INTERNAL_SPAN);
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="159E9129F7074D27903183AE9B76A4A8" type="Body">159E9129F7074D27903183AE9B76A4A8</source_id>
+      <tab_stop>0</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>item_info</name>
+     </Item>
+     <Item type="Field" id="1488BB52CD6D4192B5A01743EFC0D0FF" action="add">
+      <border_width>0</border_width>
+      <container>groupbox_units</container>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">ETIM</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <positioning>relative</positioning>
+      <propertytype_id keyed_name="mrn_etim_unit" type="Property">952C7C34FD5F49F7A21E26C0D9C15763</propertytype_id>
+      <sort_order>30</sort_order>
+      <source_id keyed_name="159E9129F7074D27903183AE9B76A4A8" type="Body">159E9129F7074D27903183AE9B76A4A8</source_id>
+      <tab_index>3456</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>20</x>
+      <y>5</y>
+      <name>mrn_etim_unit</name>
+     </Item>
+     <Item type="Field" id="49A42E3E92634248A815629B39139968" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">MRN Item Property</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_item_property" type="Property">4B9F547A416A47F98B9F372C1D8D4DE4</propertytype_id>
+      <sort_order>1152</sort_order>
+      <source_id keyed_name="159E9129F7074D27903183AE9B76A4A8" type="Body">159E9129F7074D27903183AE9B76A4A8</source_id>
+      <tab_index>10</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>290</x>
+      <y>40</y>
+      <name>mrn_item_property</name>
+     </Item>
+     <Item type="Field" id="AEF3EB7395CE4ED1B88E85409E4B2F70" action="add">
+      <bg_color>beige  </bg_color>
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Label</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_label" type="Property">7CE032595CEF4DB79A8543EF1AF86372</propertytype_id>
+      <sort_order>2688</sort_order>
+      <source_id keyed_name="159E9129F7074D27903183AE9B76A4A8" type="Body">159E9129F7074D27903183AE9B76A4A8</source_id>
+      <tab_index>10</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>150</x>
+      <y>40</y>
+      <name>mrn_label</name>
+     </Item>
+     <Item type="Field" id="DA63AC2997E8485F818CFA393FBA8469" action="add">
+      <border_width>0</border_width>
+      <container>groupbox_units</container>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">SI</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <positioning>relative</positioning>
+      <propertytype_id keyed_name="mrn_si_unit" type="Property">1974FC904FFA4376BDE23AAEA0B11E03</propertytype_id>
+      <sort_order>20</sort_order>
+      <source_id keyed_name="159E9129F7074D27903183AE9B76A4A8" type="Body">159E9129F7074D27903183AE9B76A4A8</source_id>
+      <tab_index>3584</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>10</x>
+      <y>5</y>
+      <name>mrn_si_unit</name>
+     </Item>
+     <Item type="Field" id="3EA6D75730024C3DBD7A023AB4C0D4B9" action="add">
+      <border_width>0</border_width>
+      <container>groupbox_units</container>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">US</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <positioning>relative</positioning>
+      <propertytype_id keyed_name="mrn_us_unit" type="Property">6A0490434C324101AB3B5279E51F0E3B</propertytype_id>
+      <sort_order>10</sort_order>
+      <source_id keyed_name="159E9129F7074D27903183AE9B76A4A8" type="Body">159E9129F7074D27903183AE9B76A4A8</source_id>
+      <tab_index>3712</tab_index>
+      <tab_stop>1</tab_stop>
+      <text_align>left</text_align>
+      <x>0</x>
+      <y>5</y>
+      <name>mrn_us_unit</name>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="Form Event" id="E1B6AC0AE6084B8A8D463AA91816107E" action="add">
+    <form_event>onload</form_event>
+    <related_id keyed_name="mrn_hideTabs" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>mrn_hideTabs</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_UOM_Property" type="Form">2D94859DA5514FD098DC6EF36D153777</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="Field" id="BD107CD0C67F4016841534350EFF0372" action="edit">
+  <!-- Please note: this AML depends on the "MRN_Property" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>classification</name>
+    <source_id type="ItemType" keyed_name="MRN_Property">6CCA39D0C3894ACEADE2F50C8CD58D88</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+</AML>

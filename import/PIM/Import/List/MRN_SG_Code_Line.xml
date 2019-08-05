@@ -1,0 +1,3676 @@
+﻿<AML>
+ <Item type="List" id="C1978EC66A174100A6E9F14E3B989F69" action="add">
+  <description>SG Code Line (Level 3) Values</description>
+  <name>MRN_SG_Code_Line</name>
+  <Relationships>
+   <Item type="Filter Value" id="B6453A90C11947A3B8F46A1ED819F8A9" action="add">
+    <filter>100</filter>
+    <label xml:lang="en">One Time 250v (0 - 30)</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>565</value>
+   </Item>
+   <Item type="Filter Value" id="437490DB01864850AAAAF219584BD05D" action="add">
+    <filter>100</filter>
+    <label xml:lang="en">One Time 250v (31 - 60)</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>566</value>
+   </Item>
+   <Item type="Filter Value" id="7AB8F946681B4B6DBD75291AC5912764" action="add">
+    <filter>100</filter>
+    <label xml:lang="en">One Time 250v (401 - 600)</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>567</value>
+   </Item>
+   <Item type="Filter Value" id="195A65FD58FF4584AD789A12D148F4A5" action="add">
+    <filter>100</filter>
+    <label xml:lang="en">One Time 10KA 250V</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>775</value>
+   </Item>
+   <Item type="Filter Value" id="8D15D5A15F0C4FAEAFBEA642CCDD5711" action="add">
+    <filter>100</filter>
+    <label xml:lang="en">One Time 10KA 600V</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>776</value>
+   </Item>
+   <Item type="Filter Value" id="2BA1142413C5401187C404B1A7FD0B5D" action="add">
+    <filter>100</filter>
+    <label xml:lang="en">Blade Size 250V K5</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>777</value>
+   </Item>
+   <Item type="Filter Value" id="87DE97E8619D44A9902D4C943B1E2874" action="add">
+    <filter>100</filter>
+    <label xml:lang="en">Ferrule Size 250V K5</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>778</value>
+   </Item>
+   <Item type="Filter Value" id="0E8ABAF1F72D4477995D95C92874622B" action="add">
+    <filter>100</filter>
+    <label xml:lang="en">Blade Size 600V K5</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>780</value>
+   </Item>
+   <Item type="Filter Value" id="0C384FC80E6B486D9F7897D7073F7C94" action="add">
+    <filter>100</filter>
+    <label xml:lang="en">Ferrule Size 600V K5</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>781</value>
+   </Item>
+   <Item type="Filter Value" id="D6E82B2E79B0468081C463728690C0C9" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Blade Size 250V RK5 T-D</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>833</value>
+   </Item>
+   <Item type="Filter Value" id="7912C1D718404793B4B397ED8E890842" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Ferrule Size 250V RK5 T-D</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>834</value>
+   </Item>
+   <Item type="Filter Value" id="6C703A3087874D8F9C2AB076CB4315DA" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Ferrule Size 250V RK5 Plated</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>836</value>
+   </Item>
+   <Item type="Filter Value" id="2DFB4627355D43ECB249218D90E1EC79" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Blade Size 600V RK5 T-D</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>837</value>
+   </Item>
+   <Item type="Filter Value" id="6152B0A7E7AF42EAAFD574A94B3AD0FA" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Ferrule Size 600V RK5 T-D</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>838</value>
+   </Item>
+   <Item type="Filter Value" id="A0C494067F024D648047CB7DE995D31C" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Ferrule Size 600V RK5 Plated</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>839</value>
+   </Item>
+   <Item type="Filter Value" id="C906269F71634D56BAF88D3A1A735C38" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Blade 250V RK5 T-D SmartSpot</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>946</value>
+   </Item>
+   <Item type="Filter Value" id="D70EAEDBC7C944928EA7F69C51E4A0DC" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Ferrule 250V RK5 T-D SmartSpot</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>947</value>
+   </Item>
+   <Item type="Filter Value" id="BE9CA5280B914122A9B9F15C5B6D9338" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Blade 600V RK5 T-D SmartSpot</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>948</value>
+   </Item>
+   <Item type="Filter Value" id="E2170E878F7B4B16A161FF3C1ECA71EA" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">Ferrule 600V RK5 T-D SmartSpot</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>949</value>
+   </Item>
+   <Item type="Filter Value" id="47B3D0D65B9947F8BB92E0B6149C569E" action="add">
+    <filter>102</filter>
+    <label xml:lang="en">1000VDC Photovoltaic Class RK5</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>959</value>
+   </Item>
+   <Item type="Filter Value" id="FCD90084A3D8438484E83C06F60F586C" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">Fast Acting Midget</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>516</value>
+   </Item>
+   <Item type="Filter Value" id="167144D06AE9464EB5289EDAC7D2EA77" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">250V Midget Rectifier Fuse</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>527</value>
+   </Item>
+   <Item type="Filter Value" id="317803EF7AA64C2A8DE2219D376933F5" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">600V Form 600 Midget Fuse</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>558</value>
+   </Item>
+   <Item type="Filter Value" id="94E8EC97FA554DAAB74211EE417CDFC8" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">CC Time Delay - Motors</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>580</value>
+   </Item>
+   <Item type="Filter Value" id="B41DA2859CBC4A85A9B9FE05E1751C54" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">600V AC/DC Midget Fuse</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>582</value>
+   </Item>
+   <Item type="Filter Value" id="BC4CBF36C6CD40F3A159B6ABD531A29E" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">600V AC/DC Midget Fuse</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>583</value>
+   </Item>
+   <Item type="Filter Value" id="00E6910575964AF9BED08A8843DC6276" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">500V T-D Midget Fuse</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>584</value>
+   </Item>
+   <Item type="Filter Value" id="BF5272A1DF58496DBF1E52F50D8FACBC" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">CC Time Delay - Transformer</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>585</value>
+   </Item>
+   <Item type="Filter Value" id="EC9E2D0126184C5FA86181F2F8ABFFFE" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">13/32 X 1 1/2 Pin Indicator Fu</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>699</value>
+   </Item>
+   <Item type="Filter Value" id="5948BB9540AA4B1C908A9DC8268E43B4" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">One Time Midget Fuse</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>779</value>
+   </Item>
+   <Item type="Filter Value" id="87E1C61AFD974DF1BE02F9F8CAC31F90" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">Midget 1 3/8 X 13/32</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>809</value>
+   </Item>
+   <Item type="Filter Value" id="B88F7E7B80D54C038C5DBF119C1E58EE" action="add">
+    <filter>104</filter>
+    <label xml:lang="en">250V T-D Midget Fuse</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>835</value>
+   </Item>
+   <Item type="Filter Value" id="0A76300285DC4C949874C0AB532D8E23" action="add">
+    <filter>105</filter>
+    <label xml:lang="en">Blade Size 250V RK1</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>530</value>
+   </Item>
+   <Item type="Filter Value" id="8312012FC5F74700BAE208AE0F85CB40" action="add">
+    <filter>105</filter>
+    <label xml:lang="en">Ferrule Size 250V RK1</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>531</value>
+   </Item>
+   <Item type="Filter Value" id="83AE00014B284351929ABE541EFE9B50" action="add">
+    <filter>105</filter>
+    <label xml:lang="en">Blade Size 600V RK1</label>
+    <sort_order>4480</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>554</value>
+   </Item>
+   <Item type="Filter Value" id="1BCC8E4E3D914122B7D276AE4F6A2390" action="add">
+    <filter>105</filter>
+    <label xml:lang="en">Ferrule Size 600V RK1</label>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>555</value>
+   </Item>
+   <Item type="Filter Value" id="7B161B21D036475390F38A2703F0B37D" action="add">
+    <filter>106</filter>
+    <label xml:lang="en">Blade Size 250V RK1 T-D</label>
+    <sort_order>4736</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>528</value>
+   </Item>
+   <Item type="Filter Value" id="F31915149114437E965F0C4C93AF7E7D" action="add">
+    <filter>106</filter>
+    <label xml:lang="en">Ferrule Size 250V RK1 T-D</label>
+    <sort_order>4864</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>529</value>
+   </Item>
+   <Item type="Filter Value" id="DA00F8A5015043AB8EA42164709E462F" action="add">
+    <filter>106</filter>
+    <label xml:lang="en">Blade Size 600V RK1 T-D</label>
+    <sort_order>4992</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>552</value>
+   </Item>
+   <Item type="Filter Value" id="41772CDA676D420581E8A64C119E16BB" action="add">
+    <filter>106</filter>
+    <label xml:lang="en">Ferrule Size 600V RK1 T-D</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>553</value>
+   </Item>
+   <Item type="Filter Value" id="9CFDB7D0CB714EAAB49D13CAB2497C68" action="add">
+    <filter>106</filter>
+    <label xml:lang="en">600V-Class RK1-Blade Fuse</label>
+    <sort_order>5248</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>867</value>
+   </Item>
+   <Item type="Filter Value" id="D790C65269424720BDE50A398103D7D7" action="add">
+    <filter>108</filter>
+    <label xml:lang="en">Blade Size Class J Fuse</label>
+    <sort_order>5376</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>542</value>
+   </Item>
+   <Item type="Filter Value" id="BF7A7E2C2AC54395A39F2D5CF9C5BA81" action="add">
+    <filter>108</filter>
+    <label xml:lang="en">Ferrule Size Class J Fuse</label>
+    <sort_order>5504</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>543</value>
+   </Item>
+   <Item type="Filter Value" id="0DE7881B5FCB43FA972367C06B298EA9" action="add">
+    <filter>108</filter>
+    <label xml:lang="en">Std Fuse 600v (61 - 100)</label>
+    <sort_order>5632</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>650</value>
+   </Item>
+   <Item type="Filter Value" id="833A6900069A4671B5272D0B4A572C03" action="add">
+    <filter>108</filter>
+    <label xml:lang="en">Std Fuse 600v (101 - 200)</label>
+    <sort_order>5760</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>651</value>
+   </Item>
+   <Item type="Filter Value" id="8C4EC396908F4D84A96ACF831F467144" action="add">
+    <filter>108</filter>
+    <label xml:lang="en">Std Fuse 600v (201 - 400)</label>
+    <sort_order>5888</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>652</value>
+   </Item>
+   <Item type="Filter Value" id="D7948DFCA7F44196BB6BB377AC63538E" action="add">
+    <filter>108</filter>
+    <label xml:lang="en">600V Class J - Blade Fuse</label>
+    <sort_order>6016</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>712</value>
+   </Item>
+   <Item type="Filter Value" id="C7E7BDE9AF5140A3BF85E575FAC2B3C5" action="add">
+    <filter>108</filter>
+    <label xml:lang="en">600V Class J - Ferrule Fuse</label>
+    <sort_order>6144</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>713</value>
+   </Item>
+   <Item type="Filter Value" id="B2F1B46FA02B4129AEC0ECA63E96B021" action="add">
+    <filter>109</filter>
+    <label xml:lang="en">Ferrule Size Class J HE</label>
+    <sort_order>6272</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>104</value>
+   </Item>
+   <Item type="Filter Value" id="6D32F480879D4359843DDC838893DB20" action="add">
+    <filter>109</filter>
+    <label xml:lang="en">Blade Size Class J HE</label>
+    <sort_order>6400</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>105</value>
+   </Item>
+   <Item type="Filter Value" id="139F0A5FD95A45EE9769F366F38A8117" action="add">
+    <filter>109</filter>
+    <label xml:lang="en">UltraFuse Ferrule gD 14x51</label>
+    <sort_order>6528</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>513</value>
+   </Item>
+   <Item type="Filter Value" id="B13B6E9E120A4B04A152E9CD4D62F1F1" action="add">
+    <filter>109</filter>
+    <label xml:lang="en">UltraFuse Ferrule gD 22x57</label>
+    <sort_order>6656</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>514</value>
+   </Item>
+   <Item type="Filter Value" id="0A483BB4EEDD4385AB28BFF9D655891A" action="add">
+    <filter>109</filter>
+    <label xml:lang="en">Blade Size Class J T-D</label>
+    <sort_order>6784</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>575</value>
+   </Item>
+   <Item type="Filter Value" id="22E4A56A324B42A28FC13C26181C4699" action="add">
+    <filter>109</filter>
+    <label xml:lang="en">Ferrule Size Class J T-D</label>
+    <sort_order>6912</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>576</value>
+   </Item>
+   <Item type="Filter Value" id="8DBD5F61FC6C4F54B20FFBF6C4B539AA" action="add">
+    <filter>109</filter>
+    <label xml:lang="en">Littelfuse Type GD</label>
+    <sort_order>7040</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>742</value>
+   </Item>
+   <Item type="Filter Value" id="AE904D980D48455B9B3C2E4D86D1EB01" action="add">
+    <filter>110</filter>
+    <label xml:lang="en">Cable Protector</label>
+    <sort_order>7168</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>639</value>
+   </Item>
+   <Item type="Filter Value" id="9BED9B42B86748E5B4671F9868036FF0" action="add">
+    <filter>110</filter>
+    <label xml:lang="en">Cable Protector Boot</label>
+    <sort_order>7296</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>640</value>
+   </Item>
+   <Item type="Filter Value" id="C8436D6A49FF48BB9A459FB4295A16C4" action="add">
+    <filter>111</filter>
+    <label xml:lang="en">Form 480 Fuse</label>
+    <sort_order>7424</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>509</value>
+   </Item>
+   <Item type="Filter Value" id="67DB2993ED794361925149650EA06855" action="add">
+    <filter>111</filter>
+    <label xml:lang="en">Class L Fuse - Fast Acting</label>
+    <sort_order>7552</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>539</value>
+   </Item>
+   <Item type="Filter Value" id="3374C7444BCB4209BBE1567C314B7C74" action="add">
+    <filter>111</filter>
+    <label xml:lang="en">Class L Fuse - 10 Second Delay</label>
+    <sort_order>7680</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>540</value>
+   </Item>
+   <Item type="Filter Value" id="0A98E6BDC7A141C09E1380CEC692AA9A" action="add">
+    <filter>111</filter>
+    <label xml:lang="en">Class L Fuse - Standard</label>
+    <sort_order>7808</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>541</value>
+   </Item>
+   <Item type="Filter Value" id="1E840094E8574189915274D082DA53B8" action="add">
+    <filter>111</filter>
+    <label xml:lang="en">Test Limiter</label>
+    <sort_order>7936</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>831</value>
+   </Item>
+   <Item type="Filter Value" id="8D282BF232AB4F37A153592E856F5662" action="add">
+    <filter>112</filter>
+    <label xml:lang="en">Blade Size 300V Class T</label>
+    <sort_order>8064</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>537</value>
+   </Item>
+   <Item type="Filter Value" id="1EA0F51056714343B88FEB3DB6A83D9B" action="add">
+    <filter>112</filter>
+    <label xml:lang="en">Ferrule Size 300V Class T</label>
+    <sort_order>8192</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>538</value>
+   </Item>
+   <Item type="Filter Value" id="9546DCC501EE4720891B9307A7A7C1C0" action="add">
+    <filter>112</filter>
+    <label xml:lang="en">Blade Size 600V Class T</label>
+    <sort_order>8320</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>556</value>
+   </Item>
+   <Item type="Filter Value" id="B02D4614C5B1419FA9354727294332C3" action="add">
+    <filter>112</filter>
+    <label xml:lang="en">Ferrule Size 600V Class T</label>
+    <sort_order>8448</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>557</value>
+   </Item>
+   <Item type="Filter Value" id="331CEDD94CEA415D8F63EA5DC6956297" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">Ren Fuses 250v (0 - 30)</label>
+    <sort_order>8576</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>586</value>
+   </Item>
+   <Item type="Filter Value" id="2CCCC9C866AD45C88C672BDDE5FB90CF" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">Ren Fuses 600v (0 - 30)</label>
+    <sort_order>8704</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>587</value>
+   </Item>
+   <Item type="Filter Value" id="C5136A8F84E04594841D00A6360E5B5F" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">Ren Links 250v (0 - 30)</label>
+    <sort_order>8832</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>588</value>
+   </Item>
+   <Item type="Filter Value" id="0841D5BDF42A4F84A3E8770A17B09E7A" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">Ren Links 600v (0 - 30)</label>
+    <sort_order>8960</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>589</value>
+   </Item>
+   <Item type="Filter Value" id="18C4184912E848D1AE41C4EEFAE0EBB5" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">Fibre Bars 600v (61 - 100)</label>
+    <sort_order>9088</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>590</value>
+   </Item>
+   <Item type="Filter Value" id="7F1E8977A8AE463FA3F1BB75A75D99B7" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">Fibre Bars 600v (101 - 200)</label>
+    <sort_order>9216</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>591</value>
+   </Item>
+   <Item type="Filter Value" id="B2D46E1AB38A491B82787316D7B5D812" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">Fibre Bars 600v (201 - 400)</label>
+    <sort_order>9344</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>592</value>
+   </Item>
+   <Item type="Filter Value" id="7550C06DC30D43BF91D6FCB41FA46337" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">250V Renewable Fuse</label>
+    <sort_order>9472</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>803</value>
+   </Item>
+   <Item type="Filter Value" id="190BA2FBBFB94B05B6AD20A23F00A1FA" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">600V Renewable Fuse</label>
+    <sort_order>9600</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>804</value>
+   </Item>
+   <Item type="Filter Value" id="9EEFC08A998F46ADAEB4228D39DC5685" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">250V Renewable Link</label>
+    <sort_order>9728</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>805</value>
+   </Item>
+   <Item type="Filter Value" id="22511D954F584AF5A9FCB00626129786" action="add">
+    <filter>113</filter>
+    <label xml:lang="en">600V Renewable Link</label>
+    <sort_order>9856</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>806</value>
+   </Item>
+   <Item type="Filter Value" id="CF6DE36C4C3F46019E85AF705370B847" action="add">
+    <filter>114</filter>
+    <label xml:lang="en">Fibre Bars 600v (401 - 600)</label>
+    <sort_order>9984</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>593</value>
+   </Item>
+   <Item type="Filter Value" id="22B98E72EDFB4A4CBE65D9C9ED9AB996" action="add">
+    <filter>115</filter>
+    <label xml:lang="en">Dual Element 250v</label>
+    <sort_order>10112</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>614</value>
+   </Item>
+   <Item type="Filter Value" id="9BAEE36997C74AFD89695BD11DC1635C" action="add">
+    <filter>115</filter>
+    <label xml:lang="en">Dual Element 600v</label>
+    <sort_order>10240</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>615</value>
+   </Item>
+   <Item type="Filter Value" id="9C4CDED9BB514DF081189879AD051716" action="add">
+    <filter>117</filter>
+    <label xml:lang="en">Low Voltage Capacitor Fuse</label>
+    <sort_order>10368</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>748</value>
+   </Item>
+   <Item type="Filter Value" id="D78A9836E6224AD8802738550ED12036" action="add">
+    <filter>117</filter>
+    <label xml:lang="en">SPD XH Series</label>
+    <sort_order>10370</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>189</value>
+   </Item>
+   <Item type="Filter Value" id="E3B79D7A5B94441BB7A10F7AD23E1DC9" action="add">
+    <filter>117</filter>
+    <label xml:lang="en">STZ Series Internal SPD R</label>
+    <sort_order>10380</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>207</value>
+   </Item>
+   <Item type="Filter Value" id="1FF3A7404A384FE3B24CF8DB036040C4" action="add">
+    <filter>117</filter>
+    <label xml:lang="en">STZ Series Internal SPD X</label>
+    <sort_order>10400</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>207</value>
+   </Item>
+   <Item type="Filter Value" id="43985A4090DA4BAA889D99F162F3E51E" action="add">
+    <filter>118</filter>
+    <label xml:lang="en">Form 600 Fuse</label>
+    <sort_order>10496</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>512</value>
+   </Item>
+   <Item type="Filter Value" id="8CE9DA93A64E4FF2A9D8C09A9BA80ABA" action="add">
+    <filter>118</filter>
+    <label xml:lang="en">250V Form 600 Fuse - Blade</label>
+    <sort_order>10624</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>532</value>
+   </Item>
+   <Item type="Filter Value" id="61AA7E5BECFA464EBA4ECABE2A38EA96" action="add">
+    <filter>118</filter>
+    <label xml:lang="en">250V Form 600 Fuse - Ferrule</label>
+    <sort_order>10752</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>533</value>
+   </Item>
+   <Item type="Filter Value" id="0AED2D6DA2964BB9ABBD22CC1377E89E" action="add">
+    <filter>118</filter>
+    <label xml:lang="en">500V Form 600 Fuse</label>
+    <sort_order>10880</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>548</value>
+   </Item>
+   <Item type="Filter Value" id="E1E825A61C164407AC9A3E2786713B95" action="add">
+    <filter>118</filter>
+    <label xml:lang="en">600V Form 600 Fuse - Blade</label>
+    <sort_order>11008</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>559</value>
+   </Item>
+   <Item type="Filter Value" id="1AD63B01C4824791874185087884B9FA" action="add">
+    <filter>118</filter>
+    <label xml:lang="en">600V Form 600 Fuse - Ferrule</label>
+    <sort_order>11136</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>560</value>
+   </Item>
+   <Item type="Filter Value" id="BD223BFBE07545A098B81E6611E89E65" action="add">
+    <filter>118</filter>
+    <label xml:lang="en">Class G</label>
+    <sort_order>11264</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>629</value>
+   </Item>
+   <Item type="Filter Value" id="A6B3008592D2411B947E8D6979B8D18C" action="add">
+    <filter>119</filter>
+    <label xml:lang="en">HRC Class C Form II</label>
+    <sort_order>11392</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>679</value>
+   </Item>
+   <Item type="Filter Value" id="1A8D76C6DCA04F4B9C63ABAB7E70EB2B" action="add">
+    <filter>121</filter>
+    <label xml:lang="en">Fork Truck Fuse Round</label>
+    <sort_order>11520</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>571</value>
+   </Item>
+   <Item type="Filter Value" id="7F6C2473C8A946B69DE360BE5F41A334" action="add">
+    <filter>121</filter>
+    <label xml:lang="en">Fork Truck Fuse Round</label>
+    <sort_order>11648</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>572</value>
+   </Item>
+   <Item type="Filter Value" id="AA2A66586FFB45588E55988F43CA15B7" action="add">
+    <filter>121</filter>
+    <label xml:lang="en">Fork Truck Fuse Round</label>
+    <sort_order>11776</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>577</value>
+   </Item>
+   <Item type="Filter Value" id="17FE710B086F4D528680D5EAFFEA6040" action="add">
+    <filter>121</filter>
+    <label xml:lang="en">Fork Truck Fuse Flat</label>
+    <sort_order>11904</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>635</value>
+   </Item>
+   <Item type="Filter Value" id="445883C5EB7341999498E6FEFDE9E4FC" action="add">
+    <filter>121</filter>
+    <label xml:lang="en">Fork Truck Fuse Flat</label>
+    <sort_order>12032</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>636</value>
+   </Item>
+   <Item type="Filter Value" id="BCF35E4812BB44D5AFFBFCE1ADCFCEB5" action="add">
+    <filter>121</filter>
+    <label xml:lang="en">Fork Truck Fuse Misc</label>
+    <sort_order>12160</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>756</value>
+   </Item>
+   <Item type="Filter Value" id="378D651CB65146B3885FB0EDEA6D2DD0" action="add">
+    <filter>122</filter>
+    <label xml:lang="en">600V Fast Acting</label>
+    <sort_order>12288</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>785</value>
+   </Item>
+   <Item type="Filter Value" id="65B0A8EC854E411CA0D45B7DA49BFAD4" action="add">
+    <filter>122</filter>
+    <label xml:lang="en">600V Semiconductor</label>
+    <sort_order>12416</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>786</value>
+   </Item>
+   <Item type="Filter Value" id="759C86466E9D45EABCAAB7C26B9962FA" action="add">
+    <filter>122</filter>
+    <label xml:lang="en">600V Time Delay</label>
+    <sort_order>12544</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>787</value>
+   </Item>
+   <Item type="Filter Value" id="F41FF2D9B3B64FB3BAA7C8944CC46B68" action="add">
+    <filter>122</filter>
+    <label xml:lang="en">1000VDC Fast Acting</label>
+    <sort_order>12672</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>908</value>
+   </Item>
+   <Item type="Filter Value" id="85B98749548D4C449D783E1C2B1A8AF5" action="add">
+    <filter>123</filter>
+    <label xml:lang="en">Telecommunications Fuse</label>
+    <sort_order>12800</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>830</value>
+   </Item>
+   <Item type="Filter Value" id="410357A718AC457A9304ACB6E84E420E" action="add">
+    <filter>124</filter>
+    <label xml:lang="en">AutomationDirect - T Fuse Pkg.</label>
+    <sort_order>12928</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>574</value>
+   </Item>
+   <Item type="Filter Value" id="2F49E1CA1AA849B3B01B6220B5C9AA1E" action="add">
+    <filter>124</filter>
+    <label xml:lang="en">Multimeter Fuse</label>
+    <sort_order>13056</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>690</value>
+   </Item>
+   <Item type="Filter Value" id="FF05C751225E40C19ADAD8D3AB9DF0B4" action="add">
+    <filter>124</filter>
+    <label xml:lang="en">High Fault Circuit Protector</label>
+    <sort_order>13184</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>709</value>
+   </Item>
+   <Item type="Filter Value" id="7B4C1E5EEB434A9A8D2BE2939DCD0A35" action="add">
+    <filter>124</filter>
+    <label xml:lang="en">AOL-CS Limiters</label>
+    <sort_order>13312</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>743</value>
+   </Item>
+   <Item type="Filter Value" id="623B98CF083047C6BC37B14AC7774006" action="add">
+    <filter>124</filter>
+    <label xml:lang="en">Low Voltage Misc.</label>
+    <sort_order>13440</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>749</value>
+   </Item>
+   <Item type="Filter Value" id="1B0EDF86580C4D28AD616FFF39101359" action="add">
+    <filter>124</filter>
+    <label xml:lang="en">Motor Short Circuit Protector</label>
+    <sort_order>13568</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>762</value>
+   </Item>
+   <Item type="Filter Value" id="B9AFEC5A51CD4314B1D425880D173DB4" action="add">
+    <filter>124</filter>
+    <label xml:lang="en">Fuse Component Parts</label>
+    <sort_order>13696</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>963</value>
+   </Item>
+   <Item type="Filter Value" id="010526ED84324CEF9ED8A4FF09B1A90C" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Box Cover Unit</label>
+    <sort_order>13824</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>607</value>
+   </Item>
+   <Item type="Filter Value" id="4C461BFC01BC4347B2BB4CA5227EAAB3" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Style "P" 125v (3 - 12)</label>
+    <sort_order>13952</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>719</value>
+   </Item>
+   <Item type="Filter Value" id="CB66211A11D44037BDD0328FD947E5E7" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Style "P" 125v (15 - 30)</label>
+    <sort_order>14080</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>720</value>
+   </Item>
+   <Item type="Filter Value" id="1332421684474CBDAE2D11A912CAF295" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">U.S.Fuses 125v (15 - 30)</label>
+    <sort_order>14208</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>721</value>
+   </Item>
+   <Item type="Filter Value" id="AE9D7A4836844CB9A22BA98E8BD50508" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Export 125v (15 - 30)</label>
+    <sort_order>14336</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>722</value>
+   </Item>
+   <Item type="Filter Value" id="CE8979FB9417422BAC00B0A5A5867287" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Rejector Rings (15 - 30)</label>
+    <sort_order>14464</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>723</value>
+   </Item>
+   <Item type="Filter Value" id="31DF7FEC188447239D23AA3C3DFC3BDB" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Time Delay 125v (15- 30)</label>
+    <sort_order>14592</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>726</value>
+   </Item>
+   <Item type="Filter Value" id="1C857A32A0C1425FBFA2B5657D3FC033" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Plug Style Fuse</label>
+    <sort_order>14720</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>789</value>
+   </Item>
+   <Item type="Filter Value" id="7D91C4466A9145C5A5919535FF746D3B" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Stove Bar No Fuses 1 - 5 Holes</label>
+    <sort_order>14848</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>822</value>
+   </Item>
+   <Item type="Filter Value" id="68497D79603646299C504B6BF556FB6D" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Stove Bar No Fuses 6-8 Holes</label>
+    <sort_order>14976</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>823</value>
+   </Item>
+   <Item type="Filter Value" id="344C295E96264929805B07C200F887F7" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Stove Bar Inc P Fuses 1-5 Hole</label>
+    <sort_order>15104</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>824</value>
+   </Item>
+   <Item type="Filter Value" id="8F65C45FD13E44FF9808D3E01A7CEA48" action="add">
+    <filter>145</filter>
+    <label xml:lang="en">Stovebar Incl P Fuses 6-8 Hole</label>
+    <sort_order>15232</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>825</value>
+   </Item>
+   <Item type="Filter Value" id="B9D97CAB44FB45CBBFBB7D10861D822E" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">Finger Safe PDB</label>
+    <sort_order>15360</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>691</value>
+   </Item>
+   <Item type="Filter Value" id="96001A31603348A19605FB28E11908DD" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">Intermediate Power Dist. Block</label>
+    <sort_order>15488</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>717</value>
+   </Item>
+   <Item type="Filter Value" id="852865BC4AE44051A8ACB49704773812" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">Large Power Dist. Block</label>
+    <sort_order>15616</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>747</value>
+   </Item>
+   <Item type="Filter Value" id="BA78E2405AAE44779AAA37FB41C59155" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">Mini Power Dist. Block</label>
+    <sort_order>15744</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>758</value>
+   </Item>
+   <Item type="Filter Value" id="48F96D42F13549DBB5D6161723559E31" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">PDB Components &amp; Accessories</label>
+    <sort_order>15872</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>788</value>
+   </Item>
+   <Item type="Filter Value" id="BEA041E6E44449BFA3E729F7824111E9" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">Weidmuller</label>
+    <sort_order>16000</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>859</value>
+   </Item>
+   <Item type="Filter Value" id="7292816839CC4D8BAFA69E368537CDB5" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">Auxel</label>
+    <sort_order>16128</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>861</value>
+   </Item>
+   <Item type="Filter Value" id="C6E4579DD3A84B7DBF916606260AF62E" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">MPDB series Large</label>
+    <sort_order>16256</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>979</value>
+   </Item>
+   <Item type="Filter Value" id="FC19CD3355894EC8A36FC3F6D4DA6ED0" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">MPDB series Intermediate</label>
+    <sort_order>16384</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>980</value>
+   </Item>
+   <Item type="Filter Value" id="2E3CE3F8A92C49A19585F2CE04CBBAB0" action="add">
+    <filter>146</filter>
+    <label xml:lang="en">MPDB series Miniature</label>
+    <sort_order>16512</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>981</value>
+   </Item>
+   <Item type="Filter Value" id="6EFF22D691EE41A58E3E7C3DAD66E199" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">Form 101 Rectifier Fuse Block</label>
+    <sort_order>16640</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>503</value>
+   </Item>
+   <Item type="Filter Value" id="773C887E207547C2A88B2D90ED996CA0" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">250V Class H,K, &amp; R Fuse Block</label>
+    <sort_order>16768</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>507</value>
+   </Item>
+   <Item type="Filter Value" id="6E13BD1A969F479DA8E557D4799D2DA5" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">300V Class T Fuse Block</label>
+    <sort_order>16896</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>508</value>
+   </Item>
+   <Item type="Filter Value" id="7F6D791F569C4C76A4C6F55EEBD085E8" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">600V Class H,K &amp; R Fuse Block</label>
+    <sort_order>17024</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>515</value>
+   </Item>
+   <Item type="Filter Value" id="04AB465CDDBC4765B78D8F68908875DD" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">600V Class T Fuse Block</label>
+    <sort_order>17152</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>517</value>
+   </Item>
+   <Item type="Filter Value" id="E672634AEED94AB99A22989F37C2D95A" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">Class CC Fuse Block</label>
+    <sort_order>17280</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>625</value>
+   </Item>
+   <Item type="Filter Value" id="F019141F5BD14FB0B5CB0780E12C39B1" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">FB Components &amp; Accessories</label>
+    <sort_order>17408</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>669</value>
+   </Item>
+   <Item type="Filter Value" id="A4A9A41CAB254EEEBA1E526D7C8C84BE" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">In-line Fuseholder Family</label>
+    <sort_order>17536</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>680</value>
+   </Item>
+   <Item type="Filter Value" id="B433C674DBE54E83BE4E57B788560F5E" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">Class G Fuse Block</label>
+    <sort_order>17664</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>698</value>
+   </Item>
+   <Item type="Filter Value" id="D6CC81F2F51D4393B30E6E694046ECDE" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">Class J Fuse Block</label>
+    <sort_order>17792</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>718</value>
+   </Item>
+   <Item type="Filter Value" id="4B18D9C9C1D7400CA77939F18B96A54A" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">Midget Fuse Block</label>
+    <sort_order>17920</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>755</value>
+   </Item>
+   <Item type="Filter Value" id="C1BC531E7C3A4FD9A4B49A36DA18C573" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">Panelmount</label>
+    <sort_order>18048</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>790</value>
+   </Item>
+   <Item type="Filter Value" id="017AE2D250A04DDD9A675DB89EECD1A9" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">DIN Rail</label>
+    <sort_order>18176</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>800</value>
+   </Item>
+   <Item type="Filter Value" id="815BC96AFF1E4094884BEB6DF8AC1447" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">Semiconductor Fuse Block</label>
+    <sort_order>18304</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>810</value>
+   </Item>
+   <Item type="Filter Value" id="45D7CDAF45C94172B86F683EDF6F7D2E" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">In-Line SLR Fuseholder</label>
+    <sort_order>18432</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>815</value>
+   </Item>
+   <Item type="Filter Value" id="C1C9211CD5D84EAE8F716E1DABDD134B" action="add">
+    <filter>147</filter>
+    <label xml:lang="en">Lindner Wire Bar</label>
+    <sort_order>18560</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>858</value>
+   </Item>
+   <Item type="Filter Value" id="7904BDFF2DE2440EAE9D99518A159DE2" action="add">
+    <filter>149</filter>
+    <label xml:lang="en">ILS</label>
+    <sort_order>18688</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>877</value>
+   </Item>
+   <Item type="Filter Value" id="58F2ABC475F34AB2B7608571B0736545" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">Air Conditioning Disconnects</label>
+    <sort_order>18816</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>570</value>
+   </Item>
+   <Item type="Filter Value" id="C608329E2B724F8E9BF47F882A3C2FA3" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">UL 98 Fused Switches</label>
+    <sort_order>18944</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>694</value>
+   </Item>
+   <Item type="Filter Value" id="956E7B3DE32E49068C1205938BCEF500" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">IEC Fused/non-fuses Switches</label>
+    <sort_order>19072</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>714</value>
+   </Item>
+   <Item type="Filter Value" id="F522224C201741F6AB23B43354DA688A" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">UL 508 Switches</label>
+    <sort_order>19200</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>738</value>
+   </Item>
+   <Item type="Filter Value" id="63CCCE2237A84D03A3E5D0983F369A73" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">Shafts &amp; Handles</label>
+    <sort_order>19328</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>814</value>
+   </Item>
+   <Item type="Filter Value" id="8080D28A0E864EBAB3F2D4BE4DA937AF" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">UL 98 Non-Fused Switches</label>
+    <sort_order>19456</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>816</value>
+   </Item>
+   <Item type="Filter Value" id="60D1365F90AE410D8CED09B924D880F1" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">Switch Accessories</label>
+    <sort_order>19584</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>828</value>
+   </Item>
+   <Item type="Filter Value" id="02D102EF53374FDB8416C19863F5A4AA" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">TVSS Disconnect Switches</label>
+    <sort_order>19712</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>842</value>
+   </Item>
+   <Item type="Filter Value" id="09CF7C5AD64D45D4BEC4E702A132A850" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">Digital Monitoring</label>
+    <sort_order>19840</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>862</value>
+   </Item>
+   <Item type="Filter Value" id="8CB650FCEFAB4C418FC3649BE2F9CF7E" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">UL 98 Fused Switches</label>
+    <sort_order>19968</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>993</value>
+   </Item>
+   <Item type="Filter Value" id="838E526FF8AC4EDFAD847606EC9AD4B3" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">IEC Fused/non-fuses Switches</label>
+    <sort_order>20096</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>994</value>
+   </Item>
+   <Item type="Filter Value" id="9B1BA578E419423F99F0CAA260509E49" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">UL 508 Switches</label>
+    <sort_order>20224</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>995</value>
+   </Item>
+   <Item type="Filter Value" id="CEDFC73A228843F1BB441744FB5E2A4A" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">Shafts &amp; Handles</label>
+    <sort_order>20352</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>996</value>
+   </Item>
+   <Item type="Filter Value" id="F84F1F7E32B048E89CFD729BECC02C57" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">UL 98 Non-Fused Switches</label>
+    <sort_order>20480</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>997</value>
+   </Item>
+   <Item type="Filter Value" id="E4C41E9284C44842AB150C0E5C0871D0" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">Switch Accessories</label>
+    <sort_order>20608</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>998</value>
+   </Item>
+   <Item type="Filter Value" id="D64CC268417341ACB87F1F4A7E811D45" action="add">
+    <filter>150</filter>
+    <label xml:lang="en">DC Switches</label>
+    <sort_order>20736</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>999</value>
+   </Item>
+   <Item type="Filter Value" id="2A18A4A7A6224CB7BE18F38B20F40CDC" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Mod Fuseholder 10x85</label>
+    <sort_order>20864</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>116</value>
+   </Item>
+   <Item type="Filter Value" id="FD89F618A84E45B18335BF0060846A36" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">Allen-Bradley UltraSafes</label>
+    <sort_order>20992</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>568</value>
+   </Item>
+   <Item type="Filter Value" id="FA445A9E7F9644958E85CBAD88378E1D" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">Automationdirect.com - Ultras</label>
+    <sort_order>21120</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>573</value>
+   </Item>
+   <Item type="Filter Value" id="7BAB25D82E3E43459B20B014AFED4B6B" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">Littelfuse UltraSafes</label>
+    <sort_order>21248</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>739</value>
+   </Item>
+   <Item type="Filter Value" id="4BDB4B7634A74047B8CA9D3D0180AE27" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">US3Js for Littelfuse</label>
+    <sort_order>21376</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>740</value>
+   </Item>
+   <Item type="Filter Value" id="A126735B7F5E4713B8136D1CB2867C3D" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">US6Js for Littelfuse</label>
+    <sort_order>21504</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>741</value>
+   </Item>
+   <Item type="Filter Value" id="421AC9D0E0CB4C76ABD8FCF5CF2AEC87" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">Sprecher &amp; Schuh UltraSafes</label>
+    <sort_order>21632</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>808</value>
+   </Item>
+   <Item type="Filter Value" id="91DB076C66014C1EA4EA99DA3B12DE33" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Mod Fuseholder 14mm</label>
+    <sort_order>21760</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>844</value>
+   </Item>
+   <Item type="Filter Value" id="297BFBF2F731446DBECF73124D3E974B" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Mod Fuseholder 22mm</label>
+    <sort_order>21888</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>845</value>
+   </Item>
+   <Item type="Filter Value" id="DF088F28100B44CFA5F30BCE871E7CA8" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Mod Fuseholder 27mm</label>
+    <sort_order>22016</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>846</value>
+   </Item>
+   <Item type="Filter Value" id="E52E0991C95042448C22C58A3B253F51" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">Class J - 30A Fuse Holder</label>
+    <sort_order>22144</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>847</value>
+   </Item>
+   <Item type="Filter Value" id="56EC93D535894490963E14A2F4B08404" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">Class J - 60A Fuse Holder</label>
+    <sort_order>22272</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>848</value>
+   </Item>
+   <Item type="Filter Value" id="1A2D598276F2432BA1BEE9AEFD5B78D8" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Class CC Fuse Holder</label>
+    <sort_order>22400</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>849</value>
+   </Item>
+   <Item type="Filter Value" id="6AA1347D6C5141C18DAD9C52ECA38FFE" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Fuse Modules</label>
+    <sort_order>22528</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>850</value>
+   </Item>
+   <Item type="Filter Value" id="DEF71CF148EA4EF2A45939835F4D3108" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Midget Fuse Block</label>
+    <sort_order>22656</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>851</value>
+   </Item>
+   <Item type="Filter Value" id="E98B5D94C86A47FDA2B4A72C79DBD9C9" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">ST Accessories</label>
+    <sort_order>22784</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>868</value>
+   </Item>
+   <Item type="Filter Value" id="83135102EC844283AF0CF5B98418B377" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">Siemens UltraSafes</label>
+    <sort_order>22912</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>952</value>
+   </Item>
+   <Item type="Filter Value" id="756F693CD27A4C77AA3D9380145B187D" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Spring Terminal Midg</label>
+    <sort_order>23040</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>964</value>
+   </Item>
+   <Item type="Filter Value" id="65D6CBC2781F41ABA319BC73207179B2" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Spring Terminal CC</label>
+    <sort_order>23168</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>965</value>
+   </Item>
+   <Item type="Filter Value" id="6832FBB4E221427FAC30BA282CE6FB10" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Accessories</label>
+    <sort_order>23296</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>982</value>
+   </Item>
+   <Item type="Filter Value" id="831DE816761F4138B4CBA9007C69C738" action="add">
+    <filter>151</filter>
+    <label xml:lang="en">UltraSafe Mod Fuseholder 10mm</label>
+    <sort_order>23424</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>983</value>
+   </Item>
+   <Item type="Filter Value" id="232590BC61A84108B8639714928D2D01" action="add">
+    <filter>152</filter>
+    <label xml:lang="en">Accessorie</label>
+    <sort_order>23552</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>569</value>
+   </Item>
+   <Item type="Filter Value" id="70A942F51AF64552BAD9520035693F90" action="add">
+    <filter>152</filter>
+    <label xml:lang="en">Price Sheet &amp; Catalogs</label>
+    <sort_order>23680</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>866</value>
+   </Item>
+   <Item type="Filter Value" id="BFF35B8C90B14EEABFCAA5AF8B1F9D42" action="add">
+    <filter>153</filter>
+    <label xml:lang="en">Small Dimension Fuse Holders</label>
+    <sort_order>23808</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>668</value>
+   </Item>
+   <Item type="Filter Value" id="1229E2A55C734B6A8D8FBF7B66561E4B" action="add">
+    <filter>153</filter>
+    <label xml:lang="en">Miniature Fuse (15 - 30)</label>
+    <sort_order>23936</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>727</value>
+   </Item>
+   <Item type="Filter Value" id="36603F5D210C41B9984EE1313B92AFC5" action="add">
+    <filter>153</filter>
+    <label xml:lang="en">Min.Fuse Display</label>
+    <sort_order>24064</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>728</value>
+   </Item>
+   <Item type="Filter Value" id="41FB28593DB04A2D85ED5720B6AF6DB5" action="add">
+    <filter>153</filter>
+    <label xml:lang="en">Small Dimension Fuse</label>
+    <sort_order>24192</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>818</value>
+   </Item>
+   <Item type="Filter Value" id="E6702067DA044085971CBA79AA28C9F1" action="add">
+    <filter>154</filter>
+    <label xml:lang="en">Competitives Product</label>
+    <sort_order>24320</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>638</value>
+   </Item>
+   <Item type="Filter Value" id="A29152CDFDC547FF89C1FD895CEEC7A2" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Onetime 250V Class H</label>
+    <sort_order>24448</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>505</value>
+   </Item>
+   <Item type="Filter Value" id="775B5C4BD5104A86AEC2E4002983CD77" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Onetime 600V Class H</label>
+    <sort_order>24576</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>506</value>
+   </Item>
+   <Item type="Filter Value" id="2A3CB0F35E3543E79AA4A249DF658F80" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Onetime 250V Class K5</label>
+    <sort_order>24704</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>510</value>
+   </Item>
+   <Item type="Filter Value" id="368E8C9F53CD422B93D2306A6461EF09" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Onetime 600V Class K5</label>
+    <sort_order>24832</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>511</value>
+   </Item>
+   <Item type="Filter Value" id="FB60D4D067BF4A3DA414FDBE60BF374B" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Class J</label>
+    <sort_order>24960</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>626</value>
+   </Item>
+   <Item type="Filter Value" id="E9C4FC1954CC40768DD5C30F8E1C359A" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Class J T-D</label>
+    <sort_order>25088</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>627</value>
+   </Item>
+   <Item type="Filter Value" id="64EC7EDC6A754D38AB0925E75D88B786" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Class L Fuse - Standard</label>
+    <sort_order>25216</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>630</value>
+   </Item>
+   <Item type="Filter Value" id="424E41C7C4C044C39DD8E9264C1C67F8" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Class L Fuse - Standard</label>
+    <sort_order>25344</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>631</value>
+   </Item>
+   <Item type="Filter Value" id="D1AE516256224AD999340873F18B441F" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">500V Midget Fuse T-D</label>
+    <sort_order>25472</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>637</value>
+   </Item>
+   <Item type="Filter Value" id="0B9AFE0A89344D10B806CF195C3D0FA1" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Trionic 250V Class RK5 T-D</label>
+    <sort_order>25600</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>641</value>
+   </Item>
+   <Item type="Filter Value" id="A3E41CB9B18847779983B0241E09EF7F" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Trionic 600V Class RK5 T-D</label>
+    <sort_order>25728</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>642</value>
+   </Item>
+   <Item type="Filter Value" id="EFF68B73B0B74B609EF49F85CA21B69D" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">600V Midget Fuse</label>
+    <sort_order>25856</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>643</value>
+   </Item>
+   <Item type="Filter Value" id="8565D7FD12884B0A983323E6F36B8D6D" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">600V Midget Fuse</label>
+    <sort_order>25984</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>644</value>
+   </Item>
+   <Item type="Filter Value" id="BA4D4856CE8840B88C8BBED1F91B0BCA" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">250V Class RK1</label>
+    <sort_order>26112</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>645</value>
+   </Item>
+   <Item type="Filter Value" id="DE0C3C4C235446CBB990512D99D58380" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">600V Class RK1</label>
+    <sort_order>26240</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>646</value>
+   </Item>
+   <Item type="Filter Value" id="00801B9BDF76422BA1F5411080198388" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">Fuse Holder</label>
+    <sort_order>26368</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>695</value>
+   </Item>
+   <Item type="Filter Value" id="42102DFB3D3A46F485CB87855AF7A047" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">GEC Class J</label>
+    <sort_order>26496</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>696</value>
+   </Item>
+   <Item type="Filter Value" id="B1BA6A8983984FB2B2625F85177801BE" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">300V Class T</label>
+    <sort_order>26624</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>724</value>
+   </Item>
+   <Item type="Filter Value" id="59557A35DA134B2B9DFB68A2CE9B7011" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">600V Class T</label>
+    <sort_order>26752</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>725</value>
+   </Item>
+   <Item type="Filter Value" id="A0ADC6865C3E414A94F80C9415CF3B91" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">250V Class RK1 T-D</label>
+    <sort_order>26880</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>745</value>
+   </Item>
+   <Item type="Filter Value" id="7BC11558244046329059153029FCBFD9" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">600V Class RK1 T-D</label>
+    <sort_order>27008</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>746</value>
+   </Item>
+   <Item type="Filter Value" id="1385FC7ECE2C4E16A293C180A0794F7B" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">250V Renewable Fuse</label>
+    <sort_order>27136</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>801</value>
+   </Item>
+   <Item type="Filter Value" id="3230A990DEC24D8281734F946E1D71C8" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">600V Renewable Fuse</label>
+    <sort_order>27264</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>802</value>
+   </Item>
+   <Item type="Filter Value" id="71A262CD467342868EADC1AA36298910" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">GEACC</label>
+    <sort_order>27392</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>872</value>
+   </Item>
+   <Item type="Filter Value" id="A8CA6D286D8D44C9BFDF656196B7455C" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">GELV</label>
+    <sort_order>27520</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>873</value>
+   </Item>
+   <Item type="Filter Value" id="16E97B2E40FB48CAAA113F37B366B580" action="add">
+    <filter>155</filter>
+    <label xml:lang="en">GESC</label>
+    <sort_order>27648</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>875</value>
+   </Item>
+   <Item type="Filter Value" id="1FFD5C2CB66B4528A0A2CD6B7BA9F8FF" action="add">
+    <filter>156</filter>
+    <label xml:lang="en">Trionic 250V Class RK5 T-D</label>
+    <sort_order>27776</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>662</value>
+   </Item>
+   <Item type="Filter Value" id="F2D45BB8B8C346A8AA95260C4D6E5C69" action="add">
+    <filter>156</filter>
+    <label xml:lang="en">Trionic 600V Class RK5 T-D</label>
+    <sort_order>27904</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>663</value>
+   </Item>
+   <Item type="Filter Value" id="0CE96A0F3D5143539812370FA7AE5544" action="add">
+    <filter>156</filter>
+    <label xml:lang="en">600V Midget Fuse</label>
+    <sort_order>28032</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>753</value>
+   </Item>
+   <Item type="Filter Value" id="ED485676C1BD49BDB80FC172F5BE2DF4" action="add">
+    <filter>157</filter>
+    <label xml:lang="en">Vynckier</label>
+    <sort_order>28160</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>854</value>
+   </Item>
+   <Item type="Filter Value" id="84766B7FA9054540AF4F84617BCAC179" action="add">
+    <filter>157</filter>
+    <label xml:lang="en">Vynckier Enclosures Accessorie</label>
+    <sort_order>28288</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>855</value>
+   </Item>
+   <Item type="Filter Value" id="73FE1BC0696741DFA266B155EA98F272" action="add">
+    <filter>157</filter>
+    <label xml:lang="en">Vynckier</label>
+    <sort_order>28416</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>856</value>
+   </Item>
+   <Item type="Filter Value" id="9FD528DF3A26497684DD581DC349ABCF" action="add">
+    <filter>157</filter>
+    <label xml:lang="en">Vynckier Enclosures Accessorie</label>
+    <sort_order>28544</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>857</value>
+   </Item>
+   <Item type="Filter Value" id="882DA5397AEF44288AE3C92219660B65" action="add">
+    <filter>157</filter>
+    <label xml:lang="en">APO</label>
+    <sort_order>28672</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>870</value>
+   </Item>
+   <Item type="Filter Value" id="05601C6BD2144CD195D6611738D9A7CD" action="add">
+    <filter>157</filter>
+    <label xml:lang="en">ARIA</label>
+    <sort_order>28800</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>871</value>
+   </Item>
+   <Item type="Filter Value" id="B989CB56234749D5A84D935446532C90" action="add">
+    <filter>157</filter>
+    <label xml:lang="en">PS</label>
+    <sort_order>28928</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>880</value>
+   </Item>
+   <Item type="Filter Value" id="30B504394B56497EB584817F96699FF2" action="add">
+    <filter>157</filter>
+    <label xml:lang="en">VJ</label>
+    <sort_order>29056</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>881</value>
+   </Item>
+   <Item type="Filter Value" id="CD5CD48228DA4D45A2DB07205C5CC8C8" action="add">
+    <filter>157</filter>
+    <label xml:lang="en">VMS</label>
+    <sort_order>29184</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>882</value>
+   </Item>
+   <Item type="Filter Value" id="2FAB5AFDF7774323B1AEF1AD84405C71" action="add">
+    <filter>160</filter>
+    <label xml:lang="en">Test Lab Services</label>
+    <sort_order>29312</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>887</value>
+   </Item>
+   <Item type="Filter Value" id="6C95ECC74AE74A4297E57A5399195385" action="add">
+    <filter>160</filter>
+    <label xml:lang="en">Certification</label>
+    <sort_order>29440</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>888</value>
+   </Item>
+   <Item type="Filter Value" id="47459065F9244ECDA35CB3F6F2BB0E87" action="add">
+    <filter>160</filter>
+    <label xml:lang="en">Consulting Services</label>
+    <sort_order>29568</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>889</value>
+   </Item>
+   <Item type="Filter Value" id="E37FF9C370264A27809BCCA7BD88BBB4" action="add">
+    <filter>160</filter>
+    <label xml:lang="en">Engineering Services</label>
+    <sort_order>29696</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>890</value>
+   </Item>
+   <Item type="Filter Value" id="0C9178C0F1A94776AE263970FC664996" action="add">
+    <filter>160</filter>
+    <label xml:lang="en">Training</label>
+    <sort_order>29824</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>939</value>
+   </Item>
+   <Item type="Filter Value" id="1FF3FF70C5D74FCEB455D473AD469F60" action="add">
+    <filter>160</filter>
+    <label xml:lang="en">Arc Flash Hazard Analysis</label>
+    <sort_order>29952</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>940</value>
+   </Item>
+   <Item type="Filter Value" id="76D726595E97449AB86117AE4A22AFA7" action="add">
+    <filter>160</filter>
+    <label xml:lang="en">Engineering</label>
+    <sort_order>30080</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>941</value>
+   </Item>
+   <Item type="Filter Value" id="A97BA821D4F149C79CC3AC5606A7458B" action="add">
+    <filter>160</filter>
+    <label xml:lang="en">Warranty</label>
+    <sort_order>30208</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>942</value>
+   </Item>
+   <Item type="Filter Value" id="E790DA524ED14C9D8990E5A7F1742A90" action="add">
+    <filter>160</filter>
+    <label xml:lang="en">Service Standard Product</label>
+    <sort_order>30336</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>977</value>
+   </Item>
+   <Item type="Filter Value" id="68465699124A4E7D99A55DDA7AB4D3C3" action="add">
+    <filter>168</filter>
+    <label xml:lang="en">Enclosed Disconnect Switch</label>
+    <sort_order>30464</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>664</value>
+   </Item>
+   <Item type="Filter Value" id="853C070616EE408987091EC86FBA6A19" action="add">
+    <filter>168</filter>
+    <label xml:lang="en">Engineered Switch Panel</label>
+    <sort_order>30592</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>665</value>
+   </Item>
+   <Item type="Filter Value" id="B2939FE897AF461D97EB9D7660C7C404" action="add">
+    <filter>168</filter>
+    <label xml:lang="en">Switch Kits</label>
+    <sort_order>30720</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>829</value>
+   </Item>
+   <Item type="Filter Value" id="1E98492AEC7344EE966F1039741595A8" action="add">
+    <filter>168</filter>
+    <label xml:lang="en">Drive Protection Module</label>
+    <sort_order>30848</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>865</value>
+   </Item>
+   <Item type="Filter Value" id="E3E112A1AA444AD0BCA8A555C64968C5" action="add">
+    <filter>169</filter>
+    <label xml:lang="en">Transfer Switches</label>
+    <sort_order>30976</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>840</value>
+   </Item>
+   <Item type="Filter Value" id="C25899B4D9184458A7F95D7FBA13FEC4" action="add">
+    <filter>169</filter>
+    <label xml:lang="en">Transfer Switches Accessories</label>
+    <sort_order>31104</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>841</value>
+   </Item>
+   <Item type="Filter Value" id="84EA43A3F44A40BD881DD3DE9255CDA4" action="add">
+    <filter>174</filter>
+    <label xml:lang="en">Fuse Reducers</label>
+    <sort_order>31232</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>903</value>
+   </Item>
+   <Item type="Filter Value" id="CDD6195DFD9E434ABB7C546B3C4FF47A" action="add">
+    <filter>175</filter>
+    <label xml:lang="en">Selective Coordination Panels</label>
+    <sort_order>31360</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>904</value>
+   </Item>
+   <Item type="Filter Value" id="1F24608698A2493B89AE4C8BEC378FDB" action="add">
+    <filter>175</filter>
+    <label xml:lang="en">PV Combiner Boxes</label>
+    <sort_order>31488</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>962</value>
+   </Item>
+   <Item type="Filter Value" id="83729B2DB5CA4F0FBCAA84C1570D1512" action="add">
+    <filter>195</filter>
+    <label xml:lang="en">1500 VDC Photovoltaic Class G</label>
+    <sort_order>31616</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>101</value>
+   </Item>
+   <Item type="Filter Value" id="E29AADA126024C8291F429FCD942E46D" action="add">
+    <filter>195</filter>
+    <label xml:lang="en">1500VDC Photovolatic Fuse10x85</label>
+    <sort_order>31744</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>115</value>
+   </Item>
+   <Item type="Filter Value" id="8464DD619A734FD2B8A5766B26AD5CA1" action="add">
+    <filter>195</filter>
+    <label xml:lang="en">600VDC Photovoltaic Fuse</label>
+    <sort_order>31872</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>956</value>
+   </Item>
+   <Item type="Filter Value" id="D9A2B83FE0A84B559CC9CF189204D076" action="add">
+    <filter>195</filter>
+    <label xml:lang="en">1000VDC Photovoltaic Fuse</label>
+    <sort_order>32000</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>957</value>
+   </Item>
+   <Item type="Filter Value" id="6E84057172DF46089BD9E17E10126E78" action="add">
+    <filter>195</filter>
+    <label xml:lang="en">600VDC Photovoltaic Class J</label>
+    <sort_order>32128</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>958</value>
+   </Item>
+   <Item type="Filter Value" id="3279393C2B734C0995A0104806700AEF" action="add">
+    <filter>195</filter>
+    <label xml:lang="en">1000VDC/750VAC Midget Fuse</label>
+    <sort_order>32256</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>960</value>
+   </Item>
+   <Item type="Filter Value" id="98715BEB8CBF49148187C64E0D3A7F44" action="add">
+    <filter>195</filter>
+    <label xml:lang="en">1000 VDC Photovoltaic Class J</label>
+    <sort_order>32384</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>968</value>
+   </Item>
+   <Item type="Filter Value" id="FED1FE7E855848E998F370D9B1A66E64" action="add">
+    <filter>195</filter>
+    <label xml:lang="en">NH Style Class GPV</label>
+    <sort_order>32512</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>969</value>
+   </Item>
+   <Item type="Filter Value" id="8B2A8105FE704E79BD453426CFC62BE5" action="add">
+    <filter>202</filter>
+    <label xml:lang="en">BS88 Fuse Holder</label>
+    <sort_order>32640</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>102</value>
+   </Item>
+   <Item type="Filter Value" id="94F0AE76808A439ABA750B2A07AED88B" action="add">
+    <filter>204</filter>
+    <label xml:lang="en">ENCL Accessories</label>
+    <sort_order>32768</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>106</value>
+   </Item>
+   <Item type="Filter Value" id="AC51BF7530D941D7AEF9A1CFDF813769" action="add">
+    <filter>204</filter>
+    <label xml:lang="en">J/RJ Enclosures</label>
+    <sort_order>32896</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>107</value>
+   </Item>
+   <Item type="Filter Value" id="E06E5FC711FD4656B364E58D488A8B02" action="add">
+    <filter>204</filter>
+    <label xml:lang="en">N Enclosures</label>
+    <sort_order>33024</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>108</value>
+   </Item>
+   <Item type="Filter Value" id="C58EBF6717644C2FB795229497ED7474" action="add">
+    <filter>204</filter>
+    <label xml:lang="en">Pushbutton Enclosures</label>
+    <sort_order>33152</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>109</value>
+   </Item>
+   <Item type="Filter Value" id="722B9FFAA8C44BCF8BE57190B7CB8E88" action="add">
+    <filter>204</filter>
+    <label xml:lang="en">Polycarbonate Enclosure</label>
+    <sort_order>33280</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>114</value>
+   </Item>
+   <Item type="Filter Value" id="5798B121456943ED80BAFE4F3B314EDE" action="add">
+    <filter>DF1</filter>
+    <label xml:lang="en">D-Code 1, Lines TBD</label>
+    <sort_order>33408</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>DL1</value>
+   </Item>
+   <Item type="Filter Value" id="75A4C1D3D84344B4B12B2A09C804E20D" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Class AM French Ferrule</label>
+    <sort_order>33536</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>578</value>
+   </Item>
+   <Item type="Filter Value" id="5051ACC2650044A09EEDE758D292427F" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Modular 10mm X 38mm Fuse Block</label>
+    <sort_order>33664</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>613</value>
+   </Item>
+   <Item type="Filter Value" id="2F0C241573B843ED87047DE89DF89DA8" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Modular 14mm X 51mm Fuse Block</label>
+    <sort_order>33792</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>616</value>
+   </Item>
+   <Item type="Filter Value" id="6C9941F7A55D4944AB7042C662C9677E" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Modular 22mm X 58mm Fuse Block</label>
+    <sort_order>33920</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>617</value>
+   </Item>
+   <Item type="Filter Value" id="5DC706B69DDC4CD98BC59D6D8FA9D176" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Modular 8mm X 31mm Fuse Block</label>
+    <sort_order>34048</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>618</value>
+   </Item>
+   <Item type="Filter Value" id="8BF7604996284DFF8CAE64D1788C22A4" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Modular 14 x 51 Fuse block</label>
+    <sort_order>34176</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>632</value>
+   </Item>
+   <Item type="Filter Value" id="DF80CD0C45C54C338719DB403A3B0E40" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Modular 22 x 58 Fuse block</label>
+    <sort_order>34304</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>633</value>
+   </Item>
+   <Item type="Filter Value" id="0349ECB684F64B988D61041228B61A8F" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">CMS Accessories</label>
+    <sort_order>34432</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>634</value>
+   </Item>
+   <Item type="Filter Value" id="C4EC07BD944C496083281565F6EAAB42" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Cartridge Fuses Type D - 500V</label>
+    <sort_order>34560</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>648</value>
+   </Item>
+   <Item type="Filter Value" id="B8A9897A3EC64F66A57D4FD330F991A7" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Cartridge Fuses Type DO 380V</label>
+    <sort_order>34688</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>654</value>
+   </Item>
+   <Item type="Filter Value" id="3EA005E395BC48CCA97189B90779859C" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Class GF French Ferrule Fuse</label>
+    <sort_order>34816</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>697</value>
+   </Item>
+   <Item type="Filter Value" id="A9EA3C00812D4ECC875D97EEB72107BC" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Class Gl French Ferrule Fuse</label>
+    <sort_order>34944</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>700</value>
+   </Item>
+   <Item type="Filter Value" id="C6AA9DFBE1184DD18E5EB4F6D9494FA1" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Lindner D Style Fuses</label>
+    <sort_order>35072</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>729</value>
+   </Item>
+   <Item type="Filter Value" id="8F5DC52309084F999A449ECA20B504C0" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">D Type Accessories</label>
+    <sort_order>35200</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>730</value>
+   </Item>
+   <Item type="Filter Value" id="03D2481586B645F58B62434E0230B37F" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Lindner DO Style Fuses</label>
+    <sort_order>35328</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>731</value>
+   </Item>
+   <Item type="Filter Value" id="EBA73AD15E094B609D43C453B1D7FACF" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">DO Type Accessories</label>
+    <sort_order>35456</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>732</value>
+   </Item>
+   <Item type="Filter Value" id="0B2B759C9349459BBE67DAEE9675B03F" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">D or DO Cartridge Fuse Blocks</label>
+    <sort_order>35584</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>733</value>
+   </Item>
+   <Item type="Filter Value" id="EF66D2B70C08449184B843B937D46633" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Lindner NH Style Class AM</label>
+    <sort_order>35712</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>734</value>
+   </Item>
+   <Item type="Filter Value" id="247FD2C29F2149359D7FAF7A00B62F58" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">NH Fuse Blocks</label>
+    <sort_order>35840</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>735</value>
+   </Item>
+   <Item type="Filter Value" id="F764CE9219634DC18076223934E1835B" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Lindner NH Style Class GL-GG</label>
+    <sort_order>35968</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>736</value>
+   </Item>
+   <Item type="Filter Value" id="73F65A2C069448C1ADB1FE90BE3D53A3" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Lindner NH Style Class TR</label>
+    <sort_order>36096</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>737</value>
+   </Item>
+   <Item type="Filter Value" id="BC52E5874CA14A2ABEE72A8EA01B1715" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Miscellaneous Items</label>
+    <sort_order>36224</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>744</value>
+   </Item>
+   <Item type="Filter Value" id="8A998DF6D8BD4DCE8B1FA4FD23C94438" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">MS Style Accessories</label>
+    <sort_order>36352</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>759</value>
+   </Item>
+   <Item type="Filter Value" id="20F0A68DF0DE4D95BF2888B59B230D11" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Modular 10mm X 38mm Fuse Block</label>
+    <sort_order>36480</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>760</value>
+   </Item>
+   <Item type="Filter Value" id="76335704CA7B4C3580E91D5FFDE346C9" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">Modular 8mm X 31mm Fuse Block</label>
+    <sort_order>36608</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>761</value>
+   </Item>
+   <Item type="Filter Value" id="6C5B34B3382F4C889A2BF73725CEE9BB" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">NH Type Accessories</label>
+    <sort_order>36736</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>766</value>
+   </Item>
+   <Item type="Filter Value" id="5DA9A7B7CD684AF4A921EF0354F95548" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">NH Style Class AM</label>
+    <sort_order>36864</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>767</value>
+   </Item>
+   <Item type="Filter Value" id="8623325DFBB74CAC81A5A02DD6A5B5D2" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">NH BS Disconnects &amp; Switches</label>
+    <sort_order>36992</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>769</value>
+   </Item>
+   <Item type="Filter Value" id="8B62C316ADA34B23BA2F14ADA82BC205" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">NH Fuse Blocks</label>
+    <sort_order>37120</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>770</value>
+   </Item>
+   <Item type="Filter Value" id="B8FAA74ECD944AAB91140D4B2EB183A2" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">NH GI Disconnects &amp; Switches</label>
+    <sort_order>37248</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>771</value>
+   </Item>
+   <Item type="Filter Value" id="E9C23E3FEFC0495B8C78758D59C7796A" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">NH Style Class GL-GG</label>
+    <sort_order>37376</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>772</value>
+   </Item>
+   <Item type="Filter Value" id="AEA0EE839C014DA693D23FB479D1602F" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">NH Linocur Disconnects &amp; Switc</label>
+    <sort_order>37504</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>773</value>
+   </Item>
+   <Item type="Filter Value" id="20687775092B477C90100257993B5FCA" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">NH Switch Accessories</label>
+    <sort_order>37632</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>774</value>
+   </Item>
+   <Item type="Filter Value" id="88363177DE8A49EDA745DAF03D17D919" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">GMG Tube</label>
+    <sort_order>37760</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>920</value>
+   </Item>
+   <Item type="Filter Value" id="F108ACBBDCC64736ADBC10158CC36E77" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">British Type Fuse-IEC</label>
+    <sort_order>37888</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>978</value>
+   </Item>
+   <Item type="Filter Value" id="4BC41F973C2943918C81007EB2916C02" action="add">
+    <filter>120</filter>
+    <label xml:lang="en">IEC Style Class GPV</label>
+    <sort_order>38016</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>989</value>
+   </Item>
+   <Item type="Filter Value" id="CA35395C4B304B518957C4A4E28DCA6F" action="add">
+    <filter>148</filter>
+    <label xml:lang="en">CC Style Accessories</label>
+    <sort_order>38144</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>619</value>
+   </Item>
+   <Item type="Filter Value" id="0608D8E7E53B4736A4F03E9524943BFB" action="add">
+    <filter>148</filter>
+    <label xml:lang="en">D or DO Cartridge Fuse Block</label>
+    <sort_order>38272</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>647</value>
+   </Item>
+   <Item type="Filter Value" id="BD0CEAF6D56B46F98796B290A8AEBC16" action="add">
+    <filter>148</filter>
+    <label xml:lang="en">DO Linocur Disconnects &amp; Switc</label>
+    <sort_order>38400</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>656</value>
+   </Item>
+   <Item type="Filter Value" id="CC40E18CC6214460B6EFB71F540C35EC" action="add">
+    <filter>148</filter>
+    <label xml:lang="en">PSC Fuse Bases</label>
+    <sort_order>38528</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>817</value>
+   </Item>
+   <Item type="Filter Value" id="06275306C2B0442C80305BDCFD762646" action="add">
+    <filter>201</filter>
+    <label xml:lang="en">IEC Fused/Non-Fused Switches</label>
+    <sort_order>38656</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>300</value>
+   </Item>
+   <Item type="Filter Value" id="E4C8FBD9F1444561A6653A2B4155F969" action="add">
+    <filter>DF2</filter>
+    <label xml:lang="en">D-Code 2, Lines TBD</label>
+    <sort_order>38784</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>DL2</value>
+   </Item>
+   <Item type="Filter Value" id="B0F679F4A3724E80ADA3B1BCE4E1A042" action="add">
+    <filter>125</filter>
+    <label xml:lang="en">1000V Rectifier Fuse(Ferraz)</label>
+    <sort_order>38912</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>501</value>
+   </Item>
+   <Item type="Filter Value" id="2B73F2EE4E614C6CAA67987950F8FBC7" action="add">
+    <filter>125</filter>
+    <label xml:lang="en">1000V Rectifier Fuse</label>
+    <sort_order>39040</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>518</value>
+   </Item>
+   <Item type="Filter Value" id="83FB81349CD146DC8F0420E998FDB406" action="add">
+    <filter>126</filter>
+    <label xml:lang="en">150V Rectifier Fuse Blade (Fer</label>
+    <sort_order>39168</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>500</value>
+   </Item>
+   <Item type="Filter Value" id="0CAB12CE35B649BA8AC3D6B1FDF8AA64" action="add">
+    <filter>126</filter>
+    <label xml:lang="en">130V Rectifier Fuse - Block</label>
+    <sort_order>39296</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>519</value>
+   </Item>
+   <Item type="Filter Value" id="68EF2B98DDBE43D481F3DA076DE1187D" action="add">
+    <filter>126</filter>
+    <label xml:lang="en">130V Rectifier Fuse - Cap</label>
+    <sort_order>39424</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>520</value>
+   </Item>
+   <Item type="Filter Value" id="BC209ABFC7F24F16A34337BB1AD11D7E" action="add">
+    <filter>126</filter>
+    <label xml:lang="en">150V Rectifier Fuse - Block</label>
+    <sort_order>39552</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>521</value>
+   </Item>
+   <Item type="Filter Value" id="83CAA6A5CAA7416895FB19725A8009E9" action="add">
+    <filter>126</filter>
+    <label xml:lang="en">150V Rectifier Fuse - Cap</label>
+    <sort_order>39680</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>522</value>
+   </Item>
+   <Item type="Filter Value" id="42CA4247A2644645A5CF4C20057E058E" action="add">
+    <filter>126</filter>
+    <label xml:lang="en">150V Rectifier Fuse - Block</label>
+    <sort_order>39808</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>523</value>
+   </Item>
+   <Item type="Filter Value" id="F27F7FFF45EB4E4987BAFD107F428189" action="add">
+    <filter>126</filter>
+    <label xml:lang="en">150V Rectifier Fuse - Cap</label>
+    <sort_order>39936</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>524</value>
+   </Item>
+   <Item type="Filter Value" id="5D69813E5A224D74BE531FCE60033E06" action="add">
+    <filter>127</filter>
+    <label xml:lang="en">250V Rectifier Fuse - Block</label>
+    <sort_order>40064</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>525</value>
+   </Item>
+   <Item type="Filter Value" id="CBEE19266F584E70BE7C25620AEF1C59" action="add">
+    <filter>127</filter>
+    <label xml:lang="en">250V Rectifier Fuse - Cap</label>
+    <sort_order>40192</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>526</value>
+   </Item>
+   <Item type="Filter Value" id="64B5BFCEE29C477E96D428C257E2301B" action="add">
+    <filter>127</filter>
+    <label xml:lang="en">300V Rectifier Fuse - Block</label>
+    <sort_order>40320</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>534</value>
+   </Item>
+   <Item type="Filter Value" id="7826571925B44A538FDBDC0C3402E817" action="add">
+    <filter>127</filter>
+    <label xml:lang="en">300V Rectifier Fuse - Cap</label>
+    <sort_order>40448</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>535</value>
+   </Item>
+   <Item type="Filter Value" id="840073BA0D7B4B37809AC17A99EB8B63" action="add">
+    <filter>127</filter>
+    <label xml:lang="en">300V Rectifier Fuse</label>
+    <sort_order>40576</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>536</value>
+   </Item>
+   <Item type="Filter Value" id="1B1319604C104893AC0F558984DA1773" action="add">
+    <filter>128</filter>
+    <label xml:lang="en">500V Rectifier Fuse - Block</label>
+    <sort_order>40704</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>544</value>
+   </Item>
+   <Item type="Filter Value" id="F9E540D9891049DDB86736571C29B45D" action="add">
+    <filter>128</filter>
+    <label xml:lang="en">500V Rectifier Fuse - Cap</label>
+    <sort_order>40832</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>545</value>
+   </Item>
+   <Item type="Filter Value" id="BF94FFE3306B44919410BB7E41F8C31A" action="add">
+    <filter>128</filter>
+    <label xml:lang="en">500V Rectifier Fuse</label>
+    <sort_order>40960</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>546</value>
+   </Item>
+   <Item type="Filter Value" id="A3EF5A6C792E44DBB3E88E44A512C162" action="add">
+    <filter>128</filter>
+    <label xml:lang="en">500V Rectifier Fuse - Resin</label>
+    <sort_order>41088</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>547</value>
+   </Item>
+   <Item type="Filter Value" id="76CD3D96328441F79EDE0577FC462E0D" action="add">
+    <filter>129</filter>
+    <label xml:lang="en">600V Rectifier Fuse - Block</label>
+    <sort_order>41216</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>549</value>
+   </Item>
+   <Item type="Filter Value" id="9FF4AF29D3E446A8A94ABF32E84FC92B" action="add">
+    <filter>129</filter>
+    <label xml:lang="en">600V Rectifier Fuse - Cap</label>
+    <sort_order>41344</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>550</value>
+   </Item>
+   <Item type="Filter Value" id="15FDA705D5534F4A97C78D8F65442F54" action="add">
+    <filter>129</filter>
+    <label xml:lang="en">600V Rectifier Fuse - Midget</label>
+    <sort_order>41472</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>551</value>
+   </Item>
+   <Item type="Filter Value" id="0858E209815648D08593E77BD9DB10D5" action="add">
+    <filter>130</filter>
+    <label xml:lang="en">700V Rectifier Fuse - Block</label>
+    <sort_order>41600</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>561</value>
+   </Item>
+   <Item type="Filter Value" id="BC23B2ED54EA42609026A2FA67E9DA67" action="add">
+    <filter>130</filter>
+    <label xml:lang="en">700V Rectifier Fuse - Cap</label>
+    <sort_order>41728</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>562</value>
+   </Item>
+   <Item type="Filter Value" id="C22625FB595247CB8A4F5791DA5C7CD9" action="add">
+    <filter>130</filter>
+    <label xml:lang="en">700V Rectifier Fuse - Block</label>
+    <sort_order>41856</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>563</value>
+   </Item>
+   <Item type="Filter Value" id="08406C8A4ABD48FC988E1218DE3D8406" action="add">
+    <filter>130</filter>
+    <label xml:lang="en">700V Rectifier Fuse</label>
+    <sort_order>41984</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>564</value>
+   </Item>
+   <Item type="Filter Value" id="013857DF00EE40AB91A616DFA2921FF9" action="add">
+    <filter>131</filter>
+    <label xml:lang="en">1000V Sqr Body Fuse Am</label>
+    <sort_order>42112</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>502</value>
+   </Item>
+   <Item type="Filter Value" id="B2786EE1B39D43A192CC3C660F3A2AE0" action="add">
+    <filter>131</filter>
+    <label xml:lang="en">Form 101 Fuse</label>
+    <sort_order>42240</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>504</value>
+   </Item>
+   <Item type="Filter Value" id="C5DFCACDB32A43A79F663A5320BB49D9" action="add">
+    <filter>132</filter>
+    <label xml:lang="en">DC Fuse</label>
+    <sort_order>42368</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>649</value>
+   </Item>
+   <Item type="Filter Value" id="C896307F9E534893AEF9B90EE160F1DE" action="add">
+    <filter>133</filter>
+    <label xml:lang="en">Misc. Semi 700V or less</label>
+    <sort_order>42496</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>750</value>
+   </Item>
+   <Item type="Filter Value" id="9C4FC0322A2746EB88A18EB07FE1C12D" action="add">
+    <filter>133</filter>
+    <label xml:lang="en">Misc. Semi above 700V</label>
+    <sort_order>42624</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>765</value>
+   </Item>
+   <Item type="Filter Value" id="B8AE3DDDA8234504B30B67B080CC1A48" action="add">
+    <filter>135</filter>
+    <label xml:lang="en">Class AR French Ferrule Fuse</label>
+    <sort_order>42752</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>579</value>
+   </Item>
+   <Item type="Filter Value" id="F9299894F24E4CFFA569836FBA1F6203" action="add">
+    <filter>135</filter>
+    <label xml:lang="en">British Type Fuse</label>
+    <sort_order>42880</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>609</value>
+   </Item>
+   <Item type="Filter Value" id="A5E6416DCFE34DE08CE18417C3C0CF5F" action="add">
+    <filter>135</filter>
+    <label xml:lang="en">Lindner D Type Rectifier Fuse</label>
+    <sort_order>43008</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>653</value>
+   </Item>
+   <Item type="Filter Value" id="A126D2C378CC4D988256154D0B762F63" action="add">
+    <filter>135</filter>
+    <label xml:lang="en">Lindner DO Type Rectifier Fuse</label>
+    <sort_order>43136</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>655</value>
+   </Item>
+   <Item type="Filter Value" id="39A8917BDCA64A96A1191C208677ED30" action="add">
+    <filter>135</filter>
+    <label xml:lang="en">Ferraz French Ferrule</label>
+    <sort_order>43264</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>667</value>
+   </Item>
+   <Item type="Filter Value" id="FEC9A1262ACB43FA9AB97B0F4658510B" action="add">
+    <filter>135</filter>
+    <label xml:lang="en">Gesa NH Type Rectifier Fuse</label>
+    <sort_order>43392</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>701</value>
+   </Item>
+   <Item type="Filter Value" id="AB8A02F360984F41979925C1919E9CD2" action="add">
+    <filter>135</filter>
+    <label xml:lang="en">Lindner NH Type Rectifier Fuse</label>
+    <sort_order>43520</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>768</value>
+   </Item>
+   <Item type="Filter Value" id="65F27D81645946B899A9323B82043465" action="add">
+    <filter>135</filter>
+    <label xml:lang="en">Small Dimension Rectifier Fuse</label>
+    <sort_order>43648</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>819</value>
+   </Item>
+   <Item type="Filter Value" id="C84F7FD085D844F9AEC8AE5D20916452" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">Sq Body Ltd Range Short Am.</label>
+    <sort_order>43776</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>110</value>
+   </Item>
+   <Item type="Filter Value" id="FEAE6D8D0C714FE581FAB4540CD3D443" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">Sq Body Ltd Range Short Eur.</label>
+    <sort_order>43904</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>111</value>
+   </Item>
+   <Item type="Filter Value" id="BCCA9154FA0348C4BE12021A354EB143" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">Sq Body Ltd Range Long Am.</label>
+    <sort_order>44032</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>112</value>
+   </Item>
+   <Item type="Filter Value" id="B2EBFD7F997B410590CE375B33B03C62" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">Sq Body Ltd Range Long Eur.</label>
+    <sort_order>44160</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>113</value>
+   </Item>
+   <Item type="Filter Value" id="152126DE9E6C4CCFB6D0BD261297700E" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">Protistor Size 00</label>
+    <sort_order>44288</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>792</value>
+   </Item>
+   <Item type="Filter Value" id="74946C3801ED48D39B074C97D767B675" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">Protistor Size 000</label>
+    <sort_order>44416</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>793</value>
+   </Item>
+   <Item type="Filter Value" id="225A5F7BDC54478C8878F63F5FFEB817" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">PSC Sq Short Body Am.</label>
+    <sort_order>44544</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>794</value>
+   </Item>
+   <Item type="Filter Value" id="267132FC51B94545A2913A1A4E31423E" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">PSC Sq Short Body Euro</label>
+    <sort_order>44672</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>795</value>
+   </Item>
+   <Item type="Filter Value" id="2CAA654442B2481CA7ABCCD5FC3C6DD9" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">PSC Sq Long Body Am.</label>
+    <sort_order>44800</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>796</value>
+   </Item>
+   <Item type="Filter Value" id="346951585B5E43F4B50E0BF7C78B605E" action="add">
+    <filter>136</filter>
+    <label xml:lang="en">PSC Sq Long Body Euro.</label>
+    <sort_order>44928</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>797</value>
+   </Item>
+   <Item type="Filter Value" id="357E8AA3E8B94F969C104FBEF67091A1" action="add">
+    <filter>137</filter>
+    <label xml:lang="en">Rotating Fuse</label>
+    <sort_order>45056</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>807</value>
+   </Item>
+   <Item type="Filter Value" id="E0EC3D2D86214059A186AF7244A232E6" action="add">
+    <filter>137</filter>
+    <label xml:lang="en">Special Purpose Fuse</label>
+    <sort_order>45184</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>821</value>
+   </Item>
+   <Item type="Filter Value" id="8BD541568B684EE69AF69179A52231BE" action="add">
+    <filter>137</filter>
+    <label xml:lang="en">Rail Road</label>
+    <sort_order>45312</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>864</value>
+   </Item>
+   <Item type="Filter Value" id="594101F483384F1B88CDF2D60B666DA8" action="add">
+    <filter>137</filter>
+    <label xml:lang="en">Miniature Semiconductor Fuse</label>
+    <sort_order>45440</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>984</value>
+   </Item>
+   <Item type="Filter Value" id="FE005C2C49E34CD6966B0AB4EEDAD95E" action="add">
+    <filter>137</filter>
+    <label xml:lang="en">CNL DIN</label>
+    <sort_order>45568</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>985</value>
+   </Item>
+   <Item type="Filter Value" id="194EF3B2FE1C4FBBBA7A5DF579D11328" action="add">
+    <filter>137</filter>
+    <label xml:lang="en">CNN DIN</label>
+    <sort_order>45696</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>986</value>
+   </Item>
+   <Item type="Filter Value" id="A9BE681EE0254DF588CFE1256E818611" action="add">
+    <filter>138</filter>
+    <label xml:lang="en">Indicator</label>
+    <sort_order>45824</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>716</value>
+   </Item>
+   <Item type="Filter Value" id="B9EF001B83DF4A1C88D9F788F93BE487" action="add">
+    <filter>138</filter>
+    <label xml:lang="en">Semiconductor Accessories</label>
+    <sort_order>45952</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>813</value>
+   </Item>
+   <Item type="Filter Value" id="999967C55E5F40F1861820FA3A4309B5" action="add">
+    <filter>DF3</filter>
+    <label xml:lang="en">D-Code 3, Lines TBD</label>
+    <sort_order>46080</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>DL3</value>
+   </Item>
+   <Item type="Filter Value" id="6AED3EF3B2C943B3A2CE7BC749CCC451" action="add">
+    <filter>142</filter>
+    <label xml:lang="en">"R" Rated Fuse</label>
+    <sort_order>46208</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>799</value>
+   </Item>
+   <Item type="Filter Value" id="5AA956D5D38F448B985D540AFADD0197" action="add">
+    <filter>142</filter>
+    <label xml:lang="en">Motor Starter EJ-2</label>
+    <sort_order>46336</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>891</value>
+   </Item>
+   <Item type="Filter Value" id="C1511B4B2E514499B302229CAF6B4C39" action="add">
+    <filter>143</filter>
+    <label xml:lang="en">CL-14 "E" Rated Fuse</label>
+    <sort_order>46464</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>628</value>
+   </Item>
+   <Item type="Filter Value" id="47509746F6434772895CD958B1C5BE2A" action="add">
+    <filter>143</filter>
+    <label xml:lang="en">E Rated Fuse</label>
+    <sort_order>46592</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>661</value>
+   </Item>
+   <Item type="Filter Value" id="D0660B605953466FAD702A05161A1EE5" action="add">
+    <filter>143</filter>
+    <label xml:lang="en">Med Voltage</label>
+    <sort_order>46720</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>764</value>
+   </Item>
+   <Item type="Filter Value" id="432D5428B9B24D92A5FDE3D4670377F7" action="add">
+    <filter>143</filter>
+    <label xml:lang="en">General Purpose EJO-1</label>
+    <sort_order>46848</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>892</value>
+   </Item>
+   <Item type="Filter Value" id="6BF147213C054BFF8AEAFA5D3DAE90A1" action="add">
+    <filter>143</filter>
+    <label xml:lang="en">Powr Dist Fuse EJ-1</label>
+    <sort_order>46976</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>893</value>
+   </Item>
+   <Item type="Filter Value" id="1A69D993EE5E458C84B242F7AFAE5354" action="add">
+    <filter>143</filter>
+    <label xml:lang="en">Powr Dist Fuse EJO-1</label>
+    <sort_order>47104</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>894</value>
+   </Item>
+   <Item type="Filter Value" id="DAC6DEE913F7449F8E62EAF10F59158A" action="add">
+    <filter>144</filter>
+    <label xml:lang="en">Medium Voltage Fuse</label>
+    <sort_order>47232</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>757</value>
+   </Item>
+   <Item type="Filter Value" id="FFC2CB97DFC644F7BF89CA35104878FE" action="add">
+    <filter>164</filter>
+    <label xml:lang="en">Potential Transformer Fuse</label>
+    <sort_order>47360</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>798</value>
+   </Item>
+   <Item type="Filter Value" id="7D64ABA3C78F4161B0951EA522F5825A" action="add">
+    <filter>164</filter>
+    <label xml:lang="en">Potential Xfmr EJ-1</label>
+    <sort_order>47488</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>895</value>
+   </Item>
+   <Item type="Filter Value" id="E4458580B3F74F5996155CA9D98BB82B" action="add">
+    <filter>165</filter>
+    <label xml:lang="en">Accessors EK-1  EK-3</label>
+    <sort_order>47616</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>896</value>
+   </Item>
+   <Item type="Filter Value" id="6AED71E2F66347D8B5F8F7790DAEF548" action="add">
+    <filter>166</filter>
+    <label xml:lang="en">Ext Xfmr Protect ETP</label>
+    <sort_order>47744</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>897</value>
+   </Item>
+   <Item type="Filter Value" id="E47DD4DA28A14F889F67B8DB1507EA5A" action="add">
+    <filter>166</filter>
+    <label xml:lang="en">Oil Subm Protect OSP</label>
+    <sort_order>47872</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>898</value>
+   </Item>
+   <Item type="Filter Value" id="5C9537D878FA4A1DAB4EBDDFE0477696" action="add">
+    <filter>167</filter>
+    <label xml:lang="en">Med Voltage Capacitor Fuse</label>
+    <sort_order>48000</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>763</value>
+   </Item>
+   <Item type="Filter Value" id="9C4511AFDA9443179AF1E6D17226584F" action="add">
+    <filter>167</filter>
+    <label xml:lang="en">Cap Fuse EJO-5  EJ-5</label>
+    <sort_order>48128</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>899</value>
+   </Item>
+   <Item type="Filter Value" id="ECEF01D9B8BB410F8BBE583FF2CD05B5" action="add">
+    <filter>170</filter>
+    <label xml:lang="en">GEMV</label>
+    <sort_order>48256</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>874</value>
+   </Item>
+   <Item type="Filter Value" id="1D3743FB63544F28B71AC3EB6195E126" action="add">
+    <filter>170</filter>
+    <label xml:lang="en">GMVD</label>
+    <sort_order>48384</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>876</value>
+   </Item>
+   <Item type="Filter Value" id="E22B2B8ABAAC45C58A368F4BE472EA03" action="add">
+    <filter>170</filter>
+    <label xml:lang="en">MVDIN</label>
+    <sort_order>48512</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>878</value>
+   </Item>
+   <Item type="Filter Value" id="3E5866E767AB48EA9B1665C73009619C" action="add">
+    <filter>171</filter>
+    <label xml:lang="en">H.V. Fuses Gec</label>
+    <sort_order>48640</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>715</value>
+   </Item>
+   <Item type="Filter Value" id="C4EAFA2305BB49B2A71601CC78F21923" action="add">
+    <filter>196</filter>
+    <label xml:lang="en">High Voltage French Standard</label>
+    <sort_order>48768</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>987</value>
+   </Item>
+   <Item type="Filter Value" id="B4A6C22F06DF483DBF959068B0DC3DE3" action="add">
+    <filter>196</filter>
+    <label xml:lang="en">High Voltage DIN</label>
+    <sort_order>48896</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>988</value>
+   </Item>
+   <Item type="Filter Value" id="E5DE5A62A4D7438D9016208EADDFA267" action="add">
+    <filter>198</filter>
+    <label xml:lang="en">Med Volt Controllable Fuse</label>
+    <sort_order>49024</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>100</value>
+   </Item>
+   <Item type="Filter Value" id="2E3B1B01661F4AC7A4365457582B45FA" action="add">
+    <filter>DF4</filter>
+    <label xml:lang="en">D-Code 4, Lines TBD</label>
+    <sort_order>49152</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>DL4</value>
+   </Item>
+   <Item type="Filter Value" id="FC07D14EE7A047808FCDA9A7C11E651E" action="add">
+    <filter>107</filter>
+    <label xml:lang="en">Surge Trap</label>
+    <sort_order>49280</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>826</value>
+   </Item>
+   <Item type="Filter Value" id="A611E7035DDD4762A2658C9E7EBB6AF8" action="add">
+    <filter>107</filter>
+    <label xml:lang="en">Engineering Services</label>
+    <sort_order>49408</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>905</value>
+   </Item>
+   <Item type="Filter Value" id="F790CC80D441425ABBCCDAC91075141F" action="add">
+    <filter>107</filter>
+    <label xml:lang="en">SPD for OEMS</label>
+    <sort_order>49536</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>951</value>
+   </Item>
+   <Item type="Filter Value" id="5FABEDE895BC467E8CAA391B75CB0D5C" action="add">
+    <filter>182</filter>
+    <label xml:lang="en">Thermal MOV</label>
+    <sort_order>49664</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>832</value>
+   </Item>
+   <Item type="Filter Value" id="D44B15047A874F2C9EDAB93A9EC1AC1E" action="add">
+    <filter>183</filter>
+    <label xml:lang="en">Mov Protector - Ferrule</label>
+    <sort_order>49792</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>852</value>
+   </Item>
+   <Item type="Filter Value" id="8772FC834EAD441ABF040ABCF4643541" action="add">
+    <filter>183</filter>
+    <label xml:lang="en">Mov Protector - Midget</label>
+    <sort_order>49920</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>853</value>
+   </Item>
+   <Item type="Filter Value" id="2BAA9AC2D61044499F080C0F0A6FB9AE" action="add">
+    <filter>184</filter>
+    <label xml:lang="en">SPD UL Type 1 and 2</label>
+    <sort_order>50048</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>944</value>
+   </Item>
+   <Item type="Filter Value" id="298C5C10FB084B46BB94DEA5E9F24A41" action="add">
+    <filter>184</filter>
+    <label xml:lang="en">SPD UL Type 1 and 2 for OEMS</label>
+    <sort_order>50176</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>961</value>
+   </Item>
+   <Item type="Filter Value" id="AC3778D5BB06402CA933BD71206929CB" action="add">
+    <filter>185</filter>
+    <label xml:lang="en">Pluggable Surge-Trap</label>
+    <sort_order>50304</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>921</value>
+   </Item>
+   <Item type="Filter Value" id="85F5FD259F514763B30E1B4150399C36" action="add">
+    <filter>185</filter>
+    <label xml:lang="en">Surge-Trap for OEMS</label>
+    <sort_order>50432</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>950</value>
+   </Item>
+   <Item type="Filter Value" id="3CC0761A532F4AA9AFA8F61F80D9CF3B" action="add">
+    <filter>189</filter>
+    <label xml:lang="en">SPD XR Series</label>
+    <sort_order>50560</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>953</value>
+   </Item>
+   <Item type="Filter Value" id="E8191DC6C71740F0AEA8D236B48BA8FC" action="add">
+    <filter>189</filter>
+    <label xml:lang="en">SPD XP Series</label>
+    <sort_order>50688</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>954</value>
+   </Item>
+   <Item type="Filter Value" id="ACF2AC0E0E8342E381C51D52E71334CD" action="add">
+    <filter>189</filter>
+    <label xml:lang="en">SPD XT Series</label>
+    <sort_order>50816</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>955</value>
+   </Item>
+   <Item type="Filter Value" id="611A7E71AADE43D6BA0315903AFF915A" action="add">
+    <filter>199</filter>
+    <label xml:lang="en">IEC SPD ST Modular AC</label>
+    <sort_order>50944</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>496</value>
+   </Item>
+   <Item type="Filter Value" id="A109E0C9731D42DF9FEAC4DA11C57881" action="add">
+    <filter>199</filter>
+    <label xml:lang="en">IEC SPD ST Pluggable AC</label>
+    <sort_order>51072</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>497</value>
+   </Item>
+   <Item type="Filter Value" id="96FCFF1D33B346A49610996614801596" action="add">
+    <filter>199</filter>
+    <label xml:lang="en">IEC SPD ST Pluggable DC</label>
+    <sort_order>51200</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>498</value>
+   </Item>
+   <Item type="Filter Value" id="E760290EB64F4A2F921D96A49A15D6A5" action="add">
+    <filter>200</filter>
+    <label xml:lang="en">Hardwired System</label>
+    <sort_order>51328</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>499</value>
+   </Item>
+   <Item type="Filter Value" id="11D1F72F7FDB4CF9936B7D4ECF205610" action="add">
+    <filter>DF5</filter>
+    <label xml:lang="en">D-Code 5, Lines TBD</label>
+    <sort_order>51456</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>DL5</value>
+   </Item>
+   <Item type="Filter Value" id="E3CF534C2FCA407992489C991A7929ED" action="add">
+    <filter>140</filter>
+    <label xml:lang="en">Domestic Cooling Products</label>
+    <sort_order>51584</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>657</value>
+   </Item>
+   <Item type="Filter Value" id="F323008905E145869A57DE6AC80FEB86" action="add">
+    <filter>140</filter>
+    <label xml:lang="en">Domestic Calistor</label>
+    <sort_order>51712</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>658</value>
+   </Item>
+   <Item type="Filter Value" id="C9EC47854FF742D6B1447B6B7615E6A6" action="add">
+    <filter>140</filter>
+    <label xml:lang="en">Domestic Calitube</label>
+    <sort_order>51840</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>659</value>
+   </Item>
+   <Item type="Filter Value" id="822E1B7FA34D4DE0895990B40116E393" action="add">
+    <filter>140</filter>
+    <label xml:lang="en">Domestic Moducal</label>
+    <sort_order>51968</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>660</value>
+   </Item>
+   <Item type="Filter Value" id="CC7E03A417B24CF0A610E682320B4E4A" action="add">
+    <filter>140</filter>
+    <label xml:lang="en">European Cooling Products</label>
+    <sort_order>52096</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>676</value>
+   </Item>
+   <Item type="Filter Value" id="A056083D25BC4BB2896500B88B9EE606" action="add">
+    <filter>140</filter>
+    <label xml:lang="en">Calistor Made by FDI</label>
+    <sort_order>52224</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>677</value>
+   </Item>
+   <Item type="Filter Value" id="274867837DCF49D399E1ECD9C9790BB8" action="add">
+    <filter>140</filter>
+    <label xml:lang="en">Moducal Made by FDI</label>
+    <sort_order>52352</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>678</value>
+   </Item>
+   <Item type="Filter Value" id="3CE35FFE26344F0BA452B44563CD6264" action="add">
+    <filter>140</filter>
+    <label xml:lang="en">Parts Purchased from Wescode</label>
+    <sort_order>52480</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>860</value>
+   </Item>
+   <Item type="Filter Value" id="16CAB41CB31E405FA2046D0F45D04363" action="add">
+    <filter>176</filter>
+    <label xml:lang="en">RTS - Extrusions</label>
+    <sort_order>52608</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>913</value>
+   </Item>
+   <Item type="Filter Value" id="ED0596EC86134359BFD83FEA5587AF7C" action="add">
+    <filter>176</filter>
+    <label xml:lang="en">RTS - Heat Sinks</label>
+    <sort_order>52736</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>914</value>
+   </Item>
+   <Item type="Filter Value" id="4BDA0C8EB73642FCAD442C5FF53194C9" action="add">
+    <filter>176</filter>
+    <label xml:lang="en">RTS Std - Custom Parts</label>
+    <sort_order>52864</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>915</value>
+   </Item>
+   <Item type="Filter Value" id="DBF2FB12A2B341A2BB641FF8EB8997A7" action="add">
+    <filter>176</filter>
+    <label xml:lang="en">RTS Std - Accessories</label>
+    <sort_order>52992</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>916</value>
+   </Item>
+   <Item type="Filter Value" id="77816356DB6F428EA717FC3E9F6B6C27" action="add">
+    <filter>177</filter>
+    <label xml:lang="en">R-Theta Dist - Capacitors</label>
+    <sort_order>53120</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>909</value>
+   </Item>
+   <Item type="Filter Value" id="BC1E47CB449B412FBAAA29919BC8ABE5" action="add">
+    <filter>177</filter>
+    <label xml:lang="en">R-Theta Dist - Thermal Pads</label>
+    <sort_order>53248</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>910</value>
+   </Item>
+   <Item type="Filter Value" id="499B608CD3274AA19C198402CB72F559" action="add">
+    <filter>177</filter>
+    <label xml:lang="en">R-Theta Dist - Resistors</label>
+    <sort_order>53376</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>911</value>
+   </Item>
+   <Item type="Filter Value" id="24D22C4EE11742D6A6E970485A770581" action="add">
+    <filter>177</filter>
+    <label xml:lang="en">R-Theta Dist - Electrical Comp</label>
+    <sort_order>53504</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>912</value>
+   </Item>
+   <Item type="Filter Value" id="B1771613DF0F41778E155FC7847CCC11" action="add">
+    <filter>177</filter>
+    <label xml:lang="en">R-Theta Dist-Other Components</label>
+    <sort_order>53632</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>917</value>
+   </Item>
+   <Item type="Filter Value" id="720C2BB0AA274FEFA8CCD88814911012" action="add">
+    <filter>177</filter>
+    <label xml:lang="en">R-Theta Dist - Accessories</label>
+    <sort_order>53760</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>918</value>
+   </Item>
+   <Item type="Filter Value" id="357F4B5C8C2647DE9EF570C378EEE1BF" action="add">
+    <filter>177</filter>
+    <label xml:lang="en">R-Theta Dist - Converters</label>
+    <sort_order>53888</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>919</value>
+   </Item>
+   <Item type="Filter Value" id="D3D0FA6765BA4EA79B3A9EB813B6AF18" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Fabfin - Aluminum</label>
+    <sort_order>54016</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>923</value>
+   </Item>
+   <Item type="Filter Value" id="6989A2202A8A4200A998BAAA774D332F" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Fabfin - Copper</label>
+    <sort_order>54144</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>924</value>
+   </Item>
+   <Item type="Filter Value" id="F7F0220FBF534DF993FCC8CA68A8DB62" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Fabfin - Mixed Metals</label>
+    <sort_order>54272</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>925</value>
+   </Item>
+   <Item type="Filter Value" id="E53B5651A4D148A692D2A504175EA902" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Dual Baseplate - Aluminum</label>
+    <sort_order>54400</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>926</value>
+   </Item>
+   <Item type="Filter Value" id="A532172061384EF2A29AD3FA3268B7B5" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Dual Baseplate - Copper</label>
+    <sort_order>54528</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>927</value>
+   </Item>
+   <Item type="Filter Value" id="54D716B1D55040388F593E6B96098D7D" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Dual Baseplate - Mixed Metals</label>
+    <sort_order>54656</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>928</value>
+   </Item>
+   <Item type="Filter Value" id="DB3D6C17DECC44C08AA7F568F2C692EC" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Glued</label>
+    <sort_order>54784</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>929</value>
+   </Item>
+   <Item type="Filter Value" id="22F46600031B4BB89BE91F614B7E2562" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Soldered</label>
+    <sort_order>54912</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>930</value>
+   </Item>
+   <Item type="Filter Value" id="9A941A51F6BA4092B1D1417FC34F0B3B" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Extrusions</label>
+    <sort_order>55040</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>931</value>
+   </Item>
+   <Item type="Filter Value" id="5BD48789E3D74933B03421E2E5852394" action="add">
+    <filter>178</filter>
+    <label xml:lang="en">Board Level</label>
+    <sort_order>55168</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>932</value>
+   </Item>
+   <Item type="Filter Value" id="87BE006F576D41989DD823E68ABE5122" action="add">
+    <filter>179</filter>
+    <label xml:lang="en">Aquasink</label>
+    <sort_order>55296</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>933</value>
+   </Item>
+   <Item type="Filter Value" id="62BFA602F52540E0B23BC36B306B4184" action="add">
+    <filter>179</filter>
+    <label xml:lang="en">Aquasurf</label>
+    <sort_order>55424</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>934</value>
+   </Item>
+   <Item type="Filter Value" id="5BEDA5ED00264AD3B22F4F8CF4B6C762" action="add">
+    <filter>179</filter>
+    <label xml:lang="en">Aquamax - Aluminum</label>
+    <sort_order>55552</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>935</value>
+   </Item>
+   <Item type="Filter Value" id="08F0BB1EABB241C3B6767ACBBEC96B22" action="add">
+    <filter>179</filter>
+    <label xml:lang="en">Aquamax - Copper</label>
+    <sort_order>55680</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>936</value>
+   </Item>
+   <Item type="Filter Value" id="69921D95653C4D13BE5880F5CB089640" action="add">
+    <filter>180</filter>
+    <label xml:lang="en">Phase Change</label>
+    <sort_order>55808</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>937</value>
+   </Item>
+   <Item type="Filter Value" id="48AE325881134576B2417E3EAF8AF3B9" action="add">
+    <filter>181</filter>
+    <label xml:lang="en">Cooling Systems</label>
+    <sort_order>55936</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>938</value>
+   </Item>
+   <Item type="Filter Value" id="3082ED4D7000477B9A6CA1A17E4AD7C3" action="add">
+    <filter>181</filter>
+    <label xml:lang="en">Cooling Systems and Services</label>
+    <sort_order>56064</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>945</value>
+   </Item>
+   <Item type="Filter Value" id="7519021CB781475EB41CE69DC6FECEC3" action="add">
+    <filter>203</filter>
+    <label xml:lang="en">Air-Air Heat Exchanger</label>
+    <sort_order>56192</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>103</value>
+   </Item>
+   <Item type="Filter Value" id="2A6F5EC29B2943FBA24E88791B66B77E" action="add">
+    <filter>DF7</filter>
+    <label xml:lang="en">D-Code 7, Lines TBD</label>
+    <sort_order>56320</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>DL7</value>
+   </Item>
+   <Item type="Filter Value" id="EF4A5E55F5E341D496BBA20898ED4A1F" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg Switches</label>
+    <sort_order>56448</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>594</value>
+   </Item>
+   <Item type="Filter Value" id="0DEDD237AE28415A89C27277572706D4" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg ETM</label>
+    <sort_order>56576</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>595</value>
+   </Item>
+   <Item type="Filter Value" id="42B5D6631C2A44AD99C08B097D0D1AF8" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg ETM Parts</label>
+    <sort_order>56704</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>596</value>
+   </Item>
+   <Item type="Filter Value" id="02A7DEF404E54A63BE266379B39DDAFF" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg HA</label>
+    <sort_order>56832</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>597</value>
+   </Item>
+   <Item type="Filter Value" id="90E9ED99A58A4626B611B9005C72546F" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg HA Parts</label>
+    <sort_order>56960</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>598</value>
+   </Item>
+   <Item type="Filter Value" id="F42DA875EA4E40B6853D6BE76372C50A" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg HAS</label>
+    <sort_order>57088</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>599</value>
+   </Item>
+   <Item type="Filter Value" id="CE7A92197CFB4CB883B7FAFAF835F1B2" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg</label>
+    <sort_order>57216</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>600</value>
+   </Item>
+   <Item type="Filter Value" id="C31A72FCB77B475DB82F5CEA57B8C86B" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg HAS Cust Service</label>
+    <sort_order>57344</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>601</value>
+   </Item>
+   <Item type="Filter Value" id="4B0D02A7F8C34E49AC8315A6E77118E9" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg HAS Parts</label>
+    <sort_order>57472</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>602</value>
+   </Item>
+   <Item type="Filter Value" id="B35284AD38304F55A1D530EE09918B8F" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg HAZS</label>
+    <sort_order>57600</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>603</value>
+   </Item>
+   <Item type="Filter Value" id="2393D35874494CABAEBA542259E10167" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg HAZS Parts</label>
+    <sort_order>57728</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>604</value>
+   </Item>
+   <Item type="Filter Value" id="ECC84E7EC0C24B49ABBF85D95879EE57" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg HUVS</label>
+    <sort_order>57856</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>605</value>
+   </Item>
+   <Item type="Filter Value" id="5D77639FF697427DBC4CDA1F6EA3EAC7" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg HUVS Parts</label>
+    <sort_order>57984</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>606</value>
+   </Item>
+   <Item type="Filter Value" id="F22B84E058F242ED917D9C2CB44CD7EB" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Customer Service Orders</label>
+    <sort_order>58112</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>608</value>
+   </Item>
+   <Item type="Filter Value" id="128CC28A0C144785AFDD0CE74FCF247E" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg SAS</label>
+    <sort_order>58240</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>610</value>
+   </Item>
+   <Item type="Filter Value" id="0A1085F8304D4D49B264F630A1C73649" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Berg SAS Parts</label>
+    <sort_order>58368</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>611</value>
+   </Item>
+   <Item type="Filter Value" id="B789CBCF1BF246EA88E7058E4EF9A255" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF DBM</label>
+    <sort_order>58496</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>674</value>
+   </Item>
+   <Item type="Filter Value" id="BBD1BC6B4BCC402B92FDC327FB0E4EA1" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF DBM Parts</label>
+    <sort_order>58624</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>675</value>
+   </Item>
+   <Item type="Filter Value" id="1935503BDFE442DB9027D2889F66F3C1" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF-France</label>
+    <sort_order>58752</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>681</value>
+   </Item>
+   <Item type="Filter Value" id="636FC7DD5E6D4E6E84970A2365CCF7AB" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF FA</label>
+    <sort_order>58880</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>682</value>
+   </Item>
+   <Item type="Filter Value" id="C2400BA911964897AD8E2BD7771B25B0" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF FA Parts</label>
+    <sort_order>59008</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>683</value>
+   </Item>
+   <Item type="Filter Value" id="AE1BF92BA00E480C8DAE7B651E8E3B6D" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF NOR</label>
+    <sort_order>59136</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>684</value>
+   </Item>
+   <Item type="Filter Value" id="6A2858414F5E4527BFAB5FCCB4B237EB" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF NORD</label>
+    <sort_order>59264</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>685</value>
+   </Item>
+   <Item type="Filter Value" id="578C0762AF1045AE848797EDD5A31420" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF NORD Parts</label>
+    <sort_order>59392</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>686</value>
+   </Item>
+   <Item type="Filter Value" id="B7DB44231490471AAAB0553B919B2426" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF NOR Parts</label>
+    <sort_order>59520</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>687</value>
+   </Item>
+   <Item type="Filter Value" id="6E7E30742D5D44318F29155437BC9D42" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF Slip</label>
+    <sort_order>59648</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>688</value>
+   </Item>
+   <Item type="Filter Value" id="A07CA0EAE6EC4D6E8CEA692C777C4A8F" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF Slip Parts</label>
+    <sort_order>59776</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>689</value>
+   </Item>
+   <Item type="Filter Value" id="BF83664FBF4B47A1A04A4D26FF1C0C1A" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF FSS</label>
+    <sort_order>59904</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>692</value>
+   </Item>
+   <Item type="Filter Value" id="16B5C149C181414CA0BFD8ECFA2B6291" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">FF FSS Parts</label>
+    <sort_order>60032</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>693</value>
+   </Item>
+   <Item type="Filter Value" id="C0557725E5754113B6CC4AA61CF212F5" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Customer Service Orders</label>
+    <sort_order>60160</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>710</value>
+   </Item>
+   <Item type="Filter Value" id="04813782E705463CBFE56A3FCF93A0A0" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Project Orders</label>
+    <sort_order>60288</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>711</value>
+   </Item>
+   <Item type="Filter Value" id="ED722A74AEFB49B4944E05A9BAD9C380" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Soule MBD</label>
+    <sort_order>60416</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>751</value>
+   </Item>
+   <Item type="Filter Value" id="29501D161201493EB7ACA341AD979365" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Soule MBD Parts</label>
+    <sort_order>60544</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>752</value>
+   </Item>
+   <Item type="Filter Value" id="774F8BCB60B44817AABE32E3EE17AC28" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">MF</label>
+    <sort_order>60672</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>754</value>
+   </Item>
+   <Item type="Filter Value" id="308745221BA94B048228A916E98188C8" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Soule PBD</label>
+    <sort_order>60800</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>783</value>
+   </Item>
+   <Item type="Filter Value" id="AB2DCEA2CD004A539998EFDC12B17478" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Soule PBD Parts</label>
+    <sort_order>60928</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>784</value>
+   </Item>
+   <Item type="Filter Value" id="3960BA85020940C2B45D0A5F105B626F" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Pringle Switches</label>
+    <sort_order>61056</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>791</value>
+   </Item>
+   <Item type="Filter Value" id="EFC31C5BC4124F758F13A9A49455D37F" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Service</label>
+    <sort_order>61184</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>811</value>
+   </Item>
+   <Item type="Filter Value" id="3C65B19F112D431A92709B932E3ED207" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Soule Switches</label>
+    <sort_order>61312</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>820</value>
+   </Item>
+   <Item type="Filter Value" id="206A38E31A3E4A739F89E72F6AACC6B6" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">High Power Switch Accessories</label>
+    <sort_order>61440</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>863</value>
+   </Item>
+   <Item type="Filter Value" id="6F1773625D6D44A4A20DD8A3C79191E8" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">HW &lt;&gt; Hundt Weber</label>
+    <sort_order>61568</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>869</value>
+   </Item>
+   <Item type="Filter Value" id="3F49E3E3D2164559BCC096B76DD08050" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">IF Load Break Switch</label>
+    <sort_order>61696</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>885</value>
+   </Item>
+   <Item type="Filter Value" id="6C372210329145689C5A35C0F7DA7F30" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">SF Switch</label>
+    <sort_order>61824</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>886</value>
+   </Item>
+   <Item type="Filter Value" id="47F93156E4C444B28E03E7E4BC390C6B" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">HP Switch Motor Control Panel</label>
+    <sort_order>61952</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>900</value>
+   </Item>
+   <Item type="Filter Value" id="B17FA0D2DC374351A2865D2F2C851D8C" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Driwisa Load Break</label>
+    <sort_order>62080</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>906</value>
+   </Item>
+   <Item type="Filter Value" id="E0574979677D45BA9FB13BAFB307CE36" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Driwisa Non Load Break</label>
+    <sort_order>62208</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>907</value>
+   </Item>
+   <Item type="Filter Value" id="E0D675D4D8DA41D49E750EACF0464F49" action="add">
+    <filter>159</filter>
+    <label xml:lang="en">Lenoir Contactor</label>
+    <sort_order>62336</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>922</value>
+   </Item>
+   <Item type="Filter Value" id="46C417BB7BF74F3FBA9331CE78060FAD" action="add">
+    <filter>162</filter>
+    <label xml:lang="en">PCS</label>
+    <sort_order>62464</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>879</value>
+   </Item>
+   <Item type="Filter Value" id="B4320BBD1F3D4BC5866F12AA34E60FF4" action="add">
+    <filter>172</filter>
+    <label xml:lang="en">Switches - Made to Order</label>
+    <sort_order>62592</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>827</value>
+   </Item>
+   <Item type="Filter Value" id="3C98E99C5DB546F3ADE779CB03E83097" action="add">
+    <filter>172</filter>
+    <label xml:lang="en">Enclosed HPSW</label>
+    <sort_order>62720</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>883</value>
+   </Item>
+   <Item type="Filter Value" id="91FB3F9B344A48AF9A2DA2A2A6FE88EB" action="add">
+    <filter>172</filter>
+    <label xml:lang="en">Engineered Product</label>
+    <sort_order>62848</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>901</value>
+   </Item>
+   <Item type="Filter Value" id="F49DA0606EFD407A908116685A60BA0C" action="add">
+    <filter>172</filter>
+    <label xml:lang="en">Engineered Product Accessories</label>
+    <sort_order>62976</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>902</value>
+   </Item>
+   <Item type="Filter Value" id="D31697F8E2B948959F265612874900E8" action="add">
+    <filter>DF8</filter>
+    <label xml:lang="en">D-Code 8, Lines TBD</label>
+    <sort_order>63104</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>DL8</value>
+   </Item>
+   <Item type="Filter Value" id="4632619439FA4F16A493B1D904F88E8A" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">Current Collector</label>
+    <sort_order>63232</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>612</value>
+   </Item>
+   <Item type="Filter Value" id="2DC2A79EC6AB49F280A05ED8853EED22" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">CCD Dom</label>
+    <sort_order>63360</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>620</value>
+   </Item>
+   <Item type="Filter Value" id="A565F07A5490440984BA83D403589F0F" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">CCD Imp</label>
+    <sort_order>63488</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>621</value>
+   </Item>
+   <Item type="Filter Value" id="CE6C1D04996E41598CB90562AC503FF3" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">CCD Parts COA</label>
+    <sort_order>63616</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>622</value>
+   </Item>
+   <Item type="Filter Value" id="811973B1D56B4BEE9D322118DD3413FE" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">CCD Parts Dom</label>
+    <sort_order>63744</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>623</value>
+   </Item>
+   <Item type="Filter Value" id="A2AE52433AD14E8BA8F36CDA9A7B8CF7" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">CCD Parts Imp</label>
+    <sort_order>63872</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>624</value>
+   </Item>
+   <Item type="Filter Value" id="D6AA87E0BF2F415FBF70D71DC730C3C3" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">Fuse Boxes</label>
+    <sort_order>64000</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>670</value>
+   </Item>
+   <Item type="Filter Value" id="4AE701D8CEE34A0EA636C2E44CC754E5" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">Ground Return Units</label>
+    <sort_order>64128</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>702</value>
+   </Item>
+   <Item type="Filter Value" id="F95A7B349B2541CAA4E9F55331B118D7" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">GRU COA</label>
+    <sort_order>64256</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>703</value>
+   </Item>
+   <Item type="Filter Value" id="52D4F6127BC34FE79054C73DBAC1CEB4" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">GRU FS Dom</label>
+    <sort_order>64384</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>704</value>
+   </Item>
+   <Item type="Filter Value" id="2AB6906C245A4F71B741691C5C70858A" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">GRU FS Imp</label>
+    <sort_order>64512</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>705</value>
+   </Item>
+   <Item type="Filter Value" id="C0B47ACC21F44A7BB5C1FFC9A7DCACB8" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">GRU Parts COA</label>
+    <sort_order>64640</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>706</value>
+   </Item>
+   <Item type="Filter Value" id="CB331097D83347E8A3AEA99CBE54C740" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">GRU Parts Dom</label>
+    <sort_order>64768</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>707</value>
+   </Item>
+   <Item type="Filter Value" id="1310988741E44FE09EF3DEA3D2E30A52" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">GRU Parts Imp</label>
+    <sort_order>64896</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>708</value>
+   </Item>
+   <Item type="Filter Value" id="0B888DD334534FF2AF42E7665776F344" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">Spare Parts</label>
+    <sort_order>65024</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>782</value>
+   </Item>
+   <Item type="Filter Value" id="2B7FB743F69948DBA0204FC2349DBBBE" action="add">
+    <filter>161</filter>
+    <label xml:lang="en">Onboard Switch</label>
+    <sort_order>65152</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>966</value>
+   </Item>
+   <Item type="Filter Value" id="7818FC7868274C3D9100D857C7CEFD06" action="add">
+    <filter>173</filter>
+    <label xml:lang="en">Fbox Dom</label>
+    <sort_order>65280</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>671</value>
+   </Item>
+   <Item type="Filter Value" id="E727A129B1694C71948872EC9777E6E1" action="add">
+    <filter>173</filter>
+    <label xml:lang="en">Fbox Imp</label>
+    <sort_order>65408</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>672</value>
+   </Item>
+   <Item type="Filter Value" id="4C78FF2356294156A711F824AB348CA1" action="add">
+    <filter>173</filter>
+    <label xml:lang="en">CCD Retrofit</label>
+    <sort_order>65536</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>943</value>
+   </Item>
+   <Item type="Filter Value" id="971B2B68E8FD4892A81D29B7F06AFBA9" action="add">
+    <filter>194</filter>
+    <label xml:lang="en">Eng &amp; Tool Bogie Power Supply</label>
+    <sort_order>65664</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>975</value>
+   </Item>
+   <Item type="Filter Value" id="6F8FF8A00A554D7B8398F9C4E80DA2FA" action="add">
+    <filter>194</filter>
+    <label xml:lang="en">Service Bogie Power Supply</label>
+    <sort_order>65792</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>976</value>
+   </Item>
+   <Item type="Filter Value" id="32B6FF8F043D435383616F6360DAE3B5" action="add">
+    <filter>DF9</filter>
+    <label xml:lang="en">D-Code 9, Lines TBD</label>
+    <sort_order>65920</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>DL9</value>
+   </Item>
+   <Item type="Filter Value" id="E28C1F9DFEB9465FA4475926F19A074F" action="add">
+    <filter>139</filter>
+    <label xml:lang="en">Atlee Bus Bar</label>
+    <sort_order>66048</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>581</value>
+   </Item>
+   <Item type="Filter Value" id="89411AE6152840E8A49EE033173C489E" action="add">
+    <filter>139</filter>
+    <label xml:lang="en">Tooling &amp; Engineering</label>
+    <sort_order>66176</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>666</value>
+   </Item>
+   <Item type="Filter Value" id="AEDA9B8DF35E43D685A3DC19C2B0AFA0" action="add">
+    <filter>139</filter>
+    <label xml:lang="en">FCI Bus Bar</label>
+    <sort_order>66304</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>673</value>
+   </Item>
+   <Item type="Filter Value" id="EEC2422D3D81404DB4197AF26F75EC0E" action="add">
+    <filter>139</filter>
+    <label xml:lang="en">SeramE Bus Bar</label>
+    <sort_order>66432</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>812</value>
+   </Item>
+   <Item type="Filter Value" id="86A1BDFAA61844A2B573973D99538570" action="add">
+    <filter>190</filter>
+    <label xml:lang="en">Bus Bar</label>
+    <sort_order>66560</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>967</value>
+   </Item>
+   <Item type="Filter Value" id="02A239B919704DC2A68D91A9C8A005A9" action="add">
+    <filter>DF0</filter>
+    <label xml:lang="en">D-Code 10, Lines TBD</label>
+    <sort_order>66688</sort_order>
+    <source_id keyed_name="MRN_SG_Code_Line" type="List">C1978EC66A174100A6E9F14E3B989F69</source_id>
+    <value>DL0</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

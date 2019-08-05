@@ -1,0 +1,44 @@
+﻿<AML>
+ <Item type="List" id="8F9A444988C14C8494BFC9B03A911887" action="add">
+  <description>Support Brand</description>
+  <name>MRN_Support_Brand</name>
+  <Relationships>
+   <Item type="Value" id="2766672483BC4CC8BAE58C5843BF61AD" action="add">
+    <label xml:lang="en">Ferraz Shawmut</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Support_Brand" type="List">8F9A444988C14C8494BFC9B03A911887</source_id>
+    <value>Ferraz Shawmut</value>
+   </Item>
+   <Item type="Value" id="2CD77F2B800C49C5A0BFD52F136E6CB2" action="add">
+    <label xml:lang="en">R-Theta®</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Support_Brand" type="List">8F9A444988C14C8494BFC9B03A911887</source_id>
+    <value>R-Theta®</value>
+   </Item>
+   <Item type="Value" id="A4260281FE6940EE8AD3F0F65A2F85C1" action="add">
+    <label xml:lang="en">Eldre®</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Support_Brand" type="List">8F9A444988C14C8494BFC9B03A911887</source_id>
+    <value>Eldre®</value>
+   </Item>
+   <Item type="Value" id="64B4B67076AE4BE988C8293ECD9A4DF0" action="add">
+    <label xml:lang="en">M. Schneider</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Support_Brand" type="List">8F9A444988C14C8494BFC9B03A911887</source_id>
+    <value>M. Schneider</value>
+   </Item>
+   <Item type="Value" id="B96C8CCB9F4D4F79B3AEBC769F53118C" action="add">
+    <label xml:lang="en">Cirprotec</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Support_Brand" type="List">8F9A444988C14C8494BFC9B03A911887</source_id>
+    <value>Cirprotec</value>
+   </Item>
+   <Item type="Value" id="60EB75EB690349AC823E53FBC01BE336" action="add">
+    <label xml:lang="en">Unassigned</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Support_Brand" type="List">8F9A444988C14C8494BFC9B03A911887</source_id>
+    <value>Unassigned</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

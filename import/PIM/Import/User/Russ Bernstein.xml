@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="4D7BDB89C3284CE8BC6C947B3F3EA2D5" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>russ.bernstein@us.mersen.com</email>
+  <login_name>rbernste</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id>0E157CBF00244221878EE527C8976078</owned_by_id>
+  <first_name>Russ</first_name>
+  <last_name>Bernstein</last_name>
+  <Relationships>
+   <Item type="Alias" id="99C7E36FC6FA434F9D236DABF482CEE6" action="add">
+    <from_date>2016-04-19T15:40:45</from_date>
+    <related_id keyed_name="Russ Bernstein" type="Identity">EC0D9E8F30EB4CBE9FB648ADC164BF5B</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Russ Bernstein" type="User">4D7BDB89C3284CE8BC6C947B3F3EA2D5</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

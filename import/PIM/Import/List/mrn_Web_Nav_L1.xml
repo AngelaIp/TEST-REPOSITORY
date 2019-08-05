@@ -1,0 +1,62 @@
+﻿<AML>
+ <Item type="List" id="F0A45325F75140F496A2131E8FA2A681" action="add">
+  <description>List of values for web navigation within the new website</description>
+  <name>mrn_Web_Nav_L1</name>
+  <Relationships>
+   <Item type="Value" id="D02A1A4FD82640419D5A51C434FF891F" action="add">
+    <label xml:lang="en">UL/CSA Low Voltage General Purpose Fuses, Fuseholders and PDB</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L1" type="List">F0A45325F75140F496A2131E8FA2A681</source_id>
+    <value>WB0100</value>
+   </Item>
+   <Item type="Value" id="1C8C127D4AEB48F58B50685A6F4D3C20" action="add">
+    <label xml:lang="en">IEC Low Voltage General Purpose Fuses and Fusegear</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L1" type="List">F0A45325F75140F496A2131E8FA2A681</source_id>
+    <value>WB0200</value>
+   </Item>
+   <Item type="Value" id="04AB44DC9F804300AD49AC565792B0C0" action="add">
+    <label xml:lang="en">High Speed Fuses</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L1" type="List">F0A45325F75140F496A2131E8FA2A681</source_id>
+    <value>WB0300</value>
+   </Item>
+   <Item type="Value" id="F38D79989FFF49008A8D842FE92B4600" action="add">
+    <label xml:lang="en">DC Protection for Electric Vehicle and Battery</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L1" type="List">F0A45325F75140F496A2131E8FA2A681</source_id>
+    <value>WB0400</value>
+   </Item>
+   <Item type="Value" id="A984E0DD6AD34C41B39D8CFED9850372" action="add">
+    <label xml:lang="en">Surge Protection, Lightning Protection and Power Monitoring</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L1" type="List">F0A45325F75140F496A2131E8FA2A681</source_id>
+    <value>WB0700</value>
+   </Item>
+   <Item type="Value" id="832212E84D3A40EEB2419F15ECF376DF" action="add">
+    <label xml:lang="en">High and Medium Voltage Fuses and Fuse Bases</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L1" type="List">F0A45325F75140F496A2131E8FA2A681</source_id>
+    <value>WB0800</value>
+   </Item>
+   <Item type="Value" id="CB6667FB65EC4DA5B4DDBB9AE03BA6D7" action="add">
+    <label xml:lang="en">Low Voltage Switches</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L1" type="List">F0A45325F75140F496A2131E8FA2A681</source_id>
+    <value>WB1000</value>
+   </Item>
+   <Item type="Value" id="3E5DC9E32C0046B8B5B47A1DCAE6FAF2" action="add">
+    <label xml:lang="en">Low Voltage Special Purpose Fuses</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L1" type="List">F0A45325F75140F496A2131E8FA2A681</source_id>
+    <value>WB1100</value>
+   </Item>
+   <Item type="Value" id="E42F58567D1F4F1DA22CAB2409BF4E39" action="add">
+    <label xml:lang="en">Configured Panels</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L1" type="List">F0A45325F75140F496A2131E8FA2A681</source_id>
+    <value>WB1200</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

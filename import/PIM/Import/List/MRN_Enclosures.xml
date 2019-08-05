@@ -1,0 +1,56 @@
+﻿<AML>
+ <Item type="List" id="366383D21EFC4EA1BAD85B99D42EB0BD" action="add">
+  <description>Enclosures</description>
+  <name>MRN_Enclosures</name>
+  <Relationships>
+   <Item type="Value" id="159A2822159B44F5B716065D290B8CE3" action="add">
+    <label xml:lang="en">1</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Enclosures" type="List">366383D21EFC4EA1BAD85B99D42EB0BD</source_id>
+    <value>1</value>
+   </Item>
+   <Item type="Value" id="7DBEA6AC65DE442E9EEA34014AEB92F3" action="add">
+    <label xml:lang="en">12</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Enclosures" type="List">366383D21EFC4EA1BAD85B99D42EB0BD</source_id>
+    <value>12</value>
+   </Item>
+   <Item type="Value" id="BBA3CE6D4EB940CA8AFA1C60039B09D6" action="add">
+    <label xml:lang="en">2</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Enclosures" type="List">366383D21EFC4EA1BAD85B99D42EB0BD</source_id>
+    <value>2</value>
+   </Item>
+   <Item type="Value" id="869AA98D920D4858A7DDFEC213541264" action="add">
+    <label xml:lang="en">3R</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Enclosures" type="List">366383D21EFC4EA1BAD85B99D42EB0BD</source_id>
+    <value>3R</value>
+   </Item>
+   <Item type="Value" id="62AE9C2FA12144B8A1291BC5C1B88D19" action="add">
+    <label xml:lang="en">4</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Enclosures" type="List">366383D21EFC4EA1BAD85B99D42EB0BD</source_id>
+    <value>4</value>
+   </Item>
+   <Item type="Value" id="471CEDABF9A8488780688301D7074DA2" action="add">
+    <label xml:lang="en">4X</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Enclosures" type="List">366383D21EFC4EA1BAD85B99D42EB0BD</source_id>
+    <value>4X</value>
+   </Item>
+   <Item type="Value" id="CC1053042E9A4572B4D9276C95F284BB" action="add">
+    <label xml:lang="en">4X Stainless</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Enclosures" type="List">366383D21EFC4EA1BAD85B99D42EB0BD</source_id>
+    <value>4X Stainless</value>
+   </Item>
+   <Item type="Value" id="DEB7A12A0F584D1A9026A193FFBF359E" action="add">
+    <label xml:lang="en">4X Non-Metallic</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Enclosures" type="List">366383D21EFC4EA1BAD85B99D42EB0BD</source_id>
+    <value>4X Non-Metallic</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

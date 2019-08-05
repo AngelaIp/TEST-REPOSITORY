@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="List" id="383C4B41142344B0B7FB7E16C76AAFE8" action="add">
+  <name>MRN_Connector_Material_Types</name>
+  <Relationships>
+   <Item type="Value" id="FA733D2AC7204057A153ABAB5A18A47E" action="add">
+    <label xml:lang="en">Tin-plated Copper</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Connector_Material_Types" type="List">383C4B41142344B0B7FB7E16C76AAFE8</source_id>
+    <value>Tin-plated Copper</value>
+   </Item>
+   <Item type="Value" id="6F456364C4124B43B6F1F7217283BDD9" action="add">
+    <label xml:lang="en">Tin-plated Aluminum</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Connector_Material_Types" type="List">383C4B41142344B0B7FB7E16C76AAFE8</source_id>
+    <value>Tin-plated Aluminum</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

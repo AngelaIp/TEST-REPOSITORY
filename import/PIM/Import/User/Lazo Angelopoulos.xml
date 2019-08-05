@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="A3C3B27FD3574AEAA712FADD1BF806EC" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>lazo.angelopoulos@us.mersen.com</email>
+  <login_name>langelop</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id>79FB6DD5B5A4414C946FF38B54AD6100</owned_by_id>
+  <first_name>Lazo</first_name>
+  <last_name>Angelopoulos</last_name>
+  <Relationships>
+   <Item type="Alias" id="670168E808F244FCBEDC0B2DF5FACB80" action="add">
+    <from_date>2016-04-19T15:40:53</from_date>
+    <related_id keyed_name="Lazo Angelopoulos" type="Identity">A696F5E0359548CE986B16D191980AAA</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Lazo Angelopoulos" type="User">A3C3B27FD3574AEAA712FADD1BF806EC</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

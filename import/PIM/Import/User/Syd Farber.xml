@@ -1,0 +1,23 @@
+﻿<AML>
+ <Item type="User" id="F1E12B10C34043A6B1CFF75FE5BBD7AD" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>syd.farber@mersen.com</email>
+  <last_login_date>2017-11-29T09:24:11</last_login_date>
+  <login_name>sfarber</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Syd Farber" type="Identity">D95CC83FA06A4F989FBD8C92696915F0</owned_by_id>
+  <pwd_is_set_on>2016-05-07T11:55:43</pwd_is_set_on>
+  <telephone>4951</telephone>
+  <working_directory>C:\temp\aras</working_directory>
+  <first_name>Syd</first_name>
+  <last_name>Farber</last_name>
+  <Relationships>
+   <Item type="Alias" id="A1A243A0D01A427ABDB912EC23D8B534" action="add">
+    <from_date>2016-04-14T11:32:58</from_date>
+    <related_id keyed_name="Syd Farber" type="Identity">D95CC83FA06A4F989FBD8C92696915F0</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Syd Farber" type="User">F1E12B10C34043A6B1CFF75FE5BBD7AD</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

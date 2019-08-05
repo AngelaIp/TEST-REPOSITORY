@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="5D4957C9C1ED452FAFC827355FA7DB30" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>claude-sophie.maubon@us.mersen.com</email>
+  <login_name>cmaubon</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="cmaubon" type="Identity">355EE820A448404AAEF5FA22F1618C78</owned_by_id>
+  <first_name>Claude-Sophie</first_name>
+  <last_name>Maubon</last_name>
+  <Relationships>
+   <Item type="Alias" id="6581017EED7045A581C4E64B41F49E42" action="add">
+    <from_date>2017-12-04T16:51:49</from_date>
+    <related_id keyed_name="cmaubon" type="Identity">355EE820A448404AAEF5FA22F1618C78</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Claude-Sophie Maubon" type="User">5D4957C9C1ED452FAFC827355FA7DB30</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

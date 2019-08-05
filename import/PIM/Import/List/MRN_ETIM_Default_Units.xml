@@ -1,0 +1,56 @@
+﻿<AML>
+ <Item type="List" id="3C9408BDD40949E89807EF6B66BAEC7D" action="add">
+  <description>List of units to be assigned to attributes for ETIM extracts</description>
+  <name>MRN_ETIM_Default_Units</name>
+  <Relationships>
+   <Item type="Value" id="F5859192939143709425B4F02E156027" action="add">
+    <label xml:lang="en">A</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_ETIM_Default_Units" type="List">3C9408BDD40949E89807EF6B66BAEC7D</source_id>
+    <value>A</value>
+   </Item>
+   <Item type="Value" id="812C024DFD0B45BA9554CFC77DF7FB6F" action="add">
+    <label xml:lang="en">°C</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_ETIM_Default_Units" type="List">3C9408BDD40949E89807EF6B66BAEC7D</source_id>
+    <value>°C</value>
+   </Item>
+   <Item type="Value" id="5217D8D14E0B487EA1F7611797CF1E57" action="add">
+    <label xml:lang="en">Hz</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_ETIM_Default_Units" type="List">3C9408BDD40949E89807EF6B66BAEC7D</source_id>
+    <value>Hz</value>
+   </Item>
+   <Item type="Value" id="36451F98B407454BBCA5A5FDC318A7D8" action="add">
+    <label xml:lang="en">kg</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_ETIM_Default_Units" type="List">3C9408BDD40949E89807EF6B66BAEC7D</source_id>
+    <value>kg</value>
+   </Item>
+   <Item type="Value" id="4C1492ADF7DB4659ADDCD233AA392760" action="add">
+    <label xml:lang="en">m</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_ETIM_Default_Units" type="List">3C9408BDD40949E89807EF6B66BAEC7D</source_id>
+    <value>m</value>
+   </Item>
+   <Item type="Value" id="8925C21D24F94C0EB29B881A85A8C40F" action="add">
+    <label xml:lang="en">ms</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_ETIM_Default_Units" type="List">3C9408BDD40949E89807EF6B66BAEC7D</source_id>
+    <value>ms</value>
+   </Item>
+   <Item type="Value" id="B4343E452E81496CA1C7F242427E1528" action="add">
+    <label xml:lang="en">N m</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_ETIM_Default_Units" type="List">3C9408BDD40949E89807EF6B66BAEC7D</source_id>
+    <value>N m</value>
+   </Item>
+   <Item type="Value" id="C0EFF03813AC46069CB1753D8EA6EC23" action="add">
+    <label xml:lang="en">V</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_ETIM_Default_Units" type="List">3C9408BDD40949E89807EF6B66BAEC7D</source_id>
+    <value>V</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

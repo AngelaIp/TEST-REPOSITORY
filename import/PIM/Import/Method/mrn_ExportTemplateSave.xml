@@ -1,0 +1,422 @@
+﻿<AML>
+ <Item type="Method" id="28CCC88D02094CA0A869ACADF1D16639" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[////////////////////////////////////////////////////////////////////////////////
+//
+// Name: mrn_ExportTemplateSave
+// Author: Kamran Aftab
+// Date: 25-JAN-2016
+// Event: OnSave of MRNExportTemplate
+// Description: Updates the mrn_ExportTemplate and mrn_ExportTemplateMap relationships and based on the chosen attributes
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+    // if (System.Diagnostics.Debugger.Launch()) 
+    //     //System.Diagnostics.Debugger.Break();
+    
+    
+    //Initialize
+    int sortOrder = -1000;
+    
+    // Set the default product item tag for xml output
+    if (this.getProperty("mrn_export_item_name","") == "")
+        this.setProperty("mrn_export_item_name","PRODUCT_ITEM");
+    if (this.getProperty("mrn_export_root_name","") == "")
+        this.setProperty("mrn_export_root_name","ROOT");
+        
+    
+    // Check to see if this is an ETIM export
+    //bool etim = this.getProperty("mrn_etim","0") == "1" ? true : false;
+    
+    // Build a lst of all MRNProperty Items
+    List<MRNProperty> mrnPropertiesList = buildMRNPRopertiesList(this);
+    
+    // Get selected attributes from the Export Template
+    string mslAttributes = this.getProperty("mrn_attributes_msl","");
+    string frameAttributes  = this.getProperty("mrn_attributes_frame","");
+    string productAttributes  = this.getProperty("mrn_attributes_product","");
+    
+    // Join all the selected attributes into a single list
+    List<string> selectedAttributes = ("Item Number,Confidential," + mslAttributes + "," + frameAttributes + "," + productAttributes).Split(',').ToList();
+    
+    // Build a list of selected MRNProperties from the selected attributes
+    List<MRNProperty> selectedMRNPropertiesList = buildSelectedMRNPropertiesList(selectedAttributes, mrnPropertiesList);
+    
+    // Build a list of all the Export Maps in this template
+    Item exportPropertyMaps = getExportPropertyMapsFromTemplate();
+    
+    
+    // Delete property maps that do not match the selected MRNProperties
+    if (this.getID() != null)
+        deletePreviouslyAddedAttributes(exportPropertyMaps, selectedMRNPropertiesList);
+    
+    // Get highest sort order from previous maps
+    sortOrder = getHighestSortOrder(exportPropertyMaps, selectedMRNPropertiesList);
+    
+    // Initialize order to 10 if no ExportPropertyMaps exist
+    sortOrder = sortOrder > -1000 ? sortOrder + 10 : 10;
+    
+    //Cycle all selected MRNProperty items and create Export maps for them
+    for (int i = 0; i < selectedMRNPropertiesList.Count(); i++)
+    {
+        MRNProperty mrnProperty = selectedMRNPropertiesList[i];
+        List<Property> propertiesList = mrnProperty.getPropertiesList();
+        
+        
+        // If the attribute is  in previously added export maps, skip it
+        if (mrnProperty.PreviouslyAdded)
+        	    continue;
+        	    
+        
+        // Cycle all the properties in the MRNProperty
+        for (int j = 0; j < propertiesList.Count; j++)
+        {
+            Property property = propertiesList[j];
+            
+    	    string productItemAttribute = propertiesList[j].getLabel();
+    	
+    	    // Get rid of the backslashes that come from commas in the property names (multi-list values)
+    	    //productItemAttribute = productItemAttribute.TrimEnd('\u005c');
+    	
+    	    string exportLabel = "";
+    	    
+        	// Exception for mrn_name_number
+        	if(property.getName() == "mrn_name_number")
+        	    exportLabel = "Item_Number";
+        	else
+        	{
+        	    exportLabel = productItemAttribute;
+        	    
+                //Replace special chars for XML
+                exportLabel = exportLabel.Replace("/", "_");
+                exportLabel = exportLabel.Replace(" ", "_");
+                exportLabel = exportLabel.Replace("(", "_");
+                exportLabel = exportLabel.Replace(")", "");
+                exportLabel = exportLabel.Replace("#", "NO");
+                exportLabel = exportLabel.Replace("&", "AND");
+                exportLabel = exportLabel.Replace("?", "_");
+                exportLabel = exportLabel.Replace("\u00B0", "");            //degree symbol
+                exportLabel = exportLabel.Replace(".", "_");
+                exportLabel = exportLabel.Replace(":", "_");
+        	}
+    
+        	
+            // Create a new ExportAttributeMap
+        	Item newAttribute = this.newItem("MRN_ExportAttributeMap","add");
+        	newAttribute.setProperty("mrn_plm_property_selector", property.getName());
+        	newAttribute.setProperty("mrn_export_name",exportLabel.ToUpper());
+        	newAttribute.setPropertyItem("mrn_property_item",mrnProperty.Item);
+        	if (productItemAttribute == "Item Number")
+        	    sortOrder = 10;
+        	else if (productItemAttribute == "Confidential")
+        	    sortOrder = 20;
+        	    
+        	newAttribute.setProperty("sort_order",sortOrder.ToString());
+        	newAttribute.setProperty("mrn_system_generated","1");
+        	
+        	// Add this ExportAttributeMap to the Template
+        	this.addRelationship(newAttribute);
+        	sortOrder = sortOrder + 10;
+        }
+    
+    }
+    return this;
+}
+
+// Returns all the Export Property Maps in this template
+Item getExportPropertyMapsFromTemplate()
+{
+   // Get the property maps related to this export profile
+	Item getExportPropertyMaps = this.newItem("MRN_ExportAttributeMap","get");
+	getExportPropertyMaps.setProperty("source_id",this.getID());
+	getExportPropertyMaps = getExportPropertyMaps.apply();
+	Item exportPropertyMaps = getExportPropertyMaps.getItemsByXPath("//Item[@type='MRN_ExportAttributeMap']");
+	return exportPropertyMaps;
+}
+    
+    
+// Deletes property maps that do not match the selected attributes and return the previously added ones
+void deletePreviouslyAddedAttributes(Item exportPropertyMaps, List<MRNProperty> selectedMRNPropertiesList)
+{
+	// Loop through all exportPropertyMaps and delete system generated ones no longer selected or get a listing of 
+    // all those that will stay to determine which to add below
+	for (int ii = 0; ii < exportPropertyMaps.getItemCount(); ii++)
+	{
+		Item exportPropertyMap = exportPropertyMaps.getItemByIndex(ii);
+		string propertySelector = exportPropertyMap.getProperty("mrn_plm_property_selector","");
+		string systemGenerated = exportPropertyMap.getProperty("mrn_system_generated","");
+		if (systemGenerated != "1")
+		    continue;
+		
+		int jj = 0;
+        for (jj = 0; jj < selectedMRNPropertiesList.Count; jj++)
+        {   
+            MRNProperty mrnProperty = selectedMRNPropertiesList[jj];
+            if (mrnProperty.hasProperty(propertySelector))
+            {
+                mrnProperty.PreviouslyAdded = true;
+                break;
+            }
+        }
+        
+        if (jj >= selectedMRNPropertiesList.Count)
+        {
+            Item deletePropertyMap = this.newItem("MRN_ExportAttributeMap","delete");
+		    deletePropertyMap.setID(exportPropertyMap.getID());
+		    deletePropertyMap.setAttribute("doGetItem","0");
+		    this.addRelationship(deletePropertyMap);
+        }
+	}
+
+}
+
+// Deletes property maps that do not match the selected attributes and return the previously added ones
+int  getHighestSortOrder(Item exportPropertyMaps, List<MRNProperty> selectedMRNPropertiesList)
+{
+    int highestNumber = 0;
+        
+    // Loop through all exportPropertyMaps
+	for (int i = 0; i < exportPropertyMaps.getItemCount(); i++)
+	{
+		Item exportPropertyMap = exportPropertyMaps.getItemByIndex(i);
+	    int sortNumber = int.Parse(exportPropertyMap.getProperty("sort_order","0"));
+		
+		highestNumber = sortNumber > highestNumber ? sortNumber : highestNumber;
+	}
+	
+	return highestNumber;
+}
+
+// Class to hold Property Items
+public class Property
+{
+    Item item;
+    string name;
+    string label;
+    
+    public Property(Item itm)
+    {
+        if (itm == null)
+            throw new Exception("Property item is null");
+        item = itm;
+        name = item.getProperty("name","");
+        label = item.getProperty("label","");
+    }
+    
+    public string getName() { return name; }
+    public string getLabel() { return label; }
+    
+}
+
+// Class to hold MRNUOMProperty Item
+public class MRNUoMProperty
+{
+    Item item;
+    Property property = null;
+    string value = "";
+
+    // Constructor
+    public MRNUoMProperty(Item itm)
+    {
+        item = itm;
+    
+        Item propertyItem = item.getPropertyItem("mrn_item_property");
+        if (propertyItem != null)
+            property = new Property(propertyItem);
+    }
+    
+
+    public string getValue() { return value; }
+    public Property getProperty() { return property; }
+}
+
+// Method to build a list of MRNProperties
+List<MRNProperty> buildMRNPRopertiesList(Item templateItem)
+{
+
+    Innovator inn = this.getInnovator();
+    
+    // Get all the MRN_Property items
+    string AMLquery = "<Item type=\"MRN_Property\"  select=\"mrn_item_property, mrn_uom_property, mrn_is_group, mrn_etim_range_property, mrn_range_property_min, mrn_range_property_max,mrn_label, mrn_level, mrn_families, mrn_form_element, classification, mrn_etim\" action=\"get\" orderBy=\"mrn_label\">" +
+                    "<classification condition= \"is null\"></classification>" +
+                    "<mrn_item_property>" + 
+                      "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                    "</mrn_item_property>" +
+                    "<mrn_range_property_min>" + 
+                      "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                    "</mrn_range_property_min>" +
+                    "<mrn_range_property_max>" + 
+                      "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                    "</mrn_range_property_max>" +
+                    "<mrn_uom_property>" + 
+                      "<Item type=\"MRN_Property\" select=\"mrn_label, name, mrn_item_property, mrn_si_unit, mrn_us_unit, mrn_etim_unit\" action=\"get\">" +
+                        "<mrn_item_property>" + 
+                         "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" +
+                        "</mrn_item_property>" +
+                      "</Item>" +
+                    "</mrn_uom_property>" + 
+                    "<Relationships>";
+    AMLquery += "<Item type=\"MRN_Property_Property\" select=\"related_id\" action=\"get\"></Item>";
+    AMLquery += "<Item type=\"MRN_Property_ETIM_Class\" select=\"mrn_class_code,mrn_feature_code,mrn_type\" action=\"get\"></Item>";
+    AMLquery += "</Relationships></Item>";
+
+                    
+    Item resultItems = inn.newItem();
+    resultItems.loadAML(AMLquery);
+    resultItems = resultItems.apply();
+    
+    // Build list of MRN_Property items from the results returned
+    List<MRNProperty> list = new List<MRNProperty>();
+    for (var i=0;i < resultItems.getItemCount(); i++) 
+    {
+        Item resultItem = resultItems.getItemByIndex(i);
+
+        // Create the MRNProperty item
+        MRNProperty mrnProperty = new MRNProperty(resultItem, templateItem);
+        list.Add(mrnProperty);
+    }
+    
+    return list;
+}
+
+// Build a list of  MRN_Property items that match the labels selected 
+List<MRNProperty> buildSelectedMRNPropertiesList(List<string> attributesList, List<MRNProperty> propertiesList)
+{
+    List<MRNProperty> returnList = new List<MRNProperty>();
+    
+    for (int ii = 0; ii < attributesList.Count; ii ++)
+    {
+        // Skip if empty
+        if (attributesList[ii] == "")
+            continue;
+            
+        int jj = 0;
+        for (jj = 0; jj < propertiesList.Count; jj++)
+        {
+            if (attributesList[ii] == propertiesList[jj].getLabel())
+            {
+                returnList.Add(propertiesList[jj]);
+                break;
+            }
+        }
+        if (jj >= propertiesList.Count)
+            throw new Exception("No MRN Property item found for label: " + attributesList[ii]);
+    }
+    
+    return returnList;
+}
+    
+// Class to hold MRN Property item
+private class MRNProperty{
+    
+    Item item;
+    MRNUoMProperty uom = null;
+    List<Property> propertiesList = new List<Property>();
+    string level;
+    bool isGroup;
+    string label = "";
+    bool previouslyAdded = false;
+    bool etimRangeProperty;
+    
+    // string etimDefault = "";
+    // string etimClasses = "";
+
+    
+    // Constructors
+    public MRNProperty(Item itm, Item templateItem)
+    {
+        item = itm;
+        
+        bool isEtimTemplate = templateItem.getProperty("mrn_etim") == "1" ? true : false;
+        
+        Item mrnUomPropertyItem = item.getPropertyItem("mrn_uom_property");
+        if (mrnUomPropertyItem != null)
+            uom = new MRNUoMProperty(mrnUomPropertyItem);
+        
+        level = item.getProperty("mrn_level","");
+        label = item.getProperty("mrn_label","").Trim();
+        //etimDefault = item.getProperty("mrn_etim","");
+        
+        isGroup = item.getProperty("mrn_is_group") == "1" ? true : false;
+        etimRangeProperty = item.getProperty("mrn_etim_range_property") == "1" ? true : false;
+        
+        if (isGroup)
+        {
+            // Find all the properties
+            Item relationships = item.getRelationships("MRN_Property_Property");
+            for (int ii = 0; ii < relationships.getItemCount(); ii++) 
+            {
+                Item relationshipItem = relationships.getItemByIndex(ii);
+                Item propertyItem = relationshipItem.getRelatedItem();
+                if (propertyItem == null)
+                    throw new Exception("Propery Item is null for MRN_Propery:" + label);
+                Property property = new Property(propertyItem);
+                propertiesList.Add(property);
+            }
+        }
+        else if (etimRangeProperty)
+        {
+            if (isEtimTemplate)  // Only include this if it's an etim template
+            {
+                Item propertyItem = item.getPropertyItem("mrn_range_property_min");
+                if (propertyItem == null)
+                        throw new Exception("Min. Value Propery Item is null for MRN_Propery: " + label);
+                Property property = new Property(propertyItem);
+                propertiesList.Add(property);
+                propertyItem = item.getPropertyItem("mrn_range_property_max");
+                if (propertyItem == null)
+                        throw new Exception("Max. Value Propery Item is null for MRN_Propery: " + label);
+                property = new Property(propertyItem);
+                propertiesList.Add(property);
+            }
+            else
+                return;  // If this is an etim range property, it is not to be included
+        }
+        else
+        {
+            Item propertyItem = item.getPropertyItem("mrn_item_property");
+            if (propertyItem == null)
+                    throw new Exception("Propery Item is null for MRN_Propery: " + label);
+            Property property = new Property(propertyItem);
+            propertiesList.Add(property);
+        }
+        if(propertiesList.Count == 0)
+              throw new Exception("MRN Property \"" + label +  "\" does not have an associated MRN Item Property ");
+              
+        // // Find all the etim classes
+        // Item etimRelationships = item.getRelationships("MRN_Property_ETIM_Class");
+        // List<string> classList = new List<string>();
+        // for (int ii = 0; ii < etimRelationships.getItemCount(); ii++) 
+        // {
+        //     Item relationshipItem = etimRelationships.getItemByIndex(ii);
+        //     string classCode = relationshipItem.getProperty("mrn_class_code","");
+        //     string featureCode = relationshipItem.getProperty("mrn_feature_code","");
+        //     string valueType = relationshipItem.getProperty("mrn_type","");
+        //     classList.Add(classCode + "|" + featureCode + "|" + valueType);
+        // }
+        // etimClasses = string.Join(",", classList);
+    }
+    
+    public bool hasProperty(string propertyName)
+    {
+        for (int ii = 0; ii < propertiesList.Count; ii++)
+            if (propertiesList[ii].getName() == propertyName)
+                return true;
+        return false;
+    }
+    
+    public MRNUoMProperty Uom { get {return uom;}}
+    public string getLevel() { return level; }
+    public List<Property> getPropertiesList() { return propertiesList; }
+    public string getLabel() { return label; }
+    public bool PreviouslyAdded { get {return previouslyAdded; } set {previouslyAdded = value; } }
+    public Item Item { get { return item; } } 
+
+
+
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_ExportTemplateSave</name>
+ </Item>
+</AML>

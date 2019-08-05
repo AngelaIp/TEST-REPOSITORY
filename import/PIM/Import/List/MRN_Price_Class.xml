@@ -1,0 +1,578 @@
+﻿<AML>
+ <Item type="List" id="04AA90CA1E564211908A116A585BBDE7" action="add">
+  <description>Price Class</description>
+  <name>MRN_Price_Class</name>
+  <Relationships>
+   <Item type="Value" id="FB23E6F8341348DFB6813DC024B17434" action="add">
+    <label xml:lang="en">AOS, GMSC, GSGFD, GS-POP, MFD, SDC, 45492-G, 602-615S, TI-130, 6</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>ACC</value>
+   </Item>
+   <Item type="Value" id="6B453A591E97456282F5EC2164354431" action="add">
+    <label xml:lang="en">228-700's, GSFC, DFC, DLM, DRM, 32-001-7G, 34-001-18G</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>ACC-1</value>
+   </Item>
+   <Item type="Value" id="18F37BD5DECD4FC5A3D400484E0CE909" action="add">
+    <label xml:lang="en">BOX COVERS</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>BC</value>
+   </Item>
+   <Item type="Value" id="45FFC540C6494C41AD10722B3F887399" action="add">
+    <label xml:lang="en">CANADIAN BS88 FUSES - FES, FESC, FESF</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>C</value>
+   </Item>
+   <Item type="Value" id="97FA17D6B5AC4E5BA9FE2AE2FAF10392" action="add">
+    <label xml:lang="en">CAPACITOR FUSES</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>CAP</value>
+   </Item>
+   <Item type="Value" id="0C14605FDB8844069F153A9A34059DF6" action="add">
+    <label xml:lang="en">ATQR, ATDR</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>CC</value>
+   </Item>
+   <Item type="Value" id="AA6CB3F5D5D440DE8BBD142B91330CE2" action="add">
+    <label xml:lang="en">ATMR</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>CCMG</value>
+   </Item>
+   <Item type="Value" id="510A093F5EA54925ACE2E08234E9C78D" action="add">
+    <label xml:lang="en">CANADIAN BS88 FUSES - NIT, NS</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>CM</value>
+   </Item>
+   <Item type="Value" id="65D6DB6B3AE34330A69D6DAA26B41BE6" action="add">
+    <label xml:lang="en">AMP-TRAP CABLE PROTECTOR, 600V, Al AND Cu CABLE</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>CP</value>
+   </Item>
+   <Item type="Value" id="10142F13EF6C4F1BAC96728D2B09B3CE" action="add">
+    <label xml:lang="en">DC RATED FUSES</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>DC</value>
+   </Item>
+   <Item type="Value" id="2C99CD6FF55F45F89CF80B28B2C2DCE8" action="add">
+    <label xml:lang="en">ENCLOSED DISCONNECT SWITCHES</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>ESW</value>
+   </Item>
+   <Item type="Value" id="504FC67036FA4037A150CD804946921C" action="add">
+    <label xml:lang="en">BALANCE OF EUROPEAN FUSES</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>EUR</value>
+   </Item>
+   <Item type="Value" id="1D70DEB9FF5F45F0BB8FCE6EA14694B5" action="add">
+    <label xml:lang="en">EUROPEAN FRENCH FERRULE</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>EURFF</value>
+   </Item>
+   <Item type="Value" id="C6DE13ABC0BD4708B8FDC21B1D2B5533" action="add">
+    <label xml:lang="en">A2Y, A6Y-1, A6Y-3, A6Y-4, A6Y-5</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>F600</value>
+   </Item>
+   <Item type="Value" id="FEAB59105BF24FEC8420C0E54029D7B8" action="add">
+    <label xml:lang="en">ALL FUSE BLOCKS &amp; ACCESSORIES</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>FB</value>
+   </Item>
+   <Item type="Value" id="EEFCE02C86614E709F3282184AF4FCB2" action="add">
+    <label xml:lang="en">B307, B309, GEB, BPM, SHR</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>FH</value>
+   </Item>
+   <Item type="Value" id="DBD54FA4EFD64C4E89DB1EA01CFAF363" action="add">
+    <label xml:lang="en">CNN, CNL</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>FL</value>
+   </Item>
+   <Item type="Value" id="52ACE72A065C42CA842CA430E359AF1A" action="add">
+    <label xml:lang="en">ALL FUSE REDUCERS</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>FR</value>
+   </Item>
+   <Item type="Value" id="658D37BDD8FF46529CE4B9AC4D1C80A6" action="add">
+    <label xml:lang="en">MULTIMETER FUSES</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>FSM</value>
+   </Item>
+   <Item type="Value" id="EF6B8DB164944581BCE253A2ACD74B92" action="add">
+    <label xml:lang="en">FINGERSAFE POWER DISTRIBUTION BLOCKS AND ACCESSORIES-FSPDB</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>FSPDB</value>
+   </Item>
+   <Item type="Value" id="59A2F4DDB69140918E48B2465F8EA295" action="add">
+    <label xml:lang="en">AG</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>G</value>
+   </Item>
+   <Item type="Value" id="05F9A6AE0AA945E7BA15DDB6275D9639" action="add">
+    <label xml:lang="en">RL, RLS, RF, RFS (up to 60A)</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>H</value>
+   </Item>
+   <Item type="Value" id="472D74DA68E74734B64D4266782FA3ED" action="add">
+    <label xml:lang="en">RL, RLS, RF, RFS (60A and under)</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>HB</value>
+   </Item>
+   <Item type="Value" id="909C45BA4AE34D228D7E20AB50A196DE" action="add">
+    <label xml:lang="en">CLASS K/H CANADIAN FUSE</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>HO</value>
+   </Item>
+   <Item type="Value" id="4C4062807A2941CA91B1AF28ADD5E73C" action="add">
+    <label xml:lang="en">600VDC CLASS J PV FUSE</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>HPJ</value>
+   </Item>
+   <Item type="Value" id="4884F4AA32514E13877ADA98009AA834" action="add">
+    <label xml:lang="en">MIDGET PV FUSE</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>HPM</value>
+   </Item>
+   <Item type="Value" id="7AFFEF15DB604414A0949C79DF90FDD5" action="add">
+    <label xml:lang="en">HIGH SPEED CLASS J</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>HSJ</value>
+   </Item>
+   <Item type="Value" id="D68A376EC2934151B876BE23CA9E7EEC" action="add">
+    <label xml:lang="en">CRN/CRS CLASS H CANADIAN FUSE</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>HT</value>
+   </Item>
+   <Item type="Value" id="837A55485EB3425CA1A51E1E13690584" action="add">
+    <label xml:lang="en">A4J</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>J</value>
+   </Item>
+   <Item type="Value" id="37876B0F00B648569A0335DBE2D47AA0" action="add">
+    <label xml:lang="en">AJT</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>JT</value>
+   </Item>
+   <Item type="Value" id="C839971051FF4C9293C6C3CA5917F38D" action="add">
+    <label xml:lang="en">OT, OTS</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>K</value>
+   </Item>
+   <Item type="Value" id="1C83B56670514E438A9766444A57526E" action="add">
+    <label xml:lang="en">A4BY, A4BT</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>L</value>
+   </Item>
+   <Item type="Value" id="FFFDFBAA03D1495D95CA561CD5223D7A" action="add">
+    <label xml:lang="en">LINDNER D-TYPE FUSE-LINKS AND ACCESSORIES</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>LD/O</value>
+   </Item>
+   <Item type="Value" id="F00CF18F52634B15A5A798914882BBE8" action="add">
+    <label xml:lang="en">LINDNER NH FUSE-LINKS AND ACCESSORIES</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>LNH</value>
+   </Item>
+   <Item type="Value" id="89B7A8C56E7A4748A4116DCB40922A13" action="add">
+    <label xml:lang="en">A4BQ</label>
+    <sort_order>4480</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>LQ</value>
+   </Item>
+   <Item type="Value" id="7B80F820C1C84000B8FACEF127709350" action="add">
+    <label xml:lang="en">SEMICONDUCTOR FUSE LINKS AND ACCESSORIES</label>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>LRECT</value>
+   </Item>
+   <Item type="Value" id="B96FB9C08217479B826B827F7F44B7F7" action="add">
+    <label xml:lang="en">LINDNER FUSE DISCONNECTORS AND ADAPTOR ASSEMBLIES</label>
+    <sort_order>4736</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>LSWG</value>
+   </Item>
+   <Item type="Value" id="3A07B30ADED946C7AD71E26B9BDD6309" action="add">
+    <label xml:lang="en">ATM, ATQ, GFN, OTM, TRM, A6Y-2B</label>
+    <sort_order>4864</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MIDG</value>
+   </Item>
+   <Item type="Value" id="8B8497647FEC47BD810E659AD072EA10" action="add">
+    <label xml:lang="en">GGM, GDG, GGA, GGC, GDL, GAB, GGX, GSA, GSB, GSC, SLR, GGU, SBS</label>
+    <sort_order>4992</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MIN</value>
+   </Item>
+   <Item type="Value" id="85CD28AC3F004020B0B491149B043E5A" action="add">
+    <label xml:lang="en">SURGE PROTECTION DEVICES</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MOV</value>
+   </Item>
+   <Item type="Value" id="9BA57017042E4D7BBE15BC386EE8E4DC" action="add">
+    <label xml:lang="en">9F61</label>
+    <sort_order>5248</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MVACC</value>
+   </Item>
+   <Item type="Value" id="98622C7CD2BE447FA9E9840B11FC7D1C" action="add">
+    <label xml:lang="en">CAP EJ, CAP EJO</label>
+    <sort_order>5376</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MVCAP</value>
+   </Item>
+   <Item type="Value" id="8392C92C89124DBF861DD2DA10931FD4" action="add">
+    <label xml:lang="en">A055C, A155C</label>
+    <sort_order>5504</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MVCL</value>
+   </Item>
+   <Item type="Value" id="BB6AEDA57D5E42E6B73CA8892D709432" action="add">
+    <label xml:lang="en">A055F, A155F, A240T, A480T, A720T, A825X</label>
+    <sort_order>5632</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MVE</value>
+   </Item>
+   <Item type="Value" id="39CECEBC28134D4FA1EEB56345959864" action="add">
+    <label xml:lang="en">PT-EJ, PDF-EJ, PDF-EJO, GP-EJO, </label>
+    <sort_order>5760</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MVEG</value>
+   </Item>
+   <Item type="Value" id="409C12E95B3C4F3B9CECEDADB9310F02" action="add">
+    <label xml:lang="en">A240R, A480R, A072R</label>
+    <sort_order>5888</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MVR</value>
+   </Item>
+   <Item type="Value" id="7E72190F0FB54709A36B715A93962ADD" action="add">
+    <label xml:lang="en">MSF EJ</label>
+    <sort_order>6016</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>MVRG</value>
+   </Item>
+   <Item type="Value" id="25FED864AD134159AE8F92F44AC58EED" action="add">
+    <label xml:lang="en">SURFACE MOUNT MIDGET DIMENSION FUSES</label>
+    <sort_order>6144</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>PCB</value>
+   </Item>
+   <Item type="Value" id="2C9317914152456D837A9C995F432689" action="add">
+    <label xml:lang="en">ALL POWER DISTRIBUTION BLOCKS &amp; ACCESSORIES</label>
+    <sort_order>6272</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>PDB</value>
+   </Item>
+   <Item type="Value" id="FC8CBA9218BE4EEB830E80DC6BDE9C63" action="add">
+    <label xml:lang="en">GW, GT, GTL, GSL</label>
+    <sort_order>6400</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>PF</value>
+   </Item>
+   <Item type="Value" id="4C6F31B05C2B469E8FC0D41F321DB8E1" action="add">
+    <label xml:lang="en">PSC SQUARE BODY SEMICONDUCTOR FUSES</label>
+    <sort_order>6528</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>PSCSQ</value>
+   </Item>
+   <Item type="Value" id="A603278F55D24B6D9018F0B71A67B5DA" action="add">
+    <label xml:lang="en">A2D, A6D, A2K, A6K</label>
+    <sort_order>6656</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>RK1</value>
+   </Item>
+   <Item type="Value" id="2F87155E958F463496D5780CD772FB7D" action="add">
+    <label xml:lang="en">TR, TRS</label>
+    <sort_order>6784</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>RK5</value>
+   </Item>
+   <Item type="Value" id="A4DB4A20DF1040609D17243D062F5A46" action="add">
+    <label xml:lang="en">TR, TRS SMARTSPOT</label>
+    <sort_order>6912</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>RK5ID</value>
+   </Item>
+   <Item type="Value" id="CD298BE574834F41A621D3D479B83D01" action="add">
+    <label xml:lang="en">SEMICONDUCTOR URG,GRB,URGG,URGS,URB,URS</label>
+    <sort_order>7040</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SC</value>
+   </Item>
+   <Item type="Value" id="20232A073F39422F9D928E0AA7ABA6A0" action="add">
+    <label xml:lang="en">A15QS, A30QS,A50QS, A50P, A70P, A100P</label>
+    <sort_order>7168</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SFPQS</value>
+   </Item>
+   <Item type="Value" id="4989226896A741C289D66D0655FAC31D" action="add">
+    <label xml:lang="en">A60Q, A70Q</label>
+    <sort_order>7296</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SFQ</value>
+   </Item>
+   <Item type="Value" id="37F79D1016AF4E899BD6BEBD9EB3CAE1" action="add">
+    <label xml:lang="en">A13X, A25X, A25Z, A60X, A120X</label>
+    <sort_order>7424</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SFX/Z</value>
+   </Item>
+   <Item type="Value" id="C11E28A22DCD4BD696018C19037DA6B4" action="add">
+    <label xml:lang="en">SURGE TRAP SPD TYPE 1 &amp; 2 (XP SERIES)</label>
+    <sort_order>7552</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SPDX</value>
+   </Item>
+   <Item type="Value" id="1BC1DFD802F245DDA9E13B8CE4177D04" action="add">
+    <label xml:lang="en">SURGE TRAP SPD TYPE 1 &amp; 2</label>
+    <sort_order>7680</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SPD12</value>
+   </Item>
+   <Item type="Value" id="9F7C7E4984D441F8964E4CB13E533713" action="add">
+    <label xml:lang="en">SURGE TRAP - SURGE PROTECTIVE DEVICE</label>
+    <sort_order>7808</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>STRAP</value>
+   </Item>
+   <Item type="Value" id="093279AC17B44143B8FF5D01B523B0D5" action="add">
+    <label xml:lang="en">UL98/489 DISCONNECT SWITCHES</label>
+    <sort_order>7936</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SW98</value>
+   </Item>
+   <Item type="Value" id="CD9EEA8879BE4416B16F5534DECB3DA4" action="add">
+    <label xml:lang="en">UL508 DISCONNECT SWITCHES</label>
+    <sort_order>8064</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SW508</value>
+   </Item>
+   <Item type="Value" id="6B892F7486E4434685928AA9EF05CF69" action="add">
+    <label xml:lang="en">UL508 DISCONNECT SWITCHES</label>
+    <sort_order>8192</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SW509</value>
+   </Item>
+   <Item type="Value" id="4F16BD8A0B9D48D08CB013D54934A3BC" action="add">
+    <label xml:lang="en">DISCONNECT SWITCHES ACCESSORIES</label>
+    <sort_order>8320</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>SWACC</value>
+   </Item>
+   <Item type="Value" id="4D47FFEC381345A2ACE2096B8BC24919" action="add">
+    <label xml:lang="en">A3T, A6T</label>
+    <sort_order>8448</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>T</value>
+   </Item>
+   <Item type="Value" id="9B16A809C6034A8781BC02B784FE17DF" action="add">
+    <label xml:lang="en">GMS, 70A-X</label>
+    <sort_order>8576</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>TEL</value>
+   </Item>
+   <Item type="Value" id="37F8DB91814C4B3597C6B937165BF7CB" action="add">
+    <label xml:lang="en">ULTRASAFE TM MODULAR FUSE HOLDERS FOR 14X51 MM FUSES</label>
+    <sort_order>8704</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>US14</value>
+   </Item>
+   <Item type="Value" id="7BC0C2008F83407386B9D3FA9FD6FF51" action="add">
+    <label xml:lang="en">ULTRASAFE TM MODULAR FUSE HOLDERS FOR 22X58 MM FUSES</label>
+    <sort_order>8832</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>US22</value>
+   </Item>
+   <Item type="Value" id="DF1D703D92CC44EDB874A6F4B011865C" action="add">
+    <label xml:lang="en">ULTRASAFE TM MODULAR FUSE HOLDERS FOR 27X60 MM FUSES</label>
+    <sort_order>8960</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>US27</value>
+   </Item>
+   <Item type="Value" id="881FE2215ED04853AA6CC4F664C21C7E" action="add">
+    <label xml:lang="en">ULTRASAFE TM FUSEHOLDERS FOR CLASS CC FUSES</label>
+    <sort_order>9088</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>USCC</value>
+   </Item>
+   <Item type="Value" id="6D37630FF2FE4A6BA915C541BF7661DE" action="add">
+    <label xml:lang="en">ULTRASAFE TM FUSEMODULE</label>
+    <sort_order>9216</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>USFM</value>
+   </Item>
+   <Item type="Value" id="EDC2FBDDB67F43219B5E73236E3E5D9F" action="add">
+    <label xml:lang="en">ULTRASAFE CLASS CC SPRING T</label>
+    <sort_order>9344</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>USGCC</value>
+   </Item>
+   <Item type="Value" id="5982677323494C2FB44B020B77654781" action="add">
+    <label xml:lang="en">ULTRASAFE MIDGET SPRING TER</label>
+    <sort_order>9472</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>USGM</value>
+   </Item>
+   <Item type="Value" id="F7AD83C602644206BDE206FBA92CF7F6" action="add">
+    <label xml:lang="en">ULTRASAFE TM FUSEHOLDERS FOR CLASS J (30A AND 60A) FUSES</label>
+    <sort_order>9600</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>USJ</value>
+   </Item>
+   <Item type="Value" id="8AA986197F5A4F2E99A3EC11E4B0D65F" action="add">
+    <label xml:lang="en">ULTRASAFE TM FUSEHOLDERS FOR MIDGET FUSES</label>
+    <sort_order>9728</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>USM</value>
+   </Item>
+   <Item type="Value" id="A05AD4C8375647B095B18EAA3E9E6F1C" action="add">
+    <label xml:lang="en">MOV PROTECTOR</label>
+    <sort_order>9856</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>VSP</value>
+   </Item>
+   <Item type="Value" id="4CD06542F72148DF809DBF8A33641B5B" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM X</label>
+    <sort_order>9984</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>X</value>
+   </Item>
+   <Item type="Value" id="5279295468A84902A0D7DCFA7B8BF36D" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XACC</label>
+    <sort_order>10112</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XACC</value>
+   </Item>
+   <Item type="Value" id="C7FF2107EFF541D7AB8853F364D67AD7" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XCP</label>
+    <sort_order>10240</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XCP</value>
+   </Item>
+   <Item type="Value" id="F94DEA0D0FE44D6197BFD1DE37984676" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XEUR</label>
+    <sort_order>10368</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XEUR</value>
+   </Item>
+   <Item type="Value" id="65DAA836689A45308615C92719DAE719" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XF600</label>
+    <sort_order>10496</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XF600</value>
+   </Item>
+   <Item type="Value" id="2564F0A128914501A44BF62BB82BC7E7" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XFB</label>
+    <sort_order>10624</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XFB</value>
+   </Item>
+   <Item type="Value" id="B4BC05D8CA714481A099BE7D02751A9B" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XL</label>
+    <sort_order>10752</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XL</value>
+   </Item>
+   <Item type="Value" id="9AAE049326424D8DB5CA09CA2526DBD2" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XMIN</label>
+    <sort_order>10880</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XMIN</value>
+   </Item>
+   <Item type="Value" id="625C466017EC4C94B00D558B01FBA06E" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XMOV</label>
+    <sort_order>11008</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XMOV</value>
+   </Item>
+   <Item type="Value" id="ADFB7973899344DEA13573073CEEB963" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XMSMV</label>
+    <sort_order>11136</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XMSMV</value>
+   </Item>
+   <Item type="Value" id="6027E79E7161460685AD864868BEDD54" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XMVACC</label>
+    <sort_order>11264</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XMVACC</value>
+   </Item>
+   <Item type="Value" id="3FD27C6859AB4FF68120B08AA0A1B149" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XMVE</label>
+    <sort_order>11392</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XMVE</value>
+   </Item>
+   <Item type="Value" id="D1FFC43667D341BE8F66E7EB282DEBC7" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XMVEG</label>
+    <sort_order>11520</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XMVEG</value>
+   </Item>
+   <Item type="Value" id="99F826DE7AA541DBB3B229511A3847AB" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XMVR</label>
+    <sort_order>11648</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XMVR</value>
+   </Item>
+   <Item type="Value" id="4B57B188EF26477AAD669250D6EAFBC6" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XPDB</label>
+    <sort_order>11776</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XPDB</value>
+   </Item>
+   <Item type="Value" id="E6DBC140EFAC47B4B039323B319C5F3E" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XSFXZ</label>
+    <sort_order>11904</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XSFXZ</value>
+   </Item>
+   <Item type="Value" id="75D7E45653754DF9B6004D55CB3B87F8" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XSPQS</label>
+    <sort_order>12032</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XSPQS</value>
+   </Item>
+   <Item type="Value" id="38A81D5AB8674787BB5920FE16B5145B" action="add">
+    <label xml:lang="en">NON-DISCOUNTED ITEM XSTRAP</label>
+    <sort_order>12160</sort_order>
+    <source_id keyed_name="MRN_Price_Class" type="List">04AA90CA1E564211908A116A585BBDE7</source_id>
+    <value>XSTRAP</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

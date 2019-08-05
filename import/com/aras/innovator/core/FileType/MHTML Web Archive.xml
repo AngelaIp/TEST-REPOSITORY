@@ -1,8 +1,0 @@
-﻿<AML>
- <Item type="FileType" id="238E3419BA7648AC9F37313E84474735" action="add">
-  <description>MHTML Web Archive</description>
-  <extension>mht,mhtml</extension>
-  <mimetype>message/rfc822</mimetype>
-  <name>MHTML Web Archive</name>
- </Item>
-</AML>

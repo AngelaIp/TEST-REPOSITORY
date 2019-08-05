@@ -1,0 +1,104 @@
+﻿<AML>
+ <Item type="List" id="3E2CD34985E64E3D90C716434F9DD712" action="add">
+  <description>Fuse Classes</description>
+  <name>MRN_Fuse_Classes</name>
+  <Relationships>
+   <Item type="Value" id="E296EF8492294693AC4E470321AE3055" action="add">
+    <label xml:lang="en">Class C</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class C</value>
+   </Item>
+   <Item type="Value" id="464AB11446734519B94704B0C7F0B685" action="add">
+    <label xml:lang="en">Class CC</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class CC</value>
+   </Item>
+   <Item type="Value" id="C17EE3682CB54B329C26EAABA4B62649" action="add">
+    <label xml:lang="en">Class G</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class G</value>
+   </Item>
+   <Item type="Value" id="312CDAE37F5747518F173CBA49FBCE1D" action="add">
+    <label xml:lang="en">Class H</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class H</value>
+   </Item>
+   <Item type="Value" id="764C353CFB1B495AB4BC9B0B75ABA2E0" action="add">
+    <label xml:lang="en">Class H/K</label>
+    <sort_order>400</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class H/K</value>
+   </Item>
+   <Item type="Value" id="7BC04581BC21456EAF646DC0FCB35FC2" action="add">
+    <label xml:lang="en">Class J</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class J</value>
+   </Item>
+   <Item type="Value" id="371D4DB11896468DBE73D8EC9E19CBE9" action="add">
+    <label xml:lang="en">Class K5</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class K5</value>
+   </Item>
+   <Item type="Value" id="493F6024080C447BA27B4A24A587DC88" action="add">
+    <label xml:lang="en">Class L</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class L</value>
+   </Item>
+   <Item type="Value" id="EF514EADF108435695F246D1D41B8080" action="add">
+    <label xml:lang="en">Class R</label>
+    <sort_order>800</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class R</value>
+   </Item>
+   <Item type="Value" id="CB3979D1BB70477A8689233B72EB85CE" action="add">
+    <label xml:lang="en">Class RK1</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class RK1</value>
+   </Item>
+   <Item type="Value" id="E7391A173B024C8EB0E64FDDC71E3636" action="add">
+    <label xml:lang="en">Class RK5</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class RK5</value>
+   </Item>
+   <Item type="Value" id="9F3D047C70C8441EBBE16FB5D048E688" action="add">
+    <label xml:lang="en">Class T</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Class T</value>
+   </Item>
+   <Item type="Value" id="E5A979E869E54BDAB7FE554A384071E6" action="add">
+    <label xml:lang="en">Midget</label>
+    <sort_order>1210</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Midget</value>
+   </Item>
+   <Item type="Value" id="15C589F8731045B6A5A9DAEC21F1CA29" action="add">
+    <label xml:lang="en">Photovoltaic</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Photovoltaic</value>
+   </Item>
+   <Item type="Value" id="98870C8670304F388F52DAC77CB9D0C8" action="add">
+    <label xml:lang="en">Plug</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Plug</value>
+   </Item>
+   <Item type="Value" id="7BE41DA6188D42958DCE2E5AB3045EE3" action="add">
+    <label xml:lang="en">Supplemental</label>
+    <sort_order>1800</sort_order>
+    <source_id keyed_name="MRN_Fuse_Classes" type="List">3E2CD34985E64E3D90C716434F9DD712</source_id>
+    <value>Supplemental</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

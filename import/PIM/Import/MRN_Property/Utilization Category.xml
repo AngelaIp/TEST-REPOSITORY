@@ -1,0 +1,49 @@
+﻿<AML>
+ <Item type="MRN_Property" id="DDFAC3F603C645FB872E69CF1E650DB4" action="add">
+  <mrn_copy>0</mrn_copy>
+  <mrn_etim>0</mrn_etim>
+  <mrn_etim_range_property>0</mrn_etim_range_property>
+  <mrn_export_attribute>1</mrn_export_attribute>
+  <mrn_extract_labels>0</mrn_extract_labels>
+  <mrn_fake_ml_property>0</mrn_fake_ml_property>
+  <mrn_families>Fuse Bases Fuse Holders Fuse Systems,Low-Voltage Switches,IEC Fuse Switch Disconnectors</mrn_families>
+  <mrn_form_element>GROUP_UTIL</mrn_form_element>
+  <mrn_is_group>1</mrn_is_group>
+  <mrn_is_multi_value>0</mrn_is_multi_value>
+  <mrn_item_property keyed_name="mrn_utilization_category" type="Property">AD9B04988C2B4D52B0BF230F155012FD</mrn_item_property>
+  <mrn_level>Level 5 - Frame</mrn_level>
+  <mrn_label>Utilization Category</mrn_label>
+  <Relationships>
+   <Item type="MRN_Property_Property" id="8E9DCD2E7EC74596ABBB6985D9D96A8F" action="add">
+    <related_id keyed_name="mrn_utilization_category" type="Property">AD9B04988C2B4D52B0BF230F155012FD</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Utilization Category" type="MRN_Property">DDFAC3F603C645FB872E69CF1E650DB4</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="86511D88FA404E67AAB159ECAD1D8F6B" action="add">
+    <related_id keyed_name="mrn_utilization_category_2" type="Property">ECB4ABA25B3649A1B97C36FF0EDE5B58</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Utilization Category" type="MRN_Property">DDFAC3F603C645FB872E69CF1E650DB4</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="CC3B7DC916084CD08270329CD4BB8205" action="add">
+    <related_id keyed_name="mrn_utilization_category_3" type="Property">755043BCCB404A3CB5CD3000C89285B2</related_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="Utilization Category" type="MRN_Property">DDFAC3F603C645FB872E69CF1E650DB4</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="DC9CB030A29D400B91A1468FAB3B5835" action="add">
+    <related_id keyed_name="mrn_utilization_category_4" type="Property">E2CA445E58844BFB93129233DF4DD514</related_id>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="Utilization Category" type="MRN_Property">DDFAC3F603C645FB872E69CF1E650DB4</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="F9809BB24ED548D1AA21513BC92CEE35" action="add">
+    <related_id keyed_name="mrn_utilization_category_5" type="Property">9D14E808E75A46A196B3FBB80F40D2D8</related_id>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="Utilization Category" type="MRN_Property">DDFAC3F603C645FB872E69CF1E650DB4</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="2E2C2A6622CB42EAB29B054831873AAD" action="add">
+    <related_id keyed_name="mrn_utilization_category_6" type="Property">AE64F8AC2E92473BA83623323FD841B1</related_id>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="Utilization Category" type="MRN_Property">DDFAC3F603C645FB872E69CF1E650DB4</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

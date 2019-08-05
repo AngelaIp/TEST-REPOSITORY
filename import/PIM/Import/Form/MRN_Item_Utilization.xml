@@ -1,0 +1,268 @@
+﻿<AML>
+ <Item type="Form" id="EF56AB033E2640788F20F621C283491C" action="add">
+  <category_form>0</category_form>
+  <description>String Builder Form</description>
+  <height>320</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>700</width>
+  <name>MRN_Item_Utilization</name>
+  <Relationships>
+   <Item type="Body" id="F2DF6CDA5A484738B898DE0837E7E3C9" action="add">
+    <bg_color>#ffe4b5</bg_color>
+    <css>.selectButtonDisabled { display:none !important; }</css>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Item_Utilization" type="Form">EF56AB033E2640788F20F621C283491C</source_id>
+    <Relationships>
+     <Item type="Field" id="3A439B6F96FC4BEF9C22CC7217F21882" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>button</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">OK</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="F2DF6CDA5A484738B898DE0837E7E3C9" type="Body">F2DF6CDA5A484738B898DE0837E7E3C9</source_id>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>253</y>
+      <name>button0</name>
+      <Relationships>
+       <Item type="Field Event" id="125BB883CDB94CA48437178531BE10BB" action="add">
+        <field_event>onclick</field_event>
+        <related_id keyed_name="mrn_btnUtilOK" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_btnUtilOK</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="button0" type="Field">3A439B6F96FC4BEF9C22CC7217F21882</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="C743D982B336430991690985CA308C22" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>button</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Cancel</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="F2DF6CDA5A484738B898DE0837E7E3C9" type="Body">F2DF6CDA5A484738B898DE0837E7E3C9</source_id>
+      <tab_stop>1</tab_stop>
+      <x>298</x>
+      <y>251</y>
+      <name>button1</name>
+      <Relationships>
+       <Item type="Field Event" id="568E6A8DBA334BF096DFD98543A4C8A5" action="add">
+        <field_event>onclick</field_event>
+        <related_id keyed_name="mrn_closeDialog" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_closeDialog</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="button1" type="Field">C743D982B336430991690985CA308C22</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="C24256A2068D40C9B58C26F52A0DF7FC" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Final Output</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="F2DF6CDA5A484738B898DE0837E7E3C9" type="Body">F2DF6CDA5A484738B898DE0837E7E3C9</source_id>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>350</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>190</x>
+      <y>172</y>
+      <name>mrn_utilization_category</name>
+     </Item>
+     <Item type="Field" id="4067295BB29D49D59198D2D86EEE6C41" action="add">
+      <border_width>0</border_width>
+      <display_length>150</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Rated Operational Current Ie</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="F2DF6CDA5A484738B898DE0837E7E3C9" type="Body">F2DF6CDA5A484738B898DE0837E7E3C9</source_id>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>85</y>
+      <name>mrn_utilization_ie</name>
+      <Relationships>
+       <Item type="Field Event" id="117A249BE258485CAF1BBDFB2F02C29B" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_utilization_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_utilization_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="mrn_utilization_ie" type="Field">4067295BB29D49D59198D2D86EEE6C41</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="964926A4F0B14B0BA0BACBBA01920E87" action="add">
+      <border_width>0</border_width>
+      <display_length>150</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Number of Poles in Series</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="F2DF6CDA5A484738B898DE0837E7E3C9" type="Body">F2DF6CDA5A484738B898DE0837E7E3C9</source_id>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>120</y>
+      <name>mrn_utilization_poles</name>
+      <Relationships>
+       <Item type="Field Event" id="EBA4D09C40A449E597B1512933827376" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_utilization_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_utilization_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="mrn_utilization_poles" type="Field">964926A4F0B14B0BA0BACBBA01920E87</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="DB8226D90E5E45F38154041FA9C49141" action="add">
+      <border_width>0</border_width>
+      <display_length>150</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Rated Operational Voltage Ue</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="F2DF6CDA5A484738B898DE0837E7E3C9" type="Body">F2DF6CDA5A484738B898DE0837E7E3C9</source_id>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>44</y>
+      <name>mrn_utilization_ue</name>
+      <Relationships>
+       <Item type="Field Event" id="0A11834AC5624C03919C74B5E773F1BE" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_utilization_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_utilization_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="mrn_utilization_ue" type="Field">DB8226D90E5E45F38154041FA9C49141</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="C0646E8C27CD4DB1B88C79304FA26E25" action="add">
+      <border_width>0</border_width>
+      <display_length>150</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Utilization Category</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="F2DF6CDA5A484738B898DE0837E7E3C9" type="Body">F2DF6CDA5A484738B898DE0837E7E3C9</source_id>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>8</y>
+      <name>mrn_utilization_values</name>
+      <Relationships>
+       <Item type="Field Event" id="F723F9A396EF465888E6CDC291028D2A" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="mrn_build_utilization_string" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>mrn_build_utilization_string</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="mrn_utilization_values" type="Field">C0646E8C27CD4DB1B88C79304FA26E25</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="4B5B4D412F57415C97EC7B719FE492AC" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>label</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Utilization Category Builder</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="F2DF6CDA5A484738B898DE0837E7E3C9" type="Body">F2DF6CDA5A484738B898DE0837E7E3C9</source_id>
+      <tab_stop>1</tab_stop>
+      <x>3</x>
+      <y>3</y>
+      <name>text0</name>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="Form Event" id="1FD57DACE6DE43E7AE384107E0A8D43E" action="add">
+    <form_event>onload</form_event>
+    <related_id keyed_name="mrn_loadUtilDDs" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>mrn_loadUtilDDs</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Item_Utilization" type="Form">EF56AB033E2640788F20F621C283491C</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

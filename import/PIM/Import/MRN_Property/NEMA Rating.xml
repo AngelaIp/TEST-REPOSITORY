@@ -1,0 +1,17 @@
+﻿<AML>
+ <Item type="MRN_Property" id="D881EB4734B74C89953B690EB7506A40" action="add">
+  <mrn_copy>0</mrn_copy>
+  <mrn_etim>0</mrn_etim>
+  <mrn_etim_range_property>0</mrn_etim_range_property>
+  <mrn_export_attribute>1</mrn_export_attribute>
+  <mrn_extract_labels>0</mrn_extract_labels>
+  <mrn_fake_ml_property>0</mrn_fake_ml_property>
+  <mrn_families>Low-Voltage Switches</mrn_families>
+  <mrn_form_element />
+  <mrn_is_group>0</mrn_is_group>
+  <mrn_is_multi_value>0</mrn_is_multi_value>
+  <mrn_item_property keyed_name="mrn_nema_rating" type="Property">64BD59C6F71740D0B06332042E564C92</mrn_item_property>
+  <mrn_level>Level 6 - Product</mrn_level>
+  <mrn_label>NEMA Rating</mrn_label>
+ </Item>
+</AML>

@@ -1,0 +1,38 @@
+﻿<AML>
+ <Item type="List" id="B156583F7B2241829DE672B1A04DEA15" action="add">
+  <description>Basic Impulse Level</description>
+  <name>MRN_BIL</name>
+  <Relationships>
+   <Item type="Value" id="C30B842085C64094BE7D8D54E62126FD" action="add">
+    <label xml:lang="en">60</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_BIL" type="List">B156583F7B2241829DE672B1A04DEA15</source_id>
+    <value>60</value>
+   </Item>
+   <Item type="Value" id="BDE72BADA5A940A39028FC0D7D0C03FA" action="add">
+    <label xml:lang="en">95</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_BIL" type="List">B156583F7B2241829DE672B1A04DEA15</source_id>
+    <value>95</value>
+   </Item>
+   <Item type="Value" id="E3577CD2DD2440B2A2E63A2F9013E780" action="add">
+    <label xml:lang="en">110</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_BIL" type="List">B156583F7B2241829DE672B1A04DEA15</source_id>
+    <value>110</value>
+   </Item>
+   <Item type="Value" id="B42A143BF0014E7594A408B8163870D7" action="add">
+    <label xml:lang="en">150</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_BIL" type="List">B156583F7B2241829DE672B1A04DEA15</source_id>
+    <value>150</value>
+   </Item>
+   <Item type="Value" id="A5BBBF160705456AB52922CC9EBF25D0" action="add">
+    <label xml:lang="en">200</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_BIL" type="List">B156583F7B2241829DE672B1A04DEA15</source_id>
+    <value>200</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,620 @@
+﻿<AML>
+ <Item type="List" id="30D8AC82FAF64283B8ACE74659FFF3AD" action="add">
+  <description>Fuse Sizes</description>
+  <name>MRN_Fuse_Sizes</name>
+  <Relationships>
+   <Item type="Value" id="6B90C0E472014A2FAB97C664D74CF962" action="add">
+    <label xml:lang="en">000</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>000</value>
+   </Item>
+   <Item type="Value" id="E87EEC7B483E4CB4AAC54DDB2160F8CD" action="add">
+    <label xml:lang="en">NH000</label>
+    <sort_order>129</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>NH000</value>
+   </Item>
+   <Item type="Value" id="7B29EA343FC94D49BBC744457ED481C4" action="add">
+    <label xml:lang="en">00</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>00</value>
+   </Item>
+   <Item type="Value" id="7B5231A17414408188FA1AC54DDAF3A6" action="add">
+    <label xml:lang="en">NH00</label>
+    <sort_order>257</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>NH00</value>
+   </Item>
+   <Item type="Value" id="A391DCB68DDB4CD58D4B5CA22F0FE7D6" action="add">
+    <label xml:lang="en">0</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>0</value>
+   </Item>
+   <Item type="Value" id="D6ECBA4302784BB4AACAC621A3E620FC" action="add">
+    <label xml:lang="en">NH0</label>
+    <sort_order>385</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>NH0</value>
+   </Item>
+   <Item type="Value" id="29BC964A537140B3AB28B53E9E44B67A" action="add">
+    <label xml:lang="en">1</label>
+    <sort_order>511</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>1</value>
+   </Item>
+   <Item type="Value" id="0070CB648B1044ABA7F2B0C2DF49FD32" action="add">
+    <label xml:lang="en">NH1</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>NH1</value>
+   </Item>
+   <Item type="Value" id="7CD62DFEFCEE49E1A6D5C40E482D80D9" action="add">
+    <label xml:lang="en">2</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2</value>
+   </Item>
+   <Item type="Value" id="100EB5F0DDB34CDB827CBAAD345A4A0F" action="add">
+    <label xml:lang="en">NH2</label>
+    <sort_order>641</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>NH2</value>
+   </Item>
+   <Item type="Value" id="0804E3ECD6984169B2D5ADCF042DEB1C" action="add">
+    <label xml:lang="en">3</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>3</value>
+   </Item>
+   <Item type="Value" id="7249F1E04CD64E578521EE3A9973DE34" action="add">
+    <label xml:lang="en">NH3</label>
+    <sort_order>769</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>NH3</value>
+   </Item>
+   <Item type="Value" id="A2262465670C42D48E0C75DCE5E34E5A" action="add">
+    <label xml:lang="en">4</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>4</value>
+   </Item>
+   <Item type="Value" id="DB46F193DC1A41C3B7AA554BFCDB5B61" action="add">
+    <label xml:lang="en">NH4</label>
+    <sort_order>897</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>NH4</value>
+   </Item>
+   <Item type="Value" id="A252824335BA4F5792343CD584963487" action="add">
+    <label xml:lang="en">4a</label>
+    <sort_order>1023</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>4a</value>
+   </Item>
+   <Item type="Value" id="81FBC9CF7E6C4227A2D0D1330E8C67CC" action="add">
+    <label xml:lang="en">NH4a</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>NH4a</value>
+   </Item>
+   <Item type="Value" id="94C0C021CC1C4C4F8A9C7C980171FA70" action="add">
+    <label xml:lang="en">DI</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>DI</value>
+   </Item>
+   <Item type="Value" id="885E305BFF184774B900955A48DB5373" action="add">
+    <label xml:lang="en">DII</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>DII</value>
+   </Item>
+   <Item type="Value" id="166BDE88615844BD9C57E28FF906BE42" action="add">
+    <label xml:lang="en">DIII</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>DIII</value>
+   </Item>
+   <Item type="Value" id="19EBDF35C81940E6A010CC3ED573C561" action="add">
+    <label xml:lang="en">DIV</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>DIV</value>
+   </Item>
+   <Item type="Value" id="202190FC4B4D4FCEABA1162B6CFC190E" action="add">
+    <label xml:lang="en">DV</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>DV</value>
+   </Item>
+   <Item type="Value" id="9A7CB906D15740DAAD8EA0D415F1FE9B" action="add">
+    <label xml:lang="en">NDZ</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>NDZ</value>
+   </Item>
+   <Item type="Value" id="05DFA96C377245D38DD69E063018D0CD" action="add">
+    <label xml:lang="en">D01</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>D01</value>
+   </Item>
+   <Item type="Value" id="D48D71978E924E59B62CB6BF86EB4F12" action="add">
+    <label xml:lang="en">D02</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>D02</value>
+   </Item>
+   <Item type="Value" id="15E9730091B54C8E9A7FDF6EADD530DC" action="add">
+    <label xml:lang="en">D03</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>D03</value>
+   </Item>
+   <Item type="Value" id="FD77F65DA3764A8E90FEFC40333AEFE1" action="add">
+    <label xml:lang="en">1XL</label>
+    <sort_order>2200</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>1XL</value>
+   </Item>
+   <Item type="Value" id="412751160BC445AC94E984E55CBE9051" action="add">
+    <label xml:lang="en">2XL</label>
+    <sort_order>2220</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2XL</value>
+   </Item>
+   <Item type="Value" id="956E146A559C4100A5827176FC7E8636" action="add">
+    <label xml:lang="en">3L</label>
+    <sort_order>2240</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>3L</value>
+   </Item>
+   <Item type="Value" id="7724925BBEEA474B9592A36016C2C91D" action="add">
+    <label xml:lang="en">5x20</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>5x20</value>
+   </Item>
+   <Item type="Value" id="7D85E453FC8243CE98A9EE61CFE02D46" action="add">
+    <label xml:lang="en">5x25</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>5x25</value>
+   </Item>
+   <Item type="Value" id="1AD4A1BC3104439D96E644930003CB84" action="add">
+    <label xml:lang="en">5x30</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>5x30</value>
+   </Item>
+   <Item type="Value" id="38ACA111506F49D4A9E5A9A29599F117" action="add">
+    <label xml:lang="en">6.3x32</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>6.3x32</value>
+   </Item>
+   <Item type="Value" id="2139E257CC5B41468930984B7A4E5835" action="add">
+    <label xml:lang="en">6.35x32</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>6.35x32</value>
+   </Item>
+   <Item type="Value" id="9DF6D617E69B4DBD9B76177A70EE7EED" action="add">
+    <label xml:lang="en">8x31</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>8x31</value>
+   </Item>
+   <Item type="Value" id="CC94C3D0991244B9B5C5A3D150272C99" action="add">
+    <label xml:lang="en">8.5x23</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>8.5x23</value>
+   </Item>
+   <Item type="Value" id="3B8CF5B301604D1DA2938F71075D22B9" action="add">
+    <label xml:lang="en">8.5x31.5</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>8.5x31.5</value>
+   </Item>
+   <Item type="Value" id="478C3B5591E74EFD9C1992E16213CDA5" action="add">
+    <label xml:lang="en">8x32</label>
+    <sort_order>3250</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>8x32</value>
+   </Item>
+   <Item type="Value" id="D4ACEFC5E9A84F1E94FFA1EA99C65369" action="add">
+    <label xml:lang="en">8x40</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>8x40</value>
+   </Item>
+   <Item type="Value" id="57EF8EBF04CB46BAB10CEBDBCB1F1BDA" action="add">
+    <label xml:lang="en">10x28</label>
+    <sort_order>3440</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>10x28</value>
+   </Item>
+   <Item type="Value" id="B2B9A3033EF943108DAD3EA36888B655" action="add">
+    <label xml:lang="en">10x38</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>10x38</value>
+   </Item>
+   <Item type="Value" id="F7F578FB79364587B6FEE3D3551E6D90" action="add">
+    <label xml:lang="en">10x85</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>10x85</value>
+   </Item>
+   <Item type="Value" id="7AA96ADC9A2C46038318F500B049F1AA" action="add">
+    <label xml:lang="en">11x79</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>11x79</value>
+   </Item>
+   <Item type="Value" id="517FE550F0EC40CD879C385925C6D3C5" action="add">
+    <label xml:lang="en">14x51</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>14x51</value>
+   </Item>
+   <Item type="Value" id="C536FB01C6034BA6803879E59BCB5F52" action="add">
+    <label xml:lang="en">17x27</label>
+    <sort_order>3845</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>17x27</value>
+   </Item>
+   <Item type="Value" id="7938640CEFDD445DADDD658B67CB21F2" action="add">
+    <label xml:lang="en">17x49</label>
+    <sort_order>3856</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>17x49</value>
+   </Item>
+   <Item type="Value" id="94E1758E2CD24610B7FB83D169A2049B" action="add">
+    <label xml:lang="en">2x17x49</label>
+    <sort_order>3857</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2x17x49</value>
+   </Item>
+   <Item type="Value" id="39CE60C211F647CB8C2286A7394F30CA" action="add">
+    <label xml:lang="en">17.5x63.5</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>17.5x63.5</value>
+   </Item>
+   <Item type="Value" id="6BEFAE3FC2A145929F464177A6C3986B" action="add">
+    <label xml:lang="en">20x127</label>
+    <sort_order>4000</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>20x127</value>
+   </Item>
+   <Item type="Value" id="836B382B9E4A4BF08A44B08A98CF295F" action="add">
+    <label xml:lang="en">20x190</label>
+    <sort_order>4010</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>20x190</value>
+   </Item>
+   <Item type="Value" id="503057923E73448CB9DAB8FE257CBA89" action="add">
+    <label xml:lang="en">22x58</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>22x58</value>
+   </Item>
+   <Item type="Value" id="BAB9E086DE8D4EECA8783A076CBA5CD4" action="add">
+    <label xml:lang="en">27x60</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>27x60</value>
+   </Item>
+   <Item type="Value" id="8D4A84D784574510822856006EE8BDAC" action="add">
+    <label xml:lang="en">32x58</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>32x58</value>
+   </Item>
+   <Item type="Value" id="1C2802F3BAE04F6C98E68BBAE0744BC7" action="add">
+    <label xml:lang="en">36x55</label>
+    <sort_order>4500</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>36x55</value>
+   </Item>
+   <Item type="Value" id="A6E7FA17B9584BB4A12CB36E1616A3D4" action="add">
+    <label xml:lang="en">36x127</label>
+    <sort_order>4600</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>36x127</value>
+   </Item>
+   <Item type="Value" id="953872F05AD44386993B6FDF2FB3DD75" action="add">
+    <label xml:lang="en">36x190</label>
+    <sort_order>4700</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>36x190</value>
+   </Item>
+   <Item type="Value" id="1560D476EA1A45228C10EF7A9248B639" action="add">
+    <label xml:lang="en">36x250</label>
+    <sort_order>4800</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>36x250</value>
+   </Item>
+   <Item type="Value" id="9A433083A96D47128AEF46F50E0807A6" action="add">
+    <label xml:lang="en">36x400</label>
+    <sort_order>4900</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>36x400</value>
+   </Item>
+   <Item type="Value" id="50C0AF45DFF3473BAF6D5B56957222E5" action="add">
+    <label xml:lang="en">30</label>
+    <sort_order>5000</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>30</value>
+   </Item>
+   <Item type="Value" id="9DB99E6670ED48569B2305EE2BED1D02" action="add">
+    <label xml:lang="en">31</label>
+    <sort_order>5020</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>31</value>
+   </Item>
+   <Item type="Value" id="14F3555CB99B4FDAA1B7621828AA7DE1" action="add">
+    <label xml:lang="en">32</label>
+    <sort_order>5040</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>32</value>
+   </Item>
+   <Item type="Value" id="8E2F35A028964F83B95157B8A6B24ACA" action="add">
+    <label xml:lang="en">2x32</label>
+    <sort_order>5050</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2x32</value>
+   </Item>
+   <Item type="Value" id="03C46967AD1A4C3EB04E9E74734F04ED" action="add">
+    <label xml:lang="en">33</label>
+    <sort_order>5060</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>33</value>
+   </Item>
+   <Item type="Value" id="FAB9042844AC44528E0028FA4F13FE55" action="add">
+    <label xml:lang="en">2x33</label>
+    <sort_order>5070</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2x33</value>
+   </Item>
+   <Item type="Value" id="53D5743C003146748C44D01DC6A1C702" action="add">
+    <label xml:lang="en">44</label>
+    <sort_order>5080</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>44</value>
+   </Item>
+   <Item type="Value" id="CCBE52F0F0A94EA091AC1D322BF453FF" action="add">
+    <label xml:lang="en">70</label>
+    <sort_order>5100</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>70</value>
+   </Item>
+   <Item type="Value" id="4CF9380E7ECC461B91E46C2F404E9BD1" action="add">
+    <label xml:lang="en">71</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>71</value>
+   </Item>
+   <Item type="Value" id="85DCD5BA0D574FD693D73AF910E36039" action="add">
+    <label xml:lang="en">72</label>
+    <sort_order>5140</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>72</value>
+   </Item>
+   <Item type="Value" id="45C70853C02C4717AFC2801638ECCF60" action="add">
+    <label xml:lang="en">2x72</label>
+    <sort_order>5150</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2x72</value>
+   </Item>
+   <Item type="Value" id="C67C90AF56FC4591BE45BB74E12730D1" action="add">
+    <label xml:lang="en">73</label>
+    <sort_order>5160</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>73</value>
+   </Item>
+   <Item type="Value" id="6F88EFD0A1284992B9698BE6394DA30A" action="add">
+    <label xml:lang="en">91</label>
+    <sort_order>5180</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>91</value>
+   </Item>
+   <Item type="Value" id="DDDBFA5596D84C44A1B3173C549718DB" action="add">
+    <label xml:lang="en">93</label>
+    <sort_order>5200</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>93</value>
+   </Item>
+   <Item type="Value" id="06B9BB9874AC428DBF4FA94B0459132E" action="add">
+    <label xml:lang="en">120</label>
+    <sort_order>5400</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>120</value>
+   </Item>
+   <Item type="Value" id="D1331F88132743F28AEFE8DF4C645D59" action="add">
+    <label xml:lang="en">121</label>
+    <sort_order>5420</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>121</value>
+   </Item>
+   <Item type="Value" id="A9563D9DDD354336AA8C4A1DF7E1FEBE" action="add">
+    <label xml:lang="en">122</label>
+    <sort_order>5440</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>122</value>
+   </Item>
+   <Item type="Value" id="78A11BD573C5455B8455E430B8CD8801" action="add">
+    <label xml:lang="en">2x122</label>
+    <sort_order>5450</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2x122</value>
+   </Item>
+   <Item type="Value" id="D1942EE5D80B4377ABA2F8407F424950" action="add">
+    <label xml:lang="en">123</label>
+    <sort_order>5460</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>123</value>
+   </Item>
+   <Item type="Value" id="2EB4D7E0D49B4287AD65C902C330E5B6" action="add">
+    <label xml:lang="en">2x123</label>
+    <sort_order>5470</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2x123</value>
+   </Item>
+   <Item type="Value" id="9C9F9A2AB727427898DDE6A8FAB72BCB" action="add">
+    <label xml:lang="en">300</label>
+    <sort_order>5600</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>300</value>
+   </Item>
+   <Item type="Value" id="EE4370C53B234ABB86C7A3FC66C1A688" action="add">
+    <label xml:lang="en">302</label>
+    <sort_order>5660</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>302</value>
+   </Item>
+   <Item type="Value" id="F8E8833C06A84EFEAA1980AE63DEC679" action="add">
+    <label xml:lang="en">2x302</label>
+    <sort_order>5670</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2x302</value>
+   </Item>
+   <Item type="Value" id="CD98539E4DAF4870AE90673190096C53" action="add">
+    <label xml:lang="en">600</label>
+    <sort_order>5800</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>600</value>
+   </Item>
+   <Item type="Value" id="31AB633B5643415B8EA62B1DDDB280EC" action="add">
+    <label xml:lang="en">602</label>
+    <sort_order>5900</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>602</value>
+   </Item>
+   <Item type="Value" id="61E91D9886904EDEAB8F62CF1228CC53" action="add">
+    <label xml:lang="en">2x602</label>
+    <sort_order>5910</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>2x602</value>
+   </Item>
+   <Item type="Value" id="44668032940342EE8A3238C6131AC3C6" action="add">
+    <label xml:lang="en">d=56mm, L=192mm</label>
+    <sort_order>6000</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=56mm, L=192mm</value>
+   </Item>
+   <Item type="Value" id="AB566D0FDD534DE5BEBFF04E51F589F4" action="add">
+    <label xml:lang="en">d=56mm, L=292mm</label>
+    <sort_order>6100</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=56mm, L=292mm</value>
+   </Item>
+   <Item type="Value" id="D7F1EB28FB9B44A792936D199B1A7295" action="add">
+    <label xml:lang="en">d=56mm, L=367mm</label>
+    <sort_order>6200</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=56mm, L=367mm</value>
+   </Item>
+   <Item type="Value" id="6E1B1337CB5448F1BA6A872FA35E3D3F" action="add">
+    <label xml:lang="en">d=56mm, L=442mm</label>
+    <sort_order>6300</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=56mm, L=442mm</value>
+   </Item>
+   <Item type="Value" id="7AD3B277A8764D59931E9A5E39109842" action="add">
+    <label xml:lang="en">d=56mm, L=537mm</label>
+    <sort_order>6400</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=56mm, L=537mm</value>
+   </Item>
+   <Item type="Value" id="2B394EBCC15D41E7B0D02BA2BBDDF985" action="add">
+    <label xml:lang="en">d=63mm, L=292mm</label>
+    <sort_order>6500</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=63mm, L=292mm</value>
+   </Item>
+   <Item type="Value" id="971082F4855D4296BDA4A41E2EACC7D2" action="add">
+    <label xml:lang="en">d=63mm, L=442mm</label>
+    <sort_order>6600</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=63mm, L=442mm</value>
+   </Item>
+   <Item type="Value" id="0A2B68BDA2764A6F962E2D47802582F3" action="add">
+    <label xml:lang="en">d=65mm, L=192mm</label>
+    <sort_order>6700</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=65mm, L=192mm</value>
+   </Item>
+   <Item type="Value" id="FAFAFE271A1846EC9046BD940EB6D45F" action="add">
+    <label xml:lang="en">d=65mm, L=292mm</label>
+    <sort_order>6800</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=65mm, L=292mm</value>
+   </Item>
+   <Item type="Value" id="C20BA446E1F14951877789C715B65A74" action="add">
+    <label xml:lang="en">d=65mm, L=367mm</label>
+    <sort_order>6900</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=65mm, L=367mm</value>
+   </Item>
+   <Item type="Value" id="BC155A79F4354F329D33CD92D37B37B5" action="add">
+    <label xml:lang="en">d=65mm, L=442mm</label>
+    <sort_order>7000</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=65mm, L=442mm</value>
+   </Item>
+   <Item type="Value" id="A5F3ECEEBB344A988CED1BA2DD73448A" action="add">
+    <label xml:lang="en">d=78mm, L=292mm</label>
+    <sort_order>7100</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=78mm, L=292mm</value>
+   </Item>
+   <Item type="Value" id="C5B0892457B64163A7827DCC69E158D2" action="add">
+    <label xml:lang="en">d=78mm, L=367mm</label>
+    <sort_order>7200</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=78mm, L=367mm</value>
+   </Item>
+   <Item type="Value" id="8FD39E32C55D48C4A1B8B27C84E1F510" action="add">
+    <label xml:lang="en">d=78mm, L=442mm</label>
+    <sort_order>7300</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=78mm, L=442mm</value>
+   </Item>
+   <Item type="Value" id="ABF7E190A6274EA0A59C34A25A98D2D0" action="add">
+    <label xml:lang="en">d=88mm, L=192mm</label>
+    <sort_order>7400</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=88mm, L=192mm</value>
+   </Item>
+   <Item type="Value" id="2C8C12D84D454D67BCF769555356EAFE" action="add">
+    <label xml:lang="en">d=88mm, L=292mm</label>
+    <sort_order>7500</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=88mm, L=292mm</value>
+   </Item>
+   <Item type="Value" id="848CF1C9C7E84852B7DDBBD11F9A4E75" action="add">
+    <label xml:lang="en">d=88mm, L=367mm</label>
+    <sort_order>7600</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=88mm, L=367mm</value>
+   </Item>
+   <Item type="Value" id="83DDFA873AFC4AC6A1EB26E075259D8B" action="add">
+    <label xml:lang="en">d=88mm, L=442mm</label>
+    <sort_order>7700</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=88mm, L=442mm</value>
+   </Item>
+   <Item type="Value" id="47B38D4CA5B947A59690A19792192BF1" action="add">
+    <label xml:lang="en">d=88mm, L=537mm</label>
+    <sort_order>7800</sort_order>
+    <source_id keyed_name="MRN_Fuse_Sizes" type="List">30D8AC82FAF64283B8ACE74659FFF3AD</source_id>
+    <value>d=88mm, L=537mm</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

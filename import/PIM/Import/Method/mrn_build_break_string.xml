@@ -1,0 +1,62 @@
+﻿<AML>
+ <Item type="Method" id="8592D5DD636F4AEFBE069153C94E0632" action="add">
+  <comments>build the string from the mrn_item_breaking form</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//Get the dropdown values before change
+var ampere_id = getFieldComponentByName("MRN_Ampere_Units").getValue();
+var voltage_id = getFieldComponentByName("MRN_Voltage_Units").getValue();
+var time_id = getFieldComponentByName("MRN_Time_Units").getValue();
+var val1 = document.all.VALUE1.value;
+var val2 = document.all.VALUE2.value;
+var val3 = document.all.VALUE3.value;
+var cnst1 = document.all.CONST1.value;
+var cnst2 = document.all.CONST2.value;
+
+var val4;
+var cnst3;
+var i2t_id;
+
+if(getFieldComponentByName("MRN_I2t_Units") != null)
+{
+    val4 = document.all.VALUE4.value;
+    cnst3 = document.all.CONST3.value;
+    i2t_id = getFieldComponentByName("MRN_I2t_Units").getValue();
+}
+
+//Identify which dropdown triggered the change
+if (this.name === "MRN_Ampere_Units")
+    ampere_id = getFieldComponentByName(srcElement.name).getValue();
+else
+    if (this.name === "MRN_Voltage_Units")
+        voltage_id = getFieldComponentByName(srcElement.name).getValue();
+    else
+        if (this.name === "MRN_Time_Units")
+            time_id = getFieldComponentByName(srcElement.name).getValue();
+        else
+            if (this.name === "MRN_I2t_Units")
+                i2t_id = getFieldComponentByName(srcElement.name).getValue();
+            else
+                if (this.name === "VALUE1")
+                    val1 = this.value;
+                else
+                    if (this.name === "VALUE2")
+                        val2 = this.value;
+                    else
+                        if (this.name === "VALUE3")
+                            val3 = this.value;
+                            if (this.name === "VALUE4")
+                                val4 = this.value;
+
+var newString;                                
+if(getFieldComponentByName("MRN_I2t_Units") != null)
+    newString = val1 + " " + i2t_id + cnst1 + val2 + " " + voltage_id + cnst2 + val3 + " " + time_id + cnst3 + val4 + " " + ampere_id
+else
+    newString = val1 + " " + ampere_id + cnst1 + val2 + " " + voltage_id + cnst2 + val3 + " " + time_id
+// top.aras.AlertSuccess(newString);
+ 
+document.all.MRN_OUTPUT.value = newString;
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_build_break_string</name>
+ </Item>
+</AML>

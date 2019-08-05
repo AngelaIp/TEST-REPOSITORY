@@ -1,0 +1,32 @@
+﻿<AML>
+ <Item type="List" id="0A805D02734A4BBFB7BDAFF6F0A8CE4F" action="add">
+  <description>Measure Frequency Units</description>
+  <name>MRN_Frequency_uom</name>
+  <Relationships>
+   <Item type="Value" id="BB4ECDD8757048D2ABF5952E91823FAB" action="add">
+    <label xml:lang="en">Hz</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Frequency_uom" type="List">0A805D02734A4BBFB7BDAFF6F0A8CE4F</source_id>
+    <value>Hz</value>
+   </Item>
+   <Item type="Value" id="36D0E5A50A2C4883B055825B4204F9DF" action="add">
+    <label xml:lang="en">kHz</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Frequency_uom" type="List">0A805D02734A4BBFB7BDAFF6F0A8CE4F</source_id>
+    <value>kHz</value>
+   </Item>
+   <Item type="Value" id="B46F4D4B75154675BE6C6088F77126F1" action="add">
+    <label xml:lang="en">MHz</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Frequency_uom" type="List">0A805D02734A4BBFB7BDAFF6F0A8CE4F</source_id>
+    <value>MHz</value>
+   </Item>
+   <Item type="Value" id="D4DE31DC30C8451C84E93B996846C34F" action="add">
+    <label xml:lang="en">GHz</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Frequency_uom" type="List">0A805D02734A4BBFB7BDAFF6F0A8CE4F</source_id>
+    <value>GHz</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

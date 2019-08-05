@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="User" id="89A032410CEE40DABB53902589370B91" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>matthew.andrews@us.mersen.com</email>
+  <last_login_date>2018-03-19T10:50:14</last_login_date>
+  <login_name>mandrews</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Matt Andrews" type="Identity">472478D6991447B89242BF9030C6F0ED</owned_by_id>
+  <first_name>Matt</first_name>
+  <last_name>Andrews</last_name>
+  <Relationships>
+   <Item type="Alias" id="96BF4AF8E6B9439BA8727D5703317EAE" action="add">
+    <from_date>2017-01-12T06:19:51</from_date>
+    <related_id keyed_name="Matt Andrews" type="Identity">472478D6991447B89242BF9030C6F0ED</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Matt Andrews" type="User">89A032410CEE40DABB53902589370B91</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

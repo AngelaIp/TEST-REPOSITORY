@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="List" id="A28A5BE627A24E4F939EC80A0E5DF992" action="add">
+  <description>AC or DC</description>
+  <name>MRN_AC_DC</name>
+  <Relationships>
+   <Item type="Value" id="FD3C4452A1B947D7BF903BE49F6DA54C" action="add">
+    <label xml:lang="en">AC</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_AC_DC" type="List">A28A5BE627A24E4F939EC80A0E5DF992</source_id>
+    <value>AC</value>
+   </Item>
+   <Item type="Value" id="B5CF977FD3644840A3548E8499017897" action="add">
+    <label xml:lang="en">DC</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_AC_DC" type="List">A28A5BE627A24E4F939EC80A0E5DF992</source_id>
+    <value>DC</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,520 @@
+﻿<AML>
+ <Item type="Form" id="829A122CB59F444B8125FD4F9E109E9E" action="add">
+  <category_form>0</category_form>
+  <height>700</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>1100</width>
+  <name>MRN_Item</name>
+  <Relationships>
+   <Item type="Body" id="14FDD3173B614576B4C4FD4013C6A704" action="add">
+    <bg_color>#dbd5d5</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Item" type="Form">829A122CB59F444B8125FD4F9E109E9E</source_id>
+    <Relationships>
+     <Item type="Field" id="D2342633712244189554C84C43C3BA6B" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>class structure</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>10pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>15872</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>128</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>490</x>
+      <y>90</y>
+      <name>classification</name>
+     </Item>
+     <Item type="Field" id="3B7AC89D8DAF4A97988C1AAC4076E5E4" action="add">
+      <border_width>2</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<div style="width:700px; height:100px"></div>
+
+
+]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Product Classification</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>14848</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_stop>1</tab_stop>
+      <x>400</x>
+      <y>20</y>
+      <z_index>-1</z_index>
+      <name>HTML_Box_Classification</name>
+     </Item>
+     <Item type="Field" id="440222CFA2E6439D92B5176ABE2FE8F8" action="add">
+      <border_width>2</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<div style="width:700px; height:130px"></div>
+]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Family/Group</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>15360</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_stop>1</tab_stop>
+      <x>197</x>
+      <y>119</y>
+      <z_index>-1</z_index>
+      <name>HTML_Box_Family</name>
+     </Item>
+     <Item type="Field" id="945D04C853D94940BD348B1461FEAE1D" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>12pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">MRN Item</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>16000</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_stop>1</tab_stop>
+      <x>0</x>
+      <y>10</y>
+      <name>HTML_Item_Name</name>
+     </Item>
+     <Item type="Field" id="4AE092B1D44E4F39A580DDFBA97266DD" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>16pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Choose Segmentation Level:</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>16896</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_stop>1</tab_stop>
+      <x>176</x>
+      <y>82</y>
+      <name>HTML_Label_Level</name>
+     </Item>
+     <Item type="Field" id="D019ED70E9DD48ED8CABE9F4C9E68510" action="add">
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <html_code><![CDATA[<span id='ITEM_INFO_INTERNAL_SPAN'/>
+<script>
+  populate_ITEM_INFO_INTERNAL_SPAN = function()
+  {
+    document.getElementById('ITEM_INFO_INTERNAL_SPAN').innerHTML = aras.uiGetItemInfoTable(document.itemType);
+  }
+  window.addEventListener('load', populate_ITEM_INFO_INTERNAL_SPAN);
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>14720</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_stop>0</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>item_info</name>
+     </Item>
+     <Item type="Field" id="7F2BCAB5D9A34CB6821ACE160422B754" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Brand Name</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_brand_name" type="Property">C6BF07B6B1524CB398598E6AD962BF7F</propertytype_id>
+      <sort_order>16128</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>3072</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>200</x>
+      <y>140</y>
+      <name>mrn_brand_name</name>
+     </Item>
+     <Item type="Field" id="4D525B8A549345C793608ECE0DA7D707" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">D Code - Level 1</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_d_code_level_1" type="Property">41C883A2C84C46FA8A8AF5C671DA44F6</propertytype_id>
+      <sort_order>16768</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>3712</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>650</x>
+      <y>220</y>
+      <name>mrn_d_code_level_1</name>
+     </Item>
+     <Item type="Field" id="DB035BE362C14CAC903CDC1EF0162F24" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">ECCN</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_eccn" type="Property">6DD8C0D71D0240A0B0DD0F03A409870D</propertytype_id>
+      <sort_order>16256</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>9344</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>350</x>
+      <y>140</y>
+      <name>mrn_eccn</name>
+     </Item>
+     <Item type="Field" id="5B94B50149BC4CF386286FB3921E4ABE" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Frame/Gamme</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_frame" type="Property">0450FD0A85064F05984EE634119BFB36</propertytype_id>
+      <sort_order>15232</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>17664</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>400</x>
+      <y>70</y>
+      <z_index>10</z_index>
+      <name>mrn_frame</name>
+     </Item>
+     <Item type="Field" id="E5E8F89C73514C5684C730AEDC8ADD40" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">MSL</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_parent_msl" type="Property">BC895067CD9C4677BA21BA186B6C1224</propertytype_id>
+      <sort_order>15104</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>17536</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>200</x>
+      <y>69</y>
+      <z_index>10</z_index>
+      <name>mrn_msl</name>
+     </Item>
+     <Item type="Field" id="56C9DA28ED9E4BD79047AB81C0666259" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Product Family</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_family" type="Property">396501CFADB345F584C306C443B1A0BA</propertytype_id>
+      <sort_order>1152</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>4096</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>200</x>
+      <y>20</y>
+      <name>mrn_product_family</name>
+     </Item>
+     <Item type="Field" id="57B5C749EAB44D3E9A2275CF0F5435AB" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Product Group</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_group" type="Property">3239D3CD582C45CA81A79375D3D7F34E</propertytype_id>
+      <sort_order>1280</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>4224</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>400</x>
+      <y>20</y>
+      <z_index>10</z_index>
+      <name>mrn_product_group</name>
+     </Item>
+     <Item type="Field" id="060E7C5CA481450591DED247E81AA860" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Product Manager</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_manager" type="Property">2C8E50B9C9EE4C2EA547E56B6D8A25AE</propertytype_id>
+      <sort_order>9984</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>12928</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>600</x>
+      <y>70</y>
+      <z_index>10</z_index>
+      <name>mrn_product_manager</name>
+     </Item>
+     <Item type="Field" id="638D18018BB8455095316EB29D267B67" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Product Type</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_type" type="Property">B141CC161D764FFA99E6A3AD73432A95</propertytype_id>
+      <sort_order>1408</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>4352</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>600</x>
+      <y>20</y>
+      <z_index>10</z_index>
+      <name>mrn_product_type</name>
+     </Item>
+     <Item type="Field" id="F55CDBAE0BFE44EB9399A872C4584305" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>checkbox</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">REACH Compliant</label>
+      <label_position>left</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_reach_compliant" type="Property">7994B3D09C6247C7B20D91619861D199</propertytype_id>
+      <sort_order>4608</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>7552</tab_index>
+      <tab_stop>1</tab_stop>
+      <text_align>left</text_align>
+      <x>769</x>
+      <y>230</y>
+      <z_index>10</z_index>
+      <name>mrn_reach_compliant</name>
+     </Item>
+     <Item type="Field" id="47E2DBEE5096498F97E890B4BA90845A" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">SG Code D (Level 1)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_sg_code_d_level_1" type="Property">6A865EA146284E65A69CBB61E05D7B1E</propertytype_id>
+      <sort_order>16384</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>3712</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>199</x>
+      <y>220</y>
+      <name>mrn_sg_code_d_level_1</name>
+     </Item>
+     <Item type="Field" id="B9B11522B4484688A5D19F8768E1EB1E" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">SG Code Family (Level 2)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_sg_code_family_level_2" type="Property">77C1D954403844F1BDB00F9213FC9BAD</propertytype_id>
+      <sort_order>16512</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>3840</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>350</x>
+      <y>220</y>
+      <name>mrn_sg_code_family_level_2</name>
+     </Item>
+     <Item type="Field" id="1288EDB8CA204123B32146A3BC6A9006" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">SG Code Line (Level 3)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_sg_code_line_level_3" type="Property">2A457FDF19E4493592E6BFBEFA32C0F7</propertytype_id>
+      <sort_order>16640</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>3968</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>500</x>
+      <y>220</y>
+      <name>mrn_sg_code_line_level_3</name>
+     </Item>
+     <Item type="Field" id="58689ADBB570470E98BABD107DC2C9F1" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Shipping Restrictions</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_shipping_restrictions" type="Property">AED5F3BC92F84FAAA3B3B0173FDAB2CA</propertytype_id>
+      <sort_order>9344</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>12288</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>300</textarea_cols>
+      <textarea_rows>40</textarea_rows>
+      <x>500</x>
+      <y>140</y>
+      <z_index>10</z_index>
+      <name>mrn_shipping_restrictions</name>
+     </Item>
+     <Item type="Field" id="6D840D69C36C40CBB3C71EFFF32D8562" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Storage Temp.</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_storage_temp" type="Property">325A71C2DCFF491AA8AEF897326F64C1</propertytype_id>
+      <sort_order>10112</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>13056</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>352</x>
+      <y>178</y>
+      <z_index>10</z_index>
+      <name>mrn_storage_temp</name>
+     </Item>
+     <Item type="Field" id="61CB4FAEC283430DB6A6DBAF30CF0F1E" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Support Brand</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_support_brand" type="Property">57EF09F060114590933AD582AAED2D68</propertytype_id>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="14FDD3173B614576B4C4FD4013C6A704" type="Body">14FDD3173B614576B4C4FD4013C6A704</source_id>
+      <tab_index>3200</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>200</x>
+      <y>180</y>
+      <z_index>10</z_index>
+      <name>mrn_support_brand</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="Field" id="D2342633712244189554C84C43C3BA6B" action="edit">
+  <!-- Please note: this AML depends on the "MRN_Item" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>classification</name>
+    <source_id type="ItemType" keyed_name="MRN_Item">FC9DE56536D949F5BC1E888AA609F9DA</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+</AML>

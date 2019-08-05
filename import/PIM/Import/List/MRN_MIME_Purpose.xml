@@ -1,0 +1,152 @@
+﻿<AML>
+ <Item type="List" id="586D040813C54015AF357B340969FF82" action="add">
+  <description>ETIM MIME Purpose Codes</description>
+  <name>MRN_MIME_Purpose</name>
+  <Relationships>
+   <Item type="Value" id="ED92965D2A5C4853AB8FB377FBFA7B63" action="add">
+    <label xml:lang="en">Brochures (BR)</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>BR</value>
+   </Item>
+   <Item type="Value" id="3B453A4CA5894F02935F5A526207BD90" action="add">
+    <label xml:lang="en">Charts_Tables (CHT)</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>CHT</value>
+   </Item>
+   <Item type="Value" id="697EC41DDE014EB5A61A2B1FD580C3F9" action="add">
+    <label xml:lang="en">Curve Ambient Temperature D-Rating (A-T-Derat)</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>A-T-Derat</value>
+   </Item>
+   <Item type="Value" id="30496D82D61241AFA53EBC3D2CCC13CC" action="add">
+    <label xml:lang="en">Curve Maximum Total Clearing (Time Current) (MAX)</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>MAX</value>
+   </Item>
+   <Item type="Value" id="48CDF5D69CA1459C9EBECA2B077281B6" action="add">
+    <label xml:lang="en">Curve Minimum Melting (Time Current) (MIN)</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>MIN</value>
+   </Item>
+   <Item type="Value" id="1907A849BB074ADC95DD53EEE061D5D4" action="add">
+    <label xml:lang="en">Curve Peak Let Through (PLT)</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>PLT</value>
+   </Item>
+   <Item type="Value" id="13D757BF1D8440628359CEE318D00857" action="add">
+    <label xml:lang="en">Curve Time Current (Average) (TCC)</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>TCC</value>
+   </Item>
+   <Item type="Value" id="031989D5C86F41B5A42F7B9597B2A1AF" action="add">
+    <label xml:lang="en">Curve Total Clearing (TCC-Total)</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>TCC-Total</value>
+   </Item>
+   <Item type="Value" id="E8F57D4E92CC46FCA7AA5C9F737E046B" action="add">
+    <label xml:lang="en">Curve Watts Loss (WL)</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>WL</value>
+   </Item>
+   <Item type="Value" id="D9E021B7C1694D16A9F08986D6ECB265" action="add">
+    <label xml:lang="en">Fact-Sheets (FS)</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>FS</value>
+   </Item>
+   <Item type="Value" id="157781A2ED31426C898037D01B3AB81B" action="add">
+    <label xml:lang="en">Flyers (FLY)</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>FLY</value>
+   </Item>
+   <Item type="Value" id="614EEA3BBAF14ED1B2E43FEF0AE4DF6E" action="add">
+    <label xml:lang="en">Instruction Sheets (INS)</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>INS</value>
+   </Item>
+   <Item type="Value" id="04E25C9266F64B379B9620878B648854" action="add">
+    <label xml:lang="en">Line Card (LC)</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>LC</value>
+   </Item>
+   <Item type="Value" id="1CE7B279749149D290BD9C971BE0BEEC" action="add">
+    <label xml:lang="en">Logo</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>logo</value>
+   </Item>
+   <Item type="Value" id="4A37BC16B9F64439B40788B569BFFD35" action="add">
+    <label xml:lang="en">Others</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>others</value>
+   </Item>
+   <Item type="Value" id="4538B0B67DDA49EB8C65B184A37FADA9" action="add">
+    <label xml:lang="en">Photo (High Resolution)</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>detail</value>
+   </Item>
+   <Item type="Value" id="2AE6D27EF9144421A3546D98D2E014E5" action="add">
+    <label xml:lang="en">Photo (Thumbnail)</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>thumbnail</value>
+   </Item>
+   <Item type="Value" id="293ED172BF2A4E3EB46685CD811676D6" action="add">
+    <label xml:lang="en">Photo (Web Page)</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>normal</value>
+   </Item>
+   <Item type="Value" id="77A2532E422149A1A888FC7CB7C0CC39" action="add">
+    <label xml:lang="en">Product data sheet</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>data_sheet</value>
+   </Item>
+   <Item type="Value" id="A6D143CC3C4C46E8AF85A0647C4FA6D5" action="add">
+    <label xml:lang="en">Safety data sheet</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>safety_data_sheet</value>
+   </Item>
+   <Item type="Value" id="666872EA14F448729447EA2EC62912FB" action="add">
+    <label xml:lang="en">Symbol</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>icon</value>
+   </Item>
+   <Item type="Value" id="963C6462341346C391B0DEF7D41DF296" action="add">
+    <label xml:lang="en">Tech Topics (TT)</label>
+    <sort_order>220</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>TT</value>
+   </Item>
+   <Item type="Value" id="C60D0B73C3534242B89EA5501A424D0B" action="add">
+    <label xml:lang="en">Tip Sheets (TS)</label>
+    <sort_order>230</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>TS</value>
+   </Item>
+   <Item type="Value" id="94300DBE652049528E80CEA4DEACD860" action="add">
+    <label xml:lang="en">White Papers (WP)</label>
+    <sort_order>240</sort_order>
+    <source_id keyed_name="MRN_MIME_Purpose" type="List">586D040813C54015AF357B340969FF82</source_id>
+    <value>WP</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

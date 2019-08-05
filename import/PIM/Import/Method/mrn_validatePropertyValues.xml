@@ -1,0 +1,272 @@
+﻿<AML>
+ <Item type="Method" id="FCBF0ACC1A934425974ABB87DDDB0C35" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// This code checks the given properties for empty values before the item can be saved
+// Client events on MRN_Item
+
+// // Debugger
+// if (System.Diagnostics.Debugger.Launch()) 
+//     //System.Diagnostics.Debugger.Break();
+
+// Initialize
+Innovator inn = this.getInnovator();
+
+// Create a list of ItemProperty type
+List<ItemProperty> propertiesList = new List<ItemProperty>();
+
+// Add MSL Form ItemProperty objects to the list
+//propertiesList.Add(new ItemProperty("mrn_brand_name", "Brand Name","Level 4 - MSL"));
+//propertiesList.Add(new ItemProperty("mrn_support_brand", "Support Brand", "Level 4 - MSL"));
+//propertiesList.Add(new ItemProperty("mrn_product_brand", "Product Brand","Level 4 - MSL"));
+//propertiesList.Add(new ItemProperty("mrn_ingredient_brand", "Ingredient Brand","Level 4 - MSL"));
+propertiesList.Add(new ItemProperty("mrn_etim_class", "ETIM Class","Level 4 - MSL"));
+propertiesList.Add(new ItemProperty("mrn_unspsc_code", "UNSPSC Code","Level 4 - MSL"));
+propertiesList.Add(new ItemProperty("mrn_buy_american_compliant", "Buy American Compliant","Level 4 - MSL",""));
+propertiesList.Add(new ItemProperty("mrn_arra_compliance", "ARRA Compliance","Level 4 - MSL",""));
+propertiesList.Add(new ItemProperty("mrn_country_of_origin", "Country of Origin","Level 4 - MSL"));
+//propertiesList.Add(new ItemProperty("mrn_product_description", "Product Description", "Level 4 - MSL"));
+//propertiesList.Add(new ItemProperty("mrn_application", "Applications","Level 4 - MSL"));
+
+// Add Frame Form ItemProperty objects to the 
+propertiesList.Add(new ItemProperty("mrn_net_weight", "Product: Weight","Level 5 - Frame",""));
+//propertiesList.Add(new ItemProperty("mrn_product_weight_uom", "Product: Weight UOM","Level 5 - Frame"));
+propertiesList.Add(new ItemProperty("mrn_sell_pack_description", "Sell Pack: Description","Level 5 - Frame",""));
+propertiesList.Add(new ItemProperty("mrn_sell_pack_qty", "Sell Pack: Quantity","Level 5 - Frame",""));
+propertiesList.Add(new ItemProperty("mrn_sell_pack_qty_uom", "Sell Pack: Quantity UOM","Level 5 - Frame",""));
+propertiesList.Add(new ItemProperty("mrn_sell_pack_weight", "Sell Pack: Weight","Level 5 - Frame",""));
+//propertiesList.Add(new ItemProperty("mrn_sell_pack_weight_uom", "Sell Pack: Weight UOM","Level 5 - Frame"));
+propertiesList.Add(new ItemProperty("mrn_sell_pack_height", "Sell Pack: Height","Level 5 - Frame",""));
+propertiesList.Add(new ItemProperty("mrn_sell_pack_length", "Sell Pack: Length","Level 5 - Frame",""));
+propertiesList.Add(new ItemProperty("mrn_sell_pack_width", "Sell Pack: Width","Level 5 - Frame",""));
+propertiesList.Add(new ItemProperty("mrn_product_length", "Product Length","Level 5 - Frame",""));
+//propertiesList.Add(new ItemProperty("mrn_sell_pack_size_uom", "Sell Pack: Dimensions UOM","Level 5 - Frame"));
+
+// Add Product Form ItemProperty objects to the list
+propertiesList.Add(new ItemProperty("mrn_item_description", "Item Description","Level 6 - Product",""));
+propertiesList.Add(new ItemProperty("mrn_ean_upc_code", "EAN/UPC Code","Level 6 - Product",""));
+propertiesList.Add(new ItemProperty("mrn_gtin_sell_pack", "GTIN: Sell Pack","Level 6 - Product",""));
+//propertiesList.Add(new ItemProperty("mrn_gtin_ship_pack", "GTIN: Ship Pack","Level 6 - Product",""));
+//propertiesList.Add(new ItemProperty("mrn_gtin_master_pack", "GTIN: Master Pack","Level 6 - Product",""));
+propertiesList.Add(new ItemProperty("mrn_stocked_item_status", "Stocked Item Status", "Level 6 - Product",""));
+propertiesList.Add(new ItemProperty("mrn_min_qty", "Minimum Quantity per Order","Level 6 - Product",""));
+propertiesList.Add(new ItemProperty("mrn_order_multiple", "Order Multiple","Level 6 - Product",""));
+propertiesList.Add(new ItemProperty("mrn_short_description_80max", "Order Short Description (80Max)","Level 6 - Product",""));
+
+
+
+// propertiesList.Add(new ItemProperty("mrn_rohs_compliant", "ROHS Compliant", "Level 6 - Product"));  This will always be 0 or 1
+
+// -------------> Add another parmenter for the value to check. "Unassigned" for lists, "" for others.
+
+
+
+// Get the level of *this item
+string classification = this.getProperty("classification","");
+    
+// Loop through each property to check if it is empty. Display an error in that case.
+foreach (ItemProperty itemProperty in propertiesList)
+{
+    // if level of property is not same as level of this item, skip the property check
+    if (classification != itemProperty.getLevel())
+        continue;
+    
+    // Get the property value from the form to check for empty
+    string propertyValue = this.getProperty(itemProperty.getName(),"");
+    
+    // If property value is equal to unallowed, throw an error message
+    if (propertyValue == itemProperty.getUnallowed())
+    {   
+        string errorText = @"The """ + itemProperty.getLabel() + @""" field ";
+        
+        string mssg = " cannot have a value of " + "\"" + itemProperty.getUnallowed() + "\"";
+        if (itemProperty.getUnallowed() == "")
+            mssg = "cannot be empty";
+        
+        errorText  += mssg;
+        return inn.newError(errorText);
+    }
+}
+
+// If this is a promote to Publish, and it's an MSL, check to see if there's a datasheet attached
+if (classification == "Level 4 - MSL" &&  (this.getProperty("state","") == "Released"))
+{
+    // Build an MrnItem, with all the digital assets and the files
+    MrnItem mrnItem = new MrnItem(this);
+    
+    if (!mrnItem.hasValidDatasheet())
+        return inn.newError("A Datasheet with an attached file was not found!");
+}
+
+
+
+return this;
+}
+
+    
+////////////////     Class Declarations         ///////////////////////////////////
+
+
+// Class to hold required property values
+public class ItemProperty
+{
+    string name;      // Name of the property in the data model
+    string label;     // Label of the property, to be displayed on the error dialog
+    string level;     // Classification level for which this property is mandatory
+    string unallowed; // Value that is not allowed for item to be released
+
+    public ItemProperty(string n, string la, string lv, string un = "Unassigned")
+    {
+        name = n;
+        label = la;
+        level = lv;
+        unallowed = un;
+    }
+    
+    public string getName() { return name; }
+    public string getLevel() { return level; }
+    public string getLabel() { return label; }
+    public string getUnallowed() { return unallowed; }
+    
+}
+
+
+// Class for an MRN_Item
+public class MrnItem
+{
+    Item item;
+    List<DigitalAsset> digitalAssets;
+    
+    public MrnItem(Item itm)
+    {
+        item = itm;
+        findDigitalAssets();
+    }
+    
+    public void findDigitalAssets()
+    {
+        digitalAssets = new List<DigitalAsset>();
+        
+        // Get DigitalAssets attachments
+        Item relationships = item.newItem("MRN_Item_Document", "get");
+        relationships.setProperty("source_id", item.getID());
+        relationships = relationships.apply();
+
+        int count = relationships.getItemCount();
+        for (int i=0; i<count; i++) 
+        {
+            Item doc_relationship = relationships.getItemByIndex(i);
+            Item doc_itm =doc_relationship.getRelatedItem();
+            string type = doc_itm.getProperty("classification", "");
+            digitalAssets.Add(new DigitalAsset(doc_itm, type));
+        }
+    }
+    
+    public List<File> getAllFiles()
+    {
+        List<File> allFiles = new List<File>();
+        
+        // Get all the files from digitalassets and add them to allFiles
+        foreach (DigitalAsset da in digitalAssets)
+        {
+            List<File> daFiles = da.getFiles();
+            allFiles.AddRange(daFiles);
+        }
+        return allFiles;
+    }
+    
+    // Returns true if there's at least one DA of type Datasheet, with at least one file attached
+    public bool hasValidDatasheet()
+    {
+        // Cycle the digital assets
+        foreach (DigitalAsset da in digitalAssets)
+        {
+            if (da.isType("Datasheet"))
+                if (da.hasFile())
+                    return true;
+        }
+        
+        return false;
+    }
+    
+    public Item getItem() { return item; }
+    
+        
+}
+
+    
+// Class for Digital Asset
+public class DigitalAsset
+{
+    Item item;
+    string type;
+    List<File> files;
+    static Dictionary<string, string> daTypes;
+
+
+    public DigitalAsset(Item itm, string typ)
+    {
+        item = itm;
+        type = typ;
+        findFiles();
+    }
+    
+    public static void setDATypes()
+    {
+        daTypes = new Dictionary<string, string>
+            {
+        	    {"Datasheet", "mrn_datasheet"},
+        	    {"Photo", "mrn_photo"}
+            };
+    }
+    
+    public void findFiles()
+    {
+        Item docRelationships = item.newItem("Document File", "get");
+        docRelationships.setProperty("source_id", item.getID());
+        docRelationships = docRelationships.apply();
+
+        int countF = docRelationships.getItemCount();
+        files = new List<File>();
+        
+        for (int j=0; j<countF; j++) {
+            Item file_relationship = docRelationships.getItemByIndex(j);
+            Item file_itm =file_relationship.getRelatedItem();
+            bool internalFile = (file_relationship.getProperty("mrn_internal") == "1" ? true : false);
+            bool singleDefault = (file_relationship.getProperty("mrn_single_default") == "1" ? true : false);
+            files.Add(new File(file_itm, internalFile, singleDefault, type));
+        }
+    }
+    
+    public List<File> getFiles() { return files; }
+    public static Dictionary <string,string> getDATypes() { return daTypes; }
+    public bool isType(string t) {   if (type == t) return true; else return false; }
+    public bool hasFile() { if (files.Count() > 0) return true; else return false; }
+}
+
+// Class for a File attached to a Digital Asset
+public class File
+{
+    Item item;
+    bool internalF;
+    bool singleDefault;
+    string type;
+
+    public File(Item itm, bool internalf, bool priority, string typ)
+    {
+        item = itm;
+        internalF = internalf;
+        singleDefault = priority;
+        type = typ;
+
+    }
+    
+    public Item getItem() { return item;}
+    public bool isInternal(){return internalF;}
+    public bool isSingleDefault(){return singleDefault;}
+    public string getID(){return item.getID();}
+    public string getType(){return type; }
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_validatePropertyValues</name>
+ </Item>
+</AML>

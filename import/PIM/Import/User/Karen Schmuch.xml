@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="267BDFD5F53E4D9BBF14C1A65FBED5BB" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>karen.schmuch@us.mersen.com</email>
+  <last_login_date>2019-05-16T14:51:02</last_login_date>
+  <login_name>kschmuch</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id>E35EF86A69914E3999D570DAFD0EF000</owned_by_id>
+  <working_directory>C:\Users\kschmuch\Desktop\ARAS Working Folder</working_directory>
+  <first_name>Karen</first_name>
+  <last_name>Schmuch</last_name>
+  <Relationships>
+   <Item type="Alias" id="81F116C7D41544049A4DBC9D37CD7324" action="add">
+    <from_date>2016-04-19T15:40:46</from_date>
+    <related_id keyed_name="Karen Schmuch" type="Identity">FAB98FDF93944CC1AD3FE9B753963F80</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Karen Schmuch" type="User">267BDFD5F53E4D9BBF14C1A65FBED5BB</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

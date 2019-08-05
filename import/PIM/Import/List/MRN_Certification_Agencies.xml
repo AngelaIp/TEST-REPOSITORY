@@ -1,0 +1,80 @@
+﻿<AML>
+ <Item type="List" id="CD6F316544164CCBA43ECC067E2AB801" action="add">
+  <description>Certification Agencies</description>
+  <name>MRN_Certification_Agencies</name>
+  <Relationships>
+   <Item type="Value" id="D99F9D7525544524BC439F7A572423F1" action="add">
+    <label xml:lang="en">Bureau Veritas</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>Bureau Veritas</value>
+   </Item>
+   <Item type="Value" id="54D8A5A407EF4F39AAC9882D55887912" action="add">
+    <label xml:lang="en">CCC</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>CCC</value>
+   </Item>
+   <Item type="Value" id="65613ADB3FDB42679BD1AB9B4ACAAA63" action="add">
+    <label xml:lang="en">CSA</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>CSA</value>
+   </Item>
+   <Item type="Value" id="4A124A157EEC4F5DAA460976D7DBA206" action="add">
+    <label xml:lang="en">CUL</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>CUL</value>
+   </Item>
+   <Item type="Value" id="D07774BFE53740F8BF364E5C9DA97C9F" action="add">
+    <label xml:lang="en">GOST</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>GOST</value>
+   </Item>
+   <Item type="Value" id="BF5CA6794C3D49E6B16C766269ACBFD4" action="add">
+    <label xml:lang="en">IEC</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>IEC</value>
+   </Item>
+   <Item type="Value" id="0A036B98306440D497216B32E967D232" action="add">
+    <label xml:lang="en">Lloyd's Register of Shipping</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>Lloyd's Register of Shipping</value>
+   </Item>
+   <Item type="Value" id="15D7623862F24564A3C4E1D623064CA7" action="add">
+    <label xml:lang="en">NFC</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>NFC</value>
+   </Item>
+   <Item type="Value" id="E437CE8D09F449B4A3AADB88B91256A7" action="add">
+    <label xml:lang="en">TUV</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>TUV</value>
+   </Item>
+   <Item type="Value" id="7F176E5624774E548A2A3D16E7671743" action="add">
+    <label xml:lang="en">UL Listed</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>UL Listed</value>
+   </Item>
+   <Item type="Value" id="27497F08FADE44639682606068DA54D6" action="add">
+    <label xml:lang="en">UL Recognized</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>UL Recognized</value>
+   </Item>
+   <Item type="Value" id="43C190DB9D4048BE87B36D03804E6758" action="add">
+    <label xml:lang="en">VDE</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Certification_Agencies" type="List">CD6F316544164CCBA43ECC067E2AB801</source_id>
+    <value>VDE</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

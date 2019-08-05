@@ -51,7 +51,12 @@ function setErrorIcon()
 
 if(srcElement)
 {
-  var val = srcElement.value;
+  // IR-055699 Type-ahead specific code converting
+  //var val = srcElement.value;
+  var control = getFieldComponentByName(srcElement.name);
+  var val = control.getValue();
+  // End of fix IR-055699
+  
   if(val != undefined)
   {
     var thisPropName = "";

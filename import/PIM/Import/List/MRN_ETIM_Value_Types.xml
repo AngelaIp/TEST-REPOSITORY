@@ -1,0 +1,39 @@
+﻿<AML>
+ <Item type="List" id="6F3661C70E8D43F0B43AD074B08C4C6E" action="add">
+  <description>A,N,L correspond to ETIM value type
+C converts a PIM string to Logical, based on the string value (provide conditions for "true" on the MRN Property ETIM Classes tab)</description>
+  <name>MRN_ETIM_Value_Types</name>
+  <Relationships>
+   <Item type="Value" id="CFB918C5E24C49A1A3B853856BBADA4A" action="add">
+    <label xml:lang="en">Alphanumeric</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_ETIM_Value_Types" type="List">6F3661C70E8D43F0B43AD074B08C4C6E</source_id>
+    <value>A</value>
+   </Item>
+   <Item type="Value" id="5430119C3DB648B3A274643264AA6D27" action="add">
+    <label xml:lang="en">Numeric</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_ETIM_Value_Types" type="List">6F3661C70E8D43F0B43AD074B08C4C6E</source_id>
+    <value>N</value>
+   </Item>
+   <Item type="Value" id="B99B91A7105D457BA343B0A8FF00089E" action="add">
+    <label xml:lang="en">Logical</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_ETIM_Value_Types" type="List">6F3661C70E8D43F0B43AD074B08C4C6E</source_id>
+    <value>L</value>
+   </Item>
+   <Item type="Value" id="A83D198BB7474B429892E288FFDD219E" action="add">
+    <label xml:lang="en">Conditional - Logical</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_ETIM_Value_Types" type="List">6F3661C70E8D43F0B43AD074B08C4C6E</source_id>
+    <value>C</value>
+   </Item>
+   <Item type="Value" id="DBD9848AF45E4F5FA3ABC6776E525026" action="add">
+    <label xml:lang="en">Range</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_ETIM_Value_Types" type="List">6F3661C70E8D43F0B43AD074B08C4C6E</source_id>
+    <value>R</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

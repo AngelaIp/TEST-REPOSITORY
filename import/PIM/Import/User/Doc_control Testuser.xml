@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="1EC38F1813B04031AFF334571DFE195F" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <login_name>mrn_doc_ctl_testUser</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Doc_control Testuser" type="Identity">221E169324174FC0A2DA75CF124419A1</owned_by_id>
+  <pwd_is_set_on>2017-04-20T12:45:31</pwd_is_set_on>
+  <first_name>Doc_control</first_name>
+  <last_name>Testuser</last_name>
+  <Relationships>
+   <Item type="Alias" id="A52B9E575D6246089B4CAE03E12BFBB2" action="add">
+    <from_date>2017-04-20T12:44:23</from_date>
+    <related_id keyed_name="Doc_control Testuser" type="Identity">221E169324174FC0A2DA75CF124419A1</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Doc_control Testuser" type="User">1EC38F1813B04031AFF334571DFE195F</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

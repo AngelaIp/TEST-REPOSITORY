@@ -1,0 +1,266 @@
+﻿<AML>
+ <Item type="List" id="04CD997120044566A86C70DB6DD5A119" action="add">
+  <description>Codes used in ETIM Extracts</description>
+  <name>MRN_ETIM_Qty_Packing_Unit_Codes</name>
+  <Relationships>
+   <Item type="Value" id="52627356C9FF4BA18A45EE908BD67342" action="add">
+    <label xml:lang="en">Bag</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>BG</value>
+   </Item>
+   <Item type="Value" id="6D5281F9F24F4931A5CEBDBC87F55745" action="add">
+    <label xml:lang="en">Bottle</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>BO</value>
+   </Item>
+   <Item type="Value" id="4484439D43D5435889E0464BD721EDBD" action="add">
+    <label xml:lang="en">Box</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>BX</value>
+   </Item>
+   <Item type="Value" id="B6C7D40A61C64B349156CA41C4BF2AC8" action="add">
+    <label xml:lang="en">Bundle</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>BE</value>
+   </Item>
+   <Item type="Value" id="D798C59FD88C4DBDAA8AFF7C48FD6664" action="add">
+    <label xml:lang="en">Can</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>CA</value>
+   </Item>
+   <Item type="Value" id="96EBBC108A2E43F79DCEE030CBE5557D" action="add">
+    <label xml:lang="en">Carton</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>CT</value>
+   </Item>
+   <Item type="Value" id="7143C4505C9C4A6999520013F6F7F7F7" action="add">
+    <label xml:lang="en">Cartridge</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>CQ</value>
+   </Item>
+   <Item type="Value" id="3E5A90B72BBC4EFFB341FFCA9166D686" action="add">
+    <label xml:lang="en">Case</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>CS</value>
+   </Item>
+   <Item type="Value" id="CACBFAFF5BF74D7386F3056837B7577C" action="add">
+    <label xml:lang="en">Cask</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>Z3</value>
+   </Item>
+   <Item type="Value" id="E69022B7EF3D4E769BD04C9C4F24522A" action="add">
+    <label xml:lang="en">cm</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>CMT</value>
+   </Item>
+   <Item type="Value" id="6B71EB777017455BAB460BA2AA051DA7" action="add">
+    <label xml:lang="en">Chest</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>Z2</value>
+   </Item>
+   <Item type="Value" id="98D867A98115425EA5AFEA76A195C527" action="add">
+    <label xml:lang="en">Coil</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>CL</value>
+   </Item>
+   <Item type="Value" id="57C85B3A724E40028BE1A20DD15D43C0" action="add">
+    <label xml:lang="en">Crate</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>CR</value>
+   </Item>
+   <Item type="Value" id="E3B635ADAE4F425DB902F9C46A926F04" action="add">
+    <label xml:lang="en">Drum</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>DR</value>
+   </Item>
+   <Item type="Value" id="6D2F156477C54EA9961C56C44F32DAFC" action="add">
+    <label xml:lang="en">g</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>GRM</value>
+   </Item>
+   <Item type="Value" id="16D8D55E65534A22892AC1E590449814" action="add">
+    <label xml:lang="en">Keg</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>KG</value>
+   </Item>
+   <Item type="Value" id="04B787A9000C46D48044CA26DE529C75" action="add">
+    <label xml:lang="en">kg</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>KGM</value>
+   </Item>
+   <Item type="Value" id="89ED3279760640A7A9C17352B85CC049" action="add">
+    <label xml:lang="en">l</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>LTR</value>
+   </Item>
+   <Item type="Value" id="2827A5D74C2949998E87A293A54E5AB2" action="add">
+    <label xml:lang="en">m</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>MTR</value>
+   </Item>
+   <Item type="Value" id="9645960C54C94BD5BF592A1C107B1F42" action="add">
+    <label xml:lang="en">mg</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>MGM</value>
+   </Item>
+   <Item type="Value" id="DE80236ECA794F4FB856D7DE2FFE6A7E" action="add">
+    <label xml:lang="en">ml</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>MLT</value>
+   </Item>
+   <Item type="Value" id="C4D9D71182BC4ED0B938DB6CA7693C3B" action="add">
+    <label xml:lang="en">mm</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>MMT</value>
+   </Item>
+   <Item type="Value" id="FE6679AE9DD34657B3159EE4F966D830" action="add">
+    <label xml:lang="en">Each</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>C62</value>
+   </Item>
+   <Item type="Value" id="63A7157A48EA4F5D8B71D323457862BF" action="add">
+    <label xml:lang="en">Pack</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>PK</value>
+   </Item>
+   <Item type="Value" id="6B7257AB51FF40219CB750EE1251AFD5" action="add">
+    <label xml:lang="en">Packet</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>PA</value>
+   </Item>
+   <Item type="Value" id="712978001B784E0983E18FBF7674FB05" action="add">
+    <label xml:lang="en">Pail</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>PL</value>
+   </Item>
+   <Item type="Value" id="649690A31AEE44E7AF850CA0CA5AAE15" action="add">
+    <label xml:lang="en">Pair</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>PR</value>
+   </Item>
+   <Item type="Value" id="82FB28B7A5674D38994B95684D34F89B" action="add">
+    <label xml:lang="en">Pallet</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>PE</value>
+   </Item>
+   <Item type="Value" id="E86C533393264DEFB0577AA4E35359C9" action="add">
+    <label xml:lang="en">Reel</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>RL</value>
+   </Item>
+   <Item type="Value" id="A3D8B91B06A94207901D44318A2BFEEE" action="add">
+    <label xml:lang="en">Ring</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>RG</value>
+   </Item>
+   <Item type="Value" id="336C70B320DC4007B44EB20456D917A8" action="add">
+    <label xml:lang="en">Roll</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>RO</value>
+   </Item>
+   <Item type="Value" id="417EBD9CC1494CE084BD528DD7FE9F18" action="add">
+    <label xml:lang="en">Sack</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>SA</value>
+   </Item>
+   <Item type="Value" id="ECB0293E5D53445EBE89AF0D19D7A8CD" action="add">
+    <label xml:lang="en">Set</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>SA</value>
+   </Item>
+   <Item type="Value" id="19066E36314C426C82C1BC35F2943987" action="add">
+    <label xml:lang="en">Sheet</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>ST</value>
+   </Item>
+   <Item type="Value" id="3629686C467C4DC8A8047DB72166CF8A" action="add">
+    <label xml:lang="en">Tin</label>
+    <sort_order>4480</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>TN</value>
+   </Item>
+   <Item type="Value" id="AD288A3066B1495692C56299E41054B3" action="add">
+    <label xml:lang="en">Tray</label>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>PU</value>
+   </Item>
+   <Item type="Value" id="65A33F9B35534A11AE11BF35B9CBB1B1" action="add">
+    <label xml:lang="en">Tube</label>
+    <sort_order>4736</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>TU</value>
+   </Item>
+   <Item type="Value" id="B51CF6298F684DD5BCFE428C8FC5BAA5" action="add">
+    <label xml:lang="en">Envelope</label>
+    <sort_order>4864</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>EN</value>
+   </Item>
+   <Item type="Value" id="2D5C65CC6A884E12944C377168284CDA" action="add">
+    <label xml:lang="en">Placon</label>
+    <sort_order>4992</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>QS</value>
+   </Item>
+   <Item type="Value" id="6B00F4135CC943EE9B6B1577E8BEA593" action="add">
+    <label xml:lang="en">Blister</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>PR</value>
+   </Item>
+   <Item type="Value" id="DCB3F0C1DAEF419C8B55D416E6A805A0" action="add">
+    <label xml:lang="en">Pastic Bag</label>
+    <sort_order>5248</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>BG</value>
+   </Item>
+   <Item type="Value" id="A403644940AB46889E4CD162CA235997" action="add">
+    <label xml:lang="en">Tape and Reel</label>
+    <sort_order>5376</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>RL</value>
+   </Item>
+   <Item type="Value" id="21CF660EE4A64CC19BC31A2D324713BF" action="add">
+    <label xml:lang="en">Ammo</label>
+    <sort_order>5504</sort_order>
+    <source_id keyed_name="MRN_ETIM_Qty_Packing_Unit_Codes" type="List">04CD997120044566A86C70DB6DD5A119</source_id>
+    <value>RL</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

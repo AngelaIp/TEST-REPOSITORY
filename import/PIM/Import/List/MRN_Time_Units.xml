@@ -1,0 +1,32 @@
+﻿<AML>
+ <Item type="List" id="1BAB39F3AFDC41C4AB0AB1CBE7C6845C" action="add">
+  <description>Time Units</description>
+  <name>MRN_Time_Units</name>
+  <Relationships>
+   <Item type="Value" id="E74AB1ABA5884DCB9B6BB628A65BA784" action="add">
+    <label xml:lang="en">s</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Time_Units" type="List">1BAB39F3AFDC41C4AB0AB1CBE7C6845C</source_id>
+    <value>s</value>
+   </Item>
+   <Item type="Value" id="A713D48F8B294F51A83CC9CFD2C5FEC2" action="add">
+    <label xml:lang="en">ms</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Time_Units" type="List">1BAB39F3AFDC41C4AB0AB1CBE7C6845C</source_id>
+    <value>ms</value>
+   </Item>
+   <Item type="Value" id="D61FB0453A3F48EEBF1A76E6B16A6FBE" action="add">
+    <label xml:lang="en">µs</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Time_Units" type="List">1BAB39F3AFDC41C4AB0AB1CBE7C6845C</source_id>
+    <value>µs</value>
+   </Item>
+   <Item type="Value" id="08CDF76871864E9B86471394D61916B2" action="add">
+    <label xml:lang="en">ns</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Time_Units" type="List">1BAB39F3AFDC41C4AB0AB1CBE7C6845C</source_id>
+    <value>ns</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

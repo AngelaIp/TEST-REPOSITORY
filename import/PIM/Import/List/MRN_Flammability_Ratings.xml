@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="List" id="6C902A999EEA42679D268C4F6A397B68" action="add">
+  <description>Flammability Ratings</description>
+  <name>MRN_Flammability_Ratings</name>
+  <Relationships>
+   <Item type="Value" id="AAE471A984F1469B90E73450407B1E17" action="add">
+    <label xml:lang="en">UL94 V-0</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Flammability_Ratings" type="List">6C902A999EEA42679D268C4F6A397B68</source_id>
+    <value>UL94 V-0</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,77 @@
+﻿<AML>
+ <Item type="List" id="271DE6FFE15C49978D19AD87A72B68F8" action="add">
+  <name>MRN_Canada_Customs_Code</name>
+  <Relationships>
+   <Item type="Filter Value" id="B04037EBB3344C449E02ABD802C995D1" action="add">
+    <filter>853510</filter>
+    <label xml:lang="en">Fuses over 1000V for Mining and Oil</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8535100010</value>
+   </Item>
+   <Item type="Filter Value" id="9AED168572864E04BA67A6DB8BBC4131" action="add">
+    <filter>853510</filter>
+    <label xml:lang="en">Fuses over 1000V</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8535100090</value>
+   </Item>
+   <Item type="Filter Value" id="09BB136DCE684F5A96DC289157A1278F" action="add">
+    <filter>853530</filter>
+    <label xml:lang="en">Isolating switches over 1000V</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8535300090</value>
+   </Item>
+   <Item type="Filter Value" id="6C6C3A056AA24BDE8D386991E9F58A58" action="add">
+    <filter>853540</filter>
+    <label xml:lang="en">Surge Suppressors over 1000V</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8535400000</value>
+   </Item>
+   <Item type="Filter Value" id="6127000DE2714635AD9A4DAD6D86EF6B" action="add">
+    <filter>853590</filter>
+    <label xml:lang="en">PDB for a voltage exceeding 1,000 V</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8535909010</value>
+   </Item>
+   <Item type="Filter Value" id="E0F64FA7B2FB48E984CAD1B24A140BC6" action="add">
+    <filter>853590</filter>
+    <label xml:lang="en">Fuseholders and Heat Sinks for a voltage exceeding 1,000 V</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8535909020</value>
+   </Item>
+   <Item type="Filter Value" id="E34D61E74FF1416295ED0AAF80CC21E4" action="add">
+    <filter>853610</filter>
+    <label xml:lang="en">Fuses 1000V and less</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8536100000</value>
+   </Item>
+   <Item type="Filter Value" id="B456EECBC9034B5AA5BB828638B34CA7" action="add">
+    <filter>853630</filter>
+    <label xml:lang="en">Surge Suppressors under 1000V</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8536309090</value>
+   </Item>
+   <Item type="Filter Value" id="958D5302E89F4B6E950256F95835B57F" action="add">
+    <filter>853650</filter>
+    <label xml:lang="en">Rotary switches under 1000V</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8536509911</value>
+   </Item>
+   <Item type="Filter Value" id="22D7B00D1C8241CAAAC2267087D931A5" action="add">
+    <filter>853650</filter>
+    <label xml:lang="en">Other switches under 1000V</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Canada_Customs_Code" type="List">271DE6FFE15C49978D19AD87A72B68F8</source_id>
+    <value>8536509990</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

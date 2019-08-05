@@ -1,0 +1,33 @@
+﻿<AML>
+ <Item type="MRN_Property" id="5EA9730E157640A58D5F26F7C8F3CF17" action="add">
+  <mrn_copy>0</mrn_copy>
+  <mrn_etim>0</mrn_etim>
+  <mrn_etim_range_property>0</mrn_etim_range_property>
+  <mrn_export_attribute>1</mrn_export_attribute>
+  <mrn_extract_labels>0</mrn_extract_labels>
+  <mrn_fake_ml_property>0</mrn_fake_ml_property>
+  <mrn_families>Fuses</mrn_families>
+  <mrn_form_element>GROUP_RATED</mrn_form_element>
+  <mrn_is_group>1</mrn_is_group>
+  <mrn_is_multi_value>0</mrn_is_multi_value>
+  <mrn_level>Level 6 - Product</mrn_level>
+  <mrn_label>Rated Breaking Capacity DC</mrn_label>
+  <Relationships>
+   <Item type="MRN_Property_Property" id="F7A08D21132D4FCD8F6E277286C5D735" action="add">
+    <related_id keyed_name="mrn_rated_breaking_capacity_dc_1" type="Property">666CA605CD7A4D638D803E3F370C6EB3</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Rated Breaking Capacity DC" type="MRN_Property">5EA9730E157640A58D5F26F7C8F3CF17</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="CA1D4330AB80465BA5D2D7F9B5E0B136" action="add">
+    <related_id keyed_name="mrn_rated_breaking_capacity_dc_2" type="Property">A77727D251CC4ECA864C6685AEB59135</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Rated Breaking Capacity DC" type="MRN_Property">5EA9730E157640A58D5F26F7C8F3CF17</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="9DFC352E6E3A4D8FA764A13B69A9586A" action="add">
+    <related_id keyed_name="mrn_rated_breaking_capacity_dc_3" type="Property">B77CEDFE9BCC412BB86BBBC384EB35DE</related_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="Rated Breaking Capacity DC" type="MRN_Property">5EA9730E157640A58D5F26F7C8F3CF17</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

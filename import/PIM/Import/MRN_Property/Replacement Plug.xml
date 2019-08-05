@@ -1,0 +1,49 @@
+﻿<AML>
+ <Item type="MRN_Property" id="0B8BC10DC0DA40528AC1B4F9A1930202" action="add">
+  <mrn_copy>0</mrn_copy>
+  <mrn_etim>0</mrn_etim>
+  <mrn_etim_range_property>0</mrn_etim_range_property>
+  <mrn_export_attribute>1</mrn_export_attribute>
+  <mrn_extract_labels>0</mrn_extract_labels>
+  <mrn_fake_ml_property>0</mrn_fake_ml_property>
+  <mrn_families>Surge Protection</mrn_families>
+  <mrn_form_element>Group_Box_Replacement_Plug</mrn_form_element>
+  <mrn_is_group>1</mrn_is_group>
+  <mrn_is_multi_value>0</mrn_is_multi_value>
+  <mrn_item_property keyed_name="mrn_replacement_plug" type="Property">36E757B6D6DE42C9B72F6C66F8051752</mrn_item_property>
+  <mrn_level>Level 6 - Product</mrn_level>
+  <mrn_label>Replacement Plug</mrn_label>
+  <Relationships>
+   <Item type="MRN_Property_Property" id="5B8376E9DBCB40249DF4EF6029C21508" action="add">
+    <related_id keyed_name="mrn_replacement_plug_l2" type="Property">1147D80CECDA40698307853E1C23E650</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Replacement Plug" type="MRN_Property">0B8BC10DC0DA40528AC1B4F9A1930202</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="14263190525445868BDADF81E4A2B7A5" action="add">
+    <related_id keyed_name="mrn_replacement_plug_l3" type="Property">BEB708F4F5D84FED8E72CA740FDD10BF</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Replacement Plug" type="MRN_Property">0B8BC10DC0DA40528AC1B4F9A1930202</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="E03FBF8C975B465D814F5DFB643CD733" action="add">
+    <related_id keyed_name="mrn_replacement_plug_ng" type="Property">ED2F288800D44812B780A43889FC2072</related_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="Replacement Plug" type="MRN_Property">0B8BC10DC0DA40528AC1B4F9A1930202</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="927CCEF41B0244FDA8B0458FE0ED7003" action="add">
+    <related_id keyed_name="mrn_replacement_plug" type="Property">36E757B6D6DE42C9B72F6C66F8051752</related_id>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="Replacement Plug" type="MRN_Property">0B8BC10DC0DA40528AC1B4F9A1930202</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="1C5A6FFF0DCF423D82AC8FFD8EEAD46E" action="add">
+    <related_id keyed_name="mrn_replacement_plug_ln" type="Property">0BC43CA0A3A84EAFA2F483682D8822A6</related_id>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="Replacement Plug" type="MRN_Property">0B8BC10DC0DA40528AC1B4F9A1930202</source_id>
+   </Item>
+   <Item type="MRN_Property_Property" id="57E923659B094AB6861F01BB4CFA5CF3" action="add">
+    <related_id keyed_name="mrn_replacement_plug_npe" type="Property">E3D7B87C496140F0AE8312055AC0CF73</related_id>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="Replacement Plug" type="MRN_Property">0B8BC10DC0DA40528AC1B4F9A1930202</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

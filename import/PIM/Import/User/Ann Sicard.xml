@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="7D622CDCE3AC43FFAD0066B07E3527E0" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>ann.sicard@us.mersen.com</email>
+  <last_login_date>2019-05-10T13:10:22</last_login_date>
+  <login_name>asicard</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id>14D7DC70D57D4C03814B13F6C84B8316</owned_by_id>
+  <working_directory>C:\Users\asicard\Downloads</working_directory>
+  <first_name>Ann</first_name>
+  <last_name>Sicard</last_name>
+  <Relationships>
+   <Item type="Alias" id="A430D704EB1C4246B33C97259C0A1043" action="add">
+    <from_date>2016-04-19T15:40:47</from_date>
+    <related_id keyed_name="Ann Sicard" type="Identity">3BFED68A81EF4FBFA7FF3EF270FAA035</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Ann Sicard" type="User">7D622CDCE3AC43FFAD0066B07E3527E0</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

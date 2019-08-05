@@ -1,9 +1,0 @@
-﻿<AML>
- <Item type="FileType" id="6E9954F44A4A41FAB5B8850614FF42F2" action="add">
-  <description>Autodesk DWF Model</description>
-  <extension>dwf</extension>
-  <mimetype>drawing/x-dwf</mimetype>
-  <permission_id keyed_name="56D2F16E873248999FE5402A7E32B53B" type="Permission">56D2F16E873248999FE5402A7E32B53B</permission_id>
-  <name>Autodesk Model</name>
- </Item>
-</AML>

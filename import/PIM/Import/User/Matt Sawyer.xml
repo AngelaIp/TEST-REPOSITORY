@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="User" id="AE12F23FAF9A454A9C9F4E4BDE17BE3F" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>matt.sawyer@us.mersen.com</email>
+  <last_login_date>2019-02-25T16:34:21</last_login_date>
+  <login_name>msawyer</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id>BDA09A8343234E41A2A601CD3A24E853</owned_by_id>
+  <first_name>Matt</first_name>
+  <last_name>Sawyer</last_name>
+  <Relationships>
+   <Item type="Alias" id="7391D5C0C2BC4B6590B4FB78163F8815" action="add">
+    <from_date>2016-04-19T15:40:43</from_date>
+    <related_id keyed_name="Matt Sawyer" type="Identity">10A2CD71C3874574B235645493BD9E16</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Matt Sawyer" type="User">AE12F23FAF9A454A9C9F4E4BDE17BE3F</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

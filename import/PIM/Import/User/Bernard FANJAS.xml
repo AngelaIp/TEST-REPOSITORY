@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="User" id="2FEFCA26583247C49269366DB95306E4" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Bernard.FANJAS@mersen.com</email>
+  <last_login_date>2019-03-21T07:19:08</last_login_date>
+  <login_name>BF</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Bernard FANJAS" type="Identity">103FE7E3757B436C8BD658E152488A3B</owned_by_id>
+  <first_name>Bernard</first_name>
+  <last_name>FANJAS</last_name>
+  <Relationships>
+   <Item type="Alias" id="EE2CE6EA3BDC4FBB9B77CD6952F90E1C" action="add">
+    <from_date>2018-07-30T12:26:49</from_date>
+    <related_id keyed_name="Bernard FANJAS" type="Identity">103FE7E3757B436C8BD658E152488A3B</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Bernard FANJAS" type="User">2FEFCA26583247C49269366DB95306E4</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,62 @@
+﻿<AML>
+ <Item type="List" id="2A17F6F6756A4A708F13ED360A2A3F59" action="add">
+  <description>D Code Level 1 Values</description>
+  <name>MRN_D_Code-1</name>
+  <Relationships>
+   <Item type="Value" id="655CA76AFDA14BAE90B9A8C8FDFF562D" action="add">
+    <label xml:lang="en">UL - CSA Low Volt Gen Purpose</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_D_Code-1" type="List">2A17F6F6756A4A708F13ED360A2A3F59</source_id>
+    <value>D01</value>
+   </Item>
+   <Item type="Value" id="F70216F737B54FBAB8C9EFC3CDC4A667" action="add">
+    <label xml:lang="en">IEC Low Voltage Gen Purpose</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_D_Code-1" type="List">2A17F6F6756A4A708F13ED360A2A3F59</source_id>
+    <value>D02</value>
+   </Item>
+   <Item type="Value" id="C187852D5EF44C4CBAC324B106FA7E88" action="add">
+    <label xml:lang="en">Semiconduct Fuses &amp; Fusegears</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_D_Code-1" type="List">2A17F6F6756A4A708F13ED360A2A3F59</source_id>
+    <value>D03</value>
+   </Item>
+   <Item type="Value" id="6F8DC7150DE140B4BCDD8367B71AF417" action="add">
+    <label xml:lang="en">Medium Voltage Gen Purpose</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_D_Code-1" type="List">2A17F6F6756A4A708F13ED360A2A3F59</source_id>
+    <value>D04</value>
+   </Item>
+   <Item type="Value" id="4820ACF3DCD04856B24DA3BB610527AA" action="add">
+    <label xml:lang="en">Surge Protection</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_D_Code-1" type="List">2A17F6F6756A4A708F13ED360A2A3F59</source_id>
+    <value>D05</value>
+   </Item>
+   <Item type="Value" id="F40E57F30C1D459A96B37DF57EFD0DAA" action="add">
+    <label xml:lang="en">Cooling</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_D_Code-1" type="List">2A17F6F6756A4A708F13ED360A2A3F59</source_id>
+    <value>D07</value>
+   </Item>
+   <Item type="Value" id="5C22E7DE83E542448F239541595A6192" action="add">
+    <label xml:lang="en">High Power Switches </label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_D_Code-1" type="List">2A17F6F6756A4A708F13ED360A2A3F59</source_id>
+    <value>D08</value>
+   </Item>
+   <Item type="Value" id="DB95CAA449A140ECB002A0E1A1E26E47" action="add">
+    <label xml:lang="en">Pwr Transfer for Rail Vehicle</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_D_Code-1" type="List">2A17F6F6756A4A708F13ED360A2A3F59</source_id>
+    <value>D09</value>
+   </Item>
+   <Item type="Value" id="26C36C3445AA4DBE815B9FA50D2FBE66" action="add">
+    <label xml:lang="en">Bus Bars</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_D_Code-1" type="List">2A17F6F6756A4A708F13ED360A2A3F59</source_id>
+    <value>D10</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

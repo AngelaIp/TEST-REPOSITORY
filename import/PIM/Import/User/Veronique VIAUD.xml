@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="8A7B57B0A5B54CADA724FFD9420DFB12" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Veronique.VIAUD@mersen.com</email>
+  <login_name>VVIA</login_name>
+  <logon_enabled>0</logon_enabled>
+  <owned_by_id keyed_name="Veronique VIAUD" type="Identity">933FFB2749F741F198C0057C2892690C</owned_by_id>
+  <first_name>Veronique</first_name>
+  <last_name>VIAUD</last_name>
+  <Relationships>
+   <Item type="Alias" id="7FB637E44DB54E0091EF6FBA4DA3EB14" action="add">
+    <from_date>2018-07-30T12:30:41</from_date>
+    <related_id keyed_name="Veronique VIAUD" type="Identity">933FFB2749F741F198C0057C2892690C</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Veronique VIAUD" type="User">8A7B57B0A5B54CADA724FFD9420DFB12</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

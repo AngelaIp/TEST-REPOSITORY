@@ -16,7 +16,6 @@
   <label_plural xml:lang="en">Actions</label_plural>
   <large_icon>../images/Action.svg</large_icon>
   <open_icon>../images/Action.svg</open_icon>
-  <permission_id keyed_name="DC7C1DED9942449F93E511F7EA5D0F4A" type="Permission">DC7C1DED9942449F93E511F7EA5D0F4A</permission_id>
   <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
   <show_parameters_tab>1</show_parameters_tab>
   <structure_view>tabs off</structure_view>

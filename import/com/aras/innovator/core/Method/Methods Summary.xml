@@ -516,7 +516,7 @@ public class MethodBodyReader
 						break;
 					}
 				default:
-					System.Diagnostics.Debugger.Break();
+					//System.Diagnostics.Debugger.Break();
 					break;
 			}
 			instructions.Add(instruction);

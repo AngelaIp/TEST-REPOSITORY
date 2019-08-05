@@ -1,0 +1,584 @@
+﻿<AML>
+ <Item type="List" id="EC3D873450264779B30D08FA0D272618" action="add">
+  <description>Mapping MRN Property values to ETIM Value Codes</description>
+  <name>MRN_Value_ETIM_Mapping</name>
+  <Relationships>
+   <Item type="Value" id="C3DBD927BF05494388B2CD1F8FFAF212" action="add">
+    <label xml:lang="en">NH00</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000066</value>
+   </Item>
+   <Item type="Value" id="A9F886E21FD645FFB0B9D4B08F348EC5" action="add">
+    <label xml:lang="en">3-Pole</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000069</value>
+   </Item>
+   <Item type="Value" id="3F2CAEF9CAE74BE79DEB99BBF9091AE0" action="add">
+    <label xml:lang="en">4-Pole</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000070</value>
+   </Item>
+   <Item type="Value" id="DF8343E96EB141948589F56751373AAC" action="add">
+    <label xml:lang="en">Blue</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000080</value>
+   </Item>
+   <Item type="Value" id="CCF0776DA10C41A0B6C2EFBFC51FBB48" action="add">
+    <label xml:lang="en">Brown</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000083</value>
+   </Item>
+   <Item type="Value" id="3E08BBF2844445B898D6A39EBD2AF43F" action="add">
+    <label xml:lang="en">D01</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000087</value>
+   </Item>
+   <Item type="Value" id="6F1F49C68C6B43BBA90B9419A6A5E521" action="add">
+    <label xml:lang="en">D02</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000088</value>
+   </Item>
+   <Item type="Value" id="F0E8126142AF49D782EA73C1FD24C9C7" action="add">
+    <label xml:lang="en">D03</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000089</value>
+   </Item>
+   <Item type="Value" id="3ABDBCC602B44601BBCA87593AD44235" action="add">
+    <label xml:lang="en">Copper</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000138</value>
+   </Item>
+   <Item type="Value" id="5876AEA3DCD54FE58E313437594ABC89" action="add">
+    <label xml:lang="en">Fast (F)</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000176</value>
+   </Item>
+   <Item type="Value" id="65C5984EA02F493BB068131753BE2060" action="add">
+    <label xml:lang="en">Time-lag</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000183</value>
+   </Item>
+   <Item type="Value" id="39C718BC947A426E99D98486826687E4" action="add">
+    <label xml:lang="en">White</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000202</value>
+   </Item>
+   <Item type="Value" id="855D2F8BE30641EA9650366B4D2F454D" action="add">
+    <label xml:lang="en">Silver</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000205</value>
+   </Item>
+   <Item type="Value" id="A67B2B885BFF4C3AB1855A7F079D8BA4" action="add">
+    <label xml:lang="en">Black</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000206</value>
+   </Item>
+   <Item type="Value" id="92EC3CF979D64AE3B08E25A017B1F6DB" action="add">
+    <label xml:lang="en">DII</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000224</value>
+   </Item>
+   <Item type="Value" id="5442CC79ED5A419BB7AB70DFBFDB04E1" action="add">
+    <label xml:lang="en">DIII</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000225</value>
+   </Item>
+   <Item type="Value" id="5D009A2AB9864FA8A9D1F73C579158DF" action="add">
+    <label xml:lang="en">DIV</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000226</value>
+   </Item>
+   <Item type="Value" id="780FE381912840F1BC3BFB0503F9ABCB" action="add">
+    <label xml:lang="en">DV</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000227</value>
+   </Item>
+   <Item type="Value" id="CB25F213477948FFA80698EFBD10EB97" action="add">
+    <label xml:lang="en">NDZ</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000229</value>
+   </Item>
+   <Item type="Value" id="415F77ED917C46E485AB3DC609C220D4" action="add">
+    <label xml:lang="en">Red</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000233</value>
+   </Item>
+   <Item type="Value" id="8A17A0B69FE1443FA76374985140926A" action="add">
+    <label xml:lang="en">Yellow</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000234</value>
+   </Item>
+   <Item type="Value" id="C44AB62BD07A4839A372A756F776E2B9" action="add">
+    <label xml:lang="en">Green</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000235</value>
+   </Item>
+   <Item type="Value" id="07FB81C5B456462C860352FAA2A62D09" action="add">
+    <label xml:lang="en">Orange</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000236</value>
+   </Item>
+   <Item type="Value" id="7C36CCDA21704D90B4506344B0B994AF" action="add">
+    <label xml:lang="en">DIN Rail</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000242</value>
+   </Item>
+   <Item type="Value" id="0A6485D860C5446DB657F718CA47387C" action="add">
+    <label xml:lang="en">Pink</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000258</value>
+   </Item>
+   <Item type="Value" id="B70728D408C54EFCA6FC4D1D26559EBC" action="add">
+    <label xml:lang="en">Grey</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000270</value>
+   </Item>
+   <Item type="Value" id="98EDE25C78A547F590CCF2DCF2313837" action="add">
+    <label xml:lang="en">Beige</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000279</value>
+   </Item>
+   <Item type="Value" id="DDFA950E9D1B4288896A662F357AA36B" action="add">
+    <label xml:lang="en">Medium time-lag</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000302</value>
+   </Item>
+   <Item type="Value" id="7DD366C871A448468069CC44A28293B1" action="add">
+    <label xml:lang="en">Screw</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000415</value>
+   </Item>
+   <Item type="Value" id="0A8A1D0968124BD6B151F68D0E2A2B88" action="add">
+    <label xml:lang="en">LED and Microswitch </label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000428</value>
+   </Item>
+   <Item type="Value" id="38A7135849F3468D9F8C114C3686F039" action="add">
+    <label xml:lang="en">Colored indicator flag</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000428</value>
+   </Item>
+   <Item type="Value" id="5E6B52BCB98A4407BA949B3E3B194468" action="add">
+    <label xml:lang="en">LED</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000432</value>
+   </Item>
+   <Item type="Value" id="FDB833A605244EFDB10D85421A17E0C4" action="add">
+    <label xml:lang="en">AC</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000460</value>
+   </Item>
+   <Item type="Value" id="D10A2ACD6A434D89BA9318E9BEE68073" action="add">
+    <label xml:lang="en">DC</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000461</value>
+   </Item>
+   <Item type="Value" id="68B8D705DDDF42BBB975C6E53105B128" action="add">
+    <label xml:lang="en">None</label>
+    <sort_order>4480</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000494</value>
+   </Item>
+   <Item type="Value" id="24B6ABDEA8094F1CB3F986DF49966CC5" action="add">
+    <label xml:lang="en">1-Pole</label>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000599</value>
+   </Item>
+   <Item type="Value" id="AD48FCB14D334C0DA60B3CF1A9C627D3" action="add">
+    <label xml:lang="en">2-Pole</label>
+    <sort_order>4736</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000600</value>
+   </Item>
+   <Item type="Value" id="91B98AD5066F4F108AFC3945D57D2DE9" action="add">
+    <label xml:lang="en">Screw</label>
+    <sort_order>4864</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000717</value>
+   </Item>
+   <Item type="Value" id="F36A3938A60A47A992AA5D3F1227FAAC" action="add">
+    <label xml:lang="en">Soldered connection</label>
+    <sort_order>4992</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV001251</value>
+   </Item>
+   <Item type="Value" id="EA3CDB98A6E8409E915ED8B73CEB3B66" action="add">
+    <label xml:lang="en">NH000</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV003991</value>
+   </Item>
+   <Item type="Value" id="3FE1A0BC1DD045F59F2E9589C18F0ECB" action="add">
+    <label xml:lang="en">NH1</label>
+    <sort_order>5248</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV003993</value>
+   </Item>
+   <Item type="Value" id="F6E518F19BB54944AB11FBEE64AD01C0" action="add">
+    <label xml:lang="en">NH2</label>
+    <sort_order>5376</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV003994</value>
+   </Item>
+   <Item type="Value" id="A51FE8B79FD040AABE8CD52B1416A057" action="add">
+    <label xml:lang="en">NH3</label>
+    <sort_order>5504</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV004005</value>
+   </Item>
+   <Item type="Value" id="0C50C9A640014A5780C5CAE8B7F8CA78" action="add">
+    <label xml:lang="en">NH4a</label>
+    <sort_order>5632</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV004006</value>
+   </Item>
+   <Item type="Value" id="0F46BA43702F4BCE9846E9BEA004271E" action="add">
+    <label xml:lang="en">Direct Screw Mount</label>
+    <sort_order>5760</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005276</value>
+   </Item>
+   <Item type="Value" id="0D5430F8E66A4040A41A87546E8D35DC" action="add">
+    <label xml:lang="en">5x20</label>
+    <sort_order>5888</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005292</value>
+   </Item>
+   <Item type="Value" id="9BE85F4063694644A501E0AC3E5A2CC1" action="add">
+    <label xml:lang="en">5x25</label>
+    <sort_order>6016</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005298</value>
+   </Item>
+   <Item type="Value" id="AEC18D30E7844EB9B42043821A1088ED" action="add">
+    <label xml:lang="en">6.3x32</label>
+    <sort_order>6144</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005299</value>
+   </Item>
+   <Item type="Value" id="AB23A5B94CC14BB0893A19D856BCB97E" action="add">
+    <label xml:lang="en">gG</label>
+    <sort_order>6272</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005306</value>
+   </Item>
+   <Item type="Value" id="A00F5A31806C44A48CD2D669FEB9F4A4" action="add">
+    <label xml:lang="en">aM</label>
+    <sort_order>6400</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005307</value>
+   </Item>
+   <Item type="Value" id="70BBA88120B7413FA62AFCBD5B574C02" action="add">
+    <label xml:lang="en">gR</label>
+    <sort_order>6528</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005308</value>
+   </Item>
+   <Item type="Value" id="987D68B416124BD0ACE4EEC72ED84A7C" action="add">
+    <label xml:lang="en">aR</label>
+    <sort_order>6656</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005309</value>
+   </Item>
+   <Item type="Value" id="F673EDA5685F41309D51582D3986F458" action="add">
+    <label xml:lang="en">DI</label>
+    <sort_order>6784</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005321</value>
+   </Item>
+   <Item type="Value" id="67F953E9407F4C53A869033B3B3E7B37" action="add">
+    <label xml:lang="en">DIN Rail</label>
+    <sort_order>6912</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005503</value>
+   </Item>
+   <Item type="Value" id="B598A70155C647F09C4D5E11AA039135" action="add">
+    <label xml:lang="en">DIN Rail</label>
+    <sort_order>7040</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV005504</value>
+   </Item>
+   <Item type="Value" id="309F500BCAE843099A897B4B90FE6C58" action="add">
+    <label xml:lang="en">IP20</label>
+    <sort_order>7168</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV006405</value>
+   </Item>
+   <Item type="Value" id="1C32CA2C9A03401AAC139DEC7D04416E" action="add">
+    <label xml:lang="en">IP54</label>
+    <sort_order>7296</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV006419</value>
+   </Item>
+   <Item type="Value" id="17B17CD99A364CA6BD038A6FE111B9DF" action="add">
+    <label xml:lang="en">IP55</label>
+    <sort_order>7424</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV006420</value>
+   </Item>
+   <Item type="Value" id="6A1E7CFF9E2E4BCDAB93C0C6C948CB64" action="add">
+    <label xml:lang="en">IP65</label>
+    <sort_order>7552</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV006421</value>
+   </Item>
+   <Item type="Value" id="6DB7CFB2D6A5465F8A0B20C04C7C59CD" action="add">
+    <label xml:lang="en">LED and Remote Audible Alarm </label>
+    <sort_order>7680</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007085</value>
+   </Item>
+   <Item type="Value" id="AB9F5038E6334BED86B5875B2E677C48" action="add">
+    <label xml:lang="en">IT</label>
+    <sort_order>7808</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007433</value>
+   </Item>
+   <Item type="Value" id="89B33F4AB4EE4653ABF69E53D648FE87" action="add">
+    <label xml:lang="en">Double indicator</label>
+    <sort_order>7936</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007471</value>
+   </Item>
+   <Item type="Value" id="96FA67ECC7034C1EAB04C5E187952F1F" action="add">
+    <label xml:lang="en">IL Indicator</label>
+    <sort_order>8064</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007553</value>
+   </Item>
+   <Item type="Value" id="CD43D26B16154445AB03317F9D6603CC" action="add">
+    <label xml:lang="en">Center indicator</label>
+    <sort_order>8192</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007553</value>
+   </Item>
+   <Item type="Value" id="EBB68FC9DBB0481FA28FCD569013C6A9" action="add">
+    <label xml:lang="en">TI Indicator</label>
+    <sort_order>8448</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007553</value>
+   </Item>
+   <Item type="Value" id="DB593506ECE74E79AEE513EFC0B10BB1" action="add">
+    <label xml:lang="en">TA Indicator</label>
+    <sort_order>8576</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007782</value>
+   </Item>
+   <Item type="Value" id="4E73D19F9E134B82A189CFD339B6C83D" action="add">
+    <label xml:lang="en">Top indicator</label>
+    <sort_order>8704</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007782</value>
+   </Item>
+   <Item type="Value" id="5374B3188A9E46EAA3F0F236A0DEF5ED" action="add">
+    <label xml:lang="en">Super fast (FF)</label>
+    <sort_order>8832</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007796</value>
+   </Item>
+   <Item type="Value" id="5BA4EB73222C4704BF28BB8B52E40395" action="add">
+    <label xml:lang="en">Super slow (TT)</label>
+    <sort_order>8960</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007797</value>
+   </Item>
+   <Item type="Value" id="F8E77BF86F154F88B460761CA3BB51C5" action="add">
+    <label xml:lang="en">TN</label>
+    <sort_order>9088</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007845</value>
+   </Item>
+   <Item type="Value" id="F455DBF9922B4BD4BC19E42EB12ACB29" action="add">
+    <label xml:lang="en">TN-C</label>
+    <sort_order>9216</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007847</value>
+   </Item>
+   <Item type="Value" id="B43B4B72FFD14863AD6F2F74CEF708E9" action="add">
+    <label xml:lang="en">TN-S</label>
+    <sort_order>9344</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007849</value>
+   </Item>
+   <Item type="Value" id="4946D707127D416E88A786132BF37BB6" action="add">
+    <label xml:lang="en">TT</label>
+    <sort_order>9472</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV007875</value>
+   </Item>
+   <Item type="Value" id="89B4D6B2EF08438BA246E437C1A8DF1B" action="add">
+    <label xml:lang="en">PCB Mount</label>
+    <sort_order>9600</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV008444</value>
+   </Item>
+   <Item type="Value" id="C2C365C80AEC40ADBB07CF9953C60B12" action="add">
+    <label xml:lang="en">NH0</label>
+    <sort_order>9728</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV008595</value>
+   </Item>
+   <Item type="Value" id="4C5A94AB5A4A48F4AB83767A1B026546" action="add">
+    <label xml:lang="en">NH4</label>
+    <sort_order>9856</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV008596</value>
+   </Item>
+   <Item type="Value" id="B9A3FD40BAFE4DD8BC5FA03AA44AC2EE" action="add">
+    <label xml:lang="en">10x38</label>
+    <sort_order>9984</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV010286</value>
+   </Item>
+   <Item type="Value" id="1CBF99D153D14A779E20E8FC04BAED30" action="add">
+    <label xml:lang="en">14x51</label>
+    <sort_order>10112</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV010287</value>
+   </Item>
+   <Item type="Value" id="D3134249B21E48979B86F0C249AD3D5A" action="add">
+    <label xml:lang="en">22x58</label>
+    <sort_order>10240</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV010288</value>
+   </Item>
+   <Item type="Value" id="E09D34F3060B4F2EBB58E24B82B9CDBC" action="add">
+    <label xml:lang="en">27x60</label>
+    <sort_order>10368</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV010289</value>
+   </Item>
+   <Item type="Value" id="BEADB905BA68474DA9072B311EDF9432" action="add">
+    <label xml:lang="en">6.35x32</label>
+    <sort_order>10496</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV010291</value>
+   </Item>
+   <Item type="Value" id="A320890B3AE84FE6AAD1F02F93D9427F" action="add">
+    <label xml:lang="en">5x30</label>
+    <sort_order>10624</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV010496</value>
+   </Item>
+   <Item type="Value" id="25C7ADFD8DAE435C967B7855AF726302" action="add">
+    <label xml:lang="en">TN-C-S</label>
+    <sort_order>10752</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV010770</value>
+   </Item>
+   <Item type="Value" id="F645CE16C9404E6D8933B32A051E12C4" action="add">
+    <label xml:lang="en">32x58</label>
+    <sort_order>10880</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011026</value>
+   </Item>
+   <Item type="Value" id="7F0F5EE2E5B44D0B94A52974310CDB08" action="add">
+    <label xml:lang="en">gPV</label>
+    <sort_order>11008</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011642</value>
+   </Item>
+   <Item type="Value" id="8CE67A31209B45F3B342B485E8D53C4E" action="add">
+    <label xml:lang="en">gB</label>
+    <sort_order>11136</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011643</value>
+   </Item>
+   <Item type="Value" id="2F793E2FC06641DD894DF751C00A015B" action="add">
+    <label xml:lang="en">gTr</label>
+    <sort_order>11264</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011644</value>
+   </Item>
+   <Item type="Value" id="68BE5C18DDB74F7D9D270AB486B71F5E" action="add">
+    <label xml:lang="en">8.5x23</label>
+    <sort_order>11392</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011645</value>
+   </Item>
+   <Item type="Value" id="C057748474404E85A13FA4BD390FF505" action="add">
+    <label xml:lang="en">17.5x63.5</label>
+    <sort_order>11520</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011646</value>
+   </Item>
+   <Item type="Value" id="4DB8FCFD80AF49BEA3A5E1E036D87ECE" action="add">
+    <label xml:lang="en">10x85</label>
+    <sort_order>11648</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011647</value>
+   </Item>
+   <Item type="Value" id="B1497B3D085F457D915AEEE3AE621D5A" action="add">
+    <label xml:lang="en">11x79</label>
+    <sort_order>11776</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011648</value>
+   </Item>
+   <Item type="Value" id="4D56CC28BEC34E5EB195DAFEF255C38E" action="add">
+    <label xml:lang="en">8.5x31.5</label>
+    <sort_order>11904</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011649</value>
+   </Item>
+   <Item type="Value" id="9513D19BEAD74F1784DBFBD77F190DD4" action="add">
+    <label xml:lang="en">8x40</label>
+    <sort_order>12032</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011650</value>
+   </Item>
+   <Item type="Value" id="32B95B6F540C4CBEBC70065B86A0144F" action="add">
+    <label xml:lang="en">TN-C, IT</label>
+    <sort_order>12160</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011932</value>
+   </Item>
+   <Item type="Value" id="BC49556E68C444CBBF865512D1F5733B" action="add">
+    <label xml:lang="en">TN-S, TT</label>
+    <sort_order>12288</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV011933</value>
+   </Item>
+   <Item type="Value" id="5014C9A913594191BB17644EA0CD818C" action="add">
+    <label xml:lang="en">Visual Indicator</label>
+    <sort_order>12416</sort_order>
+    <source_id keyed_name="MRN_Value_ETIM_Mapping" type="List">EC3D873450264779B30D08FA0D272618</source_id>
+    <value>EV000428</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,68 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="E914125EF91F43E78707D6FFCE496F06" action="add">
+  <description>Lifecycle for MRN_Digital_Asset</description>
+  <start_state keyed_name="In Development" type="Life Cycle State">B0E0D4CE7FF24A118AA2943FFE000818</start_state>
+  <name>MRN_Digital_Asset</name>
+  <Relationships>
+   <Item type="Life Cycle State" id="B0E0D4CE7FF24A118AA2943FFE000818" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <label xml:lang="en">In Development</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Digital_Asset" type="Life Cycle Map">E914125EF91F43E78707D6FFCE496F06</source_id>
+    <state_permission_id keyed_name="mrn_digital_asset_indevelopment" type="Permission">F260F2221CBC4C49BD03682D0CFD2622</state_permission_id>
+    <x>16</x>
+    <y>80</y>
+    <name>In Development</name>
+   </Item>
+   <Item type="Life Cycle State" id="412C9D92496C438294A2418818F1F3D7" action="add">
+    <image>../Images/Error.svg</image>
+    <label xml:lang="en">Obsolete</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>1</set_not_lockable>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Digital_Asset" type="Life Cycle Map">E914125EF91F43E78707D6FFCE496F06</source_id>
+    <state_permission_id keyed_name="mrn_digital_asset_obsolete" type="Permission">97EC79E3B668412FB5ED53B3C73E9E7D</state_permission_id>
+    <x>855</x>
+    <y>76</y>
+    <name>Obsolete</name>
+   </Item>
+   <Item type="Life Cycle State" id="B780A8D911624F2CB10BBD6CADBC37F3" action="add">
+    <image>../Images/Exit.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Released</label>
+    <set_is_released>1</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Digital_Asset" type="Life Cycle Map">E914125EF91F43E78707D6FFCE496F06</source_id>
+    <state_permission_id keyed_name="mrn_digital_asset_released" type="Permission">4C2A5E2B6FE34A928CBCBAD1DD714052</state_permission_id>
+    <x>382</x>
+    <y>78</y>
+    <name>Released</name>
+   </Item>
+   <Item type="Life Cycle Transition" id="11A9E4BE062240CB9C1C69B8C6C9610C" action="add">
+    <from_state keyed_name="In Development" type="Life Cycle State">B0E0D4CE7FF24A118AA2943FFE000818</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="mrn_digital_asset_indevelopment_released" type="Identity">FB7BF570308E4AAD8CB7858BAB6105F8</role>
+    <segments />
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Digital_Asset" type="Life Cycle Map">E914125EF91F43E78707D6FFCE496F06</source_id>
+    <to_state keyed_name="Released" type="Life Cycle State">B780A8D911624F2CB10BBD6CADBC37F3</to_state>
+    <x>45</x>
+    <y>-22</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="74A3AD85F2B94FBFB1468C841B5DFE1C" action="add">
+    <from_state keyed_name="Released" type="Life Cycle State">B780A8D911624F2CB10BBD6CADBC37F3</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="mrn_digital_asset_released_obsolete" type="Identity">39954B1BC32744F1A35A4B17A623450A</role>
+    <segments />
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Digital_Asset" type="Life Cycle Map">E914125EF91F43E78707D6FFCE496F06</source_id>
+    <to_state keyed_name="Obsolete" type="Life Cycle State">412C9D92496C438294A2418818F1F3D7</to_state>
+    <x>89</x>
+    <y>-21</y>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

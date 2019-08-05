@@ -4,7 +4,11 @@
   <method_code><![CDATA[if (arguments && arguments.length > 0) {
 	if (arguments[0].srcElement) {
 		if (parent.updateTabularViewColumn) {
-			parent.updateTabularViewColumn(arguments[0].srcElement.value, document.item.getAttribute('id'));
+			// IR-055699 Type-ahead specific code converting
+			//parent.updateTabularViewColumn(arguments[0].srcElement.value, document.item.getAttribute('id'));
+			var control = getFieldComponentByName(arguments[0].srcElement.name);
+			parent.updateTabularViewColumn(control.getValue(), document.item.getAttribute('id'));
+			// End of fix IR-055699
 		}
 	}
 }

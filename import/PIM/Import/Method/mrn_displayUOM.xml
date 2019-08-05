@@ -1,0 +1,330 @@
+﻿<AML>
+ <Item type="Method" id="102D590B522646C5908CC90B17B54354" action="add">
+  <comments />
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[////////////////////////////////////////////////////////////////////////////////
+//
+// Name: mrn_displayUOM
+// Author: Vijay Kannan, Kamran Aftab
+// Date: 25-JAN-2016
+// Description: This program operates on onformload of MRN_Item forms
+// If the locale is US, the units and values are converted to English units, otherwise to SI units
+//
+////////////////////////////////////////////////////////////////////////////////
+//debugger;
+//var languageCode = top.aras.getSessionContextLanguageCode();
+
+// Global constants
+const US_LOCALE = "en-US";
+// Get browser locale
+var inn = document.thisItem.getInnovator();
+var cntx = inn.getI18NSessionContext();
+var locale = cntx.GetLocale();
+//var locale = "fr-FR";
+var itemLevel = document.thisItem.getProperty("classification","");
+
+// Get all the MRN_Property items
+var returnItm = getMRNPropertyItems();
+
+var unitConversionsInstance = new UnitConversion();
+unitConversionsInstance.buildList();
+
+// Build list of MRN_Property items from the results returned, cannot treat them one by one
+// since unit properties are shared between them
+var mrnPropertiesList = [];
+
+for (var i=0;i < returnItm.getItemCount(); i++) 
+{
+    var resultItem = returnItm.getItemByIndex(i);
+    var uomPropertyItem = null;
+    
+    // If it's a UOM property, ignore it
+    var type = resultItem.getProperty("classification");
+    if (type === "MRN_UOM_Property")
+        continue;
+        
+    // If the property does not apply to this MRN_Item classification, skip it
+    if (resultItem.getProperty("mrn_level") != itemLevel)
+        continue;
+    
+    // If it doesn't have a UOM property associated with it, ignore it
+    var mrnUomPropertyItem = resultItem.getPropertyItem("mrn_uom_property");
+    if (mrnUomPropertyItem === null)
+        continue;
+ 
+ 
+    // If there is no property associated with the UOM MRN_Property, ignore it
+    uomPropertyItem = mrnUomPropertyItem.getPropertyItem("mrn_item_property");
+    if (uomPropertyItem === null)
+        continue;
+
+    // Create a UoMProperty item
+    var uom = new MRNUoMProperty(mrnUomPropertyItem);
+
+    // If the UOMProperty does not have both units, skip it, it must be for export only
+    if (uom.siUnit === "" || uom.usUnit === "" || uom.siUnit === undefined || uom.usUnit === undefined)
+        continue;
+
+    // Create the MRNProperty item
+    var mrnProperty = new MRNProperty(resultItem, uom);
+    mrnPropertiesList.push(mrnProperty);
+}
+
+// Cycle all the MRNProperties and update them
+for (var ii = 0 ; ii < mrnPropertiesList.length; ii++)
+{
+    var mrnProperty = mrnPropertiesList[ii];
+    
+    mrnProperty.convertUnits(locale);
+    //mrnProperty.uom.setValue(locale);
+    
+}
+
+return;
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// Method to get all the MRNProperty ITems
+function getMRNPropertyItems()
+{
+    // Get all the MRN_Property items
+    var qryXml = "<Item type=\"MRN_Property\"  select=\"mrn_item_property, mrn_uom_property, mrn_is_group, mrn_label, mrn_level, mrn_families, mrn_form_element, classification\" action=\"get\" orderBy=\"mrn_label\">" +
+                    "<mrn_item_property>" + 
+                      "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                    "</mrn_item_property>" +
+                    "<mrn_uom_property>" + 
+                      "<Item type=\"MRN_Property\" select=\"mrn_label, name, mrn_item_property, mrn_si_unit, mrn_us_unit, mrn_unit_multiplier\" action=\"get\">" +
+                        "<mrn_item_property>" + 
+                         "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" +
+                        "</mrn_item_property>" +
+                      "</Item>" +
+                    "</mrn_uom_property>" + 
+                    "<Relationships>" + 
+                      "<Item type=\"MRN_Property_Property\" select=\"related_id\" action=\"get\"></Item>" +
+                    "</Relationships>" +
+                 "</Item>";
+                    
+    var qry = new Item();
+    qry.loadAML(qryXml);
+    var returnItm = qry.apply();
+    
+    return returnItm;
+}
+
+// Class to encapsulate MRN_UOM_Property Item
+function MRNUoMProperty(itm){
+
+    this.item = itm;
+    var propertyItem = this.item.getPropertyItem("mrn_item_property");
+    this.propertyName = propertyItem.getProperty("name");
+
+    this.siUnit = this.item.getProperty("mrn_si_unit");
+    this.usUnit = this.item.getProperty("mrn_us_unit");
+    
+    // This is the unit read from the item property
+    this.value = document.thisItem.getProperty(this.propertyName,"");
+
+    // Function to set the uom property on the form
+    this.setValue  = function(locale)
+    {
+        var unitElement = document.getElementById("MainDataForm").elements[this.propertyName];
+        
+        // If si unit or us unit are empty, skip it
+        if (this.usUnit === "" || this.siUnit === "")
+            return;
+            
+        // Throw an exception if the form element does not exist on the form
+        if(unitElement === null)
+            throw("Form element not found:" + this.propertyName);
+        
+        // If locale is US, set the the value to US unit
+        if(locale == US_LOCALE)
+        {
+            unitElement.value = this.usUnit;
+            handleItemChange(this.propertyName, this.usUnit);
+        }
+        else // Set the value to SI unit
+        { 
+            unitElement.value = this.siUnit;
+            handleItemChange(this.propertyName, this.siUnit);
+        }
+    }
+}
+
+// Class to encapsulate MRN_Property Item
+function MRNProperty(itm, u){
+    this.item = itm;
+    this.uom = u;               // MRNUOMProperty item associated with this MRNProperty Item
+    this.propertiesList = [];   // List of Property items associated with this MRNProperty item
+    
+    // If it's a group type property, get the properties from relationships
+    var group = this.item.getProperty("mrn_is_group");
+    
+
+    if (group === "1")
+    {
+        // Find all the properties
+        var relationships = this.item.getRelationships("MRN_Property_Property");
+        for (var j = 0; j < relationships.getItemCount(); j++) 
+        {
+            var relationshipItem = relationships.getItemByIndex(j);
+            var propertyItem = relationshipItem.getRelatedItem();
+            this.propertiesList.push(propertyItem);
+        }
+    }
+    else
+    {
+        var propertyItem = this.item.getPropertyItem("mrn_item_property");
+        this.propertiesList.push(propertyItem);
+    }
+    
+    // Converts the value to the locale units for display only
+    this.convertUnits  = function(locale)
+    {
+        for (var ii = 0; ii < this.propertiesList.length; ii++)
+        {
+            var property = this.propertiesList[ii];
+            var propertyName = property.getProperty("name");
+            var value = document.thisItem.getProperty(propertyName,"");
+            var fromUnit = this.uom.value;
+            var toUnit = "";
+            if(locale == US_LOCALE)
+                toUnit = this.uom.usUnit;
+            else
+                toUnit = this.uom.siUnit;
+        
+            // If value is empty, do nothing
+            if (value == "")
+                continue;
+                
+            var multiplier = unitConversionsInstance.findMultiplier(fromUnit,toUnit);
+  
+            // Returns 0 if it could not find a multiplier
+            if (multiplier == 0)
+            {
+                alert ("Unable to get a multiplier for: \nProperty: " + this.uom.propertyName + "\nFrom Unit: " + fromUnit + "\nTo Unit: " + toUnit);
+                return;
+            }
+            
+           // Converted value
+           var convertedValue = value * multiplier;
+           
+           // Round the value to the nearest decimal        
+            convertedValue = Math.round(convertedValue*10000)/10000;
+            
+            //convertedValue = convertedValue.toLocaleString();
+            // var new_value =cntx.ConvertToNeutral(convertedValue,"decimal", "");
+            // alert ("display Converted Value: " + new_value);
+            // Get the field element from the form
+            var propertyElement = document.getElementById("MainDataForm").elements[propertyName];
+            if(propertyElement == null)
+            {
+                throw("Property not found:" + this.propertyName);
+            }
+        
+            // Set the value in the form element
+            //Moses update 20180926 to handle numbers in local format for commas and decimals
+            propertyElement.value = convertedValue.toLocaleString();
+// alert ("display Converted Value: " + cntx.ConvertFromNeutral(propertyElement.value, propertyElement.getAttribute("data_type"), ""));
+            // Apply the change to the property 
+            handleItemChange(propertyName, convertedValue);
+        }
+        
+        this.uom.setValue(locale);
+    }
+}
+
+
+// Class to provide unit conversions
+function UnitConversion(from, to, multi)
+{
+    this.fromUnit = from;
+    this.toUnit = to;
+    this.multiplier = multi;
+    var listName = "MRN_Unit_Multipliers";
+    this.propertiesList = [];
+    
+    this.buildList  = function()
+    {
+         
+         var delim = "-->";
+         
+        // Get the list values
+        var AMLQuery = "<AML><Item type=\"List\" action=\"get\">" + 
+                            "<name>" + listName + "</name>" +
+                            "<Relationships>" + 
+                                "<Item type=\"Value\" action=\"get\" select=\"label, value\"></Item>" +
+                            "</Relationships></Item></AML>";
+
+        // Run Export AML Query
+	    var allItems = new Item();
+	    allItems.loadAML(AMLQuery);
+	    allItems = allItems.apply();
+	    var allItemsCount = allItems.getItemCount();
+        var item = allItems.getItemByIndex(0);
+        
+        // Find the values
+        var relationships = item.getRelationships("Value");
+        for (var ii = 0; ii < relationships.getItemCount(); ii++) 
+        {
+            var valueItem = relationships.getItemByIndex(ii);
+            var label = valueItem.getProperty("label","");
+            var value = valueItem.getProperty("value","");
+            
+            var index = label.indexOf(delim);
+            if (index == -1)
+                throw ("Malformed label in list: " + listName);
+            var unitFrom = label.substr(0,index-1).trim();
+            var unitTo = label.substr(index + 4).trim();
+            var multiplier = 1;
+            try 
+            {
+                multiplier = parseFloat(value);
+            }
+            catch (err)
+            {
+                throw ("Unable to convert the Value of \"" + value + "\" to double in List \"" + listName + "\"");
+            }
+            if (multiplier == 1)
+                continue;
+            var unitconversion = new UnitConversion(unitFrom, unitTo, multiplier);
+            //unitconversion = unitconversion.toLocaleString();
+            this.propertiesList.push(unitconversion);
+        }
+    }
+    
+    // Returns the unit multiplier fromUnit x multiplier = toUnit
+    this.findMultiplier = function(fromUnit, toUnit)
+    {
+
+        // If same unit, return a "1"
+        if (fromUnit == toUnit)
+            return 1;
+        
+        // If something is missing, return a "0"
+        if (fromUnit === "" || toUnit === "" || fromUnit === null || toUnit === null || fromUnit === undefined || toUnit === undefined)
+            return 0
+            
+        for (var ii  = 0; ii < this.propertiesList.length; ii++)
+        {
+            
+            var property = this.propertiesList[ii];
+
+            if (property.fromUnit == fromUnit && property.toUnit == toUnit)
+                 return property.multiplier;
+        }
+        
+        return 0;
+        //throw ("No conversion found for:\nFrom unit: " + fromUnit + "\nTo unit: " + toUnit + "\nin List: " + listName);
+    }
+}
+
+
+// Method to round the decimals
+function round(value, decimals) {
+    return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+}]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_displayUOM</name>
+ </Item>
+</AML>

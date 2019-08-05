@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="732CB7843BD0433BA80B3853250847C6" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>eugene.richard@us.mersen.com</email>
+  <last_login_date>2017-01-23T10:30:22</last_login_date>
+  <login_name>erichard</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Eugene Richard" type="Identity">EE65584E07614FA8BE1693940472FFA3</owned_by_id>
+  <working_directory>C:\temp\Aras</working_directory>
+  <first_name>Eugene</first_name>
+  <last_name>Richard</last_name>
+  <Relationships>
+   <Item type="Alias" id="6CA58C0B4F92412786503152B660D44B" action="add">
+    <from_date>2017-01-19T16:33:22</from_date>
+    <related_id keyed_name="Eugene Richard" type="Identity">EE65584E07614FA8BE1693940472FFA3</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Eugene Richard" type="User">732CB7843BD0433BA80B3853250847C6</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

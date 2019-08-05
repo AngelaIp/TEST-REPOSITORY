@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="EF68B3D0DA904D578957F59A0072708B" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>syd.farber@mersen.com</email>
+  <login_name>test123</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="test123 123" type="Identity">F670F4C107594F7DA52E59C33403D8D8</owned_by_id>
+  <pwd_is_set_on>2017-03-30T10:59:55</pwd_is_set_on>
+  <telephone>4961</telephone>
+  <first_name>test123</first_name>
+  <last_name>123</last_name>
+  <Relationships>
+   <Item type="Alias" id="994758005ADF41BEA950476D28F894BC" action="add">
+    <from_date>2017-03-30T10:58:38</from_date>
+    <related_id keyed_name="test123 123" type="Identity">F670F4C107594F7DA52E59C33403D8D8</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="test123 123" type="User">EF68B3D0DA904D578957F59A0072708B</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

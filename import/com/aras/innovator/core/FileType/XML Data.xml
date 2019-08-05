@@ -1,9 +1,0 @@
-﻿<AML>
- <Item type="FileType" id="679825C8087F41BFB5CC3645C335337E" action="add">
-  <description>XML Data</description>
-  <extension>xml</extension>
-  <mimetype>text/xml</mimetype>
-  <permission_id keyed_name="92DA74B1A1B14FE2AADAC5C80EB9472A" type="Permission">92DA74B1A1B14FE2AADAC5C80EB9472A</permission_id>
-  <name>XML Data</name>
- </Item>
-</AML>

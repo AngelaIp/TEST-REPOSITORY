@@ -1,0 +1,26 @@
+﻿<AML>
+ <Item type="Method" id="259B7BD6BED6451AA1894CC64FBEEDAE" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Name: mrn_copyProperties
+// Called From: MRN_Item, OnBeforeAdd and OnAfterUpdate
+// Purpose: Sets the mrn_parent_msl of an MSL to itself. 
+//          Copies the parent msl from Frame to all Products referencing it
+//          This allows the foreign properties to point to the properties on the MSL itself
+//          Frame and Part item use the properties from mrn_parent_msl
+// 3/22/2016    Kamran Aftab    Developed for Mersen
+
+
+// if (System.Diagnostics.Debugger.Launch()) 
+//     //System.Diagnostics.Debugger.Break();
+
+// If this is an MSL, copy itself to parent msl
+string level = this.getProperty("classification","");
+if (level == "Level 4 - MSL")
+    this.setProperty("mrn_parent_msl",this.getID());
+
+
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_copyParentMSL</name>
+ </Item>
+</AML>

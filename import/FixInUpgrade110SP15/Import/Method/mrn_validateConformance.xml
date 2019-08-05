@@ -1,0 +1,231 @@
+﻿<AML>
+ <Item type="Method" id="764235236E914C4DAC93364D7B7C465E" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// This code checks the values of given properties for several conditions
+// - Uniqueness of value
+// - Length of value
+// - Unallowed characters in value
+// Method is called by the MRN_Item OnBeforeAdd & OnBeforeUpdate events
+// Kamran Aftab - March 2016
+
+    // // Debugger
+    // if (System.Diagnostics.Debugger.Launch()) 
+    //     //System.Diagnostics.Debugger.Break();
+    
+    
+    // Initialize
+    Innovator inn = this.getInnovator();
+    ItemProperty.thisLevel = this.getProperty("classification",""); // Level of this item
+    ItemProperty.inn = inn;
+    ItemProperty.thisItem = this;
+    
+    // Create a list of ItemProperty types
+    List<ItemProperty> propertiesList = new List<ItemProperty>();
+    
+    // Add Product Form ItemProperty objects to the list of properties to check
+    // First field is the property to check
+    // Second field is the label for the error message
+    // Third field is the level where this property is checked. If empty string is supplied, the property is checked at every level
+    // Fourth field is the maximum allowable length of the value. If a -1 is supplied, this check is skipped
+    // Fifth field is the characters not allowed in the value. If empty string is supplied, the check is skipped
+    
+    // Check these properties for Length
+    propertiesList.Add(new ItemProperty("mrn_name_number", "Item Number","Level 6 - Product",20,""));
+    
+    // Check these properties for certain unallowed characters
+    propertiesList.Add(new ItemProperty("mrn_name_number", "Name","Level 4 - MSL",-1,"[]{}~|%!$*^\\?\">`<&¦';"));
+    propertiesList.Add(new ItemProperty("mrn_name_number", "Name","Level 5 - Frame",-1,"[]{}~|%!$*^\\?\">`<&¦';"));
+    propertiesList.Add(new ItemProperty("mrn_name_number", "Name","Level 6 - Product",-1,"[]{}~|%!$*^\\?\">`<&¦'; "));
+    
+    // Check these properties for unique values
+    propertiesList.Add(new ItemProperty("mrn_name_number", "Name","Level 4 - MSL",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_name_number", "Name","Level 5 - Frame",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_name_number", "Name","Level 6 - Product",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_gtin_master_pack", "GTIN - Master Pack","Level 6 - Product",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_ean_upc_code", "EAN/UPC Code","Level 6 - Product",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_gtin_sell_pack", "GTIN Sell Pack","Level 6 - Product",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_cat_no", "Catalogue No.","Level 6 - Product",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_item_description", "Short Description","Level 6 - Product",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_ref_no", "Ref #","Level 6 - Product",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_gtin_ship_pack", "GTIN Ship Pack","Level 6 - Product",-1,""));
+    propertiesList.Add(new ItemProperty("mrn_short_description_80max", "Short Description (80Max)","Level 6 - Product",-1,""));
+
+    
+    // Loop through each property to check if it is unique
+    // Display an error if not unique and exit out without saving the item
+    foreach (ItemProperty itemProperty in propertiesList)
+    {
+        string errorMessg = itemProperty.checkUniqueness();
+        
+        if (errorMessg != "")
+        {
+            //06/24/2019 to fix IR-079391 [Mersen_US Upgrade]HTML tag's shown for EM while duplicate creat
+            var err = inn.newError(errorMessg);
+            err.setErrorSource("isHtml");
+            return err;
+
+        }
+    }
+
+     // Loop through each property to check if it the length is within allowed
+     // Display an error if length is greater than allowed and exit out without saving the item
+    foreach (ItemProperty itemProperty in propertiesList)
+    {
+        string errorMessg = itemProperty.checkLength();
+        
+        if (errorMessg != "")
+        {
+            var err = inn.newError(errorMessg);
+            err.setErrorSource("isHtml");
+            return err;
+
+        }
+    }
+    
+     // Loop through each property to check if it there are any unallowed characters
+     // Display an error if invalid character found and exit out without saving the item
+    foreach (ItemProperty itemProperty in propertiesList)
+    {
+        string errorMessg = itemProperty.checkUnallowedChars();
+        
+        if (errorMessg != "")
+        {
+            var err = inn.newError(errorMessg);
+            err.setErrorSource("isHtml");
+            return err;
+
+        }
+    }
+    
+    return this;
+}
+
+// Class to hold properties that need to be checked
+public class ItemProperty
+{
+    string name;      // Name of the property in the data model
+    string label;     // Label of the property, to be displayed on the error dialog
+    string level;     // Classification level for which this property is mandatory
+    int length;       // Allowed length of property value
+    string invalidChars;  // List of characters that are not allowed in the value
+    
+    public static Innovator inn;
+    public static Item thisItem;
+    public static string thisLevel; // Level of this item
+    
+    public ItemProperty(string n, string la, string lv, int len, string chars)
+    {
+        name = n;
+        label = la;
+        level = lv;
+        length = len;
+        invalidChars = chars;
+    }
+    
+    // Checks to see if the property value is unique for the item. If not, a non-empty string is returned.
+    public string checkUniqueness()
+    {
+        // if level of property is not empty or same as level of this item, skip the property check
+        if ((thisLevel != level) && (level != ""))
+            return "";
+        
+        // If the property value is empty, skip this test
+        if (thisItem.getProperty(name,"") == "")
+            return "";
+            
+        // Find items that have the same property value
+        Item items = inn.newItem("MRN_Item","get");
+        items.setProperty(name, thisItem.getProperty(name,""));
+        try{
+            items = items.apply();
+        }
+        catch (Exception ex) 
+        {
+	        throw new Exception("Error getting product items. " + ex.Message);
+        }
+        
+        int count = items.getItemCount();
+        if (count < 1)
+            return "";
+        
+        // Get the item number where this value is used
+        for (int ii = 0; ii < count; ii++)
+        {
+            Item oldItem = items.getItemByIndex(ii);
+            
+            // if oldItem is the same as this, skip it
+            if (oldItem.getProperty("config_id","") == thisItem.getProperty("config_id",""))
+                continue;
+            else
+            {
+                string itemName = oldItem.getProperty("mrn_name_number","");
+        
+                return ("The given value for \"" + label + "\" has already been used in existing item \"" + itemName + "\"<br><br>This property must be unique amont all products!");
+                //return (@"Item """ + itemName + @""" already exists with the given value for: " + label);
+            }
+     
+            break;
+        }
+        
+        return "";
+        
+    }
+    
+    // Checks to see if the length of the property value is whithin the allowed length. If not, a non-empty string is returned.
+    public string checkLength()
+    {
+        // if level of property is not empty or same as level of this item, skip the property check
+        if ((thisLevel != level) && (level != ""))
+            return "";
+        
+        // If length supplied is "-1", skip the check 
+        if (length == -1)
+            return "";
+            
+        // Get the length of the property
+        string value = thisItem.getProperty(name,"");
+        int valueLength = value.Length;
+        
+        if (valueLength > length)
+            return (@"Maximum length allowed for """ + label + @""" is: " + length.ToString() + "  (found: " + valueLength + ")");
+        else
+            return "";
+    }
+    
+    // Checks to see if the value has any unallowed characters. If found, a non-empty string is returned.
+    public string checkUnallowedChars()
+    {
+        // if level of property is not empty or same as level of this item, skip the property check
+        if ((thisLevel != level) && (level != ""))
+            return "";
+        
+        // If chars supplied is "", skip the check 
+        if (invalidChars == "")
+            return "";
+            
+        // Get the value of the property
+        string value = thisItem.getProperty(name,"");
+        int valueLength = value.Length;
+        
+        // Get the invalid characters into an array
+        char[] cArray = invalidChars.ToCharArray();
+    
+        // Check for each of the invalid characters in the property value
+        int match = -1;
+        match = value.IndexOfAny(cArray);
+    
+        if (match != -1)
+        {    
+            string errorText = @"The """ + label + @""" field has an invalid character.";
+            errorText += Environment.NewLine;
+            errorText += " \r\nFollowing characters are not allowed:";
+            errorText += " \"" + invalidChars + "\"";
+            return errorText;
+        }
+        
+        return "";
+    }]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_validateConformance</name>
+ </Item>
+</AML>

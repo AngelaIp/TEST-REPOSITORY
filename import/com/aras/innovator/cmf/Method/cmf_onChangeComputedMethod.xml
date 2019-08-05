@@ -1,7 +1,10 @@
 ﻿<AML>
  <Item type="Method" id="32A15DF2465940619B695415F05169A9" action="add">
   <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
-  <method_code><![CDATA[if (srcElement.value) {
+  <method_code><![CDATA[// IR-055699 Type-ahead specific code converting
+	//if (srcElement.value) {
+	var control = getFieldComponentByName(srcElement.name);
+	if (control.getValue()) {
 	var node = document.item;
 	var isJustAdded = node.getAttribute('action') === 'add';
 	if (!isJustAdded) {
@@ -13,7 +16,8 @@
 		node.appendChild(relNode);
 	}
 
-	var methodItem = aras.getItemByName('Method', srcElement.value);
+	//var methodItem = aras.getItemByName('Method', srcElement.value);
+	var methodItem = aras.getItemByName('Method', control.getValue());
 	var methodId = methodItem.getAttribute('id');
 
 	var computedPropertyNode = relNode.selectSingleNode('Item[@type=\'cmf_ComputedProperty\' and not(@action=\'delete\')]');
@@ -29,7 +33,9 @@
 	computedProperty.setProperty('related_id', '');
 	computedProperty.setPropertyAttribute('related_id', 'is_null', '1');
 	computedProperty.setProperty('on_client_compute_method', methodId);
-	computedProperty.setPropertyAttribute('on_client_compute_method', 'keyed_name', srcElement.value);
+	//computedProperty.setPropertyAttribute('on_client_compute_method', 'keyed_name', srcElement.value);
+	computedProperty.setPropertyAttribute('on_client_compute_method', 'keyed_name', control.getValue());
+	// End of fix IR-055699
 	computedProperty.setPropertyAttribute('on_client_compute_method', 'type', 'Method');
 	relNode.appendChild(computedProperty.node);
 

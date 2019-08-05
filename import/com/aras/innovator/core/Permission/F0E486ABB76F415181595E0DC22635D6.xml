@@ -21,7 +21,7 @@
     <can_discover>1</can_discover>
     <can_get>1</can_get>
     <can_update>0</can_update>
-    <from_date>2003-09-04T04:17:17</from_date>
+    <from_date>2003-09-03T21:17:17</from_date>
     <related_id keyed_name="World" type="Identity">
      <Item type="Identity" action="get" select="id">
       <name>World</name>

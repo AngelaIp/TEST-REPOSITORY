@@ -1,0 +1,122 @@
+﻿<AML>
+ <Item type="List" id="5B80E745689F4E6F8AE6C06BD096BEFE" action="add">
+  <description>Typesof Indication Systems</description>
+  <name>MRN_Indication_System_Types</name>
+  <Relationships>
+   <Item type="Value" id="21EBACE7DD5D4A57AC1DEA3EAACE06D5" action="add">
+    <label xml:lang="en">Center Indicator</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>Center Indicator</value>
+   </Item>
+   <Item type="Value" id="492BB47B2AE04A44A9D2430DB18AE239" action="add">
+    <label xml:lang="en">Colored indicator flag</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>Colored indicator flag</value>
+   </Item>
+   <Item type="Value" id="B59A66339F314C64B2667BA316ED2629" action="add">
+    <label xml:lang="en">Double Indicator</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>Double Indicator</value>
+   </Item>
+   <Item type="Value" id="F5A1BC7F91F349D59B1F06699E6B2B4D" action="add">
+    <label xml:lang="en">EI Indicator</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>EI Indicator</value>
+   </Item>
+   <Item type="Value" id="975058CF64B947DFBF9656136CF22749" action="add">
+    <label xml:lang="en">EI-A Indicator</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>EI-A Indicator</value>
+   </Item>
+   <Item type="Value" id="AF2B7A64BBF94EDCAEF9D9B3581350D6" action="add">
+    <label xml:lang="en">EI-B Indicator</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>EI-B Indicator</value>
+   </Item>
+   <Item type="Value" id="7DA07B7C9AE94AB19A3BC79A512D77E1" action="add">
+    <label xml:lang="en">IL Indicator</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>IL Indicator</value>
+   </Item>
+   <Item type="Value" id="F93DFC4C837D45659567E6DD405304AF" action="add">
+    <label xml:lang="en">LED</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>LED</value>
+   </Item>
+   <Item type="Value" id="1C11C5817658418DA4AF590FCCC46D9E" action="add">
+    <label xml:lang="en">LED and Microswitch</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>LED and Microswitch</value>
+   </Item>
+   <Item type="Value" id="E242FB6A562A4976867604416C6DA718" action="add">
+    <label xml:lang="en">LED and Remote</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>LED and Remote</value>
+   </Item>
+   <Item type="Value" id="784462FE0B9548078BF72C1546EC3715" action="add">
+    <label xml:lang="en">LED and Remote Audible Alarm</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>LED and Remote Audible Alarm</value>
+   </Item>
+   <Item type="Value" id="06A8F5ACCC9F48CF89C642D01D5ACE72" action="add">
+    <label xml:lang="en">Microswitch</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>Microswitch</value>
+   </Item>
+   <Item type="Value" id="A16134FB373E4E5B8BC342135087487E" action="add">
+    <label xml:lang="en">Microswitch / 3 pin dry contact</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>Microswitch / 3 pin dry contact</value>
+   </Item>
+   <Item type="Value" id="55FFC158D6AA4954A7FAAE812C5A6A71" action="add">
+    <label xml:lang="en">SmartSpot®</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>SmartSpot®</value>
+   </Item>
+   <Item type="Value" id="F731F1D34E5E4672A6DCF495E8B92E40" action="add">
+    <label xml:lang="en">Striker</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>Striker</value>
+   </Item>
+   <Item type="Value" id="89C73050E4FF42758F970F72B25E6B6D" action="add">
+    <label xml:lang="en">TA Indicator</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>TA Indicator</value>
+   </Item>
+   <Item type="Value" id="1FEDAAECE5B44A5DB865456B4528C765" action="add">
+    <label xml:lang="en">TI Indicator</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>TI Indicator</value>
+   </Item>
+   <Item type="Value" id="4BEE6EEF951345E4B9478C021ED1A7B2" action="add">
+    <label xml:lang="en">Top Indicator</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>Top Indicator</value>
+   </Item>
+   <Item type="Value" id="01B31C372E004C0D811A0A15EAB8A953" action="add">
+    <label xml:lang="en">Visual Indicator</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_Indication_System_Types" type="List">5B80E745689F4E6F8AE6C06BD096BEFE</source_id>
+    <value>Visual Indicator</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

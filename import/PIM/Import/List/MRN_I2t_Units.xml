@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="List" id="C48E98A2FFFC4B1EB4CA6419DA6EA7EC" action="add">
+  <description>I2t Units</description>
+  <name>MRN_I2t_Units</name>
+  <Relationships>
+   <Item type="Value" id="36A6DB7710674B779B8CA980D591BE23" action="add">
+    <label xml:lang="en">kA²s</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_I2t_Units" type="List">C48E98A2FFFC4B1EB4CA6419DA6EA7EC</source_id>
+    <value>kA²s</value>
+   </Item>
+   <Item type="Value" id="2AD060A724344CA6B85F4B32B98018C5" action="add">
+    <label xml:lang="en">A²s</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_I2t_Units" type="List">C48E98A2FFFC4B1EB4CA6419DA6EA7EC</source_id>
+    <value>A²s</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

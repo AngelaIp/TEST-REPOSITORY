@@ -1,0 +1,209 @@
+﻿<AML>
+ <Item type="Method" id="565CF7F46AFA4778A050939C00221B89" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[
+	//onAfterUpdateMethod
+	inn = this.getInnovator();
+	string mrnFileId = "";
+	string mrnFileType = "";
+	string action = "";
+	
+	if (this.getType().Equals("Document", StringComparison.Ordinal))
+	{
+		//the value of collection RequestState["eventDocUse"] will be used in the method "mrn_onBefore_updateDALinks"
+		RequestState["eventDocUse"] = true;
+		//the value of collection RequestState["sourceFileIds"] was initialised in the method "mrn_onBefore_updateDALinks" 
+		string[] sourceFileIds = Convert.ToString(RequestState["sourceFileIds"]).Split(',');
+		string oldClassification = (string)RequestState["oldClassification"];
+		string fileId = "";
+		Item docFile = GetDocWithFile(this.getID());
+		if (docFile.isError()) 
+		{
+			return docFile;
+		}
+		//Check that only one file marked as Single Default
+		Item currentDocItem = CheckForMultipleDefaults(docFile);
+		if (currentDocItem.isError())
+		{
+			return currentDocItem;
+		}
+		
+		Item allMrnItem = GetAllMRNItemRelatedWithRelaship(this.getID());
+		if (allMrnItem.isError()) 
+		{
+			return this;
+		}
+		string classification = docFile.getProperty("classification","");
+		
+		for (int i=0, count = allMrnItem.getItemCount(); i < count; i++)
+		{
+			Item mrnItem = GetMRNWithFileItem(allMrnItem.getItemByIndex(i).getID(),classification);
+			Item checkMrnDocItem = mrnItem.getRelationships("MRN_Item_Document");
+			if (checkMrnDocItem.getItemCount() > 1)
+			{
+					return inn.newError(String.Format("MRN_Item {0} already contains Document with file marked as Single Default. Please resolve this before continuing.",mrnItem.getID()));  
+			}
+			switch (mrnItem.fetchLockStatus())
+			{
+				case 0:
+				case 2:
+					action = "edit";
+					break;
+				case 1:
+					action = "update";
+					break;
+				default:
+					continue;
+			}
+			currentDocItem = CheckForMultipleDefaults(mrnItem);
+			if (currentDocItem.isError())
+			{
+				return currentDocItem;
+			}
+			switch (classification)
+			{
+				case "Photo":
+					mrnFileId =  mrnItem.getProperty("mrn_photo", "");
+					mrnFileType = "mrn_photo";
+					break;
+				case "Datasheet":
+					mrnFileId =  mrnItem.getProperty("mrn_datasheet", "");
+					mrnFileType = "mrn_datasheet";
+					break;
+			}
+			Item relshipItem = docFile.getRelationships("Document File");
+			if (relshipItem.getItemCount() > 0)
+			{
+				fileId = relshipItem.getItemByIndex(0).getRelatedItemID();
+				if (!String.IsNullOrEmpty(fileId) && !mrnFileId.Equals(fileId, StringComparison.Ordinal))
+				{
+					if (classification.Equals("Photo", StringComparison.Ordinal) || classification.Equals("Datasheet", StringComparison.Ordinal))
+					{
+						Item mrnEditItem = EditMRNItem(mrnItem.getID(),fileId, mrnFileType, action);
+						if (mrnEditItem.isError()) 
+						{
+							return mrnEditItem;
+						}
+					}
+				}
+			}
+			else
+			{
+				//if the only source value was deleted
+				if (!String.IsNullOrEmpty(sourceFileIds[0]))
+				{
+					Item mrnCleanItem = CleanMRNItem(mrnItem.getID(), mrnFileType, action);
+					if (mrnCleanItem.isError()) 
+					{
+						return mrnCleanItem;
+					}
+				}
+			}
+			if (!oldClassification.Equals(classification, StringComparison.Ordinal))
+			{
+				string sourceFileType = oldClassification == "Photo" ? "mrn_photo" : (oldClassification == "Datasheet" ? "mrn_datasheet" : "" );
+				string sourceFileId = oldClassification == "Photo" ? mrnItem.getProperty("mrn_photo", "") : (oldClassification == "Datasheet" ? mrnItem.getProperty("mrn_datasheet", "") : "" );
+				if (!String.IsNullOrEmpty(sourceFileType) && sourceFileId.Equals(fileId, StringComparison.Ordinal))
+				{
+					Item mrnCleanItem = CleanMRNItem(mrnItem.getID(), sourceFileType, action);
+					if (mrnCleanItem.isError()) 
+					{
+						return mrnCleanItem;
+					} 
+				}
+			}
+		}
+			
+	}
+ return this;
+}
+
+Innovator inn;
+
+internal Item CheckForMultipleDefaults(Item docFile)
+{
+	Item docFileRels = docFile.getRelationships("Document File");
+	if(docFileRels.getItemCount() < 2)
+		return this;
+	return inn.newError(String.Format("Document {0} contains multiple Single Default Files. Only one can exist per Document.Please resolve this before continuing.",
+							docFile.getProperty("item_number")));
+}
+
+internal Item GetDocWithFile(string id)
+{
+	Item docItem = inn.newItem("Document","get");
+	docItem.setProperty("is_current", "1");
+	docItem.setID(id);
+	docItem.setAttribute("select","id,classification");
+	
+	Item docFileItem = inn.newItem("Document File","get");
+	docFileItem.setProperty("mrn_single_default", "1");
+	docFileItem.setAttribute("select","id,mrn_single_default,related_id");
+	
+	Item fileItem = inn.newItem("File","get");
+	fileItem.setAttribute("select","id,filename");
+	
+	docFileItem.setRelatedItem(fileItem);
+	docItem.addRelationship(docFileItem);
+	return docItem.apply();
+}
+
+internal Item GetAllMRNItemRelatedWithRelaship(string id)
+{
+	Item mrnItem = inn.newItem("MRN_Item","get");
+	mrnItem.setProperty("is_current", "1");
+	mrnItem.setAttribute("select","id,mrn_photo,mrn_datasheet,locked_by_id");
+	
+	Item mrnDocItem = inn.newItem("MRN_Item_Document","get");
+	mrnDocItem.setProperty("related_id",id);
+	mrnDocItem.setAttribute("select","id,related_id");
+	
+	mrnItem.addRelationship(mrnDocItem);
+	return mrnItem.apply();
+}
+
+internal Item EditMRNItem(string id, string fileId, string mrnFileType, string action )
+{
+	Item mrnItem = inn.newItem("MRN_Item", action);
+	mrnItem.setID(id);
+	mrnItem.setProperty(mrnFileType, fileId);
+	mrnItem.setAttribute("version", "0");
+	return mrnItem.apply();
+}
+
+internal Item CleanMRNItem(string id, string mrnFileType, string action)
+{
+	Item mrnItem = inn.newItem("MRN_Item",action);
+	mrnItem.setID(id);
+	mrnItem.setProperty(mrnFileType, "");
+	mrnItem.setPropertyCondition(mrnFileType, "is null");
+	return mrnItem.apply();
+}
+
+internal Item GetMRNWithFileItem(string id, string classification)
+{
+	Item mrnItem = inn.newItem("MRN_Item","get");
+	mrnItem.setProperty("is_current", "1");
+	mrnItem.setID(id);
+	mrnItem.setAttribute("select","id,mrn_photo,mrn_datasheet,locked_by_id");
+	
+	Item mrnDocItem = inn.newItem("MRN_Item_Document","get");
+	mrnDocItem.setAttribute("select","id,related_id");
+	
+	Item docItem = inn.newItem("Document","get");
+	docItem.setProperty("classification", classification);
+	docItem.setAttribute("select","id,classification");
+	
+	Item docFileItem = inn.newItem("Document File","get");
+	docFileItem.setProperty("mrn_single_default", "1");
+	docFileItem.setAttribute("select","id,mrn_single_default,related_id");
+	
+	docItem.addRelationship(docFileItem);
+	mrnDocItem.setRelatedItem(docItem);
+	mrnItem.addRelationship(mrnDocItem);
+	return mrnItem.apply();
+	]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_onAfter_updateDALinks</name>
+ </Item>
+</AML>

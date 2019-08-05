@@ -1,0 +1,110 @@
+﻿<AML>
+ <Item type="List" id="59EA9F8FB7474D239D3647E42482E7F2" action="add">
+  <description>General name given to product brand</description>
+  <name>MRN_Product_Brand</name>
+  <Relationships>
+   <Item type="Value" id="4462CB9C7DAA4F628B7EF005E745C3F2" action="add">
+    <label xml:lang="en">Amp-Trap®</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Amp-Trap®</value>
+   </Item>
+   <Item type="Value" id="519A7F4E2E6C45EAB8ABC1585EE86282" action="add">
+    <label xml:lang="en">Amp-Trap 2000®</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Amp-Trap 2000®</value>
+   </Item>
+   <Item type="Value" id="5140AB4851214526A13459086376C019" action="add">
+    <label xml:lang="en">Protistor®</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Protistor®</value>
+   </Item>
+   <Item type="Value" id="8B484CE195244180A57BBA6D38A80E39" action="add">
+    <label xml:lang="en">Tri-Onic®</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Tri-Onic®</value>
+   </Item>
+   <Item type="Value" id="2B81731F3BE845A483A652A6209D84EE" action="add">
+    <label xml:lang="en">Surge-Trap®</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Surge-Trap®</value>
+   </Item>
+   <Item type="Value" id="668616948BC8495883FE8520D47FC701" action="add">
+    <label xml:lang="en">UltraSafe™</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>UltraSafe™</value>
+   </Item>
+   <Item type="Value" id="C45EDBE1E39944AB8A74AFC936674733" action="add">
+    <label xml:lang="en">Limitor®</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Limitor®</value>
+   </Item>
+   <Item type="Value" id="00E0B571686842AC9687D3C970A20167" action="add">
+    <label xml:lang="en">HelioProtection®</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>HelioProtection®</value>
+   </Item>
+   <Item type="Value" id="C56A4D8F600A43E9BFCECF1054A49DDF" action="add">
+    <label xml:lang="en">MULTIFIX®</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>MULTIFIX®</value>
+   </Item>
+   <Item type="Value" id="B25FB055B1D54BF280AB316069923355" action="add">
+    <label xml:lang="en">MULTIBLOC®</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>MULTIBLOC®</value>
+   </Item>
+   <Item type="Value" id="EDCACE7A6D2B4FEF827115D5A9B75271" action="add">
+    <label xml:lang="en">MULTIVERT®</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>MULTIVERT®</value>
+   </Item>
+   <Item type="Value" id="3C48662144BA4352B74C22A7016EE308" action="add">
+    <label xml:lang="en">Modulostar®</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Modulostar®</value>
+   </Item>
+   <Item type="Value" id="0A5BB9329371406C8BC09600FAC725A5" action="add">
+    <label xml:lang="en">Linocur®</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Linocur®</value>
+   </Item>
+   <Item type="Value" id="9106CC0361C04873879E085FEEF5A1F8" action="add">
+    <label xml:lang="en">Innozed®</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Innozed®</value>
+   </Item>
+   <Item type="Value" id="ECF90755F5F04942B8B14219B7CA3545" action="add">
+    <label xml:lang="en">Neozed®</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Neozed®</value>
+   </Item>
+   <Item type="Value" id="135C8F20F6B749EE8E1DE8B57650A2A4" action="add">
+    <label xml:lang="en">Neokit®</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Neokit®</value>
+   </Item>
+   <Item type="Value" id="57A05D68E48643169BC533E38A6D53B9" action="add">
+    <label xml:lang="en">Unassigned</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_Product_Brand" type="List">59EA9F8FB7474D239D3647E42482E7F2</source_id>
+    <value>Unassigned</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,206 @@
+﻿<AML>
+ <Item type="List" id="BE484D90B7B343D38A996454D56572F5" action="add">
+  <description>Wire connections</description>
+  <name>MRN_Wire_Connections</name>
+  <Relationships>
+   <Item type="Value" id="815FD8C65DC74ADBBDC0004281FDA22E" action="add">
+    <label xml:lang="en">1/4in Quick Connect / Solder</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>1/4in Quick Connect / Solder</value>
+   </Item>
+   <Item type="Value" id="7E1F4D07FD634295B3B4E59910EBDDAA" action="add">
+    <label xml:lang="en">1/4in Quick Connect / Solder, Right Angle</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>1/4in Quick Connect / Solder, Right Angle</value>
+   </Item>
+   <Item type="Value" id="FE7D66E0EBDD4413811A21D9FB4FA430" action="add">
+    <label xml:lang="en">Box</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Box</value>
+   </Item>
+   <Item type="Value" id="E6FB3410E6BF41B196C522D091673D5D" action="add">
+    <label xml:lang="en">Box In-Line Clip</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Box In-Line Clip</value>
+   </Item>
+   <Item type="Value" id="695D8789411242F08AC65B4BD337FEAB" action="add">
+    <label xml:lang="en">Box Side-Clip</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Box Side-Clip</value>
+   </Item>
+   <Item type="Value" id="A04F1EB6A26141D797407678F7B0C7B4" action="add">
+    <label xml:lang="en">Box To Stud</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Box To Stud</value>
+   </Item>
+   <Item type="Value" id="A77815759FF54D0883A89E3BC89ECB5F" action="add">
+    <label xml:lang="en">Box with Reinforced Clip</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Box with Reinforced Clip</value>
+   </Item>
+   <Item type="Value" id="B86276D1CCC24712B1E1C35A33232C34" action="add">
+    <label xml:lang="en">Cage Clamp</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Cage Clamp</value>
+   </Item>
+   <Item type="Value" id="E4204692D6B84726B7BF8B66604120BD" action="add">
+    <label xml:lang="en">Cage Clamp / Screw</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Cage Clamp / Screw</value>
+   </Item>
+   <Item type="Value" id="C76A6A2E3906401E8CB59F932FA4B9B1" action="add">
+    <label xml:lang="en">Clamp Strap</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Clamp Strap</value>
+   </Item>
+   <Item type="Value" id="9AAE208BBF924BB1AE99B08F2D4DF071" action="add">
+    <label xml:lang="en">Clamp Strap / Screw</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Clamp Strap / Screw</value>
+   </Item>
+   <Item type="Value" id="AAAD996321364F5FB0F1CB4C85DA53D0" action="add">
+    <label xml:lang="en">Clamping Yoke</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Clamping Yoke</value>
+   </Item>
+   <Item type="Value" id="00EA6318ECE14C9193E52F9769A17627" action="add">
+    <label xml:lang="en">Clamping Yoke / Screw</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Clamping Yoke / Screw</value>
+   </Item>
+   <Item type="Value" id="B361DCDBCEAB4FBCA261A4C33D5BFA08" action="add">
+    <label xml:lang="en">Copper Box</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Copper Box</value>
+   </Item>
+   <Item type="Value" id="9CA0B52A7AB347F98533278476E5FE1D" action="add">
+    <label xml:lang="en">Crimp</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Crimp</value>
+   </Item>
+   <Item type="Value" id="A80CAA1EAEC24F13820D3A1041A15286" action="add">
+    <label xml:lang="en">Crimp / Set Screw</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Crimp / Set Screw</value>
+   </Item>
+   <Item type="Value" id="5DC700453E7E44329B058722698B7935" action="add">
+    <label xml:lang="en">F (m-f)</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>F (m-f)</value>
+   </Item>
+   <Item type="Value" id="6657BE2E612041D3B9AB843A0C792739" action="add">
+    <label xml:lang="en">Faston Lugs</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Faston Lugs</value>
+   </Item>
+   <Item type="Value" id="1F6F04DF59844EB499C7A4A27BC14FD6" action="add">
+    <label xml:lang="en">N (m-f)</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>N (m-f)</value>
+   </Item>
+   <Item type="Value" id="B9E6355A0B244E978282DC1F6D6DAB51" action="add">
+    <label xml:lang="en">Pressure Plate</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Pressure Plate</value>
+   </Item>
+   <Item type="Value" id="2263381ABED742FDAD115F8F6D059DFE" action="add">
+    <label xml:lang="en">Pressure Plate with Reinforced Clip</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Pressure Plate with Reinforced Clip</value>
+   </Item>
+   <Item type="Value" id="D853749D5B8142D1931AB9477B564C52" action="add">
+    <label xml:lang="en">Pre-wired</label>
+    <sort_order>220</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Pre-wired</value>
+   </Item>
+   <Item type="Value" id="C37E6E210B064609B326D5E49BDB3727" action="add">
+    <label xml:lang="en">RJ45</label>
+    <sort_order>230</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>RJ45</value>
+   </Item>
+   <Item type="Value" id="16CD3AEE2FBE48E5BEBCD91E5CC26EAA" action="add">
+    <label xml:lang="en">Screw</label>
+    <sort_order>240</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Screw</value>
+   </Item>
+   <Item type="Value" id="DA347096942E4FD3BF75100D7F4DBEF0" action="add">
+    <label xml:lang="en">Screw with Reinforced Clip</label>
+    <sort_order>250</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Screw with Reinforced Clip</value>
+   </Item>
+   <Item type="Value" id="4C7C0FDEDC3A494087AC3034D272F7A5" action="add">
+    <label xml:lang="en">Set Screw</label>
+    <sort_order>260</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Set Screw</value>
+   </Item>
+   <Item type="Value" id="9902B311A6444AE29486AEC788F79A5D" action="add">
+    <label xml:lang="en">Single Set Screw</label>
+    <sort_order>270</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Single Set Screw</value>
+   </Item>
+   <Item type="Value" id="AC9B0D03D7F54370B20130440909D6EB" action="add">
+    <label xml:lang="en">Single Set Screw / Double Set Screw</label>
+    <sort_order>280</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Single Set Screw / Double Set Screw</value>
+   </Item>
+   <Item type="Value" id="9055ECA7F69544559118B5C48660D33F" action="add">
+    <label xml:lang="en">Spring Pressure</label>
+    <sort_order>290</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Spring Pressure</value>
+   </Item>
+   <Item type="Value" id="33B8C27FD411421EA13D2FF462360FD3" action="add">
+    <label xml:lang="en">Spring terminal</label>
+    <sort_order>300</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Spring terminal</value>
+   </Item>
+   <Item type="Value" id="29353E45212C4381AF1A2807C0E7EB6A" action="add">
+    <label xml:lang="en">Stud</label>
+    <sort_order>310</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Stud</value>
+   </Item>
+   <Item type="Value" id="E20F71544779424FBC538CABC867717F" action="add">
+    <label xml:lang="en">Terminal</label>
+    <sort_order>320</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>Terminal</value>
+   </Item>
+   <Item type="Value" id="40AA77D3B6A641B2A2B9CEF50522A6C8" action="add">
+    <label xml:lang="en">UHF (male-female)</label>
+    <sort_order>330</sort_order>
+    <source_id keyed_name="MRN_Wire_Connections" type="List">BE484D90B7B343D38A996454D56572F5</source_id>
+    <value>UHF (male-female)</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

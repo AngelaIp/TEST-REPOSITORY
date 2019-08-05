@@ -1,0 +1,105 @@
+﻿<AML>
+ <Item type="Form" id="ABB445B172D046F3ADC397AE4C377EEA" action="add">
+  <category_form>0</category_form>
+  <height>234</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>MRN_Property_ETIM_Class</name>
+  <Relationships>
+   <Item type="Body" id="6F8E70399F3D4AB58BE9ADAF22B5981A" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Property_ETIM_Class" type="Form">ABB445B172D046F3ADC397AE4C377EEA</source_id>
+    <Relationships>
+     <Item type="Field" id="EEC93DD5827D4D32B4EC158A46D85AAA" action="add">
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <html_code><![CDATA[<span id='ITEM_INFO_INTERNAL_SPAN'/>
+<script>
+  populate_ITEM_INFO_INTERNAL_SPAN = function()
+  {
+    document.getElementById('ITEM_INFO_INTERNAL_SPAN').innerHTML = aras.uiGetItemInfoTable(document.itemType);
+  }
+  window.addEventListener('load', populate_ITEM_INFO_INTERNAL_SPAN);
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="6F8E70399F3D4AB58BE9ADAF22B5981A" type="Body">6F8E70399F3D4AB58BE9ADAF22B5981A</source_id>
+      <tab_stop>0</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>item_info</name>
+     </Item>
+     <Item type="Field" id="7F4B288261F94E5FA009632BAA81E549" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Class Code</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_class_code" type="Property">077A77A2FE8242229787EECEB0848A8D</propertytype_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="6F8E70399F3D4AB58BE9ADAF22B5981A" type="Body">6F8E70399F3D4AB58BE9ADAF22B5981A</source_id>
+      <tab_index>3584</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>10</y>
+      <name>mrn_class_code</name>
+     </Item>
+     <Item type="Field" id="52B449409AA045538FEAB2A2D663B12A" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Feature Code</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_feature_code" type="Property">6DFCC6D1C5BB4A57871194B8CCADC80F</propertytype_id>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="6F8E70399F3D4AB58BE9ADAF22B5981A" type="Body">6F8E70399F3D4AB58BE9ADAF22B5981A</source_id>
+      <tab_index>3712</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>50</y>
+      <name>mrn_feature_code</name>
+     </Item>
+     <Item type="Field" id="F6127AFD874E4E438BCD5E2B778B261E" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Value Type</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_type" type="Property">B9E1EA42CD01473B8682A69765A1E197</propertytype_id>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="6F8E70399F3D4AB58BE9ADAF22B5981A" type="Body">6F8E70399F3D4AB58BE9ADAF22B5981A</source_id>
+      <tab_index>3840</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>90</y>
+      <name>mrn_type</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

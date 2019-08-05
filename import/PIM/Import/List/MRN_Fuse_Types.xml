@@ -1,0 +1,43 @@
+﻿<AML>
+ <Item type="List" id="9A44E131E2144735B250E4A215DE1BB4" action="add">
+  <name>MRN_Fuse_Types</name>
+  <Relationships>
+   <Item type="Value" id="D544E5D57E2042548C0DA697A934D395" action="add">
+    <label xml:lang="en">Class CC</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Fuse_Types" type="List">9A44E131E2144735B250E4A215DE1BB4</source_id>
+    <value>Class CC</value>
+   </Item>
+   <Item type="Value" id="6D85529E6AD14626B94926F010E8BC21" action="add">
+    <label xml:lang="en">Class J</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Fuse_Types" type="List">9A44E131E2144735B250E4A215DE1BB4</source_id>
+    <value>Class J</value>
+   </Item>
+   <Item type="Value" id="F42CE7EB37E049769FC314AC1B7323DC" action="add">
+    <label xml:lang="en">Class L</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Fuse_Types" type="List">9A44E131E2144735B250E4A215DE1BB4</source_id>
+    <value>Class L</value>
+   </Item>
+   <Item type="Value" id="927896D1B2D8462EA6C98B9E7E74D7F7" action="add">
+    <label xml:lang="en">NFC</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Fuse_Types" type="List">9A44E131E2144735B250E4A215DE1BB4</source_id>
+    <value>NFC</value>
+   </Item>
+   <Item type="Value" id="BAA77EC1BE6E42FC8D2A6163CB19CB5C" action="add">
+    <label xml:lang="en">DIN</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Fuse_Types" type="List">9A44E131E2144735B250E4A215DE1BB4</source_id>
+    <value>DIN</value>
+   </Item>
+   <Item type="Value" id="755741823355487781C8EA8AD88EA134" action="add">
+    <label xml:lang="en">BS</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Fuse_Types" type="List">9A44E131E2144735B250E4A215DE1BB4</source_id>
+    <value>BS</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

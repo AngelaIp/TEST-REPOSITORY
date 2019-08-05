@@ -1,0 +1,30 @@
+﻿<AML>
+ <Item type="Method" id="68D71CFFBAE24F3C87BED049A4E5630D" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Name: mrn_copyNameToMultiLingualName
+// Called From: MRN_Item, OnBeforeAdd and OnBeforeUpdate
+// Purpose: Copies the MSL/Frame Name to Multilingual Name English
+// 3/02/2017    Kamran Aftab    Developed for Mersen
+
+// if (System.Diagnostics.Debugger.Launch()) 
+//     //System.Diagnostics.Debugger.Break();
+
+// If this is an MSL, copy itself to parent msl
+string level = this.getProperty("classification","");
+
+// Copy MSL/Frame name to Multilingual name English 
+string propertyName;
+if (level == "Level 4 - MSL")
+    propertyName = "mrn_multilingual_name_msl";
+else if (level == "Level 5 - Frame")
+    propertyName = "mrn_multilingual_name_frame";
+else
+    return this;
+
+string name = this.getProperty("mrn_name_number");
+this.setProperty(propertyName, name,"en");
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_copyNameToMultiLingualName</name>
+ </Item>
+</AML>

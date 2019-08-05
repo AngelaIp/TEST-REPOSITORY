@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="60081B872DF246F2BCF80D7DCEC2CE2A" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Bjoern.ASMUSSEN@mersen.com</email>
+  <login_name>basmussen</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Bjoern ASMUSSEN" type="Identity">3C36A2FF3AD24D0884AFB5EF93F946CF</owned_by_id>
+  <first_name>Bjoern</first_name>
+  <last_name>ASMUSSEN</last_name>
+  <Relationships>
+   <Item type="Alias" id="685BD9B0FEB444348307FAFA4BE73C47" action="add">
+    <from_date>2018-07-30T12:31:55</from_date>
+    <related_id keyed_name="Bjoern ASMUSSEN" type="Identity">3C36A2FF3AD24D0884AFB5EF93F946CF</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Bjoern ASMUSSEN" type="User">60081B872DF246F2BCF80D7DCEC2CE2A</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

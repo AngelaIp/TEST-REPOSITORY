@@ -1,0 +1,1174 @@
+﻿<AML>
+ <Item type="Form" id="7C56DDB4B82F45AE9F12A7D9A5CC0ACE" action="add">
+  <category_form>0</category_form>
+  <description>For entering and displaying multi-lingual properties</description>
+  <height>234</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>MRN_Language</name>
+  <Relationships>
+   <Item type="Body" id="7F5A579ED5004D6BBD75F01569EBEA6F" action="add">
+    <bg_color>#cadfca</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Language" type="Form">7C56DDB4B82F45AE9F12A7D9A5CC0ACE</source_id>
+    <Relationships>
+     <Item type="Field" id="38D8AEC8969844939AFF626C7FBBF2DD" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<img src="../customer/countries/Flag_of_China.png" alt="China Flag" style="width:75px;height75px;">]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>5120</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <x>850</x>
+      <y>520</y>
+      <name>label_Chinese_Flag</name>
+     </Item>
+     <Item type="Field" id="8AB08E4B29DD4DB8983CFD3687739155" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<img src="../customer/countries/Flag_of_France.png" alt="USA Flag" style="width:75px;height75px;">]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>0</tab_stop>
+      <x>850</x>
+      <y>120</y>
+      <name>label_French_Flag</name>
+     </Item>
+     <Item type="Field" id="4FDC82500F3E4F8391BC4AD763641E6A" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<img src="../customer/countries/Flag_of_Germany.png" alt="USA Flag" style="width:75px;height75px;">]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>0</tab_stop>
+      <x>850</x>
+      <y>200</y>
+      <name>label_German_Flag</name>
+     </Item>
+     <Item type="Field" id="4C9F1842CF70412080CFDC35629FC664" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<img src="../customer/countries/Flag_of_Italy.png" alt="Italy Flag" style="width:75px;height75px;">]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>4992</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <x>850</x>
+      <y>440</y>
+      <name>label_Italian_Flag</name>
+     </Item>
+     <Item type="Field" id="3C2890FBBD1944B18A31AC88C446C5DE" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<img src="../customer/countries/Flag_of_Japan.png" alt="JapanFlag" style="width:75px;height75px;">]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>5248</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <x>850</x>
+      <y>600</y>
+      <name>label_Japanese_Flag</name>
+     </Item>
+     <Item type="Field" id="EF24866FB4304A9AACE37013E3D264E8" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<img src="../customer/countries/Flag_of_Portugal.png" alt="Protoguese Flag" style="width:75px;height75px;">]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>5888</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <x>850</x>
+      <y>680</y>
+      <name>label_portuguese_flag</name>
+     </Item>
+     <Item type="Field" id="B0A1E5CBB33A4ECE935C5F92547A4F0C" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<img src="../customer/countries/Flag_of_Russia.png" alt="Russia Flag" style="width:75px;height75px;">]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>4864</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <x>850</x>
+      <y>360</y>
+      <name>label_Russian_Flag</name>
+     </Item>
+     <Item type="Field" id="7F1760BFE496454E9067B76D35E5FF67" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<img src="../customer/countries/Flag_of_Spain.png" alt="Spain Flag" style="width:75px;height75px;">]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>4736</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <x>850</x>
+      <y>280</y>
+      <name>label_Spanish_Flag</name>
+     </Item>
+     <Item type="Field" id="FA87B5A1BB0A429F931C74E6F38A7DC9" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>16pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Multilingual Properties</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>label_title</name>
+     </Item>
+     <Item type="Field" id="AF6E5B10F0E74609920521F10F72507C" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<img src="../customer/countries/Flag_of_United_States.png" alt="USA Flag" style="width:75px;height75px;">]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>0</tab_stop>
+      <x>850</x>
+      <y>40</y>
+      <name>label_US_flag</name>
+     </Item>
+     <Item type="Field" id="2873F7C789474E01A3F7A9A75C8D87A1" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#808080</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Applications (EN)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_application" type="Property">67C55D487B1A4AB6A334E13073B9C23D</propertytype_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>4864</tab_index>
+      <tab_stop>0</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>420</x>
+      <y>40</y>
+      <name>mrn_application</name>
+     </Item>
+     <Item type="Field" id="B88A8AC54C56475B8A5957571E1D8553" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Anwendungen - (DE)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_application_de" type="Property">3202C51C640241EA85EB9E34C8620A47</propertytype_id>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>230</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>420</x>
+      <y>200</y>
+      <name>mrn_application_de</name>
+     </Item>
+     <Item type="Field" id="148CCB23BC8B4E52B4A3F0CE4C2CEBA0" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> aplicaciones (ES)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_application_es" type="Property">FA06D882F8824D84830DA7204D5EDC73</propertytype_id>
+      <sort_order>3456</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>320</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>420</x>
+      <y>280</y>
+      <name>mrn_application_es</name>
+     </Item>
+     <Item type="Field" id="1C3F66F9D12740F3B7DE4B03D45934D4" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Applications - (FR)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_application_fr" type="Property">9172BFFCB8384A14B1B0C9300C2300B2</propertytype_id>
+      <sort_order>300</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>120</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>423</x>
+      <y>120</y>
+      <name>mrn_application_fr</name>
+     </Item>
+     <Item type="Field" id="DF2AEB90749C42EFBCBE021E2849E685" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">applicazioni (IT)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_application_it" type="Property">CC97CEE494954B828B12E6650FF5C8D3</propertytype_id>
+      <sort_order>3712</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>520</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>420</x>
+      <y>440</y>
+      <name>mrn_application_it</name>
+     </Item>
+     <Item type="Field" id="111A31FE740D4C9FB7B89D4F0E29FDA9" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> アプリケーション (JA)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_application_ja" type="Property">99C0C248F85047AF9C86FFD475EAEE19</propertytype_id>
+      <sort_order>3968</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>720</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>421</x>
+      <y>600</y>
+      <name>mrn_application_ja</name>
+     </Item>
+     <Item type="Field" id="1E7D31AF55DD4B2A946993127A51D51F" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">aplicações (PT)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_application_pt" type="Property">65C81E1C040B45CDB8D3C71AA7AA2094</propertytype_id>
+      <sort_order>5632</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>422</x>
+      <y>681</y>
+      <name>mrn_application_pt</name>
+     </Item>
+     <Item type="Field" id="EEE92647F2174EABBADE7C958211D10B" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> Приложения (RU)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_application_ru" type="Property">74EE947B6618474DB141044F102DA414</propertytype_id>
+      <sort_order>3584</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>420</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>420</x>
+      <y>360</y>
+      <name>mrn_application_ru</name>
+     </Item>
+     <Item type="Field" id="CFAC57FD3D174CA08D04AB16F84C4CC0" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> 应用 (ZH)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_application_zh" type="Property">C48B8D2352044BC4A1C32DBCD667E6F6</propertytype_id>
+      <sort_order>3840</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>620</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>420</x>
+      <y>520</y>
+      <name>mrn_application_zh</name>
+     </Item>
+     <Item type="Field" id="523DAD50C2D74BE388A0576D06F41B60" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#808080</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Features/Benefits (EN)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_features" type="Property">92913645299544CA9856596064614D07</propertytype_id>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>4736</tab_index>
+      <tab_stop>0</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>210</x>
+      <y>40</y>
+      <name>mrn_features</name>
+     </Item>
+     <Item type="Field" id="AD5C9679EED746239C6CD4CCC432146B" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> Merkmale und Vorteile (DE)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_features_de" type="Property">08ED894788574B819CE0BB440AB51BD2</propertytype_id>
+      <sort_order>1280</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>210</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>210</x>
+      <y>200</y>
+      <name>mrn_features_de</name>
+     </Item>
+     <Item type="Field" id="4AE7126413A94397B4F3256B97340F3D" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> Características y beneficios (ES)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_features_es" type="Property">E91B410A8B814B28B9FB73D4AC76D433</propertytype_id>
+      <sort_order>2816</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>310</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>210</x>
+      <y>280</y>
+      <name>mrn_features_es</name>
+     </Item>
+     <Item type="Field" id="804A4A40EEDC4B67B834C342CF681BEA" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Caractéristiques et avantages (FR)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_features_fr" type="Property">FE322D4CE1AF4BF7AB9F188B9452868C</propertytype_id>
+      <sort_order>200</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>110</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>210</x>
+      <y>120</y>
+      <name>mrn_features_fr</name>
+     </Item>
+     <Item type="Field" id="19B816B4DAB74E03A08B72974F605881" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Caratteristiche e benefici (IT)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_features_it" type="Property">A7A23541F95D465BBCCA72B14089E646</propertytype_id>
+      <sort_order>3072</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>510</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>210</x>
+      <y>440</y>
+      <name>mrn_features_it</name>
+     </Item>
+     <Item type="Field" id="01E9C0058C0F4E8F9EEEFCECC7429611" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> 特長/メリット (JA)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_features_ja" type="Property">3B2A4639CA4F4F54AF6AB2E21A7ECB26</propertytype_id>
+      <sort_order>3328</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>710</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>210</x>
+      <y>600</y>
+      <name>mrn_features_ja</name>
+     </Item>
+     <Item type="Field" id="466E81E0E072426BBFCFBAC86C9E8745" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Recursos / Benefícios (PT)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_features_pt" type="Property">160CFE167B0F48B3929722537B6564AE</propertytype_id>
+      <sort_order>5504</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>210</x>
+      <y>680</y>
+      <name>mrn_features_pt</name>
+     </Item>
+     <Item type="Field" id="C516082A649B43D3AD44D6B131755E73" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> Особенности и преимущества (RU)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_features_ru" type="Property">D1195B4B452F4B899BB9238B56648D60</propertytype_id>
+      <sort_order>2944</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>410</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>210</x>
+      <y>360</y>
+      <name>mrn_features_ru</name>
+     </Item>
+     <Item type="Field" id="ACB0ECD5510B4DDCA854E8D4A397BB7B" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> 特点/优势 (ZH)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_features_zh" type="Property">21382967934445FAAA8A273E22E8B6F9</propertytype_id>
+      <sort_order>3200</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>610</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>212</x>
+      <y>520</y>
+      <name>mrn_features_zh</name>
+     </Item>
+     <Item type="Field" id="A4D54F95C9724CD5A950AB0DCC73A5C7" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#808080</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Long Description (EN)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_description" type="Property">E8A1C3B032B7430FA67393E4DA7CF62F</propertytype_id>
+      <sort_order>1408</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>5504</tab_index>
+      <tab_stop>0</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>0</x>
+      <y>40</y>
+      <name>mrn_product_description</name>
+     </Item>
+     <Item type="Field" id="B664D911988340769977077B106120DE" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> lange beschrijving (DE)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_description_de" type="Property">9E639647228D49D7913E31C58795F3C3</propertytype_id>
+      <sort_order>1664</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>200</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>0</x>
+      <y>200</y>
+      <name>mrn_product_description_de</name>
+     </Item>
+     <Item type="Field" id="B6F9A29BB6144BB98477C3D5139C28AB" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> descripción larga (ES)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_description_es" type="Property">F748842B0C134B789B8A3E8F2D94E23A</propertytype_id>
+      <sort_order>2176</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>300</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>0</x>
+      <y>280</y>
+      <name>mrn_product_description_es</name>
+     </Item>
+     <Item type="Field" id="14397DD629164A038207709936CAD8AF" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> longue description (FR)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_description_fr" type="Property">8D040FAC35EC49B9B7A12580723D0D98</propertytype_id>
+      <sort_order>100</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>100</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>0</x>
+      <y>120</y>
+      <name>mrn_product_description_fr</name>
+     </Item>
+     <Item type="Field" id="6868B447D29345DBB9E776533E19C1DB" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> Descrizione lunga (IT)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_description_it" type="Property">3AEA276DF27C4A28BFBB0170357F2DB3</propertytype_id>
+      <sort_order>2432</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>500</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>0</x>
+      <y>441</y>
+      <name>mrn_product_description_it</name>
+     </Item>
+     <Item type="Field" id="7230E902CE3840548963E4BD0B8070E9" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> 長い説明 (JA)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_description_ja" type="Property">DC682395E11047EDA63662E2DE4D0D23</propertytype_id>
+      <sort_order>2688</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>700</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>0</x>
+      <y>600</y>
+      <name>mrn_product_description_ja</name>
+     </Item>
+     <Item type="Field" id="6A5A498B3F7247C6AEB339AAA9F4AD8C" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> longa descrição (PT)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_description_pt" type="Property">8CDAC7E6622B44CE83063343A490F9E8</propertytype_id>
+      <sort_order>5376</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>0</x>
+      <y>680</y>
+      <name>mrn_product_description_pt</name>
+     </Item>
+     <Item type="Field" id="73C002FB1D8C4B348DBF6A277A190BD5" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> длинное описание (RU)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_description_ru" type="Property">67A9D8D41A9B4F6392A5AAC9E651C9D6</propertytype_id>
+      <sort_order>2304</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>400</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>1</x>
+      <y>361</y>
+      <name>mrn_product_description_ru</name>
+     </Item>
+     <Item type="Field" id="D72EDC6E7A804B34847E18E02268EBF3" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> 详细描述 (ZH)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_product_description_zh" type="Property">10091DA658C549F096446FAB50AD8EDE</propertytype_id>
+      <sort_order>2560</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>600</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>0</x>
+      <y>520</y>
+      <name>mrn_product_description_zh</name>
+     </Item>
+     <Item type="Field" id="C2307B0BAD3D4D6292526074CC14A873" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#808080</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Approvals/Standards (English)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_standards_met" type="Property">D78808C83EE244A98817403671FC7EC4</propertytype_id>
+      <sort_order>1792</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>630</x>
+      <y>42</y>
+      <name>mrn_standards_met</name>
+     </Item>
+     <Item type="Field" id="71C4952D4C8A4B55BB43B0E07EA2C53E" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> Zulassungen / Normen (DE)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_standards_met_de" type="Property">40A42666128D47A594245802F2C648FB</propertytype_id>
+      <sort_order>2048</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>240</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>630</x>
+      <y>200</y>
+      <name>mrn_standards_met_de</name>
+     </Item>
+     <Item type="Field" id="5C394B5100CE4E88BDE6312213BC0FA4" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Homologaciones / Normas (ES)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_standards_met_es" type="Property">DA88C50915AA4D9D940D94AFB2F48D47</propertytype_id>
+      <sort_order>4096</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>330</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>630</x>
+      <y>280</y>
+      <name>mrn_standards_met_es</name>
+     </Item>
+     <Item type="Field" id="E16592D94B8C488CA7D58B4B93AB190C" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> Agréments / Normes (FR)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_standards_met_fr" type="Property">291B9571E4C141B486022E7A7643CCA1</propertytype_id>
+      <sort_order>1920</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>130</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>632</x>
+      <y>120</y>
+      <name>mrn_standards_met_fr</name>
+     </Item>
+     <Item type="Field" id="7C12DBE26F234AEE8194009AC48DEDB7" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> Omologazioni / Norme (IT)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_standards_met_it" type="Property">4C27405A720C42B0BA41521667CEF20F</propertytype_id>
+      <sort_order>4352</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>530</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>630</x>
+      <y>440</y>
+      <name>mrn_standards_met_it</name>
+     </Item>
+     <Item type="Field" id="42820D8E4FA44531A05FD7AD3DA8D94B" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en"> 承認/規格 (JA)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_standards_met_ja" type="Property">848795993DDA48A4AB5A9D7CED176C95</propertytype_id>
+      <sort_order>4608</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>730</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>630</x>
+      <y>600</y>
+      <name>mrn_standards_met_ja</name>
+     </Item>
+     <Item type="Field" id="AA29FE361EC042CDADE4996313081B43" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Aprovações / Normas (PT)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_standards_met_pt" type="Property">9DF619D2C8F44DDDB040F6001A2D0E9E</propertytype_id>
+      <sort_order>5760</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>630</x>
+      <y>680</y>
+      <name>mrn_standards_met_pt</name>
+     </Item>
+     <Item type="Field" id="08383C56530F4BFF8CD95E5850077525" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule} .sys_f_label{
+  text-transform: none;
+}
+</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Одобрения / Стандарты (RU)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_standards_met_ru" type="Property">5100E1815C8642B4AEEC8A992C2D235F</propertytype_id>
+      <sort_order>4224</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>430</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>630</x>
+      <y>360</y>
+      <name>mrn_standards_met_ru</name>
+     </Item>
+     <Item type="Field" id="722812F9195E467B98C9CB9AC4D1DBF9" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">认证/标准 (ZH)</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="mrn_standards_met_zh" type="Property">C1CEC9B39CE340F997E2E2310F3A6EA7</propertytype_id>
+      <sort_order>4480</sort_order>
+      <source_id keyed_name="7F5A579ED5004D6BBD75F01569EBEA6F" type="Body">7F5A579ED5004D6BBD75F01569EBEA6F</source_id>
+      <tab_index>630</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>200</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>630</x>
+      <y>520</y>
+      <name>mrn_standards_met_zh</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

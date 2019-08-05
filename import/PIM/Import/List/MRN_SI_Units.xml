@@ -1,0 +1,44 @@
+﻿<AML>
+ <Item type="List" id="78849106C65F4AA8B56F8349F26054B9" action="add">
+  <description>US units used in the PIM</description>
+  <name>MRN_SI_Units</name>
+  <Relationships>
+   <Item type="Value" id="41C0248643704690A2D0BC41F4CEB0B2" action="add">
+    <label xml:lang="en">°C</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_SI_Units" type="List">78849106C65F4AA8B56F8349F26054B9</source_id>
+    <value>°C</value>
+   </Item>
+   <Item type="Value" id="A4CEB3FB73CD46E9ADEB26A1CD506D17" action="add">
+    <label xml:lang="en">Hz</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_SI_Units" type="List">78849106C65F4AA8B56F8349F26054B9</source_id>
+    <value>Hz</value>
+   </Item>
+   <Item type="Value" id="9580AF6AD5E24938BC73CBF557DBA9A5" action="add">
+    <label xml:lang="en">kg</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_SI_Units" type="List">78849106C65F4AA8B56F8349F26054B9</source_id>
+    <value>kg</value>
+   </Item>
+   <Item type="Value" id="F1B5BD1260924E2B9F076FDDACCF09C9" action="add">
+    <label xml:lang="en">mm</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_SI_Units" type="List">78849106C65F4AA8B56F8349F26054B9</source_id>
+    <value>mm</value>
+   </Item>
+   <Item type="Value" id="E1E5BB34F36448C59B3663959C639556" action="add">
+    <label xml:lang="en">N m</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_SI_Units" type="List">78849106C65F4AA8B56F8349F26054B9</source_id>
+    <value>N m</value>
+   </Item>
+   <Item type="Value" id="8604827545E843CEA74D0A9FFD5E6B61" action="add">
+    <label xml:lang="en">m</label>
+    <sort_order>178</sort_order>
+    <source_id keyed_name="MRN_SI_Units" type="List">78849106C65F4AA8B56F8349F26054B9</source_id>
+    <value>m</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

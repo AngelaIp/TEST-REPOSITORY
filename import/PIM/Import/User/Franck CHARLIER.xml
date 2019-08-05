@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="User" id="268F9922254D495A8676E1F2A252EF90" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Franck.CHARLIER@mersen.com</email>
+  <last_login_date>2019-03-21T05:35:56</last_login_date>
+  <login_name>FC</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Franck CHARLIER" type="Identity">C33A89C52C26454481BFF85A9F83A6C0</owned_by_id>
+  <first_name>Franck</first_name>
+  <last_name>CHARLIER</last_name>
+  <Relationships>
+   <Item type="Alias" id="EA934AF4A2CC46ABB70F44CB1F4EDE94" action="add">
+    <from_date>2018-07-30T12:25:38</from_date>
+    <related_id keyed_name="Franck CHARLIER" type="Identity">C33A89C52C26454481BFF85A9F83A6C0</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Franck CHARLIER" type="User">268F9922254D495A8676E1F2A252EF90</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

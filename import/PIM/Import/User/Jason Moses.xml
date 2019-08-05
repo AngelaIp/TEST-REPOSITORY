@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="User" id="39818D29BE644376AFBC66349F1E44BA" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>jason.moses@us.mersen.com</email>
+  <last_login_date>2019-05-15T10:44:43</last_login_date>
+  <login_name>jmoses</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Jason Moses" type="Identity">A1E18B27BE664BF4BBD3E6C20B0730C3</owned_by_id>
+  <first_name>Jason</first_name>
+  <last_name>Moses</last_name>
+  <Relationships>
+   <Item type="Alias" id="1F209F03DD3249CBAE95FBA689E98662" action="add">
+    <from_date>2017-09-01T08:42:38</from_date>
+    <related_id keyed_name="Jason Moses" type="Identity">A1E18B27BE664BF4BBD3E6C20B0730C3</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Jason Moses" type="User">39818D29BE644376AFBC66349F1E44BA</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,23 @@
+﻿<AML>
+ <Item type="User" id="D071EAB18B0E45EBAA569CB50A8C1084" action="add">
+  <company_name>Mersen</company_name>
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>chris.peirce@mersen.com</email>
+  <last_login_date>2016-05-09T11:00:14</last_login_date>
+  <login_name>cpeirce</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Chris Peirce" type="Identity">C55504412ADC4FFC93167540C9B5A452</owned_by_id>
+  <starting_page>Activity Assignment</starting_page>
+  <working_directory>\\arasdevapp1\arasextracts</working_directory>
+  <first_name>Chris</first_name>
+  <last_name>Peirce</last_name>
+  <Relationships>
+   <Item type="Alias" id="BB2CAE220EDB4FCEA7EDDC89505FFB1C" action="add">
+    <from_date>2016-04-14T11:32:58</from_date>
+    <related_id keyed_name="Chris Peirce" type="Identity">C55504412ADC4FFC93167540C9B5A452</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Chris Peirce" type="User">D071EAB18B0E45EBAA569CB50A8C1084</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,97 @@
+﻿<AML>
+ <Item type="Method" id="024D34DDEBE944DEAB0DC1AB1767974E" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//
+// Name:          mrn_cloneItemhttp://localhost/InnovatorServer/Client/X-salt=std_11.0.0.6212-X/images/SaveUnlockClose.svg
+// Description:   Loads the MRN_Item into the client,
+//                then loops through the structure making  Action='add' 
+//                and setting new ID's, then opens the new MRN_Item into a client form.  
+//                User must save or the Lot is lost.
+//
+// 10-17-2005 Mark Beaulieu  Created original code for Sonnax
+// 24-06-2013 Vijay Kannan   Modified code for NorthStar battery.
+// 25-02-2016 Vijay Kannan   Modified code for Mersen.
+// March 18, 2016   Kamran Aftab    Modified to set config_id to empty, so that check_conformance could work property
+//======================================================================
+//debugger;
+if (!this) 
+{
+   alert('Please select an MRN Item First');
+   return;
+}
+if (this.getType() !="MRN_Item") 
+{
+   alert('Please select an MRN Item First');
+   return;
+}
+
+var statusId = top.aras.showStatusMessage(0,'   Loading Template Configuration ...', '../images/Animated/ProgressSmall.gif');
+var myInnovator = this.newInnovator();
+
+// get my Identity id first
+MyIdentityID= myInnovator.getUserAliases();
+
+//Get a list of relationships for this particular MRN Item
+var resultItem = this.newItem(this.getType(), "get");
+resultItem.setProperty("id", this.getID());
+resultItem = resultItem.apply();
+
+var itemWithRelationships = resultItem.fetchRelationships("MRN_Item_Document");
+var relationships = itemWithRelationships.getRelationships("MRN_Item_Document");
+
+var count = relationships.getItemCount();
+
+// If the above query returns no rows, throw this error
+    if (count === "") 
+ {
+           var myerr = "MRN Item must have at least one line with an attachment";
+           alert(myerr);
+           return;
+}
+
+//Make a temp clone item 
+var templateItem = resultItem.clone(true);
+//alert(templateItem.node.xml);
+
+templateItem.setType('MRN_Item');
+
+// Create a new Lot Item and load the definition from the Master into it
+var CloneItem = this.newItem("MRN_Item","add");
+CloneItem.loadAML(templateItem.node.xml);
+CloneItem.setAttribute("isTemp","1");
+CloneItem.setAttribute("isNew","1");
+CloneItem.setProperty("owned_by_id",MyIdentityID);
+CloneItem.setProperty("config_id","");  // Added to allow mrn_checkconformance to work
+
+top.aras.clearStatusMessage(statusId);
+statusId = top.aras.showStatusMessage(0,'   Opening New MRN Item ...', '../images/Animated/ProgressSmall.gif');
+
+// now loop through the New MRN Item,  removing ID's, setting actions, changing types...  to make this a Lot
+var items = CloneItem.getItemsByXPath('//Item');
+
+// Set the new item with a copy of relationships from the templateItem
+for (var i=0; i< items.getItemCount(); i++)
+{
+                items.getItemByIndex(i).setAttribute("action","add");
+                items.getItemByIndex(i).setAttribute("isTemp","1");
+                items.getItemByIndex(i).setAttribute("isNew","1");       
+                items.getItemByIndex(i).node.removeAttribute("typeId");
+                items.getItemByIndex(i).setID(aras.generateNewGUID());
+                                
+                // need to remove any original <id> property tags because Innovator puts the ID in the attributes and as a property
+                var idNode = items.getItemByIndex(i).node.selectSingleNode("id");
+                // 09-12-2005 added test if idNode is null before trying to remove the node
+    if (idNode) 
+                {
+                   items.getItemByIndex(i).node.removeChild(idNode);
+                }
+}
+
+// now open in a form for the user to edit
+top.aras.uiShowItemEx(CloneItem.node,'tab view',true);
+top.aras.clearStatusMessage(statusId);
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_cloneItem</name>
+ </Item>
+</AML>

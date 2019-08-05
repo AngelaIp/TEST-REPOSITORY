@@ -1,0 +1,104 @@
+﻿<AML>
+ <Item type="List" id="091E8B14B3CE440D829BF199662F22D2" action="add">
+  <description>Terminal/Connection Material Types</description>
+  <name>MRN_Terminal_Material_Types</name>
+  <Relationships>
+   <Item type="Value" id="C4E75865EE424DE89DF1904A42037B64" action="add">
+    <label xml:lang="en">Brass</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Brass</value>
+   </Item>
+   <Item type="Value" id="70A05EE624A0420BB66E595EE6D9BFE0" action="add">
+    <label xml:lang="en">Brass Alloy</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Brass Alloy</value>
+   </Item>
+   <Item type="Value" id="6D60040D18B34C65B3D9DC543C50A086" action="add">
+    <label xml:lang="en">Copper</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Copper</value>
+   </Item>
+   <Item type="Value" id="373F363F920744108A015B11BC6C9C4F" action="add">
+    <label xml:lang="en">Galvanized, chromized (Chrome 3)</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Galvanized, chromized (Chrome 3)</value>
+   </Item>
+   <Item type="Value" id="D5D982C1000B4AC6B6718481CA248EFF" action="add">
+    <label xml:lang="en">Nickel-Plated Aluminum</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Nickel-Plated Aluminum</value>
+   </Item>
+   <Item type="Value" id="17A4BFEF41824E41A8A369811DC7F6B3" action="add">
+    <label xml:lang="en">Nickel-Plated Copper</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Nickel-Plated Copper</value>
+   </Item>
+   <Item type="Value" id="77F84419C9F6427D9F79067DF89309DD" action="add">
+    <label xml:lang="en">Silver</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Silver</value>
+   </Item>
+   <Item type="Value" id="19610792D0C941399B9DCDCA1714EE19" action="add">
+    <label xml:lang="en">Silver-Plated Brass</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Silver-Plated Brass</value>
+   </Item>
+   <Item type="Value" id="A33BE6E0B798439899C5EA4F199D3EEE" action="add">
+    <label xml:lang="en">Silver-Plated Brass / Silver-Plated Copper</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Silver-Plated Brass / Silver-Plated Copper</value>
+   </Item>
+   <Item type="Value" id="B4D6EA7F5F7046D49AFC3190E3D66BC2" action="add">
+    <label xml:lang="en">Silver-Plated Copper</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Silver-Plated Copper</value>
+   </Item>
+   <Item type="Value" id="74CF12100C81428CB2DD1034DE225A31" action="add">
+    <label xml:lang="en">Tin-Plated Aluminum</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Tin-Plated Aluminum</value>
+   </Item>
+   <Item type="Value" id="8780E372868346F1AC7AD205DB98366D" action="add">
+    <label xml:lang="en">Tin-Plated Aluminum And Tin-Plated Copper</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Tin-Plated Aluminum And Tin-Plated Copper</value>
+   </Item>
+   <Item type="Value" id="B5382D756E324FFEB1E528D479661FBE" action="add">
+    <label xml:lang="en">Tin-Plated Brass</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Tin-Plated Brass</value>
+   </Item>
+   <Item type="Value" id="F3C28E8FB6474408AD2957887C00C491" action="add">
+    <label xml:lang="en">Tin-Plated Copper</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Tin-Plated Copper</value>
+   </Item>
+   <Item type="Value" id="BDDAB4E50D28464ABCED5C68D44A0EA0" action="add">
+    <label xml:lang="en">Tin-Plated Copper And Tin-Plated Brass</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Tin-Plated Copper And Tin-Plated Brass</value>
+   </Item>
+   <Item type="Value" id="B6FF9307928345A9AFDD7026E194594D" action="add">
+    <label xml:lang="en">Zinc-Plated Steel</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Terminal_Material_Types" type="List">091E8B14B3CE440D829BF199662F22D2</source_id>
+    <value>Zinc-Plated Steel</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

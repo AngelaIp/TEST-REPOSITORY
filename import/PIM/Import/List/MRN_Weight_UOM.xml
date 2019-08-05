@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="List" id="461FE29C3BC7466E86AB0E531BC23D8C" action="add">
+  <description>Weight UOM</description>
+  <name>MRN_Weight_UOM</name>
+  <Relationships>
+   <Item type="Value" id="728290BBFA91475590436357C8182F51" action="add">
+    <label xml:lang="en">LBS</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Weight_UOM" type="List">461FE29C3BC7466E86AB0E531BC23D8C</source_id>
+    <value>LBS</value>
+   </Item>
+   <Item type="Value" id="39203BDE9A76464DBE2C730C073C649F" action="add">
+    <label xml:lang="en">grams</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Weight_UOM" type="List">461FE29C3BC7466E86AB0E531BC23D8C</source_id>
+    <value>grams</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

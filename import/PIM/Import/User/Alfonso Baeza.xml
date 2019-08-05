@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="12D3857E09BD46EF940E64D99702260C" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>alfonso.baeza@us.mersen.com</email>
+  <last_login_date>2018-09-12T14:28:30</last_login_date>
+  <login_name>abaeza</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Alfonso Baeza" type="Identity">280BC015683B4B2FB8E2874FF3687CA3</owned_by_id>
+  <working_directory>C:\Users\abaeza-admin\Documents</working_directory>
+  <first_name>Alfonso</first_name>
+  <last_name>Baeza</last_name>
+  <Relationships>
+   <Item type="Alias" id="3708F8E29F354419818858EAF4F086AD" action="add">
+    <from_date>2017-10-27T09:38:29</from_date>
+    <related_id keyed_name="Alfonso Baeza" type="Identity">280BC015683B4B2FB8E2874FF3687CA3</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Alfonso Baeza" type="User">12D3857E09BD46EF940E64D99702260C</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,212 @@
+﻿<AML>
+ <Item type="List" id="50A7AFFD7B1C4155ABEC65EBACE9E02C" action="add">
+  <description>Mapping ETIM value codes to ETIM English values</description>
+  <name>MRN_ETIM_EN_Mappping-NOT USED</name>
+  <Relationships>
+   <Item type="Value" id="5088ECD0408240B9AD5C84496FB5E102" action="add">
+    <label xml:lang="en">EV003991</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>NH000</value>
+   </Item>
+   <Item type="Value" id="707D7FBC41C840FE99BEDC4BB8447CA5" action="add">
+    <label xml:lang="en">EV000066</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>NH00</value>
+   </Item>
+   <Item type="Value" id="3FA199F077314630982D428994F2901F" action="add">
+    <label xml:lang="en">EV008595</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>NH0</value>
+   </Item>
+   <Item type="Value" id="E5E2670960D845FFB219D0A2504DD9A9" action="add">
+    <label xml:lang="en">EV003993</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>NH1</value>
+   </Item>
+   <Item type="Value" id="016092EE6A1A4C298E36378D458735C8" action="add">
+    <label xml:lang="en">EV003994</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>NH2</value>
+   </Item>
+   <Item type="Value" id="34DD9BCCBA5B4DADA4D5311972A84BDC" action="add">
+    <label xml:lang="en">EV004005</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>NH3</value>
+   </Item>
+   <Item type="Value" id="ECDF7188063E45AEAD45C0733C548A6D" action="add">
+    <label xml:lang="en">EV008596</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>NH4</value>
+   </Item>
+   <Item type="Value" id="612377A2DA834FBC9A7681A8026ECFA0" action="add">
+    <label xml:lang="en">EV004006</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>NH4a</value>
+   </Item>
+   <Item type="Value" id="F04696ECAADF437EBCF982381B5877CF" action="add">
+    <label xml:lang="en">EV005321</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>DI</value>
+   </Item>
+   <Item type="Value" id="F71FA3DF18A740FDA3C5F8F61E3131CE" action="add">
+    <label xml:lang="en">EV000224</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>DII</value>
+   </Item>
+   <Item type="Value" id="5FAE215540DC487983C0F743C03F68CE" action="add">
+    <label xml:lang="en">EV000225</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>DIII</value>
+   </Item>
+   <Item type="Value" id="D25E76F8D24241FB8D60CE022ADE2FE1" action="add">
+    <label xml:lang="en">EV000226</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>DIV</value>
+   </Item>
+   <Item type="Value" id="5F21BC1872B84DB98CFF7B10F15FFC3D" action="add">
+    <label xml:lang="en">EV000227</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>DV</value>
+   </Item>
+   <Item type="Value" id="457BA60AFAFE4906A6691F08D33E951A" action="add">
+    <label xml:lang="en">EV000229</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>NDZ</value>
+   </Item>
+   <Item type="Value" id="2442B5DEEFD444E8822A0A59304265AA" action="add">
+    <label xml:lang="en">EV000087</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>D01</value>
+   </Item>
+   <Item type="Value" id="C9A3404B286745779BDA2B9AD27BDF42" action="add">
+    <label xml:lang="en">EV000088</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>D02</value>
+   </Item>
+   <Item type="Value" id="7A0F42DF528048C7936C4717370567B0" action="add">
+    <label xml:lang="en">EV000089</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>D03</value>
+   </Item>
+   <Item type="Value" id="059B9A1A219945E2AEC9169BFF54F640" action="add">
+    <label xml:lang="en">EV005292</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>5x20 mm</value>
+   </Item>
+   <Item type="Value" id="FDE679719A5D4437AA0CF7513AC348E9" action="add">
+    <label xml:lang="en">EV005298</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>5x25 mm</value>
+   </Item>
+   <Item type="Value" id="4B599359FBB8419EACCFC9944D80C6C9" action="add">
+    <label xml:lang="en">EV010496</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>5x30 mm</value>
+   </Item>
+   <Item type="Value" id="E64314E337E64BEF9A58C60156EBE002" action="add">
+    <label xml:lang="en">EV005299</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>6.3x32 mm</value>
+   </Item>
+   <Item type="Value" id="2279A5619BAF405A8AD7D6292C7C3E38" action="add">
+    <label xml:lang="en">EV010291</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>6.35x32 mm</value>
+   </Item>
+   <Item type="Value" id="DA13F48427D04CD792867EC70646219B" action="add">
+    <label xml:lang="en">EV000154</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>Other</value>
+   </Item>
+   <Item type="Value" id="A63C39A29FC046759559C14613F72D04" action="add">
+    <label xml:lang="en">EV011645</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>8.5x23 mm</value>
+   </Item>
+   <Item type="Value" id="DB9EE5CDF33F4297849EE22C13439AAD" action="add">
+    <label xml:lang="en">EV011649</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>8.5x31.5 mm</value>
+   </Item>
+   <Item type="Value" id="2F0BE8FBAF0A4A489AE24AF9F04D9C6B" action="add">
+    <label xml:lang="en">EV011650</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>8x40 mm</value>
+   </Item>
+   <Item type="Value" id="CD61D14176D746B5B6E1C32287558A2F" action="add">
+    <label xml:lang="en">EV010286</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>10x38 mm</value>
+   </Item>
+   <Item type="Value" id="E9429A4914A14501999D8AD1C4A35A3C" action="add">
+    <label xml:lang="en">EV011647</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>10x85 mm</value>
+   </Item>
+   <Item type="Value" id="7808A829F9714B95830BAD12F1734280" action="add">
+    <label xml:lang="en">EV011648</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>11x79 mm</value>
+   </Item>
+   <Item type="Value" id="BED365B0FF924E318D2FDCA6C549BD8F" action="add">
+    <label xml:lang="en">EV010287</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>14x51 mm</value>
+   </Item>
+   <Item type="Value" id="82E9F4B4DE8F4A40BDDBF0FFFB52F01C" action="add">
+    <label xml:lang="en">EV011646</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>17.5x63.5 mm</value>
+   </Item>
+   <Item type="Value" id="7DCCF66E38874763B5AB07B0181051D5" action="add">
+    <label xml:lang="en">EV010288</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>22x58 mm</value>
+   </Item>
+   <Item type="Value" id="8B24AE8F538C459E8D9D14D05A844263" action="add">
+    <label xml:lang="en">EV010289</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>27x60 mm</value>
+   </Item>
+   <Item type="Value" id="97F9EDF71EA84039AE549C5C4DADD46A" action="add">
+    <label xml:lang="en">EV011026</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_ETIM_EN_Mappping-NOT USED" type="List">50A7AFFD7B1C4155ABEC65EBACE9E02C</source_id>
+    <value>32x58 mm</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

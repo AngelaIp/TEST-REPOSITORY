@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="AFB50E401CDC4DB995B7B88871FF1D5A" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <last_login_date>2016-05-20T15:16:34</last_login_date>
+  <login_name>mrn_pm_testUser</login_name>
+  <logon_enabled>0</logon_enabled>
+  <owned_by_id keyed_name="mrn_pm_test testuser" type="Identity">719A3514B0A844B090A4846ED05E849D</owned_by_id>
+  <pwd_is_set_on>2017-01-10T11:42:52</pwd_is_set_on>
+  <working_directory>c:\temp</working_directory>
+  <first_name>mrn_pm_test</first_name>
+  <last_name>testuser</last_name>
+  <Relationships>
+   <Item type="Alias" id="06D21A7D84EE4961881DA5B0D88104FB" action="add">
+    <from_date>2017-01-12T09:29:05</from_date>
+    <related_id keyed_name="mrn_pm_test testuser" type="Identity">719A3514B0A844B090A4846ED05E849D</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="mrn_pm_test testuser" type="User">AFB50E401CDC4DB995B7B88871FF1D5A</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

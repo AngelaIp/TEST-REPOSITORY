@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="3012235CC8254933B69FF1F3287B100D" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Mehdi.TARTAG@mersen.com </email>
+  <login_name>mtartag</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Mehdi TARTAG" type="Identity">7B982BD3B157403FB2C3D17A21494520</owned_by_id>
+  <first_name>Mehdi</first_name>
+  <last_name>TARTAG</last_name>
+  <Relationships>
+   <Item type="Alias" id="F6177AB956D94AEAAA43EDEB6FFF4079" action="add">
+    <from_date>2018-07-30T12:50:24</from_date>
+    <related_id keyed_name="Mehdi TARTAG" type="Identity">7B982BD3B157403FB2C3D17A21494520</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Mehdi TARTAG" type="User">3012235CC8254933B69FF1F3287B100D</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

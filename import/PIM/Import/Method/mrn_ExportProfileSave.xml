@@ -1,0 +1,487 @@
+﻿<AML>
+ <Item type="Method" id="D4570F8DBE9C498EA62B10357AD0E077" action="add">
+  <comments />
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Name: mrn_ExportProfileSave
+// Called From: MRN_ExportTemplate OnBeforeUpdate & OnBeforeAdd
+//              MRN_ExportLog  OnBeforeUpdate
+// Purpose:     Updates the mrn_ExportProfile and mrn_ExportProfileMap relationships and based on the chosen attributes
+//              Builds the AML query
+// Oct 2016     Kamran Aftab    Developed for Mersen
+
+
+
+// if (System.Diagnostics.Debugger.Launch()) 
+//     //System.Diagnostics.Debugger.Break();
+
+// Set the export path 
+string rootPath = this.getProperty("mrn_server_root_directory");
+string fullPath = rootPath + this.getProperty("mrn_export_directory");
+this.setProperty("mrn_export_full_path", fullPath);
+
+// If called from MRN_ExportLog, this is all that needs to be done
+string type = this.getType();
+if (type == "MRN_ExportLog")
+    return this;
+    
+//////  Build AML Query ///////
+
+//Initialize
+string exportAML = "";
+String exportCountriesFilter = "";
+Innovator inn = this.getInnovator();
+
+// Build languages definition
+Languages languagesDefinition = new Languages(this);
+
+// Get the template item 
+string templateID = this.getProperty("mrn_export_template");
+string AML = "<AML><Item type = 'MRN_ExportTemplate' action = 'get'>" +
+                "<id>" + templateID + "</id></Item></AML>";
+Item templateItem = inn.applyAML(AML);
+if (templateItem.isError()) 
+		throw new Exception(templateItem.getErrorString() + "id = " + templateID);
+
+// Get the attributes selected in the template
+String attributesSelectedMSL = templateItem.getProperty("mrn_attributes_msl","");
+String attributesSelectedFrame = templateItem.getProperty("mrn_attributes_frame","");
+String attributesSelectedProduct = templateItem.getProperty("mrn_attributes_product","");
+
+// Get the languages seleected in the template
+List<string> langCodesSelected = new List<string>();
+string templateLangsSelected = templateItem.getProperty("mrn_languages");
+if (!String.IsNullOrEmpty(templateLangsSelected))
+{
+    List<string> languagesSelected = templateLangsSelected.Split(',').ToList();
+    for (int ii = 0; ii < languagesSelected.Count; ii++)
+    {
+        string langCode = languagesDefinition.getCode(languagesSelected[ii]);
+        langCodesSelected.Add(langCode);
+    } 
+}
+        
+
+// Convert the attributes to property names
+MRN_Property mrnPropertyInstance = new MRN_Property();
+mrnPropertyInstance.buildList(this, langCodesSelected);
+string proeprtiesSelectedMSL = mrnPropertyInstance.getProperties(attributesSelectedMSL, "Level 4 - MSL");
+string proeprtiesSelectedFrame = mrnPropertyInstance.getProperties(attributesSelectedFrame, "Level 5 - Frame");
+string proeprtiesSelectedProduct = mrnPropertyInstance.getProperties(attributesSelectedProduct, "Level 6 - Product");
+
+
+// Get rid of backlashes in the properties
+//attributesSelectedGeneral = attributesSelectedGeneral.Replace("\\","");
+proeprtiesSelectedMSL = proeprtiesSelectedMSL.Replace("\\","");
+proeprtiesSelectedFrame = proeprtiesSelectedFrame.Replace("\\","");
+proeprtiesSelectedProduct = proeprtiesSelectedProduct.Replace("\\","");
+
+// Read properties from the Export Profile
+String productFamilyFilter = this.getProperty("mrn_product_family_filter","");
+String productGroupFilter = this.getProperty("mrn_product_group_filter","");
+String exportCountriesStr = this.getProperty("mrn_export_countries","");
+string mslToExport = this.getProperty("mrn_msl_to_export","");
+string unpublishedFlag = this.getProperty("mrn_export_unpublished","");
+
+// Build the family and group conditions
+if (productFamilyFilter != "")
+{
+    // Replace "\\," in multi-select list with a temporary character "|"  (this deals with items that have commas in them)
+    productFamilyFilter = productFamilyFilter.Replace("\\,", "|");
+    
+    // Surround commas in multi-select with single quotes, in order to make each item a separate condition
+    productFamilyFilter = productFamilyFilter.Replace(",","','");
+    
+    // Replace the temporay character "|" with comma
+    productFamilyFilter = productFamilyFilter.Replace("|",",");
+
+    // Build the product family filter
+	productFamilyFilter = "<mrn_product_family_f condition='in'>'" + productFamilyFilter + "'</mrn_product_family_f>";
+}
+if (productGroupFilter != "")
+{
+    // Replace "\\," in multi-select list with a temporary character "|"  (this deals with items that have commas in them)
+    productGroupFilter = productGroupFilter.Replace("\\,", "|");
+    
+    // Surround commas in multi-select with single quotes, in order to make each item a separate condition
+    productGroupFilter = productGroupFilter.Replace(",","','");
+    
+    // Replace the temporay character "|" with comma
+    productGroupFilter = productGroupFilter.Replace("|",",");
+    
+    // Build the product group filter
+	productGroupFilter = "<mrn_product_group_f condition='in'>'" + productGroupFilter + "'</mrn_product_group_f>";
+}
+
+// Build the countries condition
+if (exportCountriesStr != "")
+{
+	List<string> exportCountries = exportCountriesStr.Split(',').ToList();
+	for (int i = 0; i < exportCountries.Count(); i++)
+	    exportCountriesFilter = exportCountriesFilter + "<mrn_country_visibility condition='like'>*" + exportCountries[i] + "*</mrn_country_visibility>";
+
+	if (exportCountries.Count() >1)
+	    exportCountriesFilter = "<or>" + exportCountriesFilter + "</or>";
+}
+
+
+
+// Build string for select statement
+string attributesReference = "keyed_name,state,generation,config_id";
+string attributesReferenceMSL = "keyed_name,state,generation,config_id,mrn_confidential,mrn_etim_class";
+
+string attributesProduct = proeprtiesSelectedProduct;
+if (proeprtiesSelectedProduct != "")
+    attributesProduct = attributesProduct + ",";
+attributesProduct = "mrn_name_number," + attributesProduct + attributesReference;
+
+// Build the AML Query
+String mslAML = buildAMLElement(this,"mrn_parent_msl", proeprtiesSelectedMSL + "," + attributesReferenceMSL, exportCountriesFilter, mslToExport);
+String frameAML = buildAMLElement(this,"mrn_frame", proeprtiesSelectedFrame + "," + attributesReference,"");
+
+string publishedFilter = "";
+if (unpublishedFlag != "1")
+    publishedFilter = "<state>Published</state>";
+        
+exportAML = "<Item type='MRN_Item' select = 'mrn_parent_msl,mrn_frame," + 
+                attributesProduct + 
+                "' language = '*' action='get'>"+ 
+                publishedFilter + 
+                mslAML + frameAML +
+                productFamilyFilter  + productGroupFilter + 
+	            "<classification>Level 6 - Product</classification>" +
+	            "<Relationships> <Item type='MRN_Item_Document' action='get'></Item></Relationships>" +
+            "</Item>";
+            
+// Set the AML query as a property of the export profile
+this.setProperty("mrn_aml_query",exportAML);
+
+return this;
+}
+
+private String buildAMLElement(Item itm, String nodeName, String attributes, String countriesFilter, string mslID="")
+{
+    string unpublishedFlag = this.getProperty("mrn_export_unpublished","");
+    string publishedFilter = "";
+    
+    
+        
+    // Build the AML Query
+    String AML = "";
+    string mslFilter = "";
+    
+    if(attributes == "")
+        return AML;
+
+    // If an mslID is provided, find the config id, since the id changes with generation
+    if(mslID != "")
+    {
+        string qryAML = "<Item type='MRN_Item' select = 'config_id' action='get' where=\"[MRN_Item].id='" + mslID + "'\"></Item>";
+        Item resultItems = itm.newItem();
+        resultItems.loadAML(qryAML);
+	    resultItems = resultItems.apply();
+	    
+	    int itemCount = resultItems.getItemCount();
+        if (itemCount == 0)
+		    throw new Exception("MSL item not found!");
+       
+        // Get the config id
+        Item resultItem = resultItems.getItemByIndex(0);
+        string configID = resultItem.getProperty("config_id","");
+        
+        if (configID == "")
+            throw new Exception("MSL item config_id not found!");
+        
+        mslFilter = "<config_id>" + configID + "</config_id>";
+    }
+    
+    if (unpublishedFlag != "1")
+        publishedFilter = "<state>Published</state>";
+        
+        
+    AML =   "<" + nodeName + ">" +
+                "<Item type = 'MRN_Item'" +
+                    " select='" + attributes + "'" +
+                        " language = '*' action='get'>" + 
+                    publishedFilter + 
+                    mslFilter + 
+                    countriesFilter + 
+                    "<Relationships><Item type='MRN_Item_Document' action='get'></Item></Relationships>" +
+                "</Item>" +
+            "</" + nodeName + ">";
+                 
+    return AML;
+}
+
+// Class to hold MRN_Property Items
+public class MRN_Property
+{
+    Item item;
+    string label;
+    string level;
+    bool isGroup = false;
+    List<string> properties;
+    bool isFakeML = false;
+    List<MRN_Property> mrnPropertiesList;
+    bool etimRangeProperty;
+    
+    // Empty consturctor for the empty/singleton instance. This instance is to carry the list of MRN_Property items
+    public MRN_Property()
+    {}
+    
+    // Constructor to create an MRN_Property item. These items go on the list of the empty/singleton MRN_Property
+    public MRN_Property(Item itm, List<string> langCodes)
+    {
+        properties = new List<string>();
+        
+        item = itm;
+        label = item.getProperty("mrn_label").Trim();
+        level = item.getProperty("mrn_level");
+        
+        isGroup = (item.getProperty("mrn_is_group","") == "1") ? true : false;
+        isFakeML = (item.getProperty("mrn_fake_ml_property","") == "1") ? true : false;
+        etimRangeProperty = item.getProperty("mrn_etim_range_property") == "1" ? true : false;
+        
+        // If it's a group get the property names from the relationships
+        if (isGroup)
+        {
+            // Find all the properties
+            Item relationships = item.getRelationships("MRN_Property_Property");
+            for (int i=0; i<relationships.getItemCount(); i++) 
+            {
+                Item relationshipItem = relationships.getItemByIndex(i);
+                Item propertyItem = relationshipItem.getRelatedItem();
+                if (propertyItem == null)
+                    throw new Exception("Propery Item is null for MRN Propery Item:" + label);
+                Property property = new Property(relationshipItem.getRelatedItem());
+                string propertyName = property.getName();
+                //string propertyLabel = property.getLabel();
+                properties.Add(propertyName);
+            }
+        }
+        else if (etimRangeProperty) // Get the property names from the min/max properties
+        {
+            Item propertyItem = item.getPropertyItem("mrn_range_property_min");
+            if (propertyItem == null)
+                    throw new Exception("Min. Value Propery Item is null for MRN_Propery: " + label);
+            Property property = new Property(propertyItem);
+            properties.Add(property.getName());
+            propertyItem = item.getPropertyItem("mrn_range_property_max");
+            if (propertyItem == null)
+                    throw new Exception("Max. Value Propery Item is null for MRN_Propery: " + label);
+            property = new Property(propertyItem);
+            properties.Add(property.getName());
+        }
+        else  // Get the property from the associated field
+        {
+            // get the property name
+            Item associatedProperty = item.getPropertyItem("mrn_item_property");
+            
+            // if there is no property, throw an exception
+            if(associatedProperty == null)
+                throw new Exception("No associated property found for  " + level + " MRN Property Item: " + label);
+                
+            Property property = new Property(associatedProperty);
+            string propertyName = property.getName();
+            //string propertyLabel = property.getLabel();
+            properties.Add(propertyName);
+            
+            // If it's a fakeML, get the other languages
+            
+            if (isFakeML) // If it's a fake ml, build the property names for all languages
+            {
+                // Get all languages, and add a property for each
+                foreach (string langCode in langCodes)
+                {
+                    // Ignore the english code
+                    if (langCode == "en")
+                        continue;
+                    string mlPropertyName = propertyName + "_" + langCode;
+                    properties.Add(mlPropertyName);
+                }
+            }
+        }
+        
+        // If there are no properties, throw an exception
+        if (properties.Count == 0)
+            throw new Exception("No associated properties found for  " + level + " MRN Property: " + label);
+    }
+
+    public void buildList(Item itm, List<string> langCodes)
+    {
+        mrnPropertiesList = new List<MRN_Property>();
+        
+        // Get all the MRN_Property items
+        string AMLquery = "<Item type=\"MRN_Property\"  select=\"mrn_item_property, mrn_is_group, mrn_etim_range_property, mrn_range_property_min, mrn_range_property_max, mrn_label, mrn_level, classification, mrn_fake_ml_property\" action=\"get\">" +
+                "<mrn_item_property>" + 
+                  "<Item type=\"Property\" select=\"label, name\" action=\"get\">" +
+                  "</Item>" + 
+                "</mrn_item_property>" +
+                "<mrn_range_property_min>" + 
+                     "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                "</mrn_range_property_min>" +
+                "<mrn_range_property_max>" + 
+                  "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                "</mrn_range_property_max>" +
+                "<Relationships>" + 
+                  "<Item type=\"MRN_Property_Property\" select=\"related_id\" action=\"get\"></Item>" +
+                "</Relationships>" +
+             "</Item>";
+        
+        Item resultItems = itm.newItem();
+        resultItems.loadAML(AMLquery);
+	    resultItems = resultItems.apply();
+	    
+        int itemCount = resultItems.getItemCount();
+        if (itemCount == 0)
+		    throw new Exception("No MRN_Property items found");
+       
+       // Build a list of the MRN_Property items
+        for (int ii=0; ii<itemCount; ii++) 
+        {
+            Item resultItem = resultItems.getItemByIndex(ii);
+            
+            // If it's a UOM property, ignore it
+            string type = resultItem.getProperty("classification","");
+            if (type == "MRN_UOM_Property")
+                continue;
+            
+            MRN_Property mrnProperty = new MRN_Property(resultItem, langCodes);
+            mrnPropertiesList.Add(mrnProperty);
+        }
+    }  
+    
+    public List<string> getPropertyNames(string value)
+    {
+        List<string> propertyNames = new List<string>();
+        
+        // cycle all the properties in the propertieslist to find the label that matches this one
+        foreach (MRN_Property mrnProperty in mrnPropertiesList)
+        {
+          string label = mrnProperty.getLabel();
+          if(label == value)
+          {
+              List<string> names = mrnProperty.getNames();
+              
+                foreach(string name in names)
+                {
+                    propertyNames.Add(name);
+                }
+            break;
+          }
+        }
+
+
+        if (value != "" && propertyNames.Count == 0)
+            throw new Exception("No properties found for attribute: " + value + "<br>Perhaps the attributes template is out-of-date");
+            
+        return propertyNames;
+    }
+    
+    // Find the properties that correspond to the labels
+    public string getProperties(string labels, string level)
+    {
+        List<string> propertiesList = new List<string>();
+        
+        // convert labels to list
+        List<string> labelsList = labels.Split(',').ToList();
+        
+        // Cycle all the labels and get the property name
+        for (int ii = 0; ii < labelsList.Count; ii++)
+        {
+            List<string>propertyNames = getPropertyNames(labelsList[ii]);
+            propertiesList.AddRange(propertyNames);
+        }
+        
+ 
+        return (string.Join(",", propertiesList.ToArray()));
+    }
+    
+    public List<string> getNames() { return properties; }
+    public string getLabel() { return label; }
+}
+
+// Class to hold a Property item
+public class Property
+{
+    Item item;
+    string name;
+    string label;
+    
+    public Property(Item itm)
+    {
+        item = itm;
+        name = item.getProperty("name","");
+        label = item.getProperty("label","");
+    }
+    
+    public string getName() { return name; }
+    public string getLabel() { return label; }
+}
+
+// Class to manage database languages. Language codes from here are added to multilingual property titles and to MRN_Keyword titles.
+// The codes are also used to build property names for MRN_Keyword item (MRN_Keyword item definition  should use the standard language codes in property names )
+public sealed class Languages
+{
+    Dictionary <string,string> languages = new Dictionary<string,string>();
+    
+	private List<string> _languageCodes;  // Language codes found in the database (used by the multilingual properties)
+	// Constructor to build the members
+	public Languages(Item itm)
+	{
+		// Build lanugageCodes list
+		_languageCodes = new List<string>();
+
+		Innovator inn = itm.getInnovator();
+		Item items = inn.newItem("Language", "get");
+		try
+		{
+			items = items.apply();
+		}
+		catch (Exception ex)
+		{
+			throw new Exception("Error getting Languages. " + ex.Message);
+		}
+
+		// Add the codes to the list
+		int count = items.getItemCount();
+
+		for (int ii = 0; ii < count; ii++)
+		{
+		    string code = items.getItemByIndex(ii).getProperty("code");
+		    string name = items.getItemByIndex(ii).getProperty("name");
+		    
+			_languageCodes.Add(items.getItemByIndex(ii).getProperty("code"));
+			languages.Add(name,code);
+		}
+
+	}
+
+	public List<string> getLanguageCodes() { return _languageCodes; }
+	public bool IsLangCode(string test)
+	{
+		return _languageCodes.Contains(test);
+	}
+	
+    public string getCode(string name)
+	{
+	    string code;
+	    
+	    try{
+	         code = languages[name];   
+	    }
+	    
+	    catch (KeyNotFoundException)
+        {
+            throw new Exception("Language code not found for: " + name);
+        }
+        
+        return code;
+	}
+
+////    End of class Languages  /////
+
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_ExportProfileSave</name>
+ </Item>
+</AML>

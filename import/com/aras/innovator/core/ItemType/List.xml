@@ -91,6 +91,11 @@
     <source_id keyed_name="List" type="ItemType" name="List">5736C479A8CB49BCA20138514C637266</source_id>
     <type>default</type>
    </Item>
+   <Item type="Item Action" id="893844894CF04173BBEB06E07982C62E" action="add">
+    <related_id keyed_name="mrn_sortListItems" type="Action">7C889A21FE9A4C2F8B42208831F01A48</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="List" type="ItemType" name="List">5736C479A8CB49BCA20138514C637266</source_id>
+   </Item>
    <Item type="TOC Access" id="8FE001A0D6254423A87A5D61453D8583" action="add">
     <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
     <sort_order>128</sort_order>

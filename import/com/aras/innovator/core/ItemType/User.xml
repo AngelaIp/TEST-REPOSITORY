@@ -534,16 +534,34 @@
     <source_id keyed_name="User" type="ItemType" name="User">45E899CD2859442982EB22BB2DF683E5</source_id>
     <category>Administration</category>
    </Item>
+   <Item type="TOC Access" id="FB9F06C5A24E4764977804DCDE16AC32" action="add">
+    <related_id keyed_name="mrn_it_helpdesk" type="Identity">B6818FDF769C4F34A16ACD927AC0D9EA</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="User" type="ItemType" name="User">45E899CD2859442982EB22BB2DF683E5</source_id>
+    <category>Mersen Helpdesk</category>
+   </Item>
    <Item type="Can Add" id="2666981343834D0082EF61CD8055DD81" action="add">
     <can_add>1</can_add>
     <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
     <sort_order>128</sort_order>
     <source_id keyed_name="User" type="ItemType" name="User">45E899CD2859442982EB22BB2DF683E5</source_id>
    </Item>
+   <Item type="Can Add" id="EBB277EA0295440F93A8381A53E7115E" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="mrn_it_helpdesk" type="Identity">B6818FDF769C4F34A16ACD927AC0D9EA</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="User" type="ItemType" name="User">45E899CD2859442982EB22BB2DF683E5</source_id>
+   </Item>
    <Item type="Allowed Permission" id="2F7F11DCF2FE4D5A8B0D28CF1EB1EE6A" action="add">
     <is_default>1</is_default>
     <related_id keyed_name="User" type="Permission">AA4BFC34E3E64128ADA3FB01042464C4</related_id>
     <sort_order>128</sort_order>
+    <source_id keyed_name="User" type="ItemType" name="User">45E899CD2859442982EB22BB2DF683E5</source_id>
+   </Item>
+   <Item type="Allowed Permission" id="43437E495CCB4985A0B5A1F90F665C24" action="add">
+    <is_default>0</is_default>
+    <related_id keyed_name="mrn_it_helpdesk" type="Permission">C7744A34039D470E8EDF91EB36EEE512</related_id>
+    <sort_order>256</sort_order>
     <source_id keyed_name="User" type="ItemType" name="User">45E899CD2859442982EB22BB2DF683E5</source_id>
    </Item>
    <Item type="Item Report" id="65B2DDC93FA24F29A1053FC0BD37675A" action="add">

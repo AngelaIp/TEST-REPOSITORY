@@ -1,8 +1,0 @@
-﻿<AML>
- <Item type="FileType" id="F4D90A9FBE744629852CF624B2ED399C" action="add">
-  <description>Siemens Solid Edge DFT Drawing</description>
-  <extension>dft</extension>
-  <mimetype>application/octet-stream</mimetype>
-  <name>Solid Edge Drawing</name>
- </Item>
-</AML>

@@ -1,0 +1,44 @@
+﻿<AML>
+ <Item type="List" id="C57F8748DF804DCD9E381BD86460B9A8" action="add">
+  <description>US units used in the PIM</description>
+  <name>MRN_US_Units</name>
+  <Relationships>
+   <Item type="Value" id="CB729E3210884908BAE83F1F983F6FEC" action="add">
+    <label xml:lang="en">°C</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_US_Units" type="List">C57F8748DF804DCD9E381BD86460B9A8</source_id>
+    <value>°C</value>
+   </Item>
+   <Item type="Value" id="77DD9725885F4C4094F924CE882B0A40" action="add">
+    <label xml:lang="en">Hz</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_US_Units" type="List">C57F8748DF804DCD9E381BD86460B9A8</source_id>
+    <value>Hz</value>
+   </Item>
+   <Item type="Value" id="C6A906ABDE014D2EA8EB28BA3EAAE4F9" action="add">
+    <label xml:lang="en">in</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_US_Units" type="List">C57F8748DF804DCD9E381BD86460B9A8</source_id>
+    <value>in</value>
+   </Item>
+   <Item type="Value" id="491D3263C46547C88176DECE04A1D505" action="add">
+    <label xml:lang="en">lb</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_US_Units" type="List">C57F8748DF804DCD9E381BD86460B9A8</source_id>
+    <value>lb</value>
+   </Item>
+   <Item type="Value" id="E3FFF42F0959456FB9065A5C273DA38E" action="add">
+    <label xml:lang="en">lb-in</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_US_Units" type="List">C57F8748DF804DCD9E381BD86460B9A8</source_id>
+    <value>lb-in</value>
+   </Item>
+   <Item type="Value" id="41A76DF3451844508E44C0BD508497E6" action="add">
+    <label xml:lang="en">ft</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_US_Units" type="List">C57F8748DF804DCD9E381BD86460B9A8</source_id>
+    <value>ft</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

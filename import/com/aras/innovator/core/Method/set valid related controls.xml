@@ -8,11 +8,16 @@ function methodExec() {
 	var relItem = null;
 	var relItemExists = false;
 	var isDependent;
-
-	var input = mainDataForm.elements['related_id'];
+    
+	// IR-055699 Type-ahead specific code converting
+	//var input = mainDataForm.elements['related_id'];
+	var input = getFieldComponentByName('related_id');
+	
 	if (input) {
-		val = input.value;
+		//val = input.value;
+		val = input.getValue();
 	}
+	// End of fix IR-055699
 
 	if (val !== '') {
 		relItem = aras.getItemByKeyedName('ItemType', val);

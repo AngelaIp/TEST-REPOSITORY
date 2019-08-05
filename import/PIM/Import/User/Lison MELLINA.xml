@@ -1,0 +1,22 @@
+﻿<AML>
+ <Item type="User" id="70DC794061D1481EADB564808B0983C3" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Lison.MELLINA@us.mersen.com</email>
+  <last_login_date>2019-05-17T10:32:34</last_login_date>
+  <login_name>lmellina</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Lison MELLINA" type="Identity">9AF54A483DA74ED8B0431BCDD79A81FF</owned_by_id>
+  <pwd_is_set_on>2019-03-22T08:50:00</pwd_is_set_on>
+  <working_directory>c:\temp</working_directory>
+  <first_name>Lison</first_name>
+  <last_name>MELLINA</last_name>
+  <Relationships>
+   <Item type="Alias" id="72A7F4A30E0041FA9F8CDAB140D37379" action="add">
+    <from_date>2018-09-12T14:33:37</from_date>
+    <related_id keyed_name="Lison MELLINA" type="Identity">9AF54A483DA74ED8B0431BCDD79A81FF</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Lison MELLINA" type="User">70DC794061D1481EADB564808B0983C3</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

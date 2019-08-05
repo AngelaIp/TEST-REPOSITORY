@@ -1,0 +1,482 @@
+﻿<AML>
+ <Item type="List" id="41DAF48D329343F283BA8CA0A3296616" action="add">
+  <description>List of values for web navigation within the new website</description>
+  <name>mrn_Web_Nav_L2</name>
+  <Relationships>
+   <Item type="Value" id="17A467C2E7BD4B51AB533B0BDEE3FEB1" action="add">
+    <label xml:lang="en">Class CC Fuses and Fuse Holders</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0105</value>
+   </Item>
+   <Item type="Value" id="780BB2CB2DDC455E989D92EA00A58FBE" action="add">
+    <label xml:lang="en">Class G Fuses and Fuse Holders</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0110</value>
+   </Item>
+   <Item type="Value" id="DC63975843E0416EA5F4FA5B95BF0B7E" action="add">
+    <label xml:lang="en">Class J Fuses and Fuse Holders</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0101</value>
+   </Item>
+   <Item type="Value" id="1A94E098046F40DA84376C9F9AF9C091" action="add">
+    <label xml:lang="en">Class K5 Fuses and Fuse Holders</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0109</value>
+   </Item>
+   <Item type="Value" id="E639C5FD949F433FB16694FB16869BCC" action="add">
+    <label xml:lang="en">Class L Fuses and Fuse Holders</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0104</value>
+   </Item>
+   <Item type="Value" id="070E97E1C54542538F8261BD993C747A" action="add">
+    <label xml:lang="en">Class RK1 Fuses and Fuse Holders</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0102</value>
+   </Item>
+   <Item type="Value" id="9D8BE31523674726A99FA779E0CF9357" action="add">
+    <label xml:lang="en">Class RK5 Fuses and Fuse Holders</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0103</value>
+   </Item>
+   <Item type="Value" id="D0CD3EA2AA4245AC8936F8FC17B54FF6" action="add">
+    <label xml:lang="en">Class T Fuses and Fuse Holders</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0108</value>
+   </Item>
+   <Item type="Value" id="54C5A4A9A366427F99E243091B7A4F32" action="add">
+    <label xml:lang="en">CSA Class H Fuses and Fuse Holders</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0112</value>
+   </Item>
+   <Item type="Value" id="8389224D2977498692B80D2F63EDED25" action="add">
+    <label xml:lang="en">CSA HRC Fuses and Fuse Holders</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0114</value>
+   </Item>
+   <Item type="Value" id="43FDCBCD9C944A2F938393BA19E41A09" action="add">
+    <label xml:lang="en">Midget Fuses and Fuse Holders</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0106</value>
+   </Item>
+   <Item type="Value" id="3456312AD1A441B9A931DF45AF59937C" action="add">
+    <label xml:lang="en">Miniature UL/CSA Fuses and Fuse Holders</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0116</value>
+   </Item>
+   <Item type="Value" id="5CAA41EC81A54CA6BADB6E7AA8809ADC" action="add">
+    <label xml:lang="en">Plug Fuses</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0113</value>
+   </Item>
+   <Item type="Value" id="A0BCC3A97EDD45B89D9D210D22EF98B3" action="add">
+    <label xml:lang="en">Power Distribution Blocks</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0118</value>
+   </Item>
+   <Item type="Value" id="2C350B415C6949C09C40540E4B2162A8" action="add">
+    <label xml:lang="en">PV Fuses and Fuse Holders</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0107</value>
+   </Item>
+   <Item type="Value" id="58399FF0E1014934A0A3F7CBEAB3AF38" action="add">
+    <label xml:lang="en">Renewable Fuses and Fuse Holders</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0111</value>
+   </Item>
+   <Item type="Value" id="9A211845EE604F8B970D02F7AE3F0F68" action="add">
+    <label xml:lang="en">UL/CSA Fuse Holders and Accessories</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0117</value>
+   </Item>
+   <Item type="Value" id="D73838F94D25485D8A44601879285F0E" action="add">
+    <label xml:lang="en">BS88 Fuse-links and Fusegear</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0204</value>
+   </Item>
+   <Item type="Value" id="7E62075101624CA6964F17969B43FD51" action="add">
+    <label xml:lang="en">D-D0 Fuse-Links and Fusegear</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0202</value>
+   </Item>
+   <Item type="Value" id="80F6D998F69F4A5FA966F22491F494A9" action="add">
+    <label xml:lang="en">Fuse Systems Accessories</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0207</value>
+   </Item>
+   <Item type="Value" id="EC41C80670AB40A5B432AAC0AAB5DD4C" action="add">
+    <label xml:lang="en">IEC Cylindrical Fuse-Links and Fusegear</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0203</value>
+   </Item>
+   <Item type="Value" id="C387FA192DE34BAD911B4D430BA0AC8E" action="add">
+    <label xml:lang="en">IEC Miniatures Fuse-Links and Fusegear</label>
+    <sort_order>220</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0205</value>
+   </Item>
+   <Item type="Value" id="3399DBE1CF0E4AFCBA83F27C8C9FFF03" action="add">
+    <label xml:lang="en">NH Fuse-Links, Fuse-Bases and Fuse-Disconnectors</label>
+    <sort_order>230</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0201</value>
+   </Item>
+   <Item type="Value" id="1739D024524247F2AE3CD4E7189C8345" action="add">
+    <label xml:lang="en">PV Fuse-links and Fusegear</label>
+    <sort_order>240</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0206</value>
+   </Item>
+   <Item type="Value" id="3456B5DDDBC946009EB08A88C0CEBEFC" action="add">
+    <label xml:lang="en">Cylindrical Auxiliaries AC and DC</label>
+    <sort_order>250</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0307</value>
+   </Item>
+   <Item type="Value" id="67E2A64DD81E4A4E870E4A0E422A8626" action="add">
+    <label xml:lang="en">DC High Performance Square and Round Body</label>
+    <sort_order>260</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0306</value>
+   </Item>
+   <Item type="Value" id="AACFD2D4561C471D8F1DC1F2E32C5BD0" action="add">
+    <label xml:lang="en">High Performance Square Body</label>
+    <sort_order>270</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0309</value>
+   </Item>
+   <Item type="Value" id="D413889BA9CD4BC7ACDDE946A3740C53" action="add">
+    <label xml:lang="en">High Speed Fuse Bases</label>
+    <sort_order>280</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0310</value>
+   </Item>
+   <Item type="Value" id="EBB67E180D524809927A56654D52F64D" action="add">
+    <label xml:lang="en">IEC Cylindrical Body</label>
+    <sort_order>290</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0303</value>
+   </Item>
+   <Item type="Value" id="856406B9961C4180A2620FAF96698AEC" action="add">
+    <label xml:lang="en">Low Inductance Square Body</label>
+    <sort_order>300</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0308</value>
+   </Item>
+   <Item type="Value" id="D56444FD32B4490DB3BED7E041E51AF7" action="add">
+    <label xml:lang="en">Miniature FA SA Fuses and Fuse Holders</label>
+    <sort_order>310</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0305</value>
+   </Item>
+   <Item type="Value" id="9AC0D4A88EB840D3A3A725FA05D3056D" action="add">
+    <label xml:lang="en">NH DIN and BS88</label>
+    <sort_order>320</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0304</value>
+   </Item>
+   <Item type="Value" id="45ED64D2607D49A59A950E08C4F9787C" action="add">
+    <label xml:lang="en">North American Style Round Body</label>
+    <sort_order>330</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0302</value>
+   </Item>
+   <Item type="Value" id="2EFFB237B0084FFD99072DA58E974B9E" action="add">
+    <label xml:lang="en">Square Body</label>
+    <sort_order>340</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0301</value>
+   </Item>
+   <Item type="Value" id="BF4EFB2287964EE784E8B0F8E5887B56" action="add">
+    <label xml:lang="en">Battery Module fuses</label>
+    <sort_order>350</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0402</value>
+   </Item>
+   <Item type="Value" id="71BCA10FC5EA4335BDCD090D4F1654FB" action="add">
+    <label xml:lang="en">Battery Pack fuse</label>
+    <sort_order>360</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0403</value>
+   </Item>
+   <Item type="Value" id="31A9732DFAB9460793B778AFA5C47B69" action="add">
+    <label xml:lang="en">DC contactor for EV and Charging Station</label>
+    <sort_order>370</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0404</value>
+   </Item>
+   <Item type="Value" id="7317ECF29C4A48EEB258D5144BCA2FC9" action="add">
+    <label xml:lang="en">Forklift Truck Fuses</label>
+    <sort_order>380</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0401</value>
+   </Item>
+   <Item type="Value" id="27924690E9354326967B7D9C92286357" action="add">
+    <label xml:lang="en">Hybrid DC Overcurrent Protection</label>
+    <sort_order>390</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0405</value>
+   </Item>
+   <Item type="Value" id="23BF97B8845C4BD7BA6B61175DE2D819" action="add">
+    <label xml:lang="en">Hybrid DC Power Relay</label>
+    <sort_order>400</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0406</value>
+   </Item>
+   <Item type="Value" id="DB912A245BD14C9E884BDEBAC187E589" action="add">
+    <label xml:lang="en">DC Photovoltaic SPD - DIN-RAIL IEC/UL CSA</label>
+    <sort_order>410</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0713</value>
+   </Item>
+   <Item type="Value" id="7647A6F2BF354C0791175031AEBB5BCB" action="add">
+    <label xml:lang="en">Power Line SPD - NEMA UL CSA TYPE 1</label>
+    <sort_order>420</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0701</value>
+   </Item>
+   <Item type="Value" id="39132CC0DBED4A0B8FA23D49DFF1831A" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL UL CSA TYPE 1</label>
+    <sort_order>430</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0702</value>
+   </Item>
+   <Item type="Value" id="ECC98FAA710240F29BA22FAEA29D1FC0" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 1</label>
+    <sort_order>440</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0703</value>
+   </Item>
+   <Item type="Value" id="79FA25E28D4D4A6280E28E6582D334DE" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 1+2</label>
+    <sort_order>450</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0704</value>
+   </Item>
+   <Item type="Value" id="A99C2AA628F3425391F601AAA75269F9" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 2/UL CSA</label>
+    <sort_order>460</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0705</value>
+   </Item>
+   <Item type="Value" id="8131C095AAD140DE812A41A801007FFE" action="add">
+    <label xml:lang="en">Power Line SPD - DIN-RAIL IEC TYPE 2+3/UL CSA </label>
+    <sort_order>470</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0706</value>
+   </Item>
+   <Item type="Value" id="2E41C56B882B43B2B674F1CE1CB9B270" action="add">
+    <label xml:lang="en">LED Lighting SPD - IEC TYPE 2+3</label>
+    <sort_order>480</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0708</value>
+   </Item>
+   <Item type="Value" id="2F840A8D5B15404494D7BEB84B4C2160" action="add">
+    <label xml:lang="en">Surge Protection Components for OEM Designers</label>
+    <sort_order>490</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0710</value>
+   </Item>
+   <Item type="Value" id="83E383F9C4FA4687BA26F1C4329E7DE3" action="add">
+    <label xml:lang="en">Power Frequency Overvoltage Protection Devices</label>
+    <sort_order>500</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0709</value>
+   </Item>
+   <Item type="Value" id="FAF235C0C990470C81FA5D6B91307946" action="add">
+    <label xml:lang="en">Signal Line SPD</label>
+    <sort_order>505</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0711</value>
+   </Item>
+   <Item type="Value" id="7BD226466E7E4B8A951778C442C5DF49" action="add">
+    <label xml:lang="en">Lightning Protection Air Terminals (ESE)</label>
+    <sort_order>510</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0712</value>
+   </Item>
+   <Item type="Value" id="B14F924BD6FE41B6804074040A5EC78E" action="add">
+    <label xml:lang="en">Insulation Monitoring Devices</label>
+    <sort_order>515</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0714</value>
+   </Item>
+   <Item type="Value" id="5428539D6B714A928B0EEAFE9054DB4F" action="add">
+    <label xml:lang="en">Grounding System Monitor</label>
+    <sort_order>520</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0715</value>
+   </Item>
+   <Item type="Value" id="0BE7B0FB196D406D89B8023A6B320147" action="add">
+    <label xml:lang="en">Capacitor Protection Fuses</label>
+    <sort_order>530</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0806</value>
+   </Item>
+   <Item type="Value" id="05D7AFAD7F24499C9F8FDD9750E13BB8" action="add">
+    <label xml:lang="en">DIN HV Back-Up Fuses for Motors</label>
+    <sort_order>540</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0801</value>
+   </Item>
+   <Item type="Value" id="F87ACCB94CB846439B2C0478AD04768E" action="add">
+    <label xml:lang="en">DIN HV Back-Up Fuses for Transformers</label>
+    <sort_order>550</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0802</value>
+   </Item>
+   <Item type="Value" id="25B1E89DD0724626B1B6C7F741700ACD" action="add">
+    <label xml:lang="en">DIN HV General Purpose Fuses for transformers</label>
+    <sort_order>555</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0810</value>
+   </Item>
+   <Item type="Value" id="38587947EDF842F98DBCE8E8C7EA1190" action="add">
+    <label xml:lang="en">E Rated General Purpose Medium Voltage Fuses</label>
+    <sort_order>560</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0804</value>
+   </Item>
+   <Item type="Value" id="627127A0195947D78A272CC726DBF249" action="add">
+    <label xml:lang="en">HV &amp; MV Fuse Bases</label>
+    <sort_order>570</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0808</value>
+   </Item>
+   <Item type="Value" id="340E1D4088124CA1BCCB0795E41A0D43" action="add">
+    <label xml:lang="en">NF/UTE HV Back-Up Fuses for Transformers</label>
+    <sort_order>580</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0803</value>
+   </Item>
+   <Item type="Value" id="77AF2C71F81D4B24AFEFBE87B7E603D8" action="add">
+    <label xml:lang="en">Potential Transformers Protection Fuses</label>
+    <sort_order>590</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0807</value>
+   </Item>
+   <Item type="Value" id="7EA071009FB144539800339E5EA23168" action="add">
+    <label xml:lang="en">R Rated Back-Up Medium Voltage Fuses</label>
+    <sort_order>600</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB0805</value>
+   </Item>
+   <Item type="Value" id="551514BDF2AB4DEB9FA100BED6F74B67" action="add">
+    <label xml:lang="en">IEC PV Switch Disconnector</label>
+    <sort_order>610</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1009</value>
+   </Item>
+   <Item type="Value" id="44F292EBEE214BDDA446BA35BEFBD7A0" action="add">
+    <label xml:lang="en">IEC Switch Disconnector</label>
+    <sort_order>620</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1007</value>
+   </Item>
+   <Item type="Value" id="28A102D8E3BF4474A6359E3AB04D9D3D" action="add">
+    <label xml:lang="en">IEC Switch Fuse Disconnector</label>
+    <sort_order>630</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1008</value>
+   </Item>
+   <Item type="Value" id="A3EF533A50B24DD3850A70A4A37AF413" action="add">
+    <label xml:lang="en">NH Fuse Switch Disconnectors</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1010</value>
+   </Item>
+   <Item type="Value" id="AA022B50109A434BBC7447A76521C8C4" action="add">
+    <label xml:lang="en">UL 508</label>
+    <sort_order>650</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1001</value>
+   </Item>
+   <Item type="Value" id="9804B69A6F1C4E519DA62751E6FEB332" action="add">
+    <label xml:lang="en">UL 98 Fusible</label>
+    <sort_order>660</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1002</value>
+   </Item>
+   <Item type="Value" id="8D31DEECC51D4595801B03BC2CAEDA07" action="add">
+    <label xml:lang="en">UL 98 non Fusible</label>
+    <sort_order>670</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1003</value>
+   </Item>
+   <Item type="Value" id="FCE46CE7791147AC881CE4102B7677E4" action="add">
+    <label xml:lang="en">UL Enclosed Disconnect Switches</label>
+    <sort_order>680</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1006</value>
+   </Item>
+   <Item type="Value" id="B19144D6E4064AF08FBFB44FA63FFCA7" action="add">
+    <label xml:lang="en">UL PV Rated</label>
+    <sort_order>690</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1004</value>
+   </Item>
+   <Item type="Value" id="5FB72600282A4D4488E2146C51B61421" action="add">
+    <label xml:lang="en">UL Surge Switch</label>
+    <sort_order>700</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1005</value>
+   </Item>
+   <Item type="Value" id="D0930BD01DC1463296FF99FD89906404" action="add">
+    <label xml:lang="en">Cable Protector Limitors</label>
+    <sort_order>710</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1101</value>
+   </Item>
+   <Item type="Value" id="D4526F72286D48BAA72B560AF6A29E95" action="add">
+    <label xml:lang="en">Capacitor Fuses</label>
+    <sort_order>720</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1104</value>
+   </Item>
+   <Item type="Value" id="F4702597A0EB490E8314E3B7A1FD97F1" action="add">
+    <label xml:lang="en">Telecommunication Fuses</label>
+    <sort_order>730</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1102</value>
+   </Item>
+   <Item type="Value" id="0E175BBE4552417886195764092281A6" action="add">
+    <label xml:lang="en">Welder Protectors</label>
+    <sort_order>740</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1103</value>
+   </Item>
+   <Item type="Value" id="3D0E1004028544D1B9A4529D9B9A2BD1" action="add">
+    <label xml:lang="en">Fused Coordination Panelboard</label>
+    <sort_order>750</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1202</value>
+   </Item>
+   <Item type="Value" id="4A00E3B8364342749CBD7D046C947EAF" action="add">
+    <label xml:lang="en">Fusible Shunt Trip Disconnect</label>
+    <sort_order>760</sort_order>
+    <source_id keyed_name="mrn_Web_Nav_L2" type="List">41DAF48D329343F283BA8CA0A3296616</source_id>
+    <value>WB1201</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Action" id="19F8B1A3A3DE4959934F1BC9D5BA7CD1" action="add">
+  <item_query>&lt;Item type="{@type}" action="get"&gt;&lt;id&gt;&lt;xsl:value-of select="@id" /&gt;&lt;/id&gt;&lt;/Item&gt;</item_query>
+  <label xml:lang="en">Run Update Export</label>
+  <location>server</location>
+  <method keyed_name="mrn_GenerateItemExport" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>mrn_GenerateItemExport</name>
+   </Item>
+  </method>
+  <target>window</target>
+  <type>item</type>
+  <name>mrn_ItemExportLog</name>
+ </Item>
+</AML>

@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="1946F6F99672406892B6152F94DFA8B3" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>Bruno.LAMBEY@mersen.com </email>
+  <login_name>blam</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Bruno LAMBEY" type="Identity">993B5D878AF94F609BFC5C081A185C57</owned_by_id>
+  <first_name>Bruno</first_name>
+  <last_name>LAMBEY</last_name>
+  <Relationships>
+   <Item type="Alias" id="344055F23BE044D0BD92DBD6C7DD9EE3" action="add">
+    <from_date>2018-07-30T12:49:01</from_date>
+    <related_id keyed_name="Bruno LAMBEY" type="Identity">993B5D878AF94F609BFC5C081A185C57</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Bruno LAMBEY" type="User">1946F6F99672406892B6152F94DFA8B3</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

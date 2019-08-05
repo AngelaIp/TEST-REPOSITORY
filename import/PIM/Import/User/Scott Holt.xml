@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="4BDCE1405F7A424BB19B689B26D139D5" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>scott.holt@us.mersen.com</email>
+  <last_login_date>2018-10-24T08:12:21</last_login_date>
+  <login_name>sholt</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Scott Holt" type="Identity">F66A9235DA1F437FAFF0ED6A20CFF6F9</owned_by_id>
+  <working_directory>C:\Temp\Aras</working_directory>
+  <first_name>Scott</first_name>
+  <last_name>Holt</last_name>
+  <Relationships>
+   <Item type="Alias" id="630D658A4A344061A1CEFA2D6FF1854B" action="add">
+    <from_date>2017-01-19T16:34:57</from_date>
+    <related_id keyed_name="Scott Holt" type="Identity">F66A9235DA1F437FAFF0ED6A20CFF6F9</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Scott Holt" type="User">4BDCE1405F7A424BB19B689B26D139D5</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

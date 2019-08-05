@@ -1,0 +1,183 @@
+﻿<AML>
+ <Item type="List" id="14461ACD301F4FAC8012B218C810E7E7" action="add">
+  <description>Country Specific Customs Code</description>
+  <name>MRN_Customs_Code</name>
+  <Relationships>
+   <Item type="Filter Value" id="7C5A3D539D674AECB255B9B3A0C36896" action="add">
+    <filter>853510</filter>
+    <label xml:lang="en">Fuses over 1000V</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85351000</value>
+   </Item>
+   <Item type="Filter Value" id="E478CE05DC4843C8A44C08A5F7449654" action="add">
+    <filter>853510</filter>
+    <label xml:lang="en">Fuses for a voltage &gt; 1.000 V</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85351000</value>
+   </Item>
+   <Item type="Filter Value" id="93F9071F214347E695C2DB53CB1E8A01" action="add">
+    <filter>853610</filter>
+    <label xml:lang="en">FUSE &lt;= 1000V &lt;= 10A &amp; SUPPORT</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85361010</value>
+   </Item>
+   <Item type="Filter Value" id="EFB083DBA4564E15AB027714ED1B2E1C" action="add">
+    <filter>853530</filter>
+    <label xml:lang="en">Isolating switches over 1 kV and under 72.5 kV</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85353010</value>
+   </Item>
+   <Item type="Filter Value" id="81DFF5E2C1594BCF81C69465E43EA9A7" action="add">
+    <filter>853610</filter>
+    <label xml:lang="en">FUSE &lt;= FROM 11 TO 1000V 63A </label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85361050</value>
+   </Item>
+   <Item type="Filter Value" id="E88CCA4B5F054F31916C769BBAB57C3C" action="add">
+    <filter>853540</filter>
+    <label xml:lang="en">Surge Suppressors over 1000V</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85354000</value>
+   </Item>
+   <Item type="Filter Value" id="3EEF821BFEAC495B902A94EFC186CF79" action="add">
+    <filter>853590</filter>
+    <label xml:lang="en">PDB for a voltage exceeding 1,000 V</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85359000</value>
+   </Item>
+   <Item type="Filter Value" id="7C7D20965E5B4803938E0B3DC60BF072" action="add">
+    <filter>853610</filter>
+    <label xml:lang="en">FUSE &lt;= 1000 V&gt; = 64 &amp; SUPPOR</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85361090</value>
+   </Item>
+   <Item type="Filter Value" id="A2BB6835F86049AAAEEBBCC92663189E" action="add">
+    <filter>853530</filter>
+    <label xml:lang="en">BREAKERS &amp; INTER.&gt; 1000V</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85353010</value>
+   </Item>
+   <Item type="Filter Value" id="DC4C8F68D8B84465B8CA9D2728619345" action="add">
+    <filter>853590</filter>
+    <label xml:lang="en">Fuseholders and Heat Sinks for a voltage exceeding 1,000 V</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85359000</value>
+   </Item>
+   <Item type="Filter Value" id="5186A2CFD39B4A0291CE7923641C9E94" action="add">
+    <filter>853590</filter>
+    <label xml:lang="en">OTHER DEVICES&gt; 1000V</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85359000</value>
+   </Item>
+   <Item type="Filter Value" id="AEFB7409885D43C2AC57D88BD9A2F437" action="add">
+    <filter>853610</filter>
+    <label xml:lang="en">Fuses under 1000V and less than 10A</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85361010</value>
+   </Item>
+   <Item type="Filter Value" id="133AA1383D17423BA320FDDBDDC2167A" action="add">
+    <filter>853610</filter>
+    <label xml:lang="en">Fuses under 1000V and from 11a to 63A</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85361050</value>
+   </Item>
+   <Item type="Filter Value" id="487FF18EE19C45E49E3BE83CF96D0910" action="add">
+    <filter>853630</filter>
+    <label xml:lang="en">SWITCHES / OTHER INTER  &lt;1000</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85363090</value>
+   </Item>
+   <Item type="Filter Value" id="72D26F8AD11D4DAD9C8DBC7F878439B5" action="add">
+    <filter>853610</filter>
+    <label xml:lang="en">Fuses under 1000V and greater than 64A</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85361090</value>
+   </Item>
+   <Item type="Filter Value" id="4C62001F445B463FBF5FD00302154F4F" action="add">
+    <filter>853630</filter>
+    <label xml:lang="en">SPD under 1000V and less than 16A</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85363010</value>
+   </Item>
+   <Item type="Filter Value" id="235200BF605A4BAA9682EBC1C5D5990C" action="add">
+    <filter>853630</filter>
+    <label xml:lang="en">SPD under 1000V and from 17a to 125A</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85363030</value>
+   </Item>
+   <Item type="Filter Value" id="18A20FEB4FAD4D50A851A14ABA4ED893" action="add">
+    <filter>853630</filter>
+    <label xml:lang="en">SPD under 1000V and greater than 126A</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85363090</value>
+   </Item>
+   <Item type="Filter Value" id="1B9F226C4F13499195BD4FAC78731920" action="add">
+    <filter>853650</filter>
+    <label xml:lang="en">Rotary switches between 60V and 1000V</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85365015</value>
+   </Item>
+   <Item type="Filter Value" id="2598B30B81D54485A362057CE2F830E4" action="add">
+    <filter>853650</filter>
+    <label xml:lang="en">Other switches 60V and less</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85365015</value>
+   </Item>
+   <Item type="Filter Value" id="7CD4D8A369DC451CAB6746EC48FC53D6" action="add">
+    <filter>853650</filter>
+    <label xml:lang="en">Other switches between 61V and 1000V</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85365015</value>
+   </Item>
+   <Item type="Filter Value" id="8AF296E24C154058A34AE0A522B55F06" action="add">
+    <filter>853690</filter>
+    <label xml:lang="en">Fuseholders for a voltage less than 1,000 V</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85369085</value>
+   </Item>
+   <Item type="Filter Value" id="6FC11E24094542EBB7446010420EED83" action="add">
+    <filter>853690</filter>
+    <label xml:lang="en">Terminals/splices under 1000V</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85369085</value>
+   </Item>
+   <Item type="Filter Value" id="D58A67F5147F44B5A4A2C14A7F6D1304" action="add">
+    <filter>853890</filter>
+    <label xml:lang="en">Switch Accessories</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85389099</value>
+   </Item>
+   <Item type="Filter Value" id="68A9CC61B1B04B2CBDA289F485D19DE8" action="add">
+    <filter>853890</filter>
+    <label xml:lang="en">Fuse Accessories</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_Customs_Code" type="List">14461ACD301F4FAC8012B218C810E7E7</source_id>
+    <value>85389099</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

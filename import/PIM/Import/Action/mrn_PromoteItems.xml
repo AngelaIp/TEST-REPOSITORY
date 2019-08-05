@@ -1,0 +1,16 @@
+﻿<AML>
+ <Item type="Action" id="149BD45308924F9297D7AE9260C66533" action="add">
+  <body />
+  <item_query>&lt;Item type="{@type}" action="get"&gt;&lt;id&gt;&lt;xsl:value-of select="@id" /&gt;&lt;/id&gt;&lt;/Item&gt;</item_query>
+  <label xml:lang="en">Promote Item(s)</label>
+  <location>server</location>
+  <method keyed_name="mrn_promoteItems" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>mrn_promoteItems</name>
+   </Item>
+  </method>
+  <target>none</target>
+  <type>item</type>
+  <name>mrn_PromoteItems</name>
+ </Item>
+</AML>

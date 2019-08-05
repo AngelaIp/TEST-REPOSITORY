@@ -1,0 +1,44 @@
+﻿<AML>
+ <Item type="Method" id="07AB09E7A55C42F1A86FC96CD2D80DE1" action="add">
+  <comments />
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//
+// Name:          mrn_exportTemplateSetAttrs
+// Called by:     mrn_ExportProfile Form: attribute fields
+// Description:   Saves the selected attributes to the respective properties.
+//
+// June, 2016   Kamran Aftab    developed for Mersen
+//======================================================================
+
+// //debugger;
+
+// The calling field
+var selObj=this;
+
+// Array to read the values of selected objects into
+var selectedArray = new Array();
+
+// Read the selected options values into an array
+var i;
+var count = 0;
+for (i=0; i<selObj.options.length; i++) 
+{
+    if (selObj.options[i].selected) 
+    {
+      selectedArray[count] = selObj.options[i].value.trim();
+      count++;
+    }
+}
+
+//convert array to comma delim string to save to DB
+var attributes  = selectedArray.join();
+
+//set the property with selected choices (comma delim string)
+window.handleItemChange(selObj.name, attributes);
+
+
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_exportTemplateSetAttrs</name>
+ </Item>
+</AML>

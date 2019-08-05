@@ -1,0 +1,254 @@
+﻿<AML>
+ <Item type="List" id="502DF73620E04326A1E1D42E7501A338" action="add">
+  <description>Replacement plugs</description>
+  <name>MRN_Replacement_Plugs</name>
+  <Relationships>
+   <Item type="Value" id="0A0E5D20EB4A420185B9C5692C3C7C91" action="add">
+    <label xml:lang="en">SP180U</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP180U</value>
+   </Item>
+   <Item type="Value" id="B8F4285D747D47CB8593E0BE0F5A8F48" action="add">
+    <label xml:lang="en">SP275U</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP275U</value>
+   </Item>
+   <Item type="Value" id="6915040D9A654864A396C38C0D46F6D1" action="add">
+    <label xml:lang="en">SP320U</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP320U</value>
+   </Item>
+   <Item type="Value" id="5E7507B7E5FC4027B19AA6B184C39680" action="add">
+    <label xml:lang="en">SP420U</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP420U</value>
+   </Item>
+   <Item type="Value" id="5B088B4D5F0149ACB8D695CE1602104B" action="add">
+    <label xml:lang="en">SP440U</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP440U</value>
+   </Item>
+   <Item type="Value" id="8B4B99391C694961A501DEA6B5B9B967" action="add">
+    <label xml:lang="en">SP550U</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP550U</value>
+   </Item>
+   <Item type="Value" id="CCCA229E9A974FFD9AF250060929D4D7" action="add">
+    <label xml:lang="en">SP660U</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP660U</value>
+   </Item>
+   <Item type="Value" id="6EB3229D62F645EBAAF9A896F9313181" action="add">
+    <label xml:lang="en">SP420PV</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP420PV</value>
+   </Item>
+   <Item type="Value" id="FCC380F19A8A4040B7570FFCB4F9225F" action="add">
+    <label xml:lang="en">SP670PV</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP670PV</value>
+   </Item>
+   <Item type="Value" id="972CBCF7991447788B6386268D46D473" action="add">
+    <label xml:lang="en">SP745PV</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP745PV</value>
+   </Item>
+   <Item type="Value" id="17C690F406244B09BB44D516E51FE4EF" action="add">
+    <label xml:lang="en">SP07U175</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP07U175</value>
+   </Item>
+   <Item type="Value" id="35763BD6820948E9AFCA9E9033BADCEB" action="add">
+    <label xml:lang="en">SP07U275</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP07U275</value>
+   </Item>
+   <Item type="Value" id="67A220345AFD45B080FE2DC211093885" action="add">
+    <label xml:lang="en">SP07U320</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP07U320</value>
+   </Item>
+   <Item type="Value" id="42BF9B5EB48E4F56A084A30DF7FEFDF2" action="add">
+    <label xml:lang="en">SP07U420</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP07U420</value>
+   </Item>
+   <Item type="Value" id="47D6F5C74535434DB13FCCBAD82F35C9" action="add">
+    <label xml:lang="en">SP07U550</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP07U550</value>
+   </Item>
+   <Item type="Value" id="8C253D29468542CDAFF1FA9EBC0E8CE3" action="add">
+    <label xml:lang="en">SP2-30K750V</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-30K750V</value>
+   </Item>
+   <Item type="Value" id="FC3AF02F2A104C9799371630D89FDD9D" action="add">
+    <label xml:lang="en">SP2-40K1000V-PV</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K1000V-PV</value>
+   </Item>
+   <Item type="Value" id="C7C6B30BD25641598F820FC25F5BED01" action="add">
+    <label xml:lang="en">SP2-40K1500V-PV</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K1500V-PV</value>
+   </Item>
+   <Item type="Value" id="731167DD9EE340388B31BA4C22C72CC7" action="add">
+    <label xml:lang="en">SP2-40K150V</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K150V</value>
+   </Item>
+   <Item type="Value" id="BDFD960A845D4B3FAF00D11A986BDA45" action="add">
+    <label xml:lang="en">SP2-40K275V</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K275V</value>
+   </Item>
+   <Item type="Value" id="C8137E9C10204DEABE44A6CEE0414777" action="add">
+    <label xml:lang="en">SP2-40K320V</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K320V</value>
+   </Item>
+   <Item type="Value" id="5A6D80293FB24944909A8846D2679348" action="add">
+    <label xml:lang="en">SP2-40K440V</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K440V</value>
+   </Item>
+   <Item type="Value" id="2822BA0543874D7799BD66702AD438BA" action="add">
+    <label xml:lang="en">SP2-40K600V-PV</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K600V-PV</value>
+   </Item>
+   <Item type="Value" id="C9296C16D6A7439CA222AEBF3B602174" action="add">
+    <label xml:lang="en">SP2-40K60V</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K60V</value>
+   </Item>
+   <Item type="Value" id="C8D7269EFABC4E8A92399E6A76D65988" action="add">
+    <label xml:lang="en">SP2-40K75V</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K75V</value>
+   </Item>
+   <Item type="Value" id="ED2F8574FC8C413FBC6CBE2B42DA8276" action="add">
+    <label xml:lang="en">SP12-5K1000V-PV</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-5K1000V-PV</value>
+   </Item>
+   <Item type="Value" id="1D15ED7C0213423F877E128223758990" action="add">
+    <label xml:lang="en">SP12-12K75V</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-12K75V</value>
+   </Item>
+   <Item type="Value" id="B6CDC312D44E4AF387FEE1A97FED1330" action="add">
+    <label xml:lang="en">SP12-12K150V</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-12K150V</value>
+   </Item>
+   <Item type="Value" id="3FD35EEE25984102A4ECE34BCCFA8842" action="add">
+    <label xml:lang="en">SP12-12K275V</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-12K275V</value>
+   </Item>
+   <Item type="Value" id="60E71F298F6B4C91B66D5BDE996926D4" action="add">
+    <label xml:lang="en">SP12-12K320V</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-12K320V</value>
+   </Item>
+   <Item type="Value" id="70359899CA5345B483CB846E781F6FF2" action="add">
+    <label xml:lang="en">SP12-12K440V</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-12K440V</value>
+   </Item>
+   <Item type="Value" id="F8E3004F2B7A4593830D4F2D047AA843" action="add">
+    <label xml:lang="en">SP12-25K275V</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-25K275V</value>
+   </Item>
+   <Item type="Value" id="608F6D0F57514529A90A80D0F8117203" action="add">
+    <label xml:lang="en">SP23-20K150V</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP23-20K150V</value>
+   </Item>
+   <Item type="Value" id="22511260B4E6412E82EA58ABB1EEB30C" action="add">
+    <label xml:lang="en">SP23-20K275V-LF</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP23-20K275V-LF</value>
+   </Item>
+   <Item type="Value" id="F7A9F0118AB6486F9EE81FDC25009C02" action="add">
+    <label xml:lang="en">SP23-20K320V</label>
+    <sort_order>4480</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP23-20K320V</value>
+   </Item>
+   <Item type="Value" id="6612C81ACB3D46CA9F6B565ADE3A1163" action="add">
+    <label xml:lang="en">SP2-40K-N</label>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP2-40K-N</value>
+   </Item>
+   <Item type="Value" id="FAF015F909444E16B8B6601C88795D90" action="add">
+    <label xml:lang="en">SP12-25K-N</label>
+    <sort_order>4736</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-25K-N</value>
+   </Item>
+   <Item type="Value" id="D21275A82BB5425C9132B59E470B1186" action="add">
+    <label xml:lang="en">SP12-50K-N</label>
+    <sort_order>4864</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-50K-N</value>
+   </Item>
+   <Item type="Value" id="A0974B87B23143E888FA48BDFB15C421" action="add">
+    <label xml:lang="en">SP12-50K-2PN</label>
+    <sort_order>4992</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-50K-2PN</value>
+   </Item>
+   <Item type="Value" id="85124F4DC0D140BFB97E7D350FEE9FE6" action="add">
+    <label xml:lang="en">SP12-100K-N</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP12-100K-N</value>
+   </Item>
+   <Item type="Value" id="6F5A40E1D5ED43EE9B3F304C6E7720C2" action="add">
+    <label xml:lang="en">SP23-20K-N</label>
+    <sort_order>5248</sort_order>
+    <source_id keyed_name="MRN_Replacement_Plugs" type="List">502DF73620E04326A1E1D42E7501A338</source_id>
+    <value>SP23-20K-N</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

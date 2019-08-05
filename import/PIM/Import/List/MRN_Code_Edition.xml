@@ -1,0 +1,26 @@
+﻿<AML>
+ <Item type="List" id="2CCE784EAE3B40B4BF4665AFD04B6AFE" action="add">
+  <description>Code Edition</description>
+  <name>MRN_Code_Edition</name>
+  <Relationships>
+   <Item type="Value" id="52342BFB6C5D4DEDB14559D771A84DD9" action="add">
+    <label xml:lang="en">Published</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Code_Edition" type="List">2CCE784EAE3B40B4BF4665AFD04B6AFE</source_id>
+    <value>Published</value>
+   </Item>
+   <Item type="Value" id="1C11D74146BA40A2906A5FEC423FA0EA" action="add">
+    <label xml:lang="en">Unpublished</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Code_Edition" type="List">2CCE784EAE3B40B4BF4665AFD04B6AFE</source_id>
+    <value>Unpublished</value>
+   </Item>
+   <Item type="Value" id="14EB33C6380646A78AE2E2E09BD95186" action="add">
+    <label xml:lang="en">Confidential</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Code_Edition" type="List">2CCE784EAE3B40B4BF4665AFD04B6AFE</source_id>
+    <value>Confidential</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

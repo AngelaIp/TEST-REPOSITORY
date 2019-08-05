@@ -1,0 +1,25 @@
+﻿<AML>
+ <Item type="List" id="934CEF16A73B463E811C9754021C53FE" action="add">
+  <name>MRN_CE_Conformity</name>
+  <Relationships>
+   <Item type="Value" id="77C2B4EFA6B2426F9777218426C8C94B" action="add">
+    <label xml:lang="en">Yes</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_CE_Conformity" type="List">934CEF16A73B463E811C9754021C53FE</source_id>
+    <value>Yes</value>
+   </Item>
+   <Item type="Value" id="5A402410F049406F818C7823A7AC8022" action="add">
+    <label xml:lang="en">No</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_CE_Conformity" type="List">934CEF16A73B463E811C9754021C53FE</source_id>
+    <value>No</value>
+   </Item>
+   <Item type="Value" id="40A856B90C31437B85E0F0C4EE800A74" action="add">
+    <label xml:lang="en">Consult Technical Services</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_CE_Conformity" type="List">934CEF16A73B463E811C9754021C53FE</source_id>
+    <value>Consult Technical Services</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

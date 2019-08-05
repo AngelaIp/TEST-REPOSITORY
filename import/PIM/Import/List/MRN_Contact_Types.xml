@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="List" id="057838083DC141B3934542FF9002570E" action="add">
+  <description>Types of contact</description>
+  <name>MRN_Contact_Types</name>
+  <Relationships>
+   <Item type="Value" id="634626F92C9141A4A0C2C5D93F3BAA83" action="add">
+    <label xml:lang="en">Single Break</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Contact_Types" type="List">057838083DC141B3934542FF9002570E</source_id>
+    <value>Single Break</value>
+   </Item>
+   <Item type="Value" id="4190E3CFA97D4C74B60E13EE3757F051" action="add">
+    <label xml:lang="en">Double Break</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Contact_Types" type="List">057838083DC141B3934542FF9002570E</source_id>
+    <value>Double Break</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

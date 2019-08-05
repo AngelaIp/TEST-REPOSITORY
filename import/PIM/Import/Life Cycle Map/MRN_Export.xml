@@ -1,0 +1,41 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="05AFD2451A5245F1B0C4B4C2C8699367" action="add">
+  <start_state keyed_name="Active" type="Life Cycle State">442322B1386D4050A2C621CBDED9DD8D</start_state>
+  <name>MRN_Export</name>
+  <Relationships>
+   <Item type="Life Cycle State" id="442322B1386D4050A2C621CBDED9DD8D" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <label xml:lang="en">Active</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Export" type="Life Cycle Map">05AFD2451A5245F1B0C4B4C2C8699367</source_id>
+    <x>20</x>
+    <y>20</y>
+    <name>Active</name>
+   </Item>
+   <Item type="Life Cycle State" id="555B92B7A64C43E89C749BB9E5107C57" action="add">
+    <image>../Images/UnformattedText.svg</image>
+    <label xml:lang="en">Archived</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Export" type="Life Cycle Map">05AFD2451A5245F1B0C4B4C2C8699367</source_id>
+    <x>317</x>
+    <y>21</y>
+    <name>Archived</name>
+   </Item>
+   <Item type="Life Cycle Transition" id="A1D740174C66492B9C30C21B28A528DD" action="add">
+    <from_state keyed_name="Active" type="Life Cycle State">442322B1386D4050A2C621CBDED9DD8D</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="mrn_export_active_archived" type="Identity">3D250CB25A71490AAFF193B5441E8A7C</role>
+    <segments />
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Export" type="Life Cycle Map">05AFD2451A5245F1B0C4B4C2C8699367</source_id>
+    <to_state keyed_name="Archived" type="Life Cycle State">555B92B7A64C43E89C749BB9E5107C57</to_state>
+    <x>58</x>
+    <y>11</y>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

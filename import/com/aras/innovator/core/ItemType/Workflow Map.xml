@@ -17,7 +17,6 @@
   <large_icon>../images/WorkflowMap.svg</large_icon>
   <manual_versioning>0</manual_versioning>
   <open_icon>../images/WorkflowMap.svg</open_icon>
-  <permission_id keyed_name="457A9E12377D43CF9BDD8451CDF9B4B7" type="Permission">457A9E12377D43CF9BDD8451CDF9B4B7</permission_id>
   <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
   <show_parameters_tab>1</show_parameters_tab>
   <structure_view>tabs on</structure_view>

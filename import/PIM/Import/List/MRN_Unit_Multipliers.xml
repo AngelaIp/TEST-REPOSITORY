@@ -1,0 +1,118 @@
+﻿<AML>
+ <Item type="List" id="14B3784D0D2C4FC6BF1A09B65207A5F3" action="add">
+  <description>Must follow the format:
+unit1 --&gt; unit2    
+      ^   ^          (mind the spaces)</description>
+  <name>MRN_Unit_Multipliers</name>
+  <Relationships>
+   <Item type="Value" id="D45E5A349073460E9E8CC159D6B2F874" action="add">
+    <label xml:lang="en">1 --&gt; 1</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>1</value>
+   </Item>
+   <Item type="Value" id="E188B94D573447CA90BEA9E8850D123D" action="add">
+    <label xml:lang="en">in --&gt; ft</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>0.0833333</value>
+   </Item>
+   <Item type="Value" id="1C92BE7C4D054EA888C9D553759D9C16" action="add">
+    <label xml:lang="en">in --&gt; m</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>.0254</value>
+   </Item>
+   <Item type="Value" id="AEC99B5A43F94232853E25D9C4ED5EB1" action="add">
+    <label xml:lang="en">in --&gt; mm</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>25.4</value>
+   </Item>
+   <Item type="Value" id="70FCFB6889474156ABD785B988A6FF10" action="add">
+    <label xml:lang="en">kA --&gt; A </label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>1000</value>
+   </Item>
+   <Item type="Value" id="18ED063D6F8544C081DB325196AE3EBA" action="add">
+    <label xml:lang="en">kg --&gt; lb</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>2.20462</value>
+   </Item>
+   <Item type="Value" id="8F6B966AA4084BE682F7CED34C559EC8" action="add">
+    <label xml:lang="en">kV --&gt; V</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>1000</value>
+   </Item>
+   <Item type="Value" id="B1D88482A8D34F5BA0320D67B05FF433" action="add">
+    <label xml:lang="en">lb --&gt; kg</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>0.453592</value>
+   </Item>
+   <Item type="Value" id="3EDF9931FF604DCDA15C866A2CEF9F9E" action="add">
+    <label xml:lang="en">lb-in --&gt; N m</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>0.112984829333</value>
+   </Item>
+   <Item type="Value" id="0E22DFBD525B44DB8E14D8D692496D99" action="add">
+    <label xml:lang="en">m --&gt; ft</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>3.28084</value>
+   </Item>
+   <Item type="Value" id="26FA53B7AB154F5ABE748C28B9A21D77" action="add">
+    <label xml:lang="en">m --&gt; in</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>39.3701</value>
+   </Item>
+   <Item type="Value" id="7B36392EDD05405E917444AB8A3082B1" action="add">
+    <label xml:lang="en">m --&gt; mm</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>1000</value>
+   </Item>
+   <Item type="Value" id="6C715D61B6DA4E35AACCAF2565364501" action="add">
+    <label xml:lang="en">mA --&gt; A</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>.001</value>
+   </Item>
+   <Item type="Value" id="6784A63146304BF68AFFFC96497742EC" action="add">
+    <label xml:lang="en">mm --&gt; ft</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>0.00328084</value>
+   </Item>
+   <Item type="Value" id="54FE7F11D4514F07B50D4AB9D277B87E" action="add">
+    <label xml:lang="en">mm --&gt; in</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>0.03937007874015748</value>
+   </Item>
+   <Item type="Value" id="C484B6CC1F8E4040BFD2B031534BDA65" action="add">
+    <label xml:lang="en">mm --&gt; m</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>.001</value>
+   </Item>
+   <Item type="Value" id="29E16582AD144001923249715A493396" action="add">
+    <label xml:lang="en">mV --&gt; V</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>.001</value>
+   </Item>
+   <Item type="Value" id="D0C7CE298F3C4030BBE58682A9757DE9" action="add">
+    <label xml:lang="en">N m --&gt; lb-in</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_Unit_Multipliers" type="List">14B3784D0D2C4FC6BF1A09B65207A5F3</source_id>
+    <value>8.85074576738</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

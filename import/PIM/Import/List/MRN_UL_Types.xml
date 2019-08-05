@@ -1,0 +1,44 @@
+﻿<AML>
+ <Item type="List" id="2E6888E5CDDE4238863810A47CEE2FA9" action="add">
+  <description>UL SPD types</description>
+  <name>MRN_UL_Types</name>
+  <Relationships>
+   <Item type="Value" id="8A38E39A090C432FA1742F713CC064E3" action="add">
+    <label xml:lang="en">Type 1</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_UL_Types" type="List">2E6888E5CDDE4238863810A47CEE2FA9</source_id>
+    <value>Type 1</value>
+   </Item>
+   <Item type="Value" id="5A9D101FC37840159FBADEC08DD03B18" action="add">
+    <label xml:lang="en">Type 2</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_UL_Types" type="List">2E6888E5CDDE4238863810A47CEE2FA9</source_id>
+    <value>Type 2</value>
+   </Item>
+   <Item type="Value" id="294BB3F5E18441CCA91EA074EF0F1E33" action="add">
+    <label xml:lang="en">Type 1 Component Assembly</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_UL_Types" type="List">2E6888E5CDDE4238863810A47CEE2FA9</source_id>
+    <value>Type 1 Component Assembly</value>
+   </Item>
+   <Item type="Value" id="483A90FC2D3F47D9B6323D0DDD0A327A" action="add">
+    <label xml:lang="en">Type 2 Component Assembly</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_UL_Types" type="List">2E6888E5CDDE4238863810A47CEE2FA9</source_id>
+    <value>Type 2 Component Assembly</value>
+   </Item>
+   <Item type="Value" id="27D3D975C356465FAAFE3A021CDF67E7" action="add">
+    <label xml:lang="en">Type 3 Component Assembly</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_UL_Types" type="List">2E6888E5CDDE4238863810A47CEE2FA9</source_id>
+    <value>Type 3 Component Assembly</value>
+   </Item>
+   <Item type="Value" id="0C926915A29749EAAB61EC7BC4DBF568" action="add">
+    <label xml:lang="en">Type 4 Component Assembly</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_UL_Types" type="List">2E6888E5CDDE4238863810A47CEE2FA9</source_id>
+    <value>Type 4 Component Assembly</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

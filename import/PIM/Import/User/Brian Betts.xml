@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="38138D9E79C5406B957199D628AD7D97" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>brian.betts@us.mersen.com</email>
+  <last_login_date>2017-02-22T14:30:05</last_login_date>
+  <login_name>bbetts</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Brian Betts" type="Identity">11615B385DED4D749349B78D1CBDBF1A</owned_by_id>
+  <working_directory>C:\temp\aras</working_directory>
+  <first_name>Brian</first_name>
+  <last_name>Betts</last_name>
+  <Relationships>
+   <Item type="Alias" id="BBA14F14CF6B470487AD2FCC109BBA6B" action="add">
+    <from_date>2016-08-19T07:59:18</from_date>
+    <related_id keyed_name="Brian Betts" type="Identity">11615B385DED4D749349B78D1CBDBF1A</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Brian Betts" type="User">38138D9E79C5406B957199D628AD7D97</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

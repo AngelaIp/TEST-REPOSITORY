@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="1C5EBF0E2D474BB594878ADEA9335B0E" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>robert.lyons@us.mersen.com</email>
+  <login_name>rlyons</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id>30CA8463F7B8443FAE95514F6F45FAE7</owned_by_id>
+  <first_name>Robert</first_name>
+  <last_name>Lyons</last_name>
+  <Relationships>
+   <Item type="Alias" id="7881D99B950A428D99CC27912DC5F9C8" action="add">
+    <from_date>2016-04-19T15:40:39</from_date>
+    <related_id keyed_name="Robert Lyons" type="Identity">89FAC6B7749843E9A8E7AAAA38076CD7</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Robert Lyons" type="User">1C5EBF0E2D474BB594878ADEA9335B0E</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

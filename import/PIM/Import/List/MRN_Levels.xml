@@ -1,0 +1,25 @@
+﻿<AML>
+ <Item type="List" id="42810FCD596046EAAAB24A033293B7C9" action="add">
+  <name>MRN_Levels</name>
+  <Relationships>
+   <Item type="Value" id="17DA8E58211F4C2C9C9B9BD43763E92D" action="add">
+    <label xml:lang="en">MSL</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Levels" type="List">42810FCD596046EAAAB24A033293B7C9</source_id>
+    <value>Level 4 - MSL</value>
+   </Item>
+   <Item type="Value" id="BFCD5A2E12CC420E9FCB40B5AD3A337D" action="add">
+    <label xml:lang="en">Frame</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Levels" type="List">42810FCD596046EAAAB24A033293B7C9</source_id>
+    <value>Level 5 - Frame</value>
+   </Item>
+   <Item type="Value" id="C435A407CECF4F49AE97638AC8696717" action="add">
+    <label xml:lang="en">Product</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Levels" type="List">42810FCD596046EAAAB24A033293B7C9</source_id>
+    <value>Level 6 - Product</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

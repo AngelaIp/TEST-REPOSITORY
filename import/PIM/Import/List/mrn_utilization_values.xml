@@ -1,0 +1,98 @@
+﻿<AML>
+ <Item type="List" id="6F3AE47A06A74E64B89DBFF852403A9E" action="add">
+  <description>Utilization Category Values</description>
+  <name>mrn_utilization_values</name>
+  <Relationships>
+   <Item type="Value" id="64775C35D1C84D33BFD5DD40D4932D5F" action="add">
+    <label xml:lang="en">AC 20 B</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>AC 20 B</value>
+   </Item>
+   <Item type="Value" id="B50B21C81CB2450EB3E6879F261AFCE0" action="add">
+    <label xml:lang="en">AC 21 A</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>AC 21 A</value>
+   </Item>
+   <Item type="Value" id="E8003DD0A78B4707B20A6976C8DCFEBF" action="add">
+    <label xml:lang="en">AC 21 B</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>AC 21 B</value>
+   </Item>
+   <Item type="Value" id="9304899AD7C4474F96146B8883D0226F" action="add">
+    <label xml:lang="en">AC 22 A</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>AC 22 A</value>
+   </Item>
+   <Item type="Value" id="92BAA73778F744ABAA687D5DE0C2BE43" action="add">
+    <label xml:lang="en">AC 22 B</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>AC 22 B</value>
+   </Item>
+   <Item type="Value" id="D2CEA846BF054B07B4C218A5FF44230C" action="add">
+    <label xml:lang="en">AC 23 A</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>AC 23 A</value>
+   </Item>
+   <Item type="Value" id="37419929A0BA430B9D7C21CE4AA29C6D" action="add">
+    <label xml:lang="en">AC 23 B</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>AC 23 B</value>
+   </Item>
+   <Item type="Value" id="762A33AC85004C9CA3DD02996D018811" action="add">
+    <label xml:lang="en">DC 21 A</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>DC 21 A</value>
+   </Item>
+   <Item type="Value" id="490C7CBC46454F13815C4A5463A25476" action="add">
+    <label xml:lang="en">DC 21 B</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>DC 21 B</value>
+   </Item>
+   <Item type="Value" id="9A32AD27F9444986B006E3CDB3A3DB7C" action="add">
+    <label xml:lang="en">DC 22 A</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>DC 22 A</value>
+   </Item>
+   <Item type="Value" id="7252B509962048B5AF909A6129B6A458" action="add">
+    <label xml:lang="en">DC 22 B</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>DC 22 B</value>
+   </Item>
+   <Item type="Value" id="D27769FA2E414CE2B6335E6551975816" action="add">
+    <label xml:lang="en">DC 23 A</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>DC 23 A</value>
+   </Item>
+   <Item type="Value" id="F88B0C0BB6C947D184793A101E295601" action="add">
+    <label xml:lang="en">DC 23 B</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>DC 23 B</value>
+   </Item>
+   <Item type="Value" id="5DC5CA1390224403BBD4AA2698DDF37B" action="add">
+    <label xml:lang="en">AC20B/DC20B</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>AC20B/DC20B</value>
+   </Item>
+   <Item type="Value" id="C6913B68A3524D87BF3BA9B0055F4F10" action="add">
+    <label xml:lang="en">AC20/DC20</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="mrn_utilization_values" type="List">6F3AE47A06A74E64B89DBFF852403A9E</source_id>
+    <value>AC20/DC20</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

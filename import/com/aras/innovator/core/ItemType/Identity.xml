@@ -182,16 +182,34 @@
     <source_id keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</source_id>
     <category>Administration</category>
    </Item>
+   <Item type="TOC Access" id="7ADD9DC4F70448B3B256055F9DA85F1E" action="add">
+    <related_id keyed_name="mrn_it_helpdesk" type="Identity">B6818FDF769C4F34A16ACD927AC0D9EA</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</source_id>
+    <category>Mersen Helpdesk</category>
+   </Item>
    <Item type="Can Add" id="D1B9F733F8BD4F56914226A0BAA59D47" action="add">
     <can_add>1</can_add>
     <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
     <sort_order>128</sort_order>
     <source_id keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</source_id>
    </Item>
+   <Item type="Can Add" id="2DFEE51ED500405E8B3634675C65C018" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="mrn_it_helpdesk" type="Identity">B6818FDF769C4F34A16ACD927AC0D9EA</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</source_id>
+   </Item>
    <Item type="Allowed Permission" id="2FDE5584FBCF47F290774914BDFCE857" action="add">
     <is_default>1</is_default>
     <related_id keyed_name="Identity" type="Permission">761D6A3E3CA146138B47393D29FF6824</related_id>
     <sort_order>128</sort_order>
+    <source_id keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</source_id>
+   </Item>
+   <Item type="Allowed Permission" id="0CB7FAE330F046D7972158B71AC966C4" action="add">
+    <is_default>0</is_default>
+    <related_id keyed_name="mrn_it_helpdesk" type="Permission">C7744A34039D470E8EDF91EB36EEE512</related_id>
+    <sort_order>256</sort_order>
     <source_id keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</source_id>
    </Item>
    <Item type="Item Report" id="C26BA82251FA4BE1805D2CDBA55729EF" action="add">

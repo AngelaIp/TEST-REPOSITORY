@@ -1,0 +1,44 @@
+﻿<AML>
+ <Item type="List" id="753ACB77E48946BAB62FCFD979F0C4FD" action="add">
+  <description>NEMA Ratings</description>
+  <name>MRN_NEMA_Ratings</name>
+  <Relationships>
+   <Item type="Value" id="62A7752411C4426EB922D4AD35897605" action="add">
+    <label xml:lang="en">1</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_NEMA_Ratings" type="List">753ACB77E48946BAB62FCFD979F0C4FD</source_id>
+    <value>1</value>
+   </Item>
+   <Item type="Value" id="AA994F896EDA4F79A5BACDDB1257A643" action="add">
+    <label xml:lang="en">12</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_NEMA_Ratings" type="List">753ACB77E48946BAB62FCFD979F0C4FD</source_id>
+    <value>12</value>
+   </Item>
+   <Item type="Value" id="F9B3675E34CE4517841E84B4ED9BE7CE" action="add">
+    <label xml:lang="en">2</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_NEMA_Ratings" type="List">753ACB77E48946BAB62FCFD979F0C4FD</source_id>
+    <value>2</value>
+   </Item>
+   <Item type="Value" id="4C7D4501F741440EB921080A59616DEF" action="add">
+    <label xml:lang="en">3R</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_NEMA_Ratings" type="List">753ACB77E48946BAB62FCFD979F0C4FD</source_id>
+    <value>3R</value>
+   </Item>
+   <Item type="Value" id="B7FA98A4B377403C96DA3BCF88CCDF10" action="add">
+    <label xml:lang="en">4</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_NEMA_Ratings" type="List">753ACB77E48946BAB62FCFD979F0C4FD</source_id>
+    <value>4</value>
+   </Item>
+   <Item type="Value" id="8F3A9B88B11A452E80821338E6616732" action="add">
+    <label xml:lang="en">4X</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_NEMA_Ratings" type="List">753ACB77E48946BAB62FCFD979F0C4FD</source_id>
+    <value>4X</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

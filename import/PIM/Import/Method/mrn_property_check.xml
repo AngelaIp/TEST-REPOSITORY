@@ -1,0 +1,180 @@
+﻿<AML>
+ <Item type="Method" id="7270CCE63DE040D784EF81AC7BC2669F" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Called From: MRN_Property Form Fields - OnChange
+// Purpose:     Checks selections to ensure they are valid
+// Jan 2017     Kamran Aftab    Developed for Mersen 
+
+//debugger;
+
+// Get the name of the calling object
+var thisName = this.name;
+
+// Get a reference to the calling control
+var thisElement = getFieldComponentByName(thisName) || document.getElementById("MainDataForm").elements[thisName];
+// // If called by Group or FakeML and not checked, no need to check anything
+// if (!thisElement.checked && thisName !== "mrn_item_property")
+//     return;
+  
+//Get references to the three control elements that need to be checked  
+var groupElement        = document.getElementById("MainDataForm").elements["mrn_is_group"];
+var fakeElement         = document.getElementById("MainDataForm").elements["mrn_fake_ml_property"];
+var propertyElement     = getFieldComponentByName("mrn_item_property");
+var rangeElement        = document.getElementById("MainDataForm").elements["mrn_etim_range_property"];
+var minPropertyElement  = getFieldComponentByName("mrn_range_property_min");
+var maxPropertyElement  = getFieldComponentByName("mrn_range_property_max");
+
+// If called on form load, disable the elements that are not valid
+if (thisName === "")
+{
+    if (groupElement.checked)
+        disableFields(groupElement, groupElement.checked);
+    else if (fakeElement.checked)
+        disableFields(fakeElement, fakeElement.checked);
+    else if (rangeElement.checked)
+        disableFields(rangeElement, rangeElement.checked);
+    else if (propertyElement.getValue() !== "")
+        disableFields(propertyElement, propertyElement.getValue() !== "" ? true : false);
+    else
+        disableFields(rangeElement, rangeElement.checked);
+    return;
+}
+
+// Disable or enbale fields corresponding to the invoking field, based on checked or unchecked
+if (thisElement == propertyElement)
+    disableFields(thisElement, propertyElement.getValue() !== "" ? true : false);
+else
+    disableFields(thisElement, thisElement.checked);
+
+// If this is the fakeElement field or propertyElement field, check th other, since they both can co-exist
+if (thisElement == fakeElement)
+{   
+    if (fakeElement.checked)
+        disableFields(propertyElement, fakeElement.checked);
+    else    
+        disableFields(propertyElement, propertyElement.getValue() !== "" ? true : false);
+}
+
+if (thisElement == propertyElement)
+{
+    if (propertyElement.getValue() === "")
+        disableFields(fakeElement, fakeElement.checked);
+    else
+        disableFields(fakeElement, propertyElement.getValue() !== "" ? true : false);
+}
+    
+return;
+
+
+// Method to enable/disable the form fields
+function disableFields (firingElement, trueOrFalse)
+{
+    var groupElement        = document.getElementById("MainDataForm").elements["mrn_is_group"];
+    var fakeElement         = document.getElementById("MainDataForm").elements["mrn_fake_ml_property"];
+    
+    var propertyElement     = getFieldByName("mrn_item_property");
+    var propertyElement2    = getFieldByName("mrn_item_property-2");
+
+    var rangeElement        = document.getElementById("MainDataForm").elements["mrn_etim_range_property"];
+    var minPropertyElement = getFieldByName("mrn_range_property_min");
+    var minPropertyElement2 = getFieldByName("mrn_range_property_min-2");
+    var maxPropertyElement = getFieldByName("mrn_range_property_max");
+    var maxPropertyElement2 = getFieldByName("mrn_range_property_max-2");
+    
+    // Set the fake fields to empty, otherwise they show the item id of the property
+    document.getElementById("MainDataForm").elements["mrn_range_property_min-2"].value = "";
+    document.getElementById("MainDataForm").elements["mrn_range_property_max-2"].value = "";
+    document.getElementById("MainDataForm").elements["mrn_item_property-2"].value = "";
+
+    if (firingElement == groupElement)
+    {
+        // Set the property fields to available based on rangeElement being checked or not
+        minPropertyElement.disabled = !rangeElement.checked;
+        maxPropertyElement.disabled = !rangeElement.checked;
+        switchFields(minPropertyElement, minPropertyElement2, !rangeElement.checked);
+        switchFields(maxPropertyElement, maxPropertyElement2, !rangeElement.checked);
+        
+        fakeElement.disabled = trueOrFalse;
+        rangeElement.disabled = trueOrFalse;
+        propertyElement.disabled = trueOrFalse;
+        switchFields(propertyElement, propertyElement2, trueOrFalse);
+    }
+    else if (firingElement == fakeElement)
+    {
+        // Set the property fields to available based on rangeElement being checked or not
+        minPropertyElement.disabled = !rangeElement.checked;
+        maxPropertyElement.disabled = !rangeElement.checked;
+        switchFields(minPropertyElement, minPropertyElement2, !rangeElement.checked);
+        switchFields(maxPropertyElement, maxPropertyElement2, !rangeElement.checked);
+        
+        groupElement.disabled = trueOrFalse;
+        rangeElement.disabled = trueOrFalse;
+    }
+    else if (firingElement == rangeElement)
+    {
+        minPropertyElement.disabled = !rangeElement.checked;
+        maxPropertyElement.disabled = !rangeElement.checked;
+        switchFields(minPropertyElement2, minPropertyElement, rangeElement.checked);
+        switchFields(maxPropertyElement2, maxPropertyElement, rangeElement.checked);
+        
+        fakeElement.disabled = trueOrFalse;
+        groupElement.disabled = trueOrFalse;
+        propertyElement.disabled = trueOrFalse;
+        switchFields(propertyElement, propertyElement2, trueOrFalse);
+    }
+    else if (firingElement == getFieldComponentByName("mrn_item_property"))
+    {
+        // Set the property fields to available based on rangeElement being checked or not
+        minPropertyElement.disabled = !rangeElement.checked;
+        maxPropertyElement.disabled = !rangeElement.checked;
+        switchFields(minPropertyElement, minPropertyElement2, !rangeElement.checked);
+        switchFields(maxPropertyElement, maxPropertyElement2, !rangeElement.checked);
+        
+        groupElement.disabled = trueOrFalse;
+        rangeElement.disabled = trueOrFalse;
+        switchFields(propertyElement, propertyElement2, !trueOrFalse);
+    }
+    else 
+    {
+        minPropertyElement.disabled = !rangeElement.checked;
+        maxPropertyElement.disabled = !rangeElement.checked;
+        switchFields(minPropertyElement2, minPropertyElement, rangeElement.checked);
+        switchFields(maxPropertyElement2, maxPropertyElement, rangeElement.checked);
+    }
+}
+
+function switchFields(originalField, fakeField, trueOrFalse)
+{
+    if (trueOrFalse)
+    {
+        originalField.style.visibility="hidden";
+        fakeField.style.visibility="visible";
+        originalField.style.display="none";
+        fakeField.style.display="";
+    }
+    else
+    {
+        originalField.style.visibility="visible";
+        fakeField.style.visibility="hidden";
+        originalField.style.display="";
+        fakeField.style.display="none";
+    }
+}
+
+function getFieldsByName(inputName){
+	var allFields = document.getElementsByName(inputName)
+	var requiredField;
+	for (var i=0;i<allFields.length;i++){
+	  if (allFields[i].tagName.toUpperCase()=="INPUT"){
+	    requiredField = allFields[i];
+	  }
+	}
+	return requiredField;
+}
+
+
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_property_check</name>
+ </Item>
+</AML>

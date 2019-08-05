@@ -1,0 +1,690 @@
+﻿<AML>
+ <Item type="Method" id="AE6AF9F8FEA8449086E6A87BCB2981BF" action="add">
+  <comments />
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//
+// Name:          mrn_exportTemplateAttributes
+// Called by:     mrn_ExportProfile Form, onLoad, on value change of Families dropdown, on ETIM value changee
+// Description:   Sets up the attributes in the MSL/Frame/Product dropdown, sets defaults for ETIM
+//
+// June, 2016   Kamran Aftab    developed for Mersen
+//======================================================================
+
+//debugger;
+
+// Get the name of the invoking control (is empty in case of onformload)
+var thisName = this.name;
+var thisValue = this.value;
+var selectedFamilies = [];
+
+// Load the lanauges dropdown, if called from form populate
+if (thisName === "")
+    populateLanguages();
+
+//alert("invoked by:" + thisName);
+
+// Get all the MRN_Property items
+var qryXml = "<Item type=\"MRN_Property\"  select=\"mrn_item_property, mrn_is_group, mrn_label, mrn_level, mrn_families, mrn_export_attribute, mrn_etim\" action=\"get\" orderBy=\"mrn_label\">" +
+                "<mrn_export_attribute>1</mrn_export_attribute>" + 
+                "<mrn_item_property>" + 
+                  "<Item type=\"Property\" select=\"label\" action=\"get\">" +
+                  "</Item>" + 
+                "</mrn_item_property>" +
+                "<Relationships>" + 
+                  "<Item type=\"MRN_Property_Property\" select=\"related_id\" action=\"get\"></Item>" +
+                  "<Item type=\"MRN_Property_ETIM_Class\" select=\"mrn_class_code\" action=\"get\"></Item>" +
+                "</Relationships>" +
+             "</Item>";
+                
+var qry = new Item();
+qry.loadAML(qryXml);
+var returnItm = qry.apply();
+
+etimSelected = document.thisItem.getProperty("mrn_etim","") == "1" ? true : false;
+
+// If ETIM is selected, turn off all selection fields, otherwise turn them on
+var disabled = false;
+if (etimSelected)
+    disabled = true;
+    
+// Disable/enable dropdown and single fields
+document.getElementById("MainDataForm").mrn_attributes_msl.disabled=disabled;
+document.getElementById("MainDataForm").mrn_attributes_frame.disabled=disabled;
+document.getElementById("MainDataForm").mrn_attributes_product.disabled=disabled;
+document.getElementById("MainDataForm").mrn_families.disabled=disabled;
+document.getElementById("MainDataForm").mrn_export_root_name.disabled=disabled;
+document.getElementById("MainDataForm").mrn_export_item_name.disabled=disabled;
+document.getElementById("MainDataForm").mrn_extract_keywords.disabled=disabled;
+
+// Disable/enable options fields
+changeFieldAvailability("mrn_export_format", disabled);
+changeFieldAvailability("mrn_export_unit_system", disabled);
+changeFieldAvailability("mrn_files_export_option", disabled);
+for (var ii = 10; ii < 20; ii++)
+    changeFieldOptionAvailability("mrn_file_descriptions", ii, disabled);
+for (var ii = 2; ii < 6; ii++)
+    changeFieldOptionAvailability("mrn_file_purposes", ii, disabled);
+    
+        
+
+// If invoked from etim, or etim was previously selected on the form, set the defaults
+if (thisName == "mrn_etim" || etimSelected)
+{ 
+    // Deselect all families
+    select = document.getElementById("MainDataForm").mrn_families;
+    for (var ii = 0; ii < select.options.length; ii++)
+    {
+        select.options[ii].selected=false;
+        //select.options[ii].disalbed = true;   // doesn't do anything
+    }
+    
+    // Set keyword to selected
+    document.getElementById("MainDataForm").mrn_extract_keywords.checked=true;
+    window.handleItemChange("mrn_extract_keywords", "1");
+    
+    // Set output format to XML
+    selectOption("mrn_export_format", 2); // Select XML 
+    window.handleItemChange("mrn_export_format", "XML");
+    
+    // Set unit system to SI
+    selectOption("mrn_export_unit_system", 0); // Select SI
+    window.handleItemChange("mrn_export_unit_system", "SI");
+    
+    // Set the files to Export to Single Default
+    selectOption("mrn_files_export_option", 1); // Select Single Default
+    window.handleItemChange("mrn_files_export_option", "Single Default");
+    
+    // Only if invoked form etim option, set the stylesheet and file export options
+    if (thisName == "mrn_etim" && etimSelected)
+    {
+        // Set Stylesheet to ETIM Default
+        var styleSheetId = getLatestReleasedItemId("MRN_Stylesheet","ETIM Default");
+        document.getElementById("MainDataForm").mrn_style_sheet_item = styleSheetId;
+        window.handleItemChange("mrn_style_sheet_item",styleSheetId);
+        
+        // Set the Digital Asset defaults
+        for (var ii = 10; ii < 20; ii++)
+            selectOption("mrn_file_descriptions", ii); 
+        window.handleItemChange("mrn_file_descriptions", "MD01,MD22,MD23,MD24,MD25,MD26,MD27,MD28,MD29,MD30");
+        for (var ii = 2; ii < 6; ii++)
+            selectOption("mrn_file_purposes", ii); 
+        window.handleItemChange("mrn_file_purposes", "detail,thumbnail,normal,data_sheet");
+        
+    }
+}
+// if invoked from family selection, get selected families from the family selection dialog
+else if (thisName == "mrn_families")
+{
+    for (ii = 0; ii < this.length; ii++)
+    {
+        if(this[ii].selected)
+            selectedFamilies.push(this[ii].label);
+    }
+}
+else  // if invoked on form load or from mrn_ETIM, get selected families from the saved property
+{
+    var families = document.thisItem.getProperty("mrn_families","");
+    selectedFamilies = families.split(",");
+}
+    
+// Set the attributes based on families selected    
+select = document.getElementById("MainDataForm").mrn_attributes_msl;
+populate(thisName, "mrn_attributes_msl", returnItm, select, "Level 4 - MSL", etimSelected,selectedFamilies);
+saveAttributes("mrn_attributes_msl", select);
+select = document.getElementById("MainDataForm").mrn_attributes_frame;
+populate(thisName, "mrn_attributes_frame", returnItm, select, "Level 5 - Frame", etimSelected, selectedFamilies);
+saveAttributes("mrn_attributes_frame", select);
+select = document.getElementById("MainDataForm").mrn_attributes_product;
+populate(thisName, "mrn_attributes_product", returnItm, select, "Level 6 - Product", etimSelected, selectedFamilies);
+saveAttributes("mrn_attributes_product", select);
+    
+
+
+// Populates the attributes list for the given control, from the query results
+function populate(ctrlName, propertyName, returnItm, select, level, etimSelected, selectedFamilies)
+{ 
+
+    // if invoked from family selection, unselect all the options 
+    if (ctrlName == "mrn_families")
+    {
+        for (var ii = 0; ii < select.options.length; ii++)
+            select.options[ii].selected=false;
+    }
+
+    // Get the selected attribute values from the saved property, to highlight the option
+    var propertyValues = document.thisItem.getProperty(propertyName,"");
+
+    // Remove all options from the list
+    select.options.length = 0;
+
+    // Cycle all the MRN Property items to build options list
+    var optionNumber = 0; // Counter to control position to apply the option to
+    for (var i=0;i < returnItm.getItemCount(); i++) 
+    {
+        var mrnPropertyItem = returnItm.getItemByIndex(i);
+        var propertyItem = null;
+        var optionLabel = "";
+    
+        // Removed following code as condition added to AML query
+        // If this is not an export property, skip it
+        //if (mrnPropertyItem.getProperty("mrn_export_attribute") != "1")
+         //   continue;
+            
+        // if the property is not for this level, skip it
+        if (mrnPropertyItem.getProperty("mrn_level") != level)
+            continue;
+
+        // For ETIM template, if ETIM selected and if it's not an ETIM property, skip it
+        //if (ctrlName == "mrn_etim" && this.value && (!propertyETIM(mrnPropertyItem)))
+         //   continue;
+            
+        // If it's a group property, the label is the group name, else the label is the property label
+        optionLabel = mrnPropertyItem.getProperty("mrn_label","").trim();
+        if (optionLabel === "")
+        {
+            propertyItem = mrnPropertyItem.getPropertyItem("mrn_item_property");
+            optionLabel = propertyItem.getProperty("label")
+        }
+        
+        
+        // If this is an ETIM export, no further checks needed, set it selected
+        if (etimSelected)
+        {
+            if (!propertyETIM(mrnPropertyItem))
+                continue;
+        
+            // Add the option to the list
+            select.options[optionNumber]= new Option(optionLabel);
+            select.options[optionNumber].selected=true;
+        }
+        else
+        {
+            // Check the family of the mrnProperty v/s the selected families
+            if (!optionValid(ctrlName, selectedFamilies, mrnPropertyItem))
+                continue;
+       
+            // Add the option to the list
+            select.options[optionNumber]= new Option(optionLabel);
+            
+            // When activitated from a family selection, if a family is selected, select the attribute, otherwise deselet it.
+            if (ctrlName == "mrn_families")
+                if (selectedFamilies.length > 0)
+                    select.options[optionNumber].selected=true;
+                else
+                    select.options[optionNumber].selected=false;
+            else
+            {
+                // If called from ETIM, but etim unselected, uncheck all 
+                if(ctrlName == "mrn_etim")
+                    select.options[optionNumber].selected=false;
+                // if this is on form load, highlight only if it was saved in the property
+                else if (propertyValues.indexOf(optionLabel) > -1)
+                    select.options[optionNumber].selected=true;
+            }
+        }
+        
+        optionNumber++;
+    }
+}
+
+// Save the selected attributes to the item property
+function saveAttributes(propertyName, selObj)
+{
+
+    var selectedArray = [];
+    
+    var i;
+    var count = 0;
+    for (i=0; i<selObj.options.length; i++) 
+    {
+        if (selObj.options[i].selected) 
+        {
+          selectedArray[count] = selObj.options[i].value;
+          count++;
+        }
+    }
+
+    //convert array to comma delim string to save to DB
+    var attributes  = selectedArray.join();
+
+    //set the property with selected choices (comma delim string)
+    window.handleItemChange(propertyName, attributes);
+}
+
+// Check to see if this property is valid for the family
+function optionValid(ctrlName, selectedOptions, mrnPropertyItem)
+{
+
+    // If no families selected, option is valid
+    if (selectedOptions.length === 0)
+        return true;
+
+    // If the families for this property are not part of the families selected, skip it
+    var propertyFamilies = mrnPropertyItem.getProperty("mrn_families","");
+
+    // If no family added to the property, it's valid for all families
+    if (propertyFamilies == "")
+        return true;
+        
+    var ii = 0;
+    for (ii = 0, len = selectedOptions.length; ii< len; ii++) 
+    {
+        var optionName = null;
+        
+        optionName = selectedOptions[ii];
+
+        if (propertyFamilies.indexOf(optionName) > -1 )
+            break;
+    }
+     if (ii >= selectedOptions.length)
+            return false;
+            
+    return true;
+    
+}
+
+function propertyETIM(item)
+{
+    var isETIMProperty = false;
+    
+    // If it is marked as an ETIM property, return true
+    isETIMProperty = item.getProperty("mrn_etim","0") == "1" ? true : false;
+    
+    if (isETIMProperty)
+        return true;
+        
+    // Check to see if it has any ETIM classes as relationships, if found one, return true
+    var relationships = item.getRelationships("MRN_Property_ETIM_Class");
+    var count = relationships.getItemCount();
+    if (count > 0)
+        return true;
+        
+    return isETIMProperty;
+}
+
+// Changes field availability
+function changeFieldAvailabilityDropdowns(select, disable)
+{
+    // // Get the inputs of the field
+    // var field = getFieldByName(fieldName);
+    // var fieldOptions = field.options;
+    
+    // Iterate through the inputs and disable them
+    var i;
+    for (i = 0; i < select.options.length; i++)
+    {
+        select.options.disabled = disable;
+    }
+}
+
+// Changes field availability
+function changeFieldAvailability(fieldName, disable)
+{
+    // Get the inputs of the field
+    var field = getFieldByName(fieldName);
+    var fieldInputs = field.getElementsByTagName("input");
+    
+    // Iterate through the inputs and disable them
+    var i;
+    for (i = 0; i < fieldInputs.length; i++)
+    {
+        fieldInputs[i].disabled = disable;
+    }
+}
+
+// Changes field option availability
+function changeFieldOptionAvailability(fieldName, optionNumber, disable)
+{
+    // Get the inputs of the field
+    var field = getFieldByName(fieldName);
+    var fieldInputs = field.getElementsByTagName("input");
+    
+    // Iterate through the inputs and disable them
+    if (optionNumber >= 0 && optionNumber < fieldInputs.length)
+    fieldInputs[optionNumber].disabled = disable;
+}
+
+// Changes field option selected
+function selectOption(fieldName, number)
+{
+    // Get the inputs of the field
+    var field = getFieldByName(fieldName);
+    var fieldInputs = field.getElementsByTagName("input");
+    
+    fieldInputs[number].checked = true;
+
+}
+
+// Returns the ETIM stylsheet item
+function getStylesheet(name)
+{
+
+    var qryXml = "<Item type=\"MRN_Stylesheet\" action=\"get\" select=\"id\" where=\"[MRN_Stylesheet].mrn_name='" + 
+                    name + "' AND [MRN_Stylesheet].state='Released'\"></Item>";
+    var qry = new Item();
+    qry.loadAML(qryXml);
+    var returnItm = qry.apply();
+    
+    var count = returnItm.getItemCount();
+    if (count < 1)
+        return "";
+    else
+        return returnItm.getItemByIndex(0).getProperty("id","");
+}
+
+// Returns the latest released item
+function getLatestReleasedItemId(type, name)
+{
+    // Get today's date
+    var dateNow = new Date();
+    var dateNowStr = dateNow.toISOString().substring(0,19);
+    
+    var qryXml = "<Item type=\"" + type + "\" action=\"get\" queryType=\"Released\" queryDate=\"" + 
+                    dateNowStr + "\" select=\"id\" where=\"" + type + ".mrn_name='" + name + "'\"></Item>";
+                    
+    var qry = new Item();
+    qry.loadAML(qryXml);
+    var returnItm = qry.apply();
+    
+    var count = returnItm.getItemCount();
+    if (count < 1)
+        return "";
+    else
+        return returnItm.getItemByIndex(0).getProperty("id","");
+        
+}
+
+// Populates the Language selection dialog
+function populateLanguages()
+{
+    // Get previous selections for languages
+    var selectedLangs = document.thisItem.getProperty("mrn_languages","");
+
+    // Get reference to the control
+    var select = document.getElementById("MainDataForm").mrn_languages;
+    
+    // Get the language names from Lanauges Items
+    var resultItem = document.thisItem.newItem("Language", "get");
+    resultItem = resultItem.apply();
+    
+    // Apply the labels
+    for (var ii = 0; ii < resultItem.getItemCount(); ii++)
+    {
+        var label = resultItem.getItemByIndex(ii).getProperty("name");
+        select.options[ii]= new Option(label);
+        
+        // Only if this is a new template, set English as default and set it to the item
+        if(document.thisItem.getProperty("mrn_template_name","") === "" && label == "English")
+        {
+            select.options[ii].selected=true;
+            window.handleItemChange("mrn_languages", label);
+        }
+        
+        // If the language was previously selected, highlight it
+        if (selectedLangs.indexOf(label) > -1)
+            select.options[ii].selected=true;
+    }
+	 
+}
+//<Item type="MRN_Stylesheet" action="getItemAllVersions" id="3DD80820AD43401CBDEF3F20EBA7F1DC" where="is_released=1"
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Bob Class Example
+// function Bob (argument) {
+//     this.arg1 = argument;
+//     this.color = "red";
+// }
+
+// //function for Bob Class
+// Bob.prototype.getInfo = function() {
+//     return "Color: " + this.color + ' ' + " Argument: " + this.arg1 + ' returned from Bob object';
+// };
+
+//Create a BOB and ask for info
+// var b = new Bob("Ellis");
+// alert(b.getInfo());
+// var a = new Bob("Alice");
+// alert (a.getInfo());
+
+// Create an array of Bobs
+// var bobList = [];
+// bobList.push(new Bob("Ellis1"));
+// bobList.push(new Bob("Ellis2"));
+// bobList.push(new Bob("Ellis3"));
+
+// for (var i = 0; i < bobList.length; i++)
+//     alert("Bob:" + bobList[i].getInfo());
+    
+//  return;
+ 
+ 
+// // class to build MRN_Property items
+// function MRN_Property(itm){
+
+//     this.item = itm;
+//     this.level = this.item.getProperty("mrn_level");
+    
+//     // Get the attribute label from the MRN_Property item
+//     this.optionLabel = this.item.getProperty("mrn_label","");
+        
+//     // If the label is empty, get the label from the associated property
+//     if (this.optionLabel === "")
+//     {
+//         var propertyItem = this.item.getPropertyItem("mrn_item_property");
+//         this.optionLabel = propertyItem.getProperty("label");
+//     }
+//     //alert("optionlabel:" + this.optionLabel);
+//     //Get the families for the property
+//     this.families = this.item.getProperty("mrn_families","");
+// }
+// MRN_Property.prototype.getLevel = function() { return this.level; };
+// MRN_Property.prototype.getOptionLabel = function() { return this.optionLabel; };
+    
+// // Build a static list of MRN Property items
+// function buildList(returnItem)
+// {
+//     // Create the 
+//     var propertiesList = [];
+    
+//     for (var i=0; i < 5; i++) 
+//     {
+//         // // var mrnPropertyItem = null;
+//         propertiesList.push(new MRN_Property(returnItm.getItemByIndex(i)));
+//         alert("optionlabelinside:" +  propertiesList[i].getOptionLabel());
+//     }
+    
+//     for (i=0; i < propertiesList.length; i++) 
+//     {
+//         alert("object:" + propertiesList[i].getOptionLabel());
+//     }
+//     return propertiesList;
+// }
+    
+
+
+// // Class to populate multi-select list box
+// function MultiSelectBox(ctrlName, lvl)
+// {
+//     this.callingControl = ctrlName;
+//     this.level = lvl;
+//     if (this.level == "Level 4 - MSL")
+//     {
+//         this.selectBoxProperty = "mrn_attributes_msl";
+//         this.select = document.getElementById("MainDataForm").mrn_attributes_msl;
+//     }
+//     else if (this.level == "Level 5 - Frame")
+//     {
+//         this.selectBoxProperty = "mrn_attributes_frame";
+//         this.select = document.getElementById("MainDataForm").mrn_attributes_frame;
+//     }
+//     else if (this.level == "Level 6 - Product")
+//     {
+//         this.selectBoxProperty = "mrn_attributes_product";
+//         this.select = document.getElementById("MainDataForm").mrn_attributes_product;
+//     }
+    
+//     // Read the property values saved with the template item
+//     this.propertyValues = document.thisItem.getProperty(this.selectBoxProperty,"");
+    
+//     // Read the families selected in this control
+//     this.familiesSelected = document.thisItem.getProperty("mrn_families","");
+// }
+
+
+// // This method populates the listbox
+// MultiSelectBox.prototype.populate = function(propertiesList) 
+// {
+// //alert("inside populate");
+  
+//     // Counter for option numbers to be added to the box
+//     var optionNumber = 0;
+    
+//     // Resets/clears the options for the control
+//     this.select.options.length = 0;
+
+//     // Cycle all the MNR Property items, and add to the options if in the same level and family
+//     for (var ii = 0; ii < propertiesList.length; ii++) 
+//     {
+//         var mrnPropertyItem = propertiesList[ii];
+        
+//         // // if the property is not for this level, skip it
+//         if (mrnPropertyItem.getLevel() != this.level)
+//             continue;
+        
+//         // Set the list value
+//         this.select.options[optionNumber]= new Option(mrnPropertyItem.getOptionLabel());
+       
+//         // If the property includes this value, highlight this value
+//         if (this.propertyValues.indexOf(mrnPropertyItem.getOptionLabel()) > -1 )
+//             this.select.options[optionNumber].selected=true;
+        
+//         optionNumber++;
+//     }
+// }
+
+
+
+// // class to build MRN_Property items
+// class MRN_Property{
+
+//     // Constructor
+//     constructor(itm)
+//     {
+//         this.item = itm;
+//         this.level = this.item.getProperty("mrn_level");
+        
+//         // Get the attribute label from the MRN_Property item
+//         this.optionLabel = this.item.getProperty("mrn_label","");
+            
+//         // If the label is empty, get the label from the associated property
+//         if (this.optionLabel === "")
+//         {
+//             var propertyItem = this.item.getPropertyItem("mrn_item_property");
+//             this.optionLabel = propertyItem.getProperty("label");
+//         }
+
+//         //Get the families for the property
+//         this.families = this.item.getProperty("mrn_families","");
+
+//     }
+    
+//     // Build a static list of MRN Property items
+//     static buildList(returnItem)
+//     {
+//         // Create the 
+//         MRN_Property.propertiesList = [];
+        
+//         // 
+//         for (var i=0; i < returnItm.getItemCount(); i++) 
+//         {
+//             var mrnPropertyItem = null;
+//             mrnPropertyItem = new MRN_Property(returnItm.getItemByIndex(i));
+//             MRN_Property.propertiesList.push(mrnPropertyItem);
+//         }
+//     }
+    
+//     getLevel() { return this.level; }
+//     getOptionLabel() { return this.optionLabel; }
+// }
+
+// // Class to populate multi-select list box
+// class MultiSelectBox 
+// {
+//     // Constructor for the class, depends on which level attributes box to manage
+//     constructor(ctrlName, lvl)
+//     {
+//         this.callingControl = ctrlName;
+//         this.level = lvl;
+//         if (this.level == "Level 4 - MSL")
+//         {
+//             this.selectBoxProperty = "mrn_attributes_msl";
+//             this.select = document.getElementById("MainDataForm").mrn_attributes_msl;
+//         }
+//         else if (this.level == "Level 5 - Frame")
+//         {
+//             this.selectBoxProperty = "mrn_attributes_frame";
+//             this.select = document.getElementById("MainDataForm").mrn_attributes_frame;
+//         }
+//         else if (this.level == "Level 6 - Product")
+//         {
+//             this.selectBoxProperty = "mrn_attributes_product";
+//             this.select = document.getElementById("MainDataForm").mrn_attributes_product;
+//         }
+        
+//         // Read the property values saved with the template item
+//         this.propertyValues = document.thisItem.getProperty(this.selectBoxProperty,"");
+        
+//         // Read the families selected in this control
+//         this.familiesSelected = document.thisItem.getProperty("mrn_families","");
+//     }
+    
+//     // This method populates the listbox
+//     populate()  
+//     {
+//     //alert("inside populate");
+      
+//         // Counter for option numbers to be added to the box
+//         var optionNumber = 0;
+        
+//         // Resets/clears the options for the control
+//         this.select.options.length = 0;
+
+//         // Cycle all the MNR Property items, and add to the options if in the same level and family
+//         for (var ii = 0; ii < MRN_Property.propertiesList.length; ii++) 
+//         {
+//             var mrnPropertyItem = MRN_Property.propertiesList[ii];
+            
+//             // // if the property is not for this level, skip it
+//             if (mrnPropertyItem.getLevel() != this.level)
+//                 continue;
+            
+//             // Set the list value
+//             this.select.options[optionNumber]= new Option(mrnPropertyItem.getOptionLabel());
+           
+//             // If the property includes this value, highlight this value
+//             if (this.propertyValues.indexOf(mrnPropertyItem.getOptionLabel()) > -1 )
+//                 this.select.options[optionNumber].selected=true;
+            
+//             optionNumber++;
+//         }
+//     }
+    
+// }
+
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_exportTemplateAttributes</name>
+ </Item>
+</AML>

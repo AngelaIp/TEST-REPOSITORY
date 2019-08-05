@@ -1,0 +1,56 @@
+﻿<AML>
+ <Item type="List" id="D45DECC790E746D890E3C2D3C8329300" action="add">
+  <description>Nominal discharge current</description>
+  <name>MRN_Discharge_Current</name>
+  <Relationships>
+   <Item type="Value" id="38F8E72C74574ECD8BAD9AB25665942D" action="add">
+    <label xml:lang="en">3kA</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Discharge_Current" type="List">D45DECC790E746D890E3C2D3C8329300</source_id>
+    <value>3kA</value>
+   </Item>
+   <Item type="Value" id="7FE1EF0C5ACD4725B09CF783751719C0" action="add">
+    <label xml:lang="en">5kA</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Discharge_Current" type="List">D45DECC790E746D890E3C2D3C8329300</source_id>
+    <value>5kA</value>
+   </Item>
+   <Item type="Value" id="F16DF3AAFD0340F5B90299847B2E1218" action="add">
+    <label xml:lang="en">10kA</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Discharge_Current" type="List">D45DECC790E746D890E3C2D3C8329300</source_id>
+    <value>10kA</value>
+   </Item>
+   <Item type="Value" id="7878B2026236429DA6355F57526244CF" action="add">
+    <label xml:lang="en">15kA</label>
+    <sort_order>400</sort_order>
+    <source_id keyed_name="MRN_Discharge_Current" type="List">D45DECC790E746D890E3C2D3C8329300</source_id>
+    <value>15kA</value>
+   </Item>
+   <Item type="Value" id="C192CEC66295410291718A2BD572E783" action="add">
+    <label xml:lang="en">20kA</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Discharge_Current" type="List">D45DECC790E746D890E3C2D3C8329300</source_id>
+    <value>20kA</value>
+   </Item>
+   <Item type="Value" id="9666B731C3054BEF9340C75231BE0FEA" action="add">
+    <label xml:lang="en">25kA</label>
+    <sort_order>520</sort_order>
+    <source_id keyed_name="MRN_Discharge_Current" type="List">D45DECC790E746D890E3C2D3C8329300</source_id>
+    <value>25kA</value>
+   </Item>
+   <Item type="Value" id="5B6E7AFD3B3B4F8AB2DCCBE6C571E49C" action="add">
+    <label xml:lang="en">50kA</label>
+    <sort_order>540</sort_order>
+    <source_id keyed_name="MRN_Discharge_Current" type="List">D45DECC790E746D890E3C2D3C8329300</source_id>
+    <value>50kA</value>
+   </Item>
+   <Item type="Value" id="B4090D6340884D178482DE0843B69480" action="add">
+    <label xml:lang="en">100kA</label>
+    <sort_order>560</sort_order>
+    <source_id keyed_name="MRN_Discharge_Current" type="List">D45DECC790E746D890E3C2D3C8329300</source_id>
+    <value>100kA</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

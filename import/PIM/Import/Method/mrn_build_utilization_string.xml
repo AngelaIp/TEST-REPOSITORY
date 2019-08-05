@@ -1,0 +1,31 @@
+﻿<AML>
+ <Item type="Method" id="BE42FB4B244A4F49867701624EE042F6" action="add">
+  <comments>Build the string when a dropdown value is selected</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//Get the dropdown values before change
+var utilizationUE_id = getFieldComponentByName("mrn_utilization_ue").getValue();
+var utilizationIE_id = getFieldComponentByName("mrn_utilization_ie").getValue();
+var utilizationValue_id = getFieldComponentByName("mrn_utilization_values").getValue();
+var utilizationPole_id = getFieldComponentByName("mrn_utilization_poles").getValue();
+
+//Identify which dropdown triggered the change
+if (this.name === "mrn_utilization_ue")
+    utilizationUE_id = getFieldComponentByName(srcElement.name).getValue();
+else
+    if (this.name === "mrn_utilization_ie")
+        utilizationIE_id = getFieldComponentByName(srcElement.name).getValue();
+    else
+        if (this.name === "mrn_utilization_values")
+            utilizationValue_id = getFieldComponentByName(srcElement.name).getValue();
+        else
+            utilizationPole_id = getFieldComponentByName(srcElement.name).getValue();
+
+var newString = utilizationValue_id + utilizationUE_id + utilizationIE_id + utilizationPole_id
+// top.aras.AlertSuccess(newString);
+ 
+document.all.mrn_utilization_category.value = newString;
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_build_utilization_string</name>
+ </Item>
+</AML>

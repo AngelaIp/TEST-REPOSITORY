@@ -1,0 +1,62 @@
+﻿<AML>
+ <Item type="List" id="FE9329708E9E4E73988A1F896E08FA0F" action="add">
+  <description>SG Code D (Level 1) Values</description>
+  <name>MRN_SG_Code_D</name>
+  <Relationships>
+   <Item type="Value" id="2070F2047B364C34B959190DEB4F8505" action="add">
+    <label xml:lang="en">SGD01 LV UL/CSA &amp; Gear</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_SG_Code_D" type="List">FE9329708E9E4E73988A1F896E08FA0F</source_id>
+    <value>D01</value>
+   </Item>
+   <Item type="Value" id="5C8BC161751D4CA2A1AA49EC5030FAE6" action="add">
+    <label xml:lang="en">SGD02 LV IEC Fuse &amp; Fusegear</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_SG_Code_D" type="List">FE9329708E9E4E73988A1F896E08FA0F</source_id>
+    <value>D02</value>
+   </Item>
+   <Item type="Value" id="4E15837120714CD799155976436A6729" action="add">
+    <label xml:lang="en">SGD03 Semi-Con, DC, Specialty</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_SG_Code_D" type="List">FE9329708E9E4E73988A1F896E08FA0F</source_id>
+    <value>D03</value>
+   </Item>
+   <Item type="Value" id="CC349E6B16994B658E15E4208A8E47D3" action="add">
+    <label xml:lang="en">SGD04 MV Fuses &amp; Fusegear</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_SG_Code_D" type="List">FE9329708E9E4E73988A1F896E08FA0F</source_id>
+    <value>D04</value>
+   </Item>
+   <Item type="Value" id="048AFFCB90564837AFC449E0E9001B4C" action="add">
+    <label xml:lang="en">SGD05 Over Voltage Protection</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_SG_Code_D" type="List">FE9329708E9E4E73988A1F896E08FA0F</source_id>
+    <value>D05</value>
+   </Item>
+   <Item type="Value" id="5CCC82AADB3A4F3FA9A5A0B4756F82E3" action="add">
+    <label xml:lang="en">SGD07 Cooling Devices</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_SG_Code_D" type="List">FE9329708E9E4E73988A1F896E08FA0F</source_id>
+    <value>D07</value>
+   </Item>
+   <Item type="Value" id="1AFB6F4DB6CC4B8EB974EC4933FEA9FC" action="add">
+    <label xml:lang="en">SGD08 HP Disc/Switches</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_SG_Code_D" type="List">FE9329708E9E4E73988A1F896E08FA0F</source_id>
+    <value>D08</value>
+   </Item>
+   <Item type="Value" id="1D532D91072C4825AF60EBB56D67647E" action="add">
+    <label xml:lang="en">SGD09 Bogie Protection</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_SG_Code_D" type="List">FE9329708E9E4E73988A1F896E08FA0F</source_id>
+    <value>D09</value>
+   </Item>
+   <Item type="Value" id="315CF8F680B44C8A96F98ECE3BFD62A5" action="add">
+    <label xml:lang="en">SGD10 Bus Bar</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_SG_Code_D" type="List">FE9329708E9E4E73988A1F896E08FA0F</source_id>
+    <value>D10</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

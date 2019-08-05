@@ -1,0 +1,68 @@
+﻿<AML>
+ <Item type="List" id="589FBCBCA3DF4F358F6302C9689214A1" action="add">
+  <description>Mounting Method</description>
+  <name>MRN_Mounting</name>
+  <Relationships>
+   <Item type="Value" id="05B6B5E9CEAC4D55BE74800A6C6FE3D9" action="add">
+    <label xml:lang="en">Clip</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>Clip</value>
+   </Item>
+   <Item type="Value" id="0862A58BCA024FE187AD672FA4A7EA04" action="add">
+    <label xml:lang="en">Screw</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>Screw</value>
+   </Item>
+   <Item type="Value" id="4D70680C975D4D25BF16348C639814F2" action="add">
+    <label xml:lang="en">Bolted</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>Bolted</value>
+   </Item>
+   <Item type="Value" id="B5622589E8C8427C97F4E0C743CE5385" action="add">
+    <label xml:lang="en">Clip or Bolted</label>
+    <sort_order>400</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>Clip or Bolted</value>
+   </Item>
+   <Item type="Value" id="CE95634A645A4676AB8FBD54892F6B69" action="add">
+    <label xml:lang="en">Clip-lock</label>
+    <sort_order>450</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>Clip-lock</value>
+   </Item>
+   <Item type="Value" id="8F786039D03F44F5B33FF0A408C5C9A6" action="add">
+    <label xml:lang="en">Crimp and Bolted</label>
+    <sort_order>500</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>Crimp and Bolted</value>
+   </Item>
+   <Item type="Value" id="F90338F645034B1D8FC20A6996EEFEAE" action="add">
+    <label xml:lang="en">Crimp</label>
+    <sort_order>500</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>Crimp</value>
+   </Item>
+   <Item type="Value" id="651A08BBB0264050859E1B892A60A367" action="add">
+    <label xml:lang="en">Direct Mount</label>
+    <sort_order>550</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>Direct Mount</value>
+   </Item>
+   <Item type="Value" id="4462AE6185D44CD683F0E8CF65E1C5BD" action="add">
+    <label xml:lang="en">Axial Leads</label>
+    <sort_order>600</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>Axial Leads</value>
+   </Item>
+   <Item type="Value" id="A3EEACB868B24BF5B26005823BA22F6D" action="add">
+    <label xml:lang="en">PC Mount</label>
+    <sort_order>650</sort_order>
+    <source_id keyed_name="MRN_Mounting" type="List">589FBCBCA3DF4F358F6302C9689214A1</source_id>
+    <value>PC Mount</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

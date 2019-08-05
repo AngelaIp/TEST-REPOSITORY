@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="List" id="848492780C6944C69977BF41BCD7FF86" action="add">
+  <name>MRN_Export_Unit_Systems</name>
+  <Relationships>
+   <Item type="Value" id="027A29CAAFD44173B591084F625CD1B6" action="add">
+    <label xml:lang="en">SI</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Export_Unit_Systems" type="List">848492780C6944C69977BF41BCD7FF86</source_id>
+    <value>SI</value>
+   </Item>
+   <Item type="Value" id="5FF4D82901684E299C463253B961FC26" action="add">
+    <label xml:lang="en">US</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Export_Unit_Systems" type="List">848492780C6944C69977BF41BCD7FF86</source_id>
+    <value>US</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

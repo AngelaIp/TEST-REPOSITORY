@@ -1,0 +1,140 @@
+﻿<AML>
+ <Item type="List" id="806589049FE443169A525EAAF6AB0D7C" action="add">
+  <description>Speed/Characteristis</description>
+  <name>MRN_Speed_Chracteristics</name>
+  <Relationships>
+   <Item type="Value" id="E40B6A37C6174A1CAA064D0E02FD5518" action="add">
+    <label xml:lang="en">aM</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>aM</value>
+   </Item>
+   <Item type="Value" id="235716D03D114A4097FAAB38C0F43FFB" action="add">
+    <label xml:lang="en">aR</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>aR</value>
+   </Item>
+   <Item type="Value" id="C5E0D67B694742B4A6347DD34634757A" action="add">
+    <label xml:lang="en">E-Rated</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>E-Rated</value>
+   </Item>
+   <Item type="Value" id="E0A54B514FC34ED9AA427EB912CAE239" action="add">
+    <label xml:lang="en">Fast (F)</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>Fast (F)</value>
+   </Item>
+   <Item type="Value" id="AF2674B76ACB4073B8C532F84035AE94" action="add">
+    <label xml:lang="en">Fast-Acting</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>Fast-Acting</value>
+   </Item>
+   <Item type="Value" id="F48DD6D1871E4ABAB3F60EDE04949A91" action="add">
+    <label xml:lang="en">gB</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gB</value>
+   </Item>
+   <Item type="Value" id="4880DA9A13814F5B9443B150C74566B2" action="add">
+    <label xml:lang="en">gG</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gG</value>
+   </Item>
+   <Item type="Value" id="A72A49338E4443AFB433FE7C8547ED94" action="add">
+    <label xml:lang="en">gGR</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gGR</value>
+   </Item>
+   <Item type="Value" id="CC0B92A3D3714D4AB3EEE2BA8169CD3C" action="add">
+    <label xml:lang="en">gL</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gL</value>
+   </Item>
+   <Item type="Value" id="1580BD57711B4D1B948A4D0999E2CDCA" action="add">
+    <label xml:lang="en">gLB</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gLB</value>
+   </Item>
+   <Item type="Value" id="B35D450FD42A4C0498226822ACB2CD71" action="add">
+    <label xml:lang="en">gM</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gM</value>
+   </Item>
+   <Item type="Value" id="6E5331E062B2455382D9F2C3E4068270" action="add">
+    <label xml:lang="en">gPV</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gPV</value>
+   </Item>
+   <Item type="Value" id="4A154F89ABD146D399B7EB83E79925DB" action="add">
+    <label xml:lang="en">gR</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gR</value>
+   </Item>
+   <Item type="Value" id="AD41508FB9354EC79E2C14EA7A084771" action="add">
+    <label xml:lang="en">gS</label>
+    <sort_order>140</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gS</value>
+   </Item>
+   <Item type="Value" id="302C4726DC394A818D49C3A74BCC60A2" action="add">
+    <label xml:lang="en">gTr</label>
+    <sort_order>150</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>gTr</value>
+   </Item>
+   <Item type="Value" id="CCC732D682F546898C3456E15E6AFC23" action="add">
+    <label xml:lang="en">High Speed</label>
+    <sort_order>160</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>High Speed</value>
+   </Item>
+   <Item type="Value" id="51CBEE62E3C94E02940F7488450876B2" action="add">
+    <label xml:lang="en">Medium time-lag</label>
+    <sort_order>170</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>Medium time-lag</value>
+   </Item>
+   <Item type="Value" id="A026FE03C3CE447CA0B48110150E69B6" action="add">
+    <label xml:lang="en">R-Rated</label>
+    <sort_order>180</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>R-Rated</value>
+   </Item>
+   <Item type="Value" id="BBB82B103A194C68A6E5742FF9208574" action="add">
+    <label xml:lang="en">Super fast (FF)</label>
+    <sort_order>190</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>Super fast (FF)</value>
+   </Item>
+   <Item type="Value" id="E47F771CE2C34973AFBA17E457FE2B6A" action="add">
+    <label xml:lang="en">Super slow (TT)</label>
+    <sort_order>200</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>Super slow (TT)</value>
+   </Item>
+   <Item type="Value" id="AF5EA04273FA4117A74240EE1B89E057" action="add">
+    <label xml:lang="en">Time Delay</label>
+    <sort_order>210</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>Time Delay</value>
+   </Item>
+   <Item type="Value" id="4764AC46D388446285EC4F64E0FF680A" action="add">
+    <label xml:lang="en">Time-lag</label>
+    <sort_order>220</sort_order>
+    <source_id keyed_name="MRN_Speed_Chracteristics" type="List">806589049FE443169A525EAAF6AB0D7C</source_id>
+    <value>Time-lag</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

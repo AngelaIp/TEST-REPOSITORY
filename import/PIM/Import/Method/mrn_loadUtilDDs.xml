@@ -1,0 +1,59 @@
+﻿<AML>
+ <Item type="Method" id="766597E2DD7E4D93969D6DD04EF416E3" action="add">
+  <comments>Load the dropdowns</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var inn = new Innovator();
+var ue_list = new Array();
+var le_list = new Array();
+var v_list = new Array();
+var pole_list = new Array();
+
+    // 06/25/2019 to fix IR-079457 [Mersen_US Upgrade]Internal error while chosen fields on sidebar
+    //Retrieve MRN_Utilization_IE list
+    var DD_ObjIE = document.all.mrn_utilization_ie.id;
+    loadDropDown("mrn_utilization_ie", le_list, DD_ObjIE);
+    
+    //Retrieve MRN_Utilization_UE list
+    var DD_ObjUE = document.all.mrn_utilization_ue.id;
+    loadDropDown("mrn_utilization_ue", ue_list, DD_ObjUE);
+    
+    //Retrieve MRN_Utilization_Values list
+    var DD_ObjValues = document.all.mrn_utilization_values.id;
+    loadDropDown("mrn_utilization_values", v_list, DD_ObjValues);
+    
+    //Retrieve MRN_Utilization_Poles list
+    var DD_ObjPoles = document.all.mrn_utilization_poles.id;
+    loadDropDown("mrn_utilization_poles", pole_list, DD_ObjPoles);
+
+
+function loadDropDown(listName, arrayDD, selectObjId)
+{
+    var listDD = inn.newItem("List", "get");
+    listDD.setProperty("name", listName);
+    listDD = listDD.apply();
+    
+    //Retrieve list values
+    listDD.fetchRelationships("Value");
+    var rel = listDD.getRelationships("Value");
+    var count = rel.getItemCount();
+    
+    //Store values in an array
+    for(var i=0; i<count; i++){
+        var value = rel.getItemByIndex(i);
+        arrayDD[i] = value.getProperty("value");
+    }
+
+    var dropDownElement = getFieldComponentById(selectObjId);
+    var options = [ { label: "", value: "" } ];
+    for (var i = 0; i < arrayDD.length; i++) 
+    {
+        options.push({ label: arrayDD[i], value: arrayDD[i] });
+    }
+    dropDownElement.component.setState({ list: options });
+    // end of fix IR-079457
+}   
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_loadUtilDDs</name>
+ </Item>
+</AML>

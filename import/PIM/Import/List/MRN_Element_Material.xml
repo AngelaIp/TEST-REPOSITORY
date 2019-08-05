@@ -1,0 +1,32 @@
+﻿<AML>
+ <Item type="List" id="C6CD3DDEE8854CD094D26E0BDF0052A6" action="add">
+  <description>Element Material</description>
+  <name>MRN_Element_Material</name>
+  <Relationships>
+   <Item type="Value" id="307070C11C5D48A8A66FDFE7D3A229C2" action="add">
+    <label xml:lang="en">Copper</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Element_Material" type="List">C6CD3DDEE8854CD094D26E0BDF0052A6</source_id>
+    <value>Copper</value>
+   </Item>
+   <Item type="Value" id="6687A8108C584150AAF0000F84B1F630" action="add">
+    <label xml:lang="en">Silver</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Element_Material" type="List">C6CD3DDEE8854CD094D26E0BDF0052A6</source_id>
+    <value>Silver</value>
+   </Item>
+   <Item type="Value" id="A4ED79B152084138ABB56AB5ADFA943D" action="add">
+    <label xml:lang="en">Aluminum</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Element_Material" type="List">C6CD3DDEE8854CD094D26E0BDF0052A6</source_id>
+    <value>Aluminum</value>
+   </Item>
+   <Item type="Value" id="A7410F42EC22470384130372B065B8F7" action="add">
+    <label xml:lang="en">Bi-metal</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Element_Material" type="List">C6CD3DDEE8854CD094D26E0BDF0052A6</source_id>
+    <value>Bi-metal</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

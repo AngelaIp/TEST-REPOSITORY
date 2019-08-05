@@ -1,0 +1,164 @@
+﻿<AML>
+ <Item type="List" id="5584F46A23E64809AB3FDBE4B0B91FFD" action="add">
+  <description>Utilization IE values</description>
+  <name>mrn_utilization_ie</name>
+  <Relationships>
+   <Item type="Value" id="7ADED872222949468ECEAEAB29398473" action="add">
+    <label xml:lang="en">Ie = 16 A</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 16 A</value>
+   </Item>
+   <Item type="Value" id="BC43763A53B1483BAA91A53288995AFC" action="add">
+    <label xml:lang="en">Ie = 25 A</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 25 A</value>
+   </Item>
+   <Item type="Value" id="CC570C41C8D541BAB40E9F82E8886DF5" action="add">
+    <label xml:lang="en">Ie = 32 A</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 32 A</value>
+   </Item>
+   <Item type="Value" id="E6DA67BDBCB34E54B7588BA49AD47A8F" action="add">
+    <label xml:lang="en">Ie = 63 A</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 63 A</value>
+   </Item>
+   <Item type="Value" id="E92C71C0F6A74DAD901A2E219BBFCDF4" action="add">
+    <label xml:lang="en">Ie = 100 A</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 100 A</value>
+   </Item>
+   <Item type="Value" id="28F2A567F6D949C48531F339E7F8AFE1" action="add">
+    <label xml:lang="en">Ie = 125 A</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 125 A</value>
+   </Item>
+   <Item type="Value" id="6D6D2B45241444C580E69F7E46687906" action="add">
+    <label xml:lang="en">Ie = 135 A</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 135 A</value>
+   </Item>
+   <Item type="Value" id="1501CCECB7B742D7B1ACC9E92EB96CE4" action="add">
+    <label xml:lang="en">Ie = 160 A</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 160 A</value>
+   </Item>
+   <Item type="Value" id="8A092829E82F4E4882448165487DA302" action="add">
+    <label xml:lang="en">Ie = 200 A</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 200 A</value>
+   </Item>
+   <Item type="Value" id="2ED7619FB7CE467BAC62A1C22C3F9432" action="add">
+    <label xml:lang="en">Ie = 230 A</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 230 A</value>
+   </Item>
+   <Item type="Value" id="88B9FB20877C488797E53B8FD82D8117" action="add">
+    <label xml:lang="en">Ie = 250 A</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 250 A</value>
+   </Item>
+   <Item type="Value" id="3192751894DE42909C83E13421E13DF8" action="add">
+    <label xml:lang="en">Ie = 315 A</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 315 A</value>
+   </Item>
+   <Item type="Value" id="FF83F88159E94336BBB634CE53A781AD" action="add">
+    <label xml:lang="en">Ie = 360 A</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 360 A</value>
+   </Item>
+   <Item type="Value" id="EB1607AD746D4EDFB206C2BA65E063D9" action="add">
+    <label xml:lang="en">Ie = 400 A</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 400 A</value>
+   </Item>
+   <Item type="Value" id="7835708BFFBA45BB8A54D4BB46635670" action="add">
+    <label xml:lang="en">Ie = 2 x 400 A</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 2 x 400 A</value>
+   </Item>
+   <Item type="Value" id="2A5A6E4592FB4175A482BE138425A2A6" action="add">
+    <label xml:lang="en">Ie = 500 A</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 500 A</value>
+   </Item>
+   <Item type="Value" id="099EBFDAF2394A508DBBBC07A60A62D1" action="add">
+    <label xml:lang="en">Ie = 600 A</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 600 A</value>
+   </Item>
+   <Item type="Value" id="5E8E1BAF0B2E4F66BF9672D0EA519408" action="add">
+    <label xml:lang="en">Ie = 630 A</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 630 A</value>
+   </Item>
+   <Item type="Value" id="FA201BE6B454463CB52A1C789AAA4A8B" action="add">
+    <label xml:lang="en">Ie = 2 x 630 A</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 2 x 630 A</value>
+   </Item>
+   <Item type="Value" id="0E07865494AB48BF8565543E78FE939B" action="add">
+    <label xml:lang="en">Ie = 650 A</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 650 A</value>
+   </Item>
+   <Item type="Value" id="47114A3426A1459AB1673140AA86A674" action="add">
+    <label xml:lang="en">Ie = 2 x 800 A</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 2 x 800 A</value>
+   </Item>
+   <Item type="Value" id="C0DE8C24E90043D29F3A95CD0B058B41" action="add">
+    <label xml:lang="en">ie = 800 A</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>ie = 800 A</value>
+   </Item>
+   <Item type="Value" id="0E365E1E6797456A8F8A580E183B0E24" action="add">
+    <label xml:lang="en">ie = 910 A</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>ie = 910 A</value>
+   </Item>
+   <Item type="Value" id="9614B6D1DE914EA988006A61C603BF48" action="add">
+    <label xml:lang="en">Ie = 1000 A</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 1000 A</value>
+   </Item>
+   <Item type="Value" id="E4EC744D093B414282A100694F20744D" action="add">
+    <label xml:lang="en">Ie = 1250 A</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 1250 A</value>
+   </Item>
+   <Item type="Value" id="8840E89801EE440EA71CDF377A896599" action="add">
+    <label xml:lang="en">Ie = 1600 A</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="mrn_utilization_ie" type="List">5584F46A23E64809AB3FDBE4B0B91FFD</source_id>
+    <value>Ie = 1600 A</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

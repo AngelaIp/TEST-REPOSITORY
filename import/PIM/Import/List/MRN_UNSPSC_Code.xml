@@ -1,0 +1,918 @@
+﻿<AML>
+ <Item type="List" id="0834B9876DDB43E89027D33DBC110AA0" action="add">
+  <description>UNSPSC code</description>
+  <name>MRN_UNSPSC_Code</name>
+  <Relationships>
+   <Item type="Filter Value" id="2E87696BEE05495E877ADC43EEE0423E" action="add">
+    <filter>A01</filter>
+    <label xml:lang="en">Fuse block</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121629</value>
+   </Item>
+   <Item type="Filter Value" id="21FC0F28101E4875BD9126C0490E3315" action="add">
+    <filter>A01</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="81AC494C7E834A61906BFB06DFA3DD8A" action="add">
+    <filter>A01</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="D3BB57C87B7D409C8D1D1CBB5A0DF5B9" action="add">
+    <filter>A02</filter>
+    <label xml:lang="en">Cartridge fuses</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121606</value>
+   </Item>
+   <Item type="Filter Value" id="FB76E34DFB5B426AB0557EB1B311A071" action="add">
+    <filter>A03</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="0ED41AC65DA9448BBD64AB35E711BAAB" action="add">
+    <filter>A04</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="6E190162F27847B0AC10ECCAE66FBD62" action="add">
+    <filter>A05</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="4E9E2D58FADA4D08A9DC2A5D19B06BD3" action="add">
+    <filter>A06</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="51CA7A2D28F04297868526DBC743F1B9" action="add">
+    <filter>A07</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="65D8D7BD6018486D95ECCBE987065F21" action="add">
+    <filter>A08</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="E75EB6CAA521432EAE758E63D7A83792" action="add">
+    <filter>A09</filter>
+    <label xml:lang="en">Cartridge fuses</label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121606</value>
+   </Item>
+   <Item type="Filter Value" id="BC8B121EBA7E43A4BE2C9E0FEA0BAF2D" action="add">
+    <filter>A09</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="C0096CD5444D45BABE96A29662C4DC47" action="add">
+    <filter>A10</filter>
+    <label xml:lang="en">Cartridge fuses</label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121606</value>
+   </Item>
+   <Item type="Filter Value" id="431C08283C2C424BBD5D124FC3F6FC08" action="add">
+    <filter>A10</filter>
+    <label xml:lang="en">Time delay fuses</label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121604</value>
+   </Item>
+   <Item type="Filter Value" id="306DCDC383CC4B99B2D9BB8C3B374599" action="add">
+    <filter>A11</filter>
+    <label xml:lang="en">Power fuse</label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121627</value>
+   </Item>
+   <Item type="Filter Value" id="43AD9F6D3E9C4BA68818E9131DAC59FB" action="add">
+    <filter>A11</filter>
+    <label xml:lang="en">Time delay fuses</label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121604</value>
+   </Item>
+   <Item type="Filter Value" id="8ECC1B9E6CD54485B226306200650237" action="add">
+    <filter>A12</filter>
+    <label xml:lang="en">Time delay fuses</label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121604</value>
+   </Item>
+   <Item type="Filter Value" id="A22D91AB3703477BB60150A2C9EDB08C" action="add">
+    <filter>A13</filter>
+    <label xml:lang="en">Power fuse</label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121627</value>
+   </Item>
+   <Item type="Filter Value" id="50DE4E737FCE4647A3859D61DA3EA11C" action="add">
+    <filter>A14</filter>
+    <label xml:lang="en">Power fuse</label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121627</value>
+   </Item>
+   <Item type="Filter Value" id="02D6EFD87CBF4DE9AB44CD20B3D857D4" action="add">
+    <filter>A14</filter>
+    <label xml:lang="en">Time delay fuses</label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121604</value>
+   </Item>
+   <Item type="Filter Value" id="37DBD354248C433BB47A3608BD7B91E1" action="add">
+    <filter>A15</filter>
+    <label xml:lang="en">Power fuse</label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121627</value>
+   </Item>
+   <Item type="Filter Value" id="55559FAEA5774CADBDD7BBEEB499CE4B" action="add">
+    <filter>A16</filter>
+    <label xml:lang="en">Power fuse</label>
+    <sort_order>2816</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121627</value>
+   </Item>
+   <Item type="Filter Value" id="FD6E178AC3BB4C369A939F20101665B8" action="add">
+    <filter>A16</filter>
+    <label xml:lang="en">Time delay fuses</label>
+    <sort_order>2944</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121604</value>
+   </Item>
+   <Item type="Filter Value" id="C83F65CA03BF40AAA8E4665622B991C0" action="add">
+    <filter>A17</filter>
+    <label xml:lang="en">Power fuse</label>
+    <sort_order>3072</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121627</value>
+   </Item>
+   <Item type="Filter Value" id="904FFE4CC7534024A685CA496A2EF9DC" action="add">
+    <filter>A17</filter>
+    <label xml:lang="en">Time delay fuses</label>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121604</value>
+   </Item>
+   <Item type="Filter Value" id="5D7CE36E7D2A4239BBC4EFED7ECFAFB5" action="add">
+    <filter>A18</filter>
+    <label xml:lang="en">Time delay fuses</label>
+    <sort_order>3328</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121604</value>
+   </Item>
+   <Item type="Filter Value" id="137CFB574EF14B1BB0FC9273DB36A928" action="add">
+    <filter>A19</filter>
+    <label xml:lang="en">Power fuse</label>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121627</value>
+   </Item>
+   <Item type="Filter Value" id="B524868DD5B54C60BCEE7FB261131599" action="add">
+    <filter>A23</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="BBD45BA57FAE4F55A598DD3B2548F2C1" action="add">
+    <filter>A24</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="4AF3167AF8BB449193375B430DF0302E" action="add">
+    <filter>A25</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>3840</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="3D40F42A0A004E869812B60EBF2B1EAD" action="add">
+    <filter>A26</filter>
+    <label xml:lang="en">Diazed or bottle fuses</label>
+    <sort_order>3968</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121619</value>
+   </Item>
+   <Item type="Filter Value" id="130F50574D824AD9AAEFD48898364A82" action="add">
+    <filter>A27</filter>
+    <label xml:lang="en">Diazed or bottle fuses</label>
+    <sort_order>4096</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121619</value>
+   </Item>
+   <Item type="Filter Value" id="971C0F9D60C541E6B659D3739044C87C" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">Fuse block</label>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121629</value>
+   </Item>
+   <Item type="Filter Value" id="176E8EB0109142FBA01644F5EE07BA85" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="DF5F6550E16A4C9F9A724B641776F43F" action="add">
+    <filter>A28</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>4480</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="630A820E5BBE4E138125D98D5C976CFC" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">Fuse block</label>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121629</value>
+   </Item>
+   <Item type="Filter Value" id="FEBE2B547AF14CF7B42A2877C993A4A0" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>4736</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="3A60D1341053400B85C3043A90FFFEA4" action="add">
+    <filter>A29</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>4864</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="C37D0DF9C675415DA56729470EB5C220" action="add">
+    <filter>A30</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>4992</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="96A8003FBB3D435ABE6C52CEA3B17588" action="add">
+    <filter>A31</filter>
+    <label xml:lang="en">Medium voltage fuse</label>
+    <sort_order>5120</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121626</value>
+   </Item>
+   <Item type="Filter Value" id="EAFD0C235EF648F2AFABD015463055CA" action="add">
+    <filter>A32</filter>
+    <label xml:lang="en">Medium voltage fuse</label>
+    <sort_order>5248</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121626</value>
+   </Item>
+   <Item type="Filter Value" id="27150C0F51D649F4B666B2CC024F7177" action="add">
+    <filter>A33</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>5376</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="0593F8E82D2746CB95055C274A129104" action="add">
+    <filter>A33</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>5504</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="D8C8F90E17864806ADCC029FF1BD27B6" action="add">
+    <filter>A34</filter>
+    <label xml:lang="en">Blade fuses</label>
+    <sort_order>5632</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121612</value>
+   </Item>
+   <Item type="Filter Value" id="59E11A3E0DA24296B9B280638137303B" action="add">
+    <filter>A35</filter>
+    <label xml:lang="en">Disconnect switch</label>
+    <sort_order>5760</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39122233</value>
+   </Item>
+   <Item type="Filter Value" id="BF5B63A1C7DF49E283F63765D5878F2B" action="add">
+    <filter>A35</filter>
+    <label xml:lang="en">Switch part or accessory</label>
+    <sort_order>5888</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39122221</value>
+   </Item>
+   <Item type="Filter Value" id="3BAC2D5A97AC480480E1C0EBC56ADBAA" action="add">
+    <filter>A38</filter>
+    <label xml:lang="en">Ceramic fuses</label>
+    <sort_order>6016</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121611</value>
+   </Item>
+   <Item type="Filter Value" id="772863004EA541589619F2F305974AAF" action="add">
+    <filter>A39</filter>
+    <label xml:lang="en">Ceramic fuses</label>
+    <sort_order>6144</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121611</value>
+   </Item>
+   <Item type="Filter Value" id="9AE4D62F1DDF4315B6A256103A9092DE" action="add">
+    <filter>A40</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>6272</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="900FD1274B404947893D41163DF31096" action="add">
+    <filter>A41</filter>
+    <label xml:lang="en">Medium voltage fuse</label>
+    <sort_order>6400</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121626</value>
+   </Item>
+   <Item type="Filter Value" id="4BFF820D79144F00977C99409535E61B" action="add">
+    <filter>A42</filter>
+    <label xml:lang="en">Fuse block</label>
+    <sort_order>6528</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121629</value>
+   </Item>
+   <Item type="Filter Value" id="78DCAD294DC44D2991649F91D10451AB" action="add">
+    <filter>A42</filter>
+    <label xml:lang="en">Fuse clip</label>
+    <sort_order>6656</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121630</value>
+   </Item>
+   <Item type="Filter Value" id="12C6671021E44B4CB375D14613BEB46E" action="add">
+    <filter>A42</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>6784</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="D91F18406C724A918E74CF92F858FD42" action="add">
+    <filter>A43</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>6912</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="FFC3F0F608C44F06ACB3ED0CA6BF5D1D" action="add">
+    <filter>A43</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>7040</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="8826D3909D844C249CC6BC03CC9208E0" action="add">
+    <filter>A44</filter>
+    <label xml:lang="en">Fuse block</label>
+    <sort_order>7168</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121629</value>
+   </Item>
+   <Item type="Filter Value" id="6C562C50F7D14B479463D8FE0E711DA7" action="add">
+    <filter>A44</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>7296</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="6D9EDEBE20A645D4BCDA56FA4318BB9E" action="add">
+    <filter>A44</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>7424</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="1B014883BF214656A73AF9311B1F59B4" action="add">
+    <filter>A49</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>7552</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="F9CB52E5AB4245C5ADC0E20662B5B51C" action="add">
+    <filter>A51</filter>
+    <label xml:lang="en">Medium voltage fuse</label>
+    <sort_order>7680</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121626</value>
+   </Item>
+   <Item type="Filter Value" id="4A7A1B080E1145EEBC21E5C57F1C7E14" action="add">
+    <filter>A52</filter>
+    <label xml:lang="en">Medium voltage fuse</label>
+    <sort_order>7808</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121626</value>
+   </Item>
+   <Item type="Filter Value" id="A712E8655C01499096FC4AB86A904320" action="add">
+    <filter>A55</filter>
+    <label xml:lang="en">Medium voltage fuse</label>
+    <sort_order>8064</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121626</value>
+   </Item>
+   <Item type="Filter Value" id="DC97AA57D8B7492DBFD8BC9F8590D190" action="add">
+    <filter>A56</filter>
+    <label xml:lang="en">Medium voltage fuse</label>
+    <sort_order>8192</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121626</value>
+   </Item>
+   <Item type="Filter Value" id="E68D161A3ACA476DA3F9323F147575FA" action="add">
+    <filter>A57</filter>
+    <label xml:lang="en">Medium voltage fuse</label>
+    <sort_order>8320</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121626</value>
+   </Item>
+   <Item type="Filter Value" id="B1E53902514144B496B2F04CEF895C01" action="add">
+    <filter>A58</filter>
+    <label xml:lang="en">Medium voltage fuse</label>
+    <sort_order>8448</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121626</value>
+   </Item>
+   <Item type="Filter Value" id="1A8FE92A0F324BFFAEA311219150F970" action="add">
+    <filter>A63</filter>
+    <label xml:lang="en">Midget fuses</label>
+    <sort_order>8576</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121609</value>
+   </Item>
+   <Item type="Filter Value" id="C5110DF69C5341F28CD61B620DD95634" action="add">
+    <filter>A64</filter>
+    <label xml:lang="en">Fuse clip</label>
+    <sort_order>8704</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121630</value>
+   </Item>
+   <Item type="Filter Value" id="7F871CBE118B423E935E5C9B3023E5A7" action="add">
+    <filter>A64</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>8832</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="4B0EF762EE524DDFABB7897B5C57DA76" action="add">
+    <filter>A65</filter>
+    <label xml:lang="en">Automotive fuse</label>
+    <sort_order>8960</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121622</value>
+   </Item>
+   <Item type="Filter Value" id="DB46B43C9A874E02B55E32F02C3FAC48" action="add">
+    <filter>A65</filter>
+    <label xml:lang="en">Electronic fuse</label>
+    <sort_order>9088</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121623</value>
+   </Item>
+   <Item type="Filter Value" id="78F735E06DE24CB68036436816B1D944" action="add">
+    <filter>A65</filter>
+    <label xml:lang="en">Glass body fuses</label>
+    <sort_order>9216</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121607</value>
+   </Item>
+   <Item type="Filter Value" id="DE6EC37BE83C495EB3BC2B80BC1F60D2" action="add">
+    <filter>A66</filter>
+    <label xml:lang="en">Printed Publications</label>
+    <sort_order>9344</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>55101520</value>
+   </Item>
+   <Item type="Filter Value" id="178990700E4B4D259C54E56A5F99ACFD" action="add">
+    <filter>A68</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>9472</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="60363D652ECC4EA2A2723268EB49536D" action="add">
+    <filter>A69</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>9600</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="6EB9161130774C26ABD65EC9A14C0580" action="add">
+    <filter>A70</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>9728</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="7185B21E0FFD4871ACC55AB6DEC7A521" action="add">
+    <filter>A71</filter>
+    <label xml:lang="en">Cartridge fuses</label>
+    <sort_order>9856</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121606</value>
+   </Item>
+   <Item type="Filter Value" id="88EB7E97D9EC495AB6D0967E76756CEC" action="add">
+    <filter>A71</filter>
+    <label xml:lang="en">Midget fuses</label>
+    <sort_order>9984</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121609</value>
+   </Item>
+   <Item type="Filter Value" id="7F67A763E5AA42579BE3983B3F740438" action="add">
+    <filter>A72</filter>
+    <label xml:lang="en">Plug fuses</label>
+    <sort_order>10112</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121605</value>
+   </Item>
+   <Item type="Filter Value" id="566A90C74159434B9484BBE1E0A706D6" action="add">
+    <filter>A73</filter>
+    <label xml:lang="en">Terminal blocks</label>
+    <sort_order>10240</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121410</value>
+   </Item>
+   <Item type="Filter Value" id="C960D3621BF148C588D382D1EA95146F" action="add">
+    <filter>A75</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>10368</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="F27930543A2C49A99BDFA83D4E44733B" action="add">
+    <filter>A78</filter>
+    <label xml:lang="en">Fuse block</label>
+    <sort_order>10496</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121629</value>
+   </Item>
+   <Item type="Filter Value" id="BBAE774A0D54438F98BB27301DB5C9A1" action="add">
+    <filter>A78</filter>
+    <label xml:lang="en">Fuse holder</label>
+    <sort_order>10624</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121624</value>
+   </Item>
+   <Item type="Filter Value" id="503A1CF476364D9487CFBB5E58FFB266" action="add">
+    <filter>A78</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>10752</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="C858C01042934C298CCA79ACC8C66C43" action="add">
+    <filter>A79</filter>
+    <label xml:lang="en">Cartridge fuses</label>
+    <sort_order>10880</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121606</value>
+   </Item>
+   <Item type="Filter Value" id="CAD2281C204C43CABCB7770FB3D4B58C" action="add">
+    <filter>A82</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>11008</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="35C336B99BFB498C86894B01C29D545D" action="add">
+    <filter>A84</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>11136</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="5BA74E577200477E95919D9D7283C934" action="add">
+    <filter>A85</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>11264</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+   <Item type="Filter Value" id="049A58BD7E594D36AD9E581FB4FF300B" action="add">
+    <filter>B07</filter>
+    <label xml:lang="en">Surge suppressers</label>
+    <sort_order>11392</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121610</value>
+   </Item>
+   <Item type="Filter Value" id="F42467B22C834BDA8A7FA8E42B15B30C" action="add">
+    <filter>A90</filter>
+    <label xml:lang="en">Cartridge fuses</label>
+    <sort_order>11520</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121606</value>
+   </Item>
+   <Item type="Filter Value" id="DDF59FB47B9244BB97829788B43CB57E" action="add">
+    <filter>A90</filter>
+    <label xml:lang="en">Circuit tester</label>
+    <sort_order>11648</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>41113642</value>
+   </Item>
+   <Item type="Filter Value" id="C897E9F273D24B0B8824E015CA4EA8E6" action="add">
+    <filter>A90</filter>
+    <label xml:lang="en">Fuse parts or accessories</label>
+    <sort_order>11776</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121617</value>
+   </Item>
+   <Item type="Filter Value" id="92ED331853FB4ADCB6CC297E933E1600" action="add">
+    <filter>A96</filter>
+    <label xml:lang="en">Surge suppressers</label>
+    <sort_order>11904</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121610</value>
+   </Item>
+   <Item type="Filter Value" id="C17313B1EFE04C8FA5C32AEAF207B39C" action="add">
+    <filter>A98</filter>
+    <label xml:lang="en">Surge suppressers</label>
+    <sort_order>12160</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121610</value>
+   </Item>
+   <Item type="Filter Value" id="ACC30736BE98456480AAA394DAA59BF9" action="add">
+    <filter>A00</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12288</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="0DD2CB7DA80B4E79B7EBDF0BF5E098C1" action="add">
+    <filter>A20</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12416</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="FCB922CEC6794E0F87C0AC473E917437" action="add">
+    <filter>A21</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12544</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="95792A8728A34BD99584D9E7BEC33EB1" action="add">
+    <filter>A22</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12672</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="694CC2B095F640B0938E959BCEF3B799" action="add">
+    <filter>A36</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12800</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="4CC0DD645EC740AFA8F4A579E630ADB1" action="add">
+    <filter>A37</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>12928</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="CF86BA7BA8CF44258FF1E5D2A173FD37" action="add">
+    <filter>A45</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13056</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="FE32CF307B1C4353878A54F440FF82CA" action="add">
+    <filter>A46</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13184</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="CEC6465835814C14B564AE6C08857B4B" action="add">
+    <filter>A47</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13312</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="BD2044FACF2B45BDA978A94A808F497E" action="add">
+    <filter>A48</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13440</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="848CDF83112C4624AA011CA6B1A4FC36" action="add">
+    <filter>A50</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13568</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="6D39DA3B7E3B493FA4AFD93CD96B5152" action="add">
+    <filter>A53</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13696</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="1DD46DD8211F40529D13FA33955ED165" action="add">
+    <filter>A59</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13824</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="971AD13A111443219768DE43E639A7B4" action="add">
+    <filter>A60</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>13952</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="7BB80DFC414748D0B0619579CE28A115" action="add">
+    <filter>A61</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14080</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="38053A6C936647BABE00CDBCB68C29FF" action="add">
+    <filter>A62</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14208</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="9FE47DCF28CD4192B3A2485ABB58660F" action="add">
+    <filter>A67</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14336</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="3ED8704FCA604AA8AB3638FC63816E33" action="add">
+    <filter>A74</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14464</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="0E64832F43A0471F886987B5697A4A58" action="add">
+    <filter>A76</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14592</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="110224123D32405280C6DCDEF3344B85" action="add">
+    <filter>A77</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14720</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="96D5AD9AC9B34D7C9D16A9DA44CF419F" action="add">
+    <filter>A80</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14848</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="F74FB6BE81A64B639BCD8A2C5C90DB55" action="add">
+    <filter>A81</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>14976</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="1BA031C60F9D41868A1E9B97977BBE5E" action="add">
+    <filter>A83</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15104</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="0E7502C19EBF4FB28A50E81BA3375DAF" action="add">
+    <filter>A86</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15232</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="5C74B10A5E4C40AF84576A97F04C1D95" action="add">
+    <filter>A87</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15360</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="D027944A2BC744BBA99D55A356867F35" action="add">
+    <filter>A88</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15488</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="EE16E6C8022A4DAA9C13D9CDFD6C2785" action="add">
+    <filter>A91</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15616</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="BD6FBF3FA3E045DBBFB38917A39BCD2A" action="add">
+    <filter>A92</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15744</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="68D557D548704B68B8695E6C25FE34BF" action="add">
+    <filter>A93</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>15872</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="83EF97AA368C4F1C87F791332F06FD2C" action="add">
+    <filter>A94</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16000</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="CD47A33D6AD54E8BB222179608CF3EF4" action="add">
+    <filter>A95</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16128</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="3B9EA8BAC8EE47C083C85ACE48E5E060" action="add">
+    <filter>A99</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16256</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="383C522400104DA595FD1ECBFA245582" action="add">
+    <filter>B00</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16384</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="475CCC651B694AEA85BF97C1676FC4B5" action="add">
+    <filter>B01</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16512</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="16C7479419FA4BB7A3B62BAC225E4776" action="add">
+    <filter>B02</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16640</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="284696F175664E5688D1BAE3FBADE8B5" action="add">
+    <filter>B03</filter>
+    <label xml:lang="en">To be determined</label>
+    <sort_order>16768</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>00000000</value>
+   </Item>
+   <Item type="Filter Value" id="601EF9EA17394AF3AB824FBC5B9556E4" action="add">
+    <filter>B21</filter>
+    <label xml:lang="en">Semiconductor fuse</label>
+    <sort_order>16896</sort_order>
+    <source_id keyed_name="MRN_UNSPSC_Code" type="List">0834B9876DDB43E89027D33DBC110AA0</source_id>
+    <value>39121628</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

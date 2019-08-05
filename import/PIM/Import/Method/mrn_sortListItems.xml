@@ -1,0 +1,80 @@
+﻿<AML>
+ <Item type="Method" id="31211D3F511A45EF9C9C2CFB3621AB21" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Called From: List, Action --> Sort  (Action Name: ka_sort)
+// Purpose:     Assigns sort order to values by labels in alphabetical order
+// On:          Dec 2016     Kamran Aftab
+// Comments:    Only works on the tab that is active. Need to run separately on Value tab and Filter Value tab
+
+
+var inn = this.getInnovator();
+
+sortValues(this.getID(),inn,"value");
+sortValues(this.getID(),inn,"filter value");
+top.onRefresh();
+
+return;
+
+function sortValues(id,inn,type)
+{
+    var relationships = inn.newItem(type,"get");
+    relationships.setProperty("source_id", id);
+    relationships.setAttribute("orderBy", "label");
+    relationships = relationships.apply();
+    
+    var count = relationships.getItemCount();
+    var sortOrder = 10;
+    
+    var tableName = (type == "value") ? "Value" : "Filter_Value";
+    
+    for (var i=0; i<count; i++)
+    {
+        var valueRelationship = relationships.getItemByIndex(i);
+        var value = valueRelationship.getProperty("value");
+        var label = valueRelationship.getProperty("label");
+        
+        var valueItem = inn.newItem(type,"edit");
+        valueItem.setAttribute("where","[" + tableName + "].id='" + valueRelationship.getID() + "'");
+        valueItem.setProperty("sort_order", sortOrder.toString());
+        valueItem = valueItem.apply();
+        sortOrder += 10;
+        
+    }
+}
+
+// Equivalent Server Method
+// public void sortValues(string type)
+// {
+//     Innovator inn = this.getInnovator();
+    
+//     Item relationships = inn.newItem(type,"get");
+//     relationships.setProperty("source_id", this.getID());
+//     relationships.setAttribute("orderBy", "label");
+//     relationships = relationships.apply();
+    
+//     int count = relationships.getItemCount();
+//     int sortOrder = 10;
+    
+//     string tableName = (type == "value") ? "Value" : "Filter_Value";
+    
+//     for (int i=0; i<count; i++)
+//     {
+//         Item valueRelationship = relationships.getItemByIndex(i);
+//         string value = valueRelationship.getProperty("value");
+//         string label = valueRelationship.getProperty("label");
+        
+//         Item valueItem = inn.newItem(type,"edit");
+//         valueItem.setAttribute("where","[" + tableName + "].id='" + valueRelationship.getID() + "'");
+//         valueItem.setProperty("sort_order", sortOrder.ToString());
+//         valueItem = valueItem.apply();
+//         sortOrder += 10;
+        
+//     }
+
+
+
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_sortListItems</name>
+ </Item>
+</AML>

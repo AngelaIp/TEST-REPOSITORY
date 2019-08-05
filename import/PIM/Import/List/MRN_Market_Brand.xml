@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="List" id="B5C48201D1294A6EBD0F439B651F16B6" action="add">
+  <description>Market Brand</description>
+  <name>MRN_Market_Brand</name>
+  <Relationships>
+   <Item type="Value" id="5C39A42438C44C46BC9875FA37910A8F" action="add">
+    <label xml:lang="en">HelioProtection®</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Market_Brand" type="List">B5C48201D1294A6EBD0F439B651F16B6</source_id>
+    <value>HelioProtection®</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

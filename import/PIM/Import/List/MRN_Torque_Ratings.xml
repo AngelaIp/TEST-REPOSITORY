@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="List" id="12A609E003BF48098AD125E6CF27E938" action="add">
+  <description>Torque ratings</description>
+  <name>MRN_Torque_Ratings</name>
+  <Relationships>
+   <Item type="Filter Value" id="85B337F1C6AB49F38F4DC82B315AA26F" action="add">
+    <filter />
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Torque_Ratings" type="List">12A609E003BF48098AD125E6CF27E938</source_id>
+    <value />
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

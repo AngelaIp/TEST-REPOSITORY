@@ -1,0 +1,195 @@
+﻿<AML>
+ <Item type="MSO_Preferences" id="B7284AD3F5C542B1980B8F6683C8B265" action="add">
+  <related_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_Poly">
+   <Item type="MSO_CommonSettings" id="4BF26B53A815455DB1FBC8BAF0D9DFBB" action="add">
+    <generate_viewable_on>20</generate_viewable_on>
+    <remove_local_file_on_close>0</remove_local_file_on_close>
+    <Relationships>
+     <Item type="MSO_DefaultFileTypes" id="0B816AFBC5BB4062B06ED5A18543D724" action="add">
+      <default_file_type>12</default_file_type>
+      <office_application>Word</office_application>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_CommonSettings">4BF26B53A815455DB1FBC8BAF0D9DFBB</source_id>
+      <viewable_file>1</viewable_file>
+      <viewable_file_type>17</viewable_file_type>
+     </Item>
+     <Item type="MSO_DefaultFileTypes" id="45DE5A1F0A184C6CB9B73D02C5300423" action="add">
+      <default_file_type>1051</default_file_type>
+      <office_application>Excel</office_application>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_CommonSettings">4BF26B53A815455DB1FBC8BAF0D9DFBB</source_id>
+      <viewable_file>1</viewable_file>
+      <viewable_file_type>1000</viewable_file_type>
+     </Item>
+     <Item type="MSO_DefaultFileTypes" id="E11D2F5AAF264E24861F28B0E506B723" action="add">
+      <default_file_type>10024</default_file_type>
+      <office_application>PowerPoint</office_application>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_CommonSettings">4BF26B53A815455DB1FBC8BAF0D9DFBB</source_id>
+      <viewable_file>1</viewable_file>
+      <viewable_file_type>10032</viewable_file_type>
+     </Item>
+     <Item type="MSO_DefaultFileTypes" id="32004788DB9F40FCB21D50A029A679CC" action="add">
+      <default_file_type>100009</default_file_type>
+      <office_application>Outlook</office_application>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_CommonSettings">4BF26B53A815455DB1FBC8BAF0D9DFBB</source_id>
+      <viewable_file>0</viewable_file>
+     </Item>
+     <Item type="MSO_DocumentType" id="75F1F7E1093A4334AC7A36FD47504C25" action="add">
+      <allow_promote>0</allow_promote>
+      <allow_select_existing_document>0</allow_select_existing_document>
+      <document_numbering>Method</document_numbering>
+      <document_numbering_method keyed_name="MSO_Adhoc_Document_Numbering" type="Method">B29222A8641B4E7A9371A43635C375CC</document_numbering_method>
+      <document_type>Ad-hoc</document_type>
+      <link_required>0</link_required>
+      <master_item_type keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</master_item_type>
+      <native_file_link keyed_name="Document File - Native" type="MSO_Reference">8D97E4F4D019435F9682AFD054E21AF0</native_file_link>
+      <property_mapping>Click to view mappings</property_mapping>
+      <rename_file>No</rename_file>
+      <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_CommonSettings">4BF26B53A815455DB1FBC8BAF0D9DFBB</source_id>
+      <template_required>0</template_required>
+      <valid_linked_items>Activity,Part,Project,WBS Element</valid_linked_items>
+      <viewable_file_link keyed_name="Document File - Viewable" type="MSO_Reference">3A7007CEA7694BFB895F123CFE4D2D28</viewable_file_link>
+      <label>Document / Ad-hoc</label>
+      <Relationships>
+       <Item type="MSO_DocumentType Reference" id="5548ADEFFEA74E7EBD1DFBD5AA0B0AFA" action="add">
+        <related_id keyed_name="Activity" type="MSO_Reference">C4DD86A27E0F4B4280D1B8FCD64CD3C1</related_id>
+       </Item>
+       <Item type="MSO_DocumentType Reference" id="9414D4513D72493C9FEF86258D155797" action="add">
+        <related_id keyed_name="Part" type="MSO_Reference">A4EA1B284F2944BD8D999884D849F46E</related_id>
+       </Item>
+       <Item type="MSO_DocumentType Reference" id="BD24DB85CCDF49979C14256DC8027560" action="add">
+        <related_id keyed_name="Project" type="MSO_Reference">C0FB990B83044ECAB350D6360F92B0AD</related_id>
+       </Item>
+       <Item type="MSO_DocumentType Reference" id="2F6295AC604A4F72B95BDFC3704F35A0" action="add">
+        <related_id keyed_name="WBS Element" type="MSO_Reference">AA853CFE3AE449A1A77D0665A3B58175</related_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="MSO_DocumentType" id="59AE87BC4EF94EFCAB2358D92EE9D8CA" action="add">
+      <allow_promote>0</allow_promote>
+      <allow_select_existing_document>0</allow_select_existing_document>
+      <document_numbering>Method</document_numbering>
+      <document_numbering_method keyed_name="MSO_General_Document_Numbering" type="Method">DE7F39A07DAF4BF68DCE68BC7AB941B5</document_numbering_method>
+      <document_type>General</document_type>
+      <link_required>0</link_required>
+      <master_item_type keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</master_item_type>
+      <native_file_link keyed_name="Document File - Native" type="MSO_Reference">8D97E4F4D019435F9682AFD054E21AF0</native_file_link>
+      <property_mapping>Click to view mappings</property_mapping>
+      <rename_file>Match Document</rename_file>
+      <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_CommonSettings">4BF26B53A815455DB1FBC8BAF0D9DFBB</source_id>
+      <template_required>1</template_required>
+      <valid_linked_items>Activity,Part,Project,WBS Element</valid_linked_items>
+      <viewable_file_link keyed_name="Document File - Viewable" type="MSO_Reference">3A7007CEA7694BFB895F123CFE4D2D28</viewable_file_link>
+      <label>Document / General</label>
+      <Relationships>
+       <Item type="MSO_DocumentType Reference" id="F47F16014AB643D6B58018AE1E198035" action="add">
+        <related_id keyed_name="Activity" type="MSO_Reference">C4DD86A27E0F4B4280D1B8FCD64CD3C1</related_id>
+       </Item>
+       <Item type="MSO_DocumentType Reference" id="6DFA3CC343F249789E94C674210F6248" action="add">
+        <related_id keyed_name="Part" type="MSO_Reference">A4EA1B284F2944BD8D999884D849F46E</related_id>
+       </Item>
+       <Item type="MSO_DocumentType Reference" id="73904B1B52B94312869BA1CC2655DF76" action="add">
+        <related_id keyed_name="Project" type="MSO_Reference">C0FB990B83044ECAB350D6360F92B0AD</related_id>
+       </Item>
+       <Item type="MSO_DocumentType Reference" id="B9354CD51551441699B365C18DAAD23E" action="add">
+        <related_id keyed_name="WBS Element" type="MSO_Reference">AA853CFE3AE449A1A77D0665A3B58175</related_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="MSO_DocumentType" id="EEA81DF4E49644A1B273B0AA695AC457" action="add">
+      <allow_promote>0</allow_promote>
+      <allow_select_existing_document>0</allow_select_existing_document>
+      <document_numbering>Method</document_numbering>
+      <document_numbering_method keyed_name="MSO_Product_Document_Numbering" type="Method">CCE6ABD0112443519924D8A99627DEF1</document_numbering_method>
+      <document_type>Product</document_type>
+      <file_naming_method keyed_name="MSO_Product_File_Naming" type="Method">A8D2A31D4C004DC8AC3C93C9CBD6B911</file_naming_method>
+      <link_required>0</link_required>
+      <master_item_type keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</master_item_type>
+      <native_file_link keyed_name="Document File - Native" type="MSO_Reference">8D97E4F4D019435F9682AFD054E21AF0</native_file_link>
+      <property_mapping>Click to view mappings</property_mapping>
+      <rename_file>Method</rename_file>
+      <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_CommonSettings">4BF26B53A815455DB1FBC8BAF0D9DFBB</source_id>
+      <template_required>1</template_required>
+      <valid_linked_items>Part</valid_linked_items>
+      <viewable_file_link keyed_name="Document File - Viewable" type="MSO_Reference">3A7007CEA7694BFB895F123CFE4D2D28</viewable_file_link>
+      <label>Document / Product</label>
+      <Relationships>
+       <Item type="MSO_DocumentType Reference" id="0E35A82294AE4081AC152736D5C28148" action="add">
+        <related_id keyed_name="Part" type="MSO_Reference">A4EA1B284F2944BD8D999884D849F46E</related_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="MSO_DocumentType" id="FF30217722314786B14799BF0BE1FC7F" action="add">
+      <allow_promote>0</allow_promote>
+      <allow_select_existing_document>0</allow_select_existing_document>
+      <document_numbering>Method</document_numbering>
+      <document_numbering_method keyed_name="MSO_Project_Document_Numbering" type="Method">9F2DFB244D6F442F8914D764BF6E465F</document_numbering_method>
+      <document_type>Project</document_type>
+      <file_naming_method keyed_name="MSO_Project_File_Naming" type="Method">C18E043AD6D0411FAC3DCF4AF8C8C256</file_naming_method>
+      <link_required>0</link_required>
+      <master_item_type keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</master_item_type>
+      <native_file_link keyed_name="Document File - Native" type="MSO_Reference">8D97E4F4D019435F9682AFD054E21AF0</native_file_link>
+      <property_mapping>Click to view mappings</property_mapping>
+      <rename_file>Method</rename_file>
+      <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_CommonSettings">4BF26B53A815455DB1FBC8BAF0D9DFBB</source_id>
+      <template_required>1</template_required>
+      <valid_linked_items>Activity,Project,WBS Element</valid_linked_items>
+      <viewable_file_link keyed_name="Document File - Viewable" type="MSO_Reference">3A7007CEA7694BFB895F123CFE4D2D28</viewable_file_link>
+      <label>Document / Project</label>
+      <Relationships>
+       <Item type="MSO_DocumentType Reference" id="434634EA41334F6FB76C6530218336BA" action="add">
+        <related_id keyed_name="Activity" type="MSO_Reference">C4DD86A27E0F4B4280D1B8FCD64CD3C1</related_id>
+       </Item>
+       <Item type="MSO_DocumentType Reference" id="1ED1A5EDF9E04A2BA32B0451EB756B36" action="add">
+        <related_id keyed_name="Project" type="MSO_Reference">C0FB990B83044ECAB350D6360F92B0AD</related_id>
+       </Item>
+       <Item type="MSO_DocumentType Reference" id="366D5B30E33F451D85DA2DE65947F5C7" action="add">
+        <related_id keyed_name="WBS Element" type="MSO_Reference">AA853CFE3AE449A1A77D0665A3B58175</related_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="MSO_EmailDocumentType" id="B94D6CF5C86341D095F19FCD02AC043F" action="add">
+      <allow_select_existing_document>0</allow_select_existing_document>
+      <document_numbering>Method</document_numbering>
+      <document_numbering_method keyed_name="MSO_Email_Numbering" type="Method">97E9102045F14F4F947A65829346124D</document_numbering_method>
+      <document_type>Email</document_type>
+      <label>Document / Email</label>
+      <link_required>0</link_required>
+      <master_item_type keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</master_item_type>
+      <native_file_link keyed_name="Document File - Native" type="MSO_Reference">8D97E4F4D019435F9682AFD054E21AF0</native_file_link>
+      <property_for_message />
+      <property_mapping>Click to view mappings</property_mapping>
+      <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="4BF26B53A815455DB1FBC8BAF0D9DFBB" type="MSO_CommonSettings">4BF26B53A815455DB1FBC8BAF0D9DFBB</source_id>
+      <valid_linked_items>Activity,Part,Project</valid_linked_items>
+      <viewable_file_link keyed_name="Document File - Viewable" type="MSO_Reference">3A7007CEA7694BFB895F123CFE4D2D28</viewable_file_link>
+      <Relationships>
+       <Item type="MSO_EmailDocType Reference" id="FCFA2DBF3F8148F3BD875918FE1C878C" action="add">
+        <related_id keyed_name="Activity" type="MSO_Reference">C4DD86A27E0F4B4280D1B8FCD64CD3C1</related_id>
+       </Item>
+       <Item type="MSO_EmailDocType Reference" id="9F361DAD18F3491F8DA36DA021471EDF" action="add">
+        <related_id keyed_name="Part" type="MSO_Reference">A4EA1B284F2944BD8D999884D849F46E</related_id>
+       </Item>
+       <Item type="MSO_EmailDocType Reference" id="470172237E034B7B9B4F62A2F1034DE5" action="add">
+        <related_id keyed_name="Project" type="MSO_Reference">C0FB990B83044ECAB350D6360F92B0AD</related_id>
+       </Item>
+      </Relationships>
+     </Item>
+    </Relationships>
+   </Item>
+  </related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="World" type="Preference">507A16AA36F94513AD7EC1F948B5B48F</source_id>
+ </Item>
+</AML>

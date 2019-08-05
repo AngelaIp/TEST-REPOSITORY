@@ -1,0 +1,56 @@
+﻿<AML>
+ <Item type="List" id="39EB7FCF953C4677A91C40271175096F" action="add">
+  <description>MRN Property UOMs to ETIM Codes mapping</description>
+  <name>MRN_ETIM_Unit_Code_Mapping</name>
+  <Relationships>
+   <Item type="Value" id="3A7F086422C54CD88242CF06E9E6FAA2" action="add">
+    <label xml:lang="en">A</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_ETIM_Unit_Code_Mapping" type="List">39EB7FCF953C4677A91C40271175096F</source_id>
+    <value>EU570459</value>
+   </Item>
+   <Item type="Value" id="096DBC4E5BE242639B20EE021156516A" action="add">
+    <label xml:lang="en">°C</label>
+    <sort_order>15</sort_order>
+    <source_id keyed_name="MRN_ETIM_Unit_Code_Mapping" type="List">39EB7FCF953C4677A91C40271175096F</source_id>
+    <value>EU570073</value>
+   </Item>
+   <Item type="Value" id="0BC2D26AADAB4B519158CDB3ACEF2875" action="add">
+    <label xml:lang="en">Hz</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_ETIM_Unit_Code_Mapping" type="List">39EB7FCF953C4677A91C40271175096F</source_id>
+    <value>EU570028</value>
+   </Item>
+   <Item type="Value" id="4C58263A13474666BA1A678F2277D65D" action="add">
+    <label xml:lang="en">kg</label>
+    <sort_order>25</sort_order>
+    <source_id keyed_name="MRN_ETIM_Unit_Code_Mapping" type="List">39EB7FCF953C4677A91C40271175096F</source_id>
+    <value>EU570039</value>
+   </Item>
+   <Item type="Value" id="8BC5360E5D8B4783BB7E7542C601A6D4" action="add">
+    <label xml:lang="en">m</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_ETIM_Unit_Code_Mapping" type="List">39EB7FCF953C4677A91C40271175096F</source_id>
+    <value>EU570036</value>
+   </Item>
+   <Item type="Value" id="B812DFA00FE8414FA2FAA816DCEBC629" action="add">
+    <label xml:lang="en">ms</label>
+    <sort_order>35</sort_order>
+    <source_id keyed_name="MRN_ETIM_Unit_Code_Mapping" type="List">39EB7FCF953C4677A91C40271175096F</source_id>
+    <value>EU570169</value>
+   </Item>
+   <Item type="Value" id="297A796B049A4593A8FE6C71021FEA60" action="add">
+    <label xml:lang="en">N m</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_ETIM_Unit_Code_Mapping" type="List">39EB7FCF953C4677A91C40271175096F</source_id>
+    <value>EU570245</value>
+   </Item>
+   <Item type="Value" id="D3D11EEF2CDC44C4A42717C51E69417C" action="add">
+    <label xml:lang="en">V</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_ETIM_Unit_Code_Mapping" type="List">39EB7FCF953C4677A91C40271175096F</source_id>
+    <value>EU570079</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,16 @@
+﻿<AML>
+ <Item type="Action" id="F6979950678841FF815DFC141C9DF8A0" action="add">
+  <body />
+  <item_query>&lt;Item type="{@type}" action="get"&gt;&lt;id&gt;&lt;xsl:value-of select="@id" /&gt;&lt;/id&gt;&lt;/Item&gt;</item_query>
+  <label xml:lang="en">Rerun Export</label>
+  <location>server</location>
+  <method keyed_name="mrn_rerunExport" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>mrn_rerunExport</name>
+   </Item>
+  </method>
+  <target>window</target>
+  <type>item</type>
+  <name>mrn_ReRunExport</name>
+ </Item>
+</AML>

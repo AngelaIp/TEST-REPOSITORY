@@ -1,0 +1,44 @@
+﻿<AML>
+ <Item type="List" id="9B546C4B382C4375843CF3033F34AF91" action="add">
+  <description>Formats for IEC SPD</description>
+  <name>MRN_Format</name>
+  <Relationships>
+   <Item type="Value" id="F998BBD8251144279995BB272B75834D" action="add">
+    <label xml:lang="en">Monobloc</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="MRN_Format" type="List">9B546C4B382C4375843CF3033F34AF91</source_id>
+    <value>Monobloc</value>
+   </Item>
+   <Item type="Value" id="CDEAE80BE755478FBB001844DAB44B38" action="add">
+    <label xml:lang="en">Pluggable</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="MRN_Format" type="List">9B546C4B382C4375843CF3033F34AF91</source_id>
+    <value>Pluggable</value>
+   </Item>
+   <Item type="Value" id="2668FB09517C4FAD90BED9FCF1106504" action="add">
+    <label xml:lang="en">Slim Monobloc</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="MRN_Format" type="List">9B546C4B382C4375843CF3033F34AF91</source_id>
+    <value>Slim Monobloc</value>
+   </Item>
+   <Item type="Value" id="4A7BD8A505FE4FB69972DC4BFF640864" action="add">
+    <label xml:lang="en">Coaxial</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="MRN_Format" type="List">9B546C4B382C4375843CF3033F34AF91</source_id>
+    <value>Coaxial</value>
+   </Item>
+   <Item type="Value" id="7067470BB0E442E68DC6579ADED08F85" action="add">
+    <label xml:lang="en">Hardwired</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="MRN_Format" type="List">9B546C4B382C4375843CF3033F34AF91</source_id>
+    <value>Hardwired</value>
+   </Item>
+   <Item type="Value" id="8A8D1669E8C04CD1BD1304C998DA26C8" action="add">
+    <label xml:lang="en">PCB mounted</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="MRN_Format" type="List">9B546C4B382C4375843CF3033F34AF91</source_id>
+    <value>PCB mounted</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

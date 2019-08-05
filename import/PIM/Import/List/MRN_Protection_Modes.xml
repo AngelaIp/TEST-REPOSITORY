@@ -1,0 +1,194 @@
+﻿<AML>
+ <Item type="List" id="95A3AD92295F499786A92034F6D2ACB7" action="add">
+  <description>Protection modes</description>
+  <name>MRN_Protection_Modes</name>
+  <Relationships>
+   <Item type="Value" id="0E7B0D95E3AB4FC4892A37C0DFB10D1D" action="add">
+    <label xml:lang="en">DC</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>DC</value>
+   </Item>
+   <Item type="Value" id="6E0D10EC80734671BDCCD31B9609F206" action="add">
+    <label xml:lang="en">IT</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>IT</value>
+   </Item>
+   <Item type="Value" id="D80834AFF9BC456B8CC217DDAA0E285D" action="add">
+    <label xml:lang="en">L-G</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>L-G</value>
+   </Item>
+   <Item type="Value" id="5E95199B27C041C58710B12A892F6E21" action="add">
+    <label xml:lang="en">L-L</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>L-L</value>
+   </Item>
+   <Item type="Value" id="63269907873249A4A425A49AD8625A7C" action="add">
+    <label xml:lang="en">L-N</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>L-N</value>
+   </Item>
+   <Item type="Value" id="54086AF1256D416FA23B5D4448B7B10C" action="add">
+    <label xml:lang="en">N-G</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>N-G</value>
+   </Item>
+   <Item type="Value" id="E9DE820E595F4F288A52B4B229A22196" action="add">
+    <label xml:lang="en">TN</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TN</value>
+   </Item>
+   <Item type="Value" id="0EFDEF9A22D743C0BA958E1E14769BDE" action="add">
+    <label xml:lang="en">TN-C</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TN-C</value>
+   </Item>
+   <Item type="Value" id="D68D022EF5BD45D2A0D2BD7A601ECF3E" action="add">
+    <label xml:lang="en">TN-C, IT</label>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TN-C, IT</value>
+   </Item>
+   <Item type="Value" id="7516B30349F5478E953CE1579FB723CB" action="add">
+    <label xml:lang="en">TN-C-S</label>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TN-C-S</value>
+   </Item>
+   <Item type="Value" id="A11E2F60D5194131825E7FF1913B8A3B" action="add">
+    <label xml:lang="en">TN-S</label>
+    <sort_order>110</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TN-S</value>
+   </Item>
+   <Item type="Value" id="F0B5E735A7944CEE841BCBFD48AF657F" action="add">
+    <label xml:lang="en">TN-S, TT</label>
+    <sort_order>120</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TN-S, TT</value>
+   </Item>
+   <Item type="Value" id="AFCE12FF8CF94A51A09227E1CDE248DD" action="add">
+    <label xml:lang="en">TT</label>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TT</value>
+   </Item>
+   <Item type="Value" id="2AFD091C44BB4CA0B5DC0C978FA41DF0" action="add">
+    <label xml:lang="en">12 (1Ph+N / 2Ph-Universal)</label>
+    <sort_order>258</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>12 (1Ph+N / 2Ph-Universal)</value>
+   </Item>
+   <Item type="Value" id="1458C89B1C6246E390CEE94334FEADFD" action="add">
+    <label xml:lang="en">C2 (1Ph+N)</label>
+    <sort_order>386</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>C2 (1Ph+N)</value>
+   </Item>
+   <Item type="Value" id="CCF2827FCE3241C8A8799226ACD4F0CE" action="add">
+    <label xml:lang="en">C4 (1Ph+N)</label>
+    <sort_order>514</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>C4 (1Ph+N)</value>
+   </Item>
+   <Item type="Value" id="439F7E9DD8814643A225A845BEEA1F4C" action="add">
+    <label xml:lang="en">CAT 5</label>
+    <sort_order>642</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>CAT 5</value>
+   </Item>
+   <Item type="Value" id="E18D888EEB504347829FB53B53424E5B" action="add">
+    <label xml:lang="en">CAT 6</label>
+    <sort_order>770</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>CAT 6</value>
+   </Item>
+   <Item type="Value" id="7DDE503934B0445EADAFFE45AEF1F9A9" action="add">
+    <label xml:lang="en">IT (1Ph+N)</label>
+    <sort_order>898</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>IT (1Ph+N)</value>
+   </Item>
+   <Item type="Value" id="B5204F92619B40F0B9863E6E21C337E6" action="add">
+    <label xml:lang="en">IT (3Ph)</label>
+    <sort_order>1026</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>IT (3Ph)</value>
+   </Item>
+   <Item type="Value" id="0C3DFF7602EF49A39248649B9DC41D90" action="add">
+    <label xml:lang="en">IT (3Ph+N)</label>
+    <sort_order>1154</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>IT (3Ph+N)</value>
+   </Item>
+   <Item type="Value" id="A7AA327C5081484880457BD4383B7076" action="add">
+    <label xml:lang="en">L-N (1Ph)</label>
+    <sort_order>1282</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>L-N (1Ph)</value>
+   </Item>
+   <Item type="Value" id="E32E9D10286640E7AACD0F16ED9920B9" action="add">
+    <label xml:lang="en">Multiple MPPT</label>
+    <sort_order>1410</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>Multiple MPPT</value>
+   </Item>
+   <Item type="Value" id="0CE27C639A6045839AAAC2603290289D" action="add">
+    <label xml:lang="en">N-PE</label>
+    <sort_order>1538</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>N-PE</value>
+   </Item>
+   <Item type="Value" id="4952E6F6DCA74B3CBE4F21721E0B0681" action="add">
+    <label xml:lang="en">PV</label>
+    <sort_order>1666</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>PV</value>
+   </Item>
+   <Item type="Value" id="581DF192208F484593E5E9947DB3FE76" action="add">
+    <label xml:lang="en">TNC (3Ph)</label>
+    <sort_order>1794</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TNC (3Ph)</value>
+   </Item>
+   <Item type="Value" id="E9DDD7620C5847EA823B4888CEF78EBE" action="add">
+    <label xml:lang="en">TNS (1Ph+N)</label>
+    <sort_order>1922</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TNS (1Ph+N)</value>
+   </Item>
+   <Item type="Value" id="E6D698FD6485492A9810A330B2CD30C0" action="add">
+    <label xml:lang="en">TNS (3Ph+N)</label>
+    <sort_order>2050</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TNS (3Ph+N)</value>
+   </Item>
+   <Item type="Value" id="4823DC89A2F741C1A5A8CD2B73BFC50D" action="add">
+    <label xml:lang="en">TT (1Ph+N)</label>
+    <sort_order>2178</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TT (1Ph+N)</value>
+   </Item>
+   <Item type="Value" id="D2CB9A6BBE3A4198A7AF49CCB608E1B0" action="add">
+    <label xml:lang="en">TT (3Ph+N)</label>
+    <sort_order>2306</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>TT (3Ph+N)</value>
+   </Item>
+   <Item type="Value" id="B75B41718D834FF5AFE8E3B6C1E64E08" action="add">
+    <label xml:lang="en">Y PV</label>
+    <sort_order>2434</sort_order>
+    <source_id keyed_name="MRN_Protection_Modes" type="List">95A3AD92295F499786A92034F6D2ACB7</source_id>
+    <value>Y PV</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

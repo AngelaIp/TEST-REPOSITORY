@@ -1,0 +1,128 @@
+﻿<AML>
+ <Item type="List" id="E15EBE9A2F6A46F19FC1BCCA1D741C7D" action="add">
+  <description>Utilization UE values</description>
+  <name>mrn_utilization_ue</name>
+  <Relationships>
+   <Item type="Value" id="501047ABBD0A47FD943729582740AAA8" action="add">
+    <label xml:lang="en"> @ Ue = 24 … 48 V; </label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 24 … 48 V; </value>
+   </Item>
+   <Item type="Value" id="972B7233E2414F60A612328888C4F892" action="add">
+    <label xml:lang="en"> @ Ue = 24 … 110 V; </label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 24 … 110 V; </value>
+   </Item>
+   <Item type="Value" id="236C07C44FD84B519FB61811599B5396" action="add">
+    <label xml:lang="en"> @ Ue = 0 … 415 V; </label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 0 … 415 V; </value>
+   </Item>
+   <Item type="Value" id="DE718BD0051C470482453060DB739BF5" action="add">
+    <label xml:lang="en"> @ Ue = 0 … 500 V; </label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 0 … 500 V; </value>
+   </Item>
+   <Item type="Value" id="5F0AFDB81CC94B7CB0B8DBE887A599EA" action="add">
+    <label xml:lang="en"> @ Ue = 0 … 690 V; </label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 0 … 690 V; </value>
+   </Item>
+   <Item type="Value" id="21615DB390404DC68990E1353CA762B7" action="add">
+    <label xml:lang="en"> @ Ue = 110 V; </label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 110 V; </value>
+   </Item>
+   <Item type="Value" id="A060B027F2D243FF85BDC8DC75B0E110" action="add">
+    <label xml:lang="en"> @ Ue = 220 V; </label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 220 V; </value>
+   </Item>
+   <Item type="Value" id="ADA9D426C7E4498A87497169F0DBCE39" action="add">
+    <label xml:lang="en"> @ Ue = 230 V; </label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 230 V; </value>
+   </Item>
+   <Item type="Value" id="A63B3430EA074A95BAA2F5159B294E79" action="add">
+    <label xml:lang="en"> @ Ue = 250 V; </label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 250 V; </value>
+   </Item>
+   <Item type="Value" id="4CAA8C89827E487B955F6FC665060A65" action="add">
+    <label xml:lang="en"> @ Ue = 400 V; </label>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 400 V; </value>
+   </Item>
+   <Item type="Value" id="6ABD1D0C5B3D45B0B31531854AB29208" action="add">
+    <label xml:lang="en"> @ Ue = 415 V; </label>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 415 V; </value>
+   </Item>
+   <Item type="Value" id="4F1E0536DD294A39BCF1CC7FDBCD62F3" action="add">
+    <label xml:lang="en"> @ Ue = 440 V; </label>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 440 V; </value>
+   </Item>
+   <Item type="Value" id="A6476B9E3E064657A8868C134E5BF7BE" action="add">
+    <label xml:lang="en"> @ Ue = 440 … 500 V; </label>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 440 … 500 V; </value>
+   </Item>
+   <Item type="Value" id="71E8070370554E8C843937392DE50598" action="add">
+    <label xml:lang="en"> @ Ue = 440 … 690 V; </label>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 440 … 690 V; </value>
+   </Item>
+   <Item type="Value" id="27FD692C7C46488FA308DA714E517C47" action="add">
+    <label xml:lang="en"> @ Ue = 500 V; </label>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 500 V; </value>
+   </Item>
+   <Item type="Value" id="EC00D176572E4D45AD924DD957437E17" action="add">
+    <label xml:lang="en"> @ Ue = 660 V; </label>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 660 V; </value>
+   </Item>
+   <Item type="Value" id="F9CC7BE7572740909B4A20CDBC3E3444" action="add">
+    <label xml:lang="en"> @ Ue = 690 V; </label>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 690 V; </value>
+   </Item>
+   <Item type="Value" id="18C30BAF8F4A43819374C8B12EA91025" action="add">
+    <label xml:lang="en"> @ Ue = 750 V; </label>
+    <sort_order>2432</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 750 V; </value>
+   </Item>
+   <Item type="Value" id="878701F069274E3B84C00CA02823BB24" action="add">
+    <label xml:lang="en"> @ Ue = 800 V; </label>
+    <sort_order>2560</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 800 V; </value>
+   </Item>
+   <Item type="Value" id="00BC6B3AD8F648C284DF9B31C9E82B4E" action="add">
+    <label xml:lang="en"> @ Ue = 1000 V; </label>
+    <sort_order>2688</sort_order>
+    <source_id keyed_name="mrn_utilization_ue" type="List">E15EBE9A2F6A46F19FC1BCCA1D741C7D</source_id>
+    <value> @ Ue = 1000 V; </value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

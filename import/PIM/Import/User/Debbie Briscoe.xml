@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="CAF2D79ACFA349A5AE3D410B50F74F47" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>debbie.briscoe@us.mersen.com</email>
+  <last_login_date>2017-01-23T08:59:19</last_login_date>
+  <login_name>dbriscoe</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Debbie Briscoe" type="Identity">6096E7C2C3BF4B73AC55B97C02B3CAC8</owned_by_id>
+  <working_directory>C:\temp\aras</working_directory>
+  <first_name>Debbie</first_name>
+  <last_name>Briscoe</last_name>
+  <Relationships>
+   <Item type="Alias" id="448E4FA09DA942109A67B549A94172E7" action="add">
+    <from_date>2017-01-19T16:31:11</from_date>
+    <related_id keyed_name="Debbie Briscoe" type="Identity">6096E7C2C3BF4B73AC55B97C02B3CAC8</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Debbie Briscoe" type="User">CAF2D79ACFA349A5AE3D410B50F74F47</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

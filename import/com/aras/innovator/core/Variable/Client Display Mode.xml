@@ -1,6 +1,6 @@
 ﻿<AML>
  <Item type="Variable" id="0833D40D304A49A88E87D6E34EB6FCD4" action="add">
-  <default_value>Tabs</default_value>
+  <default_value>Windows</default_value>
   <name>Client Display Mode</name>
  </Item>
 </AML>

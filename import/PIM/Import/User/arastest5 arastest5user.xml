@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="User" id="A1E34736C71D435CACAE7130FAA2E6E5" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <last_login_date>2017-04-20T02:53:52</last_login_date>
+  <login_name>arastest5</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="arastest5 arastest5user" type="Identity">382EE4BF943442ABAAE5C533298BD1F1</owned_by_id>
+  <pwd_is_set_on>2017-03-29T15:34:20</pwd_is_set_on>
+  <working_directory>C:\temp\aras</working_directory>
+  <first_name>arastest5</first_name>
+  <last_name>arastest5user</last_name>
+  <Relationships>
+   <Item type="Alias" id="3640B29241BE4D1A9F43FBAC51A240A5" action="add">
+    <from_date>2017-03-24T09:27:13</from_date>
+    <related_id keyed_name="arastest5 arastest5user" type="Identity">382EE4BF943442ABAAE5C533298BD1F1</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="arastest5 arastest5user" type="User">A1E34736C71D435CACAE7130FAA2E6E5</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

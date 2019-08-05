@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="6BAD19C7D2724C4FA170B1C1D59BA6E4" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>emmanuel.munguia@mersen.com</email>
+  <login_name>emunguia</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Manny Munguia" type="Identity">C9A354FDE67040F5ADBE6BF10A58AAF5</owned_by_id>
+  <first_name>Manny</first_name>
+  <last_name>Munguia</last_name>
+  <Relationships>
+   <Item type="Alias" id="4E7967D5D50042A9B1B810F5921FC5AD" action="add">
+    <from_date>2016-05-03T13:13:57</from_date>
+    <related_id keyed_name="Manny Munguia" type="Identity">C9A354FDE67040F5ADBE6BF10A58AAF5</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Manny Munguia" type="User">6BAD19C7D2724C4FA170B1C1D59BA6E4</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

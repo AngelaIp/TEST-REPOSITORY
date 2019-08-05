@@ -1,0 +1,381 @@
+﻿<AML>
+ <Item type="Method" id="DF86B5BE7F674433AC42662E34233EA0" action="add">
+  <comments />
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// This code checks which Product MRN Items are affected by this "Publish" and sends an email with those items to the 
+// Product Manager
+
+// Debugger
+// if (System.Diagnostics.Debugger.Launch()) 
+//     //System.Diagnostics.Debugger.Break();
+
+// Initialize
+Innovator inn = this.getInnovator();
+List<string> itemNumbers; // = new List<string>();
+MrnItem mrnItem = new MrnItem(this);
+itemNumbers = mrnItem.findChildItemNames();
+
+// Get the level of *this item
+string classification = this.getProperty("classification","");
+
+// // Property name for Product Manager
+// string pmProperty = "";
+// if (classification == "Level 4 - MSL")
+//     pmProperty = "mrn_product_manager";
+// else if (classification == "Level 5 - Frame" || classification == "Level 6 - Product")
+//     pmProperty = "mrn_product_manager_f";
+// Item productManager = this.getPropertyItem(pmProperty).apply("get");
+// string isAlias = productManager.getProperty("is_alias");
+// // If is alias == "1", get the user, get the email id
+// // else get the members, get the user id
+
+
+// -----> Build a list of all the items that are affected
+// If this is an MSL or a Frame, it will be all the product items that referece it
+// If this is a Product Item, it will be just itself
+string itemNumber = this.getProperty("keyed_name");
+
+
+
+// Find all the ExportProfileMaps that are active
+string AMLquery = "<Item type=\"MRN_ExportProfile\"  action =\"get\" select='id, mrn_profile_name, mrn_emails'><state>Active</state>" +
+                    "<Relationships><Item type=\"MRN_ExportLog\" action=\"get\" select='created_on' orderby='created_on'>" +
+                    "<Relationships><Item type=\"MRN_ExportLogItem\" action=\"get\" select='mrn_item_keyed_name'>" +
+                    "</Item></Relationships></Item></Relationships></Item>";
+Item items = this.newItem();
+items.loadAML(AMLquery);
+items = items.apply();
+
+// Cycle all the ExportProfile items and get only the latest ExportLog
+int itemCount = items.getItemCount();
+List<ExportProfile> exportProfiles = new List<ExportProfile>();
+List<MRNEmail> emailList = new List<MRNEmail>();
+
+
+for (int ii = 0; ii < itemCount; ii++)
+{   
+    ExportProfile exportProfile = new ExportProfile(items.getItemByIndex(ii));
+    exportProfile.setLatestLog();
+    exportProfile.setItemNumbers();
+    //exportProfile.setOutOfDate(exportProfile.hasNumbers(itemNumbers));
+    
+    if (exportProfile.hasNumbers(itemNumbers))
+    {
+        // Get the email addresses into the ExportProfile
+        exportProfile.setEmails();
+        
+        // Add ExportProfile to the list, probably don't need this now
+        exportProfiles.Add(exportProfile);
+        
+        // Get the list of email addresses from the ExportProfile
+        List<string> thisEmailList = exportProfile.getEmails();
+        
+        // Cycle the email addresses and create new MRNEmails where needed
+        foreach (string emailAddress in thisEmailList)
+        {
+            MRNEmail mrnEmail = MRNEmail.getMRNEmail(emailAddress, emailList);
+            if (mrnEmail == null)
+            {
+                mrnEmail = new MRNEmail(emailAddress);
+                emailList.Add(mrnEmail);
+            }
+            
+            mrnEmail.AddExportProfileName(exportProfile.getName());
+        }
+
+    }
+}
+
+// Cycle all the emails and send notifications
+ foreach (MRNEmail email in emailList)
+ {
+    System.Net.Mail.MailMessage mailMessage = email.buildMailMessage(itemNumber);
+    CCO.Email.SetupSmtpMailServerAndSend(mailMessage);
+ }
+
+return this;
+
+}
+
+public class ExportProfile
+{
+    private Item item;
+    private List<string> itemNumbers;
+    private Item latestExportLog;
+    private bool outOfDate;
+    private string name;
+    private string emailValue;
+    private List<string>emails;
+    
+    public ExportProfile(Item itm)
+    {
+        item = itm;
+        name = item.getProperty("mrn_profile_name","");
+        emailValue = item.getProperty("mrn_emails","");
+    }
+    
+    public void setLatestLog()
+    {
+        // Get the exportLogs for this exportProfile
+        Item exportLogRelationships = item.getRelationships("MRN_ExportLog");
+        int count = exportLogRelationships.getItemCount();
+    
+        // Cycle all the exportLogs, find the latest one
+        DateTime? latestDateTime = null;
+    
+        for (int jj = 0; jj < count; jj++) 
+        {
+            // Get the next exportLog
+            Item exportLog = exportLogRelationships.getItemByIndex(jj);
+            //Item exportLog =exportLogRelationship.getRelatedItem();
+            string createdOn = exportLog.getProperty("created_on");
+            DateTime dt = Convert.ToDateTime(createdOn);
+            
+            if (latestExportLog == null || dt > latestDateTime)
+            {
+                latestExportLog = exportLog;
+                latestDateTime = dt;
+            }
+        }
+    }
+    
+    public void setItemNumbers()
+    {
+        if (latestExportLog == null)
+            return;
+            
+        itemNumbers = new List<string>();
+          
+        // Get the exportLogItems
+        Item exportLogItemRelationships = latestExportLog.getRelationships("MRN_ExportLogItem");
+        int logItemCount = exportLogItemRelationships.getItemCount();
+    
+        // Cycle all the exportLogItems
+        for (int kk = 0; kk < logItemCount; kk++)
+        {
+            Item exportLogItem= exportLogItemRelationships.getItemByIndex(kk);
+          // Item exportLogItem = exportLogItemRelationship.getRelatedItem();
+            string itemName = exportLogItem.getProperty("mrn_item_keyed_name", "");
+            itemNumbers.Add(itemName);
+        }
+    }
+    
+    public bool hasNumbers(List<string> numbers)
+    {
+        if (itemNumbers == null)
+            return false;
+            
+        for (int ii = 0; ii < itemNumbers.Count; ii++)
+        {
+            if (numbers.Contains(itemNumbers[ii]))
+                return true;
+        }
+        
+        return false;
+    }
+    
+    public void setEmails()
+    {
+        // convert email addresses to lit
+        emails= emailValue.Trim().Split('\n').ToList();
+    
+        // Discard any malformed emails
+        for (int ii = 0; ii < emails.Count; ii++)
+        {
+            if(!MRNEmail.IsValidEmail(emails[ii]))
+            {
+                emails.RemoveAt(ii);
+                ii--;
+            }
+        }
+    }
+    
+    public void setLatestExportLog(Item item) { latestExportLog = item; }
+    public void setOutOfDate(bool test) { outOfDate = test;}
+    public bool getOutOfDate() { return outOfDate; }
+    public string getName() { return name; }
+    public List<string> getEmails() { return emails; }
+    
+}
+public class ExportLog
+{
+    
+    
+    private ExportProfile parentExportProfile;
+    private Item item;
+    
+    public ExportLog(Item itm, ExportProfile parent)
+    {
+        item = itm;
+        parentExportProfile = parent;
+    }
+    
+}
+
+public class MrnItem
+{
+    Item item;
+    string classification;
+    string pmPropertyName;
+    string productManager;
+    
+    public MrnItem(Item itm)
+    {
+        item = itm;
+    }
+    public List<string> findChildItemNames()
+    {
+        List<string> childItemNames = new List<string>();
+
+        classification = item.getProperty("classification","");
+
+    // Property name for Product Manager
+
+        if (classification == "Level 4 - MSL")
+        {
+            pmPropertyName = "mrn_product_manager";
+            childItemNames = findMSLChildren();
+        }
+        else if (classification == "Level 5 - Frame")
+        {
+            pmPropertyName = "mrn_product_manager_f";
+            childItemNames = findFrameChildren();
+        }
+        else if (classification == "Level 6 - Product")
+        {
+            string itemNumber = item.getProperty("keyed_name");
+            pmPropertyName = "mrn_product_manager_f";
+            childItemNames.Add(itemNumber);
+        }
+        productManager = item.getProperty(pmPropertyName,"");
+
+
+        return childItemNames;
+    }
+    
+    private List<string>findMSLChildren()
+    {
+        List<string> childItemNames = new List<string>();
+        
+        // find all Product items that reference this item as mrn_parent_msl
+        Innovator inn = item.getInnovator();
+        Item items = inn.newItem("MRN_Item","get");
+        items.setProperty("mrn_parent_msl", item.getID());
+        items = items.apply();
+        
+        int count = items.getItemCount();
+        
+        for (int ii = 0; ii < count; ii++)
+        {
+            string name = items.getItemByIndex(ii).getProperty("keyed_name");
+            string level = items.getItemByIndex(ii).getProperty("classification");
+            
+            if (level == "Level 6 - Product")
+                childItemNames.Add(name);
+        }
+        
+        
+        return childItemNames;
+    }
+    
+    private List<string>findFrameChildren()
+    {
+       List<string> childItemNames = new List<string>();
+        
+        // find all Product items that reference this item as mrn_frame
+        Innovator inn = item.getInnovator();
+        Item items = inn.newItem("MRN_Item","get");
+        items.setProperty("mrn_frame", item.getID());
+        items = items.apply();
+        
+        int count = items.getItemCount();
+        
+        for (int ii = 0; ii < count; ii++)
+        {
+            string name = items.getItemByIndex(ii).getProperty("keyed_name");
+            string level = items.getItemByIndex(ii).getProperty("classification");
+            
+            if (level == "Level 6 - Product")
+                childItemNames.Add(name);
+        }
+        
+        
+        return childItemNames;
+    }
+}
+
+public class MRNEmail
+{
+
+    string emailAddress;
+    List<string> exportProfileNames = new List<string>();
+    
+    // syncLock object, used to lock the code block
+    private static object syncLock = new object();
+    
+
+    public MRNEmail(string str)
+    {
+        emailAddress = str;
+
+    }
+    
+    public static MRNEmail getMRNEmail(string emailAddress, List<MRNEmail> emailList)
+    {
+        lock (syncLock)
+        {
+           foreach (MRNEmail email in emailList)
+           {
+               if (email.getEmailAddress() == emailAddress)
+                return email;
+           }
+        }
+       return null;
+    }
+    
+    public void AddExportProfileName(string name)
+    {
+        if (!exportProfileNames.Contains(name))
+            exportProfileNames.Add(name);
+        
+    }
+    
+    public System.Net.Mail.MailMessage buildMailMessage(string itemNumber)
+    {
+        // Create an email, with the name of the item, and send to the Product Manager
+        System.Net.Mail.MailMessage mailMessage = new System.Net.Mail.MailMessage();
+        string from_email_address = "innovator@mersen.com";
+        mailMessage.From = new System.Net.Mail.MailAddress(from_email_address); 
+        mailMessage.To.Add(emailAddress);   
+        mailMessage.Subject = "Item Published: " + itemNumber;
+        mailMessage.IsBodyHtml = true; 
+        
+        string body = "<body><BR>Following extracts may need to be re-run:<BR>";
+        
+        for (int ii = 0; ii < exportProfileNames.Count; ii++)
+        {
+            body += "<BR>";
+            body += exportProfileNames[ii];
+        }
+        body += "<BR></body>";
+        mailMessage.Body = body; 
+        return mailMessage;
+    }
+    
+    public static bool IsValidEmail(string email)
+    {
+        try {
+            var addr = new System.Net.Mail.MailAddress(email);
+            return true;
+        }
+        catch {
+            return false;
+        }
+    }
+    
+    public string getEmailAddress() { return emailAddress;}
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_publishNotification</name>
+ </Item>
+</AML>

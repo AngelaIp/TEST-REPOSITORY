@@ -1,128 +1,152 @@
 <imports>
-  <package name="com.aras.innovator.admin" path=".\" />
+  <package name="com.aras.innovator.admin" path=".\">
+    <dependson name="com.aras.innovator.core" />
+  </package>
   <package name="com.aras.innovator.dashboard" path=".\">
-    <dependson name="com.aras.innovator.i18n" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.sharepoint" path=".\">
-    <dependson name="com.aras.innovator.preferences" />
+    <dependson name="com.aras.innovator.core" />
   </package>
-  <package name="com.aras.innovator.core" path=".\">
-    <dependson name="com.aras.innovator.admin" />
-  </package>
+  <package name="com.aras.innovator.core" path=".\" />
   <package name="com.aras.innovator.viewers" path=".\">
-    <dependson name="com.aras.innovator.servicereporting" />
+    <dependson name="com.aras.innovator.ssvc" />
   </package>
   <package name="com.aras.innovator.tgv.viewer" path=".\">
     <dependson name="com.aras.innovator.QueryBuilder" />
     <dependson name="com.aras.innovator.tgv.configuration" />
   </package>
   <package name="com.aras.innovator.tdf" path=".\">
-    <dependson name="com.aras.innovator.cui" />
+    <dependson name="com.aras.innovator.conversion" />
+    <dependson name="com.aras.innovator.core" />
   </package>
-  <package name="com.aras.innovator.wm" path=".\" />
-  <package name="com.aras.innovator.solution.Project" path="Project\Import">
-    <dependson name="com.aras.innovator.solution.PLM" />
+  <package name="com.mersen.PIM" path="PIM\Import" />
+  <package name="com.aras.innovator.wm" path=".\">
+    <dependson name="com.aras.innovator.conversion" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.graph_navigation" path=".\">
     <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.inbasket" path=".\">
-    <dependson name="com.aras.innovator.conversion" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.notifications" path=".\">
-    <dependson name="com.aras.innovator.search" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.tgv.configuration" path=".\">
     <dependson name="com.aras.innovator.QueryBuilder" />
   </package>
-  <package name="com.aras.innovator.cui" path=".\" />
+  <package name="com.aras.innovator.cui" path=".\">
+    <dependson name="com.aras.innovator.core" />
+  </package>
   <package name="com.aras.innovator.history" path=".\">
     <dependson name="com.aras.innovator.core" />
   </package>
-  <package name="com.aras.innovator.QueryBuilder" path=".\" />
+  <package name="com.aras.innovator.QueryBuilder" path=".\">
+    <dependson name="com.aras.innovator.cui" />
+  </package>
   <package name="com.aras.innovator.i18n" path=".\">
-    <dependson name="com.aras.innovator.conflictdetection" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.authenticationframework" path=".\">
     <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.conversion" path=".\">
-    <dependson name="com.aras.innovator.exchange" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.datasyncservice" path=".\">
     <dependson name="com.aras.innovator.core" />
   </package>
+  <package name="com.aras.innovator.derivedrelationships" path=".\">
+    <dependson name="com.aras.innovator.conversion" />
+    <dependson name="com.aras.innovator.QueryBuilder" />
+    <dependson name="com.aras.innovator.cui" />
+  </package>
   <package name="com.aras.innovator.configurator" path=".\">
     <dependson name="com.aras.innovator.cfg_core" />
-  </package>
-  <package name="com.aras.innovator.filerepresentations" path=".\">
-    <dependson name="com.aras.innovator.extendedclassification" />
-    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.ACExtentions" path=".\">
     <dependson name="com.aras.innovator.core" />
     <dependson name="com.aras.innovator.cui_default" />
     <dependson name="com.aras.innovator.cui" />
   </package>
-  <package name="com.aras.innovator.extendedclassification" path=".\">
-    <dependson name="com.aras.innovator.core" />
-  </package>
   <package name="com.aras.innovator.cmf" path=".\">
-    <dependson name="com.aras.innovator.viewers" />
+    <dependson name="com.aras.innovator.core" />
+    <dependson name="com.aras.innovator.conversion" />
     <dependson name="com.aras.innovator.cui_default" />
+    <dependson name="com.aras.innovator.cui" />
   </package>
   <package name="com.aras.innovator.exchange" path=".\">
-    <dependson name="com.aras.innovator.replication" />
+    <dependson name="com.aras.innovator.core" />
   </package>
+  <package name="FixInUpgrade110SP15" path="FixInUpgrade110SP15\Import" />
   <package name="com.aras.innovator.conflictdetection" path=".\">
-    <dependson name="com.aras.innovator.history" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.effectivityservices" path=".\">
     <dependson name="com.aras.innovator.cfg_core" />
     <dependson name="com.aras.innovator.core" />
   </package>
   <package name="DatabaseIdentifier" path="DatabaseIdentifier\Import" />
-  <package name="com.aras.innovator.derivedrelationships" path=".\">
-    <dependson name="com.aras.innovator.QueryBuilder" />
-    <dependson name="com.aras.innovator.conversion" />
+  <package name="com.aras.innovator.FileRepresentations " path=".\">
+    <dependson name="com.aras.innovator.core" />
+    <dependson name="com.aras.innovator.ExtendedClassification" />
+    <dependson name="com.aras.innovator.cui" />
   </package>
   <package name="com.aras.innovator.cfg_core" path=".\">
     <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.servicereporting" path=".\">
-    <dependson name="com.aras.innovator.ssvc" />
-  </package>
-  <package name="com.aras.innovator.preferences" path=".\">
-    <dependson name="com.aras.innovator.dashboard" />
-  </package>
-  <package name="com.aras.innovator.solution.PLM" path="PLM\Import" />
-  <package name="com.aras.innovator.access.domain" path=".\">
-    <dependson name="com.aras.innovator.derivedrelationships" />
+    <dependson name="com.aras.innovator.cui" />
     <dependson name="com.aras.innovator.core" />
   </package>
-  <package name="com.aras.innovator.ssvc" path=".\">
-    <dependson name="com.aras.innovator.license" />
-    <dependson name="com.aras.innovator.cui_default" />
+  <package name="com.aras.innovator.preferences" path=".\">
+    <dependson name="com.aras.innovator.core" />
+  </package>
+  <package name="com.aras.innovator.solution.PLM" path="PLM\Import" />
+  <package name="MSO_References" path="MSO_References\Import">
+    <dependson name="MSO_Standard" />
+  </package>
+  <package name="MSO_Standard" path="MSO_Standard\Import" />
+  <package name="com.aras.innovator.access.domain" path=".\">
+    <dependson name="com.aras.innovator.core" />
+    <dependson name="com.aras.innovator.derivedrelationships" />
     <dependson name="com.aras.innovator.cui" />
+  </package>
+  <package name="com.aras.innovator.ssvc" path=".\">
+    <dependson name="com.aras.innovator.notifications" />
+    <dependson name="com.aras.innovator.cui" />
+    <dependson name="com.aras.innovator.core" />
+    <dependson name="com.aras.innovator.history" />
+    <dependson name="com.aras.innovator.cui_default" />
+    <dependson name="com.aras.innovator.conversion" />
   </package>
   <package name="com.aras.innovator.es" path=".\">
     <dependson name="com.aras.innovator.core" />
   </package>
-  <package name="com.aras.innovator.masspromote" path=".\" />
+  <package name="com.aras.innovator.masspromote" path=".\">
+    <dependson name="com.aras.innovator.cfg_core" />
+  </package>
   <package name="com.aras.innovator.replication" path=".\">
-    <dependson name="com.aras.innovator.notifications" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.license" path=".\">
-    <dependson name="com.aras.innovator.inbasket" />
+    <dependson name="com.aras.innovator.core" />
+  </package>
+  <package name="com.aras.innovator.ExtendedClassification" path=".\">
+    <dependson name="com.aras.innovator.cui" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.defaults.filerepresentations" path=".\">
     <dependson name="com.aras.innovator.filerepresentations" />
     <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.search" path=".\">
-    <dependson name="com.aras.innovator.sharepoint" />
+    <dependson name="com.aras.innovator.core" />
   </package>
   <package name="com.aras.innovator.cui_default" path=".\">
     <dependson name="com.aras.innovator.cui" />
+    <dependson name="com.aras.innovator.core" />
   </package>
 </imports>

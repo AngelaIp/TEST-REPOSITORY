@@ -1,0 +1,47 @@
+﻿<AML>
+ <Item type="Method" id="62A2BE5D018246B88E0FB81A49285D3C" action="add">
+  <comments />
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Name: mrn_setParentMSL
+// Called From: mrn_item_Product Form - Frame field - On change
+// Purpose: Copies parent MSL from the selected Frame to the Product Item
+// 03/22/2016   Kamran Aftab Developed for Mersen
+
+
+//debugger
+
+
+var inn = document.thisItem.getInnovator();
+
+// Find the frame item associated with this field
+var refItemName = getFieldComponentByName(srcElement.name).getValue();
+if(refItemName=="")
+    return this;
+var aml = "<AML><Item type=  \"MRN_Item\"  action=\"get\"" +
+            " where=\"[MRN_Item].mrn_name_number='" + refItemName + "'\"" + "></Item></AML>";
+
+var refItem = inn.applyAML(aml);
+var isErr = refItem.isError();
+if (isErr)
+    return this;
+    
+// If a non-frame is picked, return
+var refItemType = refItem.getProperty("classification","");
+if (refItemType != "Level 5 - Frame")
+    return;
+    
+// Get the MSL name from the frame
+var parentMSLId = refItem.getProperty("mrn_parent_msl","");
+if(parentMSLId =="")
+    return this;
+
+window.handleItemChange("mrn_parent_msl", parentMSLId);
+
+
+
+return this;
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_setParentMSL</name>
+ </Item>
+</AML>

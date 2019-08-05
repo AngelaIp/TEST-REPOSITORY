@@ -1,0 +1,45 @@
+﻿<AML>
+ <Item type="Method" id="58121CD7F0C544E48C1C8FFE7D320914" action="add">
+  <comments>Set up an export schedule in Excel</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//New method written by Jason Moses
+//This method is set up to allow for the Scheduler service to call the generateItemExport method for a specific template
+Innovator inn = this.getInnovator();
+string exportID = "25EFE35E763D4ED19A5A704E8BEEE3A6";   //Eport Profile ID
+string exportLogID, exportProfileID;
+exportProfileID = "<source_id>" + exportID + "</source_id>";
+
+//The Select statement is to find the latest Export Log to ensure only the most recent updates are extracted
+string sql = "SELECT [id] as logid FROM [innovator_dev].[innovator].[MRN_EXPORTLOG] where source_id = '" + exportID + "' and  created_on in (SELECT max(created_on) FROM [innovator_dev].[innovator].[MRN_EXPORTLOG] where source_id = '" + exportID + "')";
+try
+                    {
+                        var sqlItem = inn.applySQL(sql);
+                        //throw new Exception()
+                        exportLogID = "<id>" + sqlItem.getItemByIndex(0).getProperty("logid") + "</id>";
+                    }
+            	    catch (Exception e)
+            	    {
+            	        throw new Exception(e.Message + "SQL: " + sql);
+            	    }
+
+string methodType = "<type>MRN_ExportLog</type>";
+//This is designed to be executed byt the Scheduler service so it must contain the following code and return a result
+Item schedServ = inn.newItem("variable","merge"); 
+schedServ.setAttribute("where","[variable].name='Scheduler Execute Time'"); 
+schedServ.setProperty("name","Scheduler Execute Time"); 
+schedServ.setProperty("value",DateTime.UtcNow.ToString()); 
+schedServ=schedServ.apply(); 
+//must return a new Result after execution of service 
+if(schedServ.isError()) 
+{ 
+return inn.newResult("Scheduler Failed"); 
+} 
+
+//This is the call to the method mrn_generateItemExport, passing the profile ID and export log ID
+inn.applyMethod("mrn_generateItemExport", exportLogID + exportProfileID + methodType);
+return inn.newResult("OK");
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>mrn_SchedulerDrupalExport_Excel</name>
+ </Item>
+</AML>

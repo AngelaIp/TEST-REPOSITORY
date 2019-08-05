@@ -1,0 +1,219 @@
+﻿<AML>
+ <Item type="Method" id="2C0BE8945C284216B9466F9918120CE1" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//
+// Name:          mrn_exportTemplateAttributes
+// Called by:     mrn_ExportProfile Form, onLoad and on value change of Families dropdown
+// Description:   Sets up the attributes in the MSL/Frame/Product dropdown
+//
+// June, 2016   Kamran Aftab    developed for Mersen
+//======================================================================
+
+//debugger;
+
+
+// Get the name of the invoking control (is empty in case of onformload)
+var thisName = this.name;
+
+// Get all the MRN_Property items
+var qryXml = "<Item type=\"MRN_Property\"  select=\"mrn_item_property, mrn_uom_property, mrn_is_group, mrn_etim_range_property,  mrn_range_property_min, mrn_range_property_max, mrn_label, mrn_level, mrn_families, mrn_form_element, classification\" action=\"get\" orderBy=\"mrn_label\">" +
+                "<mrn_item_property>" + 
+                  "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                "</mrn_item_property>" +
+                 "<mrn_range_property_min>" + 
+                    "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                "</mrn_range_property_min>" +
+                "<mrn_range_property_max>" + 
+                    "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" + 
+                "</mrn_range_property_max>" +
+                "<mrn_uom_property>" + 
+                  "<Item type=\"MRN_Property\" select=\"mrn_label, name, mrn_item_property\" action=\"get\">" +
+                    "<mrn_item_property>" + 
+                     "<Item type=\"Property\" select=\"label, name\" action=\"get\"></Item>" +
+                    "</mrn_item_property>" +
+                  "</Item>" +
+                "</mrn_uom_property>" + 
+                "<Relationships>" + 
+                  "<Item type=\"MRN_Property_Property\" select=\"related_id\" action=\"get\"></Item>" +
+                "</Relationships>" +
+             "</Item>";
+                
+var qry = new Item();
+qry.loadAML(qryXml);
+var returnItm = qry.apply();
+
+// Hide properties based on family selected
+hideProperties(thisName, returnItm);
+
+// Function to first show the property and then hide it based on the family selected. 
+// Need to first show to make visible if previously was hidden by another family
+function hideProperties(ctrlName, returnItm)
+{
+    var visibleUOMProperties = [];
+    var selectedFamily = null;
+    var itemClass = document.thisItem.getProperty("classification","");
+    
+    // if invoked from family selection, get the selected family from the family selection dialog
+    if (ctrlName == "mrn_product_family")
+    {
+        // var select = document.getElementById("MainDataForm").mrn_product_family;
+        // selectedFamily = select.options[select.selectedIndex].text
+        // 06/21/2019 to fix IR-079385 [Mersen_US Upgrade]MSL.Internal error occurs while selecting PF
+        selectedFamily = getFieldComponentByName("mrn_product_family").component._getCurrentInputValue();
+    }
+    else if(ctrlName == "mrn_product_family_f")
+    {
+        // var select = document.getElementById("MainDataForm").mrn_product_family_f;
+        // selectedFamily = select.options[select.selectedIndex].text;
+        selectedFamily = getFieldComponentByName("mrn_product_family_f").component._getCurrentInputValue();
+    }
+    else  // if invoked on form load, get selected families from the saved property
+    {
+        if(itemClass == "Level 4 - MSL")
+            selectedFamily = document.thisItem.getProperty("mrn_product_family","");
+        else
+            selectedFamily = document.thisItem.getProperty("mrn_product_family_f","");
+    }
+
+    // Cycle all the MRN_Property items 
+    for (var i=0;i < returnItm.getItemCount(); i++) 
+    {
+        var mrnPropertyItem = returnItm.getItemByIndex(i);
+
+        // If it's a UOM property, set it hidden
+        var type = mrnPropertyItem.getProperty("classification");
+        if (type === "MRN_UOM_Property")
+        {
+            showHideProperty(mrnPropertyItem, "hidden");
+            continue;
+        }
+        
+        // If the property does not apply to this MRN_Item classification, skip it
+        var itemClass = document.thisItem.getProperty("classification","");
+        if (mrnPropertyItem.getProperty("mrn_level") != itemClass)
+            continue;
+        
+        // First show the propperty (in case it was hidden by a previous selection)
+        showHideProperty(mrnPropertyItem, "visible");
+        
+        // Check the family of the mrnProperty v/s the selected families
+        if (optionValid(ctrlName, selectedFamily, mrnPropertyItem))
+        {
+            var uomMrnPropertyItem = mrnPropertyItem.getPropertyItem("mrn_uom_property")
+            if (uomMrnPropertyItem !== null)
+                visibleUOMProperties.push(uomMrnPropertyItem)
+             continue;
+        }
+           
+        // Hide the property, since it's not applicable for this family
+        showHideProperty(mrnPropertyItem, "hidden");
+    }
+    
+    // Cycle all the visible MRN_UOM_Property items and turn them on
+    for (i=0;i < visibleUOMProperties.length; i++) 
+        showHideProperty(visibleUOMProperties[i], "visible");
+}
+
+// Shows or hides the given property, it's associated UOM property (if present), and the associated form field (if present)
+function showHideProperty(mrnPropertyItem, showHide)
+{
+    
+    // Get the group properties
+    if (mrnPropertyItem.getProperty("mrn_is_group","") === "1")
+    {
+        // Find all the properties
+        var relationships = mrnPropertyItem.getRelationships("MRN_Property_Property");
+        for (var j = 0; j < relationships.getItemCount(); j++) 
+        {
+            var relationshipItem = relationships.getItemByIndex(j);
+            var propertyItem = relationshipItem.getRelatedItem();
+            var fieldName = propertyItem.getProperty("name","");
+            showHideField(fieldName, showHide);
+        }
+    }
+    else if (mrnPropertyItem.getProperty("mrn_etim_range_property","") === "1")  // Get the range properties
+    {
+        var propertyItem = mrnPropertyItem.getPropertyItem("mrn_range_property_min");
+        var fieldName = propertyItem.getProperty("name","");
+        showHideField(fieldName, showHide);
+        propertyItem = mrnPropertyItem.getPropertyItem("mrn_range_property_max");
+        var fieldName = propertyItem.getProperty("name","");
+        showHideField(fieldName, showHide);
+    }
+    else  // Get teh associated property
+    {
+        // Get the associated Property item from the MRN_Property item
+        var propertyItem = mrnPropertyItem.getPropertyItem("mrn_item_property");
+        
+        // Show/hide the property item field
+        if (propertyItem !== null)
+        {
+            var fieldName = propertyItem.getProperty("name","");
+            showHideField(fieldName, showHide);
+        }
+    }
+    
+    // // GEt the associated uom MRN_Property 
+    // var uomMrnPropertyItem = mrnPropertyItem.getPropertyItem("mrn_uom_property")
+    
+    // // Show/hide the uom property item field
+    // if (uomMrnPropertyItem !== null)
+    // {
+    //     // Get the property on the uomMrnProperty
+    //     var uomPropertyItem = uomMrnPropertyItem.getPropertyItem("mrn_item_property");
+        
+    //     if (uomPropertyItem !== null)
+    //     {
+    //         fieldName = uomPropertyItem.getProperty("name");
+    //         showHideField(fieldName, showHide);
+    //     }
+    // }
+    
+    // Get the form elements
+    var fieldNames = mrnPropertyItem.getProperty("mrn_form_element","");
+    if (fieldNames !== "")
+    {
+        // Convert the field to a list
+        var fieldsList = fieldNames.split(',');
+        
+        // Cycle all the fields
+        for (var ii = 0; ii < fieldsList.length; ii++)
+            showHideField(fieldsList[ii], showHide);
+    }
+}
+
+// Shows or hides the given field
+function showHideField(fieldName, showHide)
+{
+    var drivenField = getFieldByName(fieldName);
+    
+    if (drivenField === null)
+        return;
+    drivenField.style.visibility = showHide;
+}
+
+// Check to see if this property is valid for the family
+function optionValid(ctrlName, family, mrnPropertyItem)
+{
+
+    // If no family selected, property is valid
+    if (family === "")
+        return true;
+
+    // If the family is not part of the families for this property are not part of the families selected, return false
+    var propertyFamilies = mrnPropertyItem.getProperty("mrn_families","");
+
+    // If no family added to the property, it's valid for all families
+    if (propertyFamilies === "")
+        return true;
+        
+    if (propertyFamilies.indexOf(family) > -1 )
+        return true;
+    
+    return false;
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>mrn_showFamilyProperties</name>
+ </Item>
+</AML>

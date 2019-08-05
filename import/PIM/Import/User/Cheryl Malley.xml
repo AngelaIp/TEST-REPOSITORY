@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="User" id="9B7F80E50816409A9ED92AD19CB95196" action="add">
+  <default_vault keyed_name="Default" type="Vault">67BBB9204FE84A8981ED8313049BA06C</default_vault>
+  <email>cheryl.malley@us.mersen.com</email>
+  <login_name>cmalley</login_name>
+  <logon_enabled>1</logon_enabled>
+  <owned_by_id keyed_name="Cheryl Malley" type="Identity">653AD492D7A5477D9DFFF44C9FE7EB82</owned_by_id>
+  <first_name>Cheryl</first_name>
+  <last_name>Malley</last_name>
+  <Relationships>
+   <Item type="Alias" id="F5D4612966DD48B0B6A31445B5293FB7" action="add">
+    <from_date>2016-08-19T07:59:19</from_date>
+    <related_id keyed_name="Cheryl Malley" type="Identity">653AD492D7A5477D9DFFF44C9FE7EB82</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Cheryl Malley" type="User">9B7F80E50816409A9ED92AD19CB95196</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

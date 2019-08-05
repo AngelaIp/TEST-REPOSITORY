@@ -1,8 +1,0 @@
-﻿<AML>
- <Item type="FileType" id="95DFDA4C8E89432B869559EC9E0B0B6D" action="add">
-  <description>OpenDocument ODT Text</description>
-  <extension>odt</extension>
-  <mimetype>application/vnd.oasis.opendocument.text</mimetype>
-  <name>OpenDocument Text</name>
- </Item>
-</AML>
